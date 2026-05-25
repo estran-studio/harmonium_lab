@@ -118,3 +118,8 @@ For each deviation, suggest:
 > specific engine parameter changes to improve the composite score.
 > For each suggestion, name the file, the parameter, the direction of change,
 > and any tradeoffs.
+
+<!-- SPECKIT START -->
+For additional context about technologies to be used, project structure,
+shell commands, and other important information, read the current plan
+<!-- SPECKIT END -->
