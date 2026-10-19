@@ -33,7 +33,7 @@ class TestLoadMeasuresJson:
         for m in measures:
             for n in m.notes:
                 assert isinstance(n, NoteData)
-                assert 0 <= n.track <= 3
+                assert 0 <= n.track <= 4  # TrackId: 0=Melody..4=Toe
                 assert 0 <= n.pitch <= 127
                 assert n.start_step >= 0
                 assert n.duration_steps >= 0
