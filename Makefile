@@ -7,7 +7,7 @@ GENERATED_DIR := ../harmonium/harmonium_core/target/generated_music
 REPORTS_DIR := target/quality_reports
 TRAD_DIR := corpus/trad
 
-.PHONY: setup corpus profiles trad-corpus test lab-export suite gate clean help
+.PHONY: setup corpus profiles trad-corpus trad-profiles test lab-export suite gate clean help
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
@@ -38,6 +38,24 @@ profiles: setup ## Build reference profiles from corpus MIDI files
 			--output "$(REFS_DIR)/$$cat/profile.json"; \
 	done
 	@echo "All profiles built."
+
+trad-profiles: setup ## Build trad type profiles from corpus/trad (DS-T3/D5)
+	@if [ ! -d corpus/trad/tunes ]; then \
+		echo "corpus/trad/tunes missing (run \`make trad-corpus' first)"; \
+		exit 1; \
+	fi
+	@for type in reel jig waltz march quadrille cotillon; do \
+		if [ -d "corpus/trad/tunes/$$type" ]; then \
+			echo "Building trad profile: $$type..."; \
+			$(LAB) trad-profile \
+				--type "$$type" \
+				--corpus "corpus/trad" \
+				--output "$(REFS_DIR)/trad-$$type/profile.json"; \
+		else \
+			echo "Skipping $$type (no tunes)"; \
+		fi; \
+	done
+	@echo "Trad profiles built."
 
 # ════════════════════════════════════════════════════════════════════
 # TRAD CORPUS (specs/001-trad-dataset)
