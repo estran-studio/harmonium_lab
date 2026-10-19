@@ -69,7 +69,24 @@ trad-render: setup ## Render 20 tunes per type at parity → target/trad_render/
 	$(LAB) trad-render --type jig --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),)
 	$(LAB) trad-render --type waltz --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),)
 
-# ════════════════════════════════════════════════════════════════════
+# ── Moteur : reels générés pour trad-compare / blindtest (DS-T4) ──
+# ENGINE_DIR vaut ../harmonium sur machine du propriétaire (repo frère).
+ENGINE_DIR ?= ../harmonium
+ENGINE_REELS_DIR := target/engine_reels
+N ?= 10
+
+engine-reels: setup ## Exporte N reels du moteur (seeds 1..N, 32 mesures) → target/engine_reels/
+	@mkdir -p $(ENGINE_REELS_DIR)
+	@for s in $$(seq 1 $(N)); do \
+		echo "Export reel seed $$s..."; \
+		cargo run -q -p harmonium-cli --release --manifest-path $(ENGINE_DIR)/Cargo.toml -- \
+			--export --bars 32 --style reel --seed $$s \
+			--record-wav $(ENGINE_REELS_DIR)/reel_seed$${s}.wav \
+			--record-midi $(ENGINE_REELS_DIR)/reel_seed$${s}.mid || exit 1; \
+	done
+	@echo "Engine reels in $(ENGINE_REELS_DIR)/"
+
+ # ════════════════════════════════════════════════════════════════════
 # ANALYSIS
 # ════════════════════════════════════════════════════════════════════
 

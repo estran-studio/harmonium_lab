@@ -1,6 +1,10 @@
 > **Chantier en cours** : dataset trad québécois — `specs/001-trad-dataset/plan.md`. Le corpus jazz/classique ci-dessous est l’ancienne référence.
 
 > `make trad-corpus` (DS-T1) : télécharge Chambers + The Session dans `corpus/trad/raw/` (cache, gitignoré), normalise un air par fichier dans `corpus/trad/tunes/<type>/`, écrit `manifest.jsonl` + `VERSION` (seuls versionnés) et `rejects.jsonl`. Code : `src/harmonium_lab/trad/`; artistes québécois : `trad/quebec_artists.json`. Relance sans réseau : `--offline`.
+> `make trad-render` (DS-T2) : ABC → MIDI (`abc2midi`, reprises AABB) → WAV (`fluidsynth`, GeneralUser GS) dans `target/trad_render/<type>/` (gitignoré). `make trad-profiles` (DS-T3) : `references/trad-<type>/profile.json` (versionnés).
+> `make engine-reels N=10` (DS-T4) : exporte N reels du moteur (repo frère `../harmonium`, seeds 1..N, 32 mesures = AABB) vers `target/engine_reels/` via :
+> `cargo run -q -p harmonium-cli --release --manifest-path ../harmonium/Cargo.toml -- --export --bars 32 --style reel --seed S --record-wav target/engine_reels/reel_seedS.wav --record-midi target/engine_reels/reel_seedS.mid`
+> (binaire `harmonium-cli` : `--export --bars 32 --style reel --seed S --record-wav … --record-midi …`). Ensuite : `harmonium-lab trad-compare --generated target/engine_reels --type reel` puis `harmonium-lab blindtest --type reel --real 10 --generated target/engine_reels --count 10`.
 
 ## harmonium_lab — Music Quality Evaluation Pipeline
 
