@@ -181,7 +181,7 @@ def chambers_tunes(raw_dir: Path, fetcher: Fetcher) -> Iterator[RawTune]:
                     url=url if len(blocks) == 1 else f"{url}#{i}",
                     block=block,
                     type_hint=CHAMBERS_TYPED_DIRS.get(d),
-                    because=f"John Chambers, collection Québec ({d + '/' if d else 'racine'}{name})",
+                    because=f"John Chambers, collection Québec ({d or 'racine'}/{name})",
                     fallback_title=Path(name).stem.replace("_", " "),
                 )
 
