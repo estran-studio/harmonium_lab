@@ -156,6 +156,41 @@ def make_sine_wav(path: Path, freq: float = 440.0, seconds: float = 1.0, rate: i
         w.setframerate(rate)
         w.writeframes(struct.pack(f"<{n}h", *(int(16000 * math.sin(2 * math.pi * freq * i / rate)) for i in range(n))))
 
+def write_float_wav(path: Path, freq: float = 220.0, seconds: float = 1.0,
+                     rate: int = 44100, extensible: bool = False):
+    """WAV float32 type sortie moteur (extensible ou non)."""
+    import struct as _st
+
+    n = int(seconds * rate)
+    frames = _st.pack(f"<{n}f", *(0.5 * math.sin(2 * math.pi * freq * i / rate) for i in range(n)))
+    if extensible:
+        guid = bytes.fromhex("0300000000001000800000aa00389b71")
+        fmt = _st.pack("<HHIIHHHHI16s", 65534, 1, rate, rate * 4, 4, 32, 22, 32, 4, guid)
+    else:
+        fmt = _st.pack("<HHIIHH", 3, 1, rate, rate * 4, 4, 32)
+    blob = b"fmt " + _st.pack("<I", len(fmt)) + fmt + b"data" + _st.pack("<I", len(frames)) + frames
+    path.write_bytes(b"RIFF" + _st.pack("<I", 4 + len(blob)) + b"WAVE" + blob)
+
+
+def test_float_wav_engine_like_mixed_kit(tmp_path):
+    from harmonium_lab.trad.blindtest import read_wav_mono
+
+    real = tmp_path / "real"
+    gen = tmp_path / "gen"
+    real.mkdir()
+    gen.mkdir()
+    make_sine_wav(real / "r0.wav")  # PCM16 type trad-render
+    make_sine_wav(real / "r1.wav", freq=466.0)
+    write_float_wav(gen / "g0.wav", extensible=True)  # float type moteur
+    write_float_wav(gen / "g1.wav", freq=233.0)
+    rate, samples = read_wav_mono(gen / "g0.wav")
+    assert rate == 44100 and len(samples) == 44100
+    kit = tmp_path / "kit"
+    built = build_kit(sorted(real.glob("*.wav")), sorted(gen.glob("*.wav")),
+                       kit, 2, 2, seed=5, duration=1.0)
+    assert built["files"] == ["01.wav", "02.wav", "03.wav", "04.wav"]
+    assert sum(1 for v in built["corrige"].values() if v["kind"] == "genere") == 2
+
 
 def test_blindtest_kit_deterministic(tmp_path):
     real = tmp_path / "real"
