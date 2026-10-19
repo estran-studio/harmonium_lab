@@ -1,6 +1,16 @@
 """Dataset trad québécois (specs/001-trad-dataset) : corpus, normalisation, manifeste et statistiques (D5)."""
 
-from .blindtest import build_kit, score_feuille
+from .blindtest import (
+    AudioPlayer,
+    build_kit,
+    find_audio_player,
+    load_feuille,
+    normalize_verdict,
+    play_kit,
+    print_score,
+    score_feuille,
+    update_feuille,
+)
 from .cells import bar_to_cell, degree_to_notation, pitch_to_degree
 from .features import (
     FEATURE_SCALARS,
@@ -32,7 +42,15 @@ from .profile import PROFILE_VERSION, build_profile, load_profile, save_profile
 __all__ = [
     "Note",
     "TradTune",
+    "AudioPlayer",
     "build_kit",
+    "find_audio_player",
+    "load_feuille",
+    "normalize_verdict",
+    "play_kit",
+    "print_score",
+    "score_feuille",
+    "update_feuille",
     "compare_to_profile",
     "deviations_for_file",
     "analyze_form",
