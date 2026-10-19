@@ -7,7 +7,7 @@ GENERATED_DIR := ../harmonium/harmonium_core/target/generated_music
 REPORTS_DIR := target/quality_reports
 TRAD_DIR := corpus/trad
 
-.PHONY: setup corpus profiles trad-corpus trad-profiles test lab-export suite gate clean help
+.PHONY: setup corpus profiles trad-corpus trad-render trad-profiles test lab-export suite gate clean help
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
@@ -63,6 +63,11 @@ trad-profiles: setup ## Build trad type profiles from corpus/trad (DS-T3/D5)
 
 trad-corpus: setup ## Download + normalise trad québécois corpus → corpus/trad/manifest.jsonl
 	$(LAB) trad-corpus --root $(TRAD_DIR)
+
+trad-render: setup ## Render 20 tunes per type at parity → target/trad_render/ (seed fixe)
+	$(LAB) trad-render --type reel --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),)
+	$(LAB) trad-render --type jig --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),)
+	$(LAB) trad-render --type waltz --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),)
 
 # ════════════════════════════════════════════════════════════════════
 # ANALYSIS

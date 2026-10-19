@@ -58,6 +58,16 @@ def main(argv: list[str] | None = None) -> int:
     p_trad.add_argument("--root", default="corpus/trad", help="Corpus directory")
     p_trad.add_argument("--delay", type=float, default=0.3, help="Seconds between network requests")
     p_trad.add_argument("--offline", action="store_true", help="Use the raw/ cache only")
+    # trad-render: render the trad corpus at parity (MIDI + WAV)
+    p_render = subparsers.add_parser("trad-render", help="Render trad corpus tunes (MIDI+WAV)")
+    p_render.add_argument("--root", default="corpus/trad", help="Corpus directory")
+    p_render.add_argument("--out", default="target/trad_render", help="Output directory")
+    p_render.add_argument("--type", default=None, help="Tune type (reel, jig, waltz, …; default: all)")
+    p_render.add_argument("--limit", type=int, default=None, help="Reproducible sample of N tunes")
+    p_render.add_argument("--seed", type=int, default=20261019, help="Sampling seed")
+    p_render.add_argument("--ids", nargs="*", default=None, help="Tune ids (ignores --limit/--seed)")
+    p_render.add_argument("--soundfont", default=None, help="SoundFont .sf2 path")
+    p_render.add_argument("--musicxml", action="store_true", help="Also emit .musicxml via music21")
     # trad-profile: build a trad type profile from corpus ABC/MIDI files
     p_trad = subparsers.add_parser("trad-profile", help="Build trad type profile from corpus tunes")
     p_trad.add_argument("--type", required=True, help="Tune type (reel, jig, waltz, ...)")
@@ -85,6 +95,8 @@ def main(argv: list[str] | None = None) -> int:
             return cmd_save_baseline(args)
         elif args.command == "trad-corpus":
             return cmd_trad_corpus(args)
+        elif args.command == "trad-render":
+            return cmd_trad_render(args)
         elif args.command == "trad-profile":
             return cmd_trad_profile(args)
     except Exception as e:
@@ -107,6 +119,24 @@ def cmd_trad_corpus(args: argparse.Namespace) -> int:
     if args.offline:
         argv.append("--offline")
     return trad_main(argv)
+
+
+def cmd_trad_render(args: argparse.Namespace) -> int:
+    """Render trad corpus tunes at parity (MIDI + WAV)."""
+    from .trad.render import main as render_main
+
+    argv = ["--root", args.root, "--out", args.out, "--seed", str(args.seed)]
+    if args.type:
+        argv += ["--type", args.type]
+    if args.limit is not None:
+        argv += ["--limit", str(args.limit)]
+    if args.ids:
+        argv += ["--ids", *args.ids]
+    if args.soundfont:
+        argv += ["--soundfont", args.soundfont]
+    if args.musicxml:
+        argv.append("--musicxml")
+    return render_main(argv)
 
 
 def cmd_analyze(args: argparse.Namespace) -> int:
