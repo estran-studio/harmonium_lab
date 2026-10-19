@@ -193,10 +193,14 @@ def score_feuille(
     demasques = [f["file"] for f in per_file if f["outcome"] == "demasque"]
     top_deviations: dict[str, list[str]] = {}
     if compare_report is not None:
-        by_file = {p.get("file", p.get("name", "")): p for p in compare_report.get("per_file", [])}
+        by_file: dict[str, dict[str, Any]] = {}
+        for p in compare_report.get("per_file", []):
+            key = p.get("file", p.get("name", ""))
+            by_file[key] = p
+            by_file[Path(key).stem] = p  # .wav du kit vs .mid du rapport
         for name in demasques:
             src = corrige[name]["source"]
-            match = by_file.get(src, by_file.get(name))
+            match = by_file.get(src, by_file.get(Path(src).stem, by_file.get(name)))
             if match:
                 top_deviations[name] = [d["sentence"] for d in match.get("deviations", [])[:3]]
 
