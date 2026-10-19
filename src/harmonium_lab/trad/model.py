@@ -34,6 +34,9 @@ class TradTune:
     # accords par mesure : liste de (position en croches, symbole ex. "D", "Am")
     chords: list[list[tuple[float, str]]] = field(default_factory=list)
     source: str = ""  # "abc" ou "engine-midi"
+    # Forme analysée (scheme, parts, is_aabb, pickup, cause, source) ; vide
+    # pour le MIDI moteur (calculée dans features() depuis les mesures).
+    form: dict = field(default_factory=dict)
 
 
 # Intervalles (demi-tons) des degrés 1..7 pour chaque mode.
@@ -60,7 +63,15 @@ MODE_ALIASES: dict[str, str] = {
     "phrygian": "phrygian",
     "lydian": "lydian",
     "locrian": "locrian",
+    "majeur": "ionian",
+    "mineur": "aeolian",
+    "dorien": "dorian",
+    "mixolydien": "mixolydian",
+    "lydien": "lydian",
+    "phrygien": "phrygian",
+    "locrien": "locrian",
 }
+
 
 # Noms de notes (dièses) pour la sortie déterministe des degrés d'accords.
 PC_NAMES: list[str] = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"]
