@@ -53,6 +53,12 @@ def main(argv: list[str] | None = None) -> int:
     p_baseline.add_argument("--reports", required=True, help="Directory with report JSONs")
     p_baseline.add_argument("--output", "-o", required=True, help="Baseline JSON path")
 
+    # trad-profile: build a trad type profile from corpus ABC/MIDI files
+    p_trad = subparsers.add_parser("trad-profile", help="Build trad type profile from corpus tunes")
+    p_trad.add_argument("--type", required=True, help="Tune type (reel, jig, waltz, ...)")
+    p_trad.add_argument("--corpus", default="corpus/trad", help="Corpus root (tunes/<type>/*.abc)")
+    p_trad.add_argument("--output", "-o", required=True, help="Output profile JSON path")
+
     args = parser.parse_args(argv)
 
     if args.command is None:
@@ -72,6 +78,8 @@ def main(argv: list[str] | None = None) -> int:
             return cmd_gate(args)
         elif args.command == "save-baseline":
             return cmd_save_baseline(args)
+        elif args.command == "trad-profile":
+            return cmd_trad_profile(args)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1
@@ -250,6 +258,39 @@ def cmd_save_baseline(args: argparse.Namespace) -> int:
 
     save_baseline(combined, args.output)
     print(f"Baseline saved to {args.output} ({len(combined)} scenarios)")
+    return 0
+
+
+def cmd_trad_profile(args: argparse.Namespace) -> int:
+    """Build a trad type profile from corpus tunes (ABC + engine MIDI)."""
+    from .trad import build_profile, load_abc, load_engine_midi, save_profile
+
+    tunes_dir = Path(args.corpus) / "tunes" / args.type
+    abc_files = sorted(tunes_dir.glob("*.abc"))
+    midi_files = sorted(tunes_dir.glob("*.mid")) + sorted(tunes_dir.glob("*.midi"))
+    if not abc_files and not midi_files:
+        print(f"No tunes found in {tunes_dir}")
+        return 1
+
+    tunes = []
+    for path in abc_files:
+        try:
+            tunes.append(load_abc(path))
+        except Exception as e:
+            print(f"Skipping {path.name}: {e}")
+    for path in midi_files:
+        try:
+            tunes.append(load_engine_midi(path))
+        except Exception as e:
+            print(f"Skipping {path.name}: {e}")
+    if not tunes:
+        print(f"No loadable tunes in {tunes_dir}")
+        return 1
+
+    print(f"Building trad profile '{args.type}' from {len(tunes)} tunes...")
+    profile = build_profile(tunes, tune_type=args.type)
+    save_profile(profile, args.output)
+    print(f"Profile saved to {args.output} ({profile['tune_count']} tunes)")
     return 0
 
 
