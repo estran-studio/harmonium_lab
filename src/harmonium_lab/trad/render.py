@@ -400,8 +400,18 @@ def render_all(root: Path, out: Path, tune_type: str | None, limit: int | None,
         if not abc_path.is_file():
             raise RenderError(f"ABC introuvable ({abc_path}) : relance `make trad-corpus`")
         entries.append(render_one(abc_path, row, out / row["type"], soundfont, musicxml))
-    (out / "render_log.jsonl").write_text(
-        "".join(json.dumps(e, ensure_ascii=False, separators=(",", ":")) + "\n" for e in entries),
+    log_path = out / "render_log.jsonl"
+    merged = {}
+    if log_path.is_file():  # cumulatif entre invocations (un type par appel)
+        for line in log_path.read_text(encoding="utf-8").splitlines():
+            if line.strip():
+                old = json.loads(line)
+                merged[old["id"]] = old
+    for e in entries:
+        merged[e["id"]] = e
+    log_path.write_text(
+        "".join(json.dumps(merged[k], ensure_ascii=False, separators=(",", ":")) + "\n"
+                for k in sorted(merged)),
         encoding="utf-8",
     )
     return entries
