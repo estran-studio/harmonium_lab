@@ -6,10 +6,13 @@ partie, accords = ``ChordSymbol`` (annotations ``"G"`` de l'ABC).
 
 MIDI moteur : parsé par ``mido``. Canal 0 = mélodie, canal 1 = accords
 (symboles reconstruits depuis les simultanéités), canal 2 = basse (doublure,
-ignorée pour les symboles), canaux 3/4/9 = pieds (ignorés). Signature
-rythmique et tonalité lues depuis les méta-événements ; sans méta de
-tonalité, repli Krumhansl-Schmuckler de ``music21`` sur la mélodie.
-Sans méta de signature, repli documenté sur 4/4 (ou forçage explicite).
+ignorée pour les symboles), canaux 3/4/9 = pieds (ignorés). L'export du
+moteur ne ferme pas toujours ses notes (pas de ``note_off``) : les notes
+restées ouvertes sont closes en legato (fin = attaque suivante du même
+canal, sinon fin de piste). Signature rythmique et tonalité lues depuis
+les méta-événements ; sans méta de tonalité, repli Krumhansl-Schmuckler
+de ``music21`` sur la mélodie. Sans méta de signature, repli documenté
+sur 4/4 (ou forçage explicite).
 """
 
 from __future__ import annotations
@@ -137,19 +140,31 @@ def load_engine_midi(
     den = denominator or meta_den or 4
     bar_ticks = ticks_per_beat * num * 4.0 / den
 
-    # (canal, hauteur) -> tick d'attaque ; notes closes (canal, hauteur, début, fin).
-    open_notes: dict[tuple[int, int], int] = {}
+    # Attaques en FIFO par (canal, hauteur) ; notes closes (canal, hauteur, début, fin).
+    pending: dict[tuple[int, int], list[int]] = {}
     closed: list[tuple[int, int, int, int]] = []
+    starts_by_channel: dict[int, list[int]] = {}
+    end_tick = 0
     for track in mid.tracks:
         tick = 0
         for msg in track:
             tick += msg.time
+            end_tick = max(end_tick, tick)
             if msg.type == "note_on" and msg.velocity > 0:
-                open_notes[(msg.channel, msg.note)] = tick
+                pending.setdefault((msg.channel, msg.note), []).append(tick)
+                starts_by_channel.setdefault(msg.channel, []).append(tick)
             elif msg.type in ("note_off",) or (msg.type == "note_on" and msg.velocity == 0):
                 key = (msg.channel, msg.note)
-                if key in open_notes:
-                    closed.append((msg.channel, msg.note, open_notes.pop(key), tick))
+                if pending.get(key):
+                    closed.append((msg.channel, msg.note, pending[key].pop(0), tick))
+    # Repli legato : l'export moteur laisse les notes ouvertes (mélodie,
+    # accords) ; chaque note se termine à l'attaque suivante de son canal.
+    for (ch, pitch), starts in pending.items():
+        ordered = sorted(starts_by_channel.get(ch, []))
+        for start in starts:
+            following = [s for s in ordered if s > start]
+            end = min(following) if following else max(end_tick, start)
+            closed.append((ch, pitch, start, end))
 
     melody = sorted(n for n in closed if n[0] == MELODY_CHANNEL)
     chord_notes = sorted(n for n in closed if n[0] == CHORDS_CHANNEL)
