@@ -272,10 +272,13 @@ def explain(key: str, tune_type: str, real: float, gen: float) -> str:
     oreille = entry["oreille_plus"] if gen >= real else entry["oreille_moins"]
     r, g = _fmt_value(base, real), _fmt_value(base, gen)
     if entry["unite"] == "%":
-        return (
-            f"Les {plurals} réels {sujet} dans {r} % des cas, "
-            f"le moteur dans {g} % : {oreille}."
-        )
+        # Sujets en « à » (« à 30 % des cas ») vs autres (« dans 31 % des cas »).
+        to_pct = sujet.endswith(" à")
+        real_part = f"{sujet} {r} % des cas" if to_pct else f"{sujet} dans {r} % des cas"
+        gen_part = f"le moteur {g} %" if to_pct else f"le moteur dans {g} %"
+        return f"Les {plurals} réels {real_part}, {gen_part} : {oreille}."
+    if entry["unite"] == "note":
+        return f"Les {plurals} réels {sujet} {r}, le moteur : {g} : {oreille}."
     return (
         f"Les {plurals} réels {sujet} : {r} {entry['unite']}, "
         f"le moteur : {g} {entry['unite']} : {oreille}."
