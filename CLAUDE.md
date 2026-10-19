@@ -1,5 +1,7 @@
 > **Chantier en cours** : dataset trad québécois — `specs/001-trad-dataset/plan.md`. Le corpus jazz/classique ci-dessous est l’ancienne référence.
 
+> `make trad-corpus` (DS-T1) : télécharge Chambers + The Session dans `corpus/trad/raw/` (cache, gitignoré), normalise un air par fichier dans `corpus/trad/tunes/<type>/`, écrit `manifest.jsonl` + `VERSION` (seuls versionnés) et `rejects.jsonl`. Code : `src/harmonium_lab/trad/`; artistes québécois : `trad/quebec_artists.json`. Relance sans réseau : `--offline`.
+
 ## harmonium_lab — Music Quality Evaluation Pipeline
 
 ### Quick Start
