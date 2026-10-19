@@ -331,3 +331,285 @@ def test_cli_no_write_outside_target(tmp_path, monkeypatch):
 
     monkeypatch.chdir(tmp_path)
     assert main([]) == 0
+
+
+def test_normalize_verdict():
+    from harmonium_lab.trad.blindtest import normalize_verdict
+
+    for r in ("réel", "reel", "r", "R", "Réel", "REEL", "reel_extra"):
+        assert normalize_verdict(r) == "reel", f"failed on {r}"
+    for g in ("généré", "genere", "g", "G", "Généré", "GENERE", "generateur"):
+        assert normalize_verdict(g) == "genere", f"failed on {g}"
+    for q in ("?", "abstention", "? ", "  ?"):
+        assert normalize_verdict(q) == "?", f"failed on {q}"
+    assert normalize_verdict("") == ""
+    assert normalize_verdict("   ") == ""
+    assert normalize_verdict("autre") is None
+
+
+def test_blindtest_score_empty_feuille_message(tmp_path, capsys):
+    from harmonium_lab.cli import main
+    from harmonium_lab.trad.blindtest import build_kit, score_feuille
+
+    real = tmp_path / "real"
+    gen = tmp_path / "gen"
+    real.mkdir()
+    gen.mkdir()
+    for i in range(2):
+        make_sine_wav(real / f"r{i}.wav")
+        make_sine_wav(gen / f"g{i}.wav", freq=220.0)
+    kit = tmp_path / "kit"
+    build_kit(sorted(real.glob("*.wav")), sorted(gen.glob("*.wav")), kit, 2, 2, seed=42, duration=1.0)
+
+    score = score_feuille(kit)
+    assert score["n_files"] == 4
+    assert score["n_judged"] == 0
+    assert score["n_remaining"] == 4
+
+    rc = main(["blindtest-score", str(kit)])
+    assert rc == 0
+    out = capsys.readouterr().out
+    assert "Aucune réponse dans feuille.md" in out
+    assert f"harmonium-lab blindtest-play {kit}" in out
+    assert "0.0 %" not in out
+
+
+def test_blindtest_score_abbreviated_and_unaccented(tmp_path):
+    from harmonium_lab.trad.blindtest import build_kit, score_feuille
+
+    real = tmp_path / "real"
+    gen = tmp_path / "gen"
+    real.mkdir()
+    gen.mkdir()
+    for i in range(2):
+        make_sine_wav(real / f"r{i}.wav")
+        make_sine_wav(gen / f"g{i}.wav", freq=220.0)
+    kit = tmp_path / "kit"
+    build_kit(sorted(real.glob("*.wav")), sorted(gen.glob("*.wav")), kit, 2, 2, seed=42, duration=1.0)
+
+    corrige = json.loads((kit / "corrige.json").read_text(encoding="utf-8"))
+    files = sorted(corrige)
+    # Teste 'r', 'g', 'reel', 'genere'
+    answers = ["r", "g", "reel", "genere"]
+    lines = ["| fichier | verdict | note | commentaire |", "|---|---|---|---|"]
+    for f, ans in zip(files, answers):
+        lines.append(f"| {f} | {ans} | 3 | ok |")
+    (kit / "feuille.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    score = score_feuille(kit)
+    assert score["n_files"] == 4
+    assert score["n_judged"] == 4
+    assert score["n_remaining"] == 0
+    assert all(f["outcome"] in ("demasque", "confondu", "reconnu") for f in score["per_file"])
+
+
+def test_blindtest_score_partial_feuille(tmp_path, capsys):
+    from harmonium_lab.cli import main
+    from harmonium_lab.trad.blindtest import build_kit
+
+    real = tmp_path / "real"
+    gen = tmp_path / "gen"
+    real.mkdir()
+    gen.mkdir()
+    for i in range(2):
+        make_sine_wav(real / f"r{i}.wav")
+        make_sine_wav(gen / f"g{i}.wav", freq=220.0)
+    kit = tmp_path / "kit"
+    build_kit(sorted(real.glob("*.wav")), sorted(gen.glob("*.wav")), kit, 2, 2, seed=42, duration=1.0)
+
+    corrige = json.loads((kit / "corrige.json").read_text(encoding="utf-8"))
+    files = sorted(corrige)
+    # Seulement 1 fichier répondu sur 4
+    lines = [
+        "| fichier | verdict | note | commentaire |",
+        "|---|---|---|---|",
+        f"| {files[0]} | r | 4 | super |",
+        f"| {files[1]} | ? |  |  |",
+        f"| {files[2]} | ? |  |  |",
+        f"| {files[3]} | ? |  |  |",
+    ]
+    (kit / "feuille.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+    rc = main(["blindtest-score", str(kit)])
+    assert rc == 0
+    out = capsys.readouterr().out
+    assert "Feuille partielle : il reste 3 fichier(s) à juger sur 4." in out
+    assert "Générés reconnus" in out
+
+
+def test_cmd_blindtest_recommends_blindtest_play(tmp_path, capsys):
+    from harmonium_lab.cli import main
+
+    rend = tmp_path / "rend" / "reel"
+    rend.mkdir(parents=True)
+    gwav = tmp_path / "gwav"
+    gwav.mkdir()
+    make_sine_wav(rend / "a.wav")
+    make_sine_wav(rend / "b.wav")
+    make_sine_wav(gwav / "g.wav", freq=220.0)
+
+    kit = tmp_path / "kit"
+    rc = main(["blindtest", "--type", "reel", "--real", "1", "--generated", str(gwav),
+               "--count", "1", "--seed", "1", "--duration", "1.0",
+               "-o", str(kit), "--render-dir", str(tmp_path / "rend")])
+    assert rc == 0
+    out = capsys.readouterr().out
+    assert f"harmonium-lab blindtest-play {kit}" in out
+
+
+def test_blindtest_play_session_and_reprise(tmp_path):
+    from harmonium_lab.trad.blindtest import build_kit, load_feuille, play_kit
+
+    real = tmp_path / "real"
+    gen = tmp_path / "gen"
+    real.mkdir()
+    gen.mkdir()
+    for i in range(2):
+        make_sine_wav(real / f"r{i}.wav")
+        make_sine_wav(gen / f"g{i}.wav", freq=220.0)
+    kit = tmp_path / "kit"
+    build_kit(sorted(real.glob("*.wav")), sorted(gen.glob("*.wav")), kit, 2, 2, seed=42, duration=1.0)
+
+    played_files: list[str] = []
+
+    def mock_player(p):
+        played_files.append(p.name)
+
+    # Session 1 : répondre aux 3 premiers fichiers, puis 'p' (réécouter) sur le 4e, puis 'q' (quitter)
+    # Réponses :
+    # 01.wav : 'r', '4', 'bon reel'
+    # 02.wav : 'g', '2', 'moteur'
+    # 03.wav : 'reel', '' (passer note), '' (aucun commentaire)
+    # 04.wav : 'p' (réécouter), puis 'q' (quitter)
+    inputs_s1 = [
+        "r", "4", "bon reel",
+        "g", "2", "moteur",
+        "reel", "", "",
+        "p", "q",
+    ]
+    s1_iter = iter(inputs_s1)
+    out_s1 = []
+
+    rc1 = play_kit(
+        kit,
+        player=mock_player,
+        input_fn=lambda prompt: next(s1_iter),
+        print_fn=out_s1.append,
+    )
+    assert rc1 == 0
+    assert played_files == ["01.wav", "02.wav", "03.wav", "04.wav", "04.wav"]
+
+    # Vérifie l'état de feuille.md après interruption
+    rows_after_s1 = load_feuille(kit)
+    assert rows_after_s1[0]["file"] == "01.wav" and rows_after_s1[0]["verdict"] == "réel" and rows_after_s1[0]["note"] == "4"
+    assert rows_after_s1[1]["file"] == "02.wav" and rows_after_s1[1]["verdict"] == "généré" and rows_after_s1[1]["note"] == "2"
+    assert rows_after_s1[2]["file"] == "03.wav" and rows_after_s1[2]["verdict"] == "réel" and rows_after_s1[2]["note"] == ""
+    assert rows_after_s1[3]["file"] == "04.wav" and rows_after_s1[3]["verdict"] == "?"
+
+    # Session 2 : reprise -> continue au 4e fichier
+    played_files.clear()
+    inputs_s2 = [
+        "g", "5", "génial",
+    ]
+    s2_iter = iter(inputs_s2)
+    out_s2 = []
+
+    rc2 = play_kit(
+        kit,
+        player=mock_player,
+        input_fn=lambda prompt: next(s2_iter),
+        print_fn=out_s2.append,
+    )
+    assert rc2 == 0
+    # Seul le 4e fichier a été joué !
+    assert played_files == ["04.wav"]
+
+    # Vérifie que feuille.md est maintenant entièrement remplie
+    rows_after_s2 = load_feuille(kit)
+    assert rows_after_s2[3]["file"] == "04.wav" and rows_after_s2[3]["verdict"] == "généré" and rows_after_s2[3]["note"] == "5"
+
+    # Vérifie que le score a été automatiquement affiché à la fin de la session 2
+    joined_out2 = "\n".join(out_s2)
+    assert "--- Résultat du test d'écoute ---" in joined_out2
+    assert "Générés reconnus" in joined_out2
+
+    # Session 3 : appel alors que tous les fichiers sont déjà jugés
+    out_s3 = []
+    rc3 = play_kit(kit, player=mock_player, print_fn=out_s3.append)
+    assert rc3 == 0
+    assert "Tous les fichiers sont déjà jugés dans feuille.md." in "\n".join(out_s3)
+
+
+def test_blindtest_audio_player_missing_warning(tmp_path):
+    from harmonium_lab.trad.blindtest import AudioPlayer
+
+    logs = []
+    player = AudioPlayer(cmd=None, print_fn=logs.append)
+    player.cmd = None  # force absence de lecteur
+    player.play(tmp_path / "dummy.wav")
+    assert any("Aucun lecteur audio détecté" in line for line in logs)
+
+
+def test_cli_blindtest_play_and_quit_ctrl_c(tmp_path):
+    from harmonium_lab.cli import main
+    from harmonium_lab.trad.blindtest import build_kit
+
+    real = tmp_path / "real"
+    gen = tmp_path / "gen"
+    real.mkdir()
+    gen.mkdir()
+    make_sine_wav(real / "r.wav")
+    make_sine_wav(gen / "g.wav", freq=220.0)
+    kit = tmp_path / "kit"
+    build_kit(sorted(real.glob("*.wav")), sorted(gen.glob("*.wav")), kit, 1, 1, seed=42, duration=1.0)
+
+    # Test de blindtest-play via CLI avec interruption KeyboardInterrupt
+    import builtins
+    orig_input = builtins.input
+    def mock_input(_prompt=""):
+        raise KeyboardInterrupt()
+
+    builtins.input = mock_input
+    try:
+        rc = main(["blindtest-play", str(kit)])
+        assert rc == 0
+    finally:
+        builtins.input = orig_input
+
+
+def test_cli_blindtest_play_full_session(tmp_path, capsys):
+    import builtins
+    from harmonium_lab.cli import main
+    from harmonium_lab.trad.blindtest import build_kit, load_feuille
+
+    real = tmp_path / "real"
+    gen = tmp_path / "gen"
+    real.mkdir()
+    gen.mkdir()
+    make_sine_wav(real / "r.wav")
+    make_sine_wav(gen / "g.wav", freq=220.0)
+    kit = tmp_path / "kit"
+    build_kit(sorted(real.glob("*.wav")), sorted(gen.glob("*.wav")), kit, 1, 1, seed=42, duration=1.0)
+
+    # Répondre aux 2 fichiers via stdin (input)
+    answers = [
+        "r", "5", "trad solide",
+        "g", "", "",
+    ]
+    it = iter(answers)
+    orig_input = builtins.input
+    builtins.input = lambda _prompt="": next(it)
+    try:
+        rc = main(["blindtest-play", str(kit)])
+        assert rc == 0
+    finally:
+        builtins.input = orig_input
+
+    out = capsys.readouterr().out
+    assert "--- Résultat du test d'écoute ---" in out
+    assert "Générés reconnus" in out
+
+    rows = load_feuille(kit)
+    assert len(rows) == 2
+    assert rows[0]["verdict"] == "réel" and rows[0]["note"] == "5" and rows[0]["comment"] == "trad solide"
+    assert rows[1]["verdict"] == "généré" and rows[1]["note"] == ""

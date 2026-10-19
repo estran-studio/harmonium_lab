@@ -92,6 +92,10 @@ def main(argv: list[str] | None = None) -> int:
     p_bt.add_argument("--fade", type=float, default=0.5, help="Fade in/out in seconds")
     p_bt.add_argument("-o", "--output", default=None, help="Output dir (default: target/blindtest/<horodatage>/)")
     p_bt.add_argument("--render-dir", default="target/trad_render", help="Rendered real WAVs root")
+    # blindtest-play: interactively play WAVs and fill feuille.md (D6)
+    p_btp = subparsers.add_parser("blindtest-play", help="Play WAVs, fill feuille.md interactively, and score")
+    p_btp.add_argument("kit", help="Kit dir (target/blindtest/<horodatage>/)")
+    p_btp.add_argument("--compare", default=None, help="trad-compare report.json (top deviations of unmasked)")
     # blindtest-score: grade a filled answer sheet (D6)
     p_bts = subparsers.add_parser("blindtest-score", help="Score a filled blindtest feuille.md")
     p_bts.add_argument("kit", help="Kit dir (target/blindtest/<horodatage>/)")
@@ -128,6 +132,8 @@ def main(argv: list[str] | None = None) -> int:
             return cmd_blindtest(args)
         elif args.command == "blindtest-score":
             return cmd_blindtest_score(args)
+        elif args.command == "blindtest-play":
+            return cmd_blindtest_play(args)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1
@@ -532,28 +538,35 @@ def cmd_blindtest(args: argparse.Namespace) -> int:
     print(f"Kit in {out}/ ({len(kit['files'])} fichiers, seed {args.seed})")
     for n in kit["files"]:
         print(f"  {n}")
-    print("Remplis feuille.md, puis : harmonium-lab blindtest-score " + str(out))
+    print(f"Pour écouter et répondre : harmonium-lab blindtest-play {out}")
     return 0
+
+
+def cmd_blindtest_play(args: argparse.Namespace) -> int:
+    """Play WAVs, fill feuille.md interactively, and score (D6)."""
+    import json as _json
+
+    from .trad import play_kit
+
+    kit = Path(args.kit)
+    compare_report = None
+    if args.compare:
+        compare_report = _json.loads(Path(args.compare).read_text(encoding="utf-8"))
+    return play_kit(kit, compare_report=compare_report)
 
 
 def cmd_blindtest_score(args: argparse.Namespace) -> int:
     """Score a filled blindtest feuille.md (D6)."""
     import json as _json
 
-    from .trad import score_feuille
+    from .trad import print_score, score_feuille
 
     kit = Path(args.kit)
     compare_report = None
     if args.compare:
         compare_report = _json.loads(Path(args.compare).read_text(encoding="utf-8"))
     score = score_feuille(kit, compare_report)
-    print(f"Générés reconnus : {score['pct_generated_recognized']} % "
-          f"({score['n_generated_judged']} jugés sur {score['n_generated']})")
-    print(f"Générés confondus (pris pour réels) : {score['pct_generated_confused']} %")
-    for name, sentences in score["top_deviations_unmasked"].items():
-        print(f"  {name} :")
-        for s in sentences:
-            print(f"    - {s}")
+    print_score(score, kit_dir=kit)
     return 0
 
 
