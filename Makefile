@@ -5,8 +5,9 @@ LAB := $(VENV)/bin/harmonium-lab
 REFS_DIR := references
 GENERATED_DIR := ../harmonium/harmonium_core/target/generated_music
 REPORTS_DIR := target/quality_reports
+TRAD_DIR := corpus/trad
 
-.PHONY: setup corpus profiles test lab-export suite gate clean help
+.PHONY: setup corpus profiles trad-corpus test lab-export suite gate clean help
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
@@ -37,6 +38,13 @@ profiles: setup ## Build reference profiles from corpus MIDI files
 			--output "$(REFS_DIR)/$$cat/profile.json"; \
 	done
 	@echo "All profiles built."
+
+# ════════════════════════════════════════════════════════════════════
+# TRAD CORPUS (specs/001-trad-dataset)
+# ════════════════════════════════════════════════════════════════════
+
+trad-corpus: setup ## Download + normalise trad québécois corpus → corpus/trad/manifest.jsonl
+	$(LAB) trad-corpus --root $(TRAD_DIR)
 
 # ════════════════════════════════════════════════════════════════════
 # ANALYSIS
