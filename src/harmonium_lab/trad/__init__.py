@@ -18,6 +18,7 @@ from .compare import (
     nearest_reals,
     reference_stats,
 )
+from .form import analyze_form, describe_form, plan_to_dict
 from .loaders import load_abc, load_engine_midi, name_chord
 from .model import (
     Note,
@@ -34,9 +35,12 @@ __all__ = [
     "build_kit",
     "compare_to_profile",
     "deviations_for_file",
+    "analyze_form",
+    "bar_to_cell",
     "beat_eighths",
     "build_profile",
     "chord_degree_label",
+    "describe_form",
     "degree_to_notation",
     "eighths_per_bar",
     "FEATURE_SCALARS",
@@ -51,6 +55,7 @@ __all__ = [
     "reference_stats",
     "score_feuille",
     "pitch_to_degree",
+    "plan_to_dict",
     "PROFILE_VERSION",
     "save_profile",
 ]

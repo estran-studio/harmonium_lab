@@ -33,10 +33,63 @@ _CHORD_TRITONE = 6
 
 
 def load_abc(path: Path | str) -> TradTune:
-    """Charge un air ABC en ``TradTune`` (reprises développées)."""
+    """Charge un air ABC en ``TradTune`` (forme depuis le texte, repli music21 marqué)."""
+    path = Path(path)
+    text = path.read_text(encoding="utf-8", errors="replace")
+    try:
+        return _load_abc_direct(path, text)
+    except Exception as first_err:
+        try:
+            tune = _load_abc_music21(path)
+        except Exception as second_err:
+            raise second_err from first_err
+        tune.form = {
+            "scheme": "?",
+            "parts": [],
+            "is_aabb": False,
+            "pickup": 0.0,
+            "cause": f"repli-music21:{first_err}",
+            "source": "music21-fallback",
+        }
+        return tune
+
+
+def _load_abc_direct(path: Path, text: str) -> TradTune:
+    """Chargeur principal : tokenisation ABC, forme développée, hauteurs MIDI."""
+    from .form import analyze_form, plan_to_dict
+
+    plan = analyze_form(text)
+    bars: list[list[Note]] = []
+    chords: list[list[tuple[float, str]]] = []
+    for notes, bar_chords, _, _ in plan.bars:
+        bar = [
+            Note(pitch=p, onset=round(float(o), 3), duration=round(float(d), 3))
+            for o, d, p in notes
+            if p is not None
+        ]
+        bar.sort(key=lambda n: (n.onset, n.pitch))
+        bars.append(bar)
+        chords.append(sorted((round(float(o), 3), s) for o, s in bar_chords))
+    if not any(bars):
+        raise ValueError(f"{path}: aucune note trouvée")
+    return TradTune(
+        tune_id=path.stem,
+        key_tonic_pc=plan.key_tonic_pc,
+        key_name=plan.key_name,
+        mode=plan.mode,
+        meter=plan.meter,
+        eighths_per_bar=plan.eighths_per_bar,
+        bars=bars,
+        chords=chords,
+        source="abc",
+        form=plan_to_dict(plan),
+    )
+
+
+def _load_abc_music21(path: Path) -> TradTune:
+    """Repli : parse music21 + expandRepeats (levées et fins parfois perdues)."""
     import music21
 
-    path = Path(path)
     score = music21.converter.parse(str(path))
     expanded = score.expandRepeats()
     parts = list(expanded.parts)

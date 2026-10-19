@@ -10,7 +10,13 @@ references/*/*.mid
 references/*/*.midi
 
 # Generated reference profiles (rebuild with: make profiles)
-references/*/profile.json
+# Anciens profils : gitignorés. Profils trad (D3) : VERSIONNÉS.
+references/ambient/profile.json
+references/classical-simple/profile.json
+references/jazz-calm/profile.json
+references/jazz-upbeat/profile.json
+references/training-backing/profile.json
+!references/trad-*/profile.json
 
 # Analysis output
 target/

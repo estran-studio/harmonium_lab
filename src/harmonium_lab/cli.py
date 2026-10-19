@@ -97,6 +97,11 @@ def main(argv: list[str] | None = None) -> int:
     p_bts.add_argument("kit", help="Kit dir (target/blindtest/<horodatage>/)")
     p_bts.add_argument("--compare", default=None, help="trad-compare report.json (top deviations of unmasked)")
 
+    # trad-form-report: coverage of form analysis for a tune type
+    p_form = subparsers.add_parser("trad-form-report", help="Form coverage report for a trad tune type")
+    p_form.add_argument("--type", required=True, help="Tune type (reel, jig, waltz, ...)")
+    p_form.add_argument("--corpus", default="corpus/trad", help="Corpus root")
+
     args = parser.parse_args(argv)
 
     if args.command is None:
@@ -128,6 +133,8 @@ def main(argv: list[str] | None = None) -> int:
             return cmd_blindtest(args)
         elif args.command == "blindtest-score":
             return cmd_blindtest_score(args)
+        elif args.command == "trad-form-report":
+            return cmd_trad_form_report(args)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1
@@ -554,6 +561,65 @@ def cmd_blindtest_score(args: argparse.Namespace) -> int:
         print(f"  {name} :")
         for s in sentences:
             print(f"    - {s}")
+def cmd_trad_form_report(args: argparse.Namespace) -> int:
+    """Coverage report: scheme distribution, AABB rate, examples per cause."""
+    import json
+    from collections import Counter
+
+    from .trad import features, load_abc
+
+    tunes_dir = Path(args.corpus) / "tunes" / args.type
+    abc_files = sorted(tunes_dir.glob("*.abc"))
+    if not abc_files:
+        print(f"No tunes found in {tunes_dir}")
+        return 1
+
+    titles: dict[str, str] = {}
+    manifest = Path(args.corpus) / "manifest.jsonl"
+    if manifest.exists():
+        for line in manifest.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line:
+                row = json.loads(line)
+                titles[row["id"]] = row.get("title", "")
+
+    schemes: Counter[str] = Counter()
+    causes: Counter[str] = Counter()
+    examples: dict[str, list[str]] = {}
+    errors = 0
+    strict_aabb = 0
+    for path in abc_files:
+        tune_id = path.stem
+        try:
+            form = features(load_abc(path))["form"]
+            scheme, cause = form["scheme"], str(form["cause"])
+            if form["is_aabb"]:
+                strict_aabb += 1
+        except Exception as e:  # 0 air perdu : marqué, jamais d'exception
+            errors += 1
+            scheme, cause = "erreur-analyse", f"erreur-analyse:{type(e).__name__}"
+        schemes[scheme] += 1
+        causes[(scheme, cause)] += 1
+        key = f"{scheme} :: {cause}"
+        examples.setdefault(key, [])
+        if len(examples[key]) < 10:
+            examples[key].append(f"{tune_id} — {titles.get(tune_id, '?')}")
+
+    n = len(abc_files)
+    aabb = schemes.get("AABB", 0)
+    print(f"type={args.type} airs={n} AABB-8-strict={strict_aabb} ({strict_aabb / n:.0%}) "
+          f"AABB-scheme={aabb} ({aabb / n:.0%}) erreurs={errors}")
+    print("\nschemes :")
+    for scheme, count in schemes.most_common():
+        print(f"  {count:4d} {scheme}")
+    print("\ncauses :")
+    for (scheme, cause), count in causes.most_common():
+        print(f"  {count:4d} [{scheme}] {cause}")
+    print("\nexemples par cause (10 max) :")
+    for key in sorted(examples):
+        print(f"  {key}")
+        for ex in examples[key]:
+            print(f"    - {ex}")
     return 0
 
 

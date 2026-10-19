@@ -108,26 +108,58 @@ def _form_features(tune: TradTune) -> dict[str, Any]:
     sigs = [_bar_signature(b) for b in tune.bars]
     if n >= 32:
         a1, a2, b1, b2 = sigs[0:8], sigs[8:16], sigs[16:24], sigs[24:32]
-        is_aabb = a1 == a2 and b1 == b2 and a1 != b1
         repeat_identity = (sum(x == y for x, y in zip(a1, a2)) + sum(x == y for x, y in zip(b1, b2))) / 16.0
     elif n % 2 == 0 and n >= 2:
         half = n // 2
-        is_aabb = False
         repeat_identity = sum(x == y for x, y in zip(sigs[:half], sigs[half:])) / half
     else:
-        is_aabb = False
         repeat_identity = 0.0
     # Mesures 5-6 vs 1-2 (index 4:6 vs 0:2) dans chaque partie de 8.
-    parts = [sigs[i : i + PART_BARS] for i in range(0, n, PART_BARS) if len(sigs[i : i + PART_BARS]) == PART_BARS]
-    if parts:
-        share = sum(1 for p in parts if p[4:6] == p[0:2]) / len(parts)
+    chunks = [sigs[i : i + PART_BARS] for i in range(0, n, PART_BARS) if len(sigs[i : i + PART_BARS]) == PART_BARS]
+    if chunks:
+        share = sum(1 for p in chunks if p[4:6] == p[0:2]) / len(chunks)
     else:
         share = 0.0
+    if tune.form:
+        # Plan ABC : scheme/parts/is_aabb/pickup/cause/source analysés du texte.
+        return {
+            "scheme": tune.form.get("scheme", "?"),
+            "parts": list(tune.form.get("parts", [])),
+            "is_aabb": bool(tune.form.get("is_aabb", False)),
+            "pickup": float(tune.form.get("pickup", 0.0)),
+            "cause": tune.form.get("cause"),
+            "source": tune.form.get("source", "abc"),
+            "repeat_identity": round(repeat_identity, 4),
+            "share_identical_bars_5_6_vs_1_2": round(share, 4),
+            "n_parts": len(tune.form.get("parts", [])),
+        }
+    # Sans plan (MIDI moteur) : scheme par contenu, mesures de 8.
+    from .form import describe_form
+
+    letters: dict[tuple, str] = {}
+    scheme_chars = []
+    for c in chunks:
+        key = tuple(c)
+        if key not in letters:
+            letters[key] = chr(ord("A") + len(letters))
+        scheme_chars.append(letters[key])
+    scheme = "".join(scheme_chars)
+    spans = [_bar_span(b) for b in tune.bars]
+    frag_ids = [i for i, s in enumerate(spans) if abs(s - tune.eighths_per_bar) > 0.01]
+    if frag_ids:
+        scheme = "croche"
+    part_lens = [PART_BARS] * len(chunks)
+    is_aabb, cause = describe_form(scheme, part_lens, frag_ids)
     return {
+        "scheme": scheme,
+        "parts": part_lens,
         "is_aabb": is_aabb,
+        "pickup": 0.0,
+        "cause": cause,
+        "source": tune.source or "bars",
         "repeat_identity": round(repeat_identity, 4),
         "share_identical_bars_5_6_vs_1_2": round(share, 4),
-        "n_parts": len(parts),
+        "n_parts": len(chunks),
     }
 
 
@@ -276,7 +308,7 @@ def features(tune: TradTune) -> dict[str, Any]:
 
     form = _form_features(tune)
     cadences: dict[str, int | None] = {}
-    for i in range(form["n_parts"]):
+    for i in range(len(tune.bars) // PART_BARS):
         part = tune.bars[i * PART_BARS : (i + 1) * PART_BARS]
         cadences[f"part{i}_m4"] = _cadence_degree(part[3], tune.key_tonic_pc, mode, step, tune.eighths_per_bar)
         cadences[f"part{i}_m8"] = _cadence_degree(part[7], tune.key_tonic_pc, mode, step, tune.eighths_per_bar)
