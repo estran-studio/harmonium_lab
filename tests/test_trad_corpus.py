@@ -1,0 +1,288 @@
+"""Tests du corpus trad : aucun accès réseau (fixtures ABC, caches pré-remplis, `offline`)."""
+
+from __future__ import annotations
+
+import datetime as dt
+import json
+import re
+from pathlib import Path
+
+import pytest
+
+from harmonium_lab.trad import corpus as C
+from harmonium_lab.trad.abcnorm import (
+    AbcError,
+    analyse,
+    decode_abc_text,
+    intervals,
+    parse_key,
+    parse_tune,
+    split_tunes,
+    title_key,
+    type_from_text,
+)
+from harmonium_lab.trad.download import Fetcher, list_abc_files
+
+FIX = Path(__file__).parent / "fixtures" / "trad"
+
+
+def _raw(name: str, source: str = C.CHAMBERS, hint: str | None = None, url: str | None = None) -> list[C.RawTune]:
+    blocks = split_tunes((FIX / name).read_text(encoding="utf-8"))
+    return [
+        C.RawTune(source=source, origin=f"{name}#X{i}", url=url or f"fixture://{name}#{i}", block=b,
+                  type_hint=hint, because="fixture", fallback_title=name)
+        for i, b in enumerate(blocks, 1)
+    ]
+
+
+def _build(tmp_path: Path, raws: list[C.RawTune], today: dt.date = dt.date(2026, 1, 2)):
+    return C.build(tmp_path / "trad", Fetcher(offline=True), today=today, raw_tunes=raws)
+
+
+# ── Analyse ABC ──────────────────────────────────────────────────────
+
+
+def test_analyse_reel_meter_bars_incipit():
+    tune = parse_tune(split_tunes((FIX / "reel_bastringue.abc").read_text())[0])
+    a = analyse(tune)
+    assert (a.meter, a.key, a.mode, a.bars) == ("2/2", "D", "majeur", 16)
+    # f2ff f2gf | e2c2 d4  en ré majeur : do dièse issu de la armure
+    assert a.incipit == [78, 78, 78, 78, 79, 78, 76, 73, 74]
+
+
+def test_anacrusis_is_not_a_bar_nor_in_incipit():
+    block = "X:1\nT:t\nM:4/4\nL:1/8\nK:C\nG2 | c2 c2 e2 g2 | e4 c4 | d2 d2 f2 a2 | g8 |"
+    a = analyse(parse_tune(block))
+    assert a.bars == 4
+    assert a.incipit[0] == 72  # c, pas le sol d'anacrouse
+
+
+def test_dotted_rhythm_and_accidentals_fill_the_measure():
+    # c>d e<f g2 = 3/2 + 1/2 + 1/2... : mesure complète seulement si > et < sont comptés.
+    block = "X:1\nT:t\nM:4/4\nL:1/8\nK:C\nc>d e<f g2 g2 | ^f=fg^f g8 | c8 |"
+    a = analyse(parse_tune(block))
+    assert a.bars == 3  # pas d'anacrouse : la première mesure est pleine
+    # dièse persistant dans la mesure puis bécarre : f♯ (78) f♮ (77) g f♯ (78)
+    assert a.incipit[6:10] == [78, 77, 79, 78]
+
+
+@pytest.mark.parametrize(
+    "k,tonic,mode",
+    [("D", "D", "majeur"), ("Em", "E", "mineur"), ("A dor", "A", "dorien"),
+     ("G mix", "G", "mixolydien"), ("F#m", "F#", "mineur"), ("Bb", "Bb", "majeur"), ("Dmajor", "D", "majeur")],
+)
+def test_parse_key(k, tonic, mode):
+    info = parse_key(k)
+    assert (info.tonic, info.mode) == (tonic, mode)
+
+
+def test_key_signature_applies_to_pitches():
+    a = analyse(parse_tune("X:1\nT:t\nM:4/4\nL:1/8\nK:G\nF8 | f8 |"))
+    assert a.incipit == [66, 78]  # fa dièse implicite en sol majeur
+    with pytest.raises(AbcError) as exc:
+        parse_key("_")
+    assert exc.value.reason == C.REJECT_PARSE
+
+
+def test_abc_escapes_decoded_and_title_key_ignores_accents_articles():
+    assert decode_abc_text("Qu\\'ebec \\`a la gaspesie") == "Québec à la gaspesie"
+    assert decode_abc_text("Fran\\,cois") == "François"
+    assert title_key("La Bastringue") == title_key("bastringue") == title_key("Bâstringue!")
+
+
+def test_type_from_text():
+    assert type_from_text("reel") == "reel"
+    assert type_from_text("Gigue du Forgeron") == "jig"
+    assert type_from_text("Valse des Poêles") == "waltz"
+    assert type_from_text("slip jig") is None
+    assert type_from_text("polka") is None
+    assert type_from_text("Bridal Festival Quadrille Fig 3") == "quadrille"
+    assert type_from_text("Cotillion des Dames") == "cotillon"
+
+
+def test_split_tunes_ignores_preamble():
+    blocks = split_tunes((FIX / "multi_airs.abc").read_text())
+    assert len(blocks) == 3 and all(b.startswith("X:") for b in blocks)
+
+
+def test_list_abc_files_keeps_only_plain_abc_names():
+    html = '<a href="/~jc/x/">p</a><a href="a%20b.abc">1</a><a href="b.txt">2</a><a href="sub/">3</a><a href="C.ABC">4</a>'
+    assert list_abc_files(html) == ["C.ABC", "a b.abc"]
+
+
+# ── Pipeline : rejets, multi-airs, dédoublonnage ─────────────────────
+
+
+def test_multi_tune_file_is_split_and_typed(tmp_path):
+    kept, stats, _ = _build(tmp_path, _raw("multi_airs.abc"))
+    assert sorted((c.type, c.mode) for c in kept) == [("jig", "majeur"), ("reel", "dorien"), ("waltz", "mineur")]
+    waltz = next(c for c in kept if c.type == "waltz")
+    assert waltz.bars == 8  # l'anacrouse « E | » n'est pas comptée
+    assert (tmp_path / "trad" / "tunes" / "waltz" / f"{waltz.id}.abc").exists()
+
+
+def test_rejections_are_counted_with_reasons(tmp_path):
+    raws = _raw("sans_cle.abc") + _raw("sans_melodie.abc") + _raw("reel_bastringue.abc")
+    raws.append(C.RawTune(C.CHAMBERS, "bad#X1", "u", "X:1\nT:x\nR:reel\nM:4/4\nK:_\nabc|", None, "f", "x"))
+    kept, stats, _ = _build(tmp_path, raws)
+    assert len(kept) == 1
+    assert stats.reject_reasons[(C.CHAMBERS, C.REJECT_NO_KEY)] == 1
+    assert stats.reject_reasons[(C.CHAMBERS, C.REJECT_NO_MELODY)] == 1
+    assert stats.reject_reasons[(C.CHAMBERS, C.REJECT_PARSE)] == 1
+    rejects = [json.loads(line) for line in (tmp_path / "trad" / "rejects.jsonl").read_text().splitlines()]
+    assert {r["reason"] for r in rejects} == {C.REJECT_NO_KEY, C.REJECT_NO_MELODY, C.REJECT_PARSE}
+    assert all(r["origin"] for r in rejects)
+
+
+def test_untyped_tune_is_ignored_not_rejected(tmp_path):
+    block = "X:1\nT:Polka du coin\nR:polka\nM:2/4\nK:G\nGABc|"
+    raw = C.RawTune(C.CHAMBERS, "p#X1", "u", block, None, "f", "p")
+    kept, stats, _ = _build(tmp_path, [raw])
+    assert kept == [] and stats.ignored[C.CHAMBERS] == 1 and not stats.rejected
+
+
+def test_transposed_duplicate_across_sources_is_merged_keeping_chambers(tmp_path):
+    jc = _raw("reel_bastringue.abc", C.CHAMBERS, url="http://jc/b.abc")
+    ts = _raw("bastringue_transpose.abc", C.SESSION, url="https://thesession.org/tunes/1")
+    kept, stats, _ = _build(tmp_path, ts + jc)  # l'ordre d'entrée ne compte pas
+    assert len(kept) == 1
+    keeper = kept[0]
+    assert keeper.source == C.CHAMBERS
+    assert [a["source"] for a in keeper.also_in] == [C.SESSION]
+    assert stats.merged[("reel", C.SESSION)] == 1
+
+
+def test_same_title_different_incipit_is_not_merged(tmp_path):
+    other = (FIX / "bastringue_transpose.abc").read_text().replace("b2bb b2c'b", "g2gg a2c'b", 1)
+    raw = C.RawTune(C.SESSION, "o#X1", "u", other, None, "f", "o")
+    kept, _, _ = _build(tmp_path, _raw("reel_bastringue.abc") + [raw])
+    assert len(kept) == 2
+
+
+def test_same_source_duplicate_keeps_the_version_with_most_chords(tmp_path):
+    bare = (FIX / "reel_bastringue.abc").read_text()
+    bare = "\n".join(line for line in bare.splitlines() if not line.startswith("T:")).replace("X: 1", "X: 1\nT: Bastringue")
+    bare = re.sub(r'"[^"]*"', "", bare)
+    raws = [
+        C.RawTune(C.CHAMBERS, "a#X1", "http://jc/a", bare, "reel", "f", "a"),
+        *_raw("reel_bastringue.abc", url="http://jc/b"),
+    ]
+    kept, stats, _ = _build(tmp_path, raws)
+    assert len(kept) == 1 and kept[0].url == "http://jc/b"
+    assert [a["url"] for a in kept[0].also_in] == ["http://jc/a"]
+    assert stats.merged[("reel", C.CHAMBERS)] == 1
+
+
+def test_manifest_is_sorted_complete_and_deterministic(tmp_path):
+    raws = _raw("multi_airs.abc") + _raw("reel_bastringue.abc") + _raw("bastringue_transpose.abc", C.SESSION)
+    _build(tmp_path, raws)
+    root = tmp_path / "trad"
+    first = (root / "manifest.jsonl").read_bytes()
+    version = (root / "VERSION").read_text()
+    # Rejeu un autre jour, entrée mélangée : manifeste et VERSION identiques.
+    _build(tmp_path, list(reversed(raws)), today=dt.date(2030, 5, 5))
+    assert (root / "manifest.jsonl").read_bytes() == first
+    assert (root / "VERSION").read_text() == version
+    rows = [json.loads(line) for line in first.decode().splitlines()]
+    assert [r["id"] for r in rows] == sorted(r["id"] for r in rows)
+    required = {"id", "title", "aliases", "type", "meter", "key", "mode", "bars", "source", "url",
+                "license", "sha256", "included_because", "incipit"}
+    assert all(required <= set(r) for r in rows)
+    bast = next(r for r in rows if r["key"] == "D" and r["type"] == "reel" and "Bastringue" in r["title"])
+    assert bast["title"] == "la Bastringue"
+    assert "Bastringue des Ménetriers" in bast["aliases"]  # échappement ABC décodé
+    assert version.startswith("2026-01-02+") and version.splitlines()[0].endswith(f"+{len(rows)}")
+
+
+def test_version_date_changes_when_corpus_changes(tmp_path):
+    _build(tmp_path, _raw("reel_bastringue.abc"))
+    _build(tmp_path, _raw("reel_bastringue.abc") + _raw("multi_airs.abc"), today=dt.date(2026, 3, 4))
+    assert (tmp_path / "trad" / "VERSION").read_text().startswith("2026-03-04+4")
+
+
+def test_normalised_abc_always_has_xtmlk_headers(tmp_path):
+    block = "X:9\nR: Reel\nP: Titre en P\nK:D\nD2 F2 A2 d2 | f8 |"  # ni T:, ni M:, ni L:
+    raw = C.RawTune(C.CHAMBERS, "n#X1", "u", block, "reel", "f", "n")
+    kept, stats, _ = _build(tmp_path, [raw])
+    heads = {line[0] for line in kept[0].abc.splitlines() if line[1:2] == ":"}
+    assert {"X", "T", "M", "L", "K", "R"} <= heads
+    assert kept[0].title == "Titre en P" and kept[0].meter == "4/4" and stats.inferred_meter == 1
+    assert "R:reel" in kept[0].abc
+
+
+# ── The Session : filtre québécois explicable ────────────────────────
+
+
+def _session_cache(tmp_path: Path) -> Path:
+    base = tmp_path / "raw" / "thesession"
+    base.mkdir(parents=True)
+
+    def tune(tid, sid, name, typ, mode="Dmajor", meter="4/4"):
+        return {"tune_id": tid, "setting_id": sid, "name": name, "type": typ, "meter": meter, "mode": mode,
+                "abc": "|:D2FA d2fd|A2dA F2D2:|", "date": "", "username": "", "composer": ""}
+
+    tunes = [
+        tune("1", "10", "Reel Anonyme", "reel"),        # enregistré par La Bottine
+        tune("1", "11", "Reel Anonyme", "reel"),        # autre réglage (ignoré)
+        tune("2", "20", "Gigue du Pendu", "jig", meter="6/8"),  # titre français
+        tune("3", "30", "Cooley's", "reel", mode="Edorian"),    # irlandais : exclu
+        tune("4", "40", "Valse Triste", "waltz", meter="3/4"),  # titre français
+        tune("5", "50", "Slip Quelconque", "slip jig", meter="9/8"),  # type hors périmètre
+        tune("6", "60", "Reel de Montréal", "reel"),    # motif « reel de »
+        tune("7", "70", "The Quebec Hornpipe", "hornpipe"),  # type hors périmètre
+        tune("8", "80", "Reel Of Tulloch", "reel"),     # reel anglais : pas un motif
+    ]
+    recordings = [
+        {"id": "1", "artist": "1084", "recording": "Album Test", "track": "1", "number": "1", "tune": "Reel Anonyme", "tune_id": "1"},
+        {"id": "2", "artist": "9999", "recording": "Irlandais", "track": "1", "number": "1", "tune": "Cooley's", "tune_id": "3"},
+    ]
+    aliases = [{"tune_id": "3", "alias": "Cooleys", "name": "Cooley's"},
+               {"tune_id": "3", "alias": "Reel Quebecois", "name": "Cooley's"}]
+    (base / "tunes.json").write_text(json.dumps(tunes))
+    (base / "recordings.json").write_text(json.dumps(recordings))
+    (base / "aliases.json").write_text(json.dumps(aliases))
+    return tmp_path / "raw"
+
+
+def test_session_filter_explains_each_inclusion(tmp_path):
+    raw_dir = _session_cache(tmp_path)
+    got = {r.url.split("/tunes/")[1].split("#")[0]: r for r in C.session_tunes(raw_dir, Fetcher(offline=True))}
+    assert sorted(got) == ["1", "2", "3", "4", "6"]  # 3 : alias « Reel Quebecois »
+    assert "La Bottine Souriante" in got["1"].because and "Album Test" in got["1"].because
+    assert "gigue" in got["2"].because and "valse" in got["4"].because
+    assert "quebecois" in fold_(got["3"].because)  # l'alias qualifie, pas l'enregistrement inconnu
+    assert got["1"].url.endswith("#setting10")  # réglage le plus ancien
+    assert "Cooleys" in got["3"].extra_aliases
+
+
+def fold_(s: str) -> str:
+    from harmonium_lab.trad.abcnorm import fold
+    return fold(s)
+
+
+def test_session_tunes_flow_through_pipeline(tmp_path):
+    raw_dir = _session_cache(tmp_path)
+    raws = list(C.session_tunes(raw_dir, Fetcher(offline=True)))
+    kept, stats, _ = _build(tmp_path, raws)
+    assert {c.type for c in kept} == {"reel", "jig", "waltz"}
+    assert all(c.license == "ODbL" and c.included_because for c in kept)
+
+
+def test_quebec_artist_list_is_documented_and_big_enough():
+    names = C.quebec_artist_names()
+    assert len(names) >= 25 and "La Bottine Souriante" in names and "Jean Carignan" in names
+    ids = C.load_quebec_artists()
+    assert ids[1084] == "La Bottine Souriante" and len(ids) >= 10
+
+
+def test_french_title_patterns():
+    assert C.french_title_match("Reel de Montréal")
+    assert C.french_title_match("Le Réel du Pendu")
+    assert C.french_title_match("Quadrille des Lanciers")
+    assert C.french_title_match("The Old Reel") is None
+    assert C.french_title_match("Reel Of Tulloch") is None
+
+
+def test_offline_fetcher_refuses_missing_cache(tmp_path):
+    with pytest.raises(RuntimeError, match="hors ligne"):
+        Fetcher(offline=True).get("http://example.invalid/x", tmp_path / "x")

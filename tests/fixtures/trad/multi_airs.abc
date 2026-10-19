@@ -1,0 +1,28 @@
+% en-tête de collection ignoré
+T: Collection de test
+
+X: 1
+T: Gigue de l'Anse
+R: jig
+M: 6/8
+L: 1/8
+K: G
+D | GAB dBd | gdB A2 d | GAB dBd | edc B2 :|
+|: d | gfg dBG | AGA cBA | gfg dBG | edc B2 :|
+
+X: 2
+T: Valse d'Automne
+R: waltz
+M: 3/4
+L: 1/4
+K: Am
+E | A2 B | c2 B | A2 E | E3 |
+c2 d | e2 d | c2 B | A3 |]
+
+X: 3
+T: Reel Dorien
+R: reel
+M: 4/4
+L: 1/8
+K: Ador
+|: A2 AB c2 BA | G2 GA B2 AG | A2 AB c2 ed | cBAG A4 :|
