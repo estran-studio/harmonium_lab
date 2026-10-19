@@ -103,6 +103,26 @@ def gen_feats(tmp_path_factory) -> dict:
         feats[name] = features(load_engine_midi(make_engine_midi(out / name, tr, st)))
     return feats
 
+def test_engine_midi_without_note_off_uses_legato(tmp_path):
+    """L'export moteur ne ferme pas ses notes : repli legato documenté."""
+    import mido
+
+    ticks, eighth = 480, 240
+    mid = mido.MidiFile(ticks_per_beat=ticks)
+    track = mido.MidiTrack()
+    mid.tracks.append(track)
+    track.append(mido.MetaMessage("time_signature", numerator=2, denominator=2, time=0))
+    last = 0
+    for i, pitch in enumerate([62, 64, 66, 64]):
+        track.append(mido.Message("note_on", channel=0, note=pitch, velocity=90,
+                                  time=i * eighth - last))
+        last = i * eighth
+    path = tmp_path / "nooff.mid"
+    mid.save(str(path))
+    tune = load_engine_midi(path)
+    assert [n.pitch for bar in tune.bars for n in bar] == [62, 64, 66, 64]
+    assert [n.duration for bar in tune.bars for n in bar][:3] == [1.0, 1.0, 1.0]
+
 
 def test_two_toy_profiles(reel_profile, jig_profile):
     assert reel_profile["tune_count"] == 3
