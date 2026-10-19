@@ -561,6 +561,9 @@ def cmd_blindtest_score(args: argparse.Namespace) -> int:
         print(f"  {name} :")
         for s in sentences:
             print(f"    - {s}")
+    return 0
+
+
 def cmd_trad_form_report(args: argparse.Namespace) -> int:
     """Coverage report: scheme distribution, AABB rate, examples per cause."""
     import json
