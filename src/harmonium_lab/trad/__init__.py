@@ -1,5 +1,6 @@
 """Dataset trad québécois (specs/001-trad-dataset) : corpus, normalisation, manifeste et statistiques (D5)."""
 
+from .blindtest import build_kit, score_feuille
 from .cells import bar_to_cell, degree_to_notation, pitch_to_degree
 from .features import (
     FEATURE_SCALARS,
@@ -7,6 +8,15 @@ from .features import (
     chord_degree_label,
     features,
     parse_chord_symbol,
+)
+from .compare import (
+    EXPLANATIONS,
+    compare_to_profile,
+    deviations_for_file,
+    explain,
+    feature_vector,
+    nearest_reals,
+    reference_stats,
 )
 from .loaders import load_abc, load_engine_midi, name_chord
 from .model import (
@@ -21,21 +31,25 @@ from .profile import PROFILE_VERSION, build_profile, load_profile, save_profile
 __all__ = [
     "Note",
     "TradTune",
-    "bar_to_cell",
+    "build_kit",
+    "compare_to_profile",
+    "deviations_for_file",
     "beat_eighths",
     "build_profile",
     "chord_degree_label",
     "degree_to_notation",
     "eighths_per_bar",
     "FEATURE_SCALARS",
-    "features",
-    "load_abc",
+    "EXPLANATIONS",
+    "explain",
+    "feature_vector",
     "load_engine_midi",
-    "load_profile",
+    "nearest_reals",
     "mode_intervals",
     "name_chord",
     "normalize_mode",
-    "parse_chord_symbol",
+    "reference_stats",
+    "score_feuille",
     "pitch_to_degree",
     "PROFILE_VERSION",
     "save_profile",

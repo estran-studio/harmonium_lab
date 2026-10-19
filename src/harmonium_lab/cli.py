@@ -73,6 +73,29 @@ def main(argv: list[str] | None = None) -> int:
     p_trad.add_argument("--type", required=True, help="Tune type (reel, jig, waltz, ...)")
     p_trad.add_argument("--corpus", default="corpus/trad", help="Corpus root (tunes/<type>/*.abc)")
     p_trad.add_argument("--output", "-o", required=True, help="Output profile JSON path")
+    # trad-compare: generated engine MIDIs vs type profile (D6)
+    p_cmp = subparsers.add_parser("trad-compare", help="Compare generated MIDIs to a trad type profile")
+    p_cmp.add_argument("--generated", nargs="+", required=True, help="Engine .mid dir or files")
+    p_cmp.add_argument("--type", required=True, help="Tune type (reel, jig, waltz, ...)")
+    p_cmp.add_argument("-o", "--output", default=None, help="Output dir (default: target/trad_compare/<horodatage>/)")
+    p_cmp.add_argument("--corpus", default="corpus/trad", help="Corpus root (tunes/<type>/*.abc + manifest.jsonl)")
+    p_cmp.add_argument("--profile", default=None, help="Type profile JSON (default: references/trad-<type>/profile.json)")
+    p_cmp.add_argument("--render-dir", default="target/trad_render", help="Rendered WAVs root (<type>/<id>.wav)")
+    # blindtest: shuffle real + generated WAVs into an anonymous kit (D6)
+    p_bt = subparsers.add_parser("blindtest", help="Build a blind listening kit (real + generated WAVs)")
+    p_bt.add_argument("--type", required=True, help="Tune type (reel, jig, waltz, ...)")
+    p_bt.add_argument("--real", type=int, default=10, help="Number of real WAVs")
+    p_bt.add_argument("--generated", required=True, help="Dir with engine .wav files")
+    p_bt.add_argument("--count", type=int, default=10, help="Number of generated WAVs")
+    p_bt.add_argument("--seed", type=int, default=20261019, help="Sampling seed (deterministic)")
+    p_bt.add_argument("--duration", type=float, default=33.0, help="Common duration in seconds (cut or padded)")
+    p_bt.add_argument("--fade", type=float, default=0.5, help="Fade in/out in seconds")
+    p_bt.add_argument("-o", "--output", default=None, help="Output dir (default: target/blindtest/<horodatage>/)")
+    p_bt.add_argument("--render-dir", default="target/trad_render", help="Rendered real WAVs root")
+    # blindtest-score: grade a filled answer sheet (D6)
+    p_bts = subparsers.add_parser("blindtest-score", help="Score a filled blindtest feuille.md")
+    p_bts.add_argument("kit", help="Kit dir (target/blindtest/<horodatage>/)")
+    p_bts.add_argument("--compare", default=None, help="trad-compare report.json (top deviations of unmasked)")
 
     args = parser.parse_args(argv)
 
@@ -99,6 +122,12 @@ def main(argv: list[str] | None = None) -> int:
             return cmd_trad_render(args)
         elif args.command == "trad-profile":
             return cmd_trad_profile(args)
+        elif args.command == "trad-compare":
+            return cmd_trad_compare(args)
+        elif args.command == "blindtest":
+            return cmd_blindtest(args)
+        elif args.command == "blindtest-score":
+            return cmd_blindtest_score(args)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1
@@ -338,6 +367,193 @@ def cmd_trad_profile(args: argparse.Namespace) -> int:
     profile = build_profile(tunes, tune_type=args.type)
     save_profile(profile, args.output)
     print(f"Profile saved to {args.output} ({profile['tune_count']} tunes)")
+    return 0
+
+
+def _timestamp() -> str:
+    from datetime import datetime
+
+    return datetime.now().strftime("%Y%m%d-%H%M%S")
+
+
+def _load_manifest_titles(corpus: Path) -> dict[str, str]:
+    import json as _json
+
+    manifest = corpus / "manifest.jsonl"
+    if not manifest.exists():
+        return {}
+    titles = {}
+    for line in manifest.read_text(encoding="utf-8").splitlines():
+        if line.strip():
+            row = _json.loads(line)
+            titles[row["id"]] = row.get("title", row["id"])
+    return titles
+
+
+def cmd_trad_compare(args: argparse.Namespace) -> int:
+    """Compare generated engine MIDIs to a trad type profile (D6)."""
+    import json as _json
+
+    from .trad import (
+        compare_to_profile,
+        deviations_for_file,
+        feature_vector,
+        features,
+        load_abc,
+        load_engine_midi,
+        load_profile,
+        nearest_reals,
+        reference_stats,
+    )
+
+    midis: list[Path] = []
+    for raw in args.generated:
+        p = Path(raw)
+        if p.is_dir():
+            midis += sorted(p.glob("*.mid")) + sorted(p.glob("*.midi"))
+        elif p.exists():
+            midis.append(p)
+        else:
+            print(f"Not found: {raw}")
+            return 1
+    if not midis:
+        print("No generated .mid files")
+        return 1
+
+    corpus = Path(args.corpus)
+    abc_files = sorted((corpus / "tunes" / args.type).glob("*.abc"))
+    if not abc_files:
+        print(f"No real tunes in {corpus / 'tunes' / args.type}")
+        return 1
+
+    profile_path = args.profile or f"references/trad-{args.type}/profile.json"
+    profile = load_profile(profile_path)
+    titles = _load_manifest_titles(corpus)
+    render_dir = Path(args.render_dir) / args.type
+
+    reals: list[tuple[str, dict[str, float]]] = []
+    skipped = 0
+    for path in abc_files:
+        try:
+            tune = load_abc(path)
+        except Exception as e:
+            skipped += 1
+            print(f"Skipping {path.name}: {e}")
+            continue
+        reals.append((tune.tune_id, feature_vector(features(tune))))
+    if not reals:
+        print("No loadable real tunes")
+        return 1
+
+    generated: dict[str, dict[str, Any]] = {}
+    for path in midis:
+        try:
+            generated[path.name] = features(load_engine_midi(path))
+        except Exception as e:
+            print(f"Skipping {path.name}: {e}")
+    if not generated:
+        print("No loadable generated MIDIs")
+        return 1
+
+    ref = reference_stats(profile, [v for _, v in reals])
+    deviations = compare_to_profile(generated, ref, args.type)
+    per_file = []
+    for name in sorted(generated):
+        nearest = [
+            {
+                "id": rid,
+                "title": titles.get(rid, rid),
+                "wav": str(render_dir / f"{rid}.wav"),
+                "distance": dist,
+            }
+            for rid, dist in nearest_reals(generated[name], reals, ref)
+        ]
+        per_file.append(
+            {"file": name, "deviations": deviations_for_file(generated[name], ref, args.type), "nearest": nearest}
+        )
+
+    report: dict[str, Any] = {
+        "type": args.type,
+        "profile": str(profile_path),
+        "profile_tunes": profile.get("tune_count"),
+        "real_tunes_loaded": len(reals),
+        "real_tunes_skipped": skipped,
+        "generated": sorted(generated),
+        "deviations": deviations,
+        "per_file": per_file,
+    }
+    out = Path(args.output) if args.output else Path("target/trad_compare") / _timestamp()
+    out.mkdir(parents=True, exist_ok=False)
+    (out / "report.json").write_text(
+        _json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    lines = [
+        f"# Comparaison moteur vs {args.type}s réels",
+        "",
+        f"{len(generated)} généré(s) vs profil `{profile_path}` "
+        f"({profile.get('tune_count')} airs, {len(reals)} rechargés).",
+        "",
+        "## Écarts (triés par |z|)",
+        "",
+    ]
+    for d in deviations:
+        lines += [
+            f"### {d['key']} — z = {d['z']} (réel {d['real_value']}, moteur {d['generated_value']})",
+            "",
+            d["sentence"],
+            "",
+        ]
+    lines += ["## Plus proches réels", ""]
+    for entry in per_file:
+        lines.append(f"### {entry['file']}")
+        lines.append("")
+        for n in entry["nearest"]:
+            lines.append(f"- {n['title']} (`{n['wav']}`, distance {n['distance']})")
+        lines.append("")
+    (out / "report.md").write_text("\n".join(lines), encoding="utf-8")
+    print(f"Report in {out}/ ({len(deviations)} écarts, {len(per_file)} générés)")
+    for d in deviations[:5]:
+        print(f"  z={d['z']:>7}: {d['sentence']}")
+    return 0
+
+
+def cmd_blindtest(args: argparse.Namespace) -> int:
+    """Build a blind listening kit from real + generated WAVs (D6)."""
+    from .trad import build_kit
+
+    real_pool = sorted((Path(args.render_dir) / args.type).glob("*.wav"))
+    gen_pool = sorted(Path(args.generated).glob("*.wav"))
+    out = Path(args.output) if args.output else Path("target/blindtest") / _timestamp()
+    kit = build_kit(
+        real_pool, gen_pool, out,
+        n_real=args.real, n_gen=args.count, seed=args.seed,
+        duration=args.duration, fade=args.fade,
+    )
+    print(f"Kit in {out}/ ({len(kit['files'])} fichiers, seed {args.seed})")
+    for n in kit["files"]:
+        print(f"  {n}")
+    print("Remplis feuille.md, puis : harmonium-lab blindtest-score " + str(out))
+    return 0
+
+
+def cmd_blindtest_score(args: argparse.Namespace) -> int:
+    """Score a filled blindtest feuille.md (D6)."""
+    import json as _json
+
+    from .trad import score_feuille
+
+    kit = Path(args.kit)
+    compare_report = None
+    if args.compare:
+        compare_report = _json.loads(Path(args.compare).read_text(encoding="utf-8"))
+    score = score_feuille(kit, compare_report)
+    print(f"Générés reconnus : {score['pct_generated_recognized']} % "
+          f"({score['n_generated_judged']} jugés sur {score['n_generated']})")
+    print(f"Générés confondus (pris pour réels) : {score['pct_generated_confused']} %")
+    for name, sentences in score["top_deviations_unmasked"].items():
+        print(f"  {name} :")
+        for s in sentences:
+            print(f"    - {s}")
     return 0
 
 
