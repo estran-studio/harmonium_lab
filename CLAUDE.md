@@ -1,3 +1,5 @@
+> **Chantier en cours** : dataset trad québécois — `specs/001-trad-dataset/plan.md`. Le corpus jazz/classique ci-dessous est l’ancienne référence.
+
 ## harmonium_lab — Music Quality Evaluation Pipeline
 
 ### Quick Start
