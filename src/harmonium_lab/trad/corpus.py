@@ -61,23 +61,49 @@ DEFAULT_METER = {
     "reel": "4/4", "jig": "6/8", "waltz": "3/4", "march": "2/4", "quadrille": "6/8", "cotillon": "6/8",
 }
 
-# Titre/alias « français québécois » : motifs sur texte replié (sans accents, minuscules).
+# Motifs français, par mots entiers, sur texte replié (sans accents, minuscules).
+# Formes admises : `reel de|du|des|d'|à`, `gigue`, `valse`, `quadrille`, `cotillon`
+# (pas `cotillion`), `québec`/`québécois(e)`, `canadien(ne)(s)`. Pluriels, suédois
+# (« valsen », « vals ») et anglais (« cotillion », « quadrilles ») exclus.
 FRENCH_TITLE = re.compile(
-    r"\b(gigues?|valses?|quadrilles?|cotillons?|cotillions?|quebec(?:ois(?:e|es)?)?"
-    r"|reel (?:de|du|des|d|au|aux|pour))\b"
+    r"\b(reel (?:de|du|des|d'|a)|gigue|valse|quadrille|cotillon"
+    r"|quebec(?:ois(?:e|s|es)?)?|canadien(?:ne(?:s)?|s)?)\b"
 )
-FRENCH_REEL_ACCENT = re.compile(r"\b[Rr]éel\b")  # « réel » accentué
+# Mots de contenu français fréquents dans les titres (texte replié : sans accents,
+# minuscules). Complètent les mots-outils pour la preuve de français : « Valse Triste »…
+_FRENCH_CONTENT = (
+    "triste|petit|petite|grand|grande|vieux|vieille|beau|belle|bon|bonne|nouveau|nouvelle|"
+    "premier|premiere|dernier|derniere|joyeux|joyeuse|mariage|noel|printemps|automne|hiver|"
+    "ete|matin|soir|nuit|jour|fete|danse|chanson|souvenir|adieu|bonjour|fille|garcon|"
+    "madame|monsieur|amour|coeur|village|forgeron|meunier|ronde|sucre|sucres|eboulements|"
+    "faubourg|faubourgs|pendu|pendus|diable|sorcier|sorciere|chasse|galope|reveillon|"
+    "pays|rois|reine|cloches|messe|minuit|berceuse|complainte|rigodon|croche|pied|pieds|"
+    "turlute|violon|accordeon|gigueur|danseur|chanteur|quebecois|canadien"
+)
+# Le titre/alias qui correspond doit être en français : mot-outil, élision, accent
+# ou mot de contenu français.
+FRENCH_MARKER = re.compile(
+    r"[àâäéèêëîïôöùûüçœæ]|\b(?:de|du|des|la|le|les|au|aux|en|sur|dans|pour|chez|avec|"
+    r"sans|sous|mon|ma|mes|ton|ta|tes|son|sa|ses|un|une|est|et|qui|notre|votre|leur|leurs)\b"
+    r"|\b[dlcs]'(?=[a-z])"
+    r"|\b(?:" + _FRENCH_CONTENT + r")\b"
+)
+
 
 ARTISTS_FILE = Path(__file__).with_name("quebec_artists.json")
 
 
-def load_quebec_artists(path: Path = ARTISTS_FILE) -> dict[int, str]:
-    """`QUEBEC_ARTISTS` : identifiant d'artiste The Session → nom de l'artiste québécois."""
+def load_quebec_artists(path: Path = ARTISTS_FILE) -> dict[str, str]:
+    """`QUEBEC_ARTISTS` : nom d'artiste replié (tel que `recordings[].artist`) → nom québécois.
+
+    `recordings.json` donne l'artiste en clair, pas son identifiant numérique ;
+    la jointure se fait donc sur le nom (`session_names`), comparé après `fold`.
+    """
     data = json.loads(path.read_text(encoding="utf-8"))
-    out: dict[int, str] = {}
+    out: dict[str, str] = {}
     for entry in data["artists"]:
-        for artist_id in entry["session_artist_ids"]:
-            out.setdefault(int(artist_id), entry["name"])
+        for name in entry["session_names"]:
+            out.setdefault(fold(name), entry["name"])
     return out
 
 
@@ -85,12 +111,29 @@ def quebec_artist_names(path: Path = ARTISTS_FILE) -> list[str]:
     return [e["name"] for e in json.loads(path.read_text(encoding="utf-8"))["artists"]]
 
 
-def french_title_match(*texts: str) -> str | None:
-    """Premier motif français trouvé dans un titre ou alias, sinon None."""
-    for text in texts:
-        m = FRENCH_TITLE.search(fold(text)) or FRENCH_REEL_ACCENT.search(text)
-        if m:
-            return m.group(0)
+def french_match(text: str) -> str | None:
+    """Motif français d'un titre/alias, ou None.
+
+    Mots entiers, formes françaises uniquement (`reel de|du|des|d'|à`, `gigue`,
+    `valse`, `quadrille`, `cotillon`, `québec(ois)`, `canadien(ne)` ; ni pluriels
+    anglais, ni `cotillion`, ni suédois `vals(en)`). Le texte doit en plus être en
+    français : accent français, mot-outil/élision/mot de contenu, `reel …` (la
+    construction porte elle-même le français), deux motifs, ou forme
+    québécoise/canadienne. Un « å/ø » scandinave disqualifie (« Sångshytt ») ;
+    un « a » non accentué seul ne prouve rien (« A Christmas Gigue » exclu).
+    """
+    if re.search(r"[åøÅØ]", text):
+        return None
+    if re.search(r"\b[Rr]éel\b", text):
+        return "réel"  # avant le repli : `fold` efface l'accent
+    found = FRENCH_TITLE.findall(fold(text))
+    if not found:
+        return None
+    first = found[0]
+    if first.startswith("reel ") or len(found) >= 2 or "quebec" in first or "canadien" in first:
+        return first
+    if FRENCH_MARKER.search(fold(text)) or re.search(r"[àâäéèêëîïôöùûüçÿœæ]", text):
+        return first
     return None
 
 
@@ -107,6 +150,7 @@ class RawTune:
     because: str
     fallback_title: str
     extra_aliases: list[str] = field(default_factory=list)
+    because_kinds: tuple = field(default=(), kw_only=True)  # ("artist", "title", "alias")
 
 
 @dataclass
@@ -124,6 +168,7 @@ class Candidate:
     license: str
     sha256: str
     included_because: str
+    because_kinds: tuple = field(default=(), kw_only=True)
     incipit: list[int]
     abc: str
     also_in: list[dict] = field(default_factory=list)
@@ -148,6 +193,7 @@ class Stats:
     merged: Counter = field(default_factory=Counter)  # (type, source du doublon écarté)
     ignored: Counter = field(default_factory=Counter)  # source
     reject_reasons: Counter = field(default_factory=Counter)  # (source, raison)
+    reasons: Counter = field(default_factory=Counter)  # (type, kind) : artiste / titre FR / alias FR
     inferred_meter: int = 0
     rejects: list[dict] = field(default_factory=list)
 
@@ -210,8 +256,9 @@ def session_tunes(raw_dir: Path, fetcher: Fetcher, artists_file: Path = ARTISTS_
     recorded: dict[str, list[tuple[str, str]]] = defaultdict(list)  # tune_id → (artiste, album)
     for row in recordings:
         tid = row.get("tune_id")
-        if tid and row["artist"].isdigit() and int(row["artist"]) in quebec:
-            recorded[tid].append((quebec[int(row["artist"])], row["recording"]))
+        artist = quebec.get(fold(row.get("artist") or ""))
+        if tid and artist:
+            recorded[tid].append((artist, row["recording"]))
     aliases: dict[str, list[str]] = defaultdict(list)
     for row in aliases_rows:
         aliases[row["tune_id"]].append(row["alias"])
@@ -226,15 +273,25 @@ def session_tunes(raw_dir: Path, fetcher: Fetcher, artists_file: Path = ARTISTS_
 
     for tid in sorted(first_setting, key=int):
         t = first_setting[tid]
-        names = [t["name"], *aliases.get(tid, [])]
         reasons: list[str] = []
+        kinds: list[str] = []
         if tid in recorded:
             artist, album = sorted(set(recorded[tid]))[0]
             more = len(set(recorded[tid])) - 1
             reasons.append(f"enregistré par {artist} (« {album} »)" + (f" et {more} autre(s) enregistrement(s)" if more else ""))
-        hit = french_title_match(*names)
-        if hit:
-            reasons.append(f"titre/alias français (« {hit} »)")
+            kinds.append("artist")
+        title_hit = french_match(t["name"])
+        if title_hit:
+            reasons.append(f"titre français (« {title_hit} »)")
+            kinds.append("title")
+        alias_hit: str | None = None
+        for alias in aliases.get(tid, []):
+            if alias != t["name"] and french_match(alias):
+                alias_hit = alias
+                break
+        if alias_hit:
+            reasons.append(f"alias français « {alias_hit} »")
+            kinds.append("alias")
         if not reasons:
             continue
         key_abc = None
@@ -251,7 +308,7 @@ def session_tunes(raw_dir: Path, fetcher: Fetcher, artists_file: Path = ARTISTS_
             source=SESSION, origin=f"thesession/tunes/{tid}#setting{t['setting_id']}",
             url=f"https://thesession.org/tunes/{tid}#setting{t['setting_id']}",
             block=block, type_hint=SESSION_TYPES[t["type"]],
-            because=" ; ".join(reasons), fallback_title=t["name"],
+            because=" ; ".join(reasons), because_kinds=tuple(kinds), fallback_title=t["name"],
             extra_aliases=[a for a in aliases.get(tid, []) if a != t["name"]],
         )
 
@@ -326,7 +383,8 @@ def process(raw: RawTune, stats: Stats) -> Candidate | None:
         aliases=[a for a in aliases if a and a != title], type=type_,
         meter=analysis.meter, key=analysis.key, mode=analysis.mode, bars=analysis.bars,
         source=raw.source, url=raw.url, license=LICENSES[raw.source], sha256=sha,
-        included_because=raw.because, incipit=analysis.incipit, abc=abc,
+        included_because=raw.because, because_kinds=raw.because_kinds,
+        incipit=analysis.incipit, abc=abc,
     )
 
 
@@ -414,6 +472,13 @@ def format_table(stats: Stats) -> str:
             lines.append(f"{t:<10} {'TOTAL':<11} {tk:>8}")
     lines.append("-" * len(head))
     lines.append(f"{'tous':<10} {'':<11} {total['k']:>8} {total['r']:>8} {total['m']:>9}")
+    if stats.reasons:
+        rl = [f"{'raison (The Session)':<22}", f"{'artiste':>8}", f"{'titre FR':>9}", f"{'alias FR':>9}"]
+        lines += ["", " ".join(rl), "-" * len(" ".join(rl))]
+        for t in TYPES:
+            a, ti, al = (stats.reasons[(t, k)] for k in ("artist", "title", "alias"))
+            if a or ti or al:
+                lines.append(f"{t:<22} {a:>8} {ti:>9} {al:>9}")
     return "\n".join(lines)
 
 
@@ -430,6 +495,8 @@ def build(root: Path, fetcher: Fetcher, today: dt.date | None = None,
     kept = deduplicate(candidates, stats)
     for c in kept:
         stats.kept[(c.type, c.source)] += 1
+        for kind in c.because_kinds:
+            stats.reasons[(c.type, kind)] += 1
     sha = write_corpus(root, kept, stats, today or dt.date.today())
     return kept, stats, sha
 
