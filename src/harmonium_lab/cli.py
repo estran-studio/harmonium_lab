@@ -53,6 +53,12 @@ def main(argv: list[str] | None = None) -> int:
     p_baseline.add_argument("--reports", required=True, help="Directory with report JSONs")
     p_baseline.add_argument("--output", "-o", required=True, help="Baseline JSON path")
 
+    # trad-corpus: download + normalise the Québec trad corpus
+    p_trad = subparsers.add_parser("trad-corpus", help="Build the trad québécois corpus (corpus/trad)")
+    p_trad.add_argument("--root", default="corpus/trad", help="Corpus directory")
+    p_trad.add_argument("--delay", type=float, default=0.3, help="Seconds between network requests")
+    p_trad.add_argument("--offline", action="store_true", help="Use the raw/ cache only")
+
     args = parser.parse_args(argv)
 
     if args.command is None:
@@ -72,6 +78,8 @@ def main(argv: list[str] | None = None) -> int:
             return cmd_gate(args)
         elif args.command == "save-baseline":
             return cmd_save_baseline(args)
+        elif args.command == "trad-corpus":
+            return cmd_trad_corpus(args)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1
@@ -82,6 +90,16 @@ def main(argv: list[str] | None = None) -> int:
 # ---------------------------------------------------------------------------
 # Command implementations
 # ---------------------------------------------------------------------------
+
+
+def cmd_trad_corpus(args: argparse.Namespace) -> int:
+    """Download + normalise the trad québécois corpus."""
+    from .trad.corpus import main as trad_main
+
+    argv = ["--root", args.root, "--delay", str(args.delay)]
+    if args.offline:
+        argv.append("--offline")
+    return trad_main(argv)
 
 
 def cmd_analyze(args: argparse.Namespace) -> int:
