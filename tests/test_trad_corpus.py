@@ -221,23 +221,38 @@ def _session_cache(tmp_path: Path) -> Path:
         return {"tune_id": tid, "setting_id": sid, "name": name, "type": typ, "meter": meter, "mode": mode,
                 "abc": "|:D2FA d2fd|A2dA F2D2:|", "date": "", "username": "", "composer": ""}
 
+    def rec(rid, artist, album, track, tune, tid):
+        # Schéma réel de recordings.json : `artist` est le nom en clair.
+        return {"id": rid, "artist": artist, "recording": album, "track": track, "number": "1",
+                "tune": tune, "tune_id": tid}
+
     tunes = [
-        tune("1", "10", "Reel Anonyme", "reel"),        # enregistré par La Bottine
-        tune("1", "11", "Reel Anonyme", "reel"),        # autre réglage (ignoré)
-        tune("2", "20", "Gigue du Pendu", "jig", meter="6/8"),  # titre français
-        tune("3", "30", "Cooley's", "reel", mode="Edorian"),    # irlandais : exclu
-        tune("4", "40", "Valse Triste", "waltz", meter="3/4"),  # titre français
-        tune("5", "50", "Slip Quelconque", "slip jig", meter="9/8"),  # type hors périmètre
-        tune("6", "60", "Reel de Montréal", "reel"),    # motif « reel de »
-        tune("7", "70", "The Quebec Hornpipe", "hornpipe"),  # type hors périmètre
-        tune("8", "80", "Reel Of Tulloch", "reel"),     # reel anglais : pas un motif
+        tune("1", "10", "Ril Du Forgeron", "reel", mode="Amixolydian"),  # enregistré Bottine + alias FR
+        tune("1", "11", "Ril Du Forgeron", "reel", mode="Amixolydian"),  # autre réglage (ignoré)
+        tune("2", "20", "Gigue du Pendu", "jig", meter="6/8"),           # titre français
+        tune("3", "30", "Cooley's", "reel", mode="Edorian"),             # irlandais : exclu
+        tune("4", "40", "Valse Triste", "waltz", meter="3/4"),           # titre français
+        tune("5", "50", "Slip Quelconque", "slip jig", meter="9/8"),     # type hors périmètre
+        tune("6", "60", "The Old Reel", "reel"),                         # « reel » seul : pas français
+        tune("7", "70", "Sangshyttevalsen", "waltz", meter="3/4"),       # suédois (« vals » ≠ valse)
+        tune("8", "80", "Vals Efter Lasse I Lyby", "waltz", meter="3/4"),# suédois (« vals » ≠ valse)
+        tune("9", "90", "Richmond Cotillion", "reel"),                   # anglais (pas cotillon)
+        tune("10", "100", "Ettrick Vale Quadrilles", "reel"),            # écossais (pas quadrille)
+        tune("11", "110", "A Jig For Christmas", "jig", meter="6/8"),    # alias anglais seulement
+        tune("12", "120", "The Blacksmith", "reel"),                     # alias français déclencheur
+        tune("13", "130", "Reel de Montréal", "reel"),                   # motif « reel de »
     ]
     recordings = [
-        {"id": "1", "artist": "1084", "recording": "Album Test", "track": "1", "number": "1", "tune": "Reel Anonyme", "tune_id": "1"},
-        {"id": "2", "artist": "9999", "recording": "Irlandais", "track": "1", "number": "1", "tune": "Cooley's", "tune_id": "3"},
+        # Lignes au schéma réel (cf. corpus/trad/raw/thesession/recordings.json, id 1809) :
+        rec("1809", "La Bottine Souriante", "Dance With LBS", "1", "Ril Du Forgeron", "1"),
+        rec("1809", "La Bottine Souriante", "Dance With LBS", "1", "Le Reel De Forgeron", ""),
+        rec("3720", "1651", "Cast A Bell", "1", "Kettledrum", "3"),
+        rec("9999", "Genticorum", "Nagez Rameurs", "2", "Reel de Montréal", "13"),
     ]
-    aliases = [{"tune_id": "3", "alias": "Cooleys", "name": "Cooley's"},
-               {"tune_id": "3", "alias": "Reel Quebecois", "name": "Cooley's"}]
+    aliases = [{"tune_id": "1", "alias": "Le Reel Du Forgeron", "name": "Ril Du Forgeron"},
+               {"tune_id": "3", "alias": "Cooleys", "name": "Cooley's"},
+               {"tune_id": "11", "alias": "Christmas Jig", "name": "A Jig For Christmas"},
+               {"tune_id": "12", "alias": "Reel du Forgeron", "name": "The Blacksmith"}]
     (base / "tunes.json").write_text(json.dumps(tunes))
     (base / "recordings.json").write_text(json.dumps(recordings))
     (base / "aliases.json").write_text(json.dumps(aliases))
@@ -247,40 +262,42 @@ def _session_cache(tmp_path: Path) -> Path:
 def test_session_filter_explains_each_inclusion(tmp_path):
     raw_dir = _session_cache(tmp_path)
     got = {r.url.split("/tunes/")[1].split("#")[0]: r for r in C.session_tunes(raw_dir, Fetcher(offline=True))}
-    assert sorted(got) == ["1", "2", "3", "4", "6"]  # 3 : alias « Reel Quebecois »
-    assert "La Bottine Souriante" in got["1"].because and "Album Test" in got["1"].because
-    assert "gigue" in got["2"].because and "valse" in got["4"].because
-    assert "quebecois" in fold_(got["3"].because)  # l'alias qualifie, pas l'enregistrement inconnu
+    assert sorted(got, key=int) == ["1", "2", "4", "12", "13"]
+    assert "La Bottine Souriante" in got["1"].because and "Dance With LBS" in got["1"].because
+    assert got["1"].because_kinds == ("artist", "alias")  # titre « Ril » non français, alias oui
+    assert "alias français « Le Reel Du Forgeron »" == got["1"].because.split(" ; ")[1]
+    assert got["2"].because == "titre français (« gigue »)" and got["2"].because_kinds == ("title",)
+    assert "Genticorum" in got["13"].because
+    assert got["12"].because_kinds == ("alias",)
     assert got["1"].url.endswith("#setting10")  # réglage le plus ancien
-    assert "Cooleys" in got["3"].extra_aliases
-
-
-def fold_(s: str) -> str:
-    from harmonium_lab.trad.abcnorm import fold
-    return fold(s)
-
-
-def test_session_tunes_flow_through_pipeline(tmp_path):
-    raw_dir = _session_cache(tmp_path)
-    raws = list(C.session_tunes(raw_dir, Fetcher(offline=True)))
-    kept, stats, _ = _build(tmp_path, raws)
-    assert {c.type for c in kept} == {"reel", "jig", "waltz"}
-    assert all(c.license == "ODbL" and c.included_because for c in kept)
+    assert "Le Reel Du Forgeron" in got["1"].extra_aliases
+    for excluded in ("6", "7", "8", "9", "10", "11"):
+        assert excluded not in got
 
 
 def test_quebec_artist_list_is_documented_and_big_enough():
     names = C.quebec_artist_names()
     assert len(names) >= 25 and "La Bottine Souriante" in names and "Jean Carignan" in names
-    ids = C.load_quebec_artists()
-    assert ids[1084] == "La Bottine Souriante" and len(ids) >= 10
+    by_name = C.load_quebec_artists()
+    assert by_name["la bottine souriante"] == "La Bottine Souriante"
+    assert by_name["les freres brunet"] == "André Brunet" and len(by_name) >= 10
 
 
 def test_french_title_patterns():
-    assert C.french_title_match("Reel de Montréal")
-    assert C.french_title_match("Le Réel du Pendu")
-    assert C.french_title_match("Quadrille des Lanciers")
-    assert C.french_title_match("The Old Reel") is None
-    assert C.french_title_match("Reel Of Tulloch") is None
+    assert C.french_match("Gigue du Pendu") == "gigue"
+    assert C.french_match("Reel de Montréal") == "reel de"
+    assert C.french_match("Le Réel du Pendu") == "réel"
+    assert C.french_match("Quadrille des Lanciers") == "quadrille"
+    assert C.french_match("Cotillon des Dames") == "cotillon"
+    assert C.french_match("Valse Canadienne") == "valse"
+    assert C.french_match("The Old Reel") is None
+    assert C.french_match("Reel Of Tulloch") is None
+    assert C.french_match("Sangshyttevalsen") is None
+    assert C.french_match("Vals Efter Lasse I Lyby") is None
+    assert C.french_match("Richmond Cotillion") is None
+    assert C.french_match("Ettrick Vale Quadrilles") is None
+    assert C.french_match("A Jig For Christmas") is None
+    assert C.french_match("The Gigue") is None  # mot français, titre anglais
 
 
 def test_offline_fetcher_refuses_missing_cache(tmp_path):

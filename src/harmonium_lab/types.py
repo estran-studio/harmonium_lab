@@ -4,10 +4,30 @@ These dataclasses match the JSON serialization of MeasureSnapshot/NoteSnapshot
 from harmonium_core/src/report.rs and StateSnapshot from timeline/mod.rs.
 """
 
-from __future__ import annotations
-
 from dataclasses import dataclass, field
+from enum import IntEnum
 
+
+class TrackId(IntEnum):
+    """Engine track identifiers (MIDI channel = value).
+
+    Mirrors harmonium_core::timeline::TrackId.
+    """
+
+    MELODY = 0
+    CHORDS = 1
+    BASS = 2
+    HEEL = 3
+    TOE = 4
+
+
+TRACK_NAMES: dict[int, str] = {
+    TrackId.MELODY: "Melody",
+    TrackId.CHORDS: "Chords",
+    TrackId.BASS: "Bass",
+    TrackId.HEEL: "Heel",
+    TrackId.TOE: "Toe",
+}
 
 @dataclass(frozen=True, slots=True)
 class NoteData:
@@ -16,7 +36,7 @@ class NoteData:
     Mirrors harmonium_core::report::NoteSnapshot.
     """
 
-    track: int  # 0=Bass, 1=Lead, 2=Snare, 3=Hat
+    track: int  # TrackId: 0=Melody, 1=Chords, 2=Bass, 3=Heel, 4=Toe
     pitch: int  # MIDI note 0-127
     start_step: int  # Position within measure (0-based)
     duration_steps: int  # 0 = trigger-only (percussion)

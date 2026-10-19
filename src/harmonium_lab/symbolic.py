@@ -228,7 +228,8 @@ def analyze_contour(score: music21.stream.Score, part_index: int = 0) -> dict[st
 
     Args:
         score: music21 Score
-        part_index: which part to analyze (0=first, typically lead)
+        part_index: which part to analyze (0=first note-bearing part, the
+            Melody track per TrackId::Melody; engine exports put Melody first)
 
     Returns:
         dict with step_ratio, leap_ratio, direction_changes, pitch_range, avg_interval
@@ -237,10 +238,18 @@ def analyze_contour(score: music21.stream.Score, part_index: int = 0) -> dict[st
     if not parts:
         return _empty_contour()
 
-    # Use the specified part, or first available
+    # Use the specified part; fall back to the first part holding notes
+    # (engine tempo-map tracks parse as empty parts).
     idx = min(part_index, len(parts) - 1)
     part = parts[idx]
     notes = list(part.recurse().getElementsByClass("Note"))
+    if len(notes) < 2:
+        for candidate in parts:
+            candidate_notes = list(candidate.recurse().getElementsByClass("Note"))
+            if len(candidate_notes) >= 2:
+                part = candidate
+                notes = candidate_notes
+                break
 
     if len(notes) < 2:
         return _empty_contour()
@@ -353,6 +362,6 @@ def full_symbolic_analysis(
         "consonance": analyze_consonance(score),
         "voice_leading": analyze_voice_leading(score),
         "key_stability": analyze_key_stability(score, window_measures),
-        "contour": analyze_contour(score, part_index=1),  # Part 1 = Lead (Part 0 = Bass)
+        "contour": analyze_contour(score, part_index=0),  # Part 0 = Melody (TrackId::Melody)
         "velocity": analyze_velocity(score),
     }
