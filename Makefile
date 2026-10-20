@@ -57,8 +57,9 @@ trad-profiles: setup ## Build trad type profiles from corpus/trad (DS-T3/D5)
 	done
 	@echo "Trad profiles built."
 
-check-cells: setup ## Validate a mined CellBank TOML (FILE=path, default target/mined/reel_cells.toml)
-	$(PYTHON) scripts/check_cells.py $(if $(FILE),$(FILE),target/mined/reel_cells.toml)
+check-cells: ## Validate a mined CellBank TOML with the engine parser (FILE=path, default target/mined/reel_cells.toml)
+	cargo run -q -p harmonium-cli --release --manifest-path $(ENGINE_DIR)/Cargo.toml -- \
+		--check-cells $(abspath $(if $(FILE),$(FILE),target/mined/reel_cells.toml))
 
 # ════════════════════════════════════════════════════════════════════
 # TRAD CORPUS (specs/001-trad-dataset)

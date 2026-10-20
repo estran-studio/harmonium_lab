@@ -4,7 +4,8 @@
 de 8 via `harmonium_lab.trad.form` (rôles positionnels), classe le reste par
 intervalles (`run` / `arp` / `turn`, règle documentée) et ne garde que les
 cellules valides selon les règles de `harmonium_core::trad::cells`
-(`validate_cell`, réplique Python auditée par `scripts/check_cells.py`).
+(`validate_cell`, réplique Python ; vérification croisée par le parseur Rust
+du moteur : `make check-cells`, soit `harmonium-cli --check-cells`).
 Les airs `croche` sont ignorés pour les rôles positionnels mais gardés
 pour les cellules neutres.
 """

@@ -177,18 +177,3 @@ class TestMineCli:
 
         assert main(["mine-tempo", "--type", "reel", "--corpus", str(mini_corpus)]) == 0
         assert "MANQUANT" in capsys.readouterr().out
-
-    def test_check_cells_script(self, mini_corpus: Path, tmp_path: Path) -> None:
-        import subprocess
-        import sys
-
-        from harmonium_lab.cli import main
-
-        out = tmp_path / "reel_cells.toml"
-        assert main(["mine-cells", "--type", "reel", "--corpus", str(mini_corpus),
-                     "-o", str(out), "--top", "2"]) == 0
-        proc = subprocess.run(
-            [sys.executable, "scripts/check_cells.py", str(out)],
-            capture_output=True, text=True, cwd=Path(__file__).resolve().parent.parent,
-        )
-        assert proc.returncode == 0, proc.stdout + proc.stderr
