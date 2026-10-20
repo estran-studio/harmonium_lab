@@ -67,6 +67,10 @@ def main(argv: list[str] | None = None) -> int:
     p_render.add_argument("--seed", type=int, default=20261019, help="Sampling seed")
     p_render.add_argument("--ids", nargs="*", default=None, help="Tune ids (ignores --limit/--seed)")
     p_render.add_argument("--soundfont", default=None, help="SoundFont .sf2 path")
+    p_render.add_argument("--feet-soundfont", default=None, help="Feet bank .sf2 path (default: auto)")
+    p_render.add_argument("--feet-gain", type=float, default=None, help="Feet velocity gain")
+    p_render.add_argument("--feet-humanize", type=int, default=None, help="Feet velocity humanize ±")
+    p_render.add_argument("--feet-seed", type=int, default=None, help="Feet humanize seed")
     p_render.add_argument("--musicxml", action="store_true", help="Also emit .musicxml via music21")
     # trad-profile: build a trad type profile from corpus ABC/MIDI files
     p_trad = subparsers.add_parser("trad-profile", help="Build trad type profile from corpus tunes")
@@ -111,6 +115,9 @@ def main(argv: list[str] | None = None) -> int:
     p_fv.add_argument("--root", default="corpus/trad", help="Corpus root")
     p_fv.add_argument("--soundfont", default=None, help="GeneralUser-GS.sf2 path")
     p_fv.add_argument("--feet-soundfont", default=None, help="harmonium_trad.sf2 path (default: auto)")
+    p_fv.add_argument("--feet-gain", type=float, default=None, help="Feet velocity gain (default: render.FEET_VEL_SCALE)")
+    p_fv.add_argument("--feet-humanize", type=int, default=None, help="Feet velocity humanize ± (default: render.FEET_HUMANIZE)")
+    p_fv.add_argument("--feet-seed", type=int, default=None, help="Feet humanize seed (default: render.FEET_SEED)")
     args = parser.parse_args(argv)
 
     if args.command is None:
@@ -185,6 +192,14 @@ def cmd_trad_render(args: argparse.Namespace) -> int:
         argv += ["--ids", *args.ids]
     if args.soundfont:
         argv += ["--soundfont", args.soundfont]
+    if args.feet_soundfont:
+        argv += ["--feet-soundfont", args.feet_soundfont]
+    if args.feet_gain is not None:
+        argv += ["--feet-gain", str(args.feet_gain)]
+    if args.feet_humanize is not None:
+        argv += ["--feet-humanize", str(args.feet_humanize)]
+    if args.feet_seed is not None:
+        argv += ["--feet-seed", str(args.feet_seed)]
     if args.musicxml:
         argv.append("--musicxml")
     return render_main(argv)
@@ -615,6 +630,12 @@ def cmd_feet_preview(args: argparse.Namespace) -> int:
         argv += ["--soundfont", args.soundfont]
     if args.feet_soundfont:
         argv += ["--feet-soundfont", args.feet_soundfont]
+    if args.feet_gain is not None:
+        argv += ["--feet-gain", str(args.feet_gain)]
+    if args.feet_humanize is not None:
+        argv += ["--feet-humanize", str(args.feet_humanize)]
+    if args.feet_seed is not None:
+        argv += ["--feet-seed", str(args.feet_seed)]
     return feet_main(argv)
 
 

@@ -55,8 +55,11 @@ def resolve_gu(explicit: str | None) -> Path:
         raise
 
 
-def feet_pattern_mid(out: Path, bars: int = 8, bpm: int = 230) -> None:
-    """8 mesures : talon noires (v100), pointe contretemps croches (v70)."""
+def feet_pattern_mid(out: Path, bars: int = 8, bpm: int = 230,
+                     vel_scale: float = render.FEET_VEL_SCALE,
+                     humanize: int = render.FEET_HUMANIZE,
+                     seed: int = render.FEET_SEED) -> None:
+    """8 mesures : talon noires, pointe contretemps (gain + humanisation, graine fixe)."""
     mid = mido.MidiFile(ticks_per_beat=TPB)
     track = mido.MidiTrack()
     mid.tracks.append(track)
@@ -66,17 +69,21 @@ def feet_pattern_mid(out: Path, bars: int = 8, bpm: int = 230) -> None:
     track.append(mido.Message("control_change", channel=FEET_CHANNEL, control=32,
                               value=FEET_BANK, time=0))
     track.append(mido.Message("program_change", channel=FEET_CHANNEL, program=FEET_PROG, time=0))
+    import random
+    rng = random.Random(seed)
     events: list[tuple[int, mido.Message]] = []
     for bar in range(bars):
         for beat in range(4):
             t = (bar * 4 + beat) * TPB
-            events.append((t, mido.Message("note_on", channel=FEET_CHANNEL,
-                                           note=DRUM_HEEL, velocity=VEL_HEEL, time=0)))
+            events.append((t, mido.Message("note_on", channel=FEET_CHANNEL, note=DRUM_HEEL,
+                                           velocity=render.feet_velocity(VEL_HEEL, rng, vel_scale, humanize),
+                                           time=0)))
             events.append((t + TPB - 40, mido.Message("note_off", channel=FEET_CHANNEL,
                                                       note=DRUM_HEEL, velocity=0, time=0)))
             to = t + TPB // 2
-            events.append((to, mido.Message("note_on", channel=FEET_CHANNEL,
-                                            note=DRUM_TOE, velocity=VEL_TOE, time=0)))
+            events.append((to, mido.Message("note_on", channel=FEET_CHANNEL, note=DRUM_TOE,
+                                            velocity=render.feet_velocity(VEL_TOE, rng, vel_scale, humanize),
+                                            time=0)))
             events.append((to + TPB // 2 - 40, mido.Message("note_off", channel=FEET_CHANNEL,
                                                             note=DRUM_TOE, velocity=0, time=0)))
     events.sort(key=lambda e: e[0])
@@ -147,41 +154,50 @@ def max_rms_100ms(wav: Path) -> tuple[float, float]:
     return peak, 20 * np.log10(peak) if peak > 0 else float("-inf")
 
 
-def preview(out: Path, root: Path, soundfont: Path, feet_soundfont: Path) -> dict:
+def overall_rms_db(wav: Path) -> float:
+    """RMS global de la tige (dBFS) : la métrique de niveau pieds/violon."""
+    data, _ = sf.read(str(wav), always_2d=True)
+    rms = float(np.sqrt((data.mean(axis=1) ** 2).mean()))
+    return 20 * np.log10(rms) if rms > 0 else float("-inf")
+
+
+def preview(out: Path, root: Path, soundfont: Path, feet_soundfont: Path,
+            vel_scale: float = render.FEET_VEL_SCALE,
+            humanize: int = render.FEET_HUMANIZE,
+            feet_seed: int = render.FEET_SEED) -> dict:
     out.mkdir(parents=True, exist_ok=True)
     fonts = [soundfont, feet_soundfont]
 
     seuls_mid = out / "reel_pieds_seuls.mid"
-    feet_pattern_mid(seuls_mid)
+    feet_pattern_mid(seuls_mid, vel_scale=vel_scale, humanize=humanize, seed=feet_seed)
     seuls_wav = out / "reel_pieds_seuls.wav"
     render.render_wav(seuls_mid, seuls_wav, soundfont, feet_soundfont)
 
     abc, row = pick_reel_abc(root, out)
     meter = render.parse_meter_value(row.get("meter"), "reel")
     full_mid = out / "reel_complet.mid"
-    render.render_midi(abc, full_mid, "reel", meter, remap_feet=True)
-    full_wav = out / "reel_complet.wav"
-    render.render_wav(full_mid, full_wav, soundfont, feet_soundfont)
+    render.render_midi(abc, full_mid, "reel", meter, remap_feet=True,
+                       vel_scale=vel_scale, humanize=humanize, seed=feet_seed)
 
     feet_mid, violin_mid = split_stems(full_mid, out)
     feet_wav = out / "pieds_stem.wav"
     render.render_wav(feet_mid, feet_wav, soundfont, feet_soundfont, normalize=False)
-    levels = {"pieds": max_rms_100ms(feet_wav)}
+    levels = {"pieds": (*max_rms_100ms(feet_wav), overall_rms_db(feet_wav))}
     violin_wav = None
     if violin_mid is not None:
         violin_wav = out / "violon_stem.wav"
         render.render_wav(violin_mid, violin_wav, soundfont, feet_soundfont, normalize=False)
-        levels["violon"] = max_rms_100ms(violin_wav)
+        levels["violon"] = (*max_rms_100ms(violin_wav), overall_rms_db(violin_wav))
 
     print(f"\n{seuls_wav.name} : pic {render.wav_peak(seuls_wav):.3f}")
     print(f"{full_wav.name} ({row['id']}) : pic {render.wav_peak(full_wav):.3f}")
-    print("niveaux (pic RMS / 100 ms) :")
-    for src, (lin, db) in levels.items():
-        print(f"  {src:>6} : {lin:.4f} ({db:.1f} dBFS)")
+    print("niveaux : pic RMS / 100 ms et RMS global (dBFS) :")
+    for src, (lin, db, rms_db) in levels.items():
+        print(f"  {src:>6} : {lin:.4f} ({db:.1f} dBFS pic) / {rms_db:.1f} dBFS global")
     if "violon" in levels:
-        ok = levels["pieds"][0] < levels["violon"][0]
-        print(f"  pieds sous le violon : {'oui' if ok else 'NON'} "
-              f"(rapport {levels['pieds'][0] / max(levels['violon'][0], 1e-9):.2f})")
+        margin = levels["violon"][2] - levels["pieds"][2]
+        print(f"  marge pieds sous violon : {margin:.1f} dB (cible ≥ 8 dB) "
+              f"{'OK' if margin >= 8 else 'INSUFFISANT'}")
     return {"seuls": str(seuls_wav), "complet": str(full_wav), "levels": levels}
 
 
@@ -192,13 +208,17 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--root", type=Path, default=repo_root() / "corpus" / "trad")
     ap.add_argument("--soundfont", default=None, help="GeneralUser-GS.sf2")
     ap.add_argument("--feet-soundfont", default=None, help="harmonium_trad.sf2 (défaut auto)")
+    ap.add_argument("--feet-gain", type=float, default=render.FEET_VEL_SCALE)
+    ap.add_argument("--feet-humanize", type=int, default=render.FEET_HUMANIZE)
+    ap.add_argument("--feet-seed", type=int, default=render.FEET_SEED)
     args = ap.parse_args(argv)
     try:
         gu = resolve_gu(args.soundfont)
         feet_sf = render.resolve_feet_soundfont(args.feet_soundfont)
         if feet_sf is None:
             raise render.RenderError("banque des pieds absente : lance `make trad-sf2`")
-        preview(args.out, args.root, gu, feet_sf)
+        preview(args.out, args.root, gu, feet_sf, args.feet_gain, args.feet_humanize,
+                args.feet_seed)
     except render.RenderError as exc:
         print(f"Erreur : {exc}", file=sys.stderr)
         return 1
