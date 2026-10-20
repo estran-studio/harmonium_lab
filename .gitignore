@@ -26,3 +26,6 @@ target/
 corpus/trad/*
 !corpus/trad/manifest.jsonl
 !corpus/trad/VERSION
+
+# SoundFonts privés du comparatif SK3 (seul le manifeste est versionné)
+samples/fiddles/raw/

@@ -6,6 +6,8 @@
 > `cargo run -q -p harmonium-cli --release --manifest-path ../harmonium/Cargo.toml -- --export --bars 32 --style reel --seed S --record-wav target/engine_reels/reel_seedS.wav --record-midi target/engine_reels/reel_seedS.mid`
 > (binaire `harmonium-cli` : `--export --bars 32 --style reel --seed S --record-wav … --record-midi …`). Ensuite : `harmonium-lab trad-compare --generated target/engine_reels --type reel` puis `harmonium-lab blindtest --type reel --real 10 --generated target/engine_reels --count 10`. Pour écouter et juger : `harmonium-lab blindtest-play target/blindtest/<horodatage>` (ou `blindtest-score` après édition manuelle de `feuille.md`).
 
+> `make fiddle-samples` (SK3) : télécharge les banques commercialement utilisables de `samples/fiddles/manifest.jsonl`, vérifie SHA256 et `phdr`, cache privé dans `samples/fiddles/raw/` (gitignoré). Réinventaire explicite : `.venv/bin/python -m harmonium_lab.trad.fiddle_samples --inventory --offline`.
+
 ## harmonium_lab — Music Quality Evaluation Pipeline
 
 ### Quick Start
