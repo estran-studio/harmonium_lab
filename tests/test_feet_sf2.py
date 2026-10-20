@@ -207,10 +207,11 @@ def test_cut_hit_trims_fades_normalizes():
         -np.arange(int(0.3 * sr)) / 2000)
     audio[t0:t0 + len(body)] = 0.5 * body
     hit = cut_hit(audio, 0.3)
-    assert len(hit) <= int(0.6 * sr)
+    assert len(hit) <= int(0.25 * sr) + 1  # plafond 250 ms
     assert abs(float(np.abs(hit).max()) - 0.89) < 1e-6  # normalisé
     assert abs(hit[-1]) < 0.05  # fondu de sortie
-    assert abs(hit[0]) > 0.001  # attaque conservée
+    loud = np.nonzero(np.abs(hit) >= 0.01 * np.abs(hit).max())[0]
+    assert loud[0] <= int(0.008 * sr)  # pré-attaque ≤ 5 ms (+ passage par zéro)
 
 
 def test_suggest_role_by_spectrum():
