@@ -178,7 +178,8 @@ def preview(out: Path, root: Path, soundfont: Path, feet_soundfont: Path,
     full_mid = out / "reel_complet.mid"
     render.render_midi(abc, full_mid, "reel", meter, remap_feet=True,
                        vel_scale=vel_scale, humanize=humanize, seed=feet_seed)
-
+    full_wav = out / "reel_complet.wav"
+    render.render_wav(full_mid, full_wav, soundfont, feet_soundfont)
     feet_mid, violin_mid = split_stems(full_mid, out)
     feet_wav = out / "pieds_stem.wav"
     render.render_wav(feet_mid, feet_wav, soundfont, feet_soundfont, normalize=False)
