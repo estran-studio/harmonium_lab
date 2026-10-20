@@ -265,7 +265,8 @@ def write_readme(output: Path, rows: list[dict], analysis: dict) -> None:
         lines.append(f"| {row['name']} | {first['attack90_ms']} | {first['vibrato_4_9hz_cents_rms']} | {first['energy_above_8khz_pct']} | {clicks} |")
     lines.extend(["", "## Droits et exclusions", "",
                   "Rien n'est redistribué : SF2, ABC, MIDI et WAV restent locaux/gitignorés. Le manifeste versionné cite les sources et empreintes.",
-                  "MIT : conserver les notices ; CC-BY-3.0 : créditer Fernando A. Martin, LDK1609, Jeff Glatt (voir manifeste).",
+                  "MIT (FluidR3, MuseScore General) : conserver les notices Frank Wen / S. Christian Collins.",
+                  "CC Sampling Plus 1.0 (Sonatina) : créditer Mattias Westlund ; usage musical transformé autorisé, pas de revente de samples tels quels.",
                   "GeneralUser : autorisation commerciale explicite, mais provenance de certains samples non garantie par son auteur.", ""])
     for row in rows:
         if row["status"] == "rejected":
