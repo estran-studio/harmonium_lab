@@ -96,7 +96,21 @@ def main(argv: list[str] | None = None) -> int:
     p_bts = subparsers.add_parser("blindtest-score", help="Score a filled blindtest feuille.md")
     p_bts.add_argument("kit", help="Kit dir (target/blindtest/<horodatage>/)")
     p_bts.add_argument("--compare", default=None, help="trad-compare report.json (top deviations of unmasked)")
-
+    # pieds SK1 : échantillons, préparation, banque, écoute de contrôle
+    p_ff = subparsers.add_parser("feet-fetch", help="Download feet samples (manifest.jsonl → raw/)")
+    p_ff.add_argument("--root", default="samples/feet", help="samples/feet dir")
+    p_ff.add_argument("--delay", type=float, default=0.3, help="Seconds between requests")
+    p_ff.add_argument("--offline", action="store_true", help="Cache only")
+    p_fp = subparsers.add_parser("feet-prepare", help="Cut/normalise feet hits (raw/ → prepared/)")
+    p_fp.add_argument("--root", default="samples/feet", help="samples/feet dir")
+    p_fs = subparsers.add_parser("feet-sf2", help="Build harmonium_trad.sf2 (prepared/ → .sf2)")
+    p_fs.add_argument("--root", default="samples/feet", help="samples/feet dir")
+    p_fs.add_argument("--output", "-o", default=None, help="Output .sf2 path (default: auto)")
+    p_fv = subparsers.add_parser("feet-preview", help="Feet check listen (pieds seuls + reel complet)")
+    p_fv.add_argument("--out", default="target/feet_preview", help="Output dir")
+    p_fv.add_argument("--root", default="corpus/trad", help="Corpus root")
+    p_fv.add_argument("--soundfont", default=None, help="GeneralUser-GS.sf2 path")
+    p_fv.add_argument("--feet-soundfont", default=None, help="harmonium_trad.sf2 path (default: auto)")
     args = parser.parse_args(argv)
 
     if args.command is None:
@@ -128,6 +142,14 @@ def main(argv: list[str] | None = None) -> int:
             return cmd_blindtest(args)
         elif args.command == "blindtest-score":
             return cmd_blindtest_score(args)
+        elif args.command == "feet-fetch":
+            return cmd_feet_fetch(args)
+        elif args.command == "feet-prepare":
+            return cmd_feet_prepare(args)
+        elif args.command == "feet-sf2":
+            return cmd_feet_sf2(args)
+        elif args.command == "feet-preview":
+            return cmd_feet_preview(args)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1
@@ -555,6 +577,45 @@ def cmd_blindtest_score(args: argparse.Namespace) -> int:
         for s in sentences:
             print(f"    - {s}")
     return 0
+
+
+def cmd_feet_fetch(args: argparse.Namespace) -> int:
+    """Download feet samples (SK1)."""
+    from .feet.fetch import main as feet_main
+
+    argv = ["--root", args.root, "--delay", str(args.delay)]
+    if args.offline:
+        argv.append("--offline")
+    return feet_main(argv)
+
+
+def cmd_feet_prepare(args: argparse.Namespace) -> int:
+    """Cut/normalise feet hits (SK1)."""
+    from .feet.prepare import main as feet_main
+
+    return feet_main(["--root", args.root])
+
+
+def cmd_feet_sf2(args: argparse.Namespace) -> int:
+    """Build harmonium_trad.sf2 (SK1)."""
+    from .feet.build import main as feet_main
+
+    argv = ["--root", args.root]
+    if args.output:
+        argv += ["--output", args.output]
+    return feet_main(argv)
+
+
+def cmd_feet_preview(args: argparse.Namespace) -> int:
+    """Feet check listen (SK1)."""
+    from .feet.preview import main as feet_main
+
+    argv = ["--out", args.out, "--root", args.root]
+    if args.soundfont:
+        argv += ["--soundfont", args.soundfont]
+    if args.feet_soundfont:
+        argv += ["--feet-soundfont", args.feet_soundfont]
+    return feet_main(argv)
 
 
 if __name__ == "__main__":

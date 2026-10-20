@@ -20,3 +20,9 @@ target/
 corpus/trad/*
 !corpus/trad/manifest.jsonl
 !corpus/trad/VERSION
+
+# Pieds SK1 : seuls manifeste, sélection et revue sont versionnés
+# (échantillons téléchargés, préparés et enregistrements du propriétaire : jamais commités)
+samples/feet/raw/
+samples/feet/prepared/
+samples/feet/own/

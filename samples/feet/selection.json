@@ -1,0 +1,15 @@
+{
+  "_comment": "Frappes retenues : src = id Freesound (raw/<src>.mp3), t = attaque en secondes. 4 variantes par role, 8 sources distinctes. Revue : review.md.",
+  "heel": [
+    {"src": "841145", "t": 0.13},
+    {"src": "536770", "t": 1.61},
+    {"src": "565703", "t": 4.33},
+    {"src": "555116", "t": 10.02}
+  ],
+  "toe": [
+    {"src": "392482", "t": 0.15},
+    {"src": "632070", "t": 6.28},
+    {"src": "712874", "t": 1.86},
+    {"src": "740039", "t": 0.67}
+  ]
+}
