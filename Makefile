@@ -69,6 +69,12 @@ trad-render: setup ## Render 20 tunes per type at parity → target/trad_render/
 	$(LAB) trad-render --type jig --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),)
 	$(LAB) trad-render --type waltz --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),)
 
+fiddle-samples: setup ## Télécharge les SF2 autorisées du manifeste SK3 (cache privé)
+	$(PYTHON) -m harmonium_lab.trad.fiddle_samples
+
+fiddle-compare: setup ## Trois vrais reels × violons libres → target/fiddle_compare/
+	$(PYTHON) -m harmonium_lab.trad.fiddle_compare $(if $(OFFLINE),--offline,)
+
 # ── Moteur : reels générés pour trad-compare / blindtest (DS-T4) ──
 # ENGINE_DIR vaut ../harmonium sur machine du propriétaire (repo frère).
 ENGINE_DIR ?= ../harmonium
