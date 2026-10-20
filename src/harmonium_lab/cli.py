@@ -105,6 +105,22 @@ def main(argv: list[str] | None = None) -> int:
     p_form = subparsers.add_parser("trad-form-report", help="Form coverage report for a trad tune type")
     p_form.add_argument("--type", required=True, help="Tune type (reel, jig, waltz, ...)")
     p_form.add_argument("--corpus", default="corpus/trad", help="Corpus root")
+    # mine-cells: cell bank mined from the corpus for the engine (D7)
+    p_mine = subparsers.add_parser("mine-cells", help="Mine a CellBank TOML from trad corpus tunes")
+    p_mine.add_argument("--type", required=True, help="Tune type (reel, jig, waltz, ...)")
+    p_mine.add_argument("--corpus", default="corpus/trad", help="Corpus root (tunes/<type>/*.abc)")
+    p_mine.add_argument("--output", "-o", required=True, help="Output CellBank TOML path")
+    p_mine.add_argument("--top", type=int, default=10, help="Kept cells per role (default: 10)")
+    # mine-harmony: chord degrees, bigrams and per-mode tables (D7)
+    p_mharm = subparsers.add_parser("mine-harmony", help="Mine chord tables from trad corpus tunes")
+    p_mharm.add_argument("--type", required=True, help="Tune type (reel, jig, waltz, ...)")
+    p_mharm.add_argument("--corpus", default="corpus/trad", help="Corpus root (tunes/<type>/*.abc)")
+    p_mharm.add_argument("--output", "-o", required=True, help="Output harmony JSON path")
+    # mine-tempo: Q: tempos and time signatures per type (D7)
+    p_mtempo = subparsers.add_parser("mine-tempo", help="Mine tempo ranges and meters from trad corpus")
+    p_mtempo.add_argument("--type", default=None, help="Tune type (default: all types)")
+    p_mtempo.add_argument("--corpus", default="corpus/trad", help="Corpus root (tunes/<type>/*.abc)")
+    p_mtempo.add_argument("--output", "-o", default=None, help="Output tempo JSON path (default: stdout only)")
 
     args = parser.parse_args(argv)
 
@@ -139,6 +155,12 @@ def main(argv: list[str] | None = None) -> int:
             return cmd_blindtest_score(args)
         elif args.command == "trad-form-report":
             return cmd_trad_form_report(args)
+        elif args.command == "mine-cells":
+            return cmd_mine_cells(args)
+        elif args.command == "mine-harmony":
+            return cmd_mine_harmony(args)
+        elif args.command == "mine-tempo":
+            return cmd_mine_tempo(args)
         elif args.command == "blindtest-play":
             return cmd_blindtest_play(args)
     except Exception as e:
@@ -636,6 +658,75 @@ def cmd_trad_form_report(args: argparse.Namespace) -> int:
         print(f"  {key}")
         for ex in examples[key]:
             print(f"    - {ex}")
+    return 0
+
+
+def cmd_mine_cells(args: argparse.Namespace) -> int:
+    """Mine a CellBank TOML (+ weights companion) from corpus tunes (D7)."""
+    import json
+    from collections import Counter
+
+    from .trad import mine as trad_mine
+
+    cells, stats = trad_mine.mine_cells(args.corpus, args.type, top_per_role=args.top)
+    version = trad_mine.corpus_version(args.corpus)
+    toml_text = trad_mine.render_bank(
+        cells, args.type, version, stats["airs_lus"], trad_mine.today()
+    )
+    out = Path(args.output)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(toml_text, encoding="utf-8")
+    weights = [{"role": c["role"], "notes": c["notes"], "count": c["count"]} for c in cells]
+    out.with_suffix("").with_suffix(".weights.json").write_text(
+        json.dumps(weights, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
+    roles = Counter(c["role"] for c in cells)
+    print(f"Miné {len(cells)} cellules ({stats['airs_lus']} airs, {stats['airs_erreur']} erreurs) -> {out}")
+    print(f"Rôles : {dict(sorted(roles.items()))}")
+    print(f"Rejets validation moteur : {stats['rejets']}")
+    print(f"Unités 8 : {stats['unites_8']}, 4+4 notées : {stats['unites_4plus4_notees']}, "
+          f"16 scindées notées : {stats['unites_16_scindees_notees']}, "
+          f"croche hors positionnel : {stats['airs_croche_positionnel_ignore']}")
+    print("Poids : le parseur moteur ignore tout champ inconnu (RawCell = role+notes) ; "
+          "fréquences dans le compagnon .weights.json.")
+    return 0
+
+
+def cmd_mine_harmony(args: argparse.Namespace) -> int:
+    """Mine chord degree tables from corpus tunes (D7)."""
+    import json
+
+    from .trad import mine as trad_mine
+
+    harmony = trad_mine.mine_harmony(args.corpus, args.type)
+    out = Path(args.output)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(harmony, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"Harmonie '{args.type}' ({harmony['airs']} airs) -> {out}")
+    print(f"Top accords : {harmony['top_accords'][:6]}")
+    print(f"Mesure 4 : {harmony['mesure_4']}")
+    print(f"Mesure 8 : {harmony['mesure_8']}")
+    return 0
+
+
+def cmd_mine_tempo(args: argparse.Namespace) -> int:
+    """Mine Q: tempos and meters from corpus tunes (D7)."""
+    import json
+
+    from .trad import mine as trad_mine
+
+    tempo = trad_mine.mine_tempo(args.corpus, args.type)
+    if args.output:
+        out = Path(args.output)
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text(json.dumps(tempo, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        print(f"Tempos -> {out}")
+    for t, entry in sorted(tempo["types"].items()):
+        q = entry["tempo_q"]
+        q_txt = f"Q: n={q['n']} [{q['min']}-{q['max']}] méd={q['mediane']}" if q else "Q: MANQUANT"
+        print(f"  {t}: {entry['airs']} airs, {entry['signatures']}, {q_txt}")
+    if tempo["q_manquant"]:
+        print(f"Tempo Q: absent de : {', '.join(tempo['q_manquant'])}")
     return 0
 
 
