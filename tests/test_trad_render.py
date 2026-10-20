@@ -205,11 +205,25 @@ def test_midi_canaux_et_programmes(tmp_path):
     chord_ch = next(c for c, ps in chans.items() if 24 in ps)
     bass_ch = next(c for c, ps in chans.items() if 32 in ps)
     assert _notes(mid, chord_ch) and _notes(mid, bass_ch)  # guitare et basse sonnent
-    drums = _notes(mid, 9)
-    assert {m.note for m in drums} == {36, 37}
+    drums = _notes(mid, 10)
+    assert {m.note for m in drums} == {36, 37}  # SK1 : pieds sur canal 11
     assert sum(m.note == 36 for m in drums) == sum(m.note == 37 for m in drums)
+    sel = [m for tr in mid.tracks for m in tr
+           if m.type in ("control_change", "program_change") and m.channel == 10]
+    assert (sel[0].control, sel[0].value) == (0, 0)
+    assert (sel[1].control, sel[1].value) == (32, R.FEET_BANK)
+    assert sel[2].type == "program_change" and sel[2].program == R.FEET_PROG
+    assert not _notes(mid, 9)  # plus rien sur le canal percussion
     tempo = next(m.tempo for tr in mid.tracks for m in tr if m.type == "set_tempo")
     assert tempo == pytest.approx(60_000_000 / 230, abs=1)  # Q:1/4=230 (µs entières)
+
+
+@needs_abc2midi
+def test_midi_sans_remap_reste_percussion(tmp_path):
+    src = _write(tmp_path, "reel.abc", REEL)
+    R.render_midi(src, tmp_path / "reel.mid", "reel", (4, 4), remap_feet=False)
+    mid = mido.MidiFile(tmp_path / "reel.mid")
+    assert {m.note for m in _notes(mid, 9)} == {36, 37}  # repli GM
 
 
 @needs_abc2midi

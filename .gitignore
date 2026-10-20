@@ -29,3 +29,8 @@ corpus/trad/*
 
 # SoundFonts privés du comparatif SK3 (seul le manifeste est versionné)
 samples/fiddles/raw/
+# Pieds SK1 : seuls manifeste, sélection et revue sont versionnés
+# (échantillons téléchargés, préparés et enregistrements du propriétaire : jamais commités)
+samples/feet/raw/
+samples/feet/prepared/
+samples/feet/own/

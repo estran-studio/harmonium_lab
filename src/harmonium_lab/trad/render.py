@@ -45,11 +45,28 @@ from pathlib import Path
 PROG_MELODY = 40  # violon
 PROG_CHORD = 24  # guitare
 PROG_BASS = 32  # basse acoustique
-DRUM_HEEL = 36  # talon
-DRUM_TOE = 37  # pointe
+DRUM_HEEL = 36  # talon (`%%MIDI drum`, avant réassignation)
+DRUM_TOE = 37  # pointe (`%%MIDI drum`, avant réassignation)
 VEL_HEEL = 100
 VEL_TOE = 70
 
+#: Pieds (chantier SK1) : les notes 36/37 du canal percussion sont
+#: réassignées sur ce canal mélodique, preset banque 0 programme 0 de
+#: `harmonium_trad.sf2` (sélection : CC0=0, CC32=0 + program change 0).
+#: `fluidsynth` charge GeneralUser-GS puis harmonium_trad.sf2 : la
+#: seconde banque prime pour banque 0 / programme 0 (le piano GM, non
+#: utilisé ici, est masqué sur ce seul couple).
+FEET_CHANNEL = 10  # canal 11
+FEET_BANK = 0
+FEET_PROG = 0
+#: Niveau des pieds : gain appliqué aux vélocités (mesuré : RMS pieds
+#: ≤ RMS violon − 8 dB sur `reel_complet`, voir samples/feet/review.md).
+FEET_VEL_SCALE = 0.55
+#: Humanisation déterministe des vélocités (alterne les couches SF2).
+FEET_HUMANIZE = 12
+FEET_SEED = 20261019
+FEET_NOTES = (DRUM_HEEL, DRUM_TOE)
+DRUM_CHANNEL = 9  # canal percussion (0-based) où `abc2midi` met les pieds
 TEMPO_Q = {
     "reel": "1/4=230",
     "jig": "3/8=115",
@@ -101,6 +118,59 @@ def resolve_soundfont(explicit: str | None) -> Path:
     if not sf.is_file():
         raise RenderError(f"SoundFont introuvable ({sf}) : {SOUNDFONT_HINT}")
     return sf
+
+
+def resolve_feet_soundfont(explicit: str | None) -> Path | None:
+    """Banque des pieds : `--feet-soundfont`, sinon résolution auto."""
+    if explicit:
+        sf = Path(explicit)
+        if not sf.is_file():
+            raise RenderError(f"banque des pieds introuvable ({sf})")
+        return sf
+    from harmonium_lab.feet.build import resolve_output
+    auto = resolve_output(None)
+    return auto if auto.is_file() else None
+
+
+def remap_feet_channel(midi_path: Path, vel_scale: float = FEET_VEL_SCALE,
+                       humanize: int = FEET_HUMANIZE, seed: int = FEET_SEED) -> int:
+    """Canal percussion → canal mélodique des pieds (SK1).
+
+    Déplace les notes 36/37 du canal 9 vers le canal 11 et insère la
+    sélection de banque (CC0=0, CC32=`FEET_BANK`, programme `FEET_PROG`
+    sur le canal 11). Les vélocités sont réduites (`vel_scale`, niveau
+    pieds sous le violon) et humanisées (`±humanize`, graine `seed` :
+    déterministe, alterne les couches de la SF2). Retourne le nombre de
+    notes déplacées (0 : le fichier est laissé intact).
+    """
+    import mido
+    mid = mido.MidiFile(str(midi_path))
+    rng = random.Random(seed)
+    moved = 0
+    for track in mid.tracks:
+        for msg in track:
+            if msg.type in ("note_on", "note_off") and msg.channel == DRUM_CHANNEL \
+                    and msg.note in FEET_NOTES:
+                msg.channel = FEET_CHANNEL
+                if msg.type == "note_on" and msg.velocity > 0:
+                    msg.velocity = feet_velocity(msg.velocity, rng, vel_scale, humanize)
+                    moved += 1
+    if not moved:
+        return 0
+    head = [
+        mido.Message("control_change", channel=FEET_CHANNEL, control=0, value=0, time=0),
+        mido.Message("control_change", channel=FEET_CHANNEL, control=32, value=FEET_BANK, time=0),
+        mido.Message("program_change", channel=FEET_CHANNEL, program=FEET_PROG, time=0),
+    ]
+    mid.tracks[0][0:0] = head
+    mid.save(str(midi_path))
+    return moved
+
+
+def feet_velocity(base: int, rng: "random.Random", vel_scale: float,
+                  humanize: int) -> int:
+    """Vélocité pied : gain puis tirage uniforme `±humanize` (1–127)."""
+    return max(1, min(127, round(base * vel_scale + rng.randint(-humanize, humanize))))
 
 
 # ── Métrique et pieds ──────────────────────────────────────────────────
@@ -255,7 +325,14 @@ class MidiResult:
     log: str  # sortie d'abc2midi (avertissements éventuels, ex. voltas)
 
 
-def render_midi(abc_path: Path, midi_path: Path, tune_type: str, meter: tuple[int, int]) -> MidiResult:
+def render_midi(abc_path: Path, midi_path: Path, tune_type: str, meter: tuple[int, int],
+                remap_feet: bool = True, vel_scale: float = FEET_VEL_SCALE,
+                humanize: int = FEET_HUMANIZE, seed: int = FEET_SEED) -> MidiResult:
+    """ABC → MIDI ; si `remap_feet`, pieds GM → canal 11 (banque dédiée).
+
+    `remap_feet` doit être faux quand `render_wav` ne chargera pas la
+    banque des pieds (sinon programme 0 = piano GeneralUser).
+    """
     abc2midi = require_tool("abc2midi", ABC2MIDI_HINT)
     text, has_chords = build_render_abc(abc_path.read_text(encoding="utf-8"), tune_type, meter)
     tmp = midi_path.with_suffix(".render.abc")
@@ -272,6 +349,11 @@ def render_midi(abc_path: Path, midi_path: Path, tune_type: str, meter: tuple[in
     # exploitable (ex. voltas `|1,3`) ; seul un MIDI absent est un échec.
     if not midi_path.is_file() or midi_path.stat().st_size == 0:
         raise RenderError(f"abc2midi n'a produit aucun MIDI pour {abc_path.name} : {log}")
+    if remap_feet:
+        n_feet = remap_feet_channel(midi_path, vel_scale, humanize, seed)  # SK1
+        if n_feet:
+            suffix = f"{n_feet} notes de pieds réassignées au canal 11"
+            log = f"{log}\n({suffix})" if log else suffix
     return MidiResult(midi_path, has_chords, proc.returncode, log)
 
 
@@ -311,14 +393,19 @@ def normalize_wav(path: Path, target: float = PEAK_TARGET) -> tuple[float, float
     return peak / 32768.0, min(1.0, peak * gain / 32768.0)
 
 
-def render_wav(midi_path: Path, wav_path: Path, soundfont: Path) -> tuple[float, float]:
+def render_wav(midi_path: Path, wav_path: Path, soundfont: Path,
+               feet_soundfont: Path | None = None, normalize: bool = True) -> tuple[float, float]:
     fluidsynth = require_tool("fluidsynth", FLUIDSYNTH_HINT)
+    fonts = [str(soundfont)] + ([str(feet_soundfont)] if feet_soundfont else [])
     proc = subprocess.run(
-        [fluidsynth, "-ni", "-r", "44100", "-F", str(wav_path), str(soundfont), str(midi_path)],
+        [fluidsynth, "-ni", "-r", "44100", "-F", str(wav_path), *fonts, str(midi_path)],
         capture_output=True, text=True, timeout=300,
     )
     if not wav_path.is_file() or wav_path.stat().st_size == 0:
         raise RenderError(f"fluidsynth n'a produit aucun WAV pour {midi_path.name} : {(proc.stdout + proc.stderr).strip()}")
+    if not normalize:
+        peak = wav_peak(wav_path)
+        return peak, peak
     return normalize_wav(wav_path)
 
 
@@ -359,15 +446,19 @@ def select_rows(rows: list[dict], tune_type: str | None, limit: int | None,
 
 
 def render_one(abc_path: Path, row: dict, out_dir: Path, soundfont: Path,
-               musicxml: bool) -> dict:
+               musicxml: bool, feet_soundfont: Path | None = None,
+               vel_scale: float = FEET_VEL_SCALE, humanize: int = FEET_HUMANIZE,
+               feet_seed: int = FEET_SEED) -> dict:
     """Rend un air (MIDI + WAV [+ MusicXML]). Retourne la ligne de log."""
     tune_type = row["type"]
     meter = parse_meter_value(row.get("meter"), tune_type)
     out_dir.mkdir(parents=True, exist_ok=True)
     midi_path = out_dir / f"{row['id']}.mid"
     wav_path = out_dir / f"{row['id']}.wav"
-    res = render_midi(abc_path, midi_path, tune_type, meter)
-    peak_before, peak_after = render_wav(midi_path, wav_path, soundfont)
+    res = render_midi(abc_path, midi_path, tune_type, meter,
+                      remap_feet=feet_soundfont is not None,
+                      vel_scale=vel_scale, humanize=humanize, seed=feet_seed)
+    peak_before, peak_after = render_wav(midi_path, wav_path, soundfont, feet_soundfont)
     entry = {
         "id": row["id"], "type": tune_type,
         "meter": f"{meter[0]}/{meter[1]}",
@@ -389,7 +480,9 @@ def render_one(abc_path: Path, row: dict, out_dir: Path, soundfont: Path,
 
 def render_all(root: Path, out: Path, tune_type: str | None, limit: int | None,
                seed: int, ids: list[str] | None, soundfont: Path,
-               musicxml: bool) -> list[dict]:
+               musicxml: bool, feet_soundfont: Path | None = None,
+               vel_scale: float = FEET_VEL_SCALE, humanize: int = FEET_HUMANIZE,
+               feet_seed: int = FEET_SEED) -> list[dict]:
     rows = load_manifest(root)
     picked = select_rows(rows, tune_type, limit, seed, ids)
     if not picked:
@@ -399,7 +492,8 @@ def render_all(root: Path, out: Path, tune_type: str | None, limit: int | None,
         abc_path = root / "tunes" / row["type"] / f"{row['id']}.abc"
         if not abc_path.is_file():
             raise RenderError(f"ABC introuvable ({abc_path}) : relance `make trad-corpus`")
-        entries.append(render_one(abc_path, row, out / row["type"], soundfont, musicxml))
+        entries.append(render_one(abc_path, row, out / row["type"], soundfont, musicxml,
+                                  feet_soundfont, vel_scale, humanize, feet_seed))
     log_path = out / "render_log.jsonl"
     merged = {}
     if log_path.is_file():  # cumulatif entre invocations (un type par appel)
@@ -426,13 +520,22 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--seed", type=int, default=SAMPLE_SEED, help="graine du tirage")
     ap.add_argument("--ids", nargs="*", default=None, help="identifiants d'airs (ignore --limit/--seed)")
     ap.add_argument("--soundfont", default=None, help="banque .sf2 (défaut : ../harmonium/assets/GeneralUser-GS.sf2)")
+    ap.add_argument("--feet-soundfont", default=None, help="banque des pieds .sf2 (défaut : résolution auto, absente = percussions GM)")
+    ap.add_argument("--feet-gain", type=float, default=FEET_VEL_SCALE, help="gain des vélocités pieds (défaut : %(default)s)")
+    ap.add_argument("--feet-humanize", type=int, default=FEET_HUMANIZE, help="humanisation ± vélocité (défaut : %(default)s)")
+    ap.add_argument("--feet-seed", type=int, default=FEET_SEED, help="graine humanisation pieds (défaut : %(default)s)")
     ap.add_argument("--musicxml", action="store_true", help="émet aussi .musicxml via music21")
     args = ap.parse_args(argv)
 
     try:
         soundfont = resolve_soundfont(args.soundfont)
+        feet_soundfont = resolve_feet_soundfont(args.feet_soundfont)
+        print(f"banque : {soundfont.name}"
+              + (f" + {feet_soundfont} (pieds canal 11, gain {args.feet_gain})" if feet_soundfont
+                 else " (pieds : percussions GM, banque dédiée absente)"))
         entries = render_all(args.root, args.out, args.type, args.limit,
-                             args.seed, args.ids, soundfont, args.musicxml)
+                             args.seed, args.ids, soundfont, args.musicxml, feet_soundfont,
+                             args.feet_gain, args.feet_humanize, args.feet_seed)
     except RenderError as exc:
         print(f"Erreur : {exc}", file=sys.stderr)
         return 1

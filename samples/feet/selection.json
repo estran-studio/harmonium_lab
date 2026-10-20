@@ -1,0 +1,15 @@
+{
+  "_comment": "Frappes retenues : src = id Freesound (raw/<src>.mp3), t = attaque en secondes. Monofrappes validees (pic < 20 ms, <= 250 ms, pas d'echo > 30 %). Revue : review.md.",
+  "heel": [
+    {"src": "555116", "t": 27.11},
+    {"src": "536770", "t": 2.4},
+    {"src": "459970", "t": 6.33},
+    {"src": "543685", "t": 6.84}
+  ],
+  "toe": [
+    {"src": "632070", "t": 9.97},
+    {"src": "392482", "t": 2.16},
+    {"src": "712874", "t": 13.13},
+    {"src": "740039", "t": 0.67}
+  ]
+}

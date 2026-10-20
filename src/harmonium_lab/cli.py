@@ -67,6 +67,10 @@ def main(argv: list[str] | None = None) -> int:
     p_render.add_argument("--seed", type=int, default=20261019, help="Sampling seed")
     p_render.add_argument("--ids", nargs="*", default=None, help="Tune ids (ignores --limit/--seed)")
     p_render.add_argument("--soundfont", default=None, help="SoundFont .sf2 path")
+    p_render.add_argument("--feet-soundfont", default=None, help="Feet bank .sf2 path (default: auto)")
+    p_render.add_argument("--feet-gain", type=float, default=None, help="Feet velocity gain")
+    p_render.add_argument("--feet-humanize", type=int, default=None, help="Feet velocity humanize ±")
+    p_render.add_argument("--feet-seed", type=int, default=None, help="Feet humanize seed")
     p_render.add_argument("--musicxml", action="store_true", help="Also emit .musicxml via music21")
     # trad-profile: build a trad type profile from corpus ABC/MIDI files
     p_trad = subparsers.add_parser("trad-profile", help="Build trad type profile from corpus tunes")
@@ -122,6 +126,24 @@ def main(argv: list[str] | None = None) -> int:
     p_mtempo.add_argument("--corpus", default="corpus/trad", help="Corpus root (tunes/<type>/*.abc)")
     p_mtempo.add_argument("--output", "-o", default=None, help="Output tempo JSON path (default: stdout only)")
 
+    # pieds SK1 : échantillons, préparation, banque, écoute de contrôle
+    p_ff = subparsers.add_parser("feet-fetch", help="Download feet samples (manifest.jsonl → raw/)")
+    p_ff.add_argument("--root", default="samples/feet", help="samples/feet dir")
+    p_ff.add_argument("--delay", type=float, default=0.3, help="Seconds between requests")
+    p_ff.add_argument("--offline", action="store_true", help="Cache only")
+    p_fp = subparsers.add_parser("feet-prepare", help="Cut/normalise feet hits (raw/ → prepared/)")
+    p_fp.add_argument("--root", default="samples/feet", help="samples/feet dir")
+    p_fs = subparsers.add_parser("feet-sf2", help="Build harmonium_trad.sf2 (prepared/ → .sf2)")
+    p_fs.add_argument("--root", default="samples/feet", help="samples/feet dir")
+    p_fs.add_argument("--output", "-o", default=None, help="Output .sf2 path (default: auto)")
+    p_fv = subparsers.add_parser("feet-preview", help="Feet check listen (pieds seuls + reel complet)")
+    p_fv.add_argument("--out", default="target/feet_preview", help="Output dir")
+    p_fv.add_argument("--root", default="corpus/trad", help="Corpus root")
+    p_fv.add_argument("--soundfont", default=None, help="GeneralUser-GS.sf2 path")
+    p_fv.add_argument("--feet-soundfont", default=None, help="harmonium_trad.sf2 path (default: auto)")
+    p_fv.add_argument("--feet-gain", type=float, default=None, help="Feet velocity gain (default: render.FEET_VEL_SCALE)")
+    p_fv.add_argument("--feet-humanize", type=int, default=None, help="Feet velocity humanize ± (default: render.FEET_HUMANIZE)")
+    p_fv.add_argument("--feet-seed", type=int, default=None, help="Feet humanize seed (default: render.FEET_SEED)")
     args = parser.parse_args(argv)
 
     if args.command is None:
@@ -163,6 +185,14 @@ def main(argv: list[str] | None = None) -> int:
             return cmd_mine_tempo(args)
         elif args.command == "blindtest-play":
             return cmd_blindtest_play(args)
+        elif args.command == "feet-fetch":
+            return cmd_feet_fetch(args)
+        elif args.command == "feet-prepare":
+            return cmd_feet_prepare(args)
+        elif args.command == "feet-sf2":
+            return cmd_feet_sf2(args)
+        elif args.command == "feet-preview":
+            return cmd_feet_preview(args)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1
@@ -198,6 +228,14 @@ def cmd_trad_render(args: argparse.Namespace) -> int:
         argv += ["--ids", *args.ids]
     if args.soundfont:
         argv += ["--soundfont", args.soundfont]
+    if args.feet_soundfont:
+        argv += ["--feet-soundfont", args.feet_soundfont]
+    if args.feet_gain is not None:
+        argv += ["--feet-gain", str(args.feet_gain)]
+    if args.feet_humanize is not None:
+        argv += ["--feet-humanize", str(args.feet_humanize)]
+    if args.feet_seed is not None:
+        argv += ["--feet-seed", str(args.feet_seed)]
     if args.musicxml:
         argv.append("--musicxml")
     return render_main(argv)
@@ -728,6 +766,51 @@ def cmd_mine_tempo(args: argparse.Namespace) -> int:
     if tempo["q_manquant"]:
         print(f"Tempo Q: absent de : {', '.join(tempo['q_manquant'])}")
     return 0
+
+
+def cmd_feet_fetch(args: argparse.Namespace) -> int:
+    """Download feet samples (SK1)."""
+    from .feet.fetch import main as feet_main
+
+    argv = ["--root", args.root, "--delay", str(args.delay)]
+    if args.offline:
+        argv.append("--offline")
+    return feet_main(argv)
+
+
+def cmd_feet_prepare(args: argparse.Namespace) -> int:
+    """Cut/normalise feet hits (SK1)."""
+    from .feet.prepare import main as feet_main
+
+    return feet_main(["--root", args.root])
+
+
+def cmd_feet_sf2(args: argparse.Namespace) -> int:
+    """Build harmonium_trad.sf2 (SK1)."""
+    from .feet.build import main as feet_main
+
+    argv = ["--root", args.root]
+    if args.output:
+        argv += ["--output", args.output]
+    return feet_main(argv)
+
+
+def cmd_feet_preview(args: argparse.Namespace) -> int:
+    """Feet check listen (SK1)."""
+    from .feet.preview import main as feet_main
+
+    argv = ["--out", args.out, "--root", args.root]
+    if args.soundfont:
+        argv += ["--soundfont", args.soundfont]
+    if args.feet_soundfont:
+        argv += ["--feet-soundfont", args.feet_soundfont]
+    if args.feet_gain is not None:
+        argv += ["--feet-gain", str(args.feet_gain)]
+    if args.feet_humanize is not None:
+        argv += ["--feet-humanize", str(args.feet_humanize)]
+    if args.feet_seed is not None:
+        argv += ["--feet-seed", str(args.feet_seed)]
+    return feet_main(argv)
 
 
 if __name__ == "__main__":
