@@ -7,7 +7,7 @@ GENERATED_DIR := ../harmonium/harmonium_core/target/generated_music
 REPORTS_DIR := target/quality_reports
 TRAD_DIR := corpus/trad
 
-.PHONY: setup corpus profiles trad-corpus trad-render trad-profiles test lab-export suite gate clean help
+.PHONY: setup corpus profiles trad-corpus trad-render trad-profiles test lab-export suite gate clean help trad-sf2 feet-preview
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
@@ -67,8 +67,17 @@ trad-corpus: setup ## Download + normalise trad québécois corpus → corpus/tr
 trad-render: setup ## Render 20 tunes per type at parity → target/trad_render/ (seed fixe)
 	$(LAB) trad-render --type reel --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),)
 	$(LAB) trad-render --type jig --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),)
-	$(LAB) trad-render --type waltz --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),)
 
+# ── Pieds SK1 : SoundFont podorythmie + écoute de contrôle ──
+# FEET_SF2 : sortie (défaut auto : ../harmonium/assets/ si le moteur est
+# à côté, sinon target/). SOUNDFONT : GeneralUser pour feet-preview.
+trad-sf2: setup ## Échantillons → prepared → ../harmonium/assets/harmonium_trad.sf2
+	$(LAB) feet-fetch
+	$(LAB) feet-prepare
+	$(LAB) feet-sf2 $(if $(FEET_SF2),--output $(FEET_SF2),)
+
+feet-preview: setup ## Pieds seuls (8 mes.) + reel complet avec nouveaux pieds
+	$(LAB) feet-preview $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),) $(if $(FEET_SF2),--feet-soundfont $(FEET_SF2),)
 # ── Moteur : reels générés pour trad-compare / blindtest (DS-T4) ──
 # ENGINE_DIR vaut ../harmonium sur machine du propriétaire (repo frère).
 ENGINE_DIR ?= ../harmonium
