@@ -30,6 +30,7 @@ from .compare import (
 )
 from .form import analyze_form, describe_form, plan_to_dict
 from .loaders import load_abc, load_engine_midi, name_chord
+from . import mine
 from .model import (
     Note,
     TradTune,
@@ -68,6 +69,7 @@ __all__ = [
     "load_engine_midi",
     "nearest_reals",
     "mode_intervals",
+    "mine",
     "name_chord",
     "normalize_mode",
     "reference_stats",
