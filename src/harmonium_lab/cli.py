@@ -446,7 +446,7 @@ def cmd_trad_profile(args: argparse.Namespace) -> int:
             print(f"Skipping {path.name}: {e}")
     for path in midi_files:
         try:
-            tunes.append(load_engine_midi(path))
+            tunes.append(load_engine_midi(path, tune_type=args.type))
         except Exception as e:
             print(f"Skipping {path.name}: {e}")
     if not tunes:
@@ -538,7 +538,7 @@ def cmd_trad_compare(args: argparse.Namespace) -> int:
     generated: dict[str, dict[str, Any]] = {}
     for path in midis:
         try:
-            generated[path.name] = features(load_engine_midi(path))
+            generated[path.name] = features(load_engine_midi(path, tune_type=args.type))
         except Exception as e:
             print(f"Skipping {path.name}: {e}")
     if not generated:
