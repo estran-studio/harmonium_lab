@@ -73,6 +73,7 @@ def main(argv: list[str] | None = None) -> int:
     p_render.add_argument("--feet-gain", type=float, default=None, help="Feet velocity gain")
     p_render.add_argument("--feet-humanize", type=int, default=None, help="Feet velocity humanize ±")
     p_render.add_argument("--feet-seed", type=int, default=None, help="Feet humanize seed")
+    p_render.add_argument("--no-feet", action="store_true", help="Do not include podorythmy in the MIDI")
     p_render.add_argument("--musicxml", action="store_true", help="Also emit .musicxml via music21")
     # trad-profile: build a trad type profile from corpus ABC/MIDI files
     p_trad = subparsers.add_parser("trad-profile", help="Build trad type profile from corpus tunes")
@@ -252,6 +253,8 @@ def cmd_trad_render(args: argparse.Namespace) -> int:
         argv += ["--feet-seed", str(args.feet_seed)]
     if args.musicxml:
         argv.append("--musicxml")
+    if args.no_feet:
+        argv.append("--no-feet")
     return render_main(argv)
 
 

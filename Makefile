@@ -7,7 +7,7 @@ GENERATED_DIR := ../harmonium/harmonium_core/target/generated_music
 REPORTS_DIR := target/quality_reports
 TRAD_DIR := corpus/trad
 
-.PHONY: setup corpus profiles trad-corpus trad-render trad-profiles check-cells profile-draft test lab-export suite gate clean help trad-sf2 feet-preview
+.PHONY: setup corpus profiles trad-corpus trad-render trad-profiles check-cells profile-draft test lab-export suite gate clean help trad-sf2 feet-preview engine-tunes engine-reels
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
@@ -97,9 +97,10 @@ TRADITION ?= all
 trad-corpus: setup ## Download + normalise trad corpus (TRADITION=all|quebecoise|acadienne|britannique_coloniale)
 	$(LAB) trad-corpus --tradition $(TRADITION)
 
-trad-render: setup ## Render 20 tunes per type at parity → target/trad_render/ (seed fixe)
-	$(LAB) trad-render --type reel --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),)
-	$(LAB) trad-render --type jig --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),)
+trad-render: setup ## Render des airs réels à armes égales → target/trad_render/ (seed fixe; NO_FEET=1 pour omettre les pieds)
+	$(LAB) trad-render --type reel --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),) $(if $(NO_FEET),--no-feet,)
+	$(LAB) trad-render --type jig --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),) $(if $(NO_FEET),--no-feet,)
+	$(LAB) trad-render --type waltz --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),) $(if $(NO_FEET),--no-feet,)
 
 fiddle-samples: setup ## Télécharge les SF2 autorisées du manifeste SK3 (cache privé)
 	$(PYTHON) -m harmonium_lab.trad.fiddle_samples
@@ -117,24 +118,32 @@ trad-sf2: setup ## Échantillons → prepared → ../harmonium/assets/harmonium_
 
 feet-preview: setup ## Pieds seuls (8 mes.) + reel complet avec nouveaux pieds
 	$(LAB) feet-preview $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),) $(if $(FEET_SF2),--feet-soundfont $(FEET_SF2),)
-# ── Moteur : reels générés pour trad-compare / blindtest (DS-T4) ──
-# ENGINE_DIR vaut ../harmonium sur machine du propriétaire (repo frère).
+# ── Moteur : exports par style pour trad-compare / blindtest ──
+# ENGINE_DIR vaut ../harmonium par défaut ; STYLE est l'id du profil moteur.
 ENGINE_DIR ?= ../harmonium
-ENGINE_REELS_DIR := target/engine_reels
-N ?= 10
+ENGINE_TUNES_DIR := target/engine_tunes
+N ?= 20
+STYLE ?= reel_quebecois
+ENGINE_BARS ?= 36
+FEET ?= 1
 
-engine-reels: setup ## Exporte N reels du moteur (seeds 1..N, 32 mesures) → target/engine_reels/
-	@mkdir -p $(ENGINE_REELS_DIR)
+engine-tunes: setup ## Exporte N airs moteur (STYLE=id, seeds 1..N) → target/engine_tunes/<id>/
+	@test -f "$(ENGINE_DIR)/Cargo.toml" || (echo "Moteur introuvable: $(ENGINE_DIR)"; exit 2)
+	@mkdir -p "$(ENGINE_TUNES_DIR)/$(STYLE)"
 	@for s in $$(seq 1 $(N)); do \
-		echo "Export reel seed $$s..."; \
 		cargo run -q -p harmonium-cli --release --manifest-path $(ENGINE_DIR)/Cargo.toml -- \
-			--soundfont $(ENGINE_DIR)/assets/GeneralUser-GS.sf2 --export --bars 32 --style reel --seed $$s \
-			--record-wav $(ENGINE_REELS_DIR)/reel_seed$${s}.wav \
-			--record-midi $(ENGINE_REELS_DIR)/reel_seed$${s}.mid || exit 1; \
+			--soundfont $(ENGINE_DIR)/assets/GeneralUser-GS.sf2 --export --bars $(ENGINE_BARS) --profile $(ENGINE_DIR)/profiles/$(STYLE) --seed $$s --feet $(FEET) \
+			--record-wav $(ENGINE_TUNES_DIR)/$(STYLE)/$(STYLE)_seed$${s}.wav \
+			--record-midi $(ENGINE_TUNES_DIR)/$(STYLE)/$(STYLE)_seed$${s}.mid || exit 1; \
 	done
-	@echo "Engine reels in $(ENGINE_REELS_DIR)/"
+	@echo "Engine tunes in $(ENGINE_TUNES_DIR)/$(STYLE)/"
 
- # ════════════════════════════════════════════════════════════════════
+engine-reels: ## Compatibilité d'usage : exporte uniquement reel_quebecois
+	$(MAKE) engine-tunes STYLE=reel_quebecois N=$(N) ENGINE_BARS=32
+
+# ════════════════════════════════════════════════════════════════════
+
+# ════════════════════════════════════════════════════════════════════
 # ANALYSIS
 # ════════════════════════════════════════════════════════════════════
 
