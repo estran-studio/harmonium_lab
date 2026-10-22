@@ -132,7 +132,18 @@ def main(argv: list[str] | None = None) -> int:
     p_draft = subparsers.add_parser("profile-draft", help="Write a preliminary trad style profile")
     p_draft.add_argument("--type", required=True, help="Tune type (jig, waltz, ...)")
     p_draft.add_argument("--corpus", default="corpus/trad", help="Corpus root")
-    p_draft.add_argument("--output", default=None, help="Output directory (default target/profiles/<type>)")
+    p_draft.add_argument("--meter", default=None, help="Filter tunes by meter signature (e.g. 4/4)")
+    p_draft.add_argument(
+        "--eighths-per-bar",
+        type=int,
+        default=None,
+        help="Filter tunes by eighths per bar count (e.g. 8)",
+    )
+    p_draft.add_argument(
+        "--output",
+        default=None,
+        help="Output directory (default: target/profiles/<tradition>-<type>/)",
+    )
 
     # pieds SK1 : échantillons, préparation, banque, écoute de contrôle
     p_ff = subparsers.add_parser("feet-fetch", help="Download feet samples (manifest.jsonl → raw/)")
@@ -446,7 +457,7 @@ def cmd_trad_profile(args: argparse.Namespace) -> int:
             print(f"Skipping {path.name}: {e}")
     for path in midi_files:
         try:
-            tunes.append(load_engine_midi(path))
+            tunes.append(load_engine_midi(path, tune_type=args.type))
         except Exception as e:
             print(f"Skipping {path.name}: {e}")
     if not tunes:
@@ -538,7 +549,7 @@ def cmd_trad_compare(args: argparse.Namespace) -> int:
     generated: dict[str, dict[str, Any]] = {}
     for path in midis:
         try:
-            generated[path.name] = features(load_engine_midi(path))
+            generated[path.name] = features(load_engine_midi(path, tune_type=args.type))
         except Exception as e:
             print(f"Skipping {path.name}: {e}")
     if not generated:
@@ -800,10 +811,20 @@ def cmd_profile_draft(args: argparse.Namespace) -> int:
     """Write the preliminary profile bundle from ABC corpus data."""
     from .trad.profile_draft import build_profile_draft, write_profile_draft
 
-    profile = build_profile_draft(args.corpus, args.type)
-    out = Path(args.output) if args.output else Path("target/profiles") / args.type
+    profile = build_profile_draft(
+        args.corpus,
+        args.type,
+        meter=getattr(args, "meter", None),
+        eighths_per_bar=getattr(args, "eighths_per_bar", None),
+    )
+    tradition = profile.get("tradition", "trad")
+    out = (
+        Path(args.output)
+        if args.output
+        else Path("target/profiles") / f"{tradition}-{args.type}"
+    )
     write_profile_draft(profile, out)
-    print(f"Brouillon '{args.type}' ({profile['tunes']} airs) -> {out}")
+    print(f"Brouillon '{args.type}' tradition '{tradition}' ({profile['tunes']} airs) -> {out}")
     for role in ("open", "run", "arp", "turn", "cad_half", "cad_full"):
         selected = [cell for cell in profile["cells"] if cell["role"] == role]
         print(f"  {role}: {len(selected)} cellules")

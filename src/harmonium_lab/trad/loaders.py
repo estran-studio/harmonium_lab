@@ -17,6 +17,7 @@ sur 4/4 (ou forçage explicite).
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import mido
@@ -170,10 +171,110 @@ def _key_from_stream(score) -> tuple[int, str, str]:
     )
 
 
+def _chord_duration_eighths(num: int, den: int, tune_type: str | None = None) -> float:
+    """Durée d'un accord en croches selon le style ou la métrique."""
+    if (tune_type in ("jig", "gigue", "waltz", "valse")) or (num == 6 and den == 8) or (num == 3 and den == 4):
+        return float(eighths_per_bar(num, den))
+    if (num == 2 and den == 2) or (num == 4 and den == 4) or eighths_per_bar(num, den) >= 8:
+        return 4.0
+    return float(eighths_per_bar(num, den))
+
+
+def _load_truth_chords(
+    truth_path: Path | str,
+    n_bars: int,
+    eighths_per_b: int,
+) -> list[list[tuple[float, str]]] | None:
+    """Lit les accords depuis le fichier de vérité JSON (--record-truth)."""
+    p = Path(truth_path)
+    if not p.exists():
+        return None
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    snapshots = data.get("reports", []) if isinstance(data, dict) else data
+    if not isinstance(snapshots, list) or not snapshots:
+        return None
+
+    sorted_snaps = sorted(
+        snapshots,
+        key=lambda s: (s.get("bar", 0), s.get("step", s.get("beat", 0)), s.get("timestamp_ms", 0)),
+    )
+    chords: list[list[tuple[float, str]]] = [[] for _ in range(n_bars)]
+    prev_chord: str | None = None
+
+    for snap in sorted_snaps:
+        bar = snap.get("bar")
+        if bar is None:
+            continue
+        bar_idx = int(bar) - 1
+        if not (0 <= bar_idx < n_bars):
+            continue
+        chord = snap.get("chord")
+        if not chord or chord == "?":
+            continue
+        if chord != prev_chord:
+            step = snap.get("step", 0)
+            beat = snap.get("beat", 1)
+            onset = 0.0
+            if eighths_per_b >= 8 and (step >= 8 or beat >= 3):
+                onset = 4.0
+            chords[bar_idx].append((onset, chord))
+            prev_chord = chord
+
+    return chords
+
+
+def _infer_midi_chords(
+    chord_notes: list[tuple[int, int, int, int]],
+    n_bars: int,
+    bar_ticks: float,
+    eighth_ticks: float,
+    num: int,
+    den: int,
+    tune_type: str | None = None,
+) -> list[list[tuple[float, str]]]:
+    """Infère les accords par classes de hauteur sur la durée d'accord du style."""
+    chords: list[list[tuple[float, str]]] = [[] for _ in range(n_bars)]
+    if not chord_notes:
+        return chords
+
+    bar_eighths = eighths_per_bar(num, den)
+    dur = _chord_duration_eighths(num, den, tune_type)
+    n_slots = max(1, int(round(bar_eighths / dur)))
+    slot_eighths = bar_eighths / n_slots
+
+    prev_chord: str | None = None
+
+    for bar_idx in range(n_bars):
+        for slot_idx in range(n_slots):
+            slot_start_tick = bar_idx * bar_ticks + (slot_idx * slot_eighths) * eighth_ticks
+            slot_end_tick = bar_idx * bar_ticks + ((slot_idx + 1) * slot_eighths) * eighth_ticks
+
+            slot_pitches = [
+                pitch
+                for _, pitch, start, _ in chord_notes
+                if slot_start_tick <= start < slot_end_tick
+            ]
+            if not slot_pitches:
+                continue
+
+            chord = name_chord(slot_pitches)
+            if chord and chord != "?" and chord != prev_chord:
+                onset = round(slot_idx * slot_eighths, 3)
+                chords[bar_idx].append((onset, chord))
+                prev_chord = chord
+
+    return chords
+
+
 def load_engine_midi(
     path: Path | str,
     numerator: int | None = None,
     denominator: int | None = None,
+    truth_path: Path | str | None = None,
+    tune_type: str | None = None,
 ) -> TradTune:
     """Charge un MIDI du moteur en ``TradTune`` (canal 0 = mélodie)."""
     path = Path(path)
@@ -237,15 +338,21 @@ def load_engine_midi(
     for bar in bars:
         bar.sort(key=lambda n: (n.onset, n.pitch))
 
-    # Accords : simultanéités du canal 1 groupées par (mesure, tick).
-    onsets: dict[tuple[int, int], list[int]] = {}
-    for _, pitch, start, _ in chord_notes:
-        idx = min(int(start // bar_ticks), n_bars - 1)
-        onsets.setdefault((idx, start), []).append(pitch)
-    chords: list[list[tuple[float, str]]] = [[] for _ in range(n_bars)]
-    for (idx, start), pitches in sorted(onsets.items()):
-        chords[idx].append(
-            (round((start % bar_ticks) / eighth_ticks, 3), name_chord(pitches))
+    # Accords : vérité (--record-truth) en priorité, sinon inférence par classes de hauteur.
+    target_truth = truth_path
+    if target_truth is None:
+        cand = path.with_suffix(".json")
+        if cand.exists():
+            target_truth = cand
+
+    eighths = eighths_per_bar(num, den)
+    chords = None
+    if target_truth is not None:
+        chords = _load_truth_chords(target_truth, n_bars, eighths)
+
+    if chords is None:
+        chords = _infer_midi_chords(
+            chord_notes, n_bars, bar_ticks, eighth_ticks, num, den, tune_type
         )
 
     if meta_key is not None:
@@ -261,7 +368,7 @@ def load_engine_midi(
         key_name=key_name,
         mode=mode,
         meter=f"{num}/{den}",
-        eighths_per_bar=eighths_per_bar(num, den),
+        eighths_per_bar=eighths,
         bars=bars,
         chords=chords,
         source="engine-midi",
@@ -269,11 +376,11 @@ def load_engine_midi(
 
 
 def name_chord(pitches: list[int]) -> str:
-    """Nom d'accord (``"D"``, ``"Am"``) depuis une simultanéité du canal 1.
+    """Nom d'accord (``"D"``, ``"Am"``) depuis les classes de hauteur du canal 1.
 
     Fondamentale = classe de hauteur expliquant tierce + quinte (tolère les
-    renversements des voicings serrés) ; repli sur la note la plus grave.
-    Orthographe en dièses, déterministe.
+    renversements des voicings serrés) ; repli sur tierce seule (accords sans quinte) ;
+    repli sur la note la plus grave. Orthographe en dièses, déterministe.
     """
     from .model import PC_NAMES
 
@@ -281,6 +388,7 @@ def name_chord(pitches: list[int]) -> str:
     if not pcs:
         return "?"
     lowest = min(pitches) % 12
+    root = None
     for cand in pcs:
         rel = sorted((p - cand) % 12 for p in pcs)
         if _CHORD_FIFTH in rel and (
@@ -288,8 +396,15 @@ def name_chord(pitches: list[int]) -> str:
         ):
             root = cand
             break
-    else:
+    if root is None:
+        for cand in pcs:
+            rel = sorted((p - cand) % 12 for p in pcs)
+            if _CHORD_THIRD_MAJOR in rel or _CHORD_THIRD_MINOR in rel:
+                root = cand
+                break
+    if root is None:
         root = lowest
+
     rel = sorted((p - root) % 12 for p in pcs)
     if _CHORD_THIRD_MAJOR in rel:
         suffix = ""

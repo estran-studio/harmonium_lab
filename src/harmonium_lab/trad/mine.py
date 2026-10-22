@@ -135,6 +135,8 @@ def mine_cells(
     corpus_root: Path | str,
     tune_type: str,
     top_per_role: int = 30,
+    target_eighths: int | None = None,
+    meter: str | None = None,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Cellules d'un type : (cellules triées, statistiques).
 
@@ -170,10 +172,17 @@ def mine_cells(
             stats["airs_erreur"] += 1
             rejects[f"air-illisible:{type(e).__name__}"] += 1
             continue
+        if meter is not None and plan.meter != meter:
+            stats["airs_autre_metre_ignores"] += 1
+            continue
         meters[plan.eighths_per_bar] += 1
         plans.append((path, plan))
-    # Longueur cible : la plus fréquente (égalité -> la plus grande).
-    target = max(meters, key=lambda k: (meters[k], k)) if meters else 8
+    # Longueur cible : explicite si fournie, sinon la plus fréquente (égalité -> la plus grande).
+    target = (
+        target_eighths
+        if target_eighths is not None
+        else (max(meters, key=lambda k: (meters[k], k)) if meters else 8)
+    )
     stats["croches_par_mesure"] = target
     for path, plan in plans:
         if plan.eighths_per_bar != target:
@@ -313,7 +322,12 @@ def load_engine_bank(path: Path | str) -> list[tuple[str, str]]:
     return _ENGINE_CELL.findall(Path(path).read_text(encoding="utf-8"))
 
 
-def mine_harmony(corpus_root: Path | str, tune_type: str) -> dict[str, Any]:
+def mine_harmony(
+    corpus_root: Path | str,
+    tune_type: str,
+    target_eighths: int | None = None,
+    meter: str | None = None,
+) -> dict[str, Any]:
     """Accords par position et rythme harmonique, bigrammes, par mode."""
     root = Path(corpus_root)
     files = sorted((root / "tunes" / tune_type).glob("*.abc"))
@@ -329,6 +343,10 @@ def mine_harmony(corpus_root: Path | str, tune_type: str) -> dict[str, Any]:
         try:
             plan = analyze_form(path.read_text(encoding="utf-8", errors="replace"))
         except Exception:
+            continue
+        if target_eighths is not None and plan.eighths_per_bar != target_eighths:
+            continue
+        if meter is not None and plan.meter != meter:
             continue
         n_airs += 1
         mode = normalize_mode(plan.mode)
@@ -388,7 +406,12 @@ def mine_harmony(corpus_root: Path | str, tune_type: str) -> dict[str, Any]:
 _Q_BPM = re.compile(r"Q:\s*(?:(\d+)\s*/\s*(\d+)\s*=\s*)?(\d+)")
 
 
-def mine_tempo(corpus_root: Path | str, tune_type: str | None = None) -> dict[str, Any]:
+def mine_tempo(
+    corpus_root: Path | str,
+    tune_type: str | None = None,
+    target_eighths: int | None = None,
+    meter: str | None = None,
+) -> dict[str, Any]:
     """Tempos `Q:` et signatures par type ; signale quand l'info manque."""
     root = Path(corpus_root)
     types = [tune_type] if tune_type else sorted(p.name for p in (root / "tunes").iterdir() if p.is_dir())
@@ -398,8 +421,17 @@ def mine_tempo(corpus_root: Path | str, tune_type: str | None = None) -> dict[st
         meters: Counter[str] = Counter()
         n = 0
         for path in sorted((root / "tunes" / t).glob("*.abc")):
-            n += 1
             text = path.read_text(encoding="utf-8", errors="replace")
+            if target_eighths is not None or meter is not None:
+                try:
+                    plan = analyze_form(text)
+                    if target_eighths is not None and plan.eighths_per_bar != target_eighths:
+                        continue
+                    if meter is not None and plan.meter != meter:
+                        continue
+                except Exception:
+                    continue
+            n += 1
             m = re.search(r"^M:\s*(\S+)", text, re.M)
             if m:
                 meters[m.group(1)] += 1

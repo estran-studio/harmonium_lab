@@ -85,9 +85,9 @@ check-cells: ## Validate a mined CellBank TOML with the engine parser (FILE=path
 	cargo run -q -p harmonium-cli --release --manifest-path $(ENGINE_DIR)/Cargo.toml -- \
 		--check-cells $(abspath $(if $(FILE),$(FILE),target/mined/reel_cells.toml))
 
-profile-draft: setup ## Build a preliminary trad style profile (TYPE=jig|waltz)
-	@test -n "$(TYPE)" || (echo "Usage: make profile-draft TYPE=jig|waltz"; exit 2)
-	$(LAB) profile-draft --type "$(TYPE)" --corpus "$(TRAD_DIR)"
+profile-draft: setup ## Build a preliminary trad style profile (TYPE=..., CORPUS=..., METER=..., EIGHTHS=...)
+	@test -n "$(TYPE)" || (echo "Usage: make profile-draft TYPE=jig|waltz|march [CORPUS=dir] [METER=4/4] [EIGHTHS=8]"; exit 2)
+	$(LAB) profile-draft --type "$(TYPE)" --corpus "$(if $(CORPUS),$(CORPUS),$(TRAD_DIR))" $(if $(METER),--meter "$(METER)",) $(if $(EIGHTHS),--eighths-per-bar $(EIGHTHS),)
 
 # ════════════════════════════════════════════════════════════════════
 # TRAD CORPUS (specs/001-trad-dataset)
@@ -134,7 +134,8 @@ engine-tunes: setup ## Exporte N airs moteur (STYLE=id, seeds 1..N) → target/e
 		cargo run -q -p harmonium-cli --release --manifest-path $(ENGINE_DIR)/Cargo.toml -- \
 			--soundfont $(ENGINE_DIR)/assets/GeneralUser-GS.sf2 --export --bars $(ENGINE_BARS) --profile $(ENGINE_DIR)/profiles/$(STYLE) --seed $$s --feet $(FEET) \
 			--record-wav $(ENGINE_TUNES_DIR)/$(STYLE)/$(STYLE)_seed$${s}.wav \
-			--record-midi $(ENGINE_TUNES_DIR)/$(STYLE)/$(STYLE)_seed$${s}.mid || exit 1; \
+			--record-midi $(ENGINE_TUNES_DIR)/$(STYLE)/$(STYLE)_seed$${s}.mid \
+			--record-truth $(ENGINE_TUNES_DIR)/$(STYLE)/$(STYLE)_seed$${s}.json || exit 1; \
 	done
 	@echo "Engine tunes in $(ENGINE_TUNES_DIR)/$(STYLE)/"
 

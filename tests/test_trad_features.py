@@ -192,6 +192,82 @@ class TestEngineMidi:
         assert feat["n_bars"] == 2
         assert feat["cells"]["per_bar"][0] == "1 3 5 3 1 3 5 3"
 
+    def test_voicing_change_without_chord_change_does_not_count_as_change(
+        self, tmp_path: Path
+    ) -> None:
+        """Un voicing qui change sans changement d'accord ne compte pas comme changement."""
+        import mido
+
+        path = tmp_path / "voicing_test.mid"
+        mid = mido.MidiFile(ticks_per_beat=480)
+        track = mido.MidiTrack()
+        mid.tracks.append(track)
+        track.append(
+            mido.MetaMessage("time_signature", numerator=2, denominator=2, time=0)
+        )
+        bar_ticks = 480 * 2 * 4 // 2
+        eighth = 240
+
+        # Bar 0 : 3 voicings de D majeur (offset 0, 2, 4)
+        # Bar 1 : 1 voicing de D majeur (offset 0), puis G majeur (offset 4)
+        events = []
+        def add_chord(t: int, pitches: list[int]):
+            for p in pitches:
+                events.append((t, "note_on", 1, p, 80))
+                events.append((t + eighth, "note_off", 1, p, 0))
+
+        add_chord(0, [62, 66, 69])  # D root
+        add_chord(2 * eighth, [66, 69, 74])  # D 1st inv
+        add_chord(4 * eighth, [57, 62, 66])  # D 2nd inv
+        add_chord(bar_ticks, [50, 57, 66])  # D open
+        add_chord(bar_ticks + 4 * eighth, [55, 59, 62])  # G root
+
+        events.sort(key=lambda e: (e[0], e[1] == "note_off"))
+        cur = 0
+        for t, kind, ch, p, v in events:
+            track.append(mido.Message(kind, channel=ch, note=p, velocity=v, time=t - cur))
+            cur = t
+        track.append(mido.MetaMessage("end_of_track", time=0))
+        mid.save(str(path))
+
+        tune = load_engine_midi(path)
+        symbols = [s for bar in tune.chords for _, s in bar]
+        assert symbols == ["D", "G"]
+        feat = features(tune)
+        assert feat["harmony"]["n_chords"] == 2
+        assert feat["harmony"]["chords_per_bar"] == 1.0
+
+    def test_load_engine_midi_with_record_truth(self, tmp_path: Path) -> None:
+        """Quand le fichier de vérité (--record-truth) est présent, ses accords sont lus."""
+        import json
+        import mido
+
+        mid_path = tmp_path / "truth_test.mid"
+        mid = mido.MidiFile(ticks_per_beat=480)
+        track = mido.MidiTrack()
+        mid.tracks.append(track)
+        track.append(mido.MetaMessage("time_signature", numerator=2, denominator=2, time=0))
+        track.append(mido.Message("note_on", channel=0, note=62, velocity=80, time=0))
+        track.append(mido.Message("note_off", channel=0, note=62, velocity=0, time=1920 * 4))
+        mid.save(str(mid_path))
+
+        truth_path = tmp_path / "truth_test.json"
+        truth_data = [
+            {"bar": 1, "step": 0, "chord": "D"},
+            {"bar": 1, "step": 8, "chord": "D"},
+            {"bar": 2, "step": 0, "chord": "D"},
+            {"bar": 3, "step": 0, "chord": "G"},
+            {"bar": 4, "step": 0, "chord": "D"},
+        ]
+        truth_path.write_text(json.dumps(truth_data), encoding="utf-8")
+
+        tune = load_engine_midi(mid_path)
+        symbols = [s for bar in tune.chords for _, s in bar]
+        assert symbols == ["D", "G", "D"]
+        assert tune.chords[0] == [(0.0, "D")]
+        assert tune.chords[1] == []
+        assert tune.chords[2] == [(0.0, "G")]
+        assert tune.chords[3] == [(0.0, "D")]
 
 # ---------------------------------------------------------------------------
 # Profil par type + CLI
