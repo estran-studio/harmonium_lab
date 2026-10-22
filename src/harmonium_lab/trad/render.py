@@ -74,11 +74,13 @@ TEMPO_Q = {
     "march": "1/4=110",
     "quadrille": "3/8=115",
     "cotillon": "3/8=115",
+    "hornpipe": "1/4=150",
 }
 
 DEFAULT_METER = {
     "reel": (4, 4), "jig": (6, 8), "waltz": (3, 4), "march": (2, 4),
     "quadrille": (6, 8), "cotillon": (6, 8),
+    "hornpipe": (4, 4),
 }
 
 def default_soundfont() -> Path:

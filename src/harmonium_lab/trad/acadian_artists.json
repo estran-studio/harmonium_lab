@@ -1,0 +1,89 @@
+{
+  "_doc": "Artistes acadiens dont un enregistrement sur The Session qualifie un air (specs/001-trad-dataset, DS-T6). Dans recordings.json, `artist` est le NOM en clair ; la jointure se fait sur le nom replié (minuscules, sans accents) via `session_names`.",
+  "artists": [
+    {
+      "name": "Barachois",
+      "region": "Île-du-Prince-Édouard",
+      "session_names": [
+        "Barachois"
+      ],
+      "notes": "Groupe trad acadien de l'Île-du-Prince-Édouard (Albert Arsenault, Louise Arsenault, Chuck Arsenault, Hélène Bergeron)"
+    },
+    {
+      "name": "Vishtèn",
+      "region": "Île-du-Prince-Édouard / Îles-de-la-Madeleine",
+      "session_names": [
+        "Vishtèn",
+        "Vishten"
+      ],
+      "notes": "Trio trad acadien (Pastelle LeBlanc, Emmanuelle LeBlanc, Pascal Miousse)"
+    },
+    {
+      "name": "Joe Cormier",
+      "region": "Chéticamp, Cap-Breton",
+      "session_names": [
+        "Joe Cormier",
+        "Joseph Cormier",
+        "Joseph Cormier And J.P Cormier",
+        "Joseph Cormier and Friends"
+      ],
+      "notes": "Violoneux acadien né à Chéticamp (Nouvelle-Écosse), National Heritage Fellow 1984"
+    },
+    {
+      "name": "The Robichaud Brothers",
+      "region": "Saint-Paul, Nouveau-Brunswick",
+      "session_names": [
+        "The Robichaud Brothers"
+      ],
+      "notes": "Gerry et Armand Robichaud, maîtres du violon acadien du Nouveau-Brunswick"
+    },
+    {
+      "name": "Samantha Robichaud",
+      "region": "Nouveau-Brunswick",
+      "session_names": [
+        "Samantha Robichaud"
+      ],
+      "notes": "Violoneuse acadienne du Nouveau-Brunswick"
+    },
+    {
+      "name": "Eddy Arsenault",
+      "region": "Baie-Egmont, Île-du-Prince-Édouard",
+      "session_names": [
+        "Eddy Arsenault Et Famille, Anastasia DesRoches, Louise Arsenault"
+      ],
+      "notes": "Légendaire violoneux acadien de l'Île-du-Prince-Édouard"
+    },
+    {
+      "name": "Donny LeBlanc",
+      "region": "Margaree / Chéticamp, Cap-Breton",
+      "session_names": [
+        "Donny LeBlanc, Hilda Chaisson, Paul M. MacDonald"
+      ],
+      "notes": "Violoneux acadien du Cap-Breton"
+    },
+    {
+      "name": "Suroît",
+      "region": "Îles-de-la-Madeleine",
+      "session_names": [
+        "Suroit"
+      ],
+      "notes": "Groupe trad acadien madelinot"
+    },
+    {
+      "name": "Marc Boudreau",
+      "region": "Cap-Breton",
+      "session_names": [
+        "Marc Boudreau"
+      ],
+      "notes": "Violoneux acadien du Cap-Breton"
+    },
+    {
+      "name": "Mario Landry",
+      "region": "Nouveau-Brunswick",
+      "session_names": [
+        "Eric Favreau and Mario Landry"
+      ],
+      "notes": "Violoneux acadien"
+    }
+  ]
+}
