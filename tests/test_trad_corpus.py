@@ -185,7 +185,7 @@ def test_manifest_is_sorted_complete_and_deterministic(tmp_path):
     assert (root / "VERSION").read_text() == version
     rows = [json.loads(line) for line in first.decode().splitlines()]
     assert [r["id"] for r in rows] == sorted(r["id"] for r in rows)
-    required = {"id", "title", "aliases", "type", "meter", "key", "mode", "bars", "source", "url",
+    required = {"id", "title", "aliases", "tradition", "type", "meter", "key", "mode", "bars", "source", "url",
                 "license", "sha256", "included_because", "incipit"}
     assert all(required <= set(r) for r in rows)
     bast = next(r for r in rows if r["key"] == "D" and r["type"] == "reel" and "Bastringue" in r["title"])
@@ -303,3 +303,87 @@ def test_french_title_patterns():
 def test_offline_fetcher_refuses_missing_cache(tmp_path):
     with pytest.raises(RuntimeError, match="hors ligne"):
         Fetcher(offline=True).get("http://example.invalid/x", tmp_path / "x")
+
+
+def test_acadian_artist_list_is_documented_and_valid():
+    names = C.acadian_artist_names()
+    assert len(names) >= 10 and "Barachois" in names and "Joe Cormier" in names and "Vishtèn" in names
+    by_name = C.load_acadian_artists()
+    assert by_name["barachois"] == "Barachois"
+    assert by_name["vishten"] == "Vishtèn"
+    assert by_name["joseph cormier"] == "Joe Cormier"
+
+
+def test_acadian_title_patterns():
+    assert C.acadian_match("Acadian Breakdown") is not None
+    assert C.acadian_match("La Reel Des Acadiens") is not None
+    assert C.acadian_match("Turlutte Acadienne") is not None
+    assert C.acadian_match("Valse d'Acadie") is not None
+    assert C.acadian_match("Reel de Montréal") is None
+    assert C.acadian_match("The Old Reel") is None
+
+
+def test_migrate_manifest_preserves_tune_sha256_and_sets_tradition(tmp_path):
+    import hashlib
+    old_row = {
+        "id": "reel-test-12345678",
+        "title": "Reel Test",
+        "aliases": ["Alias 1"],
+        "type": "reel",
+        "meter": "4/4",
+        "key": "D",
+        "mode": "majeur",
+        "bars": 16,
+        "source": "chambers",
+        "url": "http://jc/reel.abc",
+        "license": "non précisée",
+        "sha256": "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+        "included_because": "fixture test",
+        "incipit": [74, 76, 78],
+    }
+    manifest_file = tmp_path / "manifest.jsonl"
+    manifest_file.write_text(json.dumps(old_row) + "\n", encoding="utf-8")
+    old_sha = hashlib.sha256(manifest_file.read_bytes()).hexdigest()
+    version_file = tmp_path / "VERSION"
+    version_file.write_text(f"2026-10-19+1\nmanifest_sha256: {old_sha}\n", encoding="utf-8")
+
+    new_sha = C.migrate_manifest(manifest_file, tradition="quebecoise")
+    assert new_sha != old_sha
+
+    migrated_lines = [json.loads(line) for line in manifest_file.read_text().splitlines() if line.strip()]
+    assert len(migrated_lines) == 1
+    m = migrated_lines[0]
+    assert m["tradition"] == "quebecoise"
+    assert m["sha256"] == old_row["sha256"]
+    assert m["id"] == old_row["id"]
+    assert "manifest_sha256: " + new_sha in version_file.read_text()
+
+
+def test_tradition_filter_and_dispatch(tmp_path):
+    raw_qc = C.RawTune(C.CHAMBERS, "q#1", "u1", "X:1\nT:Air QC\nR:reel\nM:4/4\nK:D\nD4|", "reel", "b", "Air QC", tradition="quebecoise")
+    raw_acad = C.RawTune(C.CHAMBERS, "a#1", "u2", "X:2\nT:Air Acadien\nR:jig\nM:6/8\nK:G\nG3|", "jig", "b", "Air Acadien", tradition="acadienne")
+    raw_brit = C.RawTune(C.NOTTINGHAM, "b#1", "u3", "X:3\nT:British March\nR:march\nM:2/4\nK:C\nC4|", "march", "b", "British March", tradition="britannique_coloniale", epoque="1809")
+
+    kept, stats, _ = C.build(tmp_path / "custom", Fetcher(offline=True), raw_tunes=[raw_qc, raw_acad, raw_brit])
+    assert len(kept) == 3
+    by_trad = {c.tradition: c for c in kept}
+    assert by_trad["quebecoise"].type == "reel"
+    assert by_trad["acadienne"].type == "jig"
+    assert by_trad["britannique_coloniale"].type == "march"
+    assert by_trad["britannique_coloniale"].epoque == "1809"
+
+
+def test_offline_fixture_determinism_acadienne_and_british(tmp_path):
+    raws = [
+        C.RawTune(C.SESSION, "acad#1", "https://thesession.org/tunes/1", "X:1\nT:Acadian Reel\nR:reel\nM:4/4\nK:D\nD2FA d2fd|", "reel", "test", "Acadian Reel", tradition="acadienne"),
+        C.RawTune(C.NOTTINGHAM, "brit#1", "http://nmd/jigs#1", "X:2\nT:Country Dance\nR:jig\nM:6/8\nK:G\nG2B d2g|", "jig", "test", "Country Dance", tradition="britannique_coloniale", epoque="c. 1764"),
+    ]
+    dir1 = tmp_path / "run1"
+    dir2 = tmp_path / "run2"
+    kept1, stats1, sha1 = C.build(dir1, Fetcher(offline=True), raw_tunes=raws, today=dt.date(2026, 1, 1))
+    kept2, stats2, sha2 = C.build(dir2, Fetcher(offline=True), raw_tunes=list(reversed(raws)), today=dt.date(2026, 1, 1))
+
+    assert sha1 == sha2
+    assert (dir1 / "manifest.jsonl").read_bytes() == (dir2 / "manifest.jsonl").read_bytes()
+    assert (dir1 / "VERSION").read_text() == (dir2 / "VERSION").read_text()
+    assert stats1.kept == stats2.kept
