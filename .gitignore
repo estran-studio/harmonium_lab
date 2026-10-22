@@ -21,11 +21,11 @@ references/training-backing/profile.json
 # Analysis output
 target/
 
-# Corpus trad québécois : seuls manifest.jsonl et VERSION sont versionnés
+# Corpus trad (québécois, acadien, britannique colonial) : seuls manifest.jsonl et VERSION sont versionnés
 # (ABC/JSON téléchargés : jamais commités ; recréés par `make trad-corpus`)
-corpus/trad/*
-!corpus/trad/manifest.jsonl
-!corpus/trad/VERSION
+corpus/*/*
+!corpus/*/manifest.jsonl
+!corpus/*/VERSION
 
 # SoundFonts privés du comparatif SK3 (seul le manifeste est versionné)
 samples/fiddles/raw/

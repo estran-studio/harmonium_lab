@@ -39,23 +39,47 @@ profiles: setup ## Build reference profiles from corpus MIDI files
 	done
 	@echo "All profiles built."
 
-trad-profiles: setup ## Build trad type profiles from corpus/trad (DS-T3/D5)
-	@if [ ! -d corpus/trad/tunes ]; then \
-		echo "corpus/trad/tunes missing (run \`make trad-corpus' first)"; \
-		exit 1; \
+trad-profiles: setup ## Build trad type profiles from corpus/* (DS-T3/D5/DS-T6)
+	@if [ -d corpus/trad/tunes ]; then \
+		for type in reel jig waltz march quadrille cotillon; do \
+			if [ -d "corpus/trad/tunes/$$type" ]; then \
+				echo "Building trad profile (quebecois): $$type..."; \
+				$(LAB) trad-profile \
+					--type "$$type" \
+					--corpus "corpus/trad" \
+					--output "$(REFS_DIR)/trad-$$type/profile.json"; \
+			fi; \
+		done; \
 	fi
-	@for type in reel jig waltz march quadrille cotillon; do \
-		if [ -d "corpus/trad/tunes/$$type" ]; then \
-			echo "Building trad profile: $$type..."; \
-			$(LAB) trad-profile \
-				--type "$$type" \
-				--corpus "corpus/trad" \
-				--output "$(REFS_DIR)/trad-$$type/profile.json"; \
-		else \
-			echo "Skipping $$type (no tunes)"; \
-		fi; \
-	done
-	@echo "Trad profiles built."
+	@if [ -d corpus/acadienne/tunes ]; then \
+		for type in reel jig hornpipe march waltz; do \
+			if [ -d "corpus/acadienne/tunes/$$type" ]; then \
+				count=$$(ls corpus/acadienne/tunes/$$type/*.abc 2>/dev/null | wc -l | tr -d ' '); \
+				if [ "$$count" -ge 15 ]; then \
+					echo "Building trad profile (acadienne): $$type ($$count tunes)..."; \
+					$(LAB) trad-profile \
+						--type "$$type" \
+						--corpus "corpus/acadienne" \
+						--output "$(REFS_DIR)/trad-acadienne-$$type/profile.json"; \
+				fi; \
+			fi; \
+		done; \
+	fi
+	@if [ -d corpus/britannique_coloniale/tunes ]; then \
+		for type in reel jig hornpipe march waltz; do \
+			if [ -d "corpus/britannique_coloniale/tunes/$$type" ]; then \
+				count=$$(ls corpus/britannique_coloniale/tunes/$$type/*.abc 2>/dev/null | wc -l | tr -d ' '); \
+				if [ "$$count" -ge 15 ]; then \
+					echo "Building trad profile (britannique_coloniale): $$type ($$count tunes)..."; \
+					$(LAB) trad-profile \
+						--type "$$type" \
+						--corpus "corpus/britannique_coloniale" \
+						--output "$(REFS_DIR)/trad-britannique_coloniale-$$type/profile.json"; \
+				fi; \
+			fi; \
+		done; \
+	fi
+	@echo "All trad profiles built."
 
 check-cells: ## Validate a mined CellBank TOML with the engine parser (FILE=path, default target/mined/reel_cells.toml)
 	cargo run -q -p harmonium-cli --release --manifest-path $(ENGINE_DIR)/Cargo.toml -- \
@@ -69,8 +93,9 @@ profile-draft: setup ## Build a preliminary trad style profile (TYPE=jig|waltz)
 # TRAD CORPUS (specs/001-trad-dataset)
 # ════════════════════════════════════════════════════════════════════
 
-trad-corpus: setup ## Download + normalise trad québécois corpus → corpus/trad/manifest.jsonl
-	$(LAB) trad-corpus --root $(TRAD_DIR)
+TRADITION ?= all
+trad-corpus: setup ## Download + normalise trad corpus (TRADITION=all|quebecoise|acadienne|britannique_coloniale)
+	$(LAB) trad-corpus --tradition $(TRADITION)
 
 trad-render: setup ## Render 20 tunes per type at parity → target/trad_render/ (seed fixe)
 	$(LAB) trad-render --type reel --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),)

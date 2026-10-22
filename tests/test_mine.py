@@ -33,6 +33,8 @@ K:D
 def engine_bank_path() -> Path:
     here = Path(__file__).resolve()
     candidates = [
+        here.parent.parent.parent / "harmonium" / "profiles" / "reel_quebecois" / "cells.toml",
+        Path("/Users/william.quintal/Project/bascanada/harmonium/profiles/reel_quebecois/cells.toml"),
         here.parent.parent.parent / "harmonium" / "harmonium_core" / "src" / "trad" / "reel_cells.toml",
         Path("/Users/william.quintal/Project/bascanada/harmonium/harmonium_core/src/trad/reel_cells.toml"),
     ]
@@ -69,9 +71,7 @@ class TestValidateCell:
         assert M.validate_cell("1 8 7 6 5 4 3 2") is None
 
     def test_engine_bank_valid(self) -> None:
-        for role, notes in M.load_engine_bank(
-            "/Users/william.quintal/Project/bascanada/harmonium/harmonium_core/src/trad/reel_cells.toml"
-        ):
+        for role, notes in M.load_engine_bank(engine_bank_path()):
             assert role in M.ROLES
             assert M.validate_cell(notes) is None, notes
 

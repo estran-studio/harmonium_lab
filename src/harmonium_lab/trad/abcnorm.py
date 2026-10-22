@@ -213,7 +213,7 @@ def parse_unit(value: str | None, measure: Fraction) -> Fraction:
 
 # ── Types ────────────────────────────────────────────────────────────
 
-TYPES = ("reel", "jig", "waltz", "march", "quadrille", "cotillon")
+TYPES = ("reel", "jig", "waltz", "march", "quadrille", "cotillon", "hornpipe")
 _TYPE_WORDS = {
     "reel": "reel", "reels": "reel",
     "jig": "jig", "jigs": "jig", "gigue": "jig", "gigues": "jig",
@@ -221,6 +221,7 @@ _TYPE_WORDS = {
     "march": "march", "marche": "march", "marches": "march",
     "quadrille": "quadrille", "quadrilles": "quadrille",
     "cotillon": "cotillon", "cotillion": "cotillon", "cotillons": "cotillon",
+    "hornpipe": "hornpipe", "hornpipes": "hornpipe",
 }
 
 

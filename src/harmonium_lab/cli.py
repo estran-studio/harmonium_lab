@@ -53,11 +53,13 @@ def main(argv: list[str] | None = None) -> int:
     p_baseline.add_argument("--reports", required=True, help="Directory with report JSONs")
     p_baseline.add_argument("--output", "-o", required=True, help="Baseline JSON path")
 
-    # trad-corpus: download + normalise the Québec trad corpus
-    p_trad = subparsers.add_parser("trad-corpus", help="Build the trad québécois corpus (corpus/trad)")
-    p_trad.add_argument("--root", default="corpus/trad", help="Corpus directory")
+    # trad-corpus: download + normalise the trad corpus
+    p_trad = subparsers.add_parser("trad-corpus", help="Build the trad corpus (corpus/trad, acadienne, etc.)")
+    p_trad.add_argument("--root", default=None, help="Corpus directory")
+    p_trad.add_argument("--tradition", choices=["quebecoise", "acadienne", "britannique_coloniale", "all"], default="all", help="Tradition to build")
     p_trad.add_argument("--delay", type=float, default=0.3, help="Seconds between network requests")
     p_trad.add_argument("--offline", action="store_true", help="Use the raw/ cache only")
+    p_trad.add_argument("--migrate-only", action="store_true", help="Migrate manifest only")
     # trad-render: render the trad corpus at parity (MIDI + WAV)
     p_render = subparsers.add_parser("trad-render", help="Render trad corpus tunes (MIDI+WAV)")
     p_render.add_argument("--root", default="corpus/trad", help="Corpus directory")
@@ -213,14 +215,19 @@ def main(argv: list[str] | None = None) -> int:
 
 
 def cmd_trad_corpus(args: argparse.Namespace) -> int:
-    """Download + normalise the trad québécois corpus."""
+    """Download + normalise the trad corpus."""
     from .trad.corpus import main as trad_main
 
-    argv = ["--root", args.root, "--delay", str(args.delay)]
+    argv = ["--delay", str(args.delay)]
+    if args.root:
+        argv += ["--root", str(args.root)]
+    if hasattr(args, "tradition") and args.tradition:
+        argv += ["--tradition", args.tradition]
     if args.offline:
         argv.append("--offline")
+    if hasattr(args, "migrate_only") and args.migrate_only:
+        argv.append("--migrate-only")
     return trad_main(argv)
-
 
 def cmd_trad_render(args: argparse.Namespace) -> int:
     """Render trad corpus tunes at parity (MIDI + WAV)."""
