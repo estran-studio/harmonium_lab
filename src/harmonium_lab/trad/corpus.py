@@ -507,6 +507,8 @@ def british_colonial_cahusac_tunes(raw_dir: Path, fetcher: Fetcher) -> Iterator[
 
 AMREV_BASE = "http://trillian.mit.edu/~jc/music/abc/AmRev/"
 AMREV_DIRS = {"march": "march", "jig": "jig", "reel": "reel"}
+ENGLAND_MARCH_BASE = "http://trillian.mit.edu/~jc/music/abc/England/march/"
+GARRISON_KEYWORDS = ("grenadier", "british", "duke", "york", "king", "queen", "fife", "royal", "garrison", "field", "camp", "hampshire", "holborn", "monk")
 
 
 def british_colonial_amrev_tunes(raw_dir: Path, fetcher: Fetcher) -> Iterator[RawTune]:
@@ -530,6 +532,25 @@ def british_colonial_amrev_tunes(raw_dir: Path, fetcher: Fetcher) -> Iterator[Ra
                     fallback_title=Path(name).stem.replace("_", " "),
                     tradition=TRADITION_BRITANNIQUE_COLONIALE,
                     epoque="c. 1775-1783",
+                )
+    # Marches de garnison et régimentaires britanniques XVIIIe s.
+    index_england = fetcher.get(ENGLAND_MARCH_BASE, base / "_index" / "england_march.html")
+    for name in list_abc_files(_decode_bytes(index_england.read_bytes())):
+        if any(k in name.lower() for k in GARRISON_KEYWORDS):
+            url = ENGLAND_MARCH_BASE + urllib.parse.quote(name, safe=",")
+            path = fetcher.get(url, base / "garrison_marches" / name)
+            blocks = split_tunes(_decode_bytes(path.read_bytes()))
+            for i, block in enumerate(blocks, 1):
+                yield RawTune(
+                    source=AMREV,
+                    origin=f"england/march/{name}#X{i}",
+                    url=url if len(blocks) == 1 else f"{url}#{i}",
+                    block=block,
+                    type_hint="march",
+                    because=f"John Chambers England, marche de garnison XVIIIe s. ({name})",
+                    fallback_title=Path(name).stem.replace("_", " "),
+                    tradition=TRADITION_BRITANNIQUE_COLONIALE,
+                    epoque="c. 1760-1820",
                 )
 
 # ── Normalisation ────────────────────────────────────────────────────
