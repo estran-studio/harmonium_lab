@@ -11,7 +11,7 @@ Réglages « armes égales », identiques au moteur :
 - pieds : talon 36 sur chaque temps, pointe 37 sur les contretemps
   (motifs `%%MIDI drum` par métrique, voir `feet_pattern`) ;
 - tempo par type : reel 230 à la noire, gigue 115 à la noire pointée,
-  valse 150 à la noire, marche 110 à la noire (quadrille/cotillon : 115
+  valse 145 à la noire, marche 110 à la noire (quadrille/cotillon : 115
   à la noire pointée, comme la gigue : même 6/8) ;
 - reprises jouées (comportement par défaut d'`abc2midi`, sections AABB).
 
@@ -70,7 +70,7 @@ DRUM_CHANNEL = 9  # canal percussion (0-based) où `abc2midi` met les pieds
 TEMPO_Q = {
     "reel": "1/4=230",
     "jig": "3/8=115",
-    "waltz": "1/4=150",
+    "waltz": "1/4=145",
     "march": "1/4=110",
     "quadrille": "3/8=115",
     "cotillon": "3/8=115",
@@ -273,7 +273,8 @@ def split_quotes(body: str) -> tuple[bool, str]:
 # ── ABC temporaire ─────────────────────────────────────────────────────
 
 
-def build_render_abc(src: str, tune_type: str, meter: tuple[int, int]) -> tuple[str, bool]:
+def build_render_abc(src: str, tune_type: str, meter: tuple[int, int],
+                     include_feet: bool = True) -> tuple[str, bool]:
     """Copie de travail : tempo + directives `%%MIDI`, sans toucher la source.
 
     - les `Q:` et `%%MIDI` éventuels de la source sont neutralisés (armes
@@ -309,8 +310,8 @@ def build_render_abc(src: str, tune_type: str, meter: tuple[int, int]) -> tuple[
         f"%%MIDI chordprog {PROG_CHORD}",
         f"%%MIDI bassprog {PROG_BASS}",
         f"%%MIDI gchord {gchord_pattern(num, den)}",
-        f"%%MIDI drum {drum} {' '.join(map(str, progs))} {' '.join(map(str, vels))}",
-        "%%MIDI drumon",
+        *([f"%%MIDI drum {drum} {' '.join(map(str, progs))} {' '.join(map(str, vels))}",
+           "%%MIDI drumon"] if include_feet else []),
         *cleaned_tail,
     ]
     return "\n".join(out) + "\n", has_chords
@@ -329,14 +330,17 @@ class MidiResult:
 
 def render_midi(abc_path: Path, midi_path: Path, tune_type: str, meter: tuple[int, int],
                 remap_feet: bool = True, vel_scale: float = FEET_VEL_SCALE,
-                humanize: int = FEET_HUMANIZE, seed: int = FEET_SEED) -> MidiResult:
+                humanize: int = FEET_HUMANIZE, seed: int = FEET_SEED,
+                include_feet: bool = True) -> MidiResult:
     """ABC → MIDI ; si `remap_feet`, pieds GM → canal 11 (banque dédiée).
 
     `remap_feet` doit être faux quand `render_wav` ne chargera pas la
     banque des pieds (sinon programme 0 = piano GeneralUser).
     """
     abc2midi = require_tool("abc2midi", ABC2MIDI_HINT)
-    text, has_chords = build_render_abc(abc_path.read_text(encoding="utf-8"), tune_type, meter)
+    text, has_chords = build_render_abc(
+        abc_path.read_text(encoding="utf-8"), tune_type, meter, include_feet
+    )
     tmp = midi_path.with_suffix(".render.abc")
     tmp.write_text(text, encoding="utf-8")
     try:
@@ -450,7 +454,7 @@ def select_rows(rows: list[dict], tune_type: str | None, limit: int | None,
 def render_one(abc_path: Path, row: dict, out_dir: Path, soundfont: Path,
                musicxml: bool, feet_soundfont: Path | None = None,
                vel_scale: float = FEET_VEL_SCALE, humanize: int = FEET_HUMANIZE,
-               feet_seed: int = FEET_SEED) -> dict:
+               feet_seed: int = FEET_SEED, include_feet: bool = True) -> dict:
     """Rend un air (MIDI + WAV [+ MusicXML]). Retourne la ligne de log."""
     tune_type = row["type"]
     meter = parse_meter_value(row.get("meter"), tune_type)
@@ -458,8 +462,9 @@ def render_one(abc_path: Path, row: dict, out_dir: Path, soundfont: Path,
     midi_path = out_dir / f"{row['id']}.mid"
     wav_path = out_dir / f"{row['id']}.wav"
     res = render_midi(abc_path, midi_path, tune_type, meter,
-                      remap_feet=feet_soundfont is not None,
-                      vel_scale=vel_scale, humanize=humanize, seed=feet_seed)
+                      remap_feet=include_feet and feet_soundfont is not None,
+                      vel_scale=vel_scale, humanize=humanize, seed=feet_seed,
+                      include_feet=include_feet)
     peak_before, peak_after = render_wav(midi_path, wav_path, soundfont, feet_soundfont)
     entry = {
         "id": row["id"], "type": tune_type,
@@ -484,7 +489,7 @@ def render_all(root: Path, out: Path, tune_type: str | None, limit: int | None,
                seed: int, ids: list[str] | None, soundfont: Path,
                musicxml: bool, feet_soundfont: Path | None = None,
                vel_scale: float = FEET_VEL_SCALE, humanize: int = FEET_HUMANIZE,
-               feet_seed: int = FEET_SEED) -> list[dict]:
+               feet_seed: int = FEET_SEED, include_feet: bool = True) -> list[dict]:
     rows = load_manifest(root)
     picked = select_rows(rows, tune_type, limit, seed, ids)
     if not picked:
@@ -495,7 +500,7 @@ def render_all(root: Path, out: Path, tune_type: str | None, limit: int | None,
         if not abc_path.is_file():
             raise RenderError(f"ABC introuvable ({abc_path}) : relance `make trad-corpus`")
         entries.append(render_one(abc_path, row, out / row["type"], soundfont, musicxml,
-                                  feet_soundfont, vel_scale, humanize, feet_seed))
+                                  feet_soundfont, vel_scale, humanize, feet_seed, include_feet))
     log_path = out / "render_log.jsonl"
     merged = {}
     if log_path.is_file():  # cumulatif entre invocations (un type par appel)
@@ -526,6 +531,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--feet-gain", type=float, default=FEET_VEL_SCALE, help="gain des vélocités pieds (défaut : %(default)s)")
     ap.add_argument("--feet-humanize", type=int, default=FEET_HUMANIZE, help="humanisation ± vélocité (défaut : %(default)s)")
     ap.add_argument("--feet-seed", type=int, default=FEET_SEED, help="graine humanisation pieds (défaut : %(default)s)")
+    ap.add_argument("--no-feet", action="store_true", help="n’ajoute pas la podorythmie dans le MIDI")
     ap.add_argument("--musicxml", action="store_true", help="émet aussi .musicxml via music21")
     args = ap.parse_args(argv)
 
@@ -537,7 +543,7 @@ def main(argv: list[str] | None = None) -> int:
                  else " (pieds : percussions GM, banque dédiée absente)"))
         entries = render_all(args.root, args.out, args.type, args.limit,
                              args.seed, args.ids, soundfont, args.musicxml, feet_soundfont,
-                             args.feet_gain, args.feet_humanize, args.feet_seed)
+                             args.feet_gain, args.feet_humanize, args.feet_seed, not args.no_feet)
     except RenderError as exc:
         print(f"Erreur : {exc}", file=sys.stderr)
         return 1

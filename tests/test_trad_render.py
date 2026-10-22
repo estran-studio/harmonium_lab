@@ -122,6 +122,17 @@ def test_metre_invalide_retombe_sur_defaut_du_type():
     assert R.parse_meter_value("C", "waltz") == (4, 4)
     assert R.parse_meter_value("6/8", "jig") == (6, 8)
 
+def test_tempo_gigue_et_valse_alignes_sur_moteur():
+    assert R.TEMPO_Q["jig"] == "3/8=115"
+    assert R.TEMPO_Q["waltz"] == "1/4=145"
+
+@needs_abc2midi
+def test_rendu_sans_pieds_ne_genere_pas_de_canal_percussion(tmp_path):
+    src = _write(tmp_path, "jig.abc", JIG)
+    result = R.render_midi(src, tmp_path / "jig.mid", "jig", (6, 8), include_feet=False)
+    mid = mido.MidiFile(result.path)
+    assert not _notes(mid, 9)
+
 
 def test_gchord_defauts_abc2midi():
     assert R.gchord_pattern(4, 4) == "fzczfzcz"
