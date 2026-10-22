@@ -737,6 +737,8 @@ def cmd_mine_cells(args: argparse.Namespace) -> int:
     roles = Counter(c["role"] for c in cells)
     print(f"Miné {len(cells)} cellules ({stats['airs_lus']} airs, {stats['airs_erreur']} erreurs) -> {out}")
     print(f"Rôles : {dict(sorted(roles.items()))}")
+    print(f"Cellules valides distinctes par rôle : {stats['cellules_valides_par_role']}")
+    print(f"Occurrences valides par rôle : {stats['occurrences_valides_par_role']}")
     print(f"Rejets validation moteur : {stats['rejets']}")
     print(f"Unités 8 : {stats['unites_8']}, 4+4 notées : {stats['unites_4plus4_notees']}, "
           f"16 scindées notées : {stats['unites_16_scindees_notees']}, "

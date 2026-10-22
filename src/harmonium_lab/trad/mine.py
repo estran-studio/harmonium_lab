@@ -251,10 +251,19 @@ def mine_cells(
         {"role": role, "notes": notes, "count": count}
         for (role, notes), count in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0][0], kv[0][1]))
     ]
+    valid_by_role = Counter(role for role, _ in counts)
+    occurrences_by_role: Counter[str] = Counter()
+    for (role, _), count in counts.items():
+        occurrences_by_role[role] += count
     top: list[dict[str, Any]] = []
     for role in ROLES:
         top.extend([c for c in cells if c["role"] == role][:top_per_role])
-    return top, {**stats, "rejets": dict(sorted(rejects.items()))}
+    return top, {
+        **stats,
+        "cellules_valides_par_role": dict(sorted(valid_by_role.items())),
+        "occurrences_valides_par_role": dict(sorted(occurrences_by_role.items())),
+        "rejets": dict(sorted(rejects.items())),
+    }
 
 
 def _pass_sig(bars: list, idxs: list[int]) -> tuple:

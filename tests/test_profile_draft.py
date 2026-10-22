@@ -45,7 +45,8 @@ def test_six_eighth_cell_validation_and_mining(tmp_path: Path) -> None:
     cells, stats = M.mine_cells(corpus, "jig")
     assert stats["croches_par_mesure"] == 6
     assert stats["airs_lus"] == 1
-    assert cells
+    assert stats["cellules_valides_par_role"]["open"] >= 1
+    assert stats["occurrences_valides_par_role"]["open"] >= stats["cellules_valides_par_role"]["open"]
     assert all(len(cell["notes"].split()) == 6 for cell in cells)
     assert all(M.validate_cell(cell["notes"], expected=6) is None for cell in cells)
     assert any(cell["role"] == "open" for cell in cells)
