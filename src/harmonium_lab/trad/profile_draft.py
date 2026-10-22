@@ -15,17 +15,47 @@ from .form import analyze_form
 from .mine import mine_cells, mine_harmony, mine_tempo
 
 
-def build_profile_draft(corpus_root: Path | str, tune_type: str) -> dict[str, Any]:
+def _detect_tradition(root: Path) -> str:
+    manifest = root / "manifest.jsonl"
+    if manifest.exists():
+        for line in manifest.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                row = json.loads(line)
+                if row.get("tradition"):
+                    return str(row["tradition"])
+            except Exception:
+                continue
+    name = root.name.lower()
+    if "acadienne" in name:
+        return "acadienne"
+    if "britannique" in name:
+        return "britannique_coloniale"
+    if "trad" in name or "quebec" in name:
+        return "quebecoise"
+    return name or "quebecoise"
+
+
+def build_profile_draft(
+    corpus_root: Path | str,
+    tune_type: str,
+    meter: str | None = None,
+    eighths_per_bar: int | None = None,
+) -> dict[str, Any]:
     """Construit les données du profil et ses sources de données."""
     root = Path(corpus_root)
     tune_files = sorted((root / "tunes" / tune_type).glob("*.abc"))
     if not tune_files:
         raise FileNotFoundError(f"Aucun ABC pour le type {tune_type}: {root / 'tunes' / tune_type}")
 
-    forms: list[dict[str, Any]] = []
+    tradition = _detect_tradition(root)
+
+    raw_forms: list[dict[str, Any]] = []
     for path in tune_files:
         plan = analyze_form(path.read_text(encoding="utf-8", errors="replace"))
-        forms.append({
+        raw_forms.append({
             "id": path.stem,
             "scheme": plan.scheme,
             "parts": plan.parts,
@@ -33,17 +63,59 @@ def build_profile_draft(corpus_root: Path | str, tune_type: str) -> dict[str, An
             "meter": plan.meter,
             "eighths_per_bar": plan.eighths_per_bar,
         })
-    schemes = Counter(row["scheme"] for row in forms)
-    parts = Counter(tuple(row["parts"]) for row in forms)
-    meters = Counter(row["meter"] for row in forms)
-    pickups = Counter(str(row["pickup_eighths"]) for row in forms)
-    cells, cell_stats = mine_cells(root, tune_type, top_per_role=30)
-    harmony = mine_harmony(root, tune_type)
-    tempo = mine_tempo(root, tune_type)["types"][tune_type]
+
+    total_tunes = len(tune_files)
+    majority_selected = False
+    filter_reason = ""
+
+    if eighths_per_bar is not None:
+        filtered = [f for f in raw_forms if f["eighths_per_bar"] == eighths_per_bar]
+        target_eighths = eighths_per_bar
+        filter_reason = f"option --eighths-per-bar {eighths_per_bar}"
+    elif meter is not None:
+        filtered = [f for f in raw_forms if f["meter"] == meter]
+        filter_reason = f"option --meter {meter}"
+        eighths_counts = Counter(f["eighths_per_bar"] for f in filtered)
+        target_eighths = max(eighths_counts, key=lambda k: (eighths_counts[k], k)) if eighths_counts else 8
+    else:
+        eighths_counts = Counter(f["eighths_per_bar"] for f in raw_forms)
+        target_eighths = max(eighths_counts, key=lambda k: (eighths_counts[k], k)) if eighths_counts else 8
+        filtered = [f for f in raw_forms if f["eighths_per_bar"] == target_eighths]
+        majority_selected = True
+        filter_reason = f"famille majoritaire ({target_eighths} croches par mesure)"
+
+    if not filtered:
+        raise ValueError(
+            f"Aucun air pour le type {tune_type} avec le filtre demandé ({filter_reason})"
+        )
+
+    schemes = Counter(row["scheme"] for row in filtered)
+    parts = Counter(tuple(row["parts"]) for row in filtered)
+    meters = Counter(row["meter"] for row in filtered)
+    pickups = Counter(str(row["pickup_eighths"]) for row in filtered)
+    dominant_meter = max(meters, key=lambda item: (meters[item], item)) if meters else ""
+
+    cells, cell_stats = mine_cells(
+        root, tune_type, top_per_role=30, target_eighths=target_eighths, meter=meter
+    )
+    harmony = mine_harmony(
+        root, tune_type, target_eighths=target_eighths, meter=meter
+    )
+    tempo_data = mine_tempo(
+        root, tune_type, target_eighths=target_eighths, meter=meter
+    )
+    tempo = tempo_data["types"].get(tune_type, {"airs": 0, "signatures": {}, "tempo_q": None})
+
     return {
         "type": tune_type,
+        "tradition": tradition,
         "source": str(root / "tunes" / tune_type),
-        "tunes": len(tune_files),
+        "tunes": len(filtered),
+        "total_tunes": total_tunes,
+        "target_eighths": target_eighths,
+        "dominant_meter": dominant_meter,
+        "majority_selected": majority_selected,
+        "filter_reason": filter_reason,
         "cells": cells,
         "cell_stats": cell_stats,
         "harmony": harmony,
@@ -53,10 +125,9 @@ def build_profile_draft(corpus_root: Path | str, tune_type: str) -> dict[str, An
             "schemes": dict(sorted(schemes.items())),
             "part_lengths_measures": {"/".join(map(str, key)): n for key, n in sorted(parts.items())},
             "pickups_eighths": dict(sorted(pickups.items(), key=lambda item: float(item[0]))),
-            "tunes": forms,
+            "tunes": filtered,
         },
     }
-
 
 def _toml_string(value: str) -> str:
     return json.dumps(value, ensure_ascii=False)
@@ -69,15 +140,21 @@ def write_profile_draft(profile: dict[str, Any], output: Path | str) -> Path:
     harmony = profile["harmony"]
     tempo = profile["tempo"]
     accompaniment = harmony["accompagnement"]
-    meter = max(profile["meter"], key=lambda item: (profile["meter"][item], item)) if profile["meter"] else ""
-    eighths_per_bar = 6 if meter in {"3/4", "6/8"} else 0
-    steps_per_pulse = 2 if meter == "3/4" else 3 if meter == "6/8" else 0
+    meter = profile.get("dominant_meter") or (
+        max(profile["meter"], key=lambda item: (profile["meter"][item], item))
+        if profile["meter"]
+        else ""
+    )
+    eighths_per_bar = int(profile.get("target_eighths") or (6 if meter in {"3/4", "6/8"} else 8))
+    steps_per_pulse = 3 if meter == "6/8" else 2
+    pulses_per_bar = eighths_per_bar // steps_per_pulse if steps_per_pulse else 0
     q = tempo["tempo_q"]
+    tradition = profile.get("tradition") or "trad québécois"
     lines = [
         f"# Brouillon P2-T2 — {profile['type']}; voir README.md.",
         "[meta]",
         f"name = {_toml_string(profile['type'])}",
-        f"tradition = {_toml_string('trad québécois')}",
+        f"tradition = {_toml_string(tradition)}",
         f"corpus = {_toml_string(profile['source'])}",
         f"tunes = {profile['tunes']}",
         "",
@@ -87,7 +164,7 @@ def write_profile_draft(profile: dict[str, Any], output: Path | str) -> Path:
         f"steps_per_bar = {eighths_per_bar}",
         f"steps_per_cell = {eighths_per_bar}",
         f"steps_per_pulse = {steps_per_pulse}",
-        f"pulses_per_bar = {eighths_per_bar // steps_per_pulse if steps_per_pulse else 0}",
+        f"pulses_per_bar = {pulses_per_bar}",
         f"default_tempo = {q['mediane'] if q else 0}",
         f"min_tempo = {q['min'] if q else 0}",
         f"max_tempo = {q['max'] if q else 0}",
@@ -140,10 +217,25 @@ def write_profile_draft(profile: dict[str, Any], output: Path | str) -> Path:
         (out / filename).write_text(
             json.dumps(profile[key], indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
         )
-    (out / "README.md").write_text(
-        "# Profil de style — brouillon\n\n"
-        f"Type : `{profile['type']}`. Source ABC : `{profile['source']}` "
-        f"({profile['tunes']} airs analysés). Ce n’est pas le format final du moteur.\n\n"
+    readme_lines = [
+        "# Profil de style — brouillon\n",
+        f"Type : `{profile['type']}`. Tradition : `{tradition}`. Source ABC : `{profile['source']}` "
+        f"({profile['tunes']} airs analysés sur {profile.get('total_tunes', profile['tunes'])} au total). "
+        "Ce n’est pas le format final du moteur.\n",
+    ]
+    if profile.get("majority_selected"):
+        readme_lines.append(
+            f"## Sélection métrique\n"
+            f"Famille métrique majoritaire sélectionnée automatiquement : {eighths_per_bar} croches par mesure "
+            f"({profile['tunes']} airs conservés sur {profile.get('total_tunes', profile['tunes'])}).\n"
+        )
+    elif profile.get("filter_reason"):
+        readme_lines.append(
+            f"## Sélection métrique\n"
+            f"Filtre métrique appliqué ({profile['filter_reason']}) : {eighths_per_bar} croches par mesure "
+            f"({profile['tunes']} airs conservés sur {profile.get('total_tunes', profile['tunes'])}).\n"
+        )
+    readme_lines.append(
         "## Sources des valeurs\n\n"
         "- `profile.toml` — métrique et forme calculées sur les en-têtes/corps ABC; "
         "cellules quantifiées par mesure, validées avec les invariants Python du moteur "
@@ -154,7 +246,7 @@ def write_profile_draft(profile: dict[str, Any], output: Path | str) -> Path:
         "- `tempo.json` — `Q:` et `M:` tels que fournis par les fichiers ABC; `tempo_q: null` "
         "signale les tempos manquants.\n"
         "- `form.json` — schémas, longueurs de parties et levées calculés par l’analyseur ABC.\n"
-        "- `cell-stats.json` — rejets de validation et statistiques d’extraction.\n",
-        encoding="utf-8",
+        "- `cell-stats.json` — rejets de validation et statistiques d’extraction.\n"
     )
+    (out / "README.md").write_text("\n".join(readme_lines), encoding="utf-8")
     return out

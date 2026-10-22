@@ -85,9 +85,9 @@ check-cells: ## Validate a mined CellBank TOML with the engine parser (FILE=path
 	cargo run -q -p harmonium-cli --release --manifest-path $(ENGINE_DIR)/Cargo.toml -- \
 		--check-cells $(abspath $(if $(FILE),$(FILE),target/mined/reel_cells.toml))
 
-profile-draft: setup ## Build a preliminary trad style profile (TYPE=jig|waltz)
-	@test -n "$(TYPE)" || (echo "Usage: make profile-draft TYPE=jig|waltz"; exit 2)
-	$(LAB) profile-draft --type "$(TYPE)" --corpus "$(TRAD_DIR)"
+profile-draft: setup ## Build a preliminary trad style profile (TYPE=..., CORPUS=..., METER=..., EIGHTHS=...)
+	@test -n "$(TYPE)" || (echo "Usage: make profile-draft TYPE=jig|waltz|march [CORPUS=dir] [METER=4/4] [EIGHTHS=8]"; exit 2)
+	$(LAB) profile-draft --type "$(TYPE)" --corpus "$(if $(CORPUS),$(CORPUS),$(TRAD_DIR))" $(if $(METER),--meter "$(METER)",) $(if $(EIGHTHS),--eighths-per-bar $(EIGHTHS),)
 
 # ════════════════════════════════════════════════════════════════════
 # TRAD CORPUS (specs/001-trad-dataset)
