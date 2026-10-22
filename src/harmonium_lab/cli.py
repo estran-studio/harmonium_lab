@@ -114,7 +114,7 @@ def main(argv: list[str] | None = None) -> int:
     p_mine.add_argument("--type", required=True, help="Tune type (reel, jig, waltz, ...)")
     p_mine.add_argument("--corpus", default="corpus/trad", help="Corpus root (tunes/<type>/*.abc)")
     p_mine.add_argument("--output", "-o", required=True, help="Output CellBank TOML path")
-    p_mine.add_argument("--top", type=int, default=10, help="Kept cells per role (default: 10)")
+    p_mine.add_argument("--top", type=int, default=30, help="Kept cells per role (default: 30)")
     # mine-harmony: chord degrees, bigrams and per-mode tables (D7)
     p_mharm = subparsers.add_parser("mine-harmony", help="Mine chord tables from trad corpus tunes")
     p_mharm.add_argument("--type", required=True, help="Tune type (reel, jig, waltz, ...)")
@@ -125,6 +125,11 @@ def main(argv: list[str] | None = None) -> int:
     p_mtempo.add_argument("--type", default=None, help="Tune type (default: all types)")
     p_mtempo.add_argument("--corpus", default="corpus/trad", help="Corpus root (tunes/<type>/*.abc)")
     p_mtempo.add_argument("--output", "-o", default=None, help="Output tempo JSON path (default: stdout only)")
+    # profile-draft: combined preliminary style profile for P2-T2
+    p_draft = subparsers.add_parser("profile-draft", help="Write a preliminary trad style profile")
+    p_draft.add_argument("--type", required=True, help="Tune type (jig, waltz, ...)")
+    p_draft.add_argument("--corpus", default="corpus/trad", help="Corpus root")
+    p_draft.add_argument("--output", default=None, help="Output directory (default target/profiles/<type>)")
 
     # pieds SK1 : échantillons, préparation, banque, écoute de contrôle
     p_ff = subparsers.add_parser("feet-fetch", help="Download feet samples (manifest.jsonl → raw/)")
@@ -183,6 +188,8 @@ def main(argv: list[str] | None = None) -> int:
             return cmd_mine_harmony(args)
         elif args.command == "mine-tempo":
             return cmd_mine_tempo(args)
+        elif args.command == "profile-draft":
+            return cmd_profile_draft(args)
         elif args.command == "blindtest-play":
             return cmd_blindtest_play(args)
         elif args.command == "feet-fetch":
@@ -642,7 +649,7 @@ def cmd_trad_form_report(args: argparse.Namespace) -> int:
     import json
     from collections import Counter
 
-    from .trad import features, load_abc
+    from .trad.form import analyze_form
 
     tunes_dir = Path(args.corpus) / "tunes" / args.type
     abc_files = sorted(tunes_dir.glob("*.abc"))
@@ -661,15 +668,21 @@ def cmd_trad_form_report(args: argparse.Namespace) -> int:
 
     schemes: Counter[str] = Counter()
     causes: Counter[str] = Counter()
+    part_shapes: Counter[tuple[int, ...]] = Counter()
+    pickups: Counter[str] = Counter()
+    meters: Counter[str] = Counter()
     examples: dict[str, list[str]] = {}
     errors = 0
     strict_aabb = 0
     for path in abc_files:
         tune_id = path.stem
         try:
-            form = features(load_abc(path))["form"]
-            scheme, cause = form["scheme"], str(form["cause"])
-            if form["is_aabb"]:
+            plan = analyze_form(path.read_text(encoding="utf-8", errors="replace"))
+            scheme, cause = plan.scheme, str(plan.cause)
+            part_shapes[tuple(plan.parts)] += 1
+            pickups[str(plan.pickup)] += 1
+            meters[plan.meter] += 1
+            if plan.is_aabb:
                 strict_aabb += 1
         except Exception as e:  # 0 air perdu : marqué, jamais d'exception
             errors += 1
@@ -683,11 +696,14 @@ def cmd_trad_form_report(args: argparse.Namespace) -> int:
 
     n = len(abc_files)
     aabb = schemes.get("AABB", 0)
-    print(f"type={args.type} airs={n} AABB-8-strict={strict_aabb} ({strict_aabb / n:.0%}) "
+    print(f"type={args.type} airs={n} AABB-strict={strict_aabb} ({strict_aabb / n:.0%}) "
           f"AABB-scheme={aabb} ({aabb / n:.0%}) erreurs={errors}")
+    print(f"métriques (mesures en croches) : {dict(sorted(meters.items()))}")
+    print(f"longueurs de parties (mesures) : {dict(sorted(part_shapes.items()))}")
+    print(f"levées (croches) : {dict(sorted(pickups.items(), key=lambda item: float(item[0])))}")
     print("\nschemes :")
     for scheme, count in schemes.most_common():
-        print(f"  {count:4d} {scheme}")
+        print(f"  {count:4d} {scheme} ({count / n:.0%})")
     print("\ncauses :")
     for (scheme, cause), count in causes.most_common():
         print(f"  {count:4d} [{scheme}] {cause}")
@@ -765,6 +781,20 @@ def cmd_mine_tempo(args: argparse.Namespace) -> int:
         print(f"  {t}: {entry['airs']} airs, {entry['signatures']}, {q_txt}")
     if tempo["q_manquant"]:
         print(f"Tempo Q: absent de : {', '.join(tempo['q_manquant'])}")
+    return 0
+
+
+def cmd_profile_draft(args: argparse.Namespace) -> int:
+    """Write the preliminary profile bundle from ABC corpus data."""
+    from .trad.profile_draft import build_profile_draft, write_profile_draft
+
+    profile = build_profile_draft(args.corpus, args.type)
+    out = Path(args.output) if args.output else Path("target/profiles") / args.type
+    write_profile_draft(profile, out)
+    print(f"Brouillon '{args.type}' ({profile['tunes']} airs) -> {out}")
+    for role in ("open", "run", "arp", "turn", "cad_half", "cad_full"):
+        selected = [cell for cell in profile["cells"] if cell["role"] == role]
+        print(f"  {role}: {len(selected)} cellules")
     return 0
 
 

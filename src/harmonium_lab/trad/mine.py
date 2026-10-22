@@ -134,7 +134,7 @@ def _to_notes(notes: list[tuple[Fraction, Fraction, int | None]]) -> list[Note]:
 def mine_cells(
     corpus_root: Path | str,
     tune_type: str,
-    top_per_role: int = 10,
+    top_per_role: int = 30,
 ) -> tuple[list[dict[str, Any]], dict[str, Any]]:
     """Cellules d'un type : (cellules triées, statistiques).
 
@@ -305,14 +305,16 @@ def load_engine_bank(path: Path | str) -> list[tuple[str, str]]:
 
 
 def mine_harmony(corpus_root: Path | str, tune_type: str) -> dict[str, Any]:
-    """Accords en degrés : par position (unités de 8), bigrammes, par mode."""
+    """Accords par position et rythme harmonique, bigrammes, par mode."""
     root = Path(corpus_root)
     files = sorted((root / "tunes" / tune_type).glob("*.abc"))
     by_position: dict[str, Counter] = {}
     cadences: dict[str, Counter] = {"m4": Counter(), "m8": Counter()}
     bigrams: Counter[str] = Counter()
     by_mode: dict[str, Counter] = {}
-    sequence: list[str] = []
+    chord_counts: Counter[str] = Counter()
+    rhythm: Counter[str] = Counter()
+    half_rhythm: Counter[str] = Counter()
     n_airs = 0
     for path in files:
         try:
@@ -324,16 +326,20 @@ def mine_harmony(corpus_root: Path | str, tune_type: str) -> dict[str, Any]:
         k = plan.eighths_per_bar
         labels: list[str] = []
         for notes, bar_chords, pass_idx, ok in plan.bars:
-            for offset, symbol in sorted(bar_chords, key=lambda c: float(c[0])):
+            ordered = sorted(bar_chords, key=lambda c: float(c[0]))
+            if ordered:
+                rhythm[str(len(ordered))] += 1
+                first_half = sum(1 for offset, _ in ordered if float(offset) < k / 2)
+                half_rhythm[f"{first_half}+{len(ordered) - first_half}"] += 1
+            for offset, symbol in ordered:
                 label = chord_degree_label(symbol, plan.key_tonic_pc, mode)
                 labels.append(label)
+                chord_counts[label] += 1
                 by_mode.setdefault(mode, Counter())[label] += 1
         for a, b in zip(labels, labels[1:]):
             bigrams[f"{a}->{b}"] += 1
-        sequence.extend(labels)
         if plan.scheme == "croche":
             continue
-        # Positions : mêmes unités de 8 que les cellules.
         units: list[list[int]] = []
         for p in plan.passes:
             full = [i for i in p if plan.bars[i][3]]
@@ -350,7 +356,6 @@ def mine_harmony(corpus_root: Path | str, tune_type: str) -> dict[str, Any]:
                         cadences["m4"][label] += 1
                     if pos == 8:
                         cadences["m8"][label] += 1
-    top = Counter(sequence).most_common(12)
     return {
         "tune_type": tune_type,
         "airs": n_airs,
@@ -359,7 +364,15 @@ def mine_harmony(corpus_root: Path | str, tune_type: str) -> dict[str, Any]:
         "mesure_8": dict(sorted(cadences["m8"].items())),
         "bigrammes": dict(sorted(bigrams.items())),
         "par_mode": {m: dict(sorted(v.items())) for m, v in sorted(by_mode.items())},
-        "top_accords": [{"degre": d, "n": n} for d, n in top],
+        "rythme_harmonique_par_mesure": dict(sorted(rhythm.items(), key=lambda item: int(item[0]))),
+        "rythme_harmonique_dominant": max(rhythm, key=lambda item: (rhythm[item], -int(item))) if rhythm else None,
+        "rythme_harmonique_par_demi_mesure": dict(sorted(half_rhythm.items())),
+        "accompagnement": {
+            "source": "convention métrique; motifs proposés, non mesurés dans l’ABC",
+            "mesure_3_4": {"basse": [1], "accord": [2, 3]},
+            "mesure_6_8": {"basse_croche": [1, 4], "accord_croche": [3, 6]},
+        },
+        "top_accords": [{"degre": d, "n": n} for d, n in chord_counts.most_common(12)],
     }
 
 

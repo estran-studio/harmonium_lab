@@ -7,7 +7,7 @@ GENERATED_DIR := ../harmonium/harmonium_core/target/generated_music
 REPORTS_DIR := target/quality_reports
 TRAD_DIR := corpus/trad
 
-.PHONY: setup corpus profiles trad-corpus trad-render trad-profiles check-cells test lab-export suite gate clean help trad-sf2 feet-preview
+.PHONY: setup corpus profiles trad-corpus trad-render trad-profiles check-cells profile-draft test lab-export suite gate clean help trad-sf2 feet-preview
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
@@ -60,6 +60,10 @@ trad-profiles: setup ## Build trad type profiles from corpus/trad (DS-T3/D5)
 check-cells: ## Validate a mined CellBank TOML with the engine parser (FILE=path, default target/mined/reel_cells.toml)
 	cargo run -q -p harmonium-cli --release --manifest-path $(ENGINE_DIR)/Cargo.toml -- \
 		--check-cells $(abspath $(if $(FILE),$(FILE),target/mined/reel_cells.toml))
+
+profile-draft: setup ## Build a preliminary trad style profile (TYPE=jig|waltz)
+	@test -n "$(TYPE)" || (echo "Usage: make profile-draft TYPE=jig|waltz"; exit 2)
+	$(LAB) profile-draft --type "$(TYPE)" --corpus "$(TRAD_DIR)"
 
 # ════════════════════════════════════════════════════════════════════
 # TRAD CORPUS (specs/001-trad-dataset)
