@@ -21,9 +21,10 @@ from .model import mode_intervals
 
 KINDS = (
     "grace_single", "grace_multiple", "roll", "turn", "triplet_repeated",
-    "triplet_melodic", "double_stop", "chord", "trill", "staccato", "fermata",
+    "triplet_melodic", "double_stop", "chord", "trill", "fermata",
 )
-ENGINE_KINDS = tuple(k for k in KINDS if k not in ("staccato", "fermata", "triplet_melodic"))
+ARTICULATION_KINDS = ("slur", "tie", "staccato", "accent", "tenuto", "marcato")
+ENGINE_KINDS = tuple(k for k in KINDS if k != "triplet_melodic")
 CORPORA = {"quebecoise": "trad", "acadienne": "acadienne", "britannique_coloniale": "britannique_coloniale"}
 PROFILES = {
     "reel_quebecois": ("quebecoise", "reel"),
@@ -44,8 +45,8 @@ METHOD = {
     "denominators": "Note = attaque porteuse (accord = une note, agréments hors dénominateur, triolets = trois notes). Mesures = durée écrite totale / durée nominale, fragments et levées compris. Chaque cellule contient ses opportunités, occurrences et taux par 100 notes / par mesure.",
     "positions": "Parties de huit mesures reconnues par analyze_form uniquement ; autres positions = unknown. Levée jointe à la fin complémentaire, sinon pickup sans numéro. Une source écrite vue plusieurs fois reçoit sa première position jouée. Les fins alternatives sont des opportunités distinctes.",
     "time": "Durée et onset en croches exactes (fractions). Temps métrique 1-based : blanche en 2/2, noire en 4/4 et 3/4, noire pointée en 6/8 ; phase exacte, demi-temps = floor(2*phase). Les triolets gardent leur phase 1/3 ou 2/3, sans arrondi sur la grille.",
-    "context": "Intervalles signés en demi-tons avec notes voisines dans la première exécution contenant cette source (silences ignorés). Degré diatonique replié 1..7, altération séparée. Fin de phrase = mesure 4 ou 8, non preuve de cadence.",
-    "types": "T/!trill!/+trill+ = trill ; ~ = roll ; !turn! = turn. . et H = staccato et fermata, annotations d'articulation, pas agréments à générer. Un triolet mélodique est une figure rythmique, séparée du triolet répété ; un groupe avec silence n'est pas un triolet de trois notes.",
+    "context": "Intervalles signés en demi-tons avec notes voisines dans la première exécution contenant cette source (silences ignorés). Degré diatonique replié 1..7, altération séparée. Fin de phrase = mesure 4 ou 8, non preuve de cadence. Les groupes de liaison exposent longueur, contour intervalle par intervalle, répétitions et contexte de départ.",
+    "types": "T/!trill!/+trill+ = trill ; ~ = roll ; !turn! = turn. . = staccato et H = fermata. Liaisons (), ties -, accents !accent!/!>!/!emphasis!/ +accent+, tenuto L/!tenuto! et marcato !marcato!/!^! sont des articulations dans la clé distincte `articulations`, jamais des agréments. Un triolet mélodique est une figure rythmique, séparée du triolet répété ; un groupe avec silence n'est pas un triolet de trois notes.",
     "limits": "Taux écrits = plancher, pas taux joués. Sources/transcripteurs confondent notation et pratique. Petits effectifs, notes corrélées : occurrences fournies, pas d'IC binomial trompeur. Changements de métrique, unité ou tonalité en cours d'air non interprétés par le parseur commun ; inline_changes compte les [M:…]/[K:…]. Positions de formes irrégulières inconnues.",
     "sparse": "Dans by_position, type absent = zéro occurrence, pas donnée manquante ; position absente = aucune opportunité. Par mesure conditionnel pour m1..8/partie/fin de phrase, par mesure totale du groupe pour temps/durée/degré/intervalles.",
 }
@@ -95,7 +96,8 @@ def extract_ornaments(text: str) -> dict[str, Any]:
     # Triplets can span a barline; retain rests to reject incomplete groups.
     sequence = [(si, ni, p) for si, seg in enumerate(plan.segments) for ni, (_, _, p) in enumerate(seg.notes)]
     next_three = {(si, ni): sequence[i:i + 3] for i, (si, ni, _) in enumerate(sequence)}
-    notes, events = [], []
+    notes, events, articulation_events = [], [], []
+    note_rows = {}
     bar_opportunities = defaultdict(Counter)
     for si, seg in enumerate(plan.segments):
         bi, _ = locations.get(si, (None, Fraction(0)))
@@ -138,7 +140,41 @@ def extract_ornaments(text: str) -> dict[str, Any]:
                 "phrase_end": bar in (4, 8) if bar is not None else None,
             }
             notes.append(row)
-            events.extend({**row, "type": kind} for kind in marks[ni])
+            note_rows[(si, ni)] = row
+            for kind in marks[ni]:
+                if kind in ARTICULATION_KINDS:
+                    articulation_events.append({**row, "type": kind})
+                elif kind not in ("slur_open", "slur_close"):
+                    events.append({**row, "type": kind})
+    stack = []
+    source_notes = [(si, ni, pitch) for si, seg in enumerate(plan.segments)
+                    for ni, (_, _, pitch) in enumerate(seg.notes)]
+    source_index = {(si, ni): i for i, (si, ni, _) in enumerate(source_notes)}
+    segment_starts = {}
+    source_cursor = 0
+    for segment_index, segment in enumerate(plan.segments):
+        segment_starts[segment_index] = source_cursor
+        source_cursor += len(segment.notes)
+    def slur_source_index(segment_index: int, note_index: int) -> int:
+        segment = plan.segments[segment_index]
+        return segment_starts[segment_index] + min(note_index, len(segment.notes))
+    for si, seg in enumerate(plan.segments):
+        for ni, kind in seg.marks:
+            if kind == "slur_open":
+                stack.append(slur_source_index(si, ni))
+            elif kind == "slur_close" and stack:
+                start = stack.pop()
+                end = slur_source_index(si, ni)
+                group = source_notes[start:end]
+                pitches = [pitch for _, _, pitch in group if pitch is not None]
+                first = next(((a, b) for a, b, pitch in group if pitch is not None), None)
+                row = note_rows.get(first) if first else None
+                if row and pitches:
+                    articulation_events.append({
+                        **row, "type": "slur", "note_count": len(pitches),
+                        "contour": [b - a for a, b in zip(pitches, pitches[1:])],
+                        "repeated_notes": len(set(pitches)) < len(pitches),
+                    })
     tune = parse_tune(text)
     main = " ".join(_first_voice_lines(tune.body))
     raw = {name: bool(re.search(pattern, text)) for name, pattern in RAW.items()}
@@ -151,7 +187,7 @@ def extract_ornaments(text: str) -> dict[str, Any]:
             if name == "chord" and any(re.search(RAW["chord"], grace) for grace in re.findall(RAW["grace"], main)):
                 exclusions[name] = "accord interne à un agrément {...}, pas accord de la ligne porteuse"
     return {
-        "notes": notes, "events": events,
+        "notes": notes, "events": events, "articulations": articulation_events,
         "bar_opportunities": dict(bar_opportunities),
         "bar_equivalents": float(sum((s.dur for s in plan.segments), Fraction(0)) * 8 / plan.eighths_per_bar),
         "raw_presence": raw, "main_raw_presence": main_raw,
@@ -186,7 +222,20 @@ def _rates(counts: Counter, notes: int, bars: float, sparse: bool = False) -> di
 
 def aggregate(tunes: list[dict]) -> dict:
     counts, opportunities, occurrences = Counter(), defaultdict(Counter), defaultdict(lambda: defaultdict(Counter))
+    articulation_counts = Counter()
+    articulation_lengths, articulation_contours, articulation_contour_classes = Counter(), Counter(), Counter()
+    slur_contours_by_bar = defaultdict(Counter)
+    articulation_occurrences = defaultdict(lambda: defaultdict(Counter))
     bar_opportunities = defaultdict(Counter)
+    for tune in tunes:
+        for event in tune["articulations"]:
+            if event["type"] == "slur":
+                articulation_lengths[str(event["note_count"])] += 1
+                contour = event["contour"]
+                contour_class = "repeated" if event["repeated_notes"] else "ascending" if sum(contour) > 0 else "descending" if sum(contour) < 0 else "mixed_or_static"
+                articulation_contours[",".join(map(str, contour))] += 1
+                articulation_contour_classes[contour_class] += 1
+                slur_contours_by_bar[str(event["bar"]) if event["bar"] is not None else "unknown"][contour_class] += 1
     total_bars = sum(t["bar_equivalents"] for t in tunes)
     for tune in tunes:
         for dim, cells in tune["bar_opportunities"].items():
@@ -198,10 +247,47 @@ def aggregate(tunes: list[dict]) -> dict:
             counts[event["type"]] += 1
             for dim, key in _dimensions(event).items():
                 occurrences[dim][key][event["type"]] += 1
+        for event in tune["articulations"]:
+            articulation_counts[event["type"]] += 1
+            for dim, key in _dimensions(event).items():
+                articulation_occurrences[dim][key][event["type"]] += 1
     result = _rates(counts, sum(len(t["notes"]) for t in tunes), sum(t["bar_equivalents"] for t in tunes))
+    articulation_by_position = {
+        dim: {key: {
+            "notes": n,
+            "bar_equivalents": bar_opportunities[dim][key] if dim in bar_opportunities else total_bars,
+            "occurrences": sum(articulation_occurrences[dim][key].values()),
+            "by_type": {kind: {
+                "count": articulation_occurrences[dim][key][kind],
+                "per_100_notes": round(100 * articulation_occurrences[dim][key][kind] / n, 6) if n else None,
+                "per_bar": round(articulation_occurrences[dim][key][kind] / (bar_opportunities[dim][key] if dim in bar_opportunities else total_bars), 6) if (bar_opportunities[dim][key] if dim in bar_opportunities else total_bars) else None,
+            } for kind in ARTICULATION_KINDS if articulation_occurrences[dim][key][kind]},
+        } for key, n in sorted(cells.items()) if articulation_occurrences[dim][key]} for dim, cells in sorted(opportunities.items())
+    }
+    slur_contour_by_bar = {}
+    for bar, classes in slur_contours_by_bar.items():
+        notes_in_bar = opportunities["bar_position"].get(bar, 0)
+        slur_contour_by_bar[bar] = {
+            name: {
+                "count": count,
+                "per_100_notes": round(100 * count / notes_in_bar, 6) if notes_in_bar else None,
+            } for name, count in sorted(classes.items())
+        }
+    result["articulations"] = {
+        "occurrences": sum(articulation_counts.values()),
+        "by_type": {kind: {
+            "count": articulation_counts[kind],
+            "per_100_notes": round(100 * articulation_counts[kind] / result["notes"], 6) if result["notes"] else None,
+        } for kind in ARTICULATION_KINDS},
+        "by_position": articulation_by_position,
+        "slur_lengths": dict(articulation_lengths),
+        "slur_contours": dict(articulation_contours),
+        "slur_contour_classes": dict(articulation_contour_classes),
+        "slur_contour_by_bar": slur_contour_by_bar,
+    }
     result.update({
-        "tunes": len(tunes), "tunes_without_marks": sum(not t["events"] for t in tunes),
-        "share_without_marks": sum(not t["events"] for t in tunes) / len(tunes) if tunes else None,
+        "tunes": len(tunes), "tunes_without_marks": sum(not t["events"] and not t["articulations"] for t in tunes),
+        "share_without_marks": sum(not t["events"] and not t["articulations"] for t in tunes) / len(tunes) if tunes else None,
         "tunes_without_engine_ornaments": sum(not any(e["type"] in ENGINE_KINDS for e in t["events"]) for t in tunes),
         "positioned_notes": sum(n["bar"] is not None for t in tunes for n in t["notes"]),
         "incomplete_triplets": sum(t["incomplete_triplets"] for t in tunes),
@@ -223,6 +309,7 @@ def _stratify(tunes: list[dict], field: str, positions: bool = True) -> dict:
         # Par transcripteur, les effectifs sont trop petits pour des tables par position.
         for cell in strata.values():
             cell.pop("by_position", None)
+            cell["articulations"].pop("by_position", None)
     return strata
 
 
@@ -241,7 +328,40 @@ def proposal(stats: dict) -> dict:
                 if str(i) in stats["by_position"].get("bar_position", {}) else None
             ) for i in range(1, 9)},
         }
-    return {"types": by_type, "arousal_multiplier": {"low": 1.0, "high": 1.0}, "arousal_status": "Non mesurable dans les ABC : multiplicateurs neutres proposés, aucune corrélation revendiquée.", "minimum_status": "Minimum observé, pas seuil musical validé ; absent = désactiver ce type faute de données. Triolets : durée de la première note subdivisée, pas durée totale du groupe."}
+    articulation_types = {}
+    for kind in ARTICULATION_KINDS:
+        cell = stats["articulations"]["by_type"][kind]
+        articulation_types[kind] = {
+            "enabled": bool(cell["count"]),
+            "written_per_100_notes": cell["per_100_notes"],
+            "occurrences": cell["count"],
+            "per_100_notes_by_bar": {
+                str(i): stats["articulations"]["by_position"]["bar_position"].get(str(i), {})
+                .get("by_type", {}).get(kind, {}).get("per_100_notes", 0.0)
+                for i in range(1, 9)
+            },
+        }
+    return {
+        "types": by_type,
+        "performance": {
+            "status": "Plancher écrit, à valider à l’oreille.",
+            "articulations": articulation_types,
+            "slur_lengths_notes": stats["articulations"]["slur_lengths"],
+            "slur_contours": stats["articulations"]["slur_contours"],
+            "slur_contour_classes": stats["articulations"]["slur_contour_classes"],
+            "slur_probability_by_bar_and_contour": stats["articulations"]["slur_contour_by_bar"],
+            "accent_by_beat": {
+                beat: {
+                    "count": cell["by_type"].get("accent", {}).get("count", 0),
+                    "per_100_notes": cell["by_type"].get("accent", {}).get("per_100_notes", 0.0),
+                    "per_bar": cell["by_type"].get("accent", {}).get("per_bar", 0.0),
+                } for beat, cell in stats["articulations"]["by_position"].get("beat", {}).items()
+            },
+        },
+        "arousal_multiplier": {"low": 1.0, "high": 1.0},
+        "arousal_status": "Non mesurable dans les ABC : multiplicateurs neutres proposés, aucune corrélation revendiquée.",
+        "minimum_status": "Minimum observé, pas seuil musical validé ; absent = désactiver ce type faute de données. Triolets : durée de la première note subdivisée, pas durée totale du groupe.",
+    }
 
 
 def run_ornaments(corpus_root: Path, output: Path, references: Path, tradition: str = "all", tune_type: str | None = None) -> Path:
@@ -264,12 +384,12 @@ def run_ornaments(corpus_root: Path, output: Path, references: Path, tradition: 
                 measured.update(id=entry["id"], source=entry.get("source", "autres"))
                 types[entry["type"]].append(measured)
                 all_tunes[name].append(measured)
-                for event in measured["events"]:
+                for event in (*measured["events"], *measured["articulations"]):
                     event_file.write(json.dumps({"id": entry["id"], "tradition": name, "tune_type": entry["type"], "source": measured["source"], "transcriber": measured["transcriber"], **event}, ensure_ascii=False) + "\n")
             for typ, tunes in sorted(types.items()):
                 stats = aggregate(tunes)
-                stats.update(tradition=name, tune_type=typ, schema_version=1, method=METHOD,
-                             by_source=_stratify(tunes, "source"),
+                stats.update(tradition=name, tune_type=typ, schema_version=2, method=METHOD,
+                             by_source=_stratify(tunes, "source", positions=False),
                              by_source_transcriber=_stratify([{**t, "source_transcriber": t["source"] + " / " + t["transcriber"]} for t in tunes], "source_transcriber", positions=False))
                 stats["engine_proposal"] = proposal(stats)
                 groups[(name, typ)] = stats
@@ -314,6 +434,22 @@ def render_report(groups: dict, all_tunes: dict) -> str:
         lines += ["", "| Source | Airs | Notes | Marques | Sans marque |", "|---|---:|---:|---:|---:|"]
         for source, cell in s["by_source"].items():
             lines.append(f'| {source} | {cell["tunes"]} | {cell["notes"]} | {cell["occurrences"]} | {100*cell["share_without_marks"]:.1f}% |')
+    lines += ["", "## DS-T10b — articulations écrites", "",
+              "Les articulations sont isolées de `events` dans `articulations` ; le staccato n’est compté qu’ici. Les taux sont un plancher de notation, à valider à l’oreille.", "",
+              "| Profil | Liens /100 (n) | Liaisons, longueur moyenne (notes) | Liaisons répétées (n) | Ties /100 (n) | Staccato /100 (n) | Accents /100 (n) | Tenuto /100 (n) | Marcato /100 (n) |",
+              "|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
+    for profile, key in PROFILES.items():
+        if key not in groups:
+            continue
+        a = groups[key]["articulations"]
+        slur = a["by_type"]["slur"]
+        lengths = a["slur_lengths"]
+        mean_length = (sum(int(n) * count for n, count in lengths.items()) / sum(lengths.values())) if lengths else None
+        cells = [f'{a["by_type"][kind]["per_100_notes"]:.3f} ({a["by_type"][kind]["count"]})'
+                 for kind in ARTICULATION_KINDS if kind != "slur"]
+        lines.append(f'| {profile} | {slur["per_100_notes"]:.3f} ({slur["count"]}) | {mean_length:.2f}' if mean_length is not None else f'| {profile} | {slur["per_100_notes"]:.3f} ({slur["count"]}) | —')
+        lines[-1] += " | " + str(a["slur_contour_classes"].get("repeated", 0)) + " | " + " | ".join(cells) + " |"
+    lines += ["", "La proposition `[performance]` des références contient les taux par mesure, temps, demi-temps, durée, contour et longueur. Les agrégats par source/transcripteur sont totaux uniquement ; aucune table positionnelle par transcripteur.", ""]
     sample_key = ("quebecoise", "reel") if ("quebecoise", "reel") in groups else next(iter(groups), None)
     lines += ["", "## Schéma proposé pour les profils moteur", ""]
     if sample_key:

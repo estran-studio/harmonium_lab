@@ -715,3 +715,47 @@ Les blocs ont été substitués dans des copies temporaires et chargés par
 Appliquer ces poids change les tirages du moteur : goldens et `TUNING_VERSION` probablement à régénérer par le coordinateur (non vérifié ici).
 
 Vérification : `PYTHONPATH=src make test VENV=<venv partagé>` : **246 réussis, 31 ignorés**.
+
+## DS-T10b — liaisons, ties et accents
+
+Le parseur commun `trad.form.analyze_form` reconnaît les parenthèses de liaison
+(groupes imbriqués et traversant les barres/reprises), sans confondre `(3` ou
+`(3:2:3` avec un groupe de notes. Les ties `-` et les articulations écrites
+`!accent!`, `!>!`, `!emphasis!`, `+accent+`, `L`, `!tenuto!`, `!marcato!`,
+`!^!` et `.` sont annotés sans modifier les notes/mesures de `plan.bars`.
+`extract_ornaments` garde les agréments dans `events` et livre les événements
+`slur`, `tie`, `staccato`, `accent`, `tenuto`, `marcato` dans `articulations`.
+Le staccato n'est donc pas doublé dans les agrégats d'ornements. Chaque liaison
+expose `note_count`, `contour` (intervalles signés), `repeated_notes`, et les
+champs de contexte de sa première note.
+
+Le calcul utilise les corpus locaux hors ligne et conserve les contrôles des
+manifestes : **2 059/2 059 SHA256 ABC conformes**. Empreinte SHA256 de la
+sérialisation canonique `(id, plan.bars)` : **`18188ed67e4afc3c387e72437378a81591223a25e1e7e0dd741da8bb0c26081f`** avant et après.
+La table rapporte les taux écrits par 100 notes, occurrences et longueur
+moyenne des liaisons (notes). Ces marques sont un **plancher écrit, à valider
+à l’oreille** ; l'absence dans une transcription n'est pas une preuve de jeu
+détaché. Les références exposent aussi les mesures 1..8, temps, demi-temps,
+durées, intervalles/contexte, fins de phrase, contour/longueur des liaisons,
+et totaux par source/transcripteur (sans tables positionnelles par source).
+
+| Profil | Notes | Liaison /100 (n) | Longueur moyenne | Répétées (n) | Tie /100 (n) | Staccato /100 (n) | Accent /100 (n) | Tenuto (n) | Marcato (n) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| reel_quebecois | 72 627 | 0,249 (181) | 2,81 | 71 | 0,308 (224) | 0,089 (65) | 0,000 (0) | 0 | 0 |
+| gigue_quebecoise | 9 194 | 0,261 (24) | 2,12 | 8 | 0,457 (42) | 0,000 (0) | 0,000 (0) | 0 | 0 |
+| valse_quebecoise | 8 183 | 0,648 (53) | 2,92 | 28 | 1,271 (104) | 0,367 (30) | 0,000 (0) | 0 | 0 |
+| reel_acadien | 21 640 | 0,462 (100) | 2,52 | 36 | 0,051 (11) | 0,102 (22) | 0,000 (0) | 0 | 0 |
+| marche_britannique_coloniale | 2 026 | 1,185 (24) | 2,00 | 5 | 1,234 (25) | 0,000 (0) | 0,000 (0) | 0 | 0 |
+| gigue_britannique_coloniale | 37 036 | 0,092 (34) | 2,00 | 8 | 0,186 (69) | 0,030 (11) | 0,000 (0) | 0 | 0 |
+| hornpipe_britannique_coloniale | 9 162 | 0,000 (0) | — | 0 | 0,000 (0) | 0,000 (0) | 0,000 (0) | 0 | 0 |
+
+`references/ornaments/*.json` versionne les agrégats (schéma 2) ;
+`target/ornaments/report.md` résume les sept profils. Le bloc
+`engine_proposal.performance` propose des taux de liaison par mesure et
+contour, longueurs mesurées, et accents par temps ; il reste un plancher écrit
+à valider à l'oreille, sans changement moteur.
+
+Vérification DS-T10b : `PYTHONPATH=src make test` avec le venv partagé :
+**257 réussis, 31 ignorés**, sans réseau. La génération offline a écrit les
+références et `target/ornaments/report.md`; 2 059/2 059 empreintes du manifeste
+concordent avec les fichiers ABC.
