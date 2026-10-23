@@ -387,3 +387,184 @@ Le test de silence a révélé une énergie FFT négative d'arrondi avant
 racine carrée : énergie bornée à zéro, régression conservée, sans changement
 des banques ni des mesures.
 
+## DS-T10 — ornements
+
+Mesure descriptive en données, sans modification du moteur (phase 012,
+point 3 ; constitution V et VII). Reproduction :
+
+```bash
+make trad-ornaments
+# Cache situé ailleurs, sans réseau ni modification des ABC :
+make trad-ornaments CORPUS_ROOT=/chemin/vers/harmonium_lab/corpus
+```
+
+`trad.ornaments.extract_ornaments` utilise `trad.form.analyze_form` :
+le tokenizer commun conserve désormais les marques et la provenance des
+segments écrits dans les mesures développées. Pas de second parseur ABC.
+La sélection de première voix traite également les changements `[V:…]`.
+Sorties : **18 combinaisons présentes**, 2 059 airs, 233 593 attaques,
+dans `references/ornaments/<tradition>-<type>.json` ; rapport complet
+`target/ornaments/report.md`, événements dérivés `target/ornaments/events.jsonl`.
+Les petits groupes cotillon/quadrille et les valses/marches acadiennes sont
+inclus, contrairement au seuil de 15 airs du lot DS-T9.
+
+### Comptage et positions
+
+- Une occurrence **écrite**, pas deux lors des reprises ; les deux voltas
+  restent présentes. Une double corde compte comme une attaque porteuse,
+  hauteur supérieure pour le contexte ; trois notes de triolet comptent
+  comme trois attaques, une seule occurrence de groupe. Les agréments
+  eux-mêmes ne gonflent pas le nombre de notes.
+- Mesures équivalentes = durée écrite / durée nominale, levées et fragments
+  inclus. Pour m.1..8, seulement les parties reconnues de huit mesures ;
+  les autres événements gardent `bar=null`, pas de modulo huit inventé.
+  Une levée complète sa fin complémentaire quand le plan le permet,
+  sinon reste une levée sans position. Les secondes fins ont la même
+  position que les premières, avec leurs propres opportunités.
+- Temps métrique 1-based et phase exacte : blanche en 2/2, noire en 4/4
+  et 3/4, noire pointée en 6/8 ; demi-temps et fractions des triolets
+  conservés. Durées en croches rationnelles ; intervalles signés en
+  demi-tons, degré 1..7 et altération ; fin de phrase = m.4/m.8.
+- Chaque cellule JSON donne occurrences, notes et mesures du dénominateur.
+  Par mesure **conditionnelle** pour position/partie/fin de phrase ; par
+  mesure totale du groupe pour temps/durée/degré/intervalles.
+  Dans `by_position`, type absent = zéro ; position absente = non mesurée.
+  `by_source` reprend ces distributions ; `by_source_transcriber` ne garde
+  que les totaux par type (effectifs trop petits pour des tables par position),
+  sans confondre attribution de collection et identité d'un interprète.
+
+Contrôle des fichiers contenant une marque, brut / première voix extraite :
+
+| Tradition | Airs | Agréments | Rouleaux | Triolets | Accords ABC complets |
+|---|---:|---:|---:|---:|---:|
+| québécoise | 764 | 69/69 | 116/113 | 204/204 | 62/61 |
+| acadienne | 270 | 29/29 | 52/52 | 61/61 | 12/12 |
+| britannique coloniale | 1 025 | 11/11 | 3/3 | 136/136 | 25/24 |
+
+Les trois faux rouleaux québécois sont `(~1981)` dans deux champs `C:` et
+`/~jh/` dans une URL `F:`. Le brut initial des accords (29/2/17) ne se
+reproduit pas en acceptant durées, octaves et altérations internes :
+`[G,2D2]`, `[d2f2]`, `[^db]` sont de vraies doubles cordes.
+La regex lexicale complète du contrôle est publiée dans `ornaments.RAW`.
+Deux autres exclusions exactes : `{[Aa]}` est un agrément, pas un accord
+de la ligne porteuse (`miss-laura-andrew-d184d803`) ; `[D,A]` est dans le
+titre de `hundred-pipers-bagpipe-version-d-a-bffcb0f6`. Les accords
+d'accompagnement entre guillemets et les voix secondaires ne sont jamais
+des doubles cordes mélodiques.
+
+### Sept profils distribués : effectifs et taux
+
+Taux pour **100 notes**, occurrences entre parenthèses ; zéro observé ne
+prouve pas une interdiction musicale. GS/GM = agrément simple/multiple ;
+TR = triolet répété ; DC = double corde ; AC = accord ≥ trois notes.
+Les triolets mélodiques et les articulations `.`/`H` sont mesurés
+séparément dans le rapport, mais pas proposés comme ornements à générer.
+
+| Profil | Airs / notes | GS | GM | Rouleau | Turn | TR | DC | AC | Trille |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| reel_quebecois | 574 / 72627 | 0.185 (134) | 0.047 (34) | 0.690 (501) | 0.004 (3) | 0.182 (132) | 0.344 (250) | 0.000 (0) | 0.010 (7) |
+| gigue_quebecoise | 88 / 9194 | 0.207 (19) | 0.033 (3) | 0.207 (19) | 0.000 (0) | 0.000 (0) | 0.076 (7) | 0.000 (0) | 0.000 (0) |
+| valse_quebecoise | 67 / 8183 | 0.073 (6) | 0.012 (1) | 0.061 (5) | 0.000 (0) | 0.061 (5) | 1.283 (105) | 0.086 (7) | 0.000 (0) |
+| reel_acadien | 169 / 21640 | 0.273 (59) | 0.102 (22) | 0.878 (190) | 0.000 (0) | 0.573 (124) | 0.125 (27) | 0.000 (0) | 0.028 (6) |
+| marche_britannique_coloniale | 25 / 2026 | 0.000 (0) | 0.000 (0) | 0.247 (5) | 0.000 (0) | 0.000 (0) | 0.099 (2) | 0.000 (0) | 0.000 (0) |
+| gigue_britannique_coloniale | 365 / 37036 | 0.049 (18) | 0.011 (4) | 0.019 (7) | 0.000 (0) | 0.003 (1) | 0.059 (22) | 0.062 (23) | 0.005 (2) |
+| hornpipe_britannique_coloniale | 78 / 9162 | 0.000 (0) | 0.000 (0) | 0.000 (0) | 0.000 (0) | 0.327 (30) | 0.022 (2) | 0.000 (0) | 0.000 (0) |
+
+Taux des huit types proposés réunis par position, toujours /100 notes
+et avec occurrences. Le détail **type × position** est dans le rapport
+et les JSON. Ces sous-populations ne se substituent pas au taux global :
+43 960 notes positionnées sur 72 627 pour le reel québécois, seulement
+3 530 sur 8 183 pour la valse québécoise.
+
+| Profil | m1 | m2 | m3 | m4 | m5 | m6 | m7 | m8 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| reel_quebecois | 1.583 (82) | 1.016 (54) | 1.538 (83) | 0.859 (46) | 1.686 (89) | 1.243 (67) | 1.068 (62) | 1.090 (68) |
+| gigue_quebecoise | 0.587 (5) | 0.350 (3) | 0.659 (6) | 0.116 (1) | 0.458 (4) | 0.229 (2) | 0.294 (3) | 0.545 (5) |
+| valse_quebecoise | 0.000 (0) | 0.000 (0) | 0.622 (3) | 0.000 (0) | 0.000 (0) | 0.000 (0) | 0.426 (2) | 0.259 (1) |
+| reel_acadien | 1.826 (28) | 1.677 (27) | 2.434 (39) | 1.303 (21) | 2.070 (33) | 1.525 (25) | 1.397 (24) | 0.996 (17) |
+| marche_britannique_coloniale | 1.299 (2) | 0.000 (0) | 0.568 (1) | 1.408 (2) | 1.176 (2) | 0.000 (0) | 0.000 (0) | 0.000 (0) |
+| gigue_britannique_coloniale | 0.239 (9) | 0.385 (14) | 0.128 (5) | 0.444 (15) | 0.131 (5) | 0.189 (7) | 0.219 (9) | 0.316 (9) |
+| hornpipe_britannique_coloniale | 0.983 (9) | 0.548 (5) | 0.423 (4) | 0.000 (0) | 0.746 (7) | 0.535 (5) | 0.000 (0) | 0.000 (0) |
+
+### Proposition `[ornaments]`, pas encore décision d'écoute
+
+Une section générique, sans nom de style dans le code, contenant la
+référence, l'unité de taux, les multiplicateurs d'arousal et une sous-table
+par type. Exemple **mesuré**, reel québécois / agrément simple :
+
+```toml
+[ornaments]
+reference = "references/ornaments/quebecoise-reel.json"
+rate_unit = "per_100_carrier_notes"
+arousal_low_multiplier = 1.0
+arousal_high_multiplier = 1.0
+
+[ornaments.types.grace_single]
+enabled = true
+written_per_100_notes = 0.184504
+occurrences = 134 # preuve statistique, pas réglage
+per_100_notes_by_bar = { "1" = 0.096525, "2" = 0.131703, "3" = 0.018532, "4" = 0.168036, "5" = 0.113636, "6" = 0.148451, "7" = 0.155092, "8" = 0.192277 }
+min_carrier_eighths = 0.5
+```
+
+Les huit sous-tables et leurs valeurs pour les sept profils sont dans
+`engine_proposal.types` de chaque JSON. Durées porteuses **minimales
+observées**, en croches ; `—` = aucun événement, désactiver faute de données :
+
+| Profil | GS | GM | Rouleau | Turn | TR | DC | AC | Trille |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| reel_quebecois | 1/2 | 1 | 1/2 | 1 | 1/3 | 1 | — | 1 |
+| gigue_quebecoise | 1 | 1 | 3 | — | — | 1 | — | — |
+| valse_quebecoise | 1 | 1 | 3 | — | 2/3 | 1 | 2 | — |
+| reel_acadien | 1 | 1 | 1/3 | — | 1/3 | 1 | — | 2 |
+| marche_britannique_coloniale | — | — | 2 | — | — | 2 | — | — |
+| gigue_britannique_coloniale | 1 | 2 | 3 | — | 1/3 | 1 | 1 | 2 |
+| hornpipe_britannique_coloniale | — | — | — | — | 2/3 | 2 | — | — |
+
+Ces minima ne sont **pas des seuils musicaux validés**. Pour les triolets,
+ils concernent la première note après subdivision, pas la durée totale
+à remplacer. Les marques peuvent coexister sur une porteuse : ne pas
+normaliser aveuglément les taux comme catégories exclusives. Aucun
+arousal n'est annoté dans les ABC : lien possible par multiplicateur,
+mais pente neutre 1→1 proposée avant écoute, pas de corrélation inventée.
+
+### Limites et vérification
+
+Les transcriptions **sous-notent** les ornements : taux écrit = plancher.
+Effectifs faibles, notes d'un air corrélées : fournir les occurrences,
+pas un IC binomial prétendument indépendant. « Aucun ornement » signifie
+aucune des marques mesurées, pas absence d'ornement dans le jeu réel.
+Parts sans marque : 50,2 % reel québécois, 84,1 % gigue québécoise,
+67,2 % valse québécoise, 51,5 % reel acadien, 80,0 % marche britannique,
+91,0 % gigue britannique, 35,9 % hornpipe britannique.
+
+Effet de source manifeste : dans le reel québécois, Chambers note
+166 rouleaux / 42 632 notes, The Session 335 / 29 995 ; les 22 agréments
+de la gigue britannique proviennent uniquement des 12 airs Cahusac.
+Ne pas interpréter ces écarts comme effet causal de tradition. `Z:`
+identifie un transcripteur quand fourni, sinon « non renseigné ».
+Les changements de métrique, unité ou tonalité en cours d'air restent
+une limite du parseur commun ; les changements `[M:…]`/`[K:…]` sont
+comptés dans `inline_changes` pour rendre cette incertitude visible.
+
+**Effet de bord sur le parseur commun (relevé par le coordinateur).** L'ancien
+nettoyage `\+[^+]+\+` de `form.py` prenait pour une décoration `+…+` le texte
+compris entre deux accords chiffrés finissant par `+` (ex. `"D/f+"` … `"A7/c+"`)
+et **supprimait la musique entre les deux**. La lecture par jetons de DS-T10
+corrige ce défaut : `analyze_form` donne d'autres mesures pour **47 airs sur
+2 059**, tous britanniques coloniaux (reel 16, jig 20, waltz 9, hornpipe 2),
+le plus souvent plus de mesures et de notes (ex. *Beaux of Oakhill* : 15 → 24
+mesures). Les références déjà publiées qui reposent sur ce parseur
+(`references/structure/britannique_coloniale-*.json` de DS-T9, profils
+`references/trad-britannique_coloniale-*`) datent d'avant la correction et
+sont à régénérer ; ce n'est pas fait ici.
+
+Vérification : commande réelle sur les trois caches locaux, sans réseau ;
+2 059/2 059 SHA256 ABC égaux aux manifestes versionnés, manifestes du
+cache identiques à ceux du worktree. Conservation des dénominateurs et
+occurrences entre groupes, positions et sources contrôlée.
+`PYTHONPATH=src make test` : **241 réussis, 31 ignorés** (assets/outils
+optionnels absents), dont 21 cas dédiés aux types, contexte, levées,
+reprises, voltas, changements de voix, triolets avec silence et agrégation.
+Le `PYTHONPATH` sélectionne ce worktree quand le venv est partagé.
+
