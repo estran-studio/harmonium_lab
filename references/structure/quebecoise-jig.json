@@ -1,0 +1,7513 @@
+{
+  "corpus_version": "2026-10-19+764\nmanifest_sha256: 02341ab1c7e7e82612fad51890f2802add26869040ecb947346296810be08eb4",
+  "deviations": [
+    {
+      "domain": "répétition",
+      "engine": 0.925,
+      "gap_points": 63.5692,
+      "label": "structure de paires « a b a c »",
+      "proposed_rule": {
+        "letters": "a b a c",
+        "operation": "pair_structure",
+        "probability": 0.289308
+      },
+      "real": 0.289308,
+      "real_opportunities": 159
+    },
+    {
+      "domain": "répétition",
+      "engine": 1.0,
+      "gap_points": 47.1698,
+      "label": "m.5-6 reprennent exactement m.1-2",
+      "proposed_rule": {
+        "operation": "opening_reprise",
+        "probability": 0.528302
+      },
+      "real": 0.528302,
+      "real_opportunities": 159
+    },
+    {
+      "domain": "phrases",
+      "engine": 0.525,
+      "gap_points": 43.695,
+      "label": "question-réponse 4+4 avec repos tonique final",
+      "proposed_rule": {
+        "operation": "antecedent_consequent",
+        "probability": 0.08805
+      },
+      "real": 0.08805,
+      "real_opportunities": 159
+    },
+    {
+      "domain": "phrases",
+      "engine": 0.5,
+      "gap_points": 33.5616,
+      "label": "A:m8 : repos final sur la tonique",
+      "proposed_rule": {
+        "operation": "tonic_cadence",
+        "position": "A:m8",
+        "probability": 0.164384
+      },
+      "real": 0.164384,
+      "real_opportunities": 73
+    },
+    {
+      "domain": "rythme",
+      "engine": 0.15625,
+      "gap_points": 5.9052,
+      "label": "cellule en croches « 2 1 1 1 1 »",
+      "proposed_rule": {
+        "durations_eighths": "2 1 1 1 1",
+        "operation": "rhythm_cell",
+        "probability": 0.097198
+      },
+      "real": 0.097198,
+      "real_opportunities": 1749
+    }
+  ],
+  "engine_profile": "gigue_quebecoise",
+  "generated": {
+    "engine_alignment_scores": {
+      "16": 20
+    },
+    "engine_ambiguous_alignments": 1,
+    "engine_intro_bars": {
+      "1": 12,
+      "2": 8
+    },
+    "errors": {},
+    "excluded_engine_tail_bars": 72,
+    "excluded_non8_parts": 0,
+    "input_files": 20,
+    "key_sources": {
+      "export-log": 20
+    },
+    "parts": {
+      "A": 20,
+      "B": 20,
+      "all": 40
+    },
+    "phrases": {
+      "ab_pairs": 20,
+      "antecedent_consequent_count": 21,
+      "antecedent_consequent_rate": 0.525,
+      "b_reuses_a_ending_rate": 0.0,
+      "opening_reprise_count": 40,
+      "opening_reprise_rate": 1.0,
+      "parts": 40,
+      "rest_by_position": {
+        "A:m1": {
+          "bars": 20,
+          "long_final_rate": 0.05,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.35
+        },
+        "A:m2": {
+          "bars": 20,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.1
+        },
+        "A:m3": {
+          "bars": 20,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.25
+        },
+        "A:m4": {
+          "bars": 20,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "A:m5": {
+          "bars": 20,
+          "long_final_rate": 0.05,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.35
+        },
+        "A:m6": {
+          "bars": 20,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.1
+        },
+        "A:m7": {
+          "bars": 20,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.2
+        },
+        "A:m8": {
+          "bars": 20,
+          "long_final_rate": 0.5,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.5,
+          "tonic_final_rate": 0.6
+        },
+        "B:m1": {
+          "bars": 20,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.4
+        },
+        "B:m2": {
+          "bars": 20,
+          "long_final_rate": 0.05,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.25
+        },
+        "B:m3": {
+          "bars": 20,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.1
+        },
+        "B:m4": {
+          "bars": 20,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "B:m5": {
+          "bars": 20,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.4
+        },
+        "B:m6": {
+          "bars": 20,
+          "long_final_rate": 0.05,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.25
+        },
+        "B:m7": {
+          "bars": 20,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.15
+        },
+        "B:m8": {
+          "bars": 20,
+          "long_final_rate": 0.55,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.55,
+          "tonic_final_rate": 0.65
+        }
+      }
+    },
+    "positional_tunes": 20,
+    "rhythm": {
+      "accents": {
+        "count": 0,
+        "onsets": [],
+        "tunes_with_marks": 0
+      },
+      "cells": [
+        {
+          "count": 144,
+          "pattern": "1 1 1 1 1 1",
+          "share": 0.45
+        },
+        {
+          "count": 55,
+          "pattern": "1 1 1 2 1",
+          "share": 0.171875
+        },
+        {
+          "count": 50,
+          "pattern": "2 1 1 1 1",
+          "share": 0.15625
+        },
+        {
+          "count": 34,
+          "pattern": "3 1 1 1",
+          "share": 0.10625
+        },
+        {
+          "count": 17,
+          "pattern": "1 1 1 3",
+          "share": 0.053125
+        },
+        {
+          "count": 5,
+          "pattern": "3 2 1",
+          "share": 0.015625
+        },
+        {
+          "count": 5,
+          "pattern": "6",
+          "share": 0.015625
+        },
+        {
+          "count": 4,
+          "pattern": "2 1 2 1",
+          "share": 0.0125
+        },
+        {
+          "count": 3,
+          "pattern": "3 3",
+          "share": 0.009375
+        },
+        {
+          "count": 3,
+          "pattern": "5 1",
+          "share": 0.009375
+        }
+      ],
+      "continuous_eighth_rate": 0.45,
+      "counts": {
+        "adjacent_pairs": 1321,
+        "bars": 320,
+        "continuous_eighth_bars": 144,
+        "notes": 1641,
+        "repeated_notes": 139,
+        "repeated_triplets": 0,
+        "syncopated_bars": 0,
+        "syncopated_notes": 0,
+        "tunes_with_accents": 0
+      },
+      "entropy_bits": 2.33497,
+      "long_note_onsets": [
+        {
+          "count": 50,
+          "pattern": "0",
+          "share": 0.714286
+        },
+        {
+          "count": 20,
+          "pattern": "3",
+          "share": 0.285714
+        }
+      ],
+      "repeated_note_rate": 0.105223,
+      "syncopated_bar_rate": 0.0,
+      "top20": [
+        {
+          "count": 144,
+          "pattern": "1 1 1 1 1 1",
+          "share": 0.45
+        },
+        {
+          "count": 55,
+          "pattern": "1 1 1 2 1",
+          "share": 0.171875
+        },
+        {
+          "count": 50,
+          "pattern": "2 1 1 1 1",
+          "share": 0.15625
+        },
+        {
+          "count": 34,
+          "pattern": "3 1 1 1",
+          "share": 0.10625
+        },
+        {
+          "count": 17,
+          "pattern": "1 1 1 3",
+          "share": 0.053125
+        },
+        {
+          "count": 5,
+          "pattern": "3 2 1",
+          "share": 0.015625
+        },
+        {
+          "count": 5,
+          "pattern": "6",
+          "share": 0.015625
+        },
+        {
+          "count": 4,
+          "pattern": "2 1 2 1",
+          "share": 0.0125
+        },
+        {
+          "count": 3,
+          "pattern": "3 3",
+          "share": 0.009375
+        },
+        {
+          "count": 3,
+          "pattern": "5 1",
+          "share": 0.009375
+        }
+      ],
+      "vocabulary_size": 10
+    },
+    "sequence_shifts": {
+      "A:m4/m1": [
+        {
+          "count": 1,
+          "pattern": "-3",
+          "share": 1.0
+        }
+      ],
+      "A:m5/m4": [
+        {
+          "count": 1,
+          "pattern": "3",
+          "share": 1.0
+        }
+      ],
+      "A:m7/m3": [
+        {
+          "count": 1,
+          "pattern": "-3",
+          "share": 1.0
+        }
+      ],
+      "A:m8/m3": [
+        {
+          "count": 1,
+          "pattern": "-3",
+          "share": 1.0
+        }
+      ],
+      "B:m1/A:m1": [
+        {
+          "count": 1,
+          "pattern": "-2",
+          "share": 1.0
+        }
+      ],
+      "B:m5/A:m5": [
+        {
+          "count": 1,
+          "pattern": "-2",
+          "share": 1.0
+        }
+      ]
+    },
+    "similarity": {
+      "A": {
+        "joint": [
+          [
+            1.0,
+            0.058333,
+            0.093333,
+            0.053333,
+            1.0,
+            0.058333,
+            0.05,
+            0.026667
+          ],
+          [
+            0.058333,
+            1.0,
+            0.066667,
+            0.101667,
+            0.058333,
+            1.0,
+            0.1,
+            0.086667
+          ],
+          [
+            0.093333,
+            0.066667,
+            1.0,
+            0.035,
+            0.093333,
+            0.066667,
+            0.179167,
+            0.0475
+          ],
+          [
+            0.053333,
+            0.101667,
+            0.035,
+            1.0,
+            0.053333,
+            0.101667,
+            0.016667,
+            0.05
+          ],
+          [
+            1.0,
+            0.058333,
+            0.093333,
+            0.053333,
+            1.0,
+            0.058333,
+            0.05,
+            0.026667
+          ],
+          [
+            0.058333,
+            1.0,
+            0.066667,
+            0.101667,
+            0.058333,
+            1.0,
+            0.1,
+            0.086667
+          ],
+          [
+            0.05,
+            0.1,
+            0.179167,
+            0.016667,
+            0.05,
+            0.1,
+            1.0,
+            0.033333
+          ],
+          [
+            0.026667,
+            0.086667,
+            0.0475,
+            0.05,
+            0.026667,
+            0.086667,
+            0.033333,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.101667,
+            0.151667,
+            0.178333,
+            1.0,
+            0.101667,
+            0.121667,
+            0.135
+          ],
+          [
+            0.101667,
+            1.0,
+            0.128333,
+            0.19,
+            0.101667,
+            1.0,
+            0.135,
+            0.186667
+          ],
+          [
+            0.151667,
+            0.128333,
+            1.0,
+            0.093333,
+            0.151667,
+            0.128333,
+            0.280833,
+            0.175833
+          ],
+          [
+            0.178333,
+            0.19,
+            0.093333,
+            1.0,
+            0.178333,
+            0.19,
+            0.06,
+            0.100833
+          ],
+          [
+            1.0,
+            0.101667,
+            0.151667,
+            0.178333,
+            1.0,
+            0.101667,
+            0.121667,
+            0.135
+          ],
+          [
+            0.101667,
+            1.0,
+            0.128333,
+            0.19,
+            0.101667,
+            1.0,
+            0.135,
+            0.186667
+          ],
+          [
+            0.121667,
+            0.135,
+            0.280833,
+            0.06,
+            0.121667,
+            0.135,
+            1.0,
+            0.0925
+          ],
+          [
+            0.135,
+            0.186667,
+            0.175833,
+            0.100833,
+            0.135,
+            0.186667,
+            0.0925,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.355,
+            0.335,
+            0.245,
+            1.0,
+            0.355,
+            0.26,
+            0.165
+          ],
+          [
+            0.355,
+            1.0,
+            0.525,
+            0.43,
+            0.355,
+            1.0,
+            0.57,
+            0.26
+          ],
+          [
+            0.335,
+            0.525,
+            1.0,
+            0.325,
+            0.335,
+            0.525,
+            0.5,
+            0.325
+          ],
+          [
+            0.245,
+            0.43,
+            0.325,
+            1.0,
+            0.245,
+            0.43,
+            0.435,
+            0.3475
+          ],
+          [
+            1.0,
+            0.355,
+            0.335,
+            0.245,
+            1.0,
+            0.355,
+            0.26,
+            0.165
+          ],
+          [
+            0.355,
+            1.0,
+            0.525,
+            0.43,
+            0.355,
+            1.0,
+            0.57,
+            0.26
+          ],
+          [
+            0.26,
+            0.57,
+            0.5,
+            0.435,
+            0.26,
+            0.57,
+            1.0,
+            0.275
+          ],
+          [
+            0.165,
+            0.26,
+            0.325,
+            0.3475,
+            0.165,
+            0.26,
+            0.275,
+            1.0
+          ]
+        ]
+      },
+      "B": {
+        "joint": [
+          [
+            1.0,
+            0.043333,
+            0.125,
+            0.07,
+            1.0,
+            0.043333,
+            0.133333,
+            0.093333
+          ],
+          [
+            0.043333,
+            1.0,
+            0.066667,
+            0.06,
+            0.043333,
+            1.0,
+            0.058333,
+            0.035
+          ],
+          [
+            0.125,
+            0.066667,
+            1.0,
+            0.086667,
+            0.125,
+            0.066667,
+            0.225,
+            0.018333
+          ],
+          [
+            0.07,
+            0.06,
+            0.086667,
+            1.0,
+            0.07,
+            0.06,
+            0.058333,
+            0.05
+          ],
+          [
+            1.0,
+            0.043333,
+            0.125,
+            0.07,
+            1.0,
+            0.043333,
+            0.133333,
+            0.093333
+          ],
+          [
+            0.043333,
+            1.0,
+            0.066667,
+            0.06,
+            0.043333,
+            1.0,
+            0.058333,
+            0.035
+          ],
+          [
+            0.133333,
+            0.058333,
+            0.225,
+            0.058333,
+            0.133333,
+            0.058333,
+            1.0,
+            0.016667
+          ],
+          [
+            0.093333,
+            0.035,
+            0.018333,
+            0.05,
+            0.093333,
+            0.035,
+            0.016667,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.158333,
+            0.23,
+            0.156667,
+            1.0,
+            0.158333,
+            0.185,
+            0.195833
+          ],
+          [
+            0.158333,
+            1.0,
+            0.125,
+            0.15,
+            0.158333,
+            1.0,
+            0.118333,
+            0.061667
+          ],
+          [
+            0.23,
+            0.125,
+            1.0,
+            0.14,
+            0.23,
+            0.125,
+            0.258333,
+            0.138333
+          ],
+          [
+            0.156667,
+            0.15,
+            0.14,
+            1.0,
+            0.156667,
+            0.15,
+            0.091667,
+            0.0925
+          ],
+          [
+            1.0,
+            0.158333,
+            0.23,
+            0.156667,
+            1.0,
+            0.158333,
+            0.185,
+            0.195833
+          ],
+          [
+            0.158333,
+            1.0,
+            0.125,
+            0.15,
+            0.158333,
+            1.0,
+            0.118333,
+            0.061667
+          ],
+          [
+            0.185,
+            0.118333,
+            0.258333,
+            0.091667,
+            0.185,
+            0.118333,
+            1.0,
+            0.108333
+          ],
+          [
+            0.195833,
+            0.061667,
+            0.138333,
+            0.0925,
+            0.195833,
+            0.061667,
+            0.108333,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.295,
+            0.35,
+            0.4675,
+            1.0,
+            0.295,
+            0.55,
+            0.225
+          ],
+          [
+            0.295,
+            1.0,
+            0.4,
+            0.245,
+            0.295,
+            1.0,
+            0.55,
+            0.205
+          ],
+          [
+            0.35,
+            0.4,
+            1.0,
+            0.5125,
+            0.35,
+            0.4,
+            0.625,
+            0.18
+          ],
+          [
+            0.4675,
+            0.245,
+            0.5125,
+            1.0,
+            0.4675,
+            0.245,
+            0.425,
+            0.27
+          ],
+          [
+            1.0,
+            0.295,
+            0.35,
+            0.4675,
+            1.0,
+            0.295,
+            0.55,
+            0.225
+          ],
+          [
+            0.295,
+            1.0,
+            0.4,
+            0.245,
+            0.295,
+            1.0,
+            0.55,
+            0.205
+          ],
+          [
+            0.55,
+            0.55,
+            0.625,
+            0.425,
+            0.55,
+            0.55,
+            1.0,
+            0.225
+          ],
+          [
+            0.225,
+            0.205,
+            0.18,
+            0.27,
+            0.225,
+            0.205,
+            0.225,
+            1.0
+          ]
+        ]
+      },
+      "all": {
+        "joint": [
+          [
+            1.0,
+            0.050833,
+            0.109167,
+            0.061667,
+            1.0,
+            0.050833,
+            0.091667,
+            0.06
+          ],
+          [
+            0.050833,
+            1.0,
+            0.066667,
+            0.080833,
+            0.050833,
+            1.0,
+            0.079167,
+            0.060833
+          ],
+          [
+            0.109167,
+            0.066667,
+            1.0,
+            0.060833,
+            0.109167,
+            0.066667,
+            0.202083,
+            0.032917
+          ],
+          [
+            0.061667,
+            0.080833,
+            0.060833,
+            1.0,
+            0.061667,
+            0.080833,
+            0.0375,
+            0.05
+          ],
+          [
+            1.0,
+            0.050833,
+            0.109167,
+            0.061667,
+            1.0,
+            0.050833,
+            0.091667,
+            0.06
+          ],
+          [
+            0.050833,
+            1.0,
+            0.066667,
+            0.080833,
+            0.050833,
+            1.0,
+            0.079167,
+            0.060833
+          ],
+          [
+            0.091667,
+            0.079167,
+            0.202083,
+            0.0375,
+            0.091667,
+            0.079167,
+            1.0,
+            0.025
+          ],
+          [
+            0.06,
+            0.060833,
+            0.032917,
+            0.05,
+            0.06,
+            0.060833,
+            0.025,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.13,
+            0.190833,
+            0.1675,
+            1.0,
+            0.13,
+            0.153333,
+            0.165417
+          ],
+          [
+            0.13,
+            1.0,
+            0.126667,
+            0.17,
+            0.13,
+            1.0,
+            0.126667,
+            0.124167
+          ],
+          [
+            0.190833,
+            0.126667,
+            1.0,
+            0.116667,
+            0.190833,
+            0.126667,
+            0.269583,
+            0.157083
+          ],
+          [
+            0.1675,
+            0.17,
+            0.116667,
+            1.0,
+            0.1675,
+            0.17,
+            0.075833,
+            0.096667
+          ],
+          [
+            1.0,
+            0.13,
+            0.190833,
+            0.1675,
+            1.0,
+            0.13,
+            0.153333,
+            0.165417
+          ],
+          [
+            0.13,
+            1.0,
+            0.126667,
+            0.17,
+            0.13,
+            1.0,
+            0.126667,
+            0.124167
+          ],
+          [
+            0.153333,
+            0.126667,
+            0.269583,
+            0.075833,
+            0.153333,
+            0.126667,
+            1.0,
+            0.100417
+          ],
+          [
+            0.165417,
+            0.124167,
+            0.157083,
+            0.096667,
+            0.165417,
+            0.124167,
+            0.100417,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.325,
+            0.3425,
+            0.35625,
+            1.0,
+            0.325,
+            0.405,
+            0.195
+          ],
+          [
+            0.325,
+            1.0,
+            0.4625,
+            0.3375,
+            0.325,
+            1.0,
+            0.56,
+            0.2325
+          ],
+          [
+            0.3425,
+            0.4625,
+            1.0,
+            0.41875,
+            0.3425,
+            0.4625,
+            0.5625,
+            0.2525
+          ],
+          [
+            0.35625,
+            0.3375,
+            0.41875,
+            1.0,
+            0.35625,
+            0.3375,
+            0.43,
+            0.30875
+          ],
+          [
+            1.0,
+            0.325,
+            0.3425,
+            0.35625,
+            1.0,
+            0.325,
+            0.405,
+            0.195
+          ],
+          [
+            0.325,
+            1.0,
+            0.4625,
+            0.3375,
+            0.325,
+            1.0,
+            0.56,
+            0.2325
+          ],
+          [
+            0.405,
+            0.56,
+            0.5625,
+            0.43,
+            0.405,
+            0.56,
+            1.0,
+            0.25
+          ],
+          [
+            0.195,
+            0.2325,
+            0.2525,
+            0.30875,
+            0.195,
+            0.2325,
+            0.25,
+            1.0
+          ]
+        ]
+      }
+    },
+    "structures": [
+      {
+        "count": 37,
+        "pattern": "a b a c",
+        "share": 0.925,
+        "tune_count": 20,
+        "tune_share": 1.0
+      },
+      {
+        "count": 2,
+        "pattern": "a b a b'",
+        "share": 0.05,
+        "tune_count": 2,
+        "tune_share": 0.1
+      },
+      {
+        "count": 1,
+        "pattern": "a a' a a'",
+        "share": 0.025,
+        "tune_count": 1,
+        "tune_share": 0.05
+      }
+    ],
+    "transformations": {
+      "A:m2/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m3-4/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m3/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.05,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m3/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m4/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.05,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m4/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m4/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m5-6/m1-2": {
+        "counts": {
+          "exact": 20,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m5-6/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m5/m1": {
+        "counts": {
+          "exact": 20,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m5/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m5/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.05,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m5/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.05,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m6/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m6/m2": {
+        "counts": {
+          "exact": 20,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m6/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m6/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m6/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m7-8/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7-8/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.1
+        }
+      },
+      "A:m7-8/m5-6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m7/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7/m3": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 2
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.1,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.05,
+          "varied_ending": 0.1
+        }
+      },
+      "A:m7/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m7/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m8/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m8/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m8/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.05,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.05,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m8/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m8/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m8/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m8/m7": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m1-2/A:m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m1-2/A:m7-8": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m1/A:m1": {
+        "counts": {
+          "exact": 1,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 2
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.05,
+          "inversion": 0.05,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.05,
+          "varied_ending": 0.1
+        }
+      },
+      "B:m2/A:m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m2/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m3-4/A:m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m3-4/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m3/A:m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m3/m1": {
+        "counts": {
+          "exact": 1,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.05,
+          "inversion": 0.05,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m3/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m4/A:m4": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.1,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m4/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 2,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.1,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m4/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m4/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5-6/A:m5-6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m5-6/m1-2": {
+        "counts": {
+          "exact": 20,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5-6/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m5/A:m5": {
+        "counts": {
+          "exact": 1,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 2
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.05,
+          "inversion": 0.05,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.05,
+          "varied_ending": 0.1
+        }
+      },
+      "B:m5/m1": {
+        "counts": {
+          "exact": 20,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5/m3": {
+        "counts": {
+          "exact": 1,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.05,
+          "inversion": 0.05,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 2,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.1,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/A:m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/m2": {
+        "counts": {
+          "exact": 20,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m6/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7-8/A:m7-8": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m7-8/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m7-8/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m7-8/m5-6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m7/A:m7": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.05,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7/m1": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.05,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m7/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7/m3": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.05,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.15
+        }
+      },
+      "B:m7/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7/m5": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.05,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m7/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/A:m8": {
+        "counts": {
+          "exact": 4,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.2,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.1
+        }
+      },
+      "B:m8/m1": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.05,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m5": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.05,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m7": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      }
+    },
+    "tunes": 20
+  },
+  "manifest_sha256": "02341ab1c7e7e82612fad51890f2802add26869040ecb947346296810be08eb4",
+  "method": {
+    "accents": "Seulement !accent!, !emphasis!, !marcato!, !>! et leurs formes +...+ ; positions notées, pas d'accent métrique inventé. Absence de marque ≠ absence d'accent joué. MIDI non comparable sur cette annotation.",
+    "engine": "MIDI canal 0 ; attaques absolues ramenées à la croche puis redécoupées en mesures (banques moteur en croches ; swing et petite dérive d'horloge neutralisés), durées jusqu'à l'attaque suivante ou la barre : gate exclu, silences internes assimilés à des tenues. Début AABB recherché parmi les décalages 0..4 par identité A/A et B/B (au moins 14 mesures sur 16) ; meilleur score, premier candidat en cas d'égalité explicitement comptée. Intros et queue exclues, première passe A et B. Tonalité/mode : record-truth si renseigné, sinon journal .log du même export, sinon estimation signalée.",
+    "letters": "Quatre paires de mesures : même lettre si identique ; apostrophe si transformation d'un prototype antérieur, sinon nouvelle lettre. Parts d'airs : présence au moins une fois, non exclusive entre structures.",
+    "limits": "Ornements et voix secondaires exclus par le parseur existant ; doubles-cordes : note supérieure. Changements de métrique non gérés. Résultats descriptifs de transcriptions, ni indépendance des sources ni inférence historique garanties.",
+    "parts": "Première passe de chaque lettre ABC, première fin ; parties de 8 mesures seulement pour les positions. Formes croches : mesures pleines jouées pour le rythme, sans positions ni lien A/B.",
+    "phrase": "Indice 4+4, pas une preuve musicologique : m1-2 = m5-6, dernière note de m4 non tonique, dernière note de m8 tonique tenue au moins un temps. Repos = note finale >= un temps ; cadence tonique = repos sur tonique.",
+    "pitch": "Pas diatoniques relatifs à la tonique, octaves conservées ; altération chromatique conservée séparément (aucun chromatisme fusionné).",
+    "rhythm": "Durées exactes en croches (fractions), silences explicites reconstruits entre notes ; entropie Shannon en bits par mesure. Croches continues = grille pleine de notes de durée 1, sans silence.",
+    "similarity": "Proportion de jetons identiques au même rang, divisée par le nombre maximal de notes ; matrices moyennes sur les parties, pas sur les reprises.",
+    "syncopation": "Note attaquée hors temps métrique et tenue au-delà du prochain temps (2 croches en 4/4 et 3/4, 4 en 2/2, 3 en 6/8). Pas une mesure du swing ni de la qualité des pieds.",
+    "transformations": "Tests non exclusifs ; exact = hauteurs/attaques/durées ; séquence = décalage diatonique constant non nul, rythme égal ; inversion = intervalles diatoniques opposés (au moins deux, dont un non nul), rythme égal ; fin variée = première moitié temporelle identique et non vide, suite différente ; variation rythmique = hauteurs identiques et rythme différent."
+  },
+  "real": {
+    "engine_alignment_scores": {},
+    "engine_ambiguous_alignments": 0,
+    "engine_intro_bars": {},
+    "errors": {},
+    "excluded_engine_tail_bars": 0,
+    "excluded_non8_parts": 61,
+    "input_files": 88,
+    "key_sources": {
+      "abc": 88
+    },
+    "parts": {
+      "A": 73,
+      "B": 72,
+      "C": 12,
+      "D": 2,
+      "all": 159
+    },
+    "phrases": {
+      "ab_pairs": 72,
+      "antecedent_consequent_count": 14,
+      "antecedent_consequent_rate": 0.08805,
+      "b_reuses_a_ending_rate": 0.013889,
+      "opening_reprise_count": 84,
+      "opening_reprise_rate": 0.528302,
+      "parts": 159,
+      "rest_by_position": {
+        "A:m1": {
+          "bars": 73,
+          "long_final_rate": 0.013699,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.287671
+        },
+        "A:m2": {
+          "bars": 73,
+          "long_final_rate": 0.068493,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.287671
+        },
+        "A:m3": {
+          "bars": 73,
+          "long_final_rate": 0.027397,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.232877
+        },
+        "A:m4": {
+          "bars": 73,
+          "long_final_rate": 0.054795,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.013699,
+          "tonic_final_rate": 0.164384
+        },
+        "A:m5": {
+          "bars": 73,
+          "long_final_rate": 0.013699,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.232877
+        },
+        "A:m6": {
+          "bars": 73,
+          "long_final_rate": 0.068493,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.246575
+        },
+        "A:m7": {
+          "bars": 73,
+          "long_final_rate": 0.013699,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.082192
+        },
+        "A:m8": {
+          "bars": 73,
+          "long_final_rate": 0.232877,
+          "rest_after_final_rate": 0.027397,
+          "tonic_cadence_rate": 0.164384,
+          "tonic_final_rate": 0.232877
+        },
+        "B:m1": {
+          "bars": 72,
+          "long_final_rate": 0.083333,
+          "rest_after_final_rate": 0.013889,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.277778
+        },
+        "B:m2": {
+          "bars": 72,
+          "long_final_rate": 0.055556,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.013889,
+          "tonic_final_rate": 0.263889
+        },
+        "B:m3": {
+          "bars": 72,
+          "long_final_rate": 0.027778,
+          "rest_after_final_rate": 0.013889,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.263889
+        },
+        "B:m4": {
+          "bars": 72,
+          "long_final_rate": 0.069444,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.013889,
+          "tonic_final_rate": 0.138889
+        },
+        "B:m5": {
+          "bars": 72,
+          "long_final_rate": 0.069444,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.222222
+        },
+        "B:m6": {
+          "bars": 72,
+          "long_final_rate": 0.069444,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.277778
+        },
+        "B:m7": {
+          "bars": 72,
+          "long_final_rate": 0.013889,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.041667
+        },
+        "B:m8": {
+          "bars": 72,
+          "long_final_rate": 0.25,
+          "rest_after_final_rate": 0.027778,
+          "tonic_cadence_rate": 0.222222,
+          "tonic_final_rate": 0.263889
+        },
+        "C:m1": {
+          "bars": 12,
+          "long_final_rate": 0.083333,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.25
+        },
+        "C:m2": {
+          "bars": 12,
+          "long_final_rate": 0.25,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.083333,
+          "tonic_final_rate": 0.25
+        },
+        "C:m3": {
+          "bars": 12,
+          "long_final_rate": 0.083333,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.333333
+        },
+        "C:m4": {
+          "bars": 12,
+          "long_final_rate": 0.166667,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.333333
+        },
+        "C:m5": {
+          "bars": 12,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.166667
+        },
+        "C:m6": {
+          "bars": 12,
+          "long_final_rate": 0.25,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.083333,
+          "tonic_final_rate": 0.333333
+        },
+        "C:m7": {
+          "bars": 12,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "C:m8": {
+          "bars": 12,
+          "long_final_rate": 0.5,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.416667,
+          "tonic_final_rate": 0.5
+        },
+        "D:m1": {
+          "bars": 2,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "D:m2": {
+          "bars": 2,
+          "long_final_rate": 1.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.5,
+          "tonic_final_rate": 0.5
+        },
+        "D:m3": {
+          "bars": 2,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "D:m4": {
+          "bars": 2,
+          "long_final_rate": 0.5,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "D:m5": {
+          "bars": 2,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "D:m6": {
+          "bars": 2,
+          "long_final_rate": 1.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.5,
+          "tonic_final_rate": 0.5
+        },
+        "D:m7": {
+          "bars": 2,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "D:m8": {
+          "bars": 2,
+          "long_final_rate": 1.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 1.0,
+          "tonic_final_rate": 1.0
+        }
+      }
+    },
+    "positional_tunes": 73,
+    "rhythm": {
+      "accents": {
+        "count": 0,
+        "onsets": [],
+        "tunes_with_marks": 0
+      },
+      "cells": [
+        {
+          "count": 715,
+          "pattern": "1 1 1 1 1 1",
+          "share": 0.408805
+        },
+        {
+          "count": 247,
+          "pattern": "1 1 1 2 1",
+          "share": 0.141224
+        },
+        {
+          "count": 170,
+          "pattern": "2 1 1 1 1",
+          "share": 0.097198
+        },
+        {
+          "count": 131,
+          "pattern": "3 1 1 1",
+          "share": 0.0749
+        },
+        {
+          "count": 90,
+          "pattern": "2 1 2 1",
+          "share": 0.051458
+        },
+        {
+          "count": 74,
+          "pattern": "1 1 1 3",
+          "share": 0.04231
+        },
+        {
+          "count": 69,
+          "pattern": "1 1 1 1 1 1 1 1",
+          "share": 0.039451
+        },
+        {
+          "count": 25,
+          "pattern": "3 2 1",
+          "share": 0.014294
+        },
+        {
+          "count": 19,
+          "pattern": "5 1",
+          "share": 0.010863
+        },
+        {
+          "count": 16,
+          "pattern": "2 1 3",
+          "share": 0.009148
+        },
+        {
+          "count": 13,
+          "pattern": "1/2 1/2 1/2 1/2 1/2 1/2 1/2 1/2 1/2 1/2 1/2 1/2",
+          "share": 0.007433
+        },
+        {
+          "count": 13,
+          "pattern": "3 3",
+          "share": 0.007433
+        },
+        {
+          "count": 11,
+          "pattern": "4 1 1",
+          "share": 0.006289
+        },
+        {
+          "count": 10,
+          "pattern": "1 1/2 1/2 1/2 1/2 1/2 1/2",
+          "share": 0.005718
+        },
+        {
+          "count": 10,
+          "pattern": "3 z1 1 1",
+          "share": 0.005718
+        },
+        {
+          "count": 10,
+          "pattern": "6",
+          "share": 0.005718
+        },
+        {
+          "count": 8,
+          "pattern": "1 1 1 1 z1 1",
+          "share": 0.004574
+        },
+        {
+          "count": 7,
+          "pattern": "1 1 1 1 1 1 2",
+          "share": 0.004002
+        },
+        {
+          "count": 7,
+          "pattern": "2 2 1 1",
+          "share": 0.004002
+        },
+        {
+          "count": 6,
+          "pattern": "1 1 1 1 2 1 1",
+          "share": 0.003431
+        },
+        {
+          "count": 6,
+          "pattern": "1 1 1 2 z1",
+          "share": 0.003431
+        },
+        {
+          "count": 6,
+          "pattern": "2 1 1 1 1 2",
+          "share": 0.003431
+        },
+        {
+          "count": 6,
+          "pattern": "3/2 1/2 1 3/2 1/2 1",
+          "share": 0.003431
+        },
+        {
+          "count": 5,
+          "pattern": "1 1 1 1 1/2 1/2 1 1 1",
+          "share": 0.002859
+        },
+        {
+          "count": 5,
+          "pattern": "1 1 1 1 4",
+          "share": 0.002859
+        },
+        {
+          "count": 4,
+          "pattern": "1/2 1/2 1/2 1/2 1/2 1/2 1/2 1/2",
+          "share": 0.002287
+        },
+        {
+          "count": 4,
+          "pattern": "1/2 1/2 1/2 1/2 1/2 1/2 1/2 1/2 1 1/2 1/2",
+          "share": 0.002287
+        },
+        {
+          "count": 4,
+          "pattern": "3/2 1/2 1 1 1 1",
+          "share": 0.002287
+        },
+        {
+          "count": 4,
+          "pattern": "3/2 1/2 1 2 1",
+          "share": 0.002287
+        },
+        {
+          "count": 3,
+          "pattern": "1/2 1/2 1/2 1/2 3/2 1/2",
+          "share": 0.001715
+        },
+        {
+          "count": 3,
+          "pattern": "1/2 3/2 1 1 1 1",
+          "share": 0.001715
+        },
+        {
+          "count": 3,
+          "pattern": "2 1 3/2 1/2 1",
+          "share": 0.001715
+        },
+        {
+          "count": 3,
+          "pattern": "4 z1 1",
+          "share": 0.001715
+        },
+        {
+          "count": 2,
+          "pattern": "1 1 1 1 3 1",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "1 1 1 1/2 1/2 1 1",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "1 1 1 2 1/2 1/2",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "1 1 2 1 1",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "1 z1 1 1 1 1",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "1/2 1/2 1 1 1/2 1/2 1 1",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "2 1 1 2 1 1",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "2 2 2 1 1",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "2 2 2 2",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "2 z1 2 z1",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "3 1 2",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "3 3/2 1/2 1",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "3 z2 1",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "4 2 1 1",
+          "share": 0.001144
+        },
+        {
+          "count": 2,
+          "pattern": "4 z2",
+          "share": 0.001144
+        },
+        {
+          "count": 1,
+          "pattern": "1 1 1 1 1/2 1/2 1",
+          "share": 0.000572
+        },
+        {
+          "count": 1,
+          "pattern": "1 1 1 1 2 z1 1",
+          "share": 0.000572
+        },
+        {
+          "count": 1,
+          "pattern": "1 1 1 3/2 1/2 1",
+          "share": 0.000572
+        },
+        {
+          "count": 1,
+          "pattern": "1 2/3 2/3 2/3 1 1 1",
+          "share": 0.000572
+        },
+        {
+          "count": 1,
+          "pattern": "1 z1 1 2 1",
+          "share": 0.000572
+        },
+        {
+          "count": 1,
+          "pattern": "2 1 2 3/4 1/4",
+          "share": 0.000572
+        },
+        {
+          "count": 1,
+          "pattern": "2 3 1",
+          "share": 0.000572
+        },
+        {
+          "count": 1,
+          "pattern": "2 z1 2 1",
+          "share": 0.000572
+        },
+        {
+          "count": 1,
+          "pattern": "3 1 z1 1",
+          "share": 0.000572
+        },
+        {
+          "count": 1,
+          "pattern": "3 1/2 1/2 1 1",
+          "share": 0.000572
+        },
+        {
+          "count": 1,
+          "pattern": "3/2 1/2 1 2 1/2 1/2",
+          "share": 0.000572
+        },
+        {
+          "count": 1,
+          "pattern": "3/2 1/2 1 3",
+          "share": 0.000572
+        }
+      ],
+      "continuous_eighth_rate": 0.448256,
+      "counts": {
+        "adjacent_pairs": 7541,
+        "bars": 1749,
+        "continuous_eighth_bars": 784,
+        "notes": 9290,
+        "repeated_notes": 842,
+        "repeated_triplets": 0,
+        "syncopated_bars": 10,
+        "syncopated_notes": 10,
+        "tunes_with_accents": 0
+      },
+      "entropy_bits": 3.274731,
+      "long_note_onsets": [
+        {
+          "count": 246,
+          "pattern": "0",
+          "share": 0.627551
+        },
+        {
+          "count": 104,
+          "pattern": "3",
+          "share": 0.265306
+        },
+        {
+          "count": 22,
+          "pattern": "4",
+          "share": 0.056122
+        },
+        {
+          "count": 15,
+          "pattern": "6",
+          "share": 0.038265
+        },
+        {
+          "count": 5,
+          "pattern": "2",
+          "share": 0.012755
+        }
+      ],
+      "repeated_note_rate": 0.111656,
+      "syncopated_bar_rate": 0.005718,
+      "top20": [
+        {
+          "count": 715,
+          "pattern": "1 1 1 1 1 1",
+          "share": 0.408805
+        },
+        {
+          "count": 247,
+          "pattern": "1 1 1 2 1",
+          "share": 0.141224
+        },
+        {
+          "count": 170,
+          "pattern": "2 1 1 1 1",
+          "share": 0.097198
+        },
+        {
+          "count": 131,
+          "pattern": "3 1 1 1",
+          "share": 0.0749
+        },
+        {
+          "count": 90,
+          "pattern": "2 1 2 1",
+          "share": 0.051458
+        },
+        {
+          "count": 74,
+          "pattern": "1 1 1 3",
+          "share": 0.04231
+        },
+        {
+          "count": 69,
+          "pattern": "1 1 1 1 1 1 1 1",
+          "share": 0.039451
+        },
+        {
+          "count": 25,
+          "pattern": "3 2 1",
+          "share": 0.014294
+        },
+        {
+          "count": 19,
+          "pattern": "5 1",
+          "share": 0.010863
+        },
+        {
+          "count": 16,
+          "pattern": "2 1 3",
+          "share": 0.009148
+        },
+        {
+          "count": 13,
+          "pattern": "1/2 1/2 1/2 1/2 1/2 1/2 1/2 1/2 1/2 1/2 1/2 1/2",
+          "share": 0.007433
+        },
+        {
+          "count": 13,
+          "pattern": "3 3",
+          "share": 0.007433
+        },
+        {
+          "count": 11,
+          "pattern": "4 1 1",
+          "share": 0.006289
+        },
+        {
+          "count": 10,
+          "pattern": "1 1/2 1/2 1/2 1/2 1/2 1/2",
+          "share": 0.005718
+        },
+        {
+          "count": 10,
+          "pattern": "3 z1 1 1",
+          "share": 0.005718
+        },
+        {
+          "count": 10,
+          "pattern": "6",
+          "share": 0.005718
+        },
+        {
+          "count": 8,
+          "pattern": "1 1 1 1 z1 1",
+          "share": 0.004574
+        },
+        {
+          "count": 7,
+          "pattern": "1 1 1 1 1 1 2",
+          "share": 0.004002
+        },
+        {
+          "count": 7,
+          "pattern": "2 2 1 1",
+          "share": 0.004002
+        },
+        {
+          "count": 6,
+          "pattern": "1 1 1 1 2 1 1",
+          "share": 0.003431
+        }
+      ],
+      "vocabulary_size": 60
+    },
+    "sequence_shifts": {
+      "A:m3/m1": [
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 0.5
+        },
+        {
+          "count": 1,
+          "pattern": "5",
+          "share": 0.5
+        }
+      ],
+      "A:m3/m2": [
+        {
+          "count": 2,
+          "pattern": "-1",
+          "share": 1.0
+        }
+      ],
+      "A:m4/m2": [
+        {
+          "count": 1,
+          "pattern": "-3",
+          "share": 0.5
+        },
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 0.5
+        }
+      ],
+      "A:m5/m1": [
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 0.5
+        },
+        {
+          "count": 1,
+          "pattern": "3",
+          "share": 0.5
+        }
+      ],
+      "A:m5/m3": [
+        {
+          "count": 1,
+          "pattern": "-5",
+          "share": 0.5
+        },
+        {
+          "count": 1,
+          "pattern": "3",
+          "share": 0.5
+        }
+      ],
+      "A:m6/m3": [
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ],
+      "A:m6/m5": [
+        {
+          "count": 2,
+          "pattern": "-2",
+          "share": 0.666667
+        },
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 0.333333
+        }
+      ],
+      "A:m7/m1": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 0.666667
+        },
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 0.333333
+        }
+      ],
+      "A:m7/m3": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 0.666667
+        },
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 0.333333
+        }
+      ],
+      "A:m7/m4": [
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ],
+      "A:m7/m5": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 0.666667
+        },
+        {
+          "count": 1,
+          "pattern": "-2",
+          "share": 0.333333
+        }
+      ],
+      "B:m1/A:m1": [
+        {
+          "count": 1,
+          "pattern": "5",
+          "share": 1.0
+        }
+      ],
+      "B:m2/m1": [
+        {
+          "count": 4,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ],
+      "B:m3/m1": [
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 0.5
+        },
+        {
+          "count": 1,
+          "pattern": "-2",
+          "share": 0.5
+        }
+      ],
+      "B:m3/m2": [
+        {
+          "count": 2,
+          "pattern": "-1",
+          "share": 1.0
+        }
+      ],
+      "B:m4/A:m4": [
+        {
+          "count": 1,
+          "pattern": "-3",
+          "share": 0.5
+        },
+        {
+          "count": 1,
+          "pattern": "3",
+          "share": 0.5
+        }
+      ],
+      "B:m4/m1": [
+        {
+          "count": 1,
+          "pattern": "-3",
+          "share": 1.0
+        }
+      ],
+      "B:m4/m2": [
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ],
+      "B:m4/m3": [
+        {
+          "count": 2,
+          "pattern": "-3",
+          "share": 1.0
+        }
+      ],
+      "B:m5-6/m1-2": [
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 1.0
+        }
+      ],
+      "B:m5/A:m5": [
+        {
+          "count": 1,
+          "pattern": "5",
+          "share": 1.0
+        }
+      ],
+      "B:m5/m1": [
+        {
+          "count": 2,
+          "pattern": "1",
+          "share": 0.666667
+        },
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 0.333333
+        }
+      ],
+      "B:m5/m2": [
+        {
+          "count": 3,
+          "pattern": "-1",
+          "share": 1.0
+        }
+      ],
+      "B:m5/m3": [
+        {
+          "count": 2,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ],
+      "B:m6/m1": [
+        {
+          "count": 3,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ],
+      "B:m6/m2": [
+        {
+          "count": 2,
+          "pattern": "-1",
+          "share": 1.0
+        }
+      ],
+      "B:m6/m3": [
+        {
+          "count": 3,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ],
+      "B:m6/m4": [
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 1.0
+        }
+      ],
+      "B:m6/m5": [
+        {
+          "count": 3,
+          "pattern": "1",
+          "share": 0.6
+        },
+        {
+          "count": 2,
+          "pattern": "-2",
+          "share": 0.4
+        }
+      ],
+      "B:m7/A:m7": [
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 0.5
+        },
+        {
+          "count": 1,
+          "pattern": "-2",
+          "share": 0.5
+        }
+      ],
+      "B:m7/m1": [
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ],
+      "B:m7/m2": [
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 1.0
+        }
+      ],
+      "B:m7/m3": [
+        {
+          "count": 2,
+          "pattern": "1",
+          "share": 0.666667
+        },
+        {
+          "count": 1,
+          "pattern": "-4",
+          "share": 0.333333
+        }
+      ],
+      "B:m7/m4": [
+        {
+          "count": 1,
+          "pattern": "-3",
+          "share": 0.5
+        },
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 0.5
+        }
+      ],
+      "B:m7/m5": [
+        {
+          "count": 1,
+          "pattern": "-4",
+          "share": 0.5
+        },
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 0.5
+        }
+      ],
+      "B:m7/m6": [
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 1.0
+        }
+      ],
+      "C:m5/m1": [
+        {
+          "count": 2,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ],
+      "C:m6/m5": [
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 1.0
+        }
+      ],
+      "C:m7/m3": [
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ],
+      "C:m7/m5": [
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ]
+    },
+    "similarity": {
+      "A": {
+        "joint": [
+          [
+            1.0,
+            0.157371,
+            0.302626,
+            0.073875,
+            0.751256,
+            0.108969,
+            0.102397,
+            0.046233
+          ],
+          [
+            0.157371,
+            1.0,
+            0.095613,
+            0.097831,
+            0.157143,
+            0.709589,
+            0.080691,
+            0.068037
+          ],
+          [
+            0.302626,
+            0.095613,
+            1.0,
+            0.077299,
+            0.219749,
+            0.077348,
+            0.366944,
+            0.059132
+          ],
+          [
+            0.073875,
+            0.097831,
+            0.077299,
+            1.0,
+            0.064057,
+            0.065411,
+            0.084605,
+            0.138748
+          ],
+          [
+            0.751256,
+            0.157143,
+            0.219749,
+            0.064057,
+            1.0,
+            0.132714,
+            0.10468,
+            0.053082
+          ],
+          [
+            0.108969,
+            0.709589,
+            0.077348,
+            0.065411,
+            0.132714,
+            1.0,
+            0.071429,
+            0.085388
+          ],
+          [
+            0.102397,
+            0.080691,
+            0.366944,
+            0.084605,
+            0.10468,
+            0.071429,
+            1.0,
+            0.053898
+          ],
+          [
+            0.046233,
+            0.068037,
+            0.059132,
+            0.138748,
+            0.053082,
+            0.085388,
+            0.053898,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.22986,
+            0.321233,
+            0.119537,
+            0.77226,
+            0.170727,
+            0.125114,
+            0.12911
+          ],
+          [
+            0.22986,
+            1.0,
+            0.132828,
+            0.143297,
+            0.219357,
+            0.732192,
+            0.109915,
+            0.126712
+          ],
+          [
+            0.321233,
+            0.132828,
+            1.0,
+            0.121249,
+            0.238356,
+            0.109768,
+            0.403604,
+            0.11484
+          ],
+          [
+            0.119537,
+            0.143297,
+            0.121249,
+            1.0,
+            0.104012,
+            0.110192,
+            0.126647,
+            0.190248
+          ],
+          [
+            0.77226,
+            0.219357,
+            0.238356,
+            0.104012,
+            1.0,
+            0.189905,
+            0.118265,
+            0.124087
+          ],
+          [
+            0.170727,
+            0.732192,
+            0.109768,
+            0.110192,
+            0.189905,
+            1.0,
+            0.116308,
+            0.148174
+          ],
+          [
+            0.125114,
+            0.109915,
+            0.403604,
+            0.126647,
+            0.118265,
+            0.116308,
+            1.0,
+            0.075473
+          ],
+          [
+            0.12911,
+            0.126712,
+            0.11484,
+            0.190248,
+            0.124087,
+            0.148174,
+            0.075473,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.492694,
+            0.67968,
+            0.396282,
+            0.868493,
+            0.447717,
+            0.521298,
+            0.288584
+          ],
+          [
+            0.492694,
+            1.0,
+            0.584018,
+            0.482877,
+            0.496119,
+            0.841324,
+            0.562166,
+            0.309817
+          ],
+          [
+            0.67968,
+            0.584018,
+            1.0,
+            0.467515,
+            0.658219,
+            0.575799,
+            0.723451,
+            0.407078
+          ],
+          [
+            0.396282,
+            0.482877,
+            0.467515,
+            1.0,
+            0.390346,
+            0.473744,
+            0.42407,
+            0.438748
+          ],
+          [
+            0.868493,
+            0.496119,
+            0.658219,
+            0.390346,
+            1.0,
+            0.564155,
+            0.537834,
+            0.277169
+          ],
+          [
+            0.447717,
+            0.841324,
+            0.575799,
+            0.473744,
+            0.564155,
+            1.0,
+            0.517743,
+            0.355023
+          ],
+          [
+            0.521298,
+            0.562166,
+            0.723451,
+            0.42407,
+            0.537834,
+            0.517743,
+            1.0,
+            0.350848
+          ],
+          [
+            0.288584,
+            0.309817,
+            0.407078,
+            0.438748,
+            0.277169,
+            0.355023,
+            0.350848,
+            1.0
+          ]
+        ]
+      },
+      "B": {
+        "joint": [
+          [
+            1.0,
+            0.110417,
+            0.317708,
+            0.030671,
+            0.668287,
+            0.11875,
+            0.141782,
+            0.040972
+          ],
+          [
+            0.110417,
+            1.0,
+            0.079051,
+            0.107176,
+            0.086343,
+            0.661111,
+            0.079282,
+            0.077083
+          ],
+          [
+            0.317708,
+            0.079051,
+            1.0,
+            0.06331,
+            0.253356,
+            0.056597,
+            0.381481,
+            0.038079
+          ],
+          [
+            0.030671,
+            0.107176,
+            0.06331,
+            1.0,
+            0.030671,
+            0.112963,
+            0.070023,
+            0.114468
+          ],
+          [
+            0.668287,
+            0.086343,
+            0.253356,
+            0.030671,
+            1.0,
+            0.094444,
+            0.149884,
+            0.047454
+          ],
+          [
+            0.11875,
+            0.661111,
+            0.056597,
+            0.112963,
+            0.094444,
+            1.0,
+            0.054977,
+            0.072685
+          ],
+          [
+            0.141782,
+            0.079282,
+            0.381481,
+            0.070023,
+            0.149884,
+            0.054977,
+            1.0,
+            0.054977
+          ],
+          [
+            0.040972,
+            0.077083,
+            0.038079,
+            0.114468,
+            0.047454,
+            0.072685,
+            0.054977,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.175463,
+            0.337269,
+            0.087285,
+            0.688889,
+            0.175463,
+            0.181481,
+            0.123297
+          ],
+          [
+            0.175463,
+            1.0,
+            0.113542,
+            0.157887,
+            0.131481,
+            0.688889,
+            0.11331,
+            0.114699
+          ],
+          [
+            0.337269,
+            0.113542,
+            1.0,
+            0.10916,
+            0.288194,
+            0.077199,
+            0.414815,
+            0.094229
+          ],
+          [
+            0.087285,
+            0.157887,
+            0.10916,
+            1.0,
+            0.094229,
+            0.169461,
+            0.11541,
+            0.159276
+          ],
+          [
+            0.688889,
+            0.131481,
+            0.288194,
+            0.094229,
+            1.0,
+            0.140972,
+            0.176389,
+            0.126306
+          ],
+          [
+            0.175463,
+            0.688889,
+            0.077199,
+            0.169461,
+            0.140972,
+            1.0,
+            0.113773,
+            0.114931
+          ],
+          [
+            0.181481,
+            0.11331,
+            0.414815,
+            0.11541,
+            0.176389,
+            0.113773,
+            1.0,
+            0.090063
+          ],
+          [
+            0.123297,
+            0.114699,
+            0.094229,
+            0.159276,
+            0.126306,
+            0.114931,
+            0.090063,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.506019,
+            0.628241,
+            0.414716,
+            0.797222,
+            0.473148,
+            0.526389,
+            0.310185
+          ],
+          [
+            0.506019,
+            1.0,
+            0.549769,
+            0.610317,
+            0.45162,
+            0.829861,
+            0.571991,
+            0.39537
+          ],
+          [
+            0.628241,
+            0.549769,
+            1.0,
+            0.464253,
+            0.605787,
+            0.556713,
+            0.691667,
+            0.355093
+          ],
+          [
+            0.414716,
+            0.610317,
+            0.464253,
+            1.0,
+            0.361243,
+            0.508003,
+            0.45453,
+            0.409854
+          ],
+          [
+            0.797222,
+            0.45162,
+            0.605787,
+            0.361243,
+            1.0,
+            0.485417,
+            0.559722,
+            0.269907
+          ],
+          [
+            0.473148,
+            0.829861,
+            0.556713,
+            0.508003,
+            0.485417,
+            1.0,
+            0.545139,
+            0.356944
+          ],
+          [
+            0.526389,
+            0.571991,
+            0.691667,
+            0.45453,
+            0.559722,
+            0.545139,
+            1.0,
+            0.37338
+          ],
+          [
+            0.310185,
+            0.39537,
+            0.355093,
+            0.409854,
+            0.269907,
+            0.356944,
+            0.37338,
+            1.0
+          ]
+        ]
+      },
+      "C": {
+        "joint": [
+          [
+            1.0,
+            0.069444,
+            0.358333,
+            0.038194,
+            0.583333,
+            0.152778,
+            0.180556,
+            0.0625
+          ],
+          [
+            0.069444,
+            1.0,
+            0.072917,
+            0.082639,
+            0.041667,
+            0.561111,
+            0.100694,
+            0.052083
+          ],
+          [
+            0.358333,
+            0.072917,
+            1.0,
+            0.041667,
+            0.375,
+            0.072917,
+            0.319444,
+            0.027778
+          ],
+          [
+            0.038194,
+            0.082639,
+            0.041667,
+            1.0,
+            0.04375,
+            0.054861,
+            0.055556,
+            0.182341
+          ],
+          [
+            0.583333,
+            0.041667,
+            0.375,
+            0.04375,
+            1.0,
+            0.041667,
+            0.166667,
+            0.051389
+          ],
+          [
+            0.152778,
+            0.561111,
+            0.072917,
+            0.054861,
+            0.041667,
+            1.0,
+            0.086806,
+            0.079861
+          ],
+          [
+            0.180556,
+            0.100694,
+            0.319444,
+            0.055556,
+            0.166667,
+            0.086806,
+            1.0,
+            0.0
+          ],
+          [
+            0.0625,
+            0.052083,
+            0.027778,
+            0.182341,
+            0.051389,
+            0.079861,
+            0.0,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.148611,
+            0.395833,
+            0.113889,
+            0.6,
+            0.201389,
+            0.208333,
+            0.111111
+          ],
+          [
+            0.148611,
+            1.0,
+            0.172917,
+            0.109722,
+            0.111111,
+            0.595833,
+            0.13125,
+            0.107639
+          ],
+          [
+            0.395833,
+            0.172917,
+            1.0,
+            0.065972,
+            0.375,
+            0.159028,
+            0.347222,
+            0.097222
+          ],
+          [
+            0.113889,
+            0.109722,
+            0.065972,
+            1.0,
+            0.068056,
+            0.129167,
+            0.065972,
+            0.194246
+          ],
+          [
+            0.6,
+            0.111111,
+            0.375,
+            0.068056,
+            1.0,
+            0.069444,
+            0.208333,
+            0.079167
+          ],
+          [
+            0.201389,
+            0.595833,
+            0.159028,
+            0.129167,
+            0.069444,
+            1.0,
+            0.172917,
+            0.114583
+          ],
+          [
+            0.208333,
+            0.13125,
+            0.347222,
+            0.065972,
+            0.208333,
+            0.172917,
+            1.0,
+            0.041667
+          ],
+          [
+            0.111111,
+            0.107639,
+            0.097222,
+            0.194246,
+            0.079167,
+            0.114583,
+            0.041667,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.416667,
+            0.608333,
+            0.35,
+            0.75,
+            0.375,
+            0.555556,
+            0.444444
+          ],
+          [
+            0.416667,
+            1.0,
+            0.416667,
+            0.466667,
+            0.425,
+            0.616667,
+            0.458333,
+            0.4375
+          ],
+          [
+            0.608333,
+            0.416667,
+            1.0,
+            0.283333,
+            0.783333,
+            0.291667,
+            0.75,
+            0.375
+          ],
+          [
+            0.35,
+            0.466667,
+            0.283333,
+            1.0,
+            0.358333,
+            0.45,
+            0.35,
+            0.414286
+          ],
+          [
+            0.75,
+            0.425,
+            0.783333,
+            0.358333,
+            1.0,
+            0.4,
+            0.722222,
+            0.383333
+          ],
+          [
+            0.375,
+            0.616667,
+            0.291667,
+            0.45,
+            0.4,
+            1.0,
+            0.333333,
+            0.452778
+          ],
+          [
+            0.555556,
+            0.458333,
+            0.75,
+            0.35,
+            0.722222,
+            0.333333,
+            1.0,
+            0.416667
+          ],
+          [
+            0.444444,
+            0.4375,
+            0.375,
+            0.414286,
+            0.383333,
+            0.452778,
+            0.416667,
+            1.0
+          ]
+        ]
+      },
+      "D": {
+        "joint": [
+          [
+            1.0,
+            0.0,
+            0.5,
+            0.0,
+            1.0,
+            0.0,
+            0.333333,
+            0.083333
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.375,
+            0.0,
+            1.0,
+            0.0,
+            0.125
+          ],
+          [
+            0.5,
+            0.0,
+            1.0,
+            0.083333,
+            0.5,
+            0.0,
+            0.833333,
+            0.083333
+          ],
+          [
+            0.0,
+            0.375,
+            0.083333,
+            1.0,
+            0.0,
+            0.375,
+            0.083333,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            0.5,
+            0.0,
+            1.0,
+            0.0,
+            0.333333,
+            0.083333
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.375,
+            0.0,
+            1.0,
+            0.0,
+            0.125
+          ],
+          [
+            0.333333,
+            0.0,
+            0.833333,
+            0.083333,
+            0.333333,
+            0.0,
+            1.0,
+            0.083333
+          ],
+          [
+            0.083333,
+            0.125,
+            0.083333,
+            0.0,
+            0.083333,
+            0.125,
+            0.083333,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.333333,
+            0.5,
+            0.0,
+            1.0,
+            0.333333,
+            0.333333,
+            0.166667
+          ],
+          [
+            0.333333,
+            1.0,
+            0.083333,
+            0.375,
+            0.333333,
+            1.0,
+            0.0,
+            0.125
+          ],
+          [
+            0.5,
+            0.083333,
+            1.0,
+            0.083333,
+            0.5,
+            0.083333,
+            0.833333,
+            0.166667
+          ],
+          [
+            0.0,
+            0.375,
+            0.083333,
+            1.0,
+            0.0,
+            0.375,
+            0.083333,
+            0.083333
+          ],
+          [
+            1.0,
+            0.333333,
+            0.5,
+            0.0,
+            1.0,
+            0.333333,
+            0.333333,
+            0.166667
+          ],
+          [
+            0.333333,
+            1.0,
+            0.083333,
+            0.375,
+            0.333333,
+            1.0,
+            0.0,
+            0.125
+          ],
+          [
+            0.333333,
+            0.0,
+            0.833333,
+            0.083333,
+            0.333333,
+            0.0,
+            1.0,
+            0.083333
+          ],
+          [
+            0.166667,
+            0.125,
+            0.166667,
+            0.083333,
+            0.166667,
+            0.125,
+            0.083333,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.25,
+            0.5,
+            0.25,
+            1.0,
+            0.25,
+            0.5,
+            0.25
+          ],
+          [
+            0.25,
+            1.0,
+            0.5,
+            0.75,
+            0.25,
+            1.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5,
+            1.0,
+            0.75,
+            0.5,
+            0.5,
+            1.0,
+            0.25
+          ],
+          [
+            0.25,
+            0.75,
+            0.75,
+            1.0,
+            0.25,
+            0.75,
+            0.75,
+            0.5
+          ],
+          [
+            1.0,
+            0.25,
+            0.5,
+            0.25,
+            1.0,
+            0.25,
+            0.5,
+            0.25
+          ],
+          [
+            0.25,
+            1.0,
+            0.5,
+            0.75,
+            0.25,
+            1.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.5,
+            0.5,
+            1.0,
+            0.75,
+            0.5,
+            0.5,
+            1.0,
+            0.25
+          ],
+          [
+            0.25,
+            0.5,
+            0.25,
+            0.5,
+            0.25,
+            0.5,
+            0.25,
+            1.0
+          ]
+        ]
+      },
+      "all": {
+        "joint": [
+          [
+            1.0,
+            0.127493,
+            0.316143,
+            0.050689,
+            0.70414,
+            0.115334,
+            0.129036,
+            0.045545
+          ],
+          [
+            0.127493,
+            1.0,
+            0.085198,
+            0.104403,
+            0.114391,
+            0.680084,
+            0.080548,
+            0.071646
+          ],
+          [
+            0.316143,
+            0.085198,
+            1.0,
+            0.068351,
+            0.25021,
+            0.066644,
+            0.375809,
+            0.047537
+          ],
+          [
+            0.050689,
+            0.104403,
+            0.068351,
+            1.0,
+            0.046601,
+            0.090042,
+            0.075794,
+            0.129298
+          ],
+          [
+            0.70414,
+            0.114391,
+            0.25021,
+            0.046601,
+            1.0,
+            0.106843,
+            0.132704,
+            0.050786
+          ],
+          [
+            0.115334,
+            0.680084,
+            0.066644,
+            0.090042,
+            0.106843,
+            1.0,
+            0.064241,
+            0.079717
+          ],
+          [
+            0.129036,
+            0.080548,
+            0.375809,
+            0.075794,
+            0.132704,
+            0.064241,
+            1.0,
+            0.050689
+          ],
+          [
+            0.045545,
+            0.071646,
+            0.047537,
+            0.129298,
+            0.050786,
+            0.079717,
+            0.050689,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.200397,
+            0.336373,
+            0.103002,
+            0.724371,
+            0.177231,
+            0.159539,
+            0.125591
+          ],
+          [
+            0.200397,
+            1.0,
+            0.126497,
+            0.150285,
+            0.172829,
+            0.70566,
+            0.11168,
+            0.119811
+          ],
+          [
+            0.336373,
+            0.126497,
+            1.0,
+            0.111126,
+            0.274528,
+            0.098405,
+            0.409831,
+            0.104829
+          ],
+          [
+            0.103002,
+            0.150285,
+            0.111126,
+            1.0,
+            0.09556,
+            0.141794,
+            0.116435,
+            0.17518
+          ],
+          [
+            0.724371,
+            0.172829,
+            0.274528,
+            0.09556,
+            1.0,
+            0.16046,
+            0.154088,
+            0.122237
+          ],
+          [
+            0.177231,
+            0.70566,
+            0.098405,
+            0.141794,
+            0.16046,
+            1.0,
+            0.117969,
+            0.130294
+          ],
+          [
+            0.159539,
+            0.11168,
+            0.409831,
+            0.116435,
+            0.154088,
+            0.117969,
+            1.0,
+            0.079627
+          ],
+          [
+            0.125591,
+            0.119811,
+            0.104829,
+            0.17518,
+            0.122237,
+            0.130294,
+            0.079627,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.489937,
+            0.648742,
+            0.399296,
+            0.828931,
+            0.451258,
+            0.525921,
+            0.309644
+          ],
+          [
+            0.489937,
+            1.0,
+            0.554822,
+            0.542722,
+            0.467505,
+            0.821174,
+            0.557996,
+            0.360587
+          ],
+          [
+            0.648742,
+            0.554822,
+            1.0,
+            0.45569,
+            0.641929,
+            0.544759,
+            0.71454,
+            0.37914
+          ],
+          [
+            0.399296,
+            0.542722,
+            0.45569,
+            1.0,
+            0.372986,
+            0.49094,
+            0.436373,
+            0.424588
+          ],
+          [
+            0.828931,
+            0.467505,
+            0.641929,
+            0.372986,
+            1.0,
+            0.512159,
+            0.561186,
+            0.281551
+          ],
+          [
+            0.451258,
+            0.821174,
+            0.544759,
+            0.49094,
+            0.512159,
+            1.0,
+            0.516008,
+            0.365094
+          ],
+          [
+            0.525921,
+            0.557996,
+            0.71454,
+            0.436373,
+            0.561186,
+            0.516008,
+            1.0,
+            0.36475
+          ],
+          [
+            0.309644,
+            0.360587,
+            0.37914,
+            0.424588,
+            0.281551,
+            0.365094,
+            0.36475,
+            1.0
+          ]
+        ]
+      }
+    },
+    "structures": [
+      {
+        "count": 46,
+        "pattern": "a b a c",
+        "share": 0.289308,
+        "tune_count": 36,
+        "tune_share": 0.493151
+      },
+      {
+        "count": 39,
+        "pattern": "a b c d",
+        "share": 0.245283,
+        "tune_count": 34,
+        "tune_share": 0.465753
+      },
+      {
+        "count": 21,
+        "pattern": "a b a b'",
+        "share": 0.132075,
+        "tune_count": 17,
+        "tune_share": 0.232877
+      },
+      {
+        "count": 11,
+        "pattern": "a b a' c",
+        "share": 0.069182,
+        "tune_count": 9,
+        "tune_share": 0.123288
+      },
+      {
+        "count": 10,
+        "pattern": "a a' a a'",
+        "share": 0.062893,
+        "tune_count": 6,
+        "tune_share": 0.082192
+      },
+      {
+        "count": 10,
+        "pattern": "a a' a' b",
+        "share": 0.062893,
+        "tune_count": 7,
+        "tune_share": 0.09589
+      },
+      {
+        "count": 7,
+        "pattern": "a a' b c",
+        "share": 0.044025,
+        "tune_count": 7,
+        "tune_share": 0.09589
+      },
+      {
+        "count": 6,
+        "pattern": "a a' a b",
+        "share": 0.037736,
+        "tune_count": 6,
+        "tune_share": 0.082192
+      },
+      {
+        "count": 2,
+        "pattern": "a a b c",
+        "share": 0.012579,
+        "tune_count": 2,
+        "tune_share": 0.027397
+      },
+      {
+        "count": 2,
+        "pattern": "a b b' c",
+        "share": 0.012579,
+        "tune_count": 1,
+        "tune_share": 0.013699
+      },
+      {
+        "count": 2,
+        "pattern": "a b c b'",
+        "share": 0.012579,
+        "tune_count": 2,
+        "tune_share": 0.027397
+      },
+      {
+        "count": 1,
+        "pattern": "a a' b b'",
+        "share": 0.006289,
+        "tune_count": 1,
+        "tune_share": 0.013699
+      },
+      {
+        "count": 1,
+        "pattern": "a b a b",
+        "share": 0.006289,
+        "tune_count": 1,
+        "tune_share": 0.013699
+      },
+      {
+        "count": 1,
+        "pattern": "a b c c",
+        "share": 0.006289,
+        "tune_count": 1,
+        "tune_share": 0.013699
+      }
+    ],
+    "transformations": {
+      "A:m2/m1": {
+        "counts": {
+          "exact": 3,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 6
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.041096,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.082192
+        }
+      },
+      "A:m3-4/m1-2": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 14
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.027397,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.191781
+        }
+      },
+      "A:m3/m1": {
+        "counts": {
+          "exact": 16,
+          "inversion": 2,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 5
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.219178,
+          "inversion": 0.027397,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.027397,
+          "varied_ending": 0.068493
+        }
+      },
+      "A:m3/m2": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 3
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.013699,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.027397,
+          "varied_ending": 0.041096
+        }
+      },
+      "A:m4/m1": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.013699,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.013699
+        }
+      },
+      "A:m4/m2": {
+        "counts": {
+          "exact": 3,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 2
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.041096,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.027397,
+          "varied_ending": 0.027397
+        }
+      },
+      "A:m4/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.027397
+        }
+      },
+      "A:m5-6/m1-2": {
+        "counts": {
+          "exact": 44,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 6
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.60274,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.082192
+        }
+      },
+      "A:m5-6/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 9
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.123288
+        }
+      },
+      "A:m5/m1": {
+        "counts": {
+          "exact": 50,
+          "inversion": 0,
+          "rhythmic_variation": 1,
+          "sequence": 2,
+          "varied_ending": 5
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.684932,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.013699,
+          "sequence": 0.027397,
+          "varied_ending": 0.068493
+        }
+      },
+      "A:m5/m2": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 6
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.027397,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.082192
+        }
+      },
+      "A:m5/m3": {
+        "counts": {
+          "exact": 9,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 4
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.123288,
+          "inversion": 0.013699,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.027397,
+          "varied_ending": 0.054795
+        }
+      },
+      "A:m5/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.013699
+        }
+      },
+      "A:m6/m1": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 4
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.013699,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.054795
+        }
+      },
+      "A:m6/m2": {
+        "counts": {
+          "exact": 45,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 7
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.616438,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.09589
+        }
+      },
+      "A:m6/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 3
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.013699,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.013699,
+          "varied_ending": 0.041096
+        }
+      },
+      "A:m6/m4": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.013699,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m6/m5": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 3,
+          "varied_ending": 6
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.013699,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.041096,
+          "varied_ending": 0.082192
+        }
+      },
+      "A:m7-8/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.041096
+        }
+      },
+      "A:m7-8/m3-4": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 12
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.027397,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.164384
+        }
+      },
+      "A:m7-8/m5-6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.041096
+        }
+      },
+      "A:m7/m1": {
+        "counts": {
+          "exact": 3,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 3,
+          "varied_ending": 2
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.041096,
+          "inversion": 0.013699,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.041096,
+          "varied_ending": 0.027397
+        }
+      },
+      "A:m7/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.027397
+        }
+      },
+      "A:m7/m3": {
+        "counts": {
+          "exact": 14,
+          "inversion": 2,
+          "rhythmic_variation": 0,
+          "sequence": 3,
+          "varied_ending": 16
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.191781,
+          "inversion": 0.027397,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.041096,
+          "varied_ending": 0.219178
+        }
+      },
+      "A:m7/m4": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 1
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.013699,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.013699,
+          "varied_ending": 0.013699
+        }
+      },
+      "A:m7/m5": {
+        "counts": {
+          "exact": 3,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 3,
+          "varied_ending": 2
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.041096,
+          "inversion": 0.013699,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.041096,
+          "varied_ending": 0.027397
+        }
+      },
+      "A:m7/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.041096
+        }
+      },
+      "A:m8/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.027397
+        }
+      },
+      "A:m8/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 5
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.068493
+        }
+      },
+      "A:m8/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m8/m4": {
+        "counts": {
+          "exact": 3,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.041096,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.041096
+        }
+      },
+      "A:m8/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.027397
+        }
+      },
+      "A:m8/m6": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 4
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.013699,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.054795
+        }
+      },
+      "A:m8/m7": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 73,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.013699
+        }
+      },
+      "B:m1-2/A:m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.013889
+        }
+      },
+      "B:m1-2/A:m7-8": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.013889
+        }
+      },
+      "B:m1/A:m1": {
+        "counts": {
+          "exact": 1,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 5
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.013889,
+          "inversion": 0.013889,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.013889,
+          "varied_ending": 0.069444
+        }
+      },
+      "B:m2/A:m2": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.027778,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.013889
+        }
+      },
+      "B:m2/m1": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 4,
+          "varied_ending": 3
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.013889,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.055556,
+          "varied_ending": 0.041667
+        }
+      },
+      "B:m3-4/A:m3-4": {
+        "counts": {
+          "exact": 4,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 4
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.055556,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m3-4/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 16
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.222222
+        }
+      },
+      "B:m3/A:m3": {
+        "counts": {
+          "exact": 8,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.111111,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.013889
+        }
+      },
+      "B:m3/m1": {
+        "counts": {
+          "exact": 16,
+          "inversion": 3,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 8
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.222222,
+          "inversion": 0.041667,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.027778,
+          "varied_ending": 0.111111
+        }
+      },
+      "B:m3/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 3
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.027778,
+          "varied_ending": 0.041667
+        }
+      },
+      "B:m4/A:m4": {
+        "counts": {
+          "exact": 6,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 5
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.083333,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.027778,
+          "varied_ending": 0.069444
+        }
+      },
+      "B:m4/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 0
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.013889,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m4/m2": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 3
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.013889,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.013889,
+          "varied_ending": 0.041667
+        }
+      },
+      "B:m4/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 4
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.027778,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m5-6/A:m5-6": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.013889,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5-6/m1-2": {
+        "counts": {
+          "exact": 34,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 11
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.472222,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.013889,
+          "varied_ending": 0.152778
+        }
+      },
+      "B:m5-6/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 14
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.194444
+        }
+      },
+      "B:m5/A:m5": {
+        "counts": {
+          "exact": 1,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 4
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.013889,
+          "inversion": 0.013889,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.013889,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m5/m1": {
+        "counts": {
+          "exact": 45,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 3,
+          "varied_ending": 3
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.625,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.041667,
+          "varied_ending": 0.041667
+        }
+      },
+      "B:m5/m2": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 3,
+          "varied_ending": 2
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.013889,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.041667,
+          "varied_ending": 0.027778
+        }
+      },
+      "B:m5/m3": {
+        "counts": {
+          "exact": 14,
+          "inversion": 2,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 4
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.194444,
+          "inversion": 0.027778,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.027778,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m5/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/A:m6": {
+        "counts": {
+          "exact": 6,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.083333,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/m1": {
+        "counts": {
+          "exact": 3,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 3,
+          "varied_ending": 3
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.041667,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.041667,
+          "varied_ending": 0.041667
+        }
+      },
+      "B:m6/m2": {
+        "counts": {
+          "exact": 36,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 12
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.5,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.027778,
+          "varied_ending": 0.166667
+        }
+      },
+      "B:m6/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 3,
+          "varied_ending": 2
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.013889,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.041667,
+          "varied_ending": 0.027778
+        }
+      },
+      "B:m6/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 5
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.013889,
+          "varied_ending": 0.069444
+        }
+      },
+      "B:m6/m5": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 5,
+          "varied_ending": 2
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.027778,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.069444,
+          "varied_ending": 0.027778
+        }
+      },
+      "B:m7-8/A:m7-8": {
+        "counts": {
+          "exact": 12,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 10
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.166667,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.138889
+        }
+      },
+      "B:m7-8/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 6
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "B:m7-8/m3-4": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 15
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.027778,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.208333
+        }
+      },
+      "B:m7-8/m5-6": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 7
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.013889,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.097222
+        }
+      },
+      "B:m7/A:m7": {
+        "counts": {
+          "exact": 22,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 1
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.305556,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.027778,
+          "varied_ending": 0.013889
+        }
+      },
+      "B:m7/m1": {
+        "counts": {
+          "exact": 6,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 3
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.083333,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.013889,
+          "varied_ending": 0.041667
+        }
+      },
+      "B:m7/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 2
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.013889,
+          "varied_ending": 0.027778
+        }
+      },
+      "B:m7/m3": {
+        "counts": {
+          "exact": 17,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 3,
+          "varied_ending": 11
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.236111,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.041667,
+          "varied_ending": 0.152778
+        }
+      },
+      "B:m7/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 1
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.027778,
+          "varied_ending": 0.013889
+        }
+      },
+      "B:m7/m5": {
+        "counts": {
+          "exact": 8,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 2
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.111111,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.027778,
+          "varied_ending": 0.027778
+        }
+      },
+      "B:m7/m6": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 1
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.013889,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.013889,
+          "varied_ending": 0.013889
+        }
+      },
+      "B:m8/A:m8": {
+        "counts": {
+          "exact": 16,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 15
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.222222,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.208333
+        }
+      },
+      "B:m8/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 4
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m8/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.041667
+        }
+      },
+      "B:m8/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m4": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 4
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.027778,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m8/m5": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.013889,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.041667
+        }
+      },
+      "B:m8/m6": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 4
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.013889,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m8/m7": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 72,
+        "rates": {
+          "exact": 0.013889,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m2/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m3-4/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.25
+        }
+      },
+      "C:m3/m1": {
+        "counts": {
+          "exact": 3,
+          "inversion": 0,
+          "rhythmic_variation": 1,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.25,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.083333,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m3/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m4/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m4/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m4/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m5-6/m1-2": {
+        "counts": {
+          "exact": 4,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.333333,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.25
+        }
+      },
+      "C:m5-6/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 4
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.333333
+        }
+      },
+      "C:m5/m1": {
+        "counts": {
+          "exact": 7,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 0
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.583333,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.166667,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m5/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m5/m3": {
+        "counts": {
+          "exact": 4,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.333333,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m5/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m6/m1": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.083333,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m6/m2": {
+        "counts": {
+          "exact": 5,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.416667,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.25
+        }
+      },
+      "C:m6/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m6/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m6/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.083333,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m7-8/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m7-8/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.166667
+        }
+      },
+      "C:m7-8/m5-6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m7/m1": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.083333,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m7/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m7/m3": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 3
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.166667,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.083333,
+          "varied_ending": 0.25
+        }
+      },
+      "C:m7/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m7/m5": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.083333,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.083333,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m7/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m8/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m8/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m8/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m8/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.083333
+        }
+      },
+      "C:m8/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m8/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.166667
+        }
+      },
+      "C:m8/m7": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 12,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m2/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m3-4/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.5
+        }
+      },
+      "D:m3/m1": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.5,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m3/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m4/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m4/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.5
+        }
+      },
+      "D:m4/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m5-6/m1-2": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m5-6/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.5
+        }
+      },
+      "D:m5/m1": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m5/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m5/m3": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.5,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m5/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m6/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m6/m2": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m6/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m6/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.5
+        }
+      },
+      "D:m6/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7-8/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7-8/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.5
+        }
+      },
+      "D:m7-8/m5-6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.5
+        }
+      },
+      "D:m7/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7/m3": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.5,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.5
+        }
+      },
+      "D:m7/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.5
+        }
+      },
+      "D:m7/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m7": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 2,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      }
+    },
+    "tunes": 88
+  },
+  "schema_version": 1,
+  "tradition": "quebecoise",
+  "type": "jig"
+}

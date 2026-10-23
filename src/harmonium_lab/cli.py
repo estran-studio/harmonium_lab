@@ -80,6 +80,12 @@ def main(argv: list[str] | None = None) -> int:
     p_trad.add_argument("--type", required=True, help="Tune type (reel, jig, waltz, ...)")
     p_trad.add_argument("--corpus", default="corpus/trad", help="Corpus root (tunes/<type>/*.abc)")
     p_trad.add_argument("--output", "-o", required=True, help="Output profile JSON path")
+    p_structure = subparsers.add_parser("trad-structure", help="Measure motifs, phrases and rhythms against real tunes (DS-T9)")
+    p_structure.add_argument("--corpus", required=True, help="Corpus root (tunes/<type>/*.abc)")
+    p_structure.add_argument("--type", required=True, choices=["reel", "jig", "waltz", "march", "hornpipe"])
+    p_structure.add_argument("--generated", help="Directory of engine MIDI exports and record-truth JSON")
+    p_structure.add_argument("--output", default="target/structure", help="Reports root")
+    p_structure.add_argument("--references", default="references/structure", help="Versioned statistics root")
     # trad-compare: generated engine MIDIs vs type profile (D6)
     p_cmp = subparsers.add_parser("trad-compare", help="Compare generated MIDIs to a trad type profile")
     p_cmp.add_argument("--generated", nargs="+", required=True, help="Engine .mid dir or files")
@@ -188,6 +194,16 @@ def main(argv: list[str] | None = None) -> int:
             return cmd_trad_render(args)
         elif args.command == "trad-profile":
             return cmd_trad_profile(args)
+        elif args.command == "trad-structure":
+            from .trad.structure_report import run_structure
+
+            destination = run_structure(
+                Path(args.corpus), args.type,
+                Path(args.generated) if args.generated else None,
+                Path(args.output), Path(args.references),
+            )
+            print(f"Structure : {destination / 'report.md'} ; {destination / 'stats.json'}")
+            return 0
         elif args.command == "trad-compare":
             return cmd_trad_compare(args)
         elif args.command == "blindtest":
