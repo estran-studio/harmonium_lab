@@ -86,6 +86,12 @@ def main(argv: list[str] | None = None) -> int:
     p_structure.add_argument("--generated", help="Directory of engine MIDI exports and record-truth JSON")
     p_structure.add_argument("--output", default="target/structure", help="Reports root")
     p_structure.add_argument("--references", default="references/structure", help="Versioned statistics root")
+    p_ornaments = subparsers.add_parser("trad-ornaments", help="Measure written ABC ornaments by tradition, position and source (DS-T10)")
+    p_ornaments.add_argument("--corpus-root", default="corpus", help="Parent of trad/, acadienne/, britannique_coloniale/")
+    p_ornaments.add_argument("--tradition", default="all", choices=["all", "quebecoise", "acadienne", "britannique_coloniale"])
+    p_ornaments.add_argument("--type", default=None, help="Optional tune type filter")
+    p_ornaments.add_argument("--output", default="target/ornaments", help="Report and derived events directory")
+    p_ornaments.add_argument("--references", default="references/ornaments", help="Versioned aggregate statistics")
     # trad-compare: generated engine MIDIs vs type profile (D6)
     p_cmp = subparsers.add_parser("trad-compare", help="Compare generated MIDIs to a trad type profile")
     p_cmp.add_argument("--generated", nargs="+", required=True, help="Engine .mid dir or files")
@@ -203,6 +209,15 @@ def main(argv: list[str] | None = None) -> int:
                 Path(args.output), Path(args.references),
             )
             print(f"Structure : {destination / 'report.md'} ; {destination / 'stats.json'}")
+            return 0
+        elif args.command == "trad-ornaments":
+            from .trad.ornaments import run_ornaments
+
+            report = run_ornaments(
+                Path(args.corpus_root), Path(args.output), Path(args.references),
+                args.tradition, args.type,
+            )
+            print(f"Ornements : {report}")
             return 0
         elif args.command == "trad-compare":
             return cmd_trad_compare(args)

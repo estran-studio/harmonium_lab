@@ -294,9 +294,14 @@ def _first_voice_lines(body: list[str]) -> list[str]:
             continue
         if re.match(r"^[A-Za-z]:", line):  # w:, W:, P:, Q:, M: … : pas de musique
             continue
-        if current is not None and current != first_voice:
-            continue
-        out.append(line.rstrip().removesuffix("\\"))
+        # Une ligne peut alterner [V:1] et [V:2] ; même sélection que V:.
+        for chunk in re.split(r"(\[V:[^\]]*\])", line):
+            inline = re.fullmatch(r"\[V:\s*(\S+).*?\]", chunk)
+            if inline:
+                current = inline.group(1)
+                first_voice = first_voice or current
+            elif current is None or current == first_voice:
+                out.append(chunk.rstrip().removesuffix("\\"))
     return out
 
 

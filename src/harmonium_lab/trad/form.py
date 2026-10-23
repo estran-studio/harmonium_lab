@@ -41,6 +41,8 @@ from .abcnorm import (
 _TOKEN = re.compile(
     r"""
     (?P<inline>\[[A-Za-z]:[^\]]*\])
+  | (?P<grace>\{[^}]*\})
+  | (?P<decoration>![^!]*!|\+[^+]*\+|[~T.H])
   | (?P<bar>::|:+\|?|\|:+|\[?\||\|+|\|)(?P<bvolta>\s*\d[\d,\-]*)?
   | (?P<voltabr>\[?\|\d[\d,\-]*|\[\d[\d,\-]*)
   | (?P<chordanno>"(?P<symbol>[^"]*)")
@@ -53,7 +55,6 @@ _TOKEN = re.compile(
     re.VERBOSE,
 )
 _CHORD_NOTE = re.compile(r"([\^_=]*)([A-Ga-g])([,']*)(\d*(?:/\d*)*)")
-_DECOR = [re.compile(r"![^!]*!"), re.compile(r"\+[^+]+\+"), re.compile(r"\{[^}]*\}")]
 
 _FRENCH_MODES = {
     "majeur": "ionian",
@@ -76,6 +77,7 @@ class Segment:
     bar_before: str = ""  # symbole de barre d'ouverture ("", "|", "|:", ...)
     volta_before: int | None = None  # n° de fin ([1, [2, |2, :|2...)
 
+    marks: list[tuple[int, str]] = field(default_factory=list)
 
 @dataclass
 class FormPlan:
@@ -98,6 +100,9 @@ class FormPlan:
     pickup: Fraction = Fraction(0)
     cause: str | None = None
     source: str = "abc"
+    # Provenance écrite, sans multiplier les marques par les reprises.
+    segments: list[Segment] = field(default_factory=list)
+    bar_sources: list[list[tuple[int, Fraction]]] = field(default_factory=list)
 
 
 _CHORDLIKE = re.compile(r"^[A-G][#b]?(m(?!aj)|maj|min|dim|aug|sus|[0-9/]|$)")
@@ -145,8 +150,6 @@ def _pc(letter: str, acc: str) -> int:
 def _tokenize(body: list[str], signature: dict[str, int], unit: Fraction) -> list[Segment]:
     """Corps ABC -> segments (notes en fractions de ronde, hauteurs MIDI)."""
     text = " ".join(_first_voice_lines(body))
-    for rx in _DECOR:
-        text = rx.sub(" ", text)
 
     segments: list[Segment] = [Segment()]
     accidentals: dict[tuple[str, str], int] = {}
@@ -154,6 +157,7 @@ def _tokenize(body: list[str], signature: dict[str, int], unit: Fraction) -> lis
     next_factor = Fraction(1)
     pending_tie: tuple[int, Fraction] | None = None  # (midi, durée cumulée)
     offset = Fraction(0)
+    pending_marks: list[str] = []
 
     def pitch_of(acc: str, letter: str, octv: str) -> int:
         base = _PC[letter.upper()] + (60 if letter.isupper() else 72)
@@ -184,6 +188,11 @@ def _tokenize(body: list[str], signature: dict[str, int], unit: Fraction) -> lis
         if tuplet_left > 0:
             d *= tuplet_ratio
             tuplet_left -= 1
+        if pending_tie is not None and midi != pending_tie[0]:
+            flush_tie()
+        if midi is not None:
+            cur().marks.extend((len(cur().notes), kind) for kind in pending_marks)
+        pending_marks.clear()
         if midi is None:
             flush_tie()
             cur().notes.append((offset, d, None))
@@ -210,11 +219,25 @@ def _tokenize(body: list[str], signature: dict[str, int], unit: Fraction) -> lis
         accidentals = {}
         next_factor = Fraction(1)
         offset = Fraction(0)
+        pending_marks.clear()
         segments.append(Segment(bar_before=symbol, volta_before=volta))
 
     for m in _TOKEN.finditer(text):
         if m.group("inline") is not None:
             continue
+        elif m.group("grace") is not None:
+            count = len(_CHORD_NOTE.findall(m.group("grace")[1:-1]))
+            if count:
+                pending_marks.append("grace_single" if count == 1 else "grace_multiple")
+        elif m.group("decoration") is not None:
+            name = m.group("decoration").strip("!+")
+            kind = {
+                "~": "roll", "roll": "roll", "turn": "turn",
+                "T": "trill", "trill": "trill", ".": "staccato",
+                "staccato": "staccato", "H": "fermata", "fermata": "fermata",
+            }.get(name)
+            if kind:
+                pending_marks.append(kind)
         elif m.group("bar") is not None:
             new_bar(m.group("bar"), _volta_group(m.group("bvolta")))
         elif m.group("voltabr") is not None:
@@ -229,10 +252,14 @@ def _tokenize(body: list[str], signature: dict[str, int], unit: Fraction) -> lis
             q = int(m.group("tq")) if m.group("tq") else _TUPLET_Q.get(p, 2)
             r = int(m.group("tr")) if m.group("tr") else p
             tuplet_left, tuplet_ratio = r, Fraction(q, p)
+            if p == 3 and r == 3:
+                pending_marks.append("triplet")
         elif m.group("chord") is not None:
             inner = _CHORD_NOTE.findall(m.group("chordbody"))
             if inner:
                 top = max(pitch_of(a, ltr, o) for a, ltr, o, _ in inner)
+                if len(inner) >= 2:
+                    pending_marks.append("double_stop" if len(inner) == 2 else "chord")
                 push(_length(inner[0][3]) * _length(m.group("clen")) * unit, top)
         elif m.group("note") is not None:
             push(
@@ -454,6 +481,7 @@ def analyze_form(text: str) -> FormPlan:
     eighth = Fraction(1, 8)
     bars: list[tuple[list[tuple[Fraction, Fraction, int | None]], list[tuple[Fraction, str]], int, bool]] = []
     pass_bars: list[list[int]] = []
+    bar_sources: list[list[tuple[int, Fraction]]] = []
     for pi, ids in enumerate(passes):
         cur: list[int] = []
         seq = list(ids)
@@ -463,6 +491,7 @@ def analyze_form(text: str) -> FormPlan:
             notes = [(o / eighth, d / eighth, p) for o, d, p in seg.notes]
             chords = [(o / eighth, s) for o, s in seg.chords]
             full = seg.dur == measure_len
+            sources = [(si, Fraction(0))]
             # Complétion du dernier segment partiel par la levée.
             if pk is not None and si == seq[-1] and 0 < seg.dur < measure_len:
                 need = measure_len - seg.dur
@@ -472,7 +501,9 @@ def analyze_form(text: str) -> FormPlan:
                     notes = notes + [(o / eighth + shift, d / eighth, p) for o, d, p in tseg.notes]
                     chords = chords + [(o / eighth + shift, s) for o, s in tseg.chords]
                     full = True
+                    sources.append((pk, shift))
             bars.append((notes, chords, pi, full))
+            bar_sources.append(sources)
             cur.append(len(bars) - 1)
         pass_bars.append(cur)
 
@@ -490,12 +521,14 @@ def analyze_form(text: str) -> FormPlan:
                 nb_shifted = [(o + span_a, d, p) for o, d, p in nb]
                 cb_shifted = [(o + span_a, s) for o, s in cb]
                 bars[a[-1]] = (na + nb_shifted, ca + cb_shifted, pa, True)
+                bar_sources[a[-1]].extend((si, shift + span_a) for si, shift in bar_sources[b[0]])
                 merged[b[0]] = True
     bars = [b for i, b in enumerate(bars) if not merged[i]]
     pass_bars = [[i for i in pb if not merged[i]] for pb in pass_bars]
     # Réindexe après filtrage.
     kept = [i for i, m in enumerate(merged) if not m]
     remap = {old: new for new, old in enumerate(kept)}
+    bar_sources = [bar_sources[i] for i in kept]
     pass_bars = [[remap[i] for i in pb] for pb in pass_bars]
 
     # Signatures de contenu (hauteurs, attaques, durées).
@@ -581,6 +614,8 @@ def analyze_form(text: str) -> FormPlan:
         pickup=pickup_8,
         cause=cause,
         source="abc",
+        segments=segments,
+        bar_sources=bar_sources,
     )
 
 

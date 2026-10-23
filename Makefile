@@ -7,7 +7,7 @@ GENERATED_DIR := ../harmonium/harmonium_core/target/generated_music
 REPORTS_DIR := target/quality_reports
 TRAD_DIR := corpus/trad
 
-.PHONY: setup corpus profiles trad-corpus trad-render trad-profiles check-cells profile-draft test lab-export suite gate clean help trad-sf2 feet-preview engine-tunes engine-reels
+.PHONY: setup corpus profiles trad-corpus trad-render trad-profiles trad-ornaments check-cells profile-draft test lab-export suite gate clean help trad-sf2 feet-preview engine-tunes engine-reels
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
@@ -38,6 +38,10 @@ profiles: setup ## Build reference profiles from corpus MIDI files
 			--output "$(REFS_DIR)/$$cat/profile.json"; \
 	done
 	@echo "All profiles built."
+
+CORPUS_ROOT ?= corpus
+trad-ornaments: setup ## Mesurer les ornements écrits ABC par tradition, position et source (DS-T10)
+	$(LAB) trad-ornaments --corpus-root $(CORPUS_ROOT)
 
 trad-profiles: setup ## Build trad type profiles from corpus/* (DS-T3/D5/DS-T6)
 	@if [ -d corpus/trad/tunes ]; then \
