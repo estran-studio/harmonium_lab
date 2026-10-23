@@ -568,3 +568,150 @@ optionnels absents), dont 21 cas dédiés aux types, contexte, levées,
 reprises, voltas, changements de voix, triolets avec silence et agrégation.
 Le `PYTHONPATH` sélectionne ce worktree quand le venv est partagé.
 
+
+## DS-T9b — références britanniques régénérées après la correction du parseur
+
+Suite de la note « Effet de bord sur le parseur commun » de DS-T10. Tout est
+mesuré avec le code actuel de `trad/form.py` sur les trois caches locaux
+(2 059 ABC, sans réseau). Aucun ABC, MIDI ni incipit n'est copié ; le dépôt
+moteur n'est pas modifié.
+
+### Artefacts régénérés et vérifiés
+
+Dépendent de `analyze_form`/`abcnorm` : `references/structure/*.json` (12),
+`references/trad-*/profile.json` (14) et `references/ornaments/*.json` (18).
+Les 44 fichiers versionnés hors références jazz/ambiance ont été régénérés vers
+un dossier de travail et comparés aux fichiers du dépôt :
+
+| Famille | Commande | Résultat |
+|---|---|---|
+| structure britannique reel, jig, waltz, hornpipe | `trad-structure --corpus corpus/britannique_coloniale --type T` | **régénérés** (4) |
+| profils `trad-britannique_coloniale-{reel,jig,waltz,hornpipe}` | `trad-profile --type T --corpus corpus/britannique_coloniale` | **régénérés** (4) |
+| structure march britannique, 3 acadiennes, 4 québécoises | idem | bloc `real` **identique octet pour octet** (8 fichiers) : non réécrits |
+| profils march britannique, 3 acadiens, 6 québécois | `trad-profile` | **identiques** (10) |
+| ornements, 18 fichiers | `trad-ornaments` | **identiques** : DS-T10 utilisait déjà le parseur corrigé |
+
+Les cinq fichiers de structure qui portent aussi une comparaison moteur
+(`deviations`, `generated`) ne sont pas réécrits : leur `real` n'a pas changé, et
+`trad-structure` sans `--generated` effacerait cette comparaison. Les rapports
+`target/structure/*/report.md` et `synthese.md` ne sont pas versionnés (`target/`
+est gitignoré) ; la synthèse porte sur des exports moteur et seule la marche
+britannique, inchangée, y figure.
+
+Empreintes SHA-256 avant/après de chacun des 44 fichiers : `specs/001-trad-dataset/ds-t9b-empreintes.txt`.
+Seuls les 8 fichiers listés comme régénérés diffèrent ; les 36 autres, y compris
+toutes les références acadiennes, québécoises et la marche britannique, sont identiques.
+Corpus : 2 059/2 059 SHA-256 ABC égaux aux manifestes versionnés ; manifestes
+du cache identiques à ceux du dépôt ; aucune écriture dans le corpus.
+
+Reproduction (venv partagé, code du worktree) :
+
+```bash
+export PYTHONPATH=$PWD/src; C=/chemin/vers/harmonium_lab/corpus
+for t in reel jig waltz hornpipe; do
+  .venv/bin/python -m harmonium_lab.cli trad-structure --corpus $C/britannique_coloniale --type $t
+  .venv/bin/python -m harmonium_lab.cli trad-profile --type $t --corpus $C/britannique_coloniale \
+    --output references/trad-britannique_coloniale-$t/profile.json
+done
+.venv/bin/python /chemin/vers/harmonium/specs/011-phase3-phrase/measure_endings.py \
+  --lab-root <racine avec src/ et corpus/> --output endings.json   # lecture seule côté moteur
+```
+
+Pour les « anciennes » valeurs : références `HEAD` avant DS-T9b, et
+`measure_endings.py` avec `src/` extrait de `59fa4a1^` (avant la correction). Cette
+exécution retrouve exactement les effectifs publiés dans P3-T2 (ex. reel 564
+parties appariées, 414/48/102 puis 437/41/86).
+
+### Ancien → nouveau, par type britannique
+
+Taux du **réel** en %, tels que le moteur les consomme (poids de phrase P3-T1,
+repos de cadence, copie entre parties). Seules les tailles de lot changent
+vraiment : reel 16 airs touchés, jig 20, waltz 9, hornpipe 2, march 0.
+
+| Indicateur (réel, %) | reel | jig | hornpipe | waltz | march |
+|---|---:|---:|---:|---:|---:|
+| m.5–6 = m.1–2 | 34.7 → 35.0 | 37.3 → 37.4 | 47.2 → 46.9 | 6.0 → 5.6 | 20.5 → 20.5 |
+| paires « a b a c » | 20.3 → 20.4 | 22.8 → 23.1 | 32.8 → 32.8 | 3.6 → 3.4 | 5.1 → 5.1 |
+| paires « a b c d » | 40.4 → 40.0 | 37.6 → 38.3 | 27.2 → 28.1 | 66.1 → 66.7 | 48.7 → 48.7 |
+| copie A:m.5 = m.1 | 63.6 → 64.2 | 74.3 → 74.0 | 84.7 → 85.0 | 20.4 → 20.0 | 52.9 → 52.9 |
+| copie A:m.6 = m.2 | 48.9 → 49.6 | 52.7 → 53.4 | 74.6 → 75.0 | 12.2 → 14.0 | 29.4 → 29.4 |
+| copie B:m.5 = m.1 | 48.3 → 48.2 | 49.7 → 48.7 | 44.1 → 42.6 | 12.2 → 11.8 | 33.3 → 33.3 |
+| copie B:m.6 = m.2 | 37.7 → 37.4 | 33.2 → 32.9 | 28.8 → 27.9 | 6.1 → 5.9 | 16.7 → 16.7 |
+| copie entre parties B:m.7 = A:m.7 | 33.1 → 33.4 | 34.5 → 35.0 | 42.1 → 43.1 | 4.3 → 6.1 | 47.1 → 47.1 |
+| repos tonique A:m.4 | 5.3 → 5.3 | 1.7 → 1.9 | 0.0 → 0.0 | 12.2 → 12.0 | 5.9 → 5.9 |
+| repos tonique A:m.8 | 16.0 → 15.8 | 13.3 → 12.9 | 6.8 → 6.7 | 4.1 → 2.0 | 41.2 → 41.2 |
+| repos tonique B:m.4 | 5.1 → 5.0 | 1.4 → 1.7 | 5.1 → 4.9 | 10.2 → 9.8 | 11.1 → 11.1 |
+| repos tonique B:m.8 | 18.3 → 18.1 | 18.2 → 17.8 | 8.5 → 8.2 | 8.2 → 11.8 | 50.0 → 50.0 |
+| finale longue A:m.4 | 44.5 → 44.4 | 10.3 → 10.6 | 18.6 → 18.3 | 79.6 → 76.0 | 35.3 → 35.3 |
+| finale longue A:m.8 | 55.2 → 54.6 | 19.7 → 19.3 | 33.9 → 33.3 | 79.6 → 80.0 | 64.7 → 64.7 |
+| finale longue B:m.4 | 48.3 → 47.7 | 22.4 → 22.1 | 23.7 → 23.0 | 81.6 → 82.4 | 55.6 → 55.6 |
+| finale longue B:m.8 | 55.0 → 54.5 | 24.5 → 23.8 | 23.7 → 23.0 | 77.6 → 78.4 | 66.7 → 66.7 |
+| croches continues (mesures) | 16.0 → 16.1 | 34.5 → 34.3 | 31.1 → 31.3 | 3.2 → 3.1 | 8.1 → 8.1 |
+| entropie rythmique (bits) | 5.32 → 5.31 | 3.12 → 3.12 | 4.63 → 4.62 | 3.15 → 3.13 | 5.19 → 5.19 |
+| airs analysés (positionnables) | 491 (413) → 491 (416) | 355 (306) → 355 (316) | 78 (61) → 78 (63) | 60 (51) → 60 (52) | 25 (18) → 25 (18) |
+| parties A/B/… (total) | 961 → 982 | 707 → 737 | 125 → 128 | 168 → 177 | 39 → 39 |
+
+Secondes fins, note **écrite** de la dernière mesure (tonique/quinte/autre,
+effectifs, `measure_endings.py` de P3-T2 relancé sans modification) :
+
+| Passe (tonique/quinte/autre) | reel | jig | hornpipe | waltz | march |
+|---|---:|---:|---:|---:|---:|
+| toutes parties, 1re fin | 414/48/102 → 420/52/104 | 333/31/74 → 342/31/77 | 61/3/9 → 64/3/9 | 8/11/9 → 8/14/9 | 23/2/2 → 23/2/2 |
+| toutes parties, fin finale | 437/41/86 → 443/45/88 | 346/33/59 → 356/33/61 | 62/4/7 → 65/4/7 | 15/7/6 → 16/7/8 | 23/2/2 → 23/2/2 |
+| A 8 mes., 1re fin | 238/20/46 → 245/22/46 | 202/12/36 → 210/12/38 | 44/3/4 → 45/3/4 | 4/6/5 → 4/8/5 | 11/2/1 → 11/2/1 |
+| A 8 mes., fin finale → `second_ending` A | 243/19/42 → 250/21/42 | 205/15/30 → 213/15/32 | 45/3/3 → 46/3/3 | 7/4/4 → 7/4/6 | 11/2/1 → 11/2/1 |
+| B 8 mes., 1re fin | 119/18/27 → 121/19/27 | 94/13/26 → 96/13/27 | 11/0/1 → 12/0/1 | 1/3/2 → 1/4/2 | 9/0/1 → 9/0/1 |
+| B 8 mes., fin finale → `second_ending` B | 127/16/21 → 129/17/21 | 100/12/21 → 103/12/21 | 11/0/1 → 12/0/1 | 4/1/1 → 5/1/1 | 9/0/1 → 9/0/1 |
+| parties appariées (8 mesures) | 564 (492) → 576 (506) | 438 (413) → 450 (426) | 73 (67) → 76 (69) | 28 (24) → 31 (27) | 27 (24) → 27 (24) |
+
+Rythmes de cadence m.4/m.8 (distribution des motifs de mesure pleine à durées
+contrastées de `real.rhythm.cells`, base des `rhythm` des profils) :
+
+| Type | motifs | mesures conservées | écart total (points) | plus grand écart d’un motif (points) |
+|---|---:|---:|---:|---:|
+| reel | 62 → 62 | 5108 → 5157 | 0.60 | 0.17 |
+| jig | 15 → 15 | 4132 → 4165 | 0.16 | 0.10 |
+| hornpipe | 30 → 30 | 487 → 482 | 0.84 | 0.44 |
+| waltz | 15 → 15 | 1003 → 1022 | 1.01 | 0.69 |
+| march | 24 → 24 | 201 → 201 | 0.00 | 0.00 |
+
+**Écarts > 5 points** : aucun sur les taux par position, structures, repos, copies, croches ni
+rythmes de cadence (plus grand écart : 3,6 points, finale longue A:m.4 de la valse ;
+motif de cadence : 0,69 point). Seules les secondes fins de la **valse**
+(28 → 31 parties appariées ; aucun profil moteur n'en dépend) dépassent 5 points,
+avec de très petits effectifs :
+
+| Type | Indicateur | ancien | nouveau | Δ points |
+|---|---|---:|---:|---:|
+| waltz | toutes parties, 1re fin quinte | 39.3 | 45.2 | +5.9 |
+| waltz | 8 mesures, 1re fin quinte | 45.8 | 51.9 | +6.0 |
+| waltz | 8 mesures, fin finale autre | 20.8 | 25.9 | +5.1 |
+| waltz | A (8 mes.), fin finale (poids `second_ending`) tonique | 46.7 | 41.2 | -5.5 |
+| waltz | A (8 mes.), fin finale (poids `second_ending`) autre | 26.7 | 35.3 | +8.6 |
+| waltz | A (8 mes.), 1re fin quinte | 40.0 | 47.1 | +7.1 |
+| waltz | B (8 mes.), 1re fin quinte | 50.0 | 57.1 | +7.1 |
+
+Pour les trois profils moteur, le plus grand déplacement d'un poids de rôle est
+1,55 point, d'un poids de seconde fin 0,6 point, d'un motif de cadence 0,44 point.
+Reel et waltz britanniques n'ont pas de profil moteur distribué. Les références publiées
+avant la correction étaient inexactes pour 47 airs, mais les valeurs agrégées bougent peu.
+
+Autres sorties de ce même parseur, **non modifiées ici** car hors profils de phrase :
+les banques `mine-cells` des profils moteur diffèrent aussi (jig 7 cellules
+remplacées sur 180, hornpipe 5/180, reel 6/180, waltz 0/84) et les `profile.json`
+britanniques ont d'autres statistiques (cellules, accords). Le coordinateur décide
+s'il faut re-miner `cells.toml`.
+
+### Valeurs proposées pour le moteur
+
+`specs/001-trad-dataset/ds-t9b-profils-proposes.md` donne, **par champ**
+(`roles`, `second_ending`, `rhythm` de chaque `[[form.parts]]`), l'extrait TOML exact à
+substituer dans `gigue_britannique_coloniale` et `hornpipe_britannique_coloniale`.
+`marche_britannique_coloniale` : **aucun changement** (références et secondes fins
+identiques). La formule est celle de P3-T1/T2/T3 : rejouée sur les anciennes
+références, elle reproduit à l'identique tous les champs actuels des trois profils.
+Les blocs ont été substitués dans des copies temporaires et chargés par
+`harmonium-cli --export --profile` (exports MIDI produits, validation passée) ;
+Appliquer ces poids change les tirages du moteur : goldens et `TUNING_VERSION` probablement à régénérer par le coordinateur (non vérifié ici).
+
+Vérification : `PYTHONPATH=src make test VENV=<venv partagé>` : **246 réussis, 31 ignorés**.
