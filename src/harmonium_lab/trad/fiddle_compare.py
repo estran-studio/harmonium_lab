@@ -1,8 +1,9 @@
-"""Comparatif SK3 : violons seuls 8 mesures, puis guitare/basse jusqu'à 16."""
+"""Comparatif SK3/SK4 : violons seuls 8 mesures, puis guitare/basse jusqu'à 16."""
 from __future__ import annotations
 
 import argparse
 import json
+import random
 import subprocess
 import tempfile
 import unicodedata
@@ -13,7 +14,7 @@ import numpy as np
 import soundfile as sf
 from scipy import signal
 
-from .fiddle_samples import acquire
+from .fiddle_sf2 import build
 from .render import load_manifest, parse_meter_value, render_midi, require_tool
 
 RATE = 44100
@@ -176,20 +177,25 @@ def probe(font: Path, preset: dict, work: Path) -> dict:
 
 def run(manifest: Path, corpus: Path, raw: Path, output: Path, offline: bool) -> None:
     rows = [json.loads(line) for line in manifest.read_text().splitlines() if line.strip()]
-    acquire(rows, raw, offline=offline)
+    build(manifest, raw, offline=offline)
     fonts = [r for r in rows if r["status"] == "accepted"]
     if len(fonts) < 4:
         raise ValueError("au moins quatre banques autorisées requises")
     generaluser = raw / "generaluser.sf2"
+    random.Random(20261023).shuffle(fonts)
     tunes = select_tunes(load_manifest(corpus), corpus)
     output.mkdir(parents=True, exist_ok=True)
     probes = output / "probes"
     probes.mkdir(exist_ok=True)
     analysis = {"tempo_quarter": TEMPO, "velocity": VELOCITY, "rms_target": RMS_TARGET,
                 "fonts": {}, "tunes": []}
+    from .fiddle_metrics import probe_sk4
     for row in fonts:
         print(f"Tenues : {row['name']}", flush=True)
         analysis["fonts"][row["id"]] = probe(raw / (row["id"] + ".sf2"), row["selected"], probes / row["id"])
+        analysis["fonts"][row["id"]]["sk4"] = probe_sk4(
+            raw / (row["id"] + ".sf2"), row["selected"], probes / (row["id"] + "_sk4"),
+            (probes / row["id"]).with_suffix(".wav"))
     for tune in tunes:
         print(f"Reel : {tune['title']}", flush=True)
         folder = output / tune["id"]
@@ -213,7 +219,7 @@ def run(manifest: Path, corpus: Path, raw: Path, output: Path, offline: bool) ->
             tune_analysis = {"id": tune["id"], "title": tune["title"], "source": tune["url"],
                              "license": tune["license"], "solo_seconds": solo_frames/RATE, "renders": []}
             for number, row in enumerate(fonts, 1):
-                mid = folder / f"{number:02}_{row['id']}.mid"
+                mid = folder / f"{number:02}.mid"
                 comparison_stem(source, melody=True, **row["selected"], quarters_per_bar=quarters).save(mid)
                 melody = synthesize(mid, raw / (row["id"] + ".sf2"), work / "solo.wav")
                 melody = np.pad(melody[:frames], ((0, max(0, frames-len(melody))), (0, 0)))
@@ -224,7 +230,7 @@ def run(manifest: Path, corpus: Path, raw: Path, output: Path, offline: bool) ->
                 mixed = melody * gain + backing
                 if np.max(np.abs(mixed)) >= 1:
                     raise ValueError(f"écrêtage : {row['id']} ; réduire RMS_TARGET pour tous")
-                name = f"{number:02}_{row['id']}.wav"
+                name = f"{number:02}.wav"
                 sf.write(folder / name, mixed, RATE, subtype="PCM_24")
                 tune_analysis["renders"].append({"file": name, "melody_gain": gain,
                                                  "solo_rms": rms(mixed[:solo_frames]),
@@ -232,46 +238,81 @@ def run(manifest: Path, corpus: Path, raw: Path, output: Path, offline: bool) ->
             analysis["tunes"].append(tune_analysis)
     (output / "analysis.json").write_text(json.dumps(analysis, ensure_ascii=False, indent=2) + "\n")
     write_readme(output, rows, analysis)
+    mapping = ["# Correspondance privée — ne pas ouvrir avant l'écoute", "",
+               "| N° (même numéro sur les trois airs) | Violon | Licence | SF2 (octets) |",
+               "|---|---|---|---:|"]
+    mapping.extend(f"| {number:02} | {row['name']} | {row['license']} | {row['size_bytes']} |"
+                   for number, row in enumerate(fonts, 1))
+    (output / "correspondance.md").write_text("\n".join(mapping) + "\n")
     print(f"Comparatif : {output / 'README.md'}", flush=True)
 
 
 def write_readme(output: Path, rows: list[dict], analysis: dict) -> None:
-    lines = ["# Comparatif de violons libres — SK3", "",
+    lines = ["# Comparatif de violons — SK4, attaques courtes", "",
+             "Aucune écoute humaine revendiquée : mesures uniquement. Ne pas ouvrir `correspondance.md` avant l'écoute.",
              "230 à la noire ; vélocité mélodie 96 ; droit, effets reverb/chorus désactivés.",
              "8 premières mesures : violon seul ; mesures 9–16 : même guitare 24/basse 32 GeneralUser GS, sans pieds.",
              "Gain de chaque violon mesuré sur ses 8 mesures solo : RMS stéréo 0,060 (−24,44 dBFS).",
-             "Accompagnement rendu une seule fois par air, jamais renormalisé. WAV PCM 24 bits, 44,1 kHz.", "",
-             "| N° | Violon | Licence | Taille SF2 (octets) | Banque/programme (0-based) |", "|---|---|---|---:|---|"]
-    for number, row in enumerate((r for r in rows if r["status"] == "accepted"), 1):
-        p = row["selected"]
-        lines.append(f"| {number:02} | {row['name']} | {row['license']} | {row['size_bytes']} | {p['bank']}/{p['program']} |")
-    lines.extend(["", "## Airs réels (usage interne uniquement)", ""])
+             "Accompagnement rendu une seule fois par air, jamais renormalisé. WAV PCM 24 bits, 44,1 kHz.",
+             "Fichiers numérotés seuls, ordre mélangé déterministe, même numéro pour les trois reels.",
+             "Les mesures identifiées ci-dessous ne constituent pas une correspondance avec les numéros.", "",
+             "Reproduire : `make fiddle-sf2`, puis `make fiddle-compare` ; relance sans réseau : `OFFLINE=1`.",
+             "Détails de construction : `samples/fiddles/raw/build.json` ; empreintes et URLs : manifeste versionné.", "",
+             "## Airs réels (usage interne uniquement)", ""]
     for tune in analysis["tunes"]:
-        lines.append(f"- [{tune['title']}]({tune['source']}) : `{tune['id']}/` ; solo {tune['solo_seconds']:.3f} s ; {tune['license']}.")
-    lines.extend(["", "## Observations instrumentales — pas une écoute humaine", "",
-                  "Aucune écoute humaine n'est revendiquée : ces notes viennent des WAV de contrôle `probes/`.",
+        files = ", ".join(f"`{tune['id']}/{r['file']}`" for r in tune["renders"])
+        lines.append(f"- [{tune['title']}]({tune['source']}) ; solo {tune['solo_seconds']:.3f} s ; {tune['license']} : {files}.")
+    lines.extend(["", "## Méthode identique à SK3", "",
                   "Tenues G3/D4/A4/E5 de 3 s ; attaques et relâches exclues du détecteur de clic (fenêtre 0,25–2,8 s).",
-                  "Attaque = délai pour atteindre 90 % du maximum des 400 premières ms ; vibrato = modulation 4–9 Hz du fondamental (cents RMS).",
+                  "Attaque = délai pour atteindre 90 % du maximum des 400 premières ms, lissage SK3 inchangé ; vibrato = modulation 4–9 Hz du fondamental (cents RMS).",
                   "L'énergie > 8 kHz est un indice de brillance/bruit, pas une séparation certaine bruit/harmoniques.",
-                  "Clic suspect : saut > 0,02 FS et > 8× pente RMS locale sur 10 ms, tous canaux ; seuils heuristiques, pas garantie d'inaudibilité.", "",
-                  "| Violon | Attaque90 G3 (ms) | Vibrato G3 (cents RMS) | Énergie >8 kHz G3 (%) | Discontinuités sur 4 tenues |",
-                  "|---|---:|---:|---:|---:|"])
+                  "Clic suspect : saut > 0,02 FS et > 8× pente RMS locale sur 10 ms, tous canaux ; seuils heuristiques, pas garantie d'inaudibilité.",
+                  "Mesures brutes non égalisées ; l'égalisation RMS concerne uniquement les reels d'écoute.", "",
+                  "| Violon | Licence | SF2 (octets) | Attaque90 G3/A4 (ms) | Vibrato G3/A4 (cents RMS) | >8 kHz G3 (%) | Clics /4 tenues |",
+                  "|---|---|---:|---:|---:|---:|---:|"])
     for row in rows:
         if row["status"] != "accepted":
             continue
         notes = analysis["fonts"][row["id"]]["notes"]
-        first = notes[0]
+        g, a = notes[0], notes[2]
         clicks = sum(n["discontinuities"]["suspect_count"] for n in notes)
-        lines.append(f"| {row['name']} | {first['attack90_ms']} | {first['vibrato_4_9hz_cents_rms']} | {first['energy_above_8khz_pct']} | {clicks} |")
-    lines.extend(["", "## Droits et exclusions", "",
-                  "Rien n'est redistribué : SF2, ABC, MIDI et WAV restent locaux/gitignorés. Le manifeste versionné cite les sources et empreintes.",
-                  "MIT (FluidR3, MuseScore General) : conserver les notices Frank Wen / S. Christian Collins.",
-                  "CC Sampling Plus 1.0 (Sonatina) : créditer Mattias Westlund ; usage musical transformé autorisé, pas de revente de samples tels quels.",
-                  "GeneralUser : autorisation commerciale explicite, mais provenance de certains samples non garantie par son auteur.", ""])
+        lines.append(f"| {row['name']} | {row['license']} | {row['size_bytes']} | {g['attack90_ms']}/{a['attack90_ms']} | {g['vibrato_4_9hz_cents_rms']}/{a['vibrato_4_9hz_cents_rms']} | {g['energy_above_8khz_pct']} | {clicks} |")
+    lines.extend(["", "## Croches répétées et vélocité", "",
+                  "Huit croches répétées par hauteur à 230/noire (130,435 ms), gate 90 %, vélocité 96.",
+                  "Niveau à 65 ms = RMS stéréo de 55–65 ms après chaque note-on, rapporté au pic RMS 10 ms des 400 premières ms de la tenue 96.",
+                  "La moyenne des huit attaques inclut les queues des notes précédentes ; >100 % est possible, ce n'est pas une vitesse d'attaque isolée.",
+                  "Vélocités 60/110 : différence de niveau RMS et centroïde de puissance sur les 130 premières ms ;",
+                  "`analysis.json` détaille aussi chaque attaque, >8 kHz, les quatre hauteurs et la tenue 0,25–0,9 s.", "",
+                  "| Violon | Niveau65 G3/A4 (% tenue) | Δ110−60 niveau G3/A4 (dB) | Δ110−60 brillance G3/A4 (Hz) |",
+                  "|---|---:|---:|---:|"])
     for row in rows:
-        if row["status"] == "rejected":
-            lines.append(f"- **{row['name']}** — {row['license']} : {row['reason']} [Source]({row['license_source']}).")
+        if row["status"] != "accepted":
+            continue
+        sk4 = analysis["fonts"][row["id"]]["sk4"]
+        level = sk4["repeated_eighths"]
+        velocity = sk4["velocity_response"]
+        g, a = (velocity[i]["delta110_minus60"]["first130ms"] for i in (0,2))
+        lines.append(f"| {row['name']} | {level[0]['mean_held400_peak_pct']}/{level[2]['mean_held400_peak_pct']} | {g['rms_dbfs']:.2f}/{a['rms_dbfs']:.2f} | {g['centroid_hz']:.1f}/{a['centroid_hz']:.1f} |")
+    lines.extend(["", "## Construction et limites", "",
+                  "- FluidR3 MIT : copie intégrale ; preset 0/40 uniquement, enveloppe 2 ms et début avancé de 120 ms au maximum (avant la boucle). Échantillons et boucles d'origine conservés.",
+                  "- VSCO CC0 : 8 racines, zones au plus proche couvrant G3–E6, couches 0–80 piano / 81–127 forte ; silence et montée lente coupés, fondu initial 2 ms, release 35 ms.",
+                  "- Variante arco : échantillons arco p/f ; il s'agit d'une articulation raccourcie par traitement, pas d'un détaché enregistré.",
+                  "- Variante hybride : couche douce arco ; couche forte vrai transient spiccato, fondu 50 ms vers la tenue arco à 120 ms. À C6, tenue E6 transposée de −4 demi-tons.",
+                  "- Boucle VSCO 0,5–1,8 s : fondu des 50 dernières ms vers les 50 ms précédant le début ; pas de synthèse physique. Le spectre/vibrato peut changer au raccord même sans clic détecté.",
+                  "- Deux couches sans round-robin : répétition mécanique encore possible ; le passage 80/81 mérite une écoute.",
+                  "- Les mesures sont celles de FluidSynth ; le moteur utilise oxisynth, intégration et écoute humaine non effectuées.",
+                  "- SoundFont uniquement, conformément à la constitution ; aucun modèle physique nécessaire pour atteindre l'objectif d'attaque mesuré.", "",
+                  "## Droits et exclusions", "",
+                  "Rien n'est redistribué : SF2, ABC, MIDI et WAV restent locaux/gitignorés.",
+                  "MIT : conserver les notices Frank Wen / Michael Cowgill / S. Christian Collins avec les dérivés concernés.",
+                  "CC0 VSCO : Versilian Studios / Sam Gossner, crédit demandé par le README source.",
+                  "Sonatina CC Sampling Plus 1.0 : Mattias Westlund ; pas de revente de samples ni publicité hors promotion de la musique.",
+                  "GeneralUser : autorisation commerciale explicite, chaîne des droits de certains samples non garantie.", ""])
+    for row in rows:
+        lines.append(f"- **{row['name']}** — [{row['license']}]({row['license_source']}) : " +
+                     (row["reason"] if row["status"] == "rejected" else row["license_quote"]))
     (output / "README.md").write_text("\n".join(lines) + "\n")
+
 
 
 def main() -> None:

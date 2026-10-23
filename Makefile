@@ -7,7 +7,7 @@ GENERATED_DIR := ../harmonium/harmonium_core/target/generated_music
 REPORTS_DIR := target/quality_reports
 TRAD_DIR := corpus/trad
 
-.PHONY: setup corpus profiles trad-corpus trad-render trad-profiles check-cells profile-draft test lab-export suite gate clean help trad-sf2 feet-preview engine-tunes engine-reels
+.PHONY: setup corpus profiles trad-corpus trad-render trad-profiles check-cells profile-draft test lab-export suite gate clean help trad-sf2 feet-preview fiddle-samples fiddle-sf2 fiddle-compare engine-tunes engine-reels
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
@@ -103,9 +103,12 @@ trad-render: setup ## Render des airs réels à armes égales → target/trad_re
 	$(LAB) trad-render --type waltz --limit 20 $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),) $(if $(NO_FEET),--no-feet,)
 
 fiddle-samples: setup ## Télécharge les SF2 autorisées du manifeste SK3 (cache privé)
-	$(PYTHON) -m harmonium_lab.trad.fiddle_samples
+	$(PYTHON) -m harmonium_lab.trad.fiddle_samples $(if $(OFFLINE),--offline,)
 
-fiddle-compare: setup ## Trois vrais reels × violons libres → target/fiddle_compare/
+fiddle-sf2: setup ## Construit les violons SK4 (VSCO CC0, FluidR3 MIT), cache privé
+	$(PYTHON) -m harmonium_lab.trad.fiddle_sf2 $(if $(OFFLINE),--offline,)
+
+fiddle-compare: setup ## Trois vrais reels × violons SK3/SK4 anonymes → target/fiddle_compare/
 	$(PYTHON) -m harmonium_lab.trad.fiddle_compare $(if $(OFFLINE),--offline,)
 
 # ── Pieds SK1 : SoundFont podorythmie + écoute de contrôle ──

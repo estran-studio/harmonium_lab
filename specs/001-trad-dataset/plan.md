@@ -228,3 +228,162 @@ ce changement de fenêtre explique l'écart, sans modification du générateur.
 Tests : fixtures ABC courtes pour chaque transformation, `a a' b c`,
 4+4, lien A/B, triolets, silences, levées et voltas ; MIDI synthétiques pour
 gate/swing/dérive d'horloge et intros sonores. Vérification globale : `make test`.
+
+## SK4 — attaques courtes
+
+Mesures instrumentales uniquement, **aucune écoute humaine revendiquée**.
+Objectif : une croche de reel à 230/noire dure 130,435 ms ; les quatre
+banques SK3 atteignaient leur attaque90 G3 entre 247 et 356 ms. La
+constitution du moteur impose **SoundFont uniquement** : aucun modèle
+physique implémenté, ni nécessaire pour atteindre les attaques mesurées.
+Pas de modification ni de banque installée dans le repo moteur.
+
+### Sources et droits
+
+- **VSCO 2 Community Edition**, dépôt officiel Versilian Studios / Sam
+  Gossner, révision `440300901dfe9275fd84e0b7763af1f8443ae62e` :
+  [CC0-1.0](https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/LICENSE),
+  « for any purposes, including without limitation commercial purposes ».
+  Le [README source](https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Readme.txt)
+  autorise explicitement les banques personnelles commerciales et demande
+  un crédit. WAV directs, piano/forte arco et deux niveaux spiccato ;
+  pas besoin d'un convertisseur SFZ externe. Sélection avec URL et SHA256
+  de chaque WAV dans `samples/fiddles/vsco_sources.json`.
+- **FluidR3**, déjà accepté SK3, [MIT et notices de
+  provenance](https://ftp.osuosl.org/pub/musescore/soundfont/MuseScore_General/MuseScore_General_License.md) :
+  dérivation autorisée, conserver les notices Frank Wen et autres notices
+  applicables de la source. Variante économique : copie locale, instruments
+  du preset 0/40 à attaque 2 ms et début avancé de 120 ms au maximum,
+  jamais au-delà du début de boucle ; échantillons/boucles conservés.
+- **University of Iowa MIS** : [source officielle](https://theremin.music.uiowa.edu/MIS.html),
+  « may be downloaded and used for any projects, without restrictions ».
+  Commercial autorisé ; non retenu ici car la [page violon
+  2012](https://theremin.music.uiowa.edu/MISviolin2012.html) identifie arco et
+  pizzicato, mais pas de détaché/spiccato/staccato à archet. Les couches
+  dynamiques sont disponibles ; VSCO fournit déjà celles-ci et le spiccato.
+  Rejet de sélection, pas rejet juridique.
+- **Philharmonia** : [licence à la
+  source](https://philharmonia.co.uk/resources/sound-samples/) permettant la
+  musique commerciale, mais interdisant la mise à disposition « as samples
+  or as a sampler instrument ». URL ZIP directe disponible ; rejet pour une
+  SF2 embarquée dans un jeu, pas pour un rendu musical interne.
+- Pistes SF2 « fiddle » : le preset Fiddle existe dans FluidR3/MuseScore,
+  mais son nom ne prouve pas une articulation courte. Les pistes LDK1609,
+  All-Around Violin, SGM et Arachno restent rejetées pour les raisons SK3
+  conservées dans le manifeste (accès direct bloqué, origine ou droits).
+
+Le manifeste `samples/fiddles/manifest.jsonl` contient les sept candidats
+acceptés (quatre SK3 + trois dérivés SK4) et tous les rejets motivés. Seuls
+code, manifestes et mesures agrégées ci-dessous sont versionnés : **aucun
+WAV, ABC, MIDI ou SF2 redistribué**.
+
+### Construction reproductible
+
+```bash
+make setup
+make fiddle-sf2
+make fiddle-compare
+# Même construction et mêmes rendus, cache complet requis :
+make fiddle-sf2 OFFLINE=1
+make fiddle-compare OFFLINE=1
+```
+
+`src/harmonium_lab/trad/fiddle_sf2.py` réutilise les primitives RIFF du
+constructeur des pieds. Banques dans `samples/fiddles/raw/`, gitignorées ;
+rapport des zones, rognages, boucles et empreintes dans `raw/build.json`.
+Chaque source est vérifiée par SHA256 avant lecture. Un changement voulu
+du constructeur exige un réinventaire explicite :
+`.venv/bin/python -m harmonium_lab.trad.fiddle_sf2 --inventory --offline`.
+
+Les deux banques VSCO couvrent G3–E6 par huit racines, zones au plus proche
+sans trou, couches 0–80 piano / 81–127 forte. Silence et montée lente coupés
+(premier seuil 90 % du maximum RMS des 400 ms initiales), fondu initial
+2 ms, enveloppe SF2 2 ms, release 35 ms. Variante **arco raccourci** :
+échantillons arco p/f traités, pas un détaché réellement enregistré.
+Variante **hybride** : couche douce arco, couche forte avec transient
+spiccato enregistré et raccord de 50 ms vers la tenue arco à 120 ms ;
+racine C6 soutenue par E6 transposé de −4 demi-tons. Boucle 0,5–1,8 s,
+fondu des 50 dernières ms vers les 50 ms précédant le début de boucle :
+continuité de forme d'onde, sans répétition d'une queue percussive silencieuse.
+
+### Mesures
+
+Méthode SK3 strictement conservée : tenues G3/D4/A4/E5 de 3 s, attaque90
+relative au maximum des 400 premières ms avec le même lissage, vibrato du
+fondamental filtré 4–9 Hz en cents RMS, énergie >8 kHz ; discontinuités
+sur 0,25–2,8 s, saut >0,02 FS et >8 fois la pente RMS locale sur 10 ms.
+Les quatre résultats de référence complets sont identiques à SK3.
+
+| Violon | Licence | Taille SF2 (octets) | Attaque90 G3/A4 (ms) | Vibrato G3/A4 (cents RMS) | >8 kHz G3 (%) | Clics suspects /4 tenues |
+|---|---|---:|---:|---:|---:|---:|
+| GeneralUser GS 2.0.3 | GeneralUser GS v2 | 32319396 | 318,7 / 264,6 | 31,85 / 28,24 | 0,0062 | 0 |
+| FluidR3 GM2-2 | MIT | 148345256 | 247,9 / 330,5 | 38,80 / 15,60 | 0,0012 | 0 |
+| MuseScore General 0.2 | MIT | 215614036 | 247,2 / 330,5 | 37,39 / 18,47 | 0,0016 | 0 |
+| Sonatina Solo | CC Sampling Plus 1.0 | 494723490 | 355,8 / 351,5 | 20,09 / 25,43 | 0,0020 | 0 |
+| FluidR3 raccourci | MIT | 148345484 | 126,9 / 216,9 | 13,82 / 29,49 | 0,0018 | 0 |
+| VSCO arco raccourci | CC0-1.0 | 2966686 | **9,1 / 8,5** | 11,84 / 15,09 | 0,0087 | 0 |
+| VSCO hybride spiccato/arco | CC0-1.0 | 2966682 | **22,0 / 48,8** | 18,50 / 30,04 | 0,0112 | 0 |
+
+Complément : huit croches répétées par hauteur, vélocité 96, 230/noire,
+gate 90 %. Niveau à 65 ms = RMS stéréo de 55–65 ms, rapporté au pic RMS
+glissant 10 ms des 400 ms initiales de la tenue 96 ; moyenne sur huit
+attaques, queues précédentes incluses. Réponse vélocité 110−60 : niveau RMS
+et centroïde de puissance sur les premières 130 ms, sans renormalisation.
+
+| Violon | Niveau65 G3/A4 (% tenue) | Δ110−60 niveau G3/A4 (dB) | Δ110−60 brillance G3/A4 (Hz) |
+|---|---:|---:|---:|
+| GeneralUser | 51,11 / 47,15 | 11,28 / 10,54 | −149,7 / −15,7 |
+| FluidR3 | 33,54 / 40,22 | 10,46 / 10,42 | −0,6 / −4,2 |
+| MuseScore | 35,63 / 42,03 | 8,79 / 8,74 | 7,9 / −4,0 |
+| Sonatina | 22,74 / 26,22 | 10,44 / 10,46 | 9,2 / −2,1 |
+| FluidR3 raccourci | 74,57 / 69,09 | 10,45 / 10,46 | −2,6 / 0,4 |
+| VSCO arco raccourci | 96,92 / 53,95 | 24,69 / 30,46 | 184,1 / 313,2 |
+| VSCO hybride | 85,75 / 98,28 | 20,78 / 28,15 | 855,8 / 551,1 |
+
+**Conclusion mesurée** : les deux VSCO satisfont <80 ms sur G3 et A4,
+sans discontinuité détectée sur les quatre tenues. La copie FluidR3 est
+moins coûteuse à fabriquer, mais insuffisante : attaque A4 216,9 ms malgré
+le rognage ; raccourcir l'enveloppe ne supprime pas la montée enregistrée.
+Les deux couches VSCO donnent beaucoup plus de dynamique/brillance ;
+le saut de couche à 80/81 et les écarts de 21–30 dB entre 60 et 110 sont
+des **risques d'équilibre à écouter**, pas une qualité déclarée.
+L'hybride E5 atteint attaque90 à 252,6 ms : la tenue raccordée peut dépasser
+le pic du transient ; le succès G3/A4 ne s'étend pas à toute la tessiture.
+
+Vérification complémentaire réelle : G3–E6 chromatique, vélocités 60/110,
+68 tenues par nouveau candidat, fenêtres 0,25–2,8 s égalisées à RMS 0,06
+pour le détecteur ; **0 cas suspect sur 204 tenues**. Rapport local
+`target/fiddle_compare/register_check.json`. Le détecteur est heuristique :
+aucune garantie psychoacoustique d'absence de clic, ni validation à l'oreille.
+Les changements de spectre au raccord, la répétition sans round-robin et
+les différences FluidSynth/oxisynth restent à évaluer avant intégration.
+
+### Kit et vérification
+
+Kit rendu : `target/fiddle_compare/README.md` ; résultats complets
+`analysis.json` (quatre notes, chaque croche, niveaux/brillance à 60/110
+sur 0–130 ms et 0,25–0,9 s), contrôles MIDI/WAV dans `probes/`.
+Correspondance isolée dans `correspondance.md`, ordre mélangé déterministe,
+même numéro par violon sur les trois airs :
+
+- `target/fiddle_compare/saint-anne-s-reel-1-349a3efd/{01..07}.wav`
+- `target/fiddle_compare/reel-beatrice-82ea9328/{01..07}.wav`
+- `target/fiddle_compare/joys-of-quebec-a6433cbc/{01..07}.wav`
+
+Les mêmes trois reels que SK3 : 8 mesures solo (8,347823 s), puis
+8 mesures avec guitare/basse GeneralUser, sans pieds. Vérification des
+**21 WAV** : noms purement numériques, stéréo 44,1 kHz PCM24, RMS solo
+0,060 à 1e−6 près, aucun écrêtage. Accompagnement commun non renormalisé.
+Tests de téléchargement sur manifeste factice `file://`, reconstruction
+hors ligne, corruption SHA256, raccord de boucle, recouvrement des zones,
+rognage du silence et séparation des mesures de niveau/brillance.
+Vérification finale : `make test` exécuté avec connexions réseau Python
+bloquées par un garde temporaire, **225 réussis, 31 ignorés, 0 échec**
+(un avertissement librosa sur une FFT trop grande pour un extrait).
+Les deux cibles `make fiddle-sf2 OFFLINE=1` et
+`make fiddle-compare OFFLINE=1` réussissent dans l'environnement propre du
+worktree ; les trois empreintes dérivées sont reproduites à l'identique.
+Le test de silence a révélé une énergie FFT négative d'arrondi avant
+racine carrée : énergie bornée à zéro, régression conservée, sans changement
+des banques ni des mesures.
+

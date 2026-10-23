@@ -1,0 +1,261 @@
+{
+  "commit": "440300901dfe9275fd84e0b7763af1f8443ae62e",
+  "samples": [
+    {
+      "articulation": "arco",
+      "root": 55,
+      "layer": 1,
+      "file": "LLVln_ArcoVib_G3_p.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_G3_p.wav",
+      "sha256": "c52d8ef3e2882984c09da1b7c7ef40b82e997bc78cfdd380fe167bbcb94b03de"
+    },
+    {
+      "articulation": "arco",
+      "root": 55,
+      "layer": 2,
+      "file": "LLVln_ArcoVib_G3_f.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_G3_f.wav",
+      "sha256": "80bae3776b0ccd3d4774f47429e829c7764f5fe6061ff844a8affc6ac68b7899"
+    },
+    {
+      "articulation": "arco",
+      "root": 60,
+      "layer": 1,
+      "file": "LLVln_ArcoVib_C4_p.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_C4_p.wav",
+      "sha256": "592ebf4404ccafc7164c13cc543911ba9a2fe5f5e70dbb200807e2ae37b25035"
+    },
+    {
+      "articulation": "arco",
+      "root": 60,
+      "layer": 2,
+      "file": "LLVln_ArcoVib_C4_f.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_C4_f.wav",
+      "sha256": "4169605b51a72454f11bc2c34efc66c1d9993fd2b7d5f097a025ef9d3a2dbdfa"
+    },
+    {
+      "articulation": "arco",
+      "root": 64,
+      "layer": 1,
+      "file": "LLVln_ArcoVib_E4_p.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_E4_p.wav",
+      "sha256": "57c5aec0678a5d582d87ab33cd2f8954fea26ffd04c932eb6753d6a78e08736b"
+    },
+    {
+      "articulation": "arco",
+      "root": 64,
+      "layer": 2,
+      "file": "LLVln_ArcoVib_E4_f.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_E4_f.wav",
+      "sha256": "418512905f3294a23cf999f0587bf8e04d60192fe317ea8c80c150a85670eda2"
+    },
+    {
+      "articulation": "arco",
+      "root": 69,
+      "layer": 1,
+      "file": "LLVln_ArcoVib_A4_p.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_A4_p.wav",
+      "sha256": "0d05607b46b78690893006d5aa7923ac304c7fb497df1e96536dc88ac5ac487f"
+    },
+    {
+      "articulation": "arco",
+      "root": 69,
+      "layer": 2,
+      "file": "LLVln_ArcoVib_A4_f.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_A4_f.wav",
+      "sha256": "19e5374658351508a9e2c929e871a43caff41e62d5e3363ead6f88428a9ab863"
+    },
+    {
+      "articulation": "arco",
+      "root": 72,
+      "layer": 1,
+      "file": "LLVln_ArcoVib_C5_p.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_C5_p.wav",
+      "sha256": "77a2133b5f97e1ec0edb759c0c552fc3efa7caf4ce1e0a4aa22625cf4c9da130"
+    },
+    {
+      "articulation": "arco",
+      "root": 72,
+      "layer": 2,
+      "file": "LLVln_ArcoVib_C5_f.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_C5_f.wav",
+      "sha256": "af72f852ef2892233699851dacf5f8d97d446822d8eb4ce9e0ec27d5a721b118"
+    },
+    {
+      "articulation": "arco",
+      "root": 76,
+      "layer": 1,
+      "file": "LLVln_ArcoVib_E5_p.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_E5_p.wav",
+      "sha256": "c60c3bcfc64ea00ebf8d97b16f2876c892393839a017a945c5e557359b6369a4"
+    },
+    {
+      "articulation": "arco",
+      "root": 76,
+      "layer": 2,
+      "file": "LLVln_ArcoVib_E5_f.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_E5_f.wav",
+      "sha256": "5c278e263fd59650190fc58294945cd291906eb1abd8293f728a96a878d1d478"
+    },
+    {
+      "articulation": "arco",
+      "root": 81,
+      "layer": 1,
+      "file": "LLVln_ArcoVib_A5_p.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_A5_p.wav",
+      "sha256": "204834bfb91ee62d53d3b2c9e9d37928617f643922f434323508a15a70ee591c"
+    },
+    {
+      "articulation": "arco",
+      "root": 81,
+      "layer": 2,
+      "file": "LLVln_ArcoVib_A5_f.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_A5_f.wav",
+      "sha256": "0558d79d23db55c710e664e6283b62619f5a582ce261a5c082700a0d01536627"
+    },
+    {
+      "articulation": "arco",
+      "root": 88,
+      "layer": 1,
+      "file": "LLVln_ArcoVib_E6_p.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_E6_p.wav",
+      "sha256": "f1f0f8062eda1af6147852bf61b39e6b8734d4b0236737810c9d660297a34f0c"
+    },
+    {
+      "articulation": "arco",
+      "root": 88,
+      "layer": 2,
+      "file": "LLVln_ArcoVib_E6_f.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/Arco%20Vib/LLVln_ArcoVib_E6_f.wav",
+      "sha256": "8d1712f5659274a83aa90807132084559633e4817027c8a5b5f40826b3d9bc84"
+    },
+    {
+      "articulation": "spic",
+      "root": 55,
+      "layer": 1,
+      "file": "LLVln_spic_G3_v1_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_G3_v1_rr1.wav",
+      "sha256": "b9c82d49a3575fa514586b89de6f10c735dcb8a2e1c3b1408aa0715298479365"
+    },
+    {
+      "articulation": "spic",
+      "root": 55,
+      "layer": 2,
+      "file": "LLVln_spic_G3_v2_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_G3_v2_rr1.wav",
+      "sha256": "af5163b8b919a07cb85abeb1fbb2f1f124889f9b0417e4f41571f6d7588f5665"
+    },
+    {
+      "articulation": "spic",
+      "root": 60,
+      "layer": 1,
+      "file": "LLVln_spic_C4_v1_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_C4_v1_rr1.wav",
+      "sha256": "6d75b28586d150dce0f9cd4ccf649dbc125afaf43762a2f5676f3d916289963e"
+    },
+    {
+      "articulation": "spic",
+      "root": 60,
+      "layer": 2,
+      "file": "LLVln_spic_C4_v2_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_C4_v2_rr1.wav",
+      "sha256": "0071c0e2cf8ee18b6502f392015dc89ed39a6320f8a430779a50c48b1cb37f42"
+    },
+    {
+      "articulation": "spic",
+      "root": 64,
+      "layer": 1,
+      "file": "LLVln_spic_E4_v1_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_E4_v1_rr1.wav",
+      "sha256": "635445fb882ea6988a9a17fdfb4b1f461316a882475e48877e2dae9c3f57a2ab"
+    },
+    {
+      "articulation": "spic",
+      "root": 64,
+      "layer": 2,
+      "file": "LLVln_spic_E4_v2_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_E4_v2_rr1.wav",
+      "sha256": "365e59e228e7af42d9277381d16bbd088983d99190e746da6ae81f9b10cb48fe"
+    },
+    {
+      "articulation": "spic",
+      "root": 69,
+      "layer": 1,
+      "file": "LLVln_spic_A4_v1_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_A4_v1_rr1.wav",
+      "sha256": "13477c70ee092b81f2537a6624546b1eea1ffaba0cbe0a93797003ba6d862bc6"
+    },
+    {
+      "articulation": "spic",
+      "root": 69,
+      "layer": 2,
+      "file": "LLVln_spic_A4_v2_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_A4_v2_rr1.wav",
+      "sha256": "6c506b5fccacbbbadb70993ff00d77c68a185af79febb35dc7101eb616046650"
+    },
+    {
+      "articulation": "spic",
+      "root": 72,
+      "layer": 1,
+      "file": "LLVln_spic_C5_v1_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_C5_v1_rr1.wav",
+      "sha256": "72e3baa8e22c1797dbda56f4665c7808a44e6f2561bddfbb10a5171e19752015"
+    },
+    {
+      "articulation": "spic",
+      "root": 72,
+      "layer": 2,
+      "file": "LLVln_spic_C5_v2_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_C5_v2_rr1.wav",
+      "sha256": "28788d5a97438d739403627aea0f8aa42fa6582d75c4e8f4f2431cfae1cd4738"
+    },
+    {
+      "articulation": "spic",
+      "root": 76,
+      "layer": 1,
+      "file": "LLVln_spic_E5_v1_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_E5_v1_rr1.wav",
+      "sha256": "0b1887a463b3a0506fe2193ba5d6086849a603cd30dc761f5c77ff6bce658338"
+    },
+    {
+      "articulation": "spic",
+      "root": 76,
+      "layer": 2,
+      "file": "LLVln_spic_E5_v2_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_E5_v2_rr1.wav",
+      "sha256": "3c440d43b09b1a152fdf9308f4773ec8c55cea05b97ed06e50dbce1a9d2a2256"
+    },
+    {
+      "articulation": "spic",
+      "root": 81,
+      "layer": 1,
+      "file": "LLVln_spic_A5_v1_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_A5_v1_rr1.wav",
+      "sha256": "b45eef0c35bfd1a213f23d5f992b8569e5dc4e12814c05e2bb0e5f61ec79b8f6"
+    },
+    {
+      "articulation": "spic",
+      "root": 81,
+      "layer": 2,
+      "file": "LLVln_spic_A5_v2_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_A5_v2_rr1.wav",
+      "sha256": "c5e2925c08a55dd4329c74bc9f0b832dac4e405d04da7a19fd790bff71f02162"
+    },
+    {
+      "articulation": "spic",
+      "root": 84,
+      "layer": 1,
+      "file": "LLVln_spic_C6_v1_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_C6_v1_rr1.wav",
+      "sha256": "5322bc5235a2c1433a2fb00e0dea8f33620bfa37ebad3198398f119eaa8c0fbf"
+    },
+    {
+      "articulation": "spic",
+      "root": 84,
+      "layer": 2,
+      "file": "LLVln_spic_C6_v2_rr1.wav",
+      "url": "https://raw.githubusercontent.com/sgossner/VSCO-2-CE/440300901dfe9275fd84e0b7763af1f8443ae62e/Strings/Solo%20Violin/spic/LLVln_spic_C6_v2_rr1.wav",
+      "sha256": "4e854001e15c23bb42e1f9dd8ca276e54d279423c6dd94db9bab6385cd9641c2"
+    }
+  ]
+}
