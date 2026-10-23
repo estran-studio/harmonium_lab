@@ -1,0 +1,7484 @@
+{
+  "corpus_version": "2026-10-22+1025\nmanifest_sha256: 76e0b75ca7c89422cf9e452af1676a0456d8d7a4836882321f5e1bb3a2e735a1",
+  "deviations": [
+    {
+      "domain": "répétition",
+      "engine": 0.95,
+      "gap_points": 89.8718,
+      "label": "structure de paires « a b a c »",
+      "proposed_rule": {
+        "letters": "a b a c",
+        "operation": "pair_structure",
+        "probability": 0.051282
+      },
+      "real": 0.051282,
+      "real_opportunities": 39
+    },
+    {
+      "domain": "répétition",
+      "engine": 1.0,
+      "gap_points": 79.4872,
+      "label": "m.5-6 reprennent exactement m.1-2",
+      "proposed_rule": {
+        "operation": "opening_reprise",
+        "probability": 0.205128
+      },
+      "real": 0.205128,
+      "real_opportunities": 39
+    },
+    {
+      "domain": "phrases",
+      "engine": 0.7,
+      "gap_points": 67.4359,
+      "label": "question-réponse 4+4 avec repos tonique final",
+      "proposed_rule": {
+        "operation": "antecedent_consequent",
+        "probability": 0.025641
+      },
+      "real": 0.025641,
+      "real_opportunities": 39
+    },
+    {
+      "domain": "répétition",
+      "engine": 0.0,
+      "gap_points": -48.7179,
+      "label": "structure de paires « a b c d »",
+      "proposed_rule": {
+        "letters": "a b c d",
+        "operation": "pair_structure",
+        "probability": 0.487179
+      },
+      "real": 0.487179,
+      "real_opportunities": 39
+    },
+    {
+      "domain": "rythme",
+      "engine": 0.3125,
+      "gap_points": 19.7838,
+      "label": "cellule en croches « 2 2 2 2 »",
+      "proposed_rule": {
+        "durations_eighths": "2 2 2 2",
+        "operation": "rhythm_cell",
+        "probability": 0.114662
+      },
+      "real": 0.114662,
+      "real_opportunities": 532
+    }
+  ],
+  "engine_profile": "marche_britannique_coloniale",
+  "generated": {
+    "engine_alignment_scores": {
+      "16": 20
+    },
+    "engine_ambiguous_alignments": 3,
+    "engine_intro_bars": {
+      "1": 20
+    },
+    "errors": {},
+    "excluded_engine_tail_bars": 80,
+    "excluded_non8_parts": 0,
+    "input_files": 20,
+    "key_sources": {
+      "export-log": 20
+    },
+    "parts": {
+      "A": 20,
+      "B": 20,
+      "all": 40
+    },
+    "phrases": {
+      "ab_pairs": 20,
+      "antecedent_consequent_count": 28,
+      "antecedent_consequent_rate": 0.7,
+      "b_reuses_a_ending_rate": 0.05,
+      "opening_reprise_count": 40,
+      "opening_reprise_rate": 1.0,
+      "parts": 40,
+      "rest_by_position": {
+        "A:m1": {
+          "bars": 20,
+          "long_final_rate": 0.1,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.05
+        },
+        "A:m2": {
+          "bars": 20,
+          "long_final_rate": 0.15,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.1,
+          "tonic_final_rate": 0.25
+        },
+        "A:m3": {
+          "bars": 20,
+          "long_final_rate": 0.05,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.25
+        },
+        "A:m4": {
+          "bars": 20,
+          "long_final_rate": 0.2,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "A:m5": {
+          "bars": 20,
+          "long_final_rate": 0.1,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.05
+        },
+        "A:m6": {
+          "bars": 20,
+          "long_final_rate": 0.15,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.1,
+          "tonic_final_rate": 0.25
+        },
+        "A:m7": {
+          "bars": 20,
+          "long_final_rate": 0.05,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.15
+        },
+        "A:m8": {
+          "bars": 20,
+          "long_final_rate": 0.75,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.75,
+          "tonic_final_rate": 0.75
+        },
+        "B:m1": {
+          "bars": 20,
+          "long_final_rate": 0.1,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.2
+        },
+        "B:m2": {
+          "bars": 20,
+          "long_final_rate": 0.05,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.05,
+          "tonic_final_rate": 0.25
+        },
+        "B:m3": {
+          "bars": 20,
+          "long_final_rate": 0.2,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.05,
+          "tonic_final_rate": 0.2
+        },
+        "B:m4": {
+          "bars": 20,
+          "long_final_rate": 0.25,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "B:m5": {
+          "bars": 20,
+          "long_final_rate": 0.1,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.2
+        },
+        "B:m6": {
+          "bars": 20,
+          "long_final_rate": 0.05,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.05,
+          "tonic_final_rate": 0.25
+        },
+        "B:m7": {
+          "bars": 20,
+          "long_final_rate": 0.2,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.05,
+          "tonic_final_rate": 0.1
+        },
+        "B:m8": {
+          "bars": 20,
+          "long_final_rate": 0.65,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.65,
+          "tonic_final_rate": 0.7
+        }
+      }
+    },
+    "positional_tunes": 20,
+    "rhythm": {
+      "accents": {
+        "count": 0,
+        "onsets": [],
+        "tunes_with_marks": 0
+      },
+      "cells": [
+        {
+          "count": 100,
+          "pattern": "2 2 2 2",
+          "share": 0.3125
+        },
+        {
+          "count": 31,
+          "pattern": "2 1 1 2 2",
+          "share": 0.096875
+        },
+        {
+          "count": 24,
+          "pattern": "2 2 4",
+          "share": 0.075
+        },
+        {
+          "count": 21,
+          "pattern": "4 2 1 1",
+          "share": 0.065625
+        },
+        {
+          "count": 20,
+          "pattern": "2 2 1 1 1 1",
+          "share": 0.0625
+        },
+        {
+          "count": 16,
+          "pattern": "4 4",
+          "share": 0.05
+        },
+        {
+          "count": 13,
+          "pattern": "1 1 1 1 2 1 1",
+          "share": 0.040625
+        },
+        {
+          "count": 11,
+          "pattern": "2 1 1 2 1 1",
+          "share": 0.034375
+        },
+        {
+          "count": 11,
+          "pattern": "2 4 2",
+          "share": 0.034375
+        },
+        {
+          "count": 10,
+          "pattern": "1 1 1 1 1 1 1 1",
+          "share": 0.03125
+        },
+        {
+          "count": 9,
+          "pattern": "2 2 2 1 1",
+          "share": 0.028125
+        },
+        {
+          "count": 9,
+          "pattern": "4 2 2",
+          "share": 0.028125
+        },
+        {
+          "count": 8,
+          "pattern": "1 3 4",
+          "share": 0.025
+        },
+        {
+          "count": 8,
+          "pattern": "3 1 4",
+          "share": 0.025
+        },
+        {
+          "count": 7,
+          "pattern": "1 3 3 1",
+          "share": 0.021875
+        },
+        {
+          "count": 7,
+          "pattern": "8",
+          "share": 0.021875
+        },
+        {
+          "count": 6,
+          "pattern": "3 1 2 2",
+          "share": 0.01875
+        },
+        {
+          "count": 4,
+          "pattern": "6 1 1",
+          "share": 0.0125
+        },
+        {
+          "count": 2,
+          "pattern": "2 2 3 1",
+          "share": 0.00625
+        },
+        {
+          "count": 2,
+          "pattern": "6 2",
+          "share": 0.00625
+        },
+        {
+          "count": 1,
+          "pattern": "3 1 2 1 1",
+          "share": 0.003125
+        }
+      ],
+      "continuous_eighth_rate": 0.03125,
+      "counts": {
+        "adjacent_pairs": 1021,
+        "bars": 320,
+        "continuous_eighth_bars": 10,
+        "notes": 1341,
+        "repeated_notes": 110,
+        "repeated_triplets": 0,
+        "syncopated_bars": 11,
+        "syncopated_notes": 11,
+        "tunes_with_accents": 0
+      },
+      "entropy_bits": 3.634472,
+      "long_note_onsets": [
+        {
+          "count": 59,
+          "pattern": "0",
+          "share": 0.468254
+        },
+        {
+          "count": 56,
+          "pattern": "4",
+          "share": 0.444444
+        },
+        {
+          "count": 11,
+          "pattern": "2",
+          "share": 0.087302
+        }
+      ],
+      "repeated_note_rate": 0.107738,
+      "syncopated_bar_rate": 0.034375,
+      "top20": [
+        {
+          "count": 100,
+          "pattern": "2 2 2 2",
+          "share": 0.3125
+        },
+        {
+          "count": 31,
+          "pattern": "2 1 1 2 2",
+          "share": 0.096875
+        },
+        {
+          "count": 24,
+          "pattern": "2 2 4",
+          "share": 0.075
+        },
+        {
+          "count": 21,
+          "pattern": "4 2 1 1",
+          "share": 0.065625
+        },
+        {
+          "count": 20,
+          "pattern": "2 2 1 1 1 1",
+          "share": 0.0625
+        },
+        {
+          "count": 16,
+          "pattern": "4 4",
+          "share": 0.05
+        },
+        {
+          "count": 13,
+          "pattern": "1 1 1 1 2 1 1",
+          "share": 0.040625
+        },
+        {
+          "count": 11,
+          "pattern": "2 1 1 2 1 1",
+          "share": 0.034375
+        },
+        {
+          "count": 11,
+          "pattern": "2 4 2",
+          "share": 0.034375
+        },
+        {
+          "count": 10,
+          "pattern": "1 1 1 1 1 1 1 1",
+          "share": 0.03125
+        },
+        {
+          "count": 9,
+          "pattern": "2 2 2 1 1",
+          "share": 0.028125
+        },
+        {
+          "count": 9,
+          "pattern": "4 2 2",
+          "share": 0.028125
+        },
+        {
+          "count": 8,
+          "pattern": "1 3 4",
+          "share": 0.025
+        },
+        {
+          "count": 8,
+          "pattern": "3 1 4",
+          "share": 0.025
+        },
+        {
+          "count": 7,
+          "pattern": "1 3 3 1",
+          "share": 0.021875
+        },
+        {
+          "count": 7,
+          "pattern": "8",
+          "share": 0.021875
+        },
+        {
+          "count": 6,
+          "pattern": "3 1 2 2",
+          "share": 0.01875
+        },
+        {
+          "count": 4,
+          "pattern": "6 1 1",
+          "share": 0.0125
+        },
+        {
+          "count": 2,
+          "pattern": "2 2 3 1",
+          "share": 0.00625
+        },
+        {
+          "count": 2,
+          "pattern": "6 2",
+          "share": 0.00625
+        }
+      ],
+      "vocabulary_size": 21
+    },
+    "sequence_shifts": {
+      "A:m7/m4": [
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ],
+      "B:m1/A:m1": [
+        {
+          "count": 2,
+          "pattern": "-2",
+          "share": 1.0
+        }
+      ],
+      "B:m2/A:m2": [
+        {
+          "count": 1,
+          "pattern": "-2",
+          "share": 1.0
+        }
+      ],
+      "B:m3/m1": [
+        {
+          "count": 1,
+          "pattern": "2",
+          "share": 1.0
+        }
+      ],
+      "B:m5/A:m5": [
+        {
+          "count": 2,
+          "pattern": "-2",
+          "share": 1.0
+        }
+      ],
+      "B:m5/m3": [
+        {
+          "count": 1,
+          "pattern": "-2",
+          "share": 1.0
+        }
+      ],
+      "B:m6/A:m6": [
+        {
+          "count": 1,
+          "pattern": "-2",
+          "share": 1.0
+        }
+      ],
+      "B:m7/m4": [
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ],
+      "B:m8/A:m8": [
+        {
+          "count": 1,
+          "pattern": "7",
+          "share": 1.0
+        }
+      ]
+    },
+    "similarity": {
+      "A": {
+        "joint": [
+          [
+            1.0,
+            0.02875,
+            0.026667,
+            0.0125,
+            1.0,
+            0.02875,
+            0.0825,
+            0.0375
+          ],
+          [
+            0.02875,
+            1.0,
+            0.026667,
+            0.008333,
+            0.02875,
+            1.0,
+            0.045,
+            0.02
+          ],
+          [
+            0.026667,
+            0.026667,
+            1.0,
+            0.033333,
+            0.026667,
+            0.026667,
+            0.103333,
+            0.025
+          ],
+          [
+            0.0125,
+            0.008333,
+            0.033333,
+            1.0,
+            0.0125,
+            0.008333,
+            0.026667,
+            0.020833
+          ],
+          [
+            1.0,
+            0.02875,
+            0.026667,
+            0.0125,
+            1.0,
+            0.02875,
+            0.0825,
+            0.0375
+          ],
+          [
+            0.02875,
+            1.0,
+            0.026667,
+            0.008333,
+            0.02875,
+            1.0,
+            0.045,
+            0.02
+          ],
+          [
+            0.0825,
+            0.045,
+            0.103333,
+            0.026667,
+            0.0825,
+            0.045,
+            1.0,
+            0.068333
+          ],
+          [
+            0.0375,
+            0.02,
+            0.025,
+            0.020833,
+            0.0375,
+            0.02,
+            0.068333,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.115476,
+            0.148214,
+            0.136786,
+            1.0,
+            0.115476,
+            0.184643,
+            0.204167
+          ],
+          [
+            0.115476,
+            1.0,
+            0.168452,
+            0.102381,
+            0.115476,
+            1.0,
+            0.119167,
+            0.119583
+          ],
+          [
+            0.148214,
+            0.168452,
+            1.0,
+            0.129464,
+            0.148214,
+            0.168452,
+            0.185952,
+            0.051667
+          ],
+          [
+            0.136786,
+            0.102381,
+            0.129464,
+            1.0,
+            0.136786,
+            0.102381,
+            0.134405,
+            0.045833
+          ],
+          [
+            1.0,
+            0.115476,
+            0.148214,
+            0.136786,
+            1.0,
+            0.115476,
+            0.184643,
+            0.204167
+          ],
+          [
+            0.115476,
+            1.0,
+            0.168452,
+            0.102381,
+            0.115476,
+            1.0,
+            0.119167,
+            0.119583
+          ],
+          [
+            0.184643,
+            0.119167,
+            0.185952,
+            0.134405,
+            0.184643,
+            0.119167,
+            1.0,
+            0.101667
+          ],
+          [
+            0.204167,
+            0.119583,
+            0.051667,
+            0.045833,
+            0.204167,
+            0.119583,
+            0.101667,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.154583,
+            0.133333,
+            0.091667,
+            1.0,
+            0.154583,
+            0.382976,
+            0.328333
+          ],
+          [
+            0.154583,
+            1.0,
+            0.225833,
+            0.113333,
+            0.154583,
+            1.0,
+            0.1825,
+            0.15
+          ],
+          [
+            0.133333,
+            0.225833,
+            1.0,
+            0.166667,
+            0.133333,
+            0.225833,
+            0.246667,
+            0.200833
+          ],
+          [
+            0.091667,
+            0.113333,
+            0.166667,
+            1.0,
+            0.091667,
+            0.113333,
+            0.188333,
+            0.183333
+          ],
+          [
+            1.0,
+            0.154583,
+            0.133333,
+            0.091667,
+            1.0,
+            0.154583,
+            0.382976,
+            0.328333
+          ],
+          [
+            0.154583,
+            1.0,
+            0.225833,
+            0.113333,
+            0.154583,
+            1.0,
+            0.1825,
+            0.15
+          ],
+          [
+            0.382976,
+            0.1825,
+            0.246667,
+            0.188333,
+            0.382976,
+            0.1825,
+            1.0,
+            0.295833
+          ],
+          [
+            0.328333,
+            0.15,
+            0.200833,
+            0.183333,
+            0.328333,
+            0.15,
+            0.295833,
+            1.0
+          ]
+        ]
+      },
+      "B": {
+        "joint": [
+          [
+            1.0,
+            0.025,
+            0.020833,
+            0.091667,
+            1.0,
+            0.025,
+            0.068333,
+            0.1
+          ],
+          [
+            0.025,
+            1.0,
+            0.008333,
+            0.008333,
+            0.025,
+            1.0,
+            0.068333,
+            0.029167
+          ],
+          [
+            0.020833,
+            0.008333,
+            1.0,
+            0.008333,
+            0.020833,
+            0.008333,
+            0.1325,
+            0.05
+          ],
+          [
+            0.091667,
+            0.008333,
+            0.008333,
+            1.0,
+            0.091667,
+            0.008333,
+            0.008333,
+            0.020833
+          ],
+          [
+            1.0,
+            0.025,
+            0.020833,
+            0.091667,
+            1.0,
+            0.025,
+            0.068333,
+            0.1
+          ],
+          [
+            0.025,
+            1.0,
+            0.008333,
+            0.008333,
+            0.025,
+            1.0,
+            0.068333,
+            0.029167
+          ],
+          [
+            0.068333,
+            0.068333,
+            0.1325,
+            0.008333,
+            0.068333,
+            0.068333,
+            1.0,
+            0.070833
+          ],
+          [
+            0.1,
+            0.029167,
+            0.05,
+            0.020833,
+            0.1,
+            0.029167,
+            0.070833,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.142917,
+            0.097619,
+            0.1825,
+            1.0,
+            0.142917,
+            0.179643,
+            0.2075
+          ],
+          [
+            0.142917,
+            1.0,
+            0.05,
+            0.055833,
+            0.142917,
+            1.0,
+            0.14506,
+            0.1
+          ],
+          [
+            0.097619,
+            0.05,
+            1.0,
+            0.09881,
+            0.097619,
+            0.05,
+            0.165,
+            0.116667
+          ],
+          [
+            0.1825,
+            0.055833,
+            0.09881,
+            1.0,
+            0.1825,
+            0.055833,
+            0.069643,
+            0.0625
+          ],
+          [
+            1.0,
+            0.142917,
+            0.097619,
+            0.1825,
+            1.0,
+            0.142917,
+            0.179643,
+            0.2075
+          ],
+          [
+            0.142917,
+            1.0,
+            0.05,
+            0.055833,
+            0.142917,
+            1.0,
+            0.14506,
+            0.1
+          ],
+          [
+            0.179643,
+            0.14506,
+            0.165,
+            0.069643,
+            0.179643,
+            0.14506,
+            1.0,
+            0.1575
+          ],
+          [
+            0.2075,
+            0.1,
+            0.116667,
+            0.0625,
+            0.2075,
+            0.1,
+            0.1575,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.225833,
+            0.249167,
+            0.333333,
+            1.0,
+            0.225833,
+            0.29,
+            0.42
+          ],
+          [
+            0.225833,
+            1.0,
+            0.175476,
+            0.126667,
+            0.225833,
+            1.0,
+            0.19131,
+            0.18
+          ],
+          [
+            0.249167,
+            0.175476,
+            1.0,
+            0.205833,
+            0.249167,
+            0.175476,
+            0.334167,
+            0.245
+          ],
+          [
+            0.333333,
+            0.126667,
+            0.205833,
+            1.0,
+            0.333333,
+            0.126667,
+            0.193333,
+            0.225
+          ],
+          [
+            1.0,
+            0.225833,
+            0.249167,
+            0.333333,
+            1.0,
+            0.225833,
+            0.29,
+            0.42
+          ],
+          [
+            0.225833,
+            1.0,
+            0.175476,
+            0.126667,
+            0.225833,
+            1.0,
+            0.19131,
+            0.18
+          ],
+          [
+            0.29,
+            0.19131,
+            0.334167,
+            0.193333,
+            0.29,
+            0.19131,
+            1.0,
+            0.356667
+          ],
+          [
+            0.42,
+            0.18,
+            0.245,
+            0.225,
+            0.42,
+            0.18,
+            0.356667,
+            1.0
+          ]
+        ]
+      },
+      "all": {
+        "joint": [
+          [
+            1.0,
+            0.026875,
+            0.02375,
+            0.052083,
+            1.0,
+            0.026875,
+            0.075417,
+            0.06875
+          ],
+          [
+            0.026875,
+            1.0,
+            0.0175,
+            0.008333,
+            0.026875,
+            1.0,
+            0.056667,
+            0.024583
+          ],
+          [
+            0.02375,
+            0.0175,
+            1.0,
+            0.020833,
+            0.02375,
+            0.0175,
+            0.117917,
+            0.0375
+          ],
+          [
+            0.052083,
+            0.008333,
+            0.020833,
+            1.0,
+            0.052083,
+            0.008333,
+            0.0175,
+            0.020833
+          ],
+          [
+            1.0,
+            0.026875,
+            0.02375,
+            0.052083,
+            1.0,
+            0.026875,
+            0.075417,
+            0.06875
+          ],
+          [
+            0.026875,
+            1.0,
+            0.0175,
+            0.008333,
+            0.026875,
+            1.0,
+            0.056667,
+            0.024583
+          ],
+          [
+            0.075417,
+            0.056667,
+            0.117917,
+            0.0175,
+            0.075417,
+            0.056667,
+            1.0,
+            0.069583
+          ],
+          [
+            0.06875,
+            0.024583,
+            0.0375,
+            0.020833,
+            0.06875,
+            0.024583,
+            0.069583,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.129196,
+            0.122917,
+            0.159643,
+            1.0,
+            0.129196,
+            0.182143,
+            0.205833
+          ],
+          [
+            0.129196,
+            1.0,
+            0.109226,
+            0.079107,
+            0.129196,
+            1.0,
+            0.132113,
+            0.109792
+          ],
+          [
+            0.122917,
+            0.109226,
+            1.0,
+            0.114137,
+            0.122917,
+            0.109226,
+            0.175476,
+            0.084167
+          ],
+          [
+            0.159643,
+            0.079107,
+            0.114137,
+            1.0,
+            0.159643,
+            0.079107,
+            0.102024,
+            0.054167
+          ],
+          [
+            1.0,
+            0.129196,
+            0.122917,
+            0.159643,
+            1.0,
+            0.129196,
+            0.182143,
+            0.205833
+          ],
+          [
+            0.129196,
+            1.0,
+            0.109226,
+            0.079107,
+            0.129196,
+            1.0,
+            0.132113,
+            0.109792
+          ],
+          [
+            0.182143,
+            0.132113,
+            0.175476,
+            0.102024,
+            0.182143,
+            0.132113,
+            1.0,
+            0.129583
+          ],
+          [
+            0.205833,
+            0.109792,
+            0.084167,
+            0.054167,
+            0.205833,
+            0.109792,
+            0.129583,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.190208,
+            0.19125,
+            0.2125,
+            1.0,
+            0.190208,
+            0.336488,
+            0.374167
+          ],
+          [
+            0.190208,
+            1.0,
+            0.200655,
+            0.12,
+            0.190208,
+            1.0,
+            0.186905,
+            0.165
+          ],
+          [
+            0.19125,
+            0.200655,
+            1.0,
+            0.18625,
+            0.19125,
+            0.200655,
+            0.290417,
+            0.222917
+          ],
+          [
+            0.2125,
+            0.12,
+            0.18625,
+            1.0,
+            0.2125,
+            0.12,
+            0.190833,
+            0.204167
+          ],
+          [
+            1.0,
+            0.190208,
+            0.19125,
+            0.2125,
+            1.0,
+            0.190208,
+            0.336488,
+            0.374167
+          ],
+          [
+            0.190208,
+            1.0,
+            0.200655,
+            0.12,
+            0.190208,
+            1.0,
+            0.186905,
+            0.165
+          ],
+          [
+            0.336488,
+            0.186905,
+            0.290417,
+            0.190833,
+            0.336488,
+            0.186905,
+            1.0,
+            0.32625
+          ],
+          [
+            0.374167,
+            0.165,
+            0.222917,
+            0.204167,
+            0.374167,
+            0.165,
+            0.32625,
+            1.0
+          ]
+        ]
+      }
+    },
+    "structures": [
+      {
+        "count": 38,
+        "pattern": "a b a c",
+        "share": 0.95,
+        "tune_count": 20,
+        "tune_share": 1.0
+      },
+      {
+        "count": 2,
+        "pattern": "a b a b'",
+        "share": 0.05,
+        "tune_count": 2,
+        "tune_share": 0.1
+      }
+    ],
+    "transformations": {
+      "A:m2/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m3-4/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m3/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m3/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m4/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m4/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m4/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m5-6/m1-2": {
+        "counts": {
+          "exact": 20,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m5-6/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m5/m1": {
+        "counts": {
+          "exact": 20,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m5/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m5/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m5/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m6/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m6/m2": {
+        "counts": {
+          "exact": 20,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m6/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m6/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m6/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7-8/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7-8/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m7-8/m5-6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m7/m3": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.05,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.05,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m8/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m8/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m8/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m8/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m8/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "A:m8/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m8/m7": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.1
+        }
+      },
+      "B:m1-2/A:m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.15
+        }
+      },
+      "B:m1-2/A:m7-8": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m1/A:m1": {
+        "counts": {
+          "exact": 3,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.15,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.1,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m2/A:m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.05,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m2/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m3-4/A:m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.1
+        }
+      },
+      "B:m3-4/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m3/A:m3": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.1,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m3/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.05,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m3/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m4/A:m4": {
+        "counts": {
+          "exact": 4,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.2,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m4/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.1
+        }
+      },
+      "B:m4/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m4/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5-6/A:m5-6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.15
+        }
+      },
+      "B:m5-6/m1-2": {
+        "counts": {
+          "exact": 20,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5-6/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5/A:m5": {
+        "counts": {
+          "exact": 3,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.15,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.1,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m5/m1": {
+        "counts": {
+          "exact": 20,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m5/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.05,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.1
+        }
+      },
+      "B:m6/A:m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.05,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m6/m2": {
+        "counts": {
+          "exact": 20,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 1.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m6/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m7-8/A:m7-8": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m7-8/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7-8/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m7-8/m5-6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7/A:m7": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.05,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m7/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.1
+        }
+      },
+      "B:m7/m3": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.05,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.05,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      },
+      "B:m7/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.1
+        }
+      },
+      "B:m8/A:m8": {
+        "counts": {
+          "exact": 6,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 5
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.3,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.05,
+          "varied_ending": 0.25
+        }
+      },
+      "B:m8/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m7": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 20,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.05
+        }
+      }
+    },
+    "tunes": 20
+  },
+  "manifest_sha256": "76e0b75ca7c89422cf9e452af1676a0456d8d7a4836882321f5e1bb3a2e735a1",
+  "method": {
+    "accents": "Seulement !accent!, !emphasis!, !marcato!, !>! et leurs formes +...+ ; positions notées, pas d'accent métrique inventé. Absence de marque ≠ absence d'accent joué. MIDI non comparable sur cette annotation.",
+    "engine": "MIDI canal 0 ; attaques absolues ramenées à la croche puis redécoupées en mesures (banques moteur en croches ; swing et petite dérive d'horloge neutralisés), durées jusqu'à l'attaque suivante ou la barre : gate exclu, silences internes assimilés à des tenues. Début AABB recherché parmi les décalages 0..4 par identité A/A et B/B (au moins 14 mesures sur 16) ; meilleur score, premier candidat en cas d'égalité explicitement comptée. Intros et queue exclues, première passe A et B. Tonalité/mode : record-truth si renseigné, sinon journal .log du même export, sinon estimation signalée.",
+    "letters": "Quatre paires de mesures : même lettre si identique ; apostrophe si transformation d'un prototype antérieur, sinon nouvelle lettre. Parts d'airs : présence au moins une fois, non exclusive entre structures.",
+    "limits": "Ornements et voix secondaires exclus par le parseur existant ; doubles-cordes : note supérieure. Changements de métrique non gérés. Résultats descriptifs de transcriptions, ni indépendance des sources ni inférence historique garanties.",
+    "parts": "Première passe de chaque lettre ABC, première fin ; parties de 8 mesures seulement pour les positions. Formes croches : mesures pleines jouées pour le rythme, sans positions ni lien A/B.",
+    "phrase": "Indice 4+4, pas une preuve musicologique : m1-2 = m5-6, dernière note de m4 non tonique, dernière note de m8 tonique tenue au moins un temps. Repos = note finale >= un temps ; cadence tonique = repos sur tonique.",
+    "pitch": "Pas diatoniques relatifs à la tonique, octaves conservées ; altération chromatique conservée séparément (aucun chromatisme fusionné).",
+    "rhythm": "Durées exactes en croches (fractions), silences explicites reconstruits entre notes ; entropie Shannon en bits par mesure. Croches continues = grille pleine de notes de durée 1, sans silence.",
+    "similarity": "Proportion de jetons identiques au même rang, divisée par le nombre maximal de notes ; matrices moyennes sur les parties, pas sur les reprises.",
+    "syncopation": "Note attaquée hors temps métrique et tenue au-delà du prochain temps (2 croches en 4/4 et 3/4, 4 en 2/2, 3 en 6/8). Pas une mesure du swing ni de la qualité des pieds.",
+    "transformations": "Tests non exclusifs ; exact = hauteurs/attaques/durées ; séquence = décalage diatonique constant non nul, rythme égal ; inversion = intervalles diatoniques opposés (au moins deux, dont un non nul), rythme égal ; fin variée = première moitié temporelle identique et non vide, suite différente ; variation rythmique = hauteurs identiques et rythme différent."
+  },
+  "real": {
+    "engine_alignment_scores": {},
+    "engine_ambiguous_alignments": 0,
+    "engine_intro_bars": {},
+    "errors": {},
+    "excluded_engine_tail_bars": 0,
+    "excluded_non8_parts": 11,
+    "input_files": 25,
+    "key_sources": {
+      "abc": 25
+    },
+    "parts": {
+      "A": 17,
+      "B": 18,
+      "C": 3,
+      "D": 1,
+      "all": 39
+    },
+    "phrases": {
+      "ab_pairs": 17,
+      "antecedent_consequent_count": 1,
+      "antecedent_consequent_rate": 0.025641,
+      "b_reuses_a_ending_rate": 0.058824,
+      "opening_reprise_count": 8,
+      "opening_reprise_rate": 0.205128,
+      "parts": 39,
+      "rest_by_position": {
+        "A:m1": {
+          "bars": 17,
+          "long_final_rate": 0.411765,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.176471
+        },
+        "A:m2": {
+          "bars": 17,
+          "long_final_rate": 0.235294,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.235294
+        },
+        "A:m3": {
+          "bars": 17,
+          "long_final_rate": 0.176471,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.117647
+        },
+        "A:m4": {
+          "bars": 17,
+          "long_final_rate": 0.352941,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.058824,
+          "tonic_final_rate": 0.058824
+        },
+        "A:m5": {
+          "bars": 17,
+          "long_final_rate": 0.235294,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.352941
+        },
+        "A:m6": {
+          "bars": 17,
+          "long_final_rate": 0.294118,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.058824,
+          "tonic_final_rate": 0.294118
+        },
+        "A:m7": {
+          "bars": 17,
+          "long_final_rate": 0.235294,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.058824,
+          "tonic_final_rate": 0.058824
+        },
+        "A:m8": {
+          "bars": 17,
+          "long_final_rate": 0.647059,
+          "rest_after_final_rate": 0.058824,
+          "tonic_cadence_rate": 0.411765,
+          "tonic_final_rate": 0.411765
+        },
+        "B:m1": {
+          "bars": 18,
+          "long_final_rate": 0.388889,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "B:m2": {
+          "bars": 18,
+          "long_final_rate": 0.388889,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.055556,
+          "tonic_final_rate": 0.111111
+        },
+        "B:m3": {
+          "bars": 18,
+          "long_final_rate": 0.277778,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.055556,
+          "tonic_final_rate": 0.166667
+        },
+        "B:m4": {
+          "bars": 18,
+          "long_final_rate": 0.555556,
+          "rest_after_final_rate": 0.055556,
+          "tonic_cadence_rate": 0.111111,
+          "tonic_final_rate": 0.111111
+        },
+        "B:m5": {
+          "bars": 18,
+          "long_final_rate": 0.166667,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.222222
+        },
+        "B:m6": {
+          "bars": 18,
+          "long_final_rate": 0.222222,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.277778
+        },
+        "B:m7": {
+          "bars": 18,
+          "long_final_rate": 0.166667,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "B:m8": {
+          "bars": 18,
+          "long_final_rate": 0.666667,
+          "rest_after_final_rate": 0.111111,
+          "tonic_cadence_rate": 0.5,
+          "tonic_final_rate": 0.611111
+        },
+        "C:m1": {
+          "bars": 3,
+          "long_final_rate": 1.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "C:m2": {
+          "bars": 3,
+          "long_final_rate": 0.333333,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "C:m3": {
+          "bars": 3,
+          "long_final_rate": 0.333333,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "C:m4": {
+          "bars": 3,
+          "long_final_rate": 0.333333,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.333333,
+          "tonic_final_rate": 0.333333
+        },
+        "C:m5": {
+          "bars": 3,
+          "long_final_rate": 0.333333,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "C:m6": {
+          "bars": 3,
+          "long_final_rate": 0.333333,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "C:m7": {
+          "bars": 3,
+          "long_final_rate": 0.333333,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "C:m8": {
+          "bars": 3,
+          "long_final_rate": 1.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.666667,
+          "tonic_final_rate": 0.666667
+        },
+        "D:m1": {
+          "bars": 1,
+          "long_final_rate": 1.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "D:m2": {
+          "bars": 1,
+          "long_final_rate": 1.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "D:m3": {
+          "bars": 1,
+          "long_final_rate": 1.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "D:m4": {
+          "bars": 1,
+          "long_final_rate": 1.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "D:m5": {
+          "bars": 1,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 1.0
+        },
+        "D:m6": {
+          "bars": 1,
+          "long_final_rate": 1.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "D:m7": {
+          "bars": 1,
+          "long_final_rate": 0.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 0.0,
+          "tonic_final_rate": 0.0
+        },
+        "D:m8": {
+          "bars": 1,
+          "long_final_rate": 1.0,
+          "rest_after_final_rate": 0.0,
+          "tonic_cadence_rate": 1.0,
+          "tonic_final_rate": 1.0
+        }
+      }
+    },
+    "positional_tunes": 18,
+    "rhythm": {
+      "accents": {
+        "count": 0,
+        "onsets": [],
+        "tunes_with_marks": 0
+      },
+      "cells": [
+        {
+          "count": 61,
+          "pattern": "2 2 2 2",
+          "share": 0.114662
+        },
+        {
+          "count": 38,
+          "pattern": "1 1 1 1",
+          "share": 0.071429
+        },
+        {
+          "count": 33,
+          "pattern": "4 2 2",
+          "share": 0.06203
+        },
+        {
+          "count": 31,
+          "pattern": "3 1",
+          "share": 0.058271
+        },
+        {
+          "count": 22,
+          "pattern": "4 4",
+          "share": 0.041353
+        },
+        {
+          "count": 19,
+          "pattern": "2 3/2 1/2",
+          "share": 0.035714
+        },
+        {
+          "count": 18,
+          "pattern": "3/2 1/2 1 1",
+          "share": 0.033835
+        },
+        {
+          "count": 17,
+          "pattern": "3/2 1/2 3/2 1/2",
+          "share": 0.031955
+        },
+        {
+          "count": 16,
+          "pattern": "2 4 2",
+          "share": 0.030075
+        },
+        {
+          "count": 15,
+          "pattern": "1 1 1 1 2 1 1",
+          "share": 0.028195
+        },
+        {
+          "count": 15,
+          "pattern": "2 2 4",
+          "share": 0.028195
+        },
+        {
+          "count": 14,
+          "pattern": "1 1 1 1/2 1/2",
+          "share": 0.026316
+        },
+        {
+          "count": 13,
+          "pattern": "2 1 1 2 2",
+          "share": 0.024436
+        },
+        {
+          "count": 13,
+          "pattern": "2 2",
+          "share": 0.024436
+        },
+        {
+          "count": 12,
+          "pattern": "2 2 1 1 1 1",
+          "share": 0.022556
+        },
+        {
+          "count": 11,
+          "pattern": "2 1 1",
+          "share": 0.020677
+        },
+        {
+          "count": 11,
+          "pattern": "3 1 2 2",
+          "share": 0.020677
+        },
+        {
+          "count": 10,
+          "pattern": "4 2 1 1",
+          "share": 0.018797
+        },
+        {
+          "count": 10,
+          "pattern": "8",
+          "share": 0.018797
+        },
+        {
+          "count": 9,
+          "pattern": "1 3 3 1",
+          "share": 0.016917
+        },
+        {
+          "count": 9,
+          "pattern": "6 1 1",
+          "share": 0.016917
+        },
+        {
+          "count": 8,
+          "pattern": "1 1 3/2 1/2",
+          "share": 0.015038
+        },
+        {
+          "count": 8,
+          "pattern": "2 2 2 1 1",
+          "share": 0.015038
+        },
+        {
+          "count": 8,
+          "pattern": "6 2",
+          "share": 0.015038
+        },
+        {
+          "count": 7,
+          "pattern": "1 1/2 1/2 1 1/2 1/2",
+          "share": 0.013158
+        },
+        {
+          "count": 7,
+          "pattern": "2 2 3 1",
+          "share": 0.013158
+        },
+        {
+          "count": 6,
+          "pattern": "3 1 2 1 1",
+          "share": 0.011278
+        },
+        {
+          "count": 5,
+          "pattern": "1 1 1 1 1 1 1 1",
+          "share": 0.009398
+        },
+        {
+          "count": 5,
+          "pattern": "1 3 4",
+          "share": 0.009398
+        },
+        {
+          "count": 5,
+          "pattern": "1/2 3/2 1 1",
+          "share": 0.009398
+        },
+        {
+          "count": 5,
+          "pattern": "3 1 1 1 1 1",
+          "share": 0.009398
+        },
+        {
+          "count": 5,
+          "pattern": "4 3 1",
+          "share": 0.009398
+        },
+        {
+          "count": 5,
+          "pattern": "5/2 1/2 1/2 1/2",
+          "share": 0.009398
+        },
+        {
+          "count": 4,
+          "pattern": "1 1 2",
+          "share": 0.007519
+        },
+        {
+          "count": 4,
+          "pattern": "1/2 1/2 1/2 1/2 1/2 1/2 1/2 1/2",
+          "share": 0.007519
+        },
+        {
+          "count": 4,
+          "pattern": "1/2 1/2 1/2 1/2 2",
+          "share": 0.007519
+        },
+        {
+          "count": 4,
+          "pattern": "2 1 1 2 1 1",
+          "share": 0.007519
+        },
+        {
+          "count": 4,
+          "pattern": "4",
+          "share": 0.007519
+        },
+        {
+          "count": 3,
+          "pattern": "1 1/2 1/2 1/2 1/2 1/2 1/2",
+          "share": 0.005639
+        },
+        {
+          "count": 3,
+          "pattern": "1/2 1/2 1/2 1/2 1 1",
+          "share": 0.005639
+        },
+        {
+          "count": 3,
+          "pattern": "2 1/2 1/2 1/2 1/2",
+          "share": 0.005639
+        },
+        {
+          "count": 3,
+          "pattern": "3/2 1/2 1/2 1/2 1/2 1/2",
+          "share": 0.005639
+        },
+        {
+          "count": 2,
+          "pattern": "1 1 1 1 2 2",
+          "share": 0.003759
+        },
+        {
+          "count": 2,
+          "pattern": "1 1 1 1 3 1",
+          "share": 0.003759
+        },
+        {
+          "count": 2,
+          "pattern": "1 1/2 1/2 1 1",
+          "share": 0.003759
+        },
+        {
+          "count": 2,
+          "pattern": "1 1/2 1/2 1/2 1/2 1",
+          "share": 0.003759
+        },
+        {
+          "count": 2,
+          "pattern": "1/2 1/2 1 1 1",
+          "share": 0.003759
+        },
+        {
+          "count": 2,
+          "pattern": "1/2 1/2 1/3 1/3 1/3 1/2 1/2 1/2 1/2",
+          "share": 0.003759
+        },
+        {
+          "count": 2,
+          "pattern": "2 3/2 1/2 2 z2",
+          "share": 0.003759
+        },
+        {
+          "count": 2,
+          "pattern": "2 z1 1",
+          "share": 0.003759
+        },
+        {
+          "count": 2,
+          "pattern": "3 1 3 1",
+          "share": 0.003759
+        },
+        {
+          "count": 2,
+          "pattern": "3 1 4",
+          "share": 0.003759
+        },
+        {
+          "count": 2,
+          "pattern": "4 2 z2",
+          "share": 0.003759
+        },
+        {
+          "count": 1,
+          "pattern": "1 1 1/2 1/2 1/2 1/2",
+          "share": 0.00188
+        },
+        {
+          "count": 1,
+          "pattern": "1 z1 3/2 1/2",
+          "share": 0.00188
+        },
+        {
+          "count": 1,
+          "pattern": "2 1 1 1 1 1 1",
+          "share": 0.00188
+        },
+        {
+          "count": 1,
+          "pattern": "3 1/2 1/2",
+          "share": 0.00188
+        },
+        {
+          "count": 1,
+          "pattern": "3/2 1/2 2",
+          "share": 0.00188
+        },
+        {
+          "count": 1,
+          "pattern": "4 1 1 1 1",
+          "share": 0.00188
+        },
+        {
+          "count": 1,
+          "pattern": "4 z2 2",
+          "share": 0.00188
+        }
+      ],
+      "continuous_eighth_rate": 0.080827,
+      "counts": {
+        "adjacent_pairs": 1512,
+        "bars": 532,
+        "continuous_eighth_bars": 43,
+        "notes": 2044,
+        "repeated_notes": 181,
+        "repeated_triplets": 0,
+        "syncopated_bars": 12,
+        "syncopated_notes": 12,
+        "tunes_with_accents": 0
+      },
+      "entropy_bits": 5.191673,
+      "long_note_onsets": [
+        {
+          "count": 276,
+          "pattern": "0",
+          "share": 0.494624
+        },
+        {
+          "count": 128,
+          "pattern": "4",
+          "share": 0.229391
+        },
+        {
+          "count": 89,
+          "pattern": "2",
+          "share": 0.159498
+        },
+        {
+          "count": 65,
+          "pattern": "6",
+          "share": 0.116487
+        }
+      ],
+      "repeated_note_rate": 0.119709,
+      "syncopated_bar_rate": 0.022556,
+      "top20": [
+        {
+          "count": 61,
+          "pattern": "2 2 2 2",
+          "share": 0.114662
+        },
+        {
+          "count": 38,
+          "pattern": "1 1 1 1",
+          "share": 0.071429
+        },
+        {
+          "count": 33,
+          "pattern": "4 2 2",
+          "share": 0.06203
+        },
+        {
+          "count": 31,
+          "pattern": "3 1",
+          "share": 0.058271
+        },
+        {
+          "count": 22,
+          "pattern": "4 4",
+          "share": 0.041353
+        },
+        {
+          "count": 19,
+          "pattern": "2 3/2 1/2",
+          "share": 0.035714
+        },
+        {
+          "count": 18,
+          "pattern": "3/2 1/2 1 1",
+          "share": 0.033835
+        },
+        {
+          "count": 17,
+          "pattern": "3/2 1/2 3/2 1/2",
+          "share": 0.031955
+        },
+        {
+          "count": 16,
+          "pattern": "2 4 2",
+          "share": 0.030075
+        },
+        {
+          "count": 15,
+          "pattern": "1 1 1 1 2 1 1",
+          "share": 0.028195
+        },
+        {
+          "count": 15,
+          "pattern": "2 2 4",
+          "share": 0.028195
+        },
+        {
+          "count": 14,
+          "pattern": "1 1 1 1/2 1/2",
+          "share": 0.026316
+        },
+        {
+          "count": 13,
+          "pattern": "2 1 1 2 2",
+          "share": 0.024436
+        },
+        {
+          "count": 13,
+          "pattern": "2 2",
+          "share": 0.024436
+        },
+        {
+          "count": 12,
+          "pattern": "2 2 1 1 1 1",
+          "share": 0.022556
+        },
+        {
+          "count": 11,
+          "pattern": "2 1 1",
+          "share": 0.020677
+        },
+        {
+          "count": 11,
+          "pattern": "3 1 2 2",
+          "share": 0.020677
+        },
+        {
+          "count": 10,
+          "pattern": "4 2 1 1",
+          "share": 0.018797
+        },
+        {
+          "count": 10,
+          "pattern": "8",
+          "share": 0.018797
+        },
+        {
+          "count": 9,
+          "pattern": "1 3 3 1",
+          "share": 0.016917
+        }
+      ],
+      "vocabulary_size": 60
+    },
+    "sequence_shifts": {
+      "A:m2/m1": [
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 0.5
+        },
+        {
+          "count": 1,
+          "pattern": "4",
+          "share": 0.5
+        }
+      ],
+      "A:m3-4/m1-2": [
+        {
+          "count": 1,
+          "pattern": "2",
+          "share": 1.0
+        }
+      ],
+      "A:m3/m1": [
+        {
+          "count": 2,
+          "pattern": "-1",
+          "share": 0.666667
+        },
+        {
+          "count": 1,
+          "pattern": "2",
+          "share": 0.333333
+        }
+      ],
+      "A:m4/m2": [
+        {
+          "count": 1,
+          "pattern": "2",
+          "share": 1.0
+        }
+      ],
+      "A:m5/m3": [
+        {
+          "count": 2,
+          "pattern": "1",
+          "share": 1.0
+        }
+      ],
+      "A:m6/m4": [
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 1.0
+        }
+      ],
+      "A:m6/m5": [
+        {
+          "count": 2,
+          "pattern": "2",
+          "share": 0.666667
+        },
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 0.333333
+        }
+      ],
+      "B:m1-2/A:m1-2": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 1.0
+        }
+      ],
+      "B:m1/A:m1": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 1.0
+        }
+      ],
+      "B:m2/A:m2": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 0.666667
+        },
+        {
+          "count": 1,
+          "pattern": "2",
+          "share": 0.333333
+        }
+      ],
+      "B:m3-4/A:m3-4": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 1.0
+        }
+      ],
+      "B:m3-4/m1-2": [
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 1.0
+        }
+      ],
+      "B:m3/A:m3": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 1.0
+        }
+      ],
+      "B:m3/m1": [
+        {
+          "count": 2,
+          "pattern": "-1",
+          "share": 0.666667
+        },
+        {
+          "count": 1,
+          "pattern": "4",
+          "share": 0.333333
+        }
+      ],
+      "B:m4/A:m4": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 1.0
+        }
+      ],
+      "B:m4/m2": [
+        {
+          "count": 2,
+          "pattern": "-1",
+          "share": 1.0
+        }
+      ],
+      "B:m5-6/A:m5-6": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 1.0
+        }
+      ],
+      "B:m5-6/m3-4": [
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 0.5
+        },
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 0.5
+        }
+      ],
+      "B:m5/A:m5": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 1.0
+        }
+      ],
+      "B:m5/m3": [
+        {
+          "count": 2,
+          "pattern": "-1",
+          "share": 0.4
+        },
+        {
+          "count": 2,
+          "pattern": "1",
+          "share": 0.4
+        },
+        {
+          "count": 1,
+          "pattern": "-4",
+          "share": 0.2
+        }
+      ],
+      "B:m6/A:m6": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 1.0
+        }
+      ],
+      "B:m6/m2": [
+        {
+          "count": 1,
+          "pattern": "-2",
+          "share": 1.0
+        }
+      ],
+      "B:m6/m4": [
+        {
+          "count": 1,
+          "pattern": "-1",
+          "share": 0.5
+        },
+        {
+          "count": 1,
+          "pattern": "1",
+          "share": 0.5
+        }
+      ],
+      "B:m6/m5": [
+        {
+          "count": 2,
+          "pattern": "2",
+          "share": 1.0
+        }
+      ],
+      "B:m7-8/A:m7-8": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 1.0
+        }
+      ],
+      "B:m7/A:m7": [
+        {
+          "count": 2,
+          "pattern": "4",
+          "share": 1.0
+        }
+      ],
+      "B:m7/m1": [
+        {
+          "count": 1,
+          "pattern": "4",
+          "share": 1.0
+        }
+      ],
+      "B:m7/m5": [
+        {
+          "count": 1,
+          "pattern": "4",
+          "share": 1.0
+        }
+      ],
+      "B:m8/m4": [
+        {
+          "count": 1,
+          "pattern": "3",
+          "share": 1.0
+        }
+      ]
+    },
+    "similarity": {
+      "A": {
+        "joint": [
+          [
+            1.0,
+            0.167647,
+            0.139216,
+            0.011765,
+            0.611345,
+            0.119608,
+            0.090196,
+            0.035294
+          ],
+          [
+            0.167647,
+            1.0,
+            0.063725,
+            0.031373,
+            0.121148,
+            0.477451,
+            0.034314,
+            0.043137
+          ],
+          [
+            0.139216,
+            0.063725,
+            1.0,
+            0.039216,
+            0.158824,
+            0.039216,
+            0.220588,
+            0.043137
+          ],
+          [
+            0.011765,
+            0.031373,
+            0.039216,
+            1.0,
+            0.028011,
+            0.011765,
+            0.008403,
+            0.103922
+          ],
+          [
+            0.611345,
+            0.121148,
+            0.158824,
+            0.028011,
+            1.0,
+            0.096639,
+            0.011765,
+            0.011765
+          ],
+          [
+            0.119608,
+            0.477451,
+            0.039216,
+            0.011765,
+            0.096639,
+            1.0,
+            0.034314,
+            0.019608
+          ],
+          [
+            0.090196,
+            0.034314,
+            0.220588,
+            0.008403,
+            0.011765,
+            0.034314,
+            1.0,
+            0.023529
+          ],
+          [
+            0.035294,
+            0.043137,
+            0.043137,
+            0.103922,
+            0.011765,
+            0.019608,
+            0.023529,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.298599,
+            0.198039,
+            0.026471,
+            0.64916,
+            0.211345,
+            0.147619,
+            0.128431
+          ],
+          [
+            0.298599,
+            1.0,
+            0.073529,
+            0.061835,
+            0.201681,
+            0.492157,
+            0.088235,
+            0.115266
+          ],
+          [
+            0.198039,
+            0.073529,
+            1.0,
+            0.093137,
+            0.196639,
+            0.098039,
+            0.237395,
+            0.141176
+          ],
+          [
+            0.026471,
+            0.061835,
+            0.093137,
+            1.0,
+            0.057423,
+            0.061835,
+            0.035014,
+            0.161345
+          ],
+          [
+            0.64916,
+            0.201681,
+            0.196639,
+            0.057423,
+            1.0,
+            0.160924,
+            0.086555,
+            0.132913
+          ],
+          [
+            0.211345,
+            0.492157,
+            0.098039,
+            0.061835,
+            0.160924,
+            1.0,
+            0.110294,
+            0.057423
+          ],
+          [
+            0.147619,
+            0.088235,
+            0.237395,
+            0.035014,
+            0.086555,
+            0.110294,
+            1.0,
+            0.082353
+          ],
+          [
+            0.128431,
+            0.115266,
+            0.141176,
+            0.161345,
+            0.132913,
+            0.057423,
+            0.082353,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.433333,
+            0.553501,
+            0.184874,
+            0.704482,
+            0.378431,
+            0.429412,
+            0.262745
+          ],
+          [
+            0.433333,
+            1.0,
+            0.314286,
+            0.47409,
+            0.294678,
+            0.662745,
+            0.24958,
+            0.212745
+          ],
+          [
+            0.553501,
+            0.314286,
+            1.0,
+            0.254902,
+            0.591317,
+            0.441737,
+            0.431373,
+            0.196639
+          ],
+          [
+            0.184874,
+            0.47409,
+            0.254902,
+            1.0,
+            0.134454,
+            0.27409,
+            0.154062,
+            0.267227
+          ],
+          [
+            0.704482,
+            0.294678,
+            0.591317,
+            0.134454,
+            1.0,
+            0.514286,
+            0.292157,
+            0.182913
+          ],
+          [
+            0.378431,
+            0.662745,
+            0.441737,
+            0.27409,
+            0.514286,
+            1.0,
+            0.221569,
+            0.255882
+          ],
+          [
+            0.429412,
+            0.24958,
+            0.431373,
+            0.154062,
+            0.292157,
+            0.221569,
+            1.0,
+            0.070588
+          ],
+          [
+            0.262745,
+            0.212745,
+            0.196639,
+            0.267227,
+            0.182913,
+            0.255882,
+            0.070588,
+            1.0
+          ]
+        ]
+      },
+      "B": {
+        "joint": [
+          [
+            1.0,
+            0.043519,
+            0.255556,
+            0.009259,
+            0.361111,
+            0.055556,
+            0.013889,
+            0.058333
+          ],
+          [
+            0.043519,
+            1.0,
+            0.064683,
+            0.069444,
+            0.011111,
+            0.261243,
+            0.0,
+            0.048148
+          ],
+          [
+            0.255556,
+            0.064683,
+            1.0,
+            0.0,
+            0.111111,
+            0.021825,
+            0.12963,
+            0.022222
+          ],
+          [
+            0.009259,
+            0.069444,
+            0.0,
+            1.0,
+            0.0,
+            0.037037,
+            0.0,
+            0.092593
+          ],
+          [
+            0.361111,
+            0.011111,
+            0.111111,
+            0.0,
+            1.0,
+            0.065476,
+            0.025,
+            0.0
+          ],
+          [
+            0.055556,
+            0.261243,
+            0.021825,
+            0.037037,
+            0.065476,
+            1.0,
+            0.013889,
+            0.074074
+          ],
+          [
+            0.013889,
+            0.0,
+            0.12963,
+            0.0,
+            0.025,
+            0.013889,
+            1.0,
+            0.018056
+          ],
+          [
+            0.058333,
+            0.048148,
+            0.022222,
+            0.092593,
+            0.0,
+            0.074074,
+            0.018056,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.166975,
+            0.315961,
+            0.072531,
+            0.399206,
+            0.167637,
+            0.033179,
+            0.104012
+          ],
+          [
+            0.166975,
+            1.0,
+            0.129497,
+            0.083333,
+            0.084171,
+            0.30291,
+            0.046296,
+            0.112963
+          ],
+          [
+            0.315961,
+            0.129497,
+            1.0,
+            0.078704,
+            0.164109,
+            0.162566,
+            0.21164,
+            0.056614
+          ],
+          [
+            0.072531,
+            0.083333,
+            0.078704,
+            1.0,
+            0.012346,
+            0.060185,
+            0.041667,
+            0.128307
+          ],
+          [
+            0.399206,
+            0.084171,
+            0.164109,
+            0.012346,
+            1.0,
+            0.158377,
+            0.06929,
+            0.082319
+          ],
+          [
+            0.167637,
+            0.30291,
+            0.162566,
+            0.060185,
+            0.158377,
+            1.0,
+            0.081019,
+            0.145503
+          ],
+          [
+            0.033179,
+            0.046296,
+            0.21164,
+            0.041667,
+            0.06929,
+            0.081019,
+            1.0,
+            0.08287
+          ],
+          [
+            0.104012,
+            0.112963,
+            0.056614,
+            0.128307,
+            0.082319,
+            0.145503,
+            0.08287,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.127778,
+            0.703704,
+            0.164198,
+            0.556085,
+            0.201852,
+            0.368519,
+            0.145679
+          ],
+          [
+            0.127778,
+            1.0,
+            0.16746,
+            0.42037,
+            0.119841,
+            0.560847,
+            0.17963,
+            0.161111
+          ],
+          [
+            0.703704,
+            0.16746,
+            1.0,
+            0.151852,
+            0.500529,
+            0.257407,
+            0.298148,
+            0.105556
+          ],
+          [
+            0.164198,
+            0.42037,
+            0.151852,
+            1.0,
+            0.101764,
+            0.313889,
+            0.106481,
+            0.490741
+          ],
+          [
+            0.556085,
+            0.119841,
+            0.500529,
+            0.101764,
+            1.0,
+            0.396825,
+            0.3,
+            0.140653
+          ],
+          [
+            0.201852,
+            0.560847,
+            0.257407,
+            0.313889,
+            0.396825,
+            1.0,
+            0.183333,
+            0.184259
+          ],
+          [
+            0.368519,
+            0.17963,
+            0.298148,
+            0.106481,
+            0.3,
+            0.183333,
+            1.0,
+            0.081944
+          ],
+          [
+            0.145679,
+            0.161111,
+            0.105556,
+            0.490741,
+            0.140653,
+            0.184259,
+            0.081944,
+            1.0
+          ]
+        ]
+      },
+      "C": {
+        "joint": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.111111,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.111111,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.222222,
+            0.166667,
+            0.0,
+            0.0,
+            0.222222,
+            0.0,
+            0.0
+          ],
+          [
+            0.222222,
+            1.0,
+            0.111111,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.166667,
+            0.111111,
+            1.0,
+            0.0,
+            0.0,
+            0.166667,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.222222,
+            0.0,
+            0.166667,
+            0.0,
+            0.0,
+            1.0,
+            0.111111,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.111111,
+            1.0,
+            0.111111
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.111111,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.0,
+            0.333333,
+            0.0,
+            0.333333,
+            0.111111,
+            0.333333,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.555556,
+            0.0,
+            0.111111,
+            0.0,
+            0.0
+          ],
+          [
+            0.333333,
+            0.0,
+            1.0,
+            0.0,
+            0.5,
+            0.277778,
+            0.466667,
+            0.0
+          ],
+          [
+            0.0,
+            0.555556,
+            0.0,
+            1.0,
+            0.0,
+            0.111111,
+            0.0,
+            0.0
+          ],
+          [
+            0.333333,
+            0.0,
+            0.5,
+            0.0,
+            1.0,
+            0.777778,
+            0.466667,
+            0.0
+          ],
+          [
+            0.111111,
+            0.111111,
+            0.277778,
+            0.111111,
+            0.777778,
+            1.0,
+            0.244444,
+            0.0
+          ],
+          [
+            0.333333,
+            0.0,
+            0.466667,
+            0.0,
+            0.466667,
+            0.244444,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "D": {
+        "joint": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.25,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.25,
+            0.0,
+            1.0,
+            0.0,
+            0.25,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.25,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.25,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.25,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.25,
+            0.333333,
+            0.0
+          ],
+          [
+            0.25,
+            0.25,
+            0.0,
+            1.0,
+            0.0,
+            0.25,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.25,
+            0.25,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.333333,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.333333
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.333333,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.333333,
+            0.0,
+            0.333333,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.5,
+            0.0,
+            0.5,
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.333333,
+            0.0,
+            0.333333,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.333333,
+            0.0,
+            0.333333,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.5,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.333333,
+            0.0,
+            0.333333,
+            0.0,
+            1.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      },
+      "all": {
+        "joint": [
+          [
+            1.0,
+            0.093162,
+            0.178632,
+            0.009402,
+            0.43315,
+            0.077778,
+            0.045726,
+            0.042308
+          ],
+          [
+            0.093162,
+            1.0,
+            0.057631,
+            0.052137,
+            0.057937,
+            0.328694,
+            0.014957,
+            0.041026
+          ],
+          [
+            0.178632,
+            0.057631,
+            1.0,
+            0.017094,
+            0.120513,
+            0.027167,
+            0.155983,
+            0.02906
+          ],
+          [
+            0.009402,
+            0.052137,
+            0.017094,
+            1.0,
+            0.01221,
+            0.028632,
+            0.003663,
+            0.088034
+          ],
+          [
+            0.43315,
+            0.057937,
+            0.120513,
+            0.01221,
+            1.0,
+            0.072344,
+            0.016667,
+            0.005128
+          ],
+          [
+            0.077778,
+            0.328694,
+            0.027167,
+            0.028632,
+            0.072344,
+            1.0,
+            0.029915,
+            0.042735
+          ],
+          [
+            0.045726,
+            0.014957,
+            0.155983,
+            0.003663,
+            0.016667,
+            0.029915,
+            1.0,
+            0.01859
+          ],
+          [
+            0.042308,
+            0.041026,
+            0.02906,
+            0.088034,
+            0.005128,
+            0.042735,
+            0.01859,
+            1.0
+          ]
+        ],
+        "pitch": [
+          [
+            1.0,
+            0.224318,
+            0.244974,
+            0.051425,
+            0.467216,
+            0.186589,
+            0.07966,
+            0.103989
+          ],
+          [
+            0.224318,
+            1.0,
+            0.100366,
+            0.071825,
+            0.12676,
+            0.354335,
+            0.059829,
+            0.102381
+          ],
+          [
+            0.244974,
+            0.100366,
+            1.0,
+            0.076923,
+            0.161457,
+            0.136996,
+            0.209707,
+            0.087668
+          ],
+          [
+            0.051425,
+            0.071825,
+            0.076923,
+            1.0,
+            0.030729,
+            0.061142,
+            0.034493,
+            0.129548
+          ],
+          [
+            0.467216,
+            0.12676,
+            0.161457,
+            0.030729,
+            1.0,
+            0.143244,
+            0.069709,
+            0.09593
+          ],
+          [
+            0.186589,
+            0.354335,
+            0.136996,
+            0.061142,
+            0.143244,
+            1.0,
+            0.094017,
+            0.092186
+          ],
+          [
+            0.07966,
+            0.059829,
+            0.209707,
+            0.034493,
+            0.069709,
+            0.094017,
+            1.0,
+            0.091239
+          ],
+          [
+            0.103989,
+            0.102381,
+            0.087668,
+            0.129548,
+            0.09593,
+            0.092186,
+            0.091239,
+            1.0
+          ]
+        ],
+        "rhythm": [
+          [
+            1.0,
+            0.247863,
+            0.617338,
+            0.15637,
+            0.597924,
+            0.266667,
+            0.391453,
+            0.181766
+          ],
+          [
+            0.247863,
+            1.0,
+            0.214286,
+            0.456227,
+            0.183761,
+            0.569109,
+            0.191697,
+            0.167094
+          ],
+          [
+            0.617338,
+            0.214286,
+            1.0,
+            0.181197,
+            0.535775,
+            0.332723,
+            0.370085,
+            0.134432
+          ],
+          [
+            0.15637,
+            0.456227,
+            0.181197,
+            1.0,
+            0.105576,
+            0.298535,
+            0.1163,
+            0.342979
+          ],
+          [
+            0.597924,
+            0.183761,
+            0.535775,
+            0.105576,
+            1.0,
+            0.467155,
+            0.32735,
+            0.144648
+          ],
+          [
+            0.266667,
+            0.569109,
+            0.332723,
+            0.298535,
+            0.467155,
+            1.0,
+            0.2,
+            0.196581
+          ],
+          [
+            0.391453,
+            0.191697,
+            0.370085,
+            0.1163,
+            0.32735,
+            0.2,
+            1.0,
+            0.06859
+          ],
+          [
+            0.181766,
+            0.167094,
+            0.134432,
+            0.342979,
+            0.144648,
+            0.196581,
+            0.06859,
+            1.0
+          ]
+        ]
+      }
+    },
+    "structures": [
+      {
+        "count": 19,
+        "pattern": "a b c d",
+        "share": 0.487179,
+        "tune_count": 10,
+        "tune_share": 0.555556
+      },
+      {
+        "count": 4,
+        "pattern": "a b a b'",
+        "share": 0.102564,
+        "tune_count": 3,
+        "tune_share": 0.166667
+      },
+      {
+        "count": 4,
+        "pattern": "a b a' c",
+        "share": 0.102564,
+        "tune_count": 4,
+        "tune_share": 0.222222
+      },
+      {
+        "count": 3,
+        "pattern": "a a' a' b",
+        "share": 0.076923,
+        "tune_count": 3,
+        "tune_share": 0.166667
+      },
+      {
+        "count": 3,
+        "pattern": "a a' b c",
+        "share": 0.076923,
+        "tune_count": 2,
+        "tune_share": 0.111111
+      },
+      {
+        "count": 2,
+        "pattern": "a a' a b",
+        "share": 0.051282,
+        "tune_count": 2,
+        "tune_share": 0.111111
+      },
+      {
+        "count": 2,
+        "pattern": "a b a c",
+        "share": 0.051282,
+        "tune_count": 2,
+        "tune_share": 0.111111
+      },
+      {
+        "count": 1,
+        "pattern": "a b b' c",
+        "share": 0.025641,
+        "tune_count": 1,
+        "tune_share": 0.055556
+      },
+      {
+        "count": 1,
+        "pattern": "a b c a'",
+        "share": 0.025641,
+        "tune_count": 1,
+        "tune_share": 0.055556
+      }
+    ],
+    "transformations": {
+      "A:m2/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 6
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.117647,
+          "varied_ending": 0.352941
+        }
+      },
+      "A:m3-4/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 2
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.058824,
+          "varied_ending": 0.117647
+        }
+      },
+      "A:m3/m1": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 3,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.117647,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.176471,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m3/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.058824,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m4/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m4/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.058824,
+          "varied_ending": 0.058824
+        }
+      },
+      "A:m4/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.117647
+        }
+      },
+      "A:m5-6/m1-2": {
+        "counts": {
+          "exact": 5,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 4
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.294118,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.235294
+        }
+      },
+      "A:m5-6/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.117647
+        }
+      },
+      "A:m5/m1": {
+        "counts": {
+          "exact": 9,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.529412,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.117647
+        }
+      },
+      "A:m5/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.176471
+        }
+      },
+      "A:m5/m3": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.117647,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.117647,
+          "varied_ending": 0.058824
+        }
+      },
+      "A:m5/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m6/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.117647
+        }
+      },
+      "A:m6/m2": {
+        "counts": {
+          "exact": 5,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 4
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.294118,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.235294
+        }
+      },
+      "A:m6/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.058824,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m6/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.058824,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m6/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 3,
+          "varied_ending": 2
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.176471,
+          "varied_ending": 0.117647
+        }
+      },
+      "A:m7-8/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.058824
+        }
+      },
+      "A:m7-8/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.176471
+        }
+      },
+      "A:m7-8/m5-6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7/m1": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.058824,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.058824
+        }
+      },
+      "A:m7/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7/m3": {
+        "counts": {
+          "exact": 3,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.176471,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.058824
+        }
+      },
+      "A:m7/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m7/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m8/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.058824
+        }
+      },
+      "A:m8/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.058824
+        }
+      },
+      "A:m8/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.058824
+        }
+      },
+      "A:m8/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.117647
+        }
+      },
+      "A:m8/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m8/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "A:m8/m7": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.058824
+        }
+      },
+      "B:m1-2/A:m1-2": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.058824,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.117647,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m1-2/A:m7-8": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.058824
+        }
+      },
+      "B:m1/A:m1": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.058824,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.117647,
+          "varied_ending": 0.058824
+        }
+      },
+      "B:m2/A:m2": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 3,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.058824,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.176471,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m2/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.111111
+        }
+      },
+      "B:m3-4/A:m3-4": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.058824,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.117647,
+          "varied_ending": 0.058824
+        }
+      },
+      "B:m3-4/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 4
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.055556,
+          "varied_ending": 0.222222
+        }
+      },
+      "B:m3/A:m3": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.117647,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.117647,
+          "varied_ending": 0.058824
+        }
+      },
+      "B:m3/m1": {
+        "counts": {
+          "exact": 4,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 3,
+          "varied_ending": 1
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.222222,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.166667,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m3/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m4/A:m4": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 1
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.058824,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.117647,
+          "varied_ending": 0.058824
+        }
+      },
+      "B:m4/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m4/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 1
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.111111,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m4/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m5-6/A:m5-6": {
+        "counts": {
+          "exact": 4,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.235294,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.117647,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5-6/m1-2": {
+        "counts": {
+          "exact": 3,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 3
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.166667,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.166667
+        }
+      },
+      "B:m5-6/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 2
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.111111,
+          "varied_ending": 0.111111
+        }
+      },
+      "B:m5/A:m5": {
+        "counts": {
+          "exact": 4,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 2
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.235294,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.117647,
+          "varied_ending": 0.117647
+        }
+      },
+      "B:m5/m1": {
+        "counts": {
+          "exact": 6,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.333333,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m5/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5/m3": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 5,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.111111,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.277778,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m5/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/A:m6": {
+        "counts": {
+          "exact": 5,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.294118,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.117647,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m6/m2": {
+        "counts": {
+          "exact": 3,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 1
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.166667,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.055556,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m6/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.111111,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m6/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 1
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.111111,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m7-8/A:m7-8": {
+        "counts": {
+          "exact": 2,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 6
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.117647,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.117647,
+          "varied_ending": 0.352941
+        }
+      },
+      "B:m7-8/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7-8/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m7-8/m5-6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7/A:m7": {
+        "counts": {
+          "exact": 8,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 2,
+          "varied_ending": 0
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.470588,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.117647,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.055556,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7/m3": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.055556,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.111111
+        }
+      },
+      "B:m7/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.055556,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m7/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/A:m8": {
+        "counts": {
+          "exact": 4,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 6
+        },
+        "opportunities": 17,
+        "rates": {
+          "exact": 0.235294,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.352941
+        }
+      },
+      "B:m8/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m8/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m8/m4": {
+        "counts": {
+          "exact": 1,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 1,
+          "varied_ending": 1
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.055556,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.055556,
+          "varied_ending": 0.055556
+        }
+      },
+      "B:m8/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "B:m8/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.111111
+        }
+      },
+      "B:m8/m7": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 18,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.055556
+        }
+      },
+      "C:m2/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 2
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.666667
+        }
+      },
+      "C:m3-4/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m3/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m3/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m4/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m4/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m4/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m5-6/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m5-6/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m5/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m5/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m5/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m5/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m6/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m6/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m6/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m6/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m6/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m7-8/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m7-8/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m7-8/m5-6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m7/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 1,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.333333,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m7/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m7/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m7/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m7/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m7/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m8/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m8/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m8/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m8/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m8/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m8/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "C:m8/m7": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 3,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.333333
+        }
+      },
+      "D:m2/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m3-4/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m3/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m3/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m4/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m4/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m4/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m5-6/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m5-6/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m5/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m5/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m5/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m5/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m6/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m6/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m6/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m6/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m6/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7-8/m1-2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7-8/m3-4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7-8/m5-6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m7/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m1": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m2": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m3": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m4": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m5": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m6": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 0
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 0.0
+        }
+      },
+      "D:m8/m7": {
+        "counts": {
+          "exact": 0,
+          "inversion": 0,
+          "rhythmic_variation": 0,
+          "sequence": 0,
+          "varied_ending": 1
+        },
+        "opportunities": 1,
+        "rates": {
+          "exact": 0.0,
+          "inversion": 0.0,
+          "rhythmic_variation": 0.0,
+          "sequence": 0.0,
+          "varied_ending": 1.0
+        }
+      }
+    },
+    "tunes": 25
+  },
+  "schema_version": 1,
+  "tradition": "britannique_coloniale",
+  "type": "march"
+}
