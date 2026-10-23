@@ -389,6 +389,18 @@ Les changements de métrique, unité ou tonalité en cours d'air restent
 une limite du parseur commun ; les changements `[M:…]`/`[K:…]` sont
 comptés dans `inline_changes` pour rendre cette incertitude visible.
 
+**Effet de bord sur le parseur commun (relevé par le coordinateur).** L'ancien
+nettoyage `\+[^+]+\+` de `form.py` prenait pour une décoration `+…+` le texte
+compris entre deux accords chiffrés finissant par `+` (ex. `"D/f+"` … `"A7/c+"`)
+et **supprimait la musique entre les deux**. La lecture par jetons de DS-T10
+corrige ce défaut : `analyze_form` donne d'autres mesures pour **47 airs sur
+2 059**, tous britanniques coloniaux (reel 16, jig 20, waltz 9, hornpipe 2),
+le plus souvent plus de mesures et de notes (ex. *Beaux of Oakhill* : 15 → 24
+mesures). Les références déjà publiées qui reposent sur ce parseur
+(`references/structure/britannique_coloniale-*.json` de DS-T9, profils
+`references/trad-britannique_coloniale-*`) datent d'avant la correction et
+sont à régénérer ; ce n'est pas fait ici.
+
 Vérification : commande réelle sur les trois caches locaux, sans réseau ;
 2 059/2 059 SHA256 ABC égaux aux manifestes versionnés, manifestes du
 cache identiques à ceux du worktree. Conservation des dénominateurs et
