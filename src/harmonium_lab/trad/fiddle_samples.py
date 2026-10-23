@@ -59,7 +59,7 @@ def acquire(rows: list[dict], raw: Path, *, offline: bool = False,
     fetcher = fetcher or Fetcher(offline=offline)
     raw.mkdir(parents=True, exist_ok=True)
     for row in rows:
-        if row["status"] != "accepted":
+        if row["status"] != "accepted" or row.get("build"):
             continue
         dest = raw / (row["id"] + ".sf2")
         if not dest.exists():
