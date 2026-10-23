@@ -271,7 +271,8 @@ inclus, contrairement au seuil de 15 airs du lot DS-T9.
   Par mesure **conditionnelle** pour position/partie/fin de phrase ; par
   mesure totale du groupe pour temps/durée/degré/intervalles.
   Dans `by_position`, type absent = zéro ; position absente = non mesurée.
-  `by_source` et `by_source_transcriber` reprennent ces distributions,
+  `by_source` reprend ces distributions ; `by_source_transcriber` ne garde
+  que les totaux par type (effectifs trop petits pour des tables par position),
   sans confondre attribution de collection et identité d'un interprète.
 
 Contrôle des fichiers contenant une marque, brut / première voix extraite :

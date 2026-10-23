@@ -214,11 +214,16 @@ def aggregate(tunes: list[dict]) -> dict:
     return result
 
 
-def _stratify(tunes: list[dict], field: str) -> dict:
+def _stratify(tunes: list[dict], field: str, positions: bool = True) -> dict:
     groups = defaultdict(list)
     for tune in tunes:
         groups[tune[field]].append(tune)
-    return {key: aggregate(value) for key, value in sorted(groups.items())}
+    strata = {key: aggregate(value) for key, value in sorted(groups.items())}
+    if not positions:
+        # Par transcripteur, les effectifs sont trop petits pour des tables par position.
+        for cell in strata.values():
+            cell.pop("by_position", None)
+    return strata
 
 
 def proposal(stats: dict) -> dict:
@@ -265,7 +270,7 @@ def run_ornaments(corpus_root: Path, output: Path, references: Path, tradition: 
                 stats = aggregate(tunes)
                 stats.update(tradition=name, tune_type=typ, schema_version=1, method=METHOD,
                              by_source=_stratify(tunes, "source"),
-                             by_source_transcriber=_stratify([{**t, "source_transcriber": t["source"] + " / " + t["transcriber"]} for t in tunes], "source_transcriber"))
+                             by_source_transcriber=_stratify([{**t, "source_transcriber": t["source"] + " / " + t["transcriber"]} for t in tunes], "source_transcriber", positions=False))
                 stats["engine_proposal"] = proposal(stats)
                 groups[(name, typ)] = stats
                 (references / f"{name}-{typ}.json").write_text(json.dumps(stats, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
