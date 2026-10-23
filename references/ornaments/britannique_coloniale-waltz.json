@@ -1,7 +1,7 @@
 {
   "notes": 5126,
   "bar_equivalents": 1902.0,
-  "occurrences": 143,
+  "occurrences": 140,
   "by_type": {
     "grace_single": {
       "count": 3,
@@ -48,20 +48,1233 @@
       "per_100_notes": 0.0,
       "per_bar": 0.0
     },
-    "staccato": {
-      "count": 3,
-      "per_100_notes": 0.058525,
-      "per_bar": 0.001577
-    },
     "fermata": {
       "count": 0,
       "per_100_notes": 0.0,
       "per_bar": 0.0
     }
   },
+  "articulations": {
+    "occurrences": 103,
+    "by_type": {
+      "slur": {
+        "count": 13,
+        "per_100_notes": 0.253609
+      },
+      "tie": {
+        "count": 87,
+        "per_100_notes": 1.69723
+      },
+      "staccato": {
+        "count": 3,
+        "per_100_notes": 0.058525
+      },
+      "accent": {
+        "count": 0,
+        "per_100_notes": 0.0
+      },
+      "tenuto": {
+        "count": 0,
+        "per_100_notes": 0.0
+      },
+      "marcato": {
+        "count": 0,
+        "per_100_notes": 0.0
+      }
+    },
+    "by_position": {
+      "bar_position": {
+        "1": {
+          "notes": 557,
+          "bar_equivalents": 198.0,
+          "occurrences": 2,
+          "by_type": {
+            "tie": {
+              "count": 2,
+              "per_100_notes": 0.359066,
+              "per_bar": 0.010101
+            }
+          }
+        },
+        "3": {
+          "notes": 553,
+          "bar_equivalents": 198.0,
+          "occurrences": 11,
+          "by_type": {
+            "tie": {
+              "count": 11,
+              "per_100_notes": 1.98915,
+              "per_bar": 0.055556
+            }
+          }
+        },
+        "4": {
+          "notes": 481,
+          "bar_equivalents": 198.0,
+          "occurrences": 2,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.2079,
+              "per_bar": 0.005051
+            },
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.2079,
+              "per_bar": 0.005051
+            }
+          }
+        },
+        "5": {
+          "notes": 578,
+          "bar_equivalents": 198.0,
+          "occurrences": 2,
+          "by_type": {
+            "tie": {
+              "count": 2,
+              "per_100_notes": 0.346021,
+              "per_bar": 0.010101
+            }
+          }
+        },
+        "7": {
+          "notes": 487,
+          "bar_equivalents": 198.0,
+          "occurrences": 51,
+          "by_type": {
+            "tie": {
+              "count": 51,
+              "per_100_notes": 10.472279,
+              "per_bar": 0.257576
+            }
+          }
+        },
+        "8": {
+          "notes": 465,
+          "bar_equivalents": 196.66666666666666,
+          "occurrences": 2,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.215054,
+              "per_bar": 0.005085
+            },
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.215054,
+              "per_bar": 0.005085
+            }
+          }
+        },
+        "unknown": {
+          "notes": 925,
+          "bar_equivalents": 319.33333333333337,
+          "occurrences": 33,
+          "by_type": {
+            "slur": {
+              "count": 11,
+              "per_100_notes": 1.189189,
+              "per_bar": 0.034447
+            },
+            "tie": {
+              "count": 19,
+              "per_100_notes": 2.054054,
+              "per_bar": 0.059499
+            },
+            "staccato": {
+              "count": 3,
+              "per_100_notes": 0.324324,
+              "per_bar": 0.009395
+            }
+          }
+        }
+      },
+      "beat": {
+        "1": {
+          "notes": 2100,
+          "bar_equivalents": 1902.0,
+          "occurrences": 99,
+          "by_type": {
+            "slur": {
+              "count": 13,
+              "per_100_notes": 0.619048,
+              "per_bar": 0.006835
+            },
+            "tie": {
+              "count": 83,
+              "per_100_notes": 3.952381,
+              "per_bar": 0.043638
+            },
+            "staccato": {
+              "count": 3,
+              "per_100_notes": 0.142857,
+              "per_bar": 0.001577
+            }
+          }
+        },
+        "2": {
+          "notes": 1100,
+          "bar_equivalents": 1902.0,
+          "occurrences": 4,
+          "by_type": {
+            "tie": {
+              "count": 4,
+              "per_100_notes": 0.363636,
+              "per_bar": 0.002103
+            }
+          }
+        }
+      },
+      "beat_phase": {
+        "1+0": {
+          "notes": 1910,
+          "bar_equivalents": 1902.0,
+          "occurrences": 77,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.052356,
+              "per_bar": 0.000526
+            },
+            "tie": {
+              "count": 73,
+              "per_100_notes": 3.82199,
+              "per_bar": 0.038381
+            },
+            "staccato": {
+              "count": 3,
+              "per_100_notes": 0.157068,
+              "per_bar": 0.001577
+            }
+          }
+        },
+        "1+1/2": {
+          "notes": 78,
+          "bar_equivalents": 1902.0,
+          "occurrences": 10,
+          "by_type": {
+            "tie": {
+              "count": 10,
+              "per_100_notes": 12.820513,
+              "per_bar": 0.005258
+            }
+          }
+        },
+        "1+1/3": {
+          "notes": 36,
+          "bar_equivalents": 1902.0,
+          "occurrences": 5,
+          "by_type": {
+            "slur": {
+              "count": 5,
+              "per_100_notes": 13.888889,
+              "per_bar": 0.002629
+            }
+          }
+        },
+        "1+2/3": {
+          "notes": 48,
+          "bar_equivalents": 1902.0,
+          "occurrences": 7,
+          "by_type": {
+            "slur": {
+              "count": 7,
+              "per_100_notes": 14.583333,
+              "per_bar": 0.00368
+            }
+          }
+        },
+        "2+0": {
+          "notes": 719,
+          "bar_equivalents": 1902.0,
+          "occurrences": 4,
+          "by_type": {
+            "tie": {
+              "count": 4,
+              "per_100_notes": 0.556328,
+              "per_bar": 0.002103
+            }
+          }
+        }
+      },
+      "carrier_duration_eighths": {
+        "1": {
+          "notes": 1257,
+          "bar_equivalents": 1902.0,
+          "occurrences": 3,
+          "by_type": {
+            "staccato": {
+              "count": 3,
+              "per_100_notes": 0.238663,
+              "per_bar": 0.001577
+            }
+          }
+        },
+        "1/2": {
+          "notes": 67,
+          "bar_equivalents": 1902.0,
+          "occurrences": 13,
+          "by_type": {
+            "slur": {
+              "count": 13,
+              "per_100_notes": 19.402985,
+              "per_bar": 0.006835
+            }
+          }
+        },
+        "3": {
+          "notes": 333,
+          "bar_equivalents": 1902.0,
+          "occurrences": 13,
+          "by_type": {
+            "tie": {
+              "count": 13,
+              "per_100_notes": 3.903904,
+              "per_bar": 0.006835
+            }
+          }
+        },
+        "4": {
+          "notes": 675,
+          "bar_equivalents": 1902.0,
+          "occurrences": 4,
+          "by_type": {
+            "tie": {
+              "count": 4,
+              "per_100_notes": 0.592593,
+              "per_bar": 0.002103
+            }
+          }
+        },
+        "5": {
+          "notes": 18,
+          "bar_equivalents": 1902.0,
+          "occurrences": 18,
+          "by_type": {
+            "tie": {
+              "count": 18,
+              "per_100_notes": 100.0,
+              "per_bar": 0.009464
+            }
+          }
+        },
+        "6": {
+          "notes": 164,
+          "bar_equivalents": 1902.0,
+          "occurrences": 52,
+          "by_type": {
+            "tie": {
+              "count": 52,
+              "per_100_notes": 31.707317,
+              "per_bar": 0.02734
+            }
+          }
+        }
+      },
+      "degree": {
+        "1": {
+          "notes": 1026,
+          "bar_equivalents": 1902.0,
+          "occurrences": 33,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.097466,
+              "per_bar": 0.000526
+            },
+            "tie": {
+              "count": 32,
+              "per_100_notes": 3.118908,
+              "per_bar": 0.016824
+            }
+          }
+        },
+        "2": {
+          "notes": 739,
+          "bar_equivalents": 1902.0,
+          "occurrences": 20,
+          "by_type": {
+            "slur": {
+              "count": 2,
+              "per_100_notes": 0.270636,
+              "per_bar": 0.001052
+            },
+            "tie": {
+              "count": 18,
+              "per_100_notes": 2.435724,
+              "per_bar": 0.009464
+            }
+          }
+        },
+        "3": {
+          "notes": 950,
+          "bar_equivalents": 1902.0,
+          "occurrences": 11,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.105263,
+              "per_bar": 0.000526
+            },
+            "tie": {
+              "count": 8,
+              "per_100_notes": 0.842105,
+              "per_bar": 0.004206
+            },
+            "staccato": {
+              "count": 2,
+              "per_100_notes": 0.210526,
+              "per_bar": 0.001052
+            }
+          }
+        },
+        "4": {
+          "notes": 439,
+          "bar_equivalents": 1902.0,
+          "occurrences": 5,
+          "by_type": {
+            "slur": {
+              "count": 2,
+              "per_100_notes": 0.455581,
+              "per_bar": 0.001052
+            },
+            "tie": {
+              "count": 2,
+              "per_100_notes": 0.455581,
+              "per_bar": 0.001052
+            },
+            "staccato": {
+              "count": 1,
+              "per_100_notes": 0.22779,
+              "per_bar": 0.000526
+            }
+          }
+        },
+        "5": {
+          "notes": 1021,
+          "bar_equivalents": 1902.0,
+          "occurrences": 20,
+          "by_type": {
+            "slur": {
+              "count": 4,
+              "per_100_notes": 0.391773,
+              "per_bar": 0.002103
+            },
+            "tie": {
+              "count": 16,
+              "per_100_notes": 1.567091,
+              "per_bar": 0.008412
+            }
+          }
+        },
+        "6": {
+          "notes": 608,
+          "bar_equivalents": 1902.0,
+          "occurrences": 7,
+          "by_type": {
+            "tie": {
+              "count": 7,
+              "per_100_notes": 1.151316,
+              "per_bar": 0.00368
+            }
+          }
+        },
+        "7": {
+          "notes": 343,
+          "bar_equivalents": 1902.0,
+          "occurrences": 7,
+          "by_type": {
+            "slur": {
+              "count": 3,
+              "per_100_notes": 0.874636,
+              "per_bar": 0.001577
+            },
+            "tie": {
+              "count": 4,
+              "per_100_notes": 1.166181,
+              "per_bar": 0.002103
+            }
+          }
+        }
+      },
+      "half_beat": {
+        "1.0": {
+          "notes": 1953,
+          "bar_equivalents": 1902.0,
+          "occurrences": 82,
+          "by_type": {
+            "slur": {
+              "count": 6,
+              "per_100_notes": 0.30722,
+              "per_bar": 0.003155
+            },
+            "tie": {
+              "count": 73,
+              "per_100_notes": 3.737839,
+              "per_bar": 0.038381
+            },
+            "staccato": {
+              "count": 3,
+              "per_100_notes": 0.15361,
+              "per_bar": 0.001577
+            }
+          }
+        },
+        "1.1": {
+          "notes": 147,
+          "bar_equivalents": 1902.0,
+          "occurrences": 17,
+          "by_type": {
+            "slur": {
+              "count": 7,
+              "per_100_notes": 4.761905,
+              "per_bar": 0.00368
+            },
+            "tie": {
+              "count": 10,
+              "per_100_notes": 6.802721,
+              "per_bar": 0.005258
+            }
+          }
+        },
+        "2.0": {
+          "notes": 719,
+          "bar_equivalents": 1902.0,
+          "occurrences": 4,
+          "by_type": {
+            "tie": {
+              "count": 4,
+              "per_100_notes": 0.556328,
+              "per_bar": 0.002103
+            }
+          }
+        }
+      },
+      "next_interval": {
+        "-1": {
+          "notes": 403,
+          "bar_equivalents": 1902.0,
+          "occurrences": 2,
+          "by_type": {
+            "slur": {
+              "count": 2,
+              "per_100_notes": 0.496278,
+              "per_bar": 0.001052
+            }
+          }
+        },
+        "-12": {
+          "notes": 16,
+          "bar_equivalents": 1902.0,
+          "occurrences": 2,
+          "by_type": {
+            "tie": {
+              "count": 2,
+              "per_100_notes": 12.5,
+              "per_bar": 0.001052
+            }
+          }
+        },
+        "-2": {
+          "notes": 1155,
+          "bar_equivalents": 1902.0,
+          "occurrences": 6,
+          "by_type": {
+            "slur": {
+              "count": 5,
+              "per_100_notes": 0.4329,
+              "per_bar": 0.002629
+            },
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.08658,
+              "per_bar": 0.000526
+            }
+          }
+        },
+        "-3": {
+          "notes": 324,
+          "bar_equivalents": 1902.0,
+          "occurrences": 1,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.308642,
+              "per_bar": 0.000526
+            }
+          }
+        },
+        "-4": {
+          "notes": 170,
+          "bar_equivalents": 1902.0,
+          "occurrences": 6,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.588235,
+              "per_bar": 0.000526
+            },
+            "tie": {
+              "count": 5,
+              "per_100_notes": 2.941176,
+              "per_bar": 0.002629
+            }
+          }
+        },
+        "-5": {
+          "notes": 115,
+          "bar_equivalents": 1902.0,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.869565,
+              "per_bar": 0.000526
+            }
+          }
+        },
+        "0": {
+          "notes": 592,
+          "bar_equivalents": 1902.0,
+          "occurrences": 62,
+          "by_type": {
+            "tie": {
+              "count": 60,
+              "per_100_notes": 10.135135,
+              "per_bar": 0.031546
+            },
+            "staccato": {
+              "count": 2,
+              "per_100_notes": 0.337838,
+              "per_bar": 0.001052
+            }
+          }
+        },
+        "1": {
+          "notes": 352,
+          "bar_equivalents": 1902.0,
+          "occurrences": 3,
+          "by_type": {
+            "slur": {
+              "count": 3,
+              "per_100_notes": 0.852273,
+              "per_bar": 0.001577
+            }
+          }
+        },
+        "2": {
+          "notes": 916,
+          "bar_equivalents": 1902.0,
+          "occurrences": 11,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.10917,
+              "per_bar": 0.000526
+            },
+            "tie": {
+              "count": 10,
+              "per_100_notes": 1.091703,
+              "per_bar": 0.005258
+            }
+          }
+        },
+        "3": {
+          "notes": 280,
+          "bar_equivalents": 1902.0,
+          "occurrences": 7,
+          "by_type": {
+            "tie": {
+              "count": 6,
+              "per_100_notes": 2.142857,
+              "per_bar": 0.003155
+            },
+            "staccato": {
+              "count": 1,
+              "per_100_notes": 0.357143,
+              "per_bar": 0.000526
+            }
+          }
+        },
+        "5": {
+          "notes": 208,
+          "bar_equivalents": 1902.0,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.480769,
+              "per_bar": 0.000526
+            }
+          }
+        },
+        "7": {
+          "notes": 63,
+          "bar_equivalents": 1902.0,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 1.587302,
+              "per_bar": 0.000526
+            }
+          }
+        }
+      },
+      "part_position": {
+        "A:m3": {
+          "notes": 179,
+          "bar_equivalents": 62.0,
+          "occurrences": 4,
+          "by_type": {
+            "tie": {
+              "count": 4,
+              "per_100_notes": 2.234637,
+              "per_bar": 0.064516
+            }
+          }
+        },
+        "A:m7": {
+          "notes": 158,
+          "bar_equivalents": 62.0,
+          "occurrences": 13,
+          "by_type": {
+            "tie": {
+              "count": 13,
+              "per_100_notes": 8.227848,
+              "per_bar": 0.209677
+            }
+          }
+        },
+        "B:m3": {
+          "notes": 162,
+          "bar_equivalents": 57.0,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.617284,
+              "per_bar": 0.017544
+            }
+          }
+        },
+        "B:m4": {
+          "notes": 133,
+          "bar_equivalents": 57.0,
+          "occurrences": 2,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.75188,
+              "per_bar": 0.017544
+            },
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.75188,
+              "per_bar": 0.017544
+            }
+          }
+        },
+        "B:m5": {
+          "notes": 162,
+          "bar_equivalents": 57.0,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.617284,
+              "per_bar": 0.017544
+            }
+          }
+        },
+        "B:m7": {
+          "notes": 146,
+          "bar_equivalents": 57.0,
+          "occurrences": 15,
+          "by_type": {
+            "tie": {
+              "count": 15,
+              "per_100_notes": 10.273973,
+              "per_bar": 0.263158
+            }
+          }
+        },
+        "B:m8": {
+          "notes": 133,
+          "bar_equivalents": 57.0,
+          "occurrences": 2,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.75188,
+              "per_bar": 0.017544
+            },
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.75188,
+              "per_bar": 0.017544
+            }
+          }
+        },
+        "C:m1": {
+          "notes": 135,
+          "bar_equivalents": 47.0,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.740741,
+              "per_bar": 0.021277
+            }
+          }
+        },
+        "C:m3": {
+          "notes": 127,
+          "bar_equivalents": 47.0,
+          "occurrences": 3,
+          "by_type": {
+            "tie": {
+              "count": 3,
+              "per_100_notes": 2.362205,
+              "per_bar": 0.06383
+            }
+          }
+        },
+        "C:m7": {
+          "notes": 119,
+          "bar_equivalents": 47.0,
+          "occurrences": 10,
+          "by_type": {
+            "tie": {
+              "count": 10,
+              "per_100_notes": 8.403361,
+              "per_bar": 0.212766
+            }
+          }
+        },
+        "D:m1": {
+          "notes": 68,
+          "bar_equivalents": 26.0,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 1.470588,
+              "per_bar": 0.038462
+            }
+          }
+        },
+        "D:m3": {
+          "notes": 65,
+          "bar_equivalents": 26.0,
+          "occurrences": 3,
+          "by_type": {
+            "tie": {
+              "count": 3,
+              "per_100_notes": 4.615385,
+              "per_bar": 0.115385
+            }
+          }
+        },
+        "D:m5": {
+          "notes": 76,
+          "bar_equivalents": 26.0,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 1.315789,
+              "per_bar": 0.038462
+            }
+          }
+        },
+        "D:m7": {
+          "notes": 52,
+          "bar_equivalents": 26.0,
+          "occurrences": 11,
+          "by_type": {
+            "tie": {
+              "count": 11,
+              "per_100_notes": 21.153846,
+              "per_bar": 0.423077
+            }
+          }
+        },
+        "E:m7": {
+          "notes": 6,
+          "bar_equivalents": 3.0,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 16.666667,
+              "per_bar": 0.333333
+            }
+          }
+        },
+        "F:m7": {
+          "notes": 3,
+          "bar_equivalents": 2.0,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 33.333333,
+              "per_bar": 0.5
+            }
+          }
+        },
+        "unknown": {
+          "notes": 925,
+          "bar_equivalents": 319.33333333333337,
+          "occurrences": 33,
+          "by_type": {
+            "slur": {
+              "count": 11,
+              "per_100_notes": 1.189189,
+              "per_bar": 0.034447
+            },
+            "tie": {
+              "count": 19,
+              "per_100_notes": 2.054054,
+              "per_bar": 0.059499
+            },
+            "staccato": {
+              "count": 3,
+              "per_100_notes": 0.324324,
+              "per_bar": 0.009395
+            }
+          }
+        }
+      },
+      "phrase_end": {
+        "false": {
+          "notes": 3255,
+          "bar_equivalents": 1188.0,
+          "occurrences": 66,
+          "by_type": {
+            "tie": {
+              "count": 66,
+              "per_100_notes": 2.02765,
+              "per_bar": 0.055556
+            }
+          }
+        },
+        "none": {
+          "notes": 925,
+          "bar_equivalents": 319.33333333333337,
+          "occurrences": 33,
+          "by_type": {
+            "slur": {
+              "count": 11,
+              "per_100_notes": 1.189189,
+              "per_bar": 0.034447
+            },
+            "tie": {
+              "count": 19,
+              "per_100_notes": 2.054054,
+              "per_bar": 0.059499
+            },
+            "staccato": {
+              "count": 3,
+              "per_100_notes": 0.324324,
+              "per_bar": 0.009395
+            }
+          }
+        },
+        "true": {
+          "notes": 946,
+          "bar_equivalents": 394.66666666666663,
+          "occurrences": 4,
+          "by_type": {
+            "slur": {
+              "count": 2,
+              "per_100_notes": 0.211416,
+              "per_bar": 0.005068
+            },
+            "tie": {
+              "count": 2,
+              "per_100_notes": 0.211416,
+              "per_bar": 0.005068
+            }
+          }
+        }
+      },
+      "previous_interval": {
+        "-1": {
+          "notes": 400,
+          "bar_equivalents": 1902.0,
+          "occurrences": 2,
+          "by_type": {
+            "tie": {
+              "count": 2,
+              "per_100_notes": 0.5,
+              "per_bar": 0.001052
+            }
+          }
+        },
+        "-2": {
+          "notes": 1153,
+          "bar_equivalents": 1902.0,
+          "occurrences": 32,
+          "by_type": {
+            "tie": {
+              "count": 32,
+              "per_100_notes": 2.775369,
+              "per_bar": 0.016824
+            }
+          }
+        },
+        "-3": {
+          "notes": 324,
+          "bar_equivalents": 1902.0,
+          "occurrences": 11,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.308642,
+              "per_bar": 0.000526
+            },
+            "tie": {
+              "count": 9,
+              "per_100_notes": 2.777778,
+              "per_bar": 0.004732
+            },
+            "staccato": {
+              "count": 1,
+              "per_100_notes": 0.308642,
+              "per_bar": 0.000526
+            }
+          }
+        },
+        "-4": {
+          "notes": 169,
+          "bar_equivalents": 1902.0,
+          "occurrences": 2,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.591716,
+              "per_bar": 0.000526
+            },
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.591716,
+              "per_bar": 0.000526
+            }
+          }
+        },
+        "-5": {
+          "notes": 113,
+          "bar_equivalents": 1902.0,
+          "occurrences": 2,
+          "by_type": {
+            "tie": {
+              "count": 2,
+              "per_100_notes": 1.769912,
+              "per_bar": 0.001052
+            }
+          }
+        },
+        "-7": {
+          "notes": 94,
+          "bar_equivalents": 1902.0,
+          "occurrences": 2,
+          "by_type": {
+            "tie": {
+              "count": 2,
+              "per_100_notes": 2.12766,
+              "per_bar": 0.001052
+            }
+          }
+        },
+        "-8": {
+          "notes": 32,
+          "bar_equivalents": 1902.0,
+          "occurrences": 4,
+          "by_type": {
+            "slur": {
+              "count": 2,
+              "per_100_notes": 6.25,
+              "per_bar": 0.001052
+            },
+            "tie": {
+              "count": 2,
+              "per_100_notes": 6.25,
+              "per_bar": 0.001052
+            }
+          }
+        },
+        "0": {
+          "notes": 594,
+          "bar_equivalents": 1902.0,
+          "occurrences": 12,
+          "by_type": {
+            "slur": {
+              "count": 4,
+              "per_100_notes": 0.673401,
+              "per_bar": 0.002103
+            },
+            "tie": {
+              "count": 8,
+              "per_100_notes": 1.346801,
+              "per_bar": 0.004206
+            }
+          }
+        },
+        "1": {
+          "notes": 351,
+          "bar_equivalents": 1902.0,
+          "occurrences": 11,
+          "by_type": {
+            "tie": {
+              "count": 10,
+              "per_100_notes": 2.849003,
+              "per_bar": 0.005258
+            },
+            "staccato": {
+              "count": 1,
+              "per_100_notes": 0.2849,
+              "per_bar": 0.000526
+            }
+          }
+        },
+        "2": {
+          "notes": 916,
+          "bar_equivalents": 1902.0,
+          "occurrences": 5,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.10917,
+              "per_bar": 0.000526
+            },
+            "tie": {
+              "count": 4,
+              "per_100_notes": 0.436681,
+              "per_bar": 0.002103
+            }
+          }
+        },
+        "3": {
+          "notes": 281,
+          "bar_equivalents": 1902.0,
+          "occurrences": 10,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.355872,
+              "per_bar": 0.000526
+            },
+            "tie": {
+              "count": 9,
+              "per_100_notes": 3.202847,
+              "per_bar": 0.004732
+            }
+          }
+        },
+        "4": {
+          "notes": 180,
+          "bar_equivalents": 1902.0,
+          "occurrences": 4,
+          "by_type": {
+            "tie": {
+              "count": 3,
+              "per_100_notes": 1.666667,
+              "per_bar": 0.001577
+            },
+            "staccato": {
+              "count": 1,
+              "per_100_notes": 0.555556,
+              "per_bar": 0.000526
+            }
+          }
+        },
+        "5": {
+          "notes": 204,
+          "bar_equivalents": 1902.0,
+          "occurrences": 2,
+          "by_type": {
+            "tie": {
+              "count": 2,
+              "per_100_notes": 0.980392,
+              "per_bar": 0.001052
+            }
+          }
+        },
+        "8": {
+          "notes": 27,
+          "bar_equivalents": 1902.0,
+          "occurrences": 3,
+          "by_type": {
+            "slur": {
+              "count": 3,
+              "per_100_notes": 11.111111,
+              "per_bar": 0.001577
+            }
+          }
+        },
+        "9": {
+          "notes": 56,
+          "bar_equivalents": 1902.0,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 1.785714,
+              "per_bar": 0.000526
+            }
+          }
+        }
+      }
+    },
+    "slur_lengths": {
+      "4": 6,
+      "2": 7
+    },
+    "slur_contours": {
+      "1,-3,2": 1,
+      "1": 2,
+      "-2": 4,
+      "-4": 1,
+      "-1,-2,-2": 2,
+      "2,-2,-2": 1,
+      "-3,2,-4": 1,
+      "-2,-3,2": 1
+    },
+    "slur_contour_classes": {
+      "repeated": 2,
+      "ascending": 2,
+      "descending": 9
+    },
+    "slur_contour_by_bar": {
+      "unknown": {
+        "descending": {
+          "count": 9,
+          "per_100_notes": 0.972973
+        },
+        "repeated": {
+          "count": 2,
+          "per_100_notes": 0.216216
+        }
+      },
+      "8": {
+        "ascending": {
+          "count": 1,
+          "per_100_notes": 0.215054
+        }
+      },
+      "4": {
+        "ascending": {
+          "count": 1,
+          "per_100_notes": 0.2079
+        }
+      }
+    }
+  },
   "tunes": 60,
-  "tunes_without_marks": 51,
-  "share_without_marks": 0.85,
+  "tunes_without_marks": 32,
+  "share_without_marks": 0.5333333333333333,
   "tunes_without_engine_ornaments": 56,
   "positioned_notes": 4201,
   "incomplete_triplets": 0,
@@ -192,7 +1405,7 @@
       "unknown": {
         "notes": 925,
         "bar_equivalents": 319.333333,
-        "occurrences": 36,
+        "occurrences": 33,
         "by_type": {
           "grace_single": {
             "count": 3,
@@ -203,11 +1416,6 @@
             "count": 30,
             "per_100_notes": 3.243243,
             "per_bar": 0.093946
-          },
-          "staccato": {
-            "count": 3,
-            "per_100_notes": 0.324324,
-            "per_bar": 0.009395
           }
         }
       }
@@ -216,7 +1424,7 @@
       "1": {
         "notes": 2100,
         "bar_equivalents": 1902.0,
-        "occurrences": 77,
+        "occurrences": 74,
         "by_type": {
           "grace_single": {
             "count": 3,
@@ -237,11 +1445,6 @@
             "count": 1,
             "per_100_notes": 0.047619,
             "per_bar": 0.000526
-          },
-          "staccato": {
-            "count": 3,
-            "per_100_notes": 0.142857,
-            "per_bar": 0.001577
           }
         }
       },
@@ -279,7 +1482,7 @@
       "1+0": {
         "notes": 1910,
         "bar_equivalents": 1902.0,
-        "occurrences": 74,
+        "occurrences": 71,
         "by_type": {
           "grace_single": {
             "count": 3,
@@ -300,11 +1503,6 @@
             "count": 1,
             "per_100_notes": 0.052356,
             "per_bar": 0.000526
-          },
-          "staccato": {
-            "count": 3,
-            "per_100_notes": 0.157068,
-            "per_bar": 0.001577
           }
         }
       },
@@ -420,7 +1618,7 @@
       "1": {
         "notes": 1257,
         "bar_equivalents": 1902.0,
-        "occurrences": 12,
+        "occurrences": 9,
         "by_type": {
           "grace_single": {
             "count": 1,
@@ -431,11 +1629,6 @@
             "count": 8,
             "per_100_notes": 0.636436,
             "per_bar": 0.004206
-          },
-          "staccato": {
-            "count": 3,
-            "per_100_notes": 0.238663,
-            "per_bar": 0.001577
           }
         }
       },
@@ -571,7 +1764,7 @@
       "3": {
         "notes": 950,
         "bar_equivalents": 1902.0,
-        "occurrences": 29,
+        "occurrences": 27,
         "by_type": {
           "triplet_melodic": {
             "count": 1,
@@ -582,18 +1775,13 @@
             "count": 26,
             "per_100_notes": 2.736842,
             "per_bar": 0.01367
-          },
-          "staccato": {
-            "count": 2,
-            "per_100_notes": 0.210526,
-            "per_bar": 0.001052
           }
         }
       },
       "4": {
         "notes": 439,
         "bar_equivalents": 1902.0,
-        "occurrences": 23,
+        "occurrences": 22,
         "by_type": {
           "grace_single": {
             "count": 1,
@@ -604,11 +1792,6 @@
             "count": 21,
             "per_100_notes": 4.783599,
             "per_bar": 0.011041
-          },
-          "staccato": {
-            "count": 1,
-            "per_100_notes": 0.22779,
-            "per_bar": 0.000526
           }
         }
       },
@@ -663,7 +1846,7 @@
       "1.0": {
         "notes": 1953,
         "bar_equivalents": 1902.0,
-        "occurrences": 74,
+        "occurrences": 71,
         "by_type": {
           "grace_single": {
             "count": 3,
@@ -684,11 +1867,6 @@
             "count": 1,
             "per_100_notes": 0.051203,
             "per_bar": 0.000526
-          },
-          "staccato": {
-            "count": 3,
-            "per_100_notes": 0.15361,
-            "per_bar": 0.001577
           }
         }
       },
@@ -892,17 +2070,12 @@
       "0": {
         "notes": 592,
         "bar_equivalents": 1902.0,
-        "occurrences": 18,
+        "occurrences": 16,
         "by_type": {
           "double_stop": {
             "count": 16,
             "per_100_notes": 2.702703,
             "per_bar": 0.008412
-          },
-          "staccato": {
-            "count": 2,
-            "per_100_notes": 0.337838,
-            "per_bar": 0.001052
           }
         }
       },
@@ -974,14 +2147,8 @@
       "3": {
         "notes": 280,
         "bar_equivalents": 1902.0,
-        "occurrences": 1,
-        "by_type": {
-          "staccato": {
-            "count": 1,
-            "per_100_notes": 0.357143,
-            "per_bar": 0.000526
-          }
-        }
+        "occurrences": 0,
+        "by_type": {}
       },
       "4": {
         "notes": 181,
@@ -1610,7 +2777,7 @@
       "unknown": {
         "notes": 925,
         "bar_equivalents": 319.333333,
-        "occurrences": 36,
+        "occurrences": 33,
         "by_type": {
           "grace_single": {
             "count": 3,
@@ -1621,11 +2788,6 @@
             "count": 30,
             "per_100_notes": 3.243243,
             "per_bar": 0.093946
-          },
-          "staccato": {
-            "count": 3,
-            "per_100_notes": 0.324324,
-            "per_bar": 0.009395
           }
         }
       }
@@ -1651,7 +2813,7 @@
       "none": {
         "notes": 925,
         "bar_equivalents": 319.333333,
-        "occurrences": 36,
+        "occurrences": 33,
         "by_type": {
           "grace_single": {
             "count": 3,
@@ -1662,11 +2824,6 @@
             "count": 30,
             "per_100_notes": 3.243243,
             "per_bar": 0.093946
-          },
-          "staccato": {
-            "count": 3,
-            "per_100_notes": 0.324324,
-            "per_bar": 0.009395
           }
         }
       },
@@ -1763,14 +2920,8 @@
       "-3": {
         "notes": 324,
         "bar_equivalents": 1902.0,
-        "occurrences": 1,
-        "by_type": {
-          "staccato": {
-            "count": 1,
-            "per_100_notes": 0.308642,
-            "per_bar": 0.000526
-          }
-        }
+        "occurrences": 0,
+        "by_type": {}
       },
       "-4": {
         "notes": 169,
@@ -1856,17 +3007,12 @@
       "1": {
         "notes": 351,
         "bar_equivalents": 1902.0,
-        "occurrences": 18,
+        "occurrences": 17,
         "by_type": {
           "double_stop": {
             "count": 17,
             "per_100_notes": 4.843305,
             "per_bar": 0.008938
-          },
-          "staccato": {
-            "count": 1,
-            "per_100_notes": 0.2849,
-            "per_bar": 0.000526
           }
         }
       },
@@ -1938,14 +3084,9 @@
       "4": {
         "notes": 180,
         "bar_equivalents": 1902.0,
-        "occurrences": 2,
+        "occurrences": 1,
         "by_type": {
           "triplet_melodic": {
-            "count": 1,
-            "per_100_notes": 0.555556,
-            "per_bar": 0.000526
-          },
-          "staccato": {
             "count": 1,
             "per_100_notes": 0.555556,
             "per_bar": 0.000526
@@ -2027,14 +3168,14 @@
   "raw_only": [],
   "tradition": "britannique_coloniale",
   "tune_type": "waltz",
-  "schema_version": 1,
+  "schema_version": 2,
   "method": {
     "population": "Tous les fichiers du manifeste, toutes les notes écrites de la première voix ; reprises non multipliées, deux voltas incluses, note supérieure des doubles cordes.",
     "denominators": "Note = attaque porteuse (accord = une note, agréments hors dénominateur, triolets = trois notes). Mesures = durée écrite totale / durée nominale, fragments et levées compris. Chaque cellule contient ses opportunités, occurrences et taux par 100 notes / par mesure.",
     "positions": "Parties de huit mesures reconnues par analyze_form uniquement ; autres positions = unknown. Levée jointe à la fin complémentaire, sinon pickup sans numéro. Une source écrite vue plusieurs fois reçoit sa première position jouée. Les fins alternatives sont des opportunités distinctes.",
     "time": "Durée et onset en croches exactes (fractions). Temps métrique 1-based : blanche en 2/2, noire en 4/4 et 3/4, noire pointée en 6/8 ; phase exacte, demi-temps = floor(2*phase). Les triolets gardent leur phase 1/3 ou 2/3, sans arrondi sur la grille.",
-    "context": "Intervalles signés en demi-tons avec notes voisines dans la première exécution contenant cette source (silences ignorés). Degré diatonique replié 1..7, altération séparée. Fin de phrase = mesure 4 ou 8, non preuve de cadence.",
-    "types": "T/!trill!/+trill+ = trill ; ~ = roll ; !turn! = turn. . et H = staccato et fermata, annotations d'articulation, pas agréments à générer. Un triolet mélodique est une figure rythmique, séparée du triolet répété ; un groupe avec silence n'est pas un triolet de trois notes.",
+    "context": "Intervalles signés en demi-tons avec notes voisines dans la première exécution contenant cette source (silences ignorés). Degré diatonique replié 1..7, altération séparée. Fin de phrase = mesure 4 ou 8, non preuve de cadence. Les groupes de liaison exposent longueur, contour intervalle par intervalle, répétitions et contexte de départ.",
+    "types": "T/!trill!/+trill+ = trill ; ~ = roll ; !turn! = turn. . = staccato et H = fermata. Liaisons (), ties -, accents !accent!/!>!/!emphasis!/ +accent+, tenuto L/!tenuto! et marcato !marcato!/!^! sont des articulations dans la clé distincte `articulations`, jamais des agréments. Un triolet mélodique est une figure rythmique, séparée du triolet répété ; un groupe avec silence n'est pas un triolet de trois notes.",
     "limits": "Taux écrits = plancher, pas taux joués. Sources/transcripteurs confondent notation et pratique. Petits effectifs, notes corrélées : occurrences fournies, pas d'IC binomial trompeur. Changements de métrique, unité ou tonalité en cours d'air non interprétés par le parseur commun ; inline_changes compte les [M:…]/[K:…]. Positions de formes irrégulières inconnues.",
     "sparse": "Dans by_position, type absent = zéro occurrence, pas donnée manquante ; position absente = aucune opportunité. Par mesure conditionnel pour m1..8/partie/fin de phrase, par mesure totale du groupe pour temps/durée/degré/intervalles."
   },
@@ -2042,7 +3183,7 @@
     "cahusac": {
       "notes": 159,
       "bar_equivalents": 47.666667,
-      "occurrences": 6,
+      "occurrences": 3,
       "by_type": {
         "grace_single": {
           "count": 3,
@@ -2089,15 +3230,82 @@
           "per_100_notes": 0.0,
           "per_bar": 0.0
         },
-        "staccato": {
-          "count": 3,
-          "per_100_notes": 1.886792,
-          "per_bar": 0.062937
-        },
         "fermata": {
           "count": 0,
           "per_100_notes": 0.0,
           "per_bar": 0.0
+        }
+      },
+      "articulations": {
+        "occurrences": 16,
+        "by_type": {
+          "slur": {
+            "count": 13,
+            "per_100_notes": 8.176101
+          },
+          "tie": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "staccato": {
+            "count": 3,
+            "per_100_notes": 1.886792
+          },
+          "accent": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "tenuto": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "marcato": {
+            "count": 0,
+            "per_100_notes": 0.0
+          }
+        },
+        "slur_lengths": {
+          "4": 6,
+          "2": 7
+        },
+        "slur_contours": {
+          "1,-3,2": 1,
+          "1": 2,
+          "-2": 4,
+          "-4": 1,
+          "-1,-2,-2": 2,
+          "2,-2,-2": 1,
+          "-3,2,-4": 1,
+          "-2,-3,2": 1
+        },
+        "slur_contour_classes": {
+          "repeated": 2,
+          "ascending": 2,
+          "descending": 9
+        },
+        "slur_contour_by_bar": {
+          "unknown": {
+            "descending": {
+              "count": 9,
+              "per_100_notes": 6.923077
+            },
+            "repeated": {
+              "count": 2,
+              "per_100_notes": 1.538462
+            }
+          },
+          "8": {
+            "ascending": {
+              "count": 1,
+              "per_100_notes": 33.333333
+            }
+          },
+          "4": {
+            "ascending": {
+              "count": 1,
+              "per_100_notes": 25.0
+            }
+          }
         }
       },
       "tunes": 2,
@@ -2107,620 +3315,6 @@
       "positioned_notes": 29,
       "incomplete_triplets": 0,
       "inline_changes": 0,
-      "by_position": {
-        "bar_position": {
-          "1": {
-            "notes": 3,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2": {
-            "notes": 2,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "3": {
-            "notes": 6,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "4": {
-            "notes": 4,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "5": {
-            "notes": 3,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "6": {
-            "notes": 2,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "7": {
-            "notes": 6,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "8": {
-            "notes": 3,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "unknown": {
-            "notes": 130,
-            "bar_equivalents": 39.666667,
-            "occurrences": 6,
-            "by_type": {
-              "grace_single": {
-                "count": 3,
-                "per_100_notes": 2.307692,
-                "per_bar": 0.07563
-              },
-              "staccato": {
-                "count": 3,
-                "per_100_notes": 2.307692,
-                "per_bar": 0.07563
-              }
-            }
-          }
-        },
-        "beat": {
-          "1": {
-            "notes": 159,
-            "bar_equivalents": 47.666667,
-            "occurrences": 6,
-            "by_type": {
-              "grace_single": {
-                "count": 3,
-                "per_100_notes": 1.886792,
-                "per_bar": 0.062937
-              },
-              "staccato": {
-                "count": 3,
-                "per_100_notes": 1.886792,
-                "per_bar": 0.062937
-              }
-            }
-          }
-        },
-        "beat_phase": {
-          "1+0": {
-            "notes": 48,
-            "bar_equivalents": 47.666667,
-            "occurrences": 6,
-            "by_type": {
-              "grace_single": {
-                "count": 3,
-                "per_100_notes": 6.25,
-                "per_bar": 0.062937
-              },
-              "staccato": {
-                "count": 3,
-                "per_100_notes": 6.25,
-                "per_bar": 0.062937
-              }
-            }
-          },
-          "1+1/2": {
-            "notes": 8,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "1+1/3": {
-            "notes": 34,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "1+1/6": {
-            "notes": 4,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "1+2/3": {
-            "notes": 46,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "1+5/6": {
-            "notes": 19,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          }
-        },
-        "carrier_duration_eighths": {
-          "1": {
-            "notes": 82,
-            "bar_equivalents": 47.666667,
-            "occurrences": 4,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 1.219512,
-                "per_bar": 0.020979
-              },
-              "staccato": {
-                "count": 3,
-                "per_100_notes": 3.658537,
-                "per_bar": 0.062937
-              }
-            }
-          },
-          "1/2": {
-            "notes": 62,
-            "bar_equivalents": 47.666667,
-            "occurrences": 1,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 1.612903,
-                "per_bar": 0.020979
-              }
-            }
-          },
-          "2": {
-            "notes": 15,
-            "bar_equivalents": 47.666667,
-            "occurrences": 1,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 6.666667,
-                "per_bar": 0.020979
-              }
-            }
-          }
-        },
-        "degree": {
-          "1": {
-            "notes": 19,
-            "bar_equivalents": 47.666667,
-            "occurrences": 1,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 5.263158,
-                "per_bar": 0.020979
-              }
-            }
-          },
-          "2": {
-            "notes": 24,
-            "bar_equivalents": 47.666667,
-            "occurrences": 1,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 4.166667,
-                "per_bar": 0.020979
-              }
-            }
-          },
-          "3": {
-            "notes": 38,
-            "bar_equivalents": 47.666667,
-            "occurrences": 2,
-            "by_type": {
-              "staccato": {
-                "count": 2,
-                "per_100_notes": 5.263158,
-                "per_bar": 0.041958
-              }
-            }
-          },
-          "4": {
-            "notes": 22,
-            "bar_equivalents": 47.666667,
-            "occurrences": 2,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 4.545455,
-                "per_bar": 0.020979
-              },
-              "staccato": {
-                "count": 1,
-                "per_100_notes": 4.545455,
-                "per_bar": 0.020979
-              }
-            }
-          },
-          "5": {
-            "notes": 28,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "6": {
-            "notes": 12,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "7": {
-            "notes": 16,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          }
-        },
-        "half_beat": {
-          "1.0": {
-            "notes": 86,
-            "bar_equivalents": 47.666667,
-            "occurrences": 6,
-            "by_type": {
-              "grace_single": {
-                "count": 3,
-                "per_100_notes": 3.488372,
-                "per_bar": 0.062937
-              },
-              "staccato": {
-                "count": 3,
-                "per_100_notes": 3.488372,
-                "per_bar": 0.062937
-              }
-            }
-          },
-          "1.1": {
-            "notes": 73,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          }
-        },
-        "next_interval": {
-          "-1": {
-            "notes": 15,
-            "bar_equivalents": 47.666667,
-            "occurrences": 2,
-            "by_type": {
-              "grace_single": {
-                "count": 2,
-                "per_100_notes": 13.333333,
-                "per_bar": 0.041958
-              }
-            }
-          },
-          "-2": {
-            "notes": 19,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-3": {
-            "notes": 13,
-            "bar_equivalents": 47.666667,
-            "occurrences": 1,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 7.692308,
-                "per_bar": 0.020979
-              }
-            }
-          },
-          "-4": {
-            "notes": 10,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-5": {
-            "notes": 2,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-8": {
-            "notes": 2,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "0": {
-            "notes": 30,
-            "bar_equivalents": 47.666667,
-            "occurrences": 2,
-            "by_type": {
-              "staccato": {
-                "count": 2,
-                "per_100_notes": 6.666667,
-                "per_bar": 0.041958
-              }
-            }
-          },
-          "1": {
-            "notes": 20,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "10": {
-            "notes": 1,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2": {
-            "notes": 35,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "3": {
-            "notes": 5,
-            "bar_equivalents": 47.666667,
-            "occurrences": 1,
-            "by_type": {
-              "staccato": {
-                "count": 1,
-                "per_100_notes": 20.0,
-                "per_bar": 0.020979
-              }
-            }
-          },
-          "4": {
-            "notes": 1,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "5": {
-            "notes": 3,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "8": {
-            "notes": 3,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          }
-        },
-        "part_position": {
-          "B:m1": {
-            "notes": 3,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "B:m2": {
-            "notes": 2,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "B:m3": {
-            "notes": 6,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "B:m4": {
-            "notes": 4,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "B:m5": {
-            "notes": 3,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "B:m6": {
-            "notes": 2,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "B:m7": {
-            "notes": 6,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "B:m8": {
-            "notes": 3,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "unknown": {
-            "notes": 130,
-            "bar_equivalents": 39.666667,
-            "occurrences": 6,
-            "by_type": {
-              "grace_single": {
-                "count": 3,
-                "per_100_notes": 2.307692,
-                "per_bar": 0.07563
-              },
-              "staccato": {
-                "count": 3,
-                "per_100_notes": 2.307692,
-                "per_bar": 0.07563
-              }
-            }
-          }
-        },
-        "phrase_end": {
-          "false": {
-            "notes": 22,
-            "bar_equivalents": 6.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "none": {
-            "notes": 130,
-            "bar_equivalents": 39.666667,
-            "occurrences": 6,
-            "by_type": {
-              "grace_single": {
-                "count": 3,
-                "per_100_notes": 2.307692,
-                "per_bar": 0.07563
-              },
-              "staccato": {
-                "count": 3,
-                "per_100_notes": 2.307692,
-                "per_bar": 0.07563
-              }
-            }
-          },
-          "true": {
-            "notes": 7,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          }
-        },
-        "previous_interval": {
-          "-1": {
-            "notes": 14,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-2": {
-            "notes": 19,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-3": {
-            "notes": 13,
-            "bar_equivalents": 47.666667,
-            "occurrences": 1,
-            "by_type": {
-              "staccato": {
-                "count": 1,
-                "per_100_notes": 7.692308,
-                "per_bar": 0.020979
-              }
-            }
-          },
-          "-4": {
-            "notes": 9,
-            "bar_equivalents": 47.666667,
-            "occurrences": 1,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 11.111111,
-                "per_bar": 0.020979
-              }
-            }
-          },
-          "-5": {
-            "notes": 2,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-8": {
-            "notes": 2,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "0": {
-            "notes": 31,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "1": {
-            "notes": 20,
-            "bar_equivalents": 47.666667,
-            "occurrences": 1,
-            "by_type": {
-              "staccato": {
-                "count": 1,
-                "per_100_notes": 5.0,
-                "per_bar": 0.020979
-              }
-            }
-          },
-          "10": {
-            "notes": 1,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2": {
-            "notes": 34,
-            "bar_equivalents": 47.666667,
-            "occurrences": 1,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 2.941176,
-                "per_bar": 0.020979
-              }
-            }
-          },
-          "3": {
-            "notes": 5,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "4": {
-            "notes": 1,
-            "bar_equivalents": 47.666667,
-            "occurrences": 1,
-            "by_type": {
-              "staccato": {
-                "count": 1,
-                "per_100_notes": 100.0,
-                "per_bar": 0.020979
-              }
-            }
-          },
-          "5": {
-            "notes": 3,
-            "bar_equivalents": 47.666667,
-            "occurrences": 1,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 33.333333,
-                "per_bar": 0.020979
-              }
-            }
-          },
-          "8": {
-            "notes": 3,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "None": {
-            "notes": 2,
-            "bar_equivalents": 47.666667,
-            "occurrences": 0,
-            "by_type": {}
-          }
-        }
-      },
       "raw_presence_tunes": {
         "grace": 1,
         "roll": 0,
@@ -2785,1799 +3379,52 @@
           "per_100_notes": 0.0,
           "per_bar": 0.0
         },
-        "staccato": {
-          "count": 0,
-          "per_100_notes": 0.0,
-          "per_bar": 0.0
-        },
         "fermata": {
           "count": 0,
           "per_100_notes": 0.0,
           "per_bar": 0.0
         }
       },
+      "articulations": {
+        "occurrences": 87,
+        "by_type": {
+          "slur": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "tie": {
+            "count": 87,
+            "per_100_notes": 1.75156
+          },
+          "staccato": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "accent": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "tenuto": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "marcato": {
+            "count": 0,
+            "per_100_notes": 0.0
+          }
+        },
+        "slur_lengths": {},
+        "slur_contours": {},
+        "slur_contour_classes": {},
+        "slur_contour_by_bar": {}
+      },
       "tunes": 58,
-      "tunes_without_marks": 51,
-      "share_without_marks": 0.8793103448275862,
+      "tunes_without_marks": 32,
+      "share_without_marks": 0.5517241379310345,
       "tunes_without_engine_ornaments": 55,
       "positioned_notes": 4172,
       "incomplete_triplets": 0,
       "inline_changes": 4,
-      "by_position": {
-        "bar_position": {
-          "1": {
-            "notes": 554,
-            "bar_equivalents": 197.0,
-            "occurrences": 12,
-            "by_type": {
-              "double_stop": {
-                "count": 12,
-                "per_100_notes": 2.166065,
-                "per_bar": 0.060914
-              }
-            }
-          },
-          "2": {
-            "notes": 526,
-            "bar_equivalents": 197.0,
-            "occurrences": 18,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.190114,
-                "per_bar": 0.005076
-              },
-              "double_stop": {
-                "count": 17,
-                "per_100_notes": 3.231939,
-                "per_bar": 0.086294
-              }
-            }
-          },
-          "3": {
-            "notes": 547,
-            "bar_equivalents": 197.0,
-            "occurrences": 14,
-            "by_type": {
-              "double_stop": {
-                "count": 14,
-                "per_100_notes": 2.559415,
-                "per_bar": 0.071066
-              }
-            }
-          },
-          "4": {
-            "notes": 477,
-            "bar_equivalents": 197.0,
-            "occurrences": 14,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 2,
-                "per_100_notes": 0.419287,
-                "per_bar": 0.010152
-              },
-              "double_stop": {
-                "count": 12,
-                "per_100_notes": 2.515723,
-                "per_bar": 0.060914
-              }
-            }
-          },
-          "5": {
-            "notes": 575,
-            "bar_equivalents": 197.0,
-            "occurrences": 14,
-            "by_type": {
-              "double_stop": {
-                "count": 14,
-                "per_100_notes": 2.434783,
-                "per_bar": 0.071066
-              }
-            }
-          },
-          "6": {
-            "notes": 550,
-            "bar_equivalents": 197.0,
-            "occurrences": 15,
-            "by_type": {
-              "double_stop": {
-                "count": 15,
-                "per_100_notes": 2.727273,
-                "per_bar": 0.076142
-              }
-            }
-          },
-          "7": {
-            "notes": 481,
-            "bar_equivalents": 197.0,
-            "occurrences": 13,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 2,
-                "per_100_notes": 0.4158,
-                "per_bar": 0.010152
-              },
-              "double_stop": {
-                "count": 11,
-                "per_100_notes": 2.286902,
-                "per_bar": 0.055838
-              }
-            }
-          },
-          "8": {
-            "notes": 462,
-            "bar_equivalents": 195.666667,
-            "occurrences": 7,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.21645,
-                "per_bar": 0.005111
-              },
-              "double_stop": {
-                "count": 5,
-                "per_100_notes": 1.082251,
-                "per_bar": 0.025554
-              },
-              "chord": {
-                "count": 1,
-                "per_100_notes": 0.21645,
-                "per_bar": 0.005111
-              }
-            }
-          },
-          "unknown": {
-            "notes": 795,
-            "bar_equivalents": 279.666667,
-            "occurrences": 30,
-            "by_type": {
-              "double_stop": {
-                "count": 30,
-                "per_100_notes": 3.773585,
-                "per_bar": 0.107271
-              }
-            }
-          }
-        },
-        "beat": {
-          "1": {
-            "notes": 1941,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 71,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 2,
-                "per_100_notes": 0.10304,
-                "per_bar": 0.001079
-              },
-              "double_stop": {
-                "count": 68,
-                "per_100_notes": 3.503349,
-                "per_bar": 0.036671
-              },
-              "chord": {
-                "count": 1,
-                "per_100_notes": 0.05152,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "2": {
-            "notes": 1100,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 14,
-            "by_type": {
-              "double_stop": {
-                "count": 14,
-                "per_100_notes": 1.272727,
-                "per_bar": 0.00755
-              }
-            }
-          },
-          "3": {
-            "notes": 1926,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 52,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 4,
-                "per_100_notes": 0.207684,
-                "per_bar": 0.002157
-              },
-              "double_stop": {
-                "count": 48,
-                "per_100_notes": 2.492212,
-                "per_bar": 0.025885
-              }
-            }
-          }
-        },
-        "beat_phase": {
-          "1+0": {
-            "notes": 1862,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 68,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 2,
-                "per_100_notes": 0.107411,
-                "per_bar": 0.001079
-              },
-              "double_stop": {
-                "count": 65,
-                "per_100_notes": 3.49087,
-                "per_bar": 0.035053
-              },
-              "chord": {
-                "count": 1,
-                "per_100_notes": 0.053706,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "1+1/2": {
-            "notes": 70,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 3,
-            "by_type": {
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 4.285714,
-                "per_bar": 0.001618
-              }
-            }
-          },
-          "1+1/3": {
-            "notes": 2,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "1+1/4": {
-            "notes": 3,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "1+2/3": {
-            "notes": 2,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "1+3/4": {
-            "notes": 2,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2+0": {
-            "notes": 719,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 13,
-            "by_type": {
-              "double_stop": {
-                "count": 13,
-                "per_100_notes": 1.808067,
-                "per_bar": 0.007011
-              }
-            }
-          },
-          "2+1/2": {
-            "notes": 381,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.262467,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "3+0": {
-            "notes": 1606,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 52,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 4,
-                "per_100_notes": 0.249066,
-                "per_bar": 0.002157
-              },
-              "double_stop": {
-                "count": 48,
-                "per_100_notes": 2.988792,
-                "per_bar": 0.025885
-              }
-            }
-          },
-          "3+1/2": {
-            "notes": 312,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "3+1/3": {
-            "notes": 4,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "3+2/3": {
-            "notes": 4,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          }
-        },
-        "carrier_duration_eighths": {
-          "1": {
-            "notes": 1175,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 8,
-            "by_type": {
-              "double_stop": {
-                "count": 8,
-                "per_100_notes": 0.680851,
-                "per_bar": 0.004314
-              }
-            }
-          },
-          "1/2": {
-            "notes": 5,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2": {
-            "notes": 2574,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 70,
-            "by_type": {
-              "double_stop": {
-                "count": 70,
-                "per_100_notes": 2.719503,
-                "per_bar": 0.037749
-              }
-            }
-          },
-          "2/3": {
-            "notes": 18,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 6,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 6,
-                "per_100_notes": 33.333333,
-                "per_bar": 0.003236
-              }
-            }
-          },
-          "3": {
-            "notes": 333,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "3/2": {
-            "notes": 5,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "4": {
-            "notes": 675,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 35,
-            "by_type": {
-              "double_stop": {
-                "count": 35,
-                "per_100_notes": 5.185185,
-                "per_bar": 0.018875
-              }
-            }
-          },
-          "5": {
-            "notes": 18,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "6": {
-            "notes": 164,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 18,
-            "by_type": {
-              "double_stop": {
-                "count": 17,
-                "per_100_notes": 10.365854,
-                "per_bar": 0.009168
-              },
-              "chord": {
-                "count": 1,
-                "per_100_notes": 0.609756,
-                "per_bar": 0.000539
-              }
-            }
-          }
-        },
-        "degree": {
-          "1": {
-            "notes": 1007,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 19,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 2,
-                "per_100_notes": 0.19861,
-                "per_bar": 0.001079
-              },
-              "double_stop": {
-                "count": 17,
-                "per_100_notes": 1.688183,
-                "per_bar": 0.009168
-              }
-            }
-          },
-          "2": {
-            "notes": 715,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 22,
-            "by_type": {
-              "double_stop": {
-                "count": 22,
-                "per_100_notes": 3.076923,
-                "per_bar": 0.011864
-              }
-            }
-          },
-          "3": {
-            "notes": 912,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 27,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.109649,
-                "per_bar": 0.000539
-              },
-              "double_stop": {
-                "count": 26,
-                "per_100_notes": 2.850877,
-                "per_bar": 0.014021
-              }
-            }
-          },
-          "4": {
-            "notes": 417,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 21,
-            "by_type": {
-              "double_stop": {
-                "count": 21,
-                "per_100_notes": 5.035971,
-                "per_bar": 0.011325
-              }
-            }
-          },
-          "5": {
-            "notes": 993,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 23,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 3,
-                "per_100_notes": 0.302115,
-                "per_bar": 0.001618
-              },
-              "double_stop": {
-                "count": 20,
-                "per_100_notes": 2.014099,
-                "per_bar": 0.010786
-              }
-            }
-          },
-          "6": {
-            "notes": 596,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 16,
-            "by_type": {
-              "double_stop": {
-                "count": 15,
-                "per_100_notes": 2.516779,
-                "per_bar": 0.008089
-              },
-              "chord": {
-                "count": 1,
-                "per_100_notes": 0.167785,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "7": {
-            "notes": 327,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 9,
-            "by_type": {
-              "double_stop": {
-                "count": 9,
-                "per_100_notes": 2.752294,
-                "per_bar": 0.004853
-              }
-            }
-          }
-        },
-        "half_beat": {
-          "1.0": {
-            "notes": 1867,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 68,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 2,
-                "per_100_notes": 0.107124,
-                "per_bar": 0.001079
-              },
-              "double_stop": {
-                "count": 65,
-                "per_100_notes": 3.481521,
-                "per_bar": 0.035053
-              },
-              "chord": {
-                "count": 1,
-                "per_100_notes": 0.053562,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "1.1": {
-            "notes": 74,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 3,
-            "by_type": {
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 4.054054,
-                "per_bar": 0.001618
-              }
-            }
-          },
-          "2.0": {
-            "notes": 719,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 13,
-            "by_type": {
-              "double_stop": {
-                "count": 13,
-                "per_100_notes": 1.808067,
-                "per_bar": 0.007011
-              }
-            }
-          },
-          "2.1": {
-            "notes": 381,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.262467,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "3.0": {
-            "notes": 1610,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 52,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 4,
-                "per_100_notes": 0.248447,
-                "per_bar": 0.002157
-              },
-              "double_stop": {
-                "count": 48,
-                "per_100_notes": 2.981366,
-                "per_bar": 0.025885
-              }
-            }
-          },
-          "3.1": {
-            "notes": 316,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          }
-        },
-        "next_interval": {
-          "-1": {
-            "notes": 388,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 16,
-            "by_type": {
-              "double_stop": {
-                "count": 16,
-                "per_100_notes": 4.123711,
-                "per_bar": 0.008628
-              }
-            }
-          },
-          "-10": {
-            "notes": 8,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-11": {
-            "notes": 2,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-12": {
-            "notes": 16,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-13": {
-            "notes": 1,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 100.0,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "-15": {
-            "notes": 1,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-16": {
-            "notes": 1,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-2": {
-            "notes": 1136,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 34,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.088028,
-                "per_bar": 0.000539
-              },
-              "double_stop": {
-                "count": 33,
-                "per_100_notes": 2.90493,
-                "per_bar": 0.017796
-              }
-            }
-          },
-          "-3": {
-            "notes": 311,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-4": {
-            "notes": 160,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 3,
-            "by_type": {
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 1.875,
-                "per_bar": 0.001618
-              }
-            }
-          },
-          "-5": {
-            "notes": 113,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-6": {
-            "notes": 10,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 10.0,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "-7": {
-            "notes": 93,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-8": {
-            "notes": 29,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-9": {
-            "notes": 27,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "0": {
-            "notes": 562,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 16,
-            "by_type": {
-              "double_stop": {
-                "count": 16,
-                "per_100_notes": 2.846975,
-                "per_bar": 0.008628
-              }
-            }
-          },
-          "1": {
-            "notes": 332,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 17,
-            "by_type": {
-              "double_stop": {
-                "count": 17,
-                "per_100_notes": 5.120482,
-                "per_bar": 0.009168
-              }
-            }
-          },
-          "10": {
-            "notes": 16,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 6.25,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "11": {
-            "notes": 1,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "12": {
-            "notes": 17,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "16": {
-            "notes": 2,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "17": {
-            "notes": 1,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2": {
-            "notes": 881,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 44,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 5,
-                "per_100_notes": 0.567537,
-                "per_bar": 0.002696
-              },
-              "double_stop": {
-                "count": 39,
-                "per_100_notes": 4.426788,
-                "per_bar": 0.021032
-              }
-            }
-          },
-          "3": {
-            "notes": 275,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "4": {
-            "notes": 180,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "5": {
-            "notes": 205,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 2,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.487805,
-                "per_bar": 0.000539
-              },
-              "chord": {
-                "count": 1,
-                "per_100_notes": 0.487805,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "6": {
-            "notes": 3,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "7": {
-            "notes": 63,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "8": {
-            "notes": 23,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "9": {
-            "notes": 57,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "None": {
-            "notes": 53,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 2,
-            "by_type": {
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 3.773585,
-                "per_bar": 0.001079
-              }
-            }
-          }
-        },
-        "part_position": {
-          "A:m1": {
-            "notes": 175,
-            "bar_equivalents": 62.0,
-            "occurrences": 2,
-            "by_type": {
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 1.142857,
-                "per_bar": 0.032258
-              }
-            }
-          },
-          "A:m2": {
-            "notes": 174,
-            "bar_equivalents": 62.0,
-            "occurrences": 4,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.574713,
-                "per_bar": 0.016129
-              },
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 1.724138,
-                "per_bar": 0.048387
-              }
-            }
-          },
-          "A:m3": {
-            "notes": 179,
-            "bar_equivalents": 62.0,
-            "occurrences": 4,
-            "by_type": {
-              "double_stop": {
-                "count": 4,
-                "per_100_notes": 2.234637,
-                "per_bar": 0.064516
-              }
-            }
-          },
-          "A:m4": {
-            "notes": 152,
-            "bar_equivalents": 62.0,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.657895,
-                "per_bar": 0.016129
-              }
-            }
-          },
-          "A:m5": {
-            "notes": 183,
-            "bar_equivalents": 62.0,
-            "occurrences": 2,
-            "by_type": {
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 1.092896,
-                "per_bar": 0.032258
-              }
-            }
-          },
-          "A:m6": {
-            "notes": 169,
-            "bar_equivalents": 62.0,
-            "occurrences": 3,
-            "by_type": {
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 1.775148,
-                "per_bar": 0.048387
-              }
-            }
-          },
-          "A:m7": {
-            "notes": 158,
-            "bar_equivalents": 62.0,
-            "occurrences": 5,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.632911,
-                "per_bar": 0.016129
-              },
-              "double_stop": {
-                "count": 4,
-                "per_100_notes": 2.531646,
-                "per_bar": 0.064516
-              }
-            }
-          },
-          "A:m8": {
-            "notes": 145,
-            "bar_equivalents": 62.0,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.689655,
-                "per_bar": 0.016129
-              }
-            }
-          },
-          "B:m1": {
-            "notes": 155,
-            "bar_equivalents": 56.0,
-            "occurrences": 4,
-            "by_type": {
-              "double_stop": {
-                "count": 4,
-                "per_100_notes": 2.580645,
-                "per_bar": 0.071429
-              }
-            }
-          },
-          "B:m2": {
-            "notes": 145,
-            "bar_equivalents": 56.0,
-            "occurrences": 6,
-            "by_type": {
-              "double_stop": {
-                "count": 6,
-                "per_100_notes": 4.137931,
-                "per_bar": 0.107143
-              }
-            }
-          },
-          "B:m3": {
-            "notes": 156,
-            "bar_equivalents": 56.0,
-            "occurrences": 4,
-            "by_type": {
-              "double_stop": {
-                "count": 4,
-                "per_100_notes": 2.564103,
-                "per_bar": 0.071429
-              }
-            }
-          },
-          "B:m4": {
-            "notes": 129,
-            "bar_equivalents": 56.0,
-            "occurrences": 4,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.775194,
-                "per_bar": 0.017857
-              },
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 2.325581,
-                "per_bar": 0.053571
-              }
-            }
-          },
-          "B:m5": {
-            "notes": 159,
-            "bar_equivalents": 56.0,
-            "occurrences": 6,
-            "by_type": {
-              "double_stop": {
-                "count": 6,
-                "per_100_notes": 3.773585,
-                "per_bar": 0.107143
-              }
-            }
-          },
-          "B:m6": {
-            "notes": 165,
-            "bar_equivalents": 56.0,
-            "occurrences": 5,
-            "by_type": {
-              "double_stop": {
-                "count": 5,
-                "per_100_notes": 3.030303,
-                "per_bar": 0.089286
-              }
-            }
-          },
-          "B:m7": {
-            "notes": 140,
-            "bar_equivalents": 56.0,
-            "occurrences": 3,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.714286,
-                "per_bar": 0.017857
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 1.428571,
-                "per_bar": 0.035714
-              }
-            }
-          },
-          "B:m8": {
-            "notes": 130,
-            "bar_equivalents": 56.0,
-            "occurrences": 2,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.769231,
-                "per_bar": 0.017857
-              },
-              "chord": {
-                "count": 1,
-                "per_100_notes": 0.769231,
-                "per_bar": 0.017857
-              }
-            }
-          },
-          "C:m1": {
-            "notes": 135,
-            "bar_equivalents": 47.0,
-            "occurrences": 4,
-            "by_type": {
-              "double_stop": {
-                "count": 4,
-                "per_100_notes": 2.962963,
-                "per_bar": 0.085106
-              }
-            }
-          },
-          "C:m2": {
-            "notes": 126,
-            "bar_equivalents": 47.0,
-            "occurrences": 5,
-            "by_type": {
-              "double_stop": {
-                "count": 5,
-                "per_100_notes": 3.968254,
-                "per_bar": 0.106383
-              }
-            }
-          },
-          "C:m3": {
-            "notes": 127,
-            "bar_equivalents": 47.0,
-            "occurrences": 4,
-            "by_type": {
-              "double_stop": {
-                "count": 4,
-                "per_100_notes": 3.149606,
-                "per_bar": 0.085106
-              }
-            }
-          },
-          "C:m4": {
-            "notes": 119,
-            "bar_equivalents": 47.0,
-            "occurrences": 5,
-            "by_type": {
-              "double_stop": {
-                "count": 5,
-                "per_100_notes": 4.201681,
-                "per_bar": 0.106383
-              }
-            }
-          },
-          "C:m5": {
-            "notes": 138,
-            "bar_equivalents": 47.0,
-            "occurrences": 4,
-            "by_type": {
-              "double_stop": {
-                "count": 4,
-                "per_100_notes": 2.898551,
-                "per_bar": 0.085106
-              }
-            }
-          },
-          "C:m6": {
-            "notes": 129,
-            "bar_equivalents": 47.0,
-            "occurrences": 5,
-            "by_type": {
-              "double_stop": {
-                "count": 5,
-                "per_100_notes": 3.875969,
-                "per_bar": 0.106383
-              }
-            }
-          },
-          "C:m7": {
-            "notes": 119,
-            "bar_equivalents": 47.0,
-            "occurrences": 4,
-            "by_type": {
-              "double_stop": {
-                "count": 4,
-                "per_100_notes": 3.361345,
-                "per_bar": 0.085106
-              }
-            }
-          },
-          "C:m8": {
-            "notes": 108,
-            "bar_equivalents": 45.666667,
-            "occurrences": 2,
-            "by_type": {
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 1.851852,
-                "per_bar": 0.043796
-              }
-            }
-          },
-          "D:m1": {
-            "notes": 68,
-            "bar_equivalents": 26.0,
-            "occurrences": 2,
-            "by_type": {
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 2.941176,
-                "per_bar": 0.076923
-              }
-            }
-          },
-          "D:m2": {
-            "notes": 68,
-            "bar_equivalents": 26.0,
-            "occurrences": 3,
-            "by_type": {
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 4.411765,
-                "per_bar": 0.115385
-              }
-            }
-          },
-          "D:m3": {
-            "notes": 65,
-            "bar_equivalents": 26.0,
-            "occurrences": 2,
-            "by_type": {
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 3.076923,
-                "per_bar": 0.076923
-              }
-            }
-          },
-          "D:m4": {
-            "notes": 65,
-            "bar_equivalents": 26.0,
-            "occurrences": 4,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 1.538462,
-                "per_bar": 0.038462
-              },
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 4.615385,
-                "per_bar": 0.115385
-              }
-            }
-          },
-          "D:m5": {
-            "notes": 76,
-            "bar_equivalents": 26.0,
-            "occurrences": 2,
-            "by_type": {
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 2.631579,
-                "per_bar": 0.076923
-              }
-            }
-          },
-          "D:m6": {
-            "notes": 71,
-            "bar_equivalents": 26.0,
-            "occurrences": 2,
-            "by_type": {
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 2.816901,
-                "per_bar": 0.076923
-              }
-            }
-          },
-          "D:m7": {
-            "notes": 52,
-            "bar_equivalents": 26.0,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 1.923077,
-                "per_bar": 0.038462
-              }
-            }
-          },
-          "D:m8": {
-            "notes": 66,
-            "bar_equivalents": 26.0,
-            "occurrences": 2,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 1.515152,
-                "per_bar": 0.038462
-              },
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 1.515152,
-                "per_bar": 0.038462
-              }
-            }
-          },
-          "E:m1": {
-            "notes": 11,
-            "bar_equivalents": 3.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m2": {
-            "notes": 7,
-            "bar_equivalents": 3.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m3": {
-            "notes": 11,
-            "bar_equivalents": 3.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m4": {
-            "notes": 6,
-            "bar_equivalents": 3.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m5": {
-            "notes": 10,
-            "bar_equivalents": 3.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m6": {
-            "notes": 8,
-            "bar_equivalents": 3.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m7": {
-            "notes": 6,
-            "bar_equivalents": 3.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m8": {
-            "notes": 8,
-            "bar_equivalents": 3.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m1": {
-            "notes": 5,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m2": {
-            "notes": 5,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m3": {
-            "notes": 4,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m4": {
-            "notes": 5,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m5": {
-            "notes": 6,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m6": {
-            "notes": 4,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m7": {
-            "notes": 3,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m8": {
-            "notes": 4,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "G:m1": {
-            "notes": 5,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "G:m2": {
-            "notes": 1,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "G:m3": {
-            "notes": 5,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "G:m4": {
-            "notes": 1,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "G:m5": {
-            "notes": 3,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "G:m6": {
-            "notes": 4,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "G:m7": {
-            "notes": 3,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "G:m8": {
-            "notes": 1,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "unknown": {
-            "notes": 795,
-            "bar_equivalents": 279.666667,
-            "occurrences": 30,
-            "by_type": {
-              "double_stop": {
-                "count": 30,
-                "per_100_notes": 3.773585,
-                "per_bar": 0.107271
-              }
-            }
-          }
-        },
-        "phrase_end": {
-          "false": {
-            "notes": 3233,
-            "bar_equivalents": 1182.0,
-            "occurrences": 86,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 3,
-                "per_100_notes": 0.092793,
-                "per_bar": 0.002538
-              },
-              "double_stop": {
-                "count": 83,
-                "per_100_notes": 2.567275,
-                "per_bar": 0.07022
-              }
-            }
-          },
-          "none": {
-            "notes": 795,
-            "bar_equivalents": 279.666667,
-            "occurrences": 30,
-            "by_type": {
-              "double_stop": {
-                "count": 30,
-                "per_100_notes": 3.773585,
-                "per_bar": 0.107271
-              }
-            }
-          },
-          "true": {
-            "notes": 939,
-            "bar_equivalents": 392.666667,
-            "occurrences": 21,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 3,
-                "per_100_notes": 0.319489,
-                "per_bar": 0.00764
-              },
-              "double_stop": {
-                "count": 17,
-                "per_100_notes": 1.810437,
-                "per_bar": 0.043294
-              },
-              "chord": {
-                "count": 1,
-                "per_100_notes": 0.106496,
-                "per_bar": 0.002547
-              }
-            }
-          }
-        },
-        "previous_interval": {
-          "-1": {
-            "notes": 386,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 16,
-            "by_type": {
-              "double_stop": {
-                "count": 16,
-                "per_100_notes": 4.145078,
-                "per_bar": 0.008628
-              }
-            }
-          },
-          "-10": {
-            "notes": 8,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-11": {
-            "notes": 2,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-12": {
-            "notes": 16,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-13": {
-            "notes": 1,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 100.0,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "-15": {
-            "notes": 1,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-16": {
-            "notes": 1,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-2": {
-            "notes": 1134,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 33,
-            "by_type": {
-              "double_stop": {
-                "count": 33,
-                "per_100_notes": 2.910053,
-                "per_bar": 0.017796
-              }
-            }
-          },
-          "-3": {
-            "notes": 311,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-4": {
-            "notes": 160,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 3,
-            "by_type": {
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 1.875,
-                "per_bar": 0.001618
-              }
-            }
-          },
-          "-5": {
-            "notes": 111,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 1,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.900901,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "-6": {
-            "notes": 10,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 10.0,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "-7": {
-            "notes": 94,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-8": {
-            "notes": 30,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-9": {
-            "notes": 27,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "0": {
-            "notes": 563,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 18,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 3,
-                "per_100_notes": 0.53286,
-                "per_bar": 0.001618
-              },
-              "double_stop": {
-                "count": 14,
-                "per_100_notes": 2.486679,
-                "per_bar": 0.00755
-              },
-              "chord": {
-                "count": 1,
-                "per_100_notes": 0.17762,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "1": {
-            "notes": 331,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 17,
-            "by_type": {
-              "double_stop": {
-                "count": 17,
-                "per_100_notes": 5.135952,
-                "per_bar": 0.009168
-              }
-            }
-          },
-          "10": {
-            "notes": 16,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 6.25,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "11": {
-            "notes": 1,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "12": {
-            "notes": 17,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 5.882353,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "16": {
-            "notes": 2,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "17": {
-            "notes": 1,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2": {
-            "notes": 882,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 40,
-            "by_type": {
-              "double_stop": {
-                "count": 40,
-                "per_100_notes": 4.535147,
-                "per_bar": 0.021571
-              }
-            }
-          },
-          "3": {
-            "notes": 276,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "4": {
-            "notes": 179,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 1,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.558659,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "5": {
-            "notes": 201,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 2,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.497512,
-                "per_bar": 0.000539
-              },
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.497512,
-                "per_bar": 0.000539
-              }
-            }
-          },
-          "6": {
-            "notes": 3,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "7": {
-            "notes": 61,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "8": {
-            "notes": 24,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "9": {
-            "notes": 56,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "None": {
-            "notes": 62,
-            "bar_equivalents": 1854.333333,
-            "occurrences": 2,
-            "by_type": {
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 3.225806,
-                "per_bar": 0.001079
-              }
-            }
-          }
-        }
-      },
       "raw_presence_tunes": {
         "grace": 0,
         "roll": 0,
@@ -4597,7 +3444,7 @@
     "cahusac / Transcribed and edited by Flynn Titford-Mock, 2007; abc's:AK/Fiddler's Companion": {
       "notes": 159,
       "bar_equivalents": 47.666667,
-      "occurrences": 6,
+      "occurrences": 3,
       "by_type": {
         "grace_single": {
           "count": 3,
@@ -4644,15 +3491,82 @@
           "per_100_notes": 0.0,
           "per_bar": 0.0
         },
-        "staccato": {
-          "count": 3,
-          "per_100_notes": 1.886792,
-          "per_bar": 0.062937
-        },
         "fermata": {
           "count": 0,
           "per_100_notes": 0.0,
           "per_bar": 0.0
+        }
+      },
+      "articulations": {
+        "occurrences": 16,
+        "by_type": {
+          "slur": {
+            "count": 13,
+            "per_100_notes": 8.176101
+          },
+          "tie": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "staccato": {
+            "count": 3,
+            "per_100_notes": 1.886792
+          },
+          "accent": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "tenuto": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "marcato": {
+            "count": 0,
+            "per_100_notes": 0.0
+          }
+        },
+        "slur_lengths": {
+          "4": 6,
+          "2": 7
+        },
+        "slur_contours": {
+          "1,-3,2": 1,
+          "1": 2,
+          "-2": 4,
+          "-4": 1,
+          "-1,-2,-2": 2,
+          "2,-2,-2": 1,
+          "-3,2,-4": 1,
+          "-2,-3,2": 1
+        },
+        "slur_contour_classes": {
+          "repeated": 2,
+          "ascending": 2,
+          "descending": 9
+        },
+        "slur_contour_by_bar": {
+          "unknown": {
+            "descending": {
+              "count": 9,
+              "per_100_notes": 6.923077
+            },
+            "repeated": {
+              "count": 2,
+              "per_100_notes": 1.538462
+            }
+          },
+          "8": {
+            "ascending": {
+              "count": 1,
+              "per_100_notes": 33.333333
+            }
+          },
+          "4": {
+            "ascending": {
+              "count": 1,
+              "per_100_notes": 25.0
+            }
+          }
         }
       },
       "tunes": 2,
@@ -4726,20 +3640,48 @@
           "per_100_notes": 0.0,
           "per_bar": 0.0
         },
-        "staccato": {
-          "count": 0,
-          "per_100_notes": 0.0,
-          "per_bar": 0.0
-        },
         "fermata": {
           "count": 0,
           "per_100_notes": 0.0,
           "per_bar": 0.0
         }
       },
+      "articulations": {
+        "occurrences": 87,
+        "by_type": {
+          "slur": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "tie": {
+            "count": 87,
+            "per_100_notes": 1.75156
+          },
+          "staccato": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "accent": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "tenuto": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "marcato": {
+            "count": 0,
+            "per_100_notes": 0.0
+          }
+        },
+        "slur_lengths": {},
+        "slur_contours": {},
+        "slur_contour_classes": {},
+        "slur_contour_by_bar": {}
+      },
       "tunes": 58,
-      "tunes_without_marks": 51,
-      "share_without_marks": 0.8793103448275862,
+      "tunes_without_marks": 32,
+      "share_without_marks": 0.5517241379310345,
       "tunes_without_engine_ornaments": 55,
       "positioned_notes": 4172,
       "incomplete_triplets": 0,
@@ -4887,6 +3829,172 @@
           "6": 0.0,
           "7": 0.0,
           "8": 0.0
+        }
+      },
+      "fermata": {
+        "enabled": false,
+        "written_per_100_notes": 0.0,
+        "occurrences": 0,
+        "min_carrier_eighths_observed": null,
+        "per_100_notes_by_bar": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0
+        }
+      }
+    },
+    "performance": {
+      "status": "Plancher écrit, à valider à l’oreille.",
+      "articulations": {
+        "slur": {
+          "enabled": true,
+          "written_per_100_notes": 0.253609,
+          "occurrences": 13,
+          "per_100_notes_by_bar": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.2079,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.215054
+          }
+        },
+        "tie": {
+          "enabled": true,
+          "written_per_100_notes": 1.69723,
+          "occurrences": 87,
+          "per_100_notes_by_bar": {
+            "1": 0.359066,
+            "2": 0.0,
+            "3": 1.98915,
+            "4": 0.2079,
+            "5": 0.346021,
+            "6": 0.0,
+            "7": 10.472279,
+            "8": 0.215054
+          }
+        },
+        "staccato": {
+          "enabled": true,
+          "written_per_100_notes": 0.058525,
+          "occurrences": 3,
+          "per_100_notes_by_bar": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.0
+          }
+        },
+        "accent": {
+          "enabled": false,
+          "written_per_100_notes": 0.0,
+          "occurrences": 0,
+          "per_100_notes_by_bar": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.0
+          }
+        },
+        "tenuto": {
+          "enabled": false,
+          "written_per_100_notes": 0.0,
+          "occurrences": 0,
+          "per_100_notes_by_bar": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.0
+          }
+        },
+        "marcato": {
+          "enabled": false,
+          "written_per_100_notes": 0.0,
+          "occurrences": 0,
+          "per_100_notes_by_bar": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.0
+          }
+        }
+      },
+      "slur_lengths_notes": {
+        "4": 6,
+        "2": 7
+      },
+      "slur_contours": {
+        "1,-3,2": 1,
+        "1": 2,
+        "-2": 4,
+        "-4": 1,
+        "-1,-2,-2": 2,
+        "2,-2,-2": 1,
+        "-3,2,-4": 1,
+        "-2,-3,2": 1
+      },
+      "slur_contour_classes": {
+        "repeated": 2,
+        "ascending": 2,
+        "descending": 9
+      },
+      "slur_probability_by_bar_and_contour": {
+        "unknown": {
+          "descending": {
+            "count": 9,
+            "per_100_notes": 0.972973
+          },
+          "repeated": {
+            "count": 2,
+            "per_100_notes": 0.216216
+          }
+        },
+        "8": {
+          "ascending": {
+            "count": 1,
+            "per_100_notes": 0.215054
+          }
+        },
+        "4": {
+          "ascending": {
+            "count": 1,
+            "per_100_notes": 0.2079
+          }
+        }
+      },
+      "accent_by_beat": {
+        "1": {
+          "count": 0,
+          "per_100_notes": 0.0,
+          "per_bar": 0.0
+        },
+        "2": {
+          "count": 0,
+          "per_100_notes": 0.0,
+          "per_bar": 0.0
         }
       }
     },

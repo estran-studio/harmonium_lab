@@ -29,9 +29,59 @@ def abc(body, meter="4/4", key="C"):
 ])
 def test_each_written_type(body, kind, duration):
     measured = extract_ornaments(abc(body))
-    assert [e["type"] for e in measured["events"]] == [kind]
-    assert measured["events"][0]["duration_eighths"] == duration
+    if kind == "staccato":
+        assert [e["type"] for e in measured["articulations"]] == [kind]
+        event = measured["articulations"][0]
+    else:
+        assert [e["type"] for e in measured["events"]] == [kind]
+        event = measured["events"][0]
+    assert event["duration_eighths"] == duration
     assert measured["bar_equivalents"] == 1
+
+
+def test_slur_groups_nested_across_barlines_and_triplets_remain_tuplets():
+    measured = extract_ornaments(abc("(C D|E F)|"))
+    slur, = [event for event in measured["articulations"] if event["type"] == "slur"]
+    assert slur["note_count"] == 4
+    assert slur["contour"] == [2, 2, 1]
+    repeated = extract_ornaments(abc("|:(C D|E F):|"))
+    repeated_slurs = [event for event in repeated["articulations"] if event["type"] == "slur"]
+    assert [event["note_count"] for event in repeated_slurs] == [4]
+    nested = extract_ornaments(abc("(C (D E) F)|"))
+    groups = sorted(e["note_count"] for e in nested["articulations"] if e["type"] == "slur")
+    assert groups == [2, 4]
+    triplet = extract_ornaments(abc("(3CDE F6|"))
+    assert not any(e["type"] == "slur" for e in triplet["articulations"])
+    assert [e["type"] for e in triplet["events"]] == ["triplet_melodic"]
+
+
+@pytest.mark.parametrize(("mark", "kind"), [
+    ("!accent!", "accent"), ("!>!", "accent"), ("!emphasis!", "accent"),
+    ("+accent+", "accent"), ("L", "tenuto"), ("!tenuto!", "tenuto"),
+    ("!marcato!", "marcato"), ("!^!", "marcato"),
+])
+def test_accent_spellings(mark, kind):
+    result = extract_ornaments(abc(f"{mark}C8|"))
+    assert [e["type"] for e in result["articulations"]] == [kind]
+
+
+def test_tie_is_articulation_without_expanding_or_changing_carrier_notes():
+    text = abc("C-C|")
+    measured = extract_ornaments(text)
+    assert [e["type"] for e in measured["articulations"]] == ["tie"]
+    assert len(measured["notes"]) == 1
+    assert measured["notes"][0]["duration_eighths"] == "2"
+
+
+def test_form_notes_unchanged_for_annotation_tokens():
+    from harmonium_lab.trad.form import analyze_form
+
+    plan = analyze_form(abc("C8 D8 E8 F8|"))
+    assert plan.bars == [(
+        [(Fraction(0), Fraction(8), 60), (Fraction(8), Fraction(8), 62),
+         (Fraction(16), Fraction(8), 64), (Fraction(24), Fraction(8), 65)],
+        [], 0, False,
+    )]
 
 
 def test_carrier_context_and_broken_rhythm():

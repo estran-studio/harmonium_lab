@@ -48,20 +48,512 @@
       "per_100_notes": 0.0,
       "per_bar": 0.0
     },
-    "staccato": {
-      "count": 0,
-      "per_100_notes": 0.0,
-      "per_bar": 0.0
-    },
     "fermata": {
       "count": 0,
       "per_100_notes": 0.0,
       "per_bar": 0.0
     }
   },
+  "articulations": {
+    "occurrences": 11,
+    "by_type": {
+      "slur": {
+        "count": 1,
+        "per_100_notes": 0.016393
+      },
+      "tie": {
+        "count": 10,
+        "per_100_notes": 0.163934
+      },
+      "staccato": {
+        "count": 0,
+        "per_100_notes": 0.0
+      },
+      "accent": {
+        "count": 0,
+        "per_100_notes": 0.0
+      },
+      "tenuto": {
+        "count": 0,
+        "per_100_notes": 0.0
+      },
+      "marcato": {
+        "count": 0,
+        "per_100_notes": 0.0
+      }
+    },
+    "by_position": {
+      "bar_position": {
+        "8": {
+          "notes": 691,
+          "bar_equivalents": 155.99999999999997,
+          "occurrences": 2,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.144718,
+              "per_bar": 0.00641
+            },
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.144718,
+              "per_bar": 0.00641
+            }
+          }
+        },
+        "unknown": {
+          "notes": 737,
+          "bar_equivalents": 153.33333333333334,
+          "occurrences": 9,
+          "by_type": {
+            "tie": {
+              "count": 9,
+              "per_100_notes": 1.221167,
+              "per_bar": 0.058696
+            }
+          }
+        }
+      },
+      "beat": {
+        "1": {
+          "notes": 3061,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 10,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.032669,
+              "per_bar": 0.000857
+            },
+            "tie": {
+              "count": 9,
+              "per_100_notes": 0.294022,
+              "per_bar": 0.007716
+            }
+          }
+        },
+        "2": {
+          "notes": 3029,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.033014,
+              "per_bar": 0.000857
+            }
+          }
+        }
+      },
+      "beat_phase": {
+        "1+0": {
+          "notes": 1182,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 10,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.084602,
+              "per_bar": 0.000857
+            },
+            "tie": {
+              "count": 9,
+              "per_100_notes": 0.761421,
+              "per_bar": 0.007716
+            }
+          }
+        },
+        "2+0": {
+          "notes": 1152,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.086806,
+              "per_bar": 0.000857
+            }
+          }
+        }
+      },
+      "carrier_duration_eighths": {
+        "2": {
+          "notes": 490,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 2,
+          "by_type": {
+            "tie": {
+              "count": 2,
+              "per_100_notes": 0.408163,
+              "per_bar": 0.001715
+            }
+          }
+        },
+        "3": {
+          "notes": 215,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 1,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.465116,
+              "per_bar": 0.000857
+            }
+          }
+        },
+        "4": {
+          "notes": 4,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 4,
+          "by_type": {
+            "tie": {
+              "count": 4,
+              "per_100_notes": 100.0,
+              "per_bar": 0.00343
+            }
+          }
+        },
+        "5": {
+          "notes": 4,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 4,
+          "by_type": {
+            "tie": {
+              "count": 4,
+              "per_100_notes": 100.0,
+              "per_bar": 0.00343
+            }
+          }
+        }
+      },
+      "degree": {
+        "1": {
+          "notes": 1428,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 5,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.070028,
+              "per_bar": 0.000857
+            },
+            "tie": {
+              "count": 4,
+              "per_100_notes": 0.280112,
+              "per_bar": 0.00343
+            }
+          }
+        },
+        "2": {
+          "notes": 782,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 3,
+          "by_type": {
+            "tie": {
+              "count": 3,
+              "per_100_notes": 0.383632,
+              "per_bar": 0.002572
+            }
+          }
+        },
+        "3": {
+          "notes": 1031,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.096993,
+              "per_bar": 0.000857
+            }
+          }
+        },
+        "4": {
+          "notes": 556,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 2,
+          "by_type": {
+            "tie": {
+              "count": 2,
+              "per_100_notes": 0.359712,
+              "per_bar": 0.001715
+            }
+          }
+        }
+      },
+      "half_beat": {
+        "1.0": {
+          "notes": 2019,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 10,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.049529,
+              "per_bar": 0.000857
+            },
+            "tie": {
+              "count": 9,
+              "per_100_notes": 0.445765,
+              "per_bar": 0.007716
+            }
+          }
+        },
+        "2.0": {
+          "notes": 1910,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.052356,
+              "per_bar": 0.000857
+            }
+          }
+        }
+      },
+      "next_interval": {
+        "-1": {
+          "notes": 465,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 2,
+          "by_type": {
+            "tie": {
+              "count": 2,
+              "per_100_notes": 0.430108,
+              "per_bar": 0.001715
+            }
+          }
+        },
+        "-10": {
+          "notes": 10,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 10.0,
+              "per_bar": 0.000857
+            }
+          }
+        },
+        "-12": {
+          "notes": 24,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 4.166667,
+              "per_bar": 0.000857
+            }
+          }
+        },
+        "-2": {
+          "notes": 1083,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 2,
+          "by_type": {
+            "tie": {
+              "count": 2,
+              "per_100_notes": 0.184672,
+              "per_bar": 0.001715
+            }
+          }
+        },
+        "-8": {
+          "notes": 40,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 2.5,
+              "per_bar": 0.000857
+            }
+          }
+        },
+        "0": {
+          "notes": 701,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 3,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.142653,
+              "per_bar": 0.000857
+            },
+            "tie": {
+              "count": 2,
+              "per_100_notes": 0.285307,
+              "per_bar": 0.001715
+            }
+          }
+        },
+        "4": {
+          "notes": 303,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.330033,
+              "per_bar": 0.000857
+            }
+          }
+        }
+      },
+      "part_position": {
+        "B:m8": {
+          "notes": 293,
+          "bar_equivalents": 66.66666666666667,
+          "occurrences": 2,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.341297,
+              "per_bar": 0.015
+            },
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.341297,
+              "per_bar": 0.015
+            }
+          }
+        },
+        "unknown": {
+          "notes": 737,
+          "bar_equivalents": 153.33333333333334,
+          "occurrences": 9,
+          "by_type": {
+            "tie": {
+              "count": 9,
+              "per_100_notes": 1.221167,
+              "per_bar": 0.058696
+            }
+          }
+        }
+      },
+      "phrase_end": {
+        "none": {
+          "notes": 737,
+          "bar_equivalents": 153.33333333333334,
+          "occurrences": 9,
+          "by_type": {
+            "tie": {
+              "count": 9,
+              "per_100_notes": 1.221167,
+              "per_bar": 0.058696
+            }
+          }
+        },
+        "true": {
+          "notes": 1321,
+          "bar_equivalents": 277.0,
+          "occurrences": 2,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.0757,
+              "per_bar": 0.00361
+            },
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.0757,
+              "per_bar": 0.00361
+            }
+          }
+        }
+      },
+      "previous_interval": {
+        "-2": {
+          "notes": 1082,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 2,
+          "by_type": {
+            "tie": {
+              "count": 2,
+              "per_100_notes": 0.184843,
+              "per_bar": 0.001715
+            }
+          }
+        },
+        "-3": {
+          "notes": 553,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 3,
+          "by_type": {
+            "tie": {
+              "count": 3,
+              "per_100_notes": 0.542495,
+              "per_bar": 0.002572
+            }
+          }
+        },
+        "0": {
+          "notes": 697,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.143472,
+              "per_bar": 0.000857
+            }
+          }
+        },
+        "1": {
+          "notes": 431,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 4,
+          "by_type": {
+            "slur": {
+              "count": 1,
+              "per_100_notes": 0.232019,
+              "per_bar": 0.000857
+            },
+            "tie": {
+              "count": 3,
+              "per_100_notes": 0.696056,
+              "per_bar": 0.002572
+            }
+          }
+        },
+        "2": {
+          "notes": 881,
+          "bar_equivalents": 1166.3333333333333,
+          "occurrences": 1,
+          "by_type": {
+            "tie": {
+              "count": 1,
+              "per_100_notes": 0.113507,
+              "per_bar": 0.000857
+            }
+          }
+        }
+      }
+    },
+    "slur_lengths": {
+      "2": 1
+    },
+    "slur_contours": {
+      "0": 1
+    },
+    "slur_contour_classes": {
+      "repeated": 1
+    },
+    "slur_contour_by_bar": {
+      "8": {
+        "repeated": {
+          "count": 1,
+          "per_100_notes": 0.144718
+        }
+      }
+    }
+  },
   "tunes": 55,
-  "tunes_without_marks": 42,
-  "share_without_marks": 0.7636363636363637,
+  "tunes_without_marks": 38,
+  "share_without_marks": 0.6909090909090909,
   "tunes_without_engine_ornaments": 42,
   "positioned_notes": 5363,
   "incomplete_triplets": 0,
@@ -2463,14 +2955,14 @@
   "raw_only": [],
   "tradition": "acadienne",
   "tune_type": "jig",
-  "schema_version": 1,
+  "schema_version": 2,
   "method": {
     "population": "Tous les fichiers du manifeste, toutes les notes écrites de la première voix ; reprises non multipliées, deux voltas incluses, note supérieure des doubles cordes.",
     "denominators": "Note = attaque porteuse (accord = une note, agréments hors dénominateur, triolets = trois notes). Mesures = durée écrite totale / durée nominale, fragments et levées compris. Chaque cellule contient ses opportunités, occurrences et taux par 100 notes / par mesure.",
     "positions": "Parties de huit mesures reconnues par analyze_form uniquement ; autres positions = unknown. Levée jointe à la fin complémentaire, sinon pickup sans numéro. Une source écrite vue plusieurs fois reçoit sa première position jouée. Les fins alternatives sont des opportunités distinctes.",
     "time": "Durée et onset en croches exactes (fractions). Temps métrique 1-based : blanche en 2/2, noire en 4/4 et 3/4, noire pointée en 6/8 ; phase exacte, demi-temps = floor(2*phase). Les triolets gardent leur phase 1/3 ou 2/3, sans arrondi sur la grille.",
-    "context": "Intervalles signés en demi-tons avec notes voisines dans la première exécution contenant cette source (silences ignorés). Degré diatonique replié 1..7, altération séparée. Fin de phrase = mesure 4 ou 8, non preuve de cadence.",
-    "types": "T/!trill!/+trill+ = trill ; ~ = roll ; !turn! = turn. . et H = staccato et fermata, annotations d'articulation, pas agréments à générer. Un triolet mélodique est une figure rythmique, séparée du triolet répété ; un groupe avec silence n'est pas un triolet de trois notes.",
+    "context": "Intervalles signés en demi-tons avec notes voisines dans la première exécution contenant cette source (silences ignorés). Degré diatonique replié 1..7, altération séparée. Fin de phrase = mesure 4 ou 8, non preuve de cadence. Les groupes de liaison exposent longueur, contour intervalle par intervalle, répétitions et contexte de départ.",
+    "types": "T/!trill!/+trill+ = trill ; ~ = roll ; !turn! = turn. . = staccato et H = fermata. Liaisons (), ties -, accents !accent!/!>!/!emphasis!/ +accent+, tenuto L/!tenuto! et marcato !marcato!/!^! sont des articulations dans la clé distincte `articulations`, jamais des agréments. Un triolet mélodique est une figure rythmique, séparée du triolet répété ; un groupe avec silence n'est pas un triolet de trois notes.",
     "limits": "Taux écrits = plancher, pas taux joués. Sources/transcripteurs confondent notation et pratique. Petits effectifs, notes corrélées : occurrences fournies, pas d'IC binomial trompeur. Changements de métrique, unité ou tonalité en cours d'air non interprétés par le parseur commun ; inline_changes compte les [M:…]/[K:…]. Positions de formes irrégulières inconnues.",
     "sparse": "Dans by_position, type absent = zéro occurrence, pas donnée manquante ; position absente = aucune opportunité. Par mesure conditionnel pour m1..8/partie/fin de phrase, par mesure totale du groupe pour temps/durée/degré/intervalles."
   },
@@ -2525,2406 +3017,65 @@
           "per_100_notes": 0.0,
           "per_bar": 0.0
         },
-        "staccato": {
-          "count": 0,
-          "per_100_notes": 0.0,
-          "per_bar": 0.0
-        },
         "fermata": {
           "count": 0,
           "per_100_notes": 0.0,
           "per_bar": 0.0
         }
       },
-      "tunes": 55,
-      "tunes_without_marks": 42,
-      "share_without_marks": 0.7636363636363637,
-      "tunes_without_engine_ornaments": 42,
-      "positioned_notes": 5363,
-      "incomplete_triplets": 0,
-      "inline_changes": 0,
-      "by_position": {
-        "bar_position": {
-          "1": {
-            "notes": 655,
-            "bar_equivalents": 121.0,
-            "occurrences": 12,
-            "by_type": {
-              "grace_single": {
-                "count": 4,
-                "per_100_notes": 0.610687,
-                "per_bar": 0.033058
-              },
-              "grace_multiple": {
-                "count": 2,
-                "per_100_notes": 0.305344,
-                "per_bar": 0.016529
-              },
-              "roll": {
-                "count": 2,
-                "per_100_notes": 0.305344,
-                "per_bar": 0.016529
-              },
-              "double_stop": {
-                "count": 4,
-                "per_100_notes": 0.610687,
-                "per_bar": 0.033058
-              }
-            }
+      "articulations": {
+        "occurrences": 11,
+        "by_type": {
+          "slur": {
+            "count": 1,
+            "per_100_notes": 0.016393
           },
-          "2": {
-            "notes": 643,
-            "bar_equivalents": 121.0,
-            "occurrences": 6,
-            "by_type": {
-              "grace_single": {
-                "count": 2,
-                "per_100_notes": 0.311042,
-                "per_bar": 0.016529
-              },
-              "grace_multiple": {
-                "count": 4,
-                "per_100_notes": 0.622084,
-                "per_bar": 0.033058
-              }
-            }
+          "tie": {
+            "count": 10,
+            "per_100_notes": 0.163934
           },
-          "3": {
-            "notes": 676,
-            "bar_equivalents": 121.0,
-            "occurrences": 9,
-            "by_type": {
-              "grace_single": {
-                "count": 2,
-                "per_100_notes": 0.295858,
-                "per_bar": 0.016529
-              },
-              "grace_multiple": {
-                "count": 3,
-                "per_100_notes": 0.443787,
-                "per_bar": 0.024793
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.147929,
-                "per_bar": 0.008264
-              },
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 0.443787,
-                "per_bar": 0.024793
-              }
-            }
+          "staccato": {
+            "count": 0,
+            "per_100_notes": 0.0
           },
-          "4": {
-            "notes": 630,
-            "bar_equivalents": 121.0,
-            "occurrences": 14,
-            "by_type": {
-              "grace_single": {
-                "count": 3,
-                "per_100_notes": 0.47619,
-                "per_bar": 0.024793
-              },
-              "grace_multiple": {
-                "count": 2,
-                "per_100_notes": 0.31746,
-                "per_bar": 0.016529
-              },
-              "roll": {
-                "count": 4,
-                "per_100_notes": 0.634921,
-                "per_bar": 0.033058
-              },
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.15873,
-                "per_bar": 0.008264
-              },
-              "double_stop": {
-                "count": 4,
-                "per_100_notes": 0.634921,
-                "per_bar": 0.033058
-              }
-            }
+          "accent": {
+            "count": 0,
+            "per_100_notes": 0.0
           },
-          "5": {
-            "notes": 679,
-            "bar_equivalents": 122.0,
-            "occurrences": 8,
-            "by_type": {
-              "grace_single": {
-                "count": 4,
-                "per_100_notes": 0.589102,
-                "per_bar": 0.032787
-              },
-              "grace_multiple": {
-                "count": 2,
-                "per_100_notes": 0.294551,
-                "per_bar": 0.016393
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.294551,
-                "per_bar": 0.016393
-              }
-            }
+          "tenuto": {
+            "count": 0,
+            "per_100_notes": 0.0
           },
-          "6": {
-            "notes": 650,
-            "bar_equivalents": 122.0,
-            "occurrences": 4,
-            "by_type": {
-              "grace_single": {
-                "count": 2,
-                "per_100_notes": 0.307692,
-                "per_bar": 0.016393
-              },
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 0.153846,
-                "per_bar": 0.008197
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.153846,
-                "per_bar": 0.008197
-              }
-            }
-          },
-          "7": {
-            "notes": 739,
-            "bar_equivalents": 129.0,
-            "occurrences": 11,
-            "by_type": {
-              "grace_single": {
-                "count": 6,
-                "per_100_notes": 0.811908,
-                "per_bar": 0.046512
-              },
-              "grace_multiple": {
-                "count": 2,
-                "per_100_notes": 0.270636,
-                "per_bar": 0.015504
-              },
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 0.405954,
-                "per_bar": 0.023256
-              }
-            }
-          },
+          "marcato": {
+            "count": 0,
+            "per_100_notes": 0.0
+          }
+        },
+        "slur_lengths": {
+          "2": 1
+        },
+        "slur_contours": {
+          "0": 1
+        },
+        "slur_contour_classes": {
+          "repeated": 1
+        },
+        "slur_contour_by_bar": {
           "8": {
-            "notes": 691,
-            "bar_equivalents": 156.0,
-            "occurrences": 13,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.144718,
-                "per_bar": 0.00641
-              },
-              "roll": {
-                "count": 3,
-                "per_100_notes": 0.434153,
-                "per_bar": 0.019231
-              },
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.144718,
-                "per_bar": 0.00641
-              },
-              "double_stop": {
-                "count": 8,
-                "per_100_notes": 1.157742,
-                "per_bar": 0.051282
-              }
-            }
-          },
-          "unknown": {
-            "notes": 737,
-            "bar_equivalents": 153.333333,
-            "occurrences": 15,
-            "by_type": {
-              "roll": {
-                "count": 14,
-                "per_100_notes": 1.899593,
-                "per_bar": 0.091304
-              },
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.135685,
-                "per_bar": 0.006522
-              }
-            }
-          }
-        },
-        "beat": {
-          "1": {
-            "notes": 3061,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 56,
-            "by_type": {
-              "grace_single": {
-                "count": 12,
-                "per_100_notes": 0.392029,
-                "per_bar": 0.010289
-              },
-              "grace_multiple": {
-                "count": 8,
-                "per_100_notes": 0.261352,
-                "per_bar": 0.006859
-              },
-              "roll": {
-                "count": 22,
-                "per_100_notes": 0.718719,
-                "per_bar": 0.018863
-              },
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.032669,
-                "per_bar": 0.000857
-              },
-              "double_stop": {
-                "count": 13,
-                "per_100_notes": 0.424698,
-                "per_bar": 0.011146
-              }
-            }
-          },
-          "2": {
-            "notes": 3029,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 36,
-            "by_type": {
-              "grace_single": {
-                "count": 12,
-                "per_100_notes": 0.39617,
-                "per_bar": 0.010289
-              },
-              "grace_multiple": {
-                "count": 8,
-                "per_100_notes": 0.264114,
-                "per_bar": 0.006859
-              },
-              "roll": {
-                "count": 3,
-                "per_100_notes": 0.099043,
-                "per_bar": 0.002572
-              },
-              "triplet_melodic": {
-                "count": 2,
-                "per_100_notes": 0.066028,
-                "per_bar": 0.001715
-              },
-              "double_stop": {
-                "count": 11,
-                "per_100_notes": 0.363156,
-                "per_bar": 0.009431
-              }
-            }
-          },
-          "3": {
-            "notes": 9,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "4": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          }
-        },
-        "beat_phase": {
-          "1+0": {
-            "notes": 1182,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 42,
-            "by_type": {
-              "grace_single": {
-                "count": 12,
-                "per_100_notes": 1.015228,
-                "per_bar": 0.010289
-              },
-              "grace_multiple": {
-                "count": 5,
-                "per_100_notes": 0.423012,
-                "per_bar": 0.004287
-              },
-              "roll": {
-                "count": 22,
-                "per_100_notes": 1.861252,
-                "per_bar": 0.018863
-              },
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.084602,
-                "per_bar": 0.000857
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.169205,
-                "per_bar": 0.001715
-              }
-            }
-          },
-          "1+1/2": {
-            "notes": 43,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "1+1/3": {
-            "notes": 823,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 8,
-            "by_type": {
-              "double_stop": {
-                "count": 8,
-                "per_100_notes": 0.972053,
-                "per_bar": 0.006859
-              }
-            }
-          },
-          "1+1/6": {
-            "notes": 12,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "1+1/9": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "1+2/3": {
-            "notes": 997,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 6,
-            "by_type": {
-              "grace_multiple": {
-                "count": 3,
-                "per_100_notes": 0.300903,
-                "per_bar": 0.002572
-              },
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 0.300903,
-                "per_bar": 0.002572
-              }
-            }
-          },
-          "1+2/9": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "1+5/6": {
-            "notes": 2,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2+0": {
-            "notes": 1152,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 28,
-            "by_type": {
-              "grace_single": {
-                "count": 12,
-                "per_100_notes": 1.041667,
-                "per_bar": 0.010289
-              },
-              "grace_multiple": {
-                "count": 8,
-                "per_100_notes": 0.694444,
-                "per_bar": 0.006859
-              },
-              "roll": {
-                "count": 3,
-                "per_100_notes": 0.260417,
-                "per_bar": 0.002572
-              },
-              "double_stop": {
-                "count": 5,
-                "per_100_notes": 0.434028,
-                "per_bar": 0.004287
-              }
-            }
-          },
-          "2+1/2": {
-            "notes": 22,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2+1/3": {
-            "notes": 743,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.13459,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "2+1/6": {
-            "notes": 15,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2+2/3": {
-            "notes": 1076,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 7,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 2,
-                "per_100_notes": 0.185874,
-                "per_bar": 0.001715
-              },
-              "double_stop": {
-                "count": 5,
-                "per_100_notes": 0.464684,
-                "per_bar": 0.004287
-              }
-            }
-          },
-          "2+5/6": {
-            "notes": 17,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2+7/9": {
-            "notes": 2,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2+8/9": {
-            "notes": 2,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "3+0": {
-            "notes": 3,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "3+1/3": {
-            "notes": 3,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "3+2/3": {
-            "notes": 3,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "4+0": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          }
-        },
-        "carrier_duration_eighths": {
-          "1": {
-            "notes": 5155,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 47,
-            "by_type": {
-              "grace_single": {
-                "count": 19,
-                "per_100_notes": 0.368574,
-                "per_bar": 0.01629
-              },
-              "grace_multiple": {
-                "count": 9,
-                "per_100_notes": 0.174588,
-                "per_bar": 0.007716
-              },
-              "double_stop": {
-                "count": 19,
-                "per_100_notes": 0.368574,
-                "per_bar": 0.01629
-              }
-            }
-          },
-          "1/2": {
-            "notes": 163,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 1,
-            "by_type": {
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 0.613497,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "1/3": {
-            "notes": 9,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 3,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 3,
-                "per_100_notes": 33.333333,
-                "per_bar": 0.002572
-              }
-            }
-          },
-          "2": {
-            "notes": 490,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 9,
-            "by_type": {
-              "grace_single": {
-                "count": 3,
-                "per_100_notes": 0.612245,
-                "per_bar": 0.002572
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.204082,
-                "per_bar": 0.000857
-              },
-              "double_stop": {
-                "count": 5,
-                "per_100_notes": 1.020408,
-                "per_bar": 0.004287
-              }
-            }
-          },
-          "3": {
-            "notes": 215,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 21,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.465116,
-                "per_bar": 0.000857
-              },
-              "roll": {
-                "count": 20,
-                "per_100_notes": 9.302326,
-                "per_bar": 0.017148
-              }
-            }
-          },
-          "3/2": {
-            "notes": 59,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 7,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 1.694915,
-                "per_bar": 0.000857
-              },
-              "grace_multiple": {
-                "count": 6,
-                "per_100_notes": 10.169492,
-                "per_bar": 0.005144
-              }
-            }
-          },
-          "4": {
-            "notes": 4,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 4,
-            "by_type": {
-              "roll": {
-                "count": 4,
-                "per_100_notes": 100.0,
-                "per_bar": 0.00343
-              }
-            }
-          },
-          "5": {
-            "notes": 4,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "6": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          }
-        },
-        "degree": {
-          "1": {
-            "notes": 1428,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 37,
-            "by_type": {
-              "grace_single": {
-                "count": 8,
-                "per_100_notes": 0.560224,
-                "per_bar": 0.006859
-              },
-              "grace_multiple": {
-                "count": 5,
-                "per_100_notes": 0.35014,
-                "per_bar": 0.004287
-              },
-              "roll": {
-                "count": 8,
-                "per_100_notes": 0.560224,
-                "per_bar": 0.006859
-              },
-              "double_stop": {
-                "count": 16,
-                "per_100_notes": 1.120448,
-                "per_bar": 0.013718
-              }
-            }
-          },
-          "2": {
-            "notes": 782,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 14,
-            "by_type": {
-              "grace_single": {
-                "count": 2,
-                "per_100_notes": 0.255754,
-                "per_bar": 0.001715
-              },
-              "grace_multiple": {
-                "count": 5,
-                "per_100_notes": 0.639386,
-                "per_bar": 0.004287
-              },
-              "roll": {
-                "count": 5,
-                "per_100_notes": 0.639386,
-                "per_bar": 0.004287
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.255754,
-                "per_bar": 0.001715
-              }
-            }
-          },
-          "3": {
-            "notes": 1031,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 15,
-            "by_type": {
-              "grace_single": {
-                "count": 3,
-                "per_100_notes": 0.29098,
-                "per_bar": 0.002572
-              },
-              "grace_multiple": {
-                "count": 4,
-                "per_100_notes": 0.387973,
-                "per_bar": 0.00343
-              },
-              "roll": {
-                "count": 6,
-                "per_100_notes": 0.581959,
-                "per_bar": 0.005144
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.193986,
-                "per_bar": 0.001715
-              }
-            }
-          },
-          "4": {
-            "notes": 556,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 2,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.179856,
-                "per_bar": 0.000857
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.179856,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "5": {
-            "notes": 1100,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 14,
-            "by_type": {
-              "grace_single": {
-                "count": 4,
-                "per_100_notes": 0.363636,
-                "per_bar": 0.00343
-              },
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 0.090909,
-                "per_bar": 0.000857
-              },
-              "roll": {
-                "count": 4,
-                "per_100_notes": 0.363636,
-                "per_bar": 0.00343
-              },
-              "triplet_melodic": {
-                "count": 3,
-                "per_100_notes": 0.272727,
-                "per_bar": 0.002572
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.181818,
-                "per_bar": 0.001715
-              }
-            }
-          },
-          "6": {
-            "notes": 629,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 7,
-            "by_type": {
-              "grace_single": {
-                "count": 5,
-                "per_100_notes": 0.794913,
-                "per_bar": 0.004287
-              },
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 0.158983,
-                "per_bar": 0.000857
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.158983,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "7": {
-            "notes": 574,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 3,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.174216,
-                "per_bar": 0.000857
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.348432,
-                "per_bar": 0.001715
-              }
-            }
-          }
-        },
-        "half_beat": {
-          "1.0": {
-            "notes": 2019,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 50,
-            "by_type": {
-              "grace_single": {
-                "count": 12,
-                "per_100_notes": 0.594354,
-                "per_bar": 0.010289
-              },
-              "grace_multiple": {
-                "count": 5,
-                "per_100_notes": 0.247647,
-                "per_bar": 0.004287
-              },
-              "roll": {
-                "count": 22,
-                "per_100_notes": 1.089648,
-                "per_bar": 0.018863
-              },
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.049529,
-                "per_bar": 0.000857
-              },
-              "double_stop": {
-                "count": 10,
-                "per_100_notes": 0.495295,
-                "per_bar": 0.008574
-              }
-            }
-          },
-          "1.1": {
-            "notes": 1042,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 6,
-            "by_type": {
-              "grace_multiple": {
-                "count": 3,
-                "per_100_notes": 0.287908,
-                "per_bar": 0.002572
-              },
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 0.287908,
-                "per_bar": 0.002572
-              }
-            }
-          },
-          "2.0": {
-            "notes": 1910,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 29,
-            "by_type": {
-              "grace_single": {
-                "count": 12,
-                "per_100_notes": 0.628272,
-                "per_bar": 0.010289
-              },
-              "grace_multiple": {
-                "count": 8,
-                "per_100_notes": 0.418848,
-                "per_bar": 0.006859
-              },
-              "roll": {
-                "count": 3,
-                "per_100_notes": 0.157068,
-                "per_bar": 0.002572
-              },
-              "double_stop": {
-                "count": 6,
-                "per_100_notes": 0.314136,
-                "per_bar": 0.005144
-              }
-            }
-          },
-          "2.1": {
-            "notes": 1119,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 7,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 2,
-                "per_100_notes": 0.178731,
-                "per_bar": 0.001715
-              },
-              "double_stop": {
-                "count": 5,
-                "per_100_notes": 0.446828,
-                "per_bar": 0.004287
-              }
-            }
-          },
-          "3.0": {
-            "notes": 6,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "3.1": {
-            "notes": 3,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "4.0": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          }
-        },
-        "next_interval": {
-          "-1": {
-            "notes": 465,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 8,
-            "by_type": {
-              "grace_single": {
-                "count": 7,
-                "per_100_notes": 1.505376,
-                "per_bar": 0.006002
-              },
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.215054,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "-10": {
-            "notes": 10,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 1,
-            "by_type": {
-              "roll": {
-                "count": 1,
-                "per_100_notes": 10.0,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "-12": {
-            "notes": 24,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 1,
-            "by_type": {
-              "roll": {
-                "count": 1,
-                "per_100_notes": 4.166667,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "-14": {
-            "notes": 2,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-15": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-19": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-2": {
-            "notes": 1083,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 17,
-            "by_type": {
-              "grace_single": {
-                "count": 9,
-                "per_100_notes": 0.831025,
-                "per_bar": 0.007716
-              },
-              "grace_multiple": {
-                "count": 6,
-                "per_100_notes": 0.554017,
-                "per_bar": 0.005144
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.184672,
-                "per_bar": 0.001715
-              }
-            }
-          },
-          "-20": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-24": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-3": {
-            "notes": 551,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 10,
-            "by_type": {
-              "grace_single": {
-                "count": 3,
-                "per_100_notes": 0.544465,
-                "per_bar": 0.002572
-              },
-              "grace_multiple": {
-                "count": 6,
-                "per_100_notes": 1.088929,
-                "per_bar": 0.005144
-              },
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.181488,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "-4": {
-            "notes": 381,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 6,
-            "by_type": {
-              "grace_single": {
-                "count": 2,
-                "per_100_notes": 0.524934,
-                "per_bar": 0.001715
-              },
-              "grace_multiple": {
-                "count": 2,
-                "per_100_notes": 0.524934,
-                "per_bar": 0.001715
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.524934,
-                "per_bar": 0.001715
-              }
-            }
-          },
-          "-5": {
-            "notes": 205,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 4,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.487805,
-                "per_bar": 0.000857
-              },
-              "roll": {
-                "count": 3,
-                "per_100_notes": 1.463415,
-                "per_bar": 0.002572
-              }
-            }
-          },
-          "-7": {
-            "notes": 74,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 4,
-            "by_type": {
-              "double_stop": {
-                "count": 4,
-                "per_100_notes": 5.405405,
-                "per_bar": 0.00343
-              }
-            }
-          },
-          "-8": {
-            "notes": 40,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 7,
-            "by_type": {
-              "roll": {
-                "count": 1,
-                "per_100_notes": 2.5,
-                "per_bar": 0.000857
-              },
-              "double_stop": {
-                "count": 6,
-                "per_100_notes": 15.0,
-                "per_bar": 0.005144
-              }
-            }
-          },
-          "-9": {
-            "notes": 13,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "0": {
-            "notes": 701,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 14,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.142653,
-                "per_bar": 0.000857
-              },
-              "roll": {
-                "count": 10,
-                "per_100_notes": 1.426534,
-                "per_bar": 0.008574
-              },
-              "double_stop": {
-                "count": 3,
-                "per_100_notes": 0.42796,
-                "per_bar": 0.002572
-              }
-            }
-          },
-          "1": {
-            "notes": 430,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.232558,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "10": {
-            "notes": 20,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "11": {
-            "notes": 3,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "12": {
-            "notes": 38,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "13": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "14": {
-            "notes": 14,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "15": {
-            "notes": 4,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "16": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "17": {
-            "notes": 6,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "19": {
-            "notes": 2,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2": {
-            "notes": 894,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 14,
-            "by_type": {
-              "grace_multiple": {
-                "count": 2,
-                "per_100_notes": 0.223714,
-                "per_bar": 0.001715
-              },
-              "roll": {
-                "count": 7,
-                "per_100_notes": 0.782998,
-                "per_bar": 0.006002
-              },
-              "triplet_melodic": {
-                "count": 3,
-                "per_100_notes": 0.33557,
-                "per_bar": 0.002572
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.223714,
-                "per_bar": 0.001715
-              }
-            }
-          },
-          "3": {
-            "notes": 389,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "4": {
-            "notes": 303,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 2,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.330033,
-                "per_bar": 0.000857
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.330033,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "5": {
-            "notes": 246,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 1,
-            "by_type": {
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.406504,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "6": {
-            "notes": 2,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "7": {
-            "notes": 54,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 1.851852,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "8": {
-            "notes": 56,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "9": {
-            "notes": 58,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 1.724138,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "None": {
-            "notes": 26,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          }
-        },
-        "part_position": {
-          "A:m1": {
-            "notes": 270,
-            "bar_equivalents": 50.0,
-            "occurrences": 3,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.37037,
-                "per_bar": 0.02
-              },
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 0.37037,
-                "per_bar": 0.02
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.37037,
-                "per_bar": 0.02
-              }
-            }
-          },
-          "A:m2": {
-            "notes": 253,
-            "bar_equivalents": 50.0,
-            "occurrences": 2,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.395257,
-                "per_bar": 0.02
-              },
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 0.395257,
-                "per_bar": 0.02
-              }
-            }
-          },
-          "A:m3": {
-            "notes": 271,
-            "bar_equivalents": 50.0,
-            "occurrences": 2,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.369004,
-                "per_bar": 0.02
-              },
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 0.369004,
-                "per_bar": 0.02
-              }
-            }
-          },
-          "A:m4": {
-            "notes": 262,
-            "bar_equivalents": 50.0,
-            "occurrences": 4,
-            "by_type": {
-              "grace_single": {
-                "count": 2,
-                "per_100_notes": 0.763359,
-                "per_bar": 0.04
-              },
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 0.381679,
-                "per_bar": 0.02
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.381679,
-                "per_bar": 0.02
-              }
-            }
-          },
-          "A:m5": {
-            "notes": 276,
-            "bar_equivalents": 50.0,
-            "occurrences": 2,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.362319,
-                "per_bar": 0.02
-              },
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 0.362319,
-                "per_bar": 0.02
-              }
-            }
-          },
-          "A:m6": {
-            "notes": 256,
-            "bar_equivalents": 50.0,
-            "occurrences": 1,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.390625,
-                "per_bar": 0.02
-              }
-            }
-          },
-          "A:m7": {
-            "notes": 314,
-            "bar_equivalents": 55.0,
-            "occurrences": 3,
-            "by_type": {
-              "grace_single": {
-                "count": 3,
-                "per_100_notes": 0.955414,
-                "per_bar": 0.054545
-              }
-            }
-          },
-          "A:m8": {
-            "notes": 287,
-            "bar_equivalents": 65.666667,
-            "occurrences": 4,
-            "by_type": {
-              "roll": {
-                "count": 2,
-                "per_100_notes": 0.696864,
-                "per_bar": 0.030457
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.696864,
-                "per_bar": 0.030457
-              }
-            }
-          },
-          "B:m1": {
-            "notes": 274,
-            "bar_equivalents": 50.0,
-            "occurrences": 5,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.364964,
-                "per_bar": 0.02
-              },
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 0.364964,
-                "per_bar": 0.02
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.364964,
-                "per_bar": 0.02
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.729927,
-                "per_bar": 0.04
-              }
-            }
-          },
-          "B:m2": {
-            "notes": 268,
-            "bar_equivalents": 50.0,
-            "occurrences": 3,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.373134,
-                "per_bar": 0.02
-              },
-              "grace_multiple": {
-                "count": 2,
-                "per_100_notes": 0.746269,
-                "per_bar": 0.04
-              }
-            }
-          },
-          "B:m3": {
-            "notes": 286,
-            "bar_equivalents": 50.0,
-            "occurrences": 6,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.34965,
-                "per_bar": 0.02
-              },
-              "grace_multiple": {
-                "count": 2,
-                "per_100_notes": 0.699301,
-                "per_bar": 0.04
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.34965,
-                "per_bar": 0.02
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.699301,
-                "per_bar": 0.04
-              }
-            }
-          },
-          "B:m4": {
-            "notes": 259,
-            "bar_equivalents": 50.0,
-            "occurrences": 8,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.3861,
-                "per_bar": 0.02
-              },
-              "roll": {
-                "count": 2,
-                "per_100_notes": 0.772201,
-                "per_bar": 0.04
-              },
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.3861,
-                "per_bar": 0.02
-              },
-              "double_stop": {
-                "count": 4,
-                "per_100_notes": 1.544402,
-                "per_bar": 0.08
-              }
-            }
-          },
-          "B:m5": {
-            "notes": 283,
-            "bar_equivalents": 51.0,
-            "occurrences": 5,
-            "by_type": {
-              "grace_single": {
-                "count": 2,
-                "per_100_notes": 0.706714,
-                "per_bar": 0.039216
-              },
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 0.353357,
-                "per_bar": 0.019608
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.706714,
-                "per_bar": 0.039216
-              }
-            }
-          },
-          "B:m6": {
-            "notes": 277,
-            "bar_equivalents": 51.0,
-            "occurrences": 3,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.361011,
-                "per_bar": 0.019608
-              },
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 0.361011,
-                "per_bar": 0.019608
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.361011,
-                "per_bar": 0.019608
-              }
-            }
-          },
-          "B:m7": {
-            "notes": 302,
-            "bar_equivalents": 52.0,
-            "occurrences": 6,
-            "by_type": {
-              "grace_single": {
-                "count": 2,
-                "per_100_notes": 0.662252,
-                "per_bar": 0.038462
-              },
-              "grace_multiple": {
-                "count": 2,
-                "per_100_notes": 0.662252,
-                "per_bar": 0.038462
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.662252,
-                "per_bar": 0.038462
-              }
-            }
-          },
-          "B:m8": {
-            "notes": 293,
-            "bar_equivalents": 66.666667,
-            "occurrences": 8,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.341297,
-                "per_bar": 0.015
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.341297,
-                "per_bar": 0.015
-              },
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.341297,
-                "per_bar": 0.015
-              },
-              "double_stop": {
-                "count": 5,
-                "per_100_notes": 1.706485,
-                "per_bar": 0.075
-              }
-            }
-          },
-          "C:m1": {
-            "notes": 74,
-            "bar_equivalents": 14.0,
-            "occurrences": 4,
-            "by_type": {
-              "grace_single": {
-                "count": 2,
-                "per_100_notes": 2.702703,
-                "per_bar": 0.142857
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 2.702703,
-                "per_bar": 0.142857
-              }
-            }
-          },
-          "C:m2": {
-            "notes": 85,
-            "bar_equivalents": 14.0,
-            "occurrences": 1,
-            "by_type": {
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 1.176471,
-                "per_bar": 0.071429
-              }
-            }
-          },
-          "C:m3": {
-            "notes": 82,
-            "bar_equivalents": 14.0,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 1.219512,
-                "per_bar": 0.071429
-              }
-            }
-          },
-          "C:m4": {
-            "notes": 74,
-            "bar_equivalents": 14.0,
-            "occurrences": 1,
-            "by_type": {
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 1.351351,
-                "per_bar": 0.071429
-              }
-            }
-          },
-          "C:m5": {
-            "notes": 82,
-            "bar_equivalents": 14.0,
-            "occurrences": 1,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 1.219512,
-                "per_bar": 0.071429
-              }
-            }
-          },
-          "C:m6": {
-            "notes": 81,
-            "bar_equivalents": 14.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "C:m7": {
-            "notes": 80,
-            "bar_equivalents": 14.0,
-            "occurrences": 2,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 1.25,
-                "per_bar": 0.071429
-              },
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 1.25,
-                "per_bar": 0.071429
-              }
-            }
-          },
-          "C:m8": {
-            "notes": 67,
-            "bar_equivalents": 14.666667,
-            "occurrences": 1,
-            "by_type": {
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 1.492537,
-                "per_bar": 0.068182
-              }
-            }
-          },
-          "D:m1": {
-            "notes": 20,
-            "bar_equivalents": 4.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "D:m2": {
-            "notes": 21,
-            "bar_equivalents": 4.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "D:m3": {
-            "notes": 21,
-            "bar_equivalents": 4.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "D:m4": {
-            "notes": 19,
-            "bar_equivalents": 4.0,
-            "occurrences": 1,
-            "by_type": {
-              "roll": {
-                "count": 1,
-                "per_100_notes": 5.263158,
-                "per_bar": 0.25
-              }
-            }
-          },
-          "D:m5": {
-            "notes": 21,
-            "bar_equivalents": 4.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "D:m6": {
-            "notes": 20,
-            "bar_equivalents": 4.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "D:m7": {
-            "notes": 28,
-            "bar_equivalents": 5.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "D:m8": {
-            "notes": 22,
-            "bar_equivalents": 5.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m1": {
-            "notes": 12,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m2": {
-            "notes": 11,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m3": {
-            "notes": 11,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m4": {
-            "notes": 11,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m5": {
-            "notes": 12,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m6": {
-            "notes": 12,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m7": {
-            "notes": 10,
-            "bar_equivalents": 2.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "E:m8": {
-            "notes": 17,
-            "bar_equivalents": 3.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m1": {
-            "notes": 5,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m2": {
-            "notes": 5,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m3": {
-            "notes": 5,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m4": {
-            "notes": 5,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m5": {
-            "notes": 5,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m6": {
-            "notes": 4,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m7": {
-            "notes": 5,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "F:m8": {
-            "notes": 5,
-            "bar_equivalents": 1.0,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "unknown": {
-            "notes": 737,
-            "bar_equivalents": 153.333333,
-            "occurrences": 15,
-            "by_type": {
-              "roll": {
-                "count": 14,
-                "per_100_notes": 1.899593,
-                "per_bar": 0.091304
-              },
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.135685,
-                "per_bar": 0.006522
-              }
-            }
-          }
-        },
-        "phrase_end": {
-          "false": {
-            "notes": 4042,
-            "bar_equivalents": 736.0,
-            "occurrences": 50,
-            "by_type": {
-              "grace_single": {
-                "count": 20,
-                "per_100_notes": 0.494805,
-                "per_bar": 0.027174
-              },
-              "grace_multiple": {
-                "count": 14,
-                "per_100_notes": 0.346363,
-                "per_bar": 0.019022
-              },
-              "roll": {
-                "count": 4,
-                "per_100_notes": 0.098961,
-                "per_bar": 0.005435
-              },
-              "double_stop": {
-                "count": 12,
-                "per_100_notes": 0.296883,
-                "per_bar": 0.016304
-              }
-            }
-          },
-          "none": {
-            "notes": 737,
-            "bar_equivalents": 153.333333,
-            "occurrences": 15,
-            "by_type": {
-              "roll": {
-                "count": 14,
-                "per_100_notes": 1.899593,
-                "per_bar": 0.091304
-              },
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 0.135685,
-                "per_bar": 0.006522
-              }
-            }
-          },
-          "true": {
-            "notes": 1321,
-            "bar_equivalents": 277.0,
-            "occurrences": 27,
-            "by_type": {
-              "grace_single": {
-                "count": 4,
-                "per_100_notes": 0.302801,
-                "per_bar": 0.01444
-              },
-              "grace_multiple": {
-                "count": 2,
-                "per_100_notes": 0.1514,
-                "per_bar": 0.00722
-              },
-              "roll": {
-                "count": 7,
-                "per_100_notes": 0.529902,
-                "per_bar": 0.025271
-              },
-              "triplet_melodic": {
-                "count": 2,
-                "per_100_notes": 0.1514,
-                "per_bar": 0.00722
-              },
-              "double_stop": {
-                "count": 12,
-                "per_100_notes": 0.908403,
-                "per_bar": 0.043321
-              }
-            }
-          }
-        },
-        "previous_interval": {
-          "-1": {
-            "notes": 456,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 2,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.219298,
-                "per_bar": 0.000857
-              },
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.219298,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "-10": {
-            "notes": 10,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-12": {
-            "notes": 21,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-14": {
-            "notes": 2,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-15": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-17": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-19": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-2": {
-            "notes": 1082,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 3,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.092421,
-                "per_bar": 0.000857
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.092421,
-                "per_bar": 0.000857
-              },
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.092421,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "-20": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-24": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-26": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-3": {
-            "notes": 553,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 5,
-            "by_type": {
-              "grace_single": {
-                "count": 2,
-                "per_100_notes": 0.361664,
-                "per_bar": 0.001715
-              },
-              "roll": {
-                "count": 2,
-                "per_100_notes": 0.361664,
-                "per_bar": 0.001715
-              },
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.180832,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "-4": {
-            "notes": 381,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 2,
-            "by_type": {
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.524934,
-                "per_bar": 0.001715
-              }
-            }
-          },
-          "-5": {
-            "notes": 199,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 1,
-            "by_type": {
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.502513,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "-7": {
-            "notes": 71,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-8": {
-            "notes": 37,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "-9": {
-            "notes": 12,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "0": {
-            "notes": 697,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 12,
-            "by_type": {
-              "grace_single": {
-                "count": 4,
-                "per_100_notes": 0.573888,
-                "per_bar": 0.00343
-              },
-              "grace_multiple": {
-                "count": 3,
-                "per_100_notes": 0.430416,
-                "per_bar": 0.002572
-              },
-              "roll": {
-                "count": 1,
-                "per_100_notes": 0.143472,
-                "per_bar": 0.000857
-              },
-              "double_stop": {
-                "count": 4,
-                "per_100_notes": 0.573888,
-                "per_bar": 0.00343
-              }
-            }
-          },
-          "1": {
-            "notes": 431,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 18,
-            "by_type": {
-              "grace_single": {
-                "count": 6,
-                "per_100_notes": 1.392111,
-                "per_bar": 0.005144
-              },
-              "grace_multiple": {
-                "count": 3,
-                "per_100_notes": 0.696056,
-                "per_bar": 0.002572
-              },
-              "roll": {
-                "count": 8,
-                "per_100_notes": 1.856148,
-                "per_bar": 0.006859
-              },
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.232019,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "10": {
-            "notes": 21,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 1,
-            "by_type": {
-              "triplet_melodic": {
-                "count": 1,
-                "per_100_notes": 4.761905,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "11": {
-            "notes": 4,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "12": {
-            "notes": 37,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 1,
-            "by_type": {
-              "roll": {
-                "count": 1,
-                "per_100_notes": 2.702703,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "13": {
-            "notes": 2,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "14": {
-            "notes": 15,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "15": {
-            "notes": 5,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "17": {
-            "notes": 8,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "19": {
-            "notes": 2,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "2": {
-            "notes": 881,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 21,
-            "by_type": {
-              "grace_single": {
-                "count": 6,
-                "per_100_notes": 0.681044,
-                "per_bar": 0.005144
-              },
-              "grace_multiple": {
-                "count": 9,
-                "per_100_notes": 1.021566,
-                "per_bar": 0.007716
-              },
-              "roll": {
-                "count": 4,
-                "per_100_notes": 0.45403,
-                "per_bar": 0.00343
-              },
-              "double_stop": {
-                "count": 2,
-                "per_100_notes": 0.227015,
-                "per_bar": 0.001715
-              }
-            }
-          },
-          "21": {
-            "notes": 1,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "3": {
-            "notes": 391,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "4": {
-            "notes": 300,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 2,
-            "by_type": {
-              "grace_single": {
-                "count": 1,
-                "per_100_notes": 0.333333,
-                "per_bar": 0.000857
-              },
-              "grace_multiple": {
-                "count": 1,
-                "per_100_notes": 0.333333,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "5": {
-            "notes": 240,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 6,
-            "by_type": {
-              "grace_single": {
-                "count": 3,
-                "per_100_notes": 1.25,
-                "per_bar": 0.002572
-              },
-              "roll": {
-                "count": 2,
-                "per_100_notes": 0.833333,
-                "per_bar": 0.001715
-              },
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 0.416667,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "6": {
-            "notes": 2,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 0,
-            "by_type": {}
-          },
-          "7": {
-            "notes": 57,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 4,
-            "by_type": {
-              "roll": {
-                "count": 2,
-                "per_100_notes": 3.508772,
-                "per_bar": 0.001715
-              },
-              "triplet_melodic": {
-                "count": 2,
-                "per_100_notes": 3.508772,
-                "per_bar": 0.001715
-              }
-            }
-          },
-          "8": {
-            "notes": 57,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 10,
-            "by_type": {
-              "double_stop": {
-                "count": 10,
-                "per_100_notes": 17.54386,
-                "per_bar": 0.008574
-              }
-            }
-          },
-          "9": {
-            "notes": 59,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 2,
-            "by_type": {
-              "roll": {
-                "count": 1,
-                "per_100_notes": 1.694915,
-                "per_bar": 0.000857
-              },
-              "double_stop": {
-                "count": 1,
-                "per_100_notes": 1.694915,
-                "per_bar": 0.000857
-              }
-            }
-          },
-          "None": {
-            "notes": 60,
-            "bar_equivalents": 1166.333333,
-            "occurrences": 2,
-            "by_type": {
-              "roll": {
-                "count": 2,
-                "per_100_notes": 3.333333,
-                "per_bar": 0.001715
-              }
+            "repeated": {
+              "count": 1,
+              "per_100_notes": 0.144718
             }
           }
         }
       },
+      "tunes": 55,
+      "tunes_without_marks": 38,
+      "share_without_marks": 0.6909090909090909,
+      "tunes_without_engine_ornaments": 42,
+      "positioned_notes": 5363,
+      "incomplete_triplets": 0,
+      "inline_changes": 0,
       "raw_presence_tunes": {
         "grace": 5,
         "roll": 8,
@@ -4991,20 +3142,61 @@
           "per_100_notes": 0.0,
           "per_bar": 0.0
         },
-        "staccato": {
-          "count": 0,
-          "per_100_notes": 0.0,
-          "per_bar": 0.0
-        },
         "fermata": {
           "count": 0,
           "per_100_notes": 0.0,
           "per_bar": 0.0
         }
       },
+      "articulations": {
+        "occurrences": 11,
+        "by_type": {
+          "slur": {
+            "count": 1,
+            "per_100_notes": 0.016393
+          },
+          "tie": {
+            "count": 10,
+            "per_100_notes": 0.163934
+          },
+          "staccato": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "accent": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "tenuto": {
+            "count": 0,
+            "per_100_notes": 0.0
+          },
+          "marcato": {
+            "count": 0,
+            "per_100_notes": 0.0
+          }
+        },
+        "slur_lengths": {
+          "2": 1
+        },
+        "slur_contours": {
+          "0": 1
+        },
+        "slur_contour_classes": {
+          "repeated": 1
+        },
+        "slur_contour_by_bar": {
+          "8": {
+            "repeated": {
+              "count": 1,
+              "per_100_notes": 0.144718
+            }
+          }
+        }
+      },
       "tunes": 55,
-      "tunes_without_marks": 42,
-      "share_without_marks": 0.7636363636363637,
+      "tunes_without_marks": 38,
+      "share_without_marks": 0.6909090909090909,
       "tunes_without_engine_ornaments": 42,
       "positioned_notes": 5363,
       "incomplete_triplets": 0,
@@ -5152,6 +3344,146 @@
           "6": 0.0,
           "7": 0.0,
           "8": 0.0
+        }
+      },
+      "fermata": {
+        "enabled": false,
+        "written_per_100_notes": 0.0,
+        "occurrences": 0,
+        "min_carrier_eighths_observed": null,
+        "per_100_notes_by_bar": {
+          "1": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0
+        }
+      }
+    },
+    "performance": {
+      "status": "Plancher écrit, à valider à l’oreille.",
+      "articulations": {
+        "slur": {
+          "enabled": true,
+          "written_per_100_notes": 0.016393,
+          "occurrences": 1,
+          "per_100_notes_by_bar": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.144718
+          }
+        },
+        "tie": {
+          "enabled": true,
+          "written_per_100_notes": 0.163934,
+          "occurrences": 10,
+          "per_100_notes_by_bar": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.144718
+          }
+        },
+        "staccato": {
+          "enabled": false,
+          "written_per_100_notes": 0.0,
+          "occurrences": 0,
+          "per_100_notes_by_bar": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.0
+          }
+        },
+        "accent": {
+          "enabled": false,
+          "written_per_100_notes": 0.0,
+          "occurrences": 0,
+          "per_100_notes_by_bar": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.0
+          }
+        },
+        "tenuto": {
+          "enabled": false,
+          "written_per_100_notes": 0.0,
+          "occurrences": 0,
+          "per_100_notes_by_bar": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.0
+          }
+        },
+        "marcato": {
+          "enabled": false,
+          "written_per_100_notes": 0.0,
+          "occurrences": 0,
+          "per_100_notes_by_bar": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.0
+          }
+        }
+      },
+      "slur_lengths_notes": {
+        "2": 1
+      },
+      "slur_contours": {
+        "0": 1
+      },
+      "slur_contour_classes": {
+        "repeated": 1
+      },
+      "slur_probability_by_bar_and_contour": {
+        "8": {
+          "repeated": {
+            "count": 1,
+            "per_100_notes": 0.144718
+          }
+        }
+      },
+      "accent_by_beat": {
+        "1": {
+          "count": 0,
+          "per_100_notes": 0.0,
+          "per_bar": 0.0
+        },
+        "2": {
+          "count": 0,
+          "per_100_notes": 0.0,
+          "per_bar": 0.0
         }
       }
     },

@@ -42,11 +42,12 @@ _TOKEN = re.compile(
     r"""
     (?P<inline>\[[A-Za-z]:[^\]]*\])
   | (?P<grace>\{[^}]*\})
-  | (?P<decoration>![^!]*!|\+[^+]*\+|[~T.H])
+  | (?P<decoration>![^!]*!|\+[^+]*\+|[~T.HL])
   | (?P<bar>::|:+\|?|\|:+|\[?\||\|+|\|)(?P<bvolta>\s*\d[\d,\-]*)?
   | (?P<voltabr>\[?\|\d[\d,\-]*|\[\d[\d,\-]*)
   | (?P<chordanno>"(?P<symbol>[^"]*)")
   | (?P<tuplet>\((?P<tp>\d)(?::(?P<tq>\d*))?(?::(?P<tr>\d*))?)
+  | (?P<slur>[()])
   | (?P<chord>\[(?P<chordbody>[^\]\[|]*)\](?P<clen>\d*(?:/\d*)*))
   | (?P<note>(?P<acc>[\^_=]*)(?P<pitch>[A-Ga-g])(?P<oct>[,']*)(?P<len>\d*(?:/\d*)*)(?P<tie>-?))
   | (?P<rest>(?P<rk>[zxZX])(?P<rlen>\d*(?:/\d*)*))
@@ -193,6 +194,8 @@ def _tokenize(body: list[str], signature: dict[str, int], unit: Fraction) -> lis
         if midi is not None:
             cur().marks.extend((len(cur().notes), kind) for kind in pending_marks)
         pending_marks.clear()
+        if tie and midi is not None:
+            cur().marks.append((len(cur().notes), "tie"))
         if midi is None:
             flush_tie()
             cur().notes.append((offset, d, None))
@@ -225,6 +228,9 @@ def _tokenize(body: list[str], signature: dict[str, int], unit: Fraction) -> lis
     for m in _TOKEN.finditer(text):
         if m.group("inline") is not None:
             continue
+        elif m.group("slur") is not None:
+            kind = "slur_open" if m.group("slur") == "(" else "slur_close"
+            cur().marks.append((len(cur().notes), kind))
         elif m.group("grace") is not None:
             count = len(_CHORD_NOTE.findall(m.group("grace")[1:-1]))
             if count:
@@ -235,6 +241,9 @@ def _tokenize(body: list[str], signature: dict[str, int], unit: Fraction) -> lis
                 "~": "roll", "roll": "roll", "turn": "turn",
                 "T": "trill", "trill": "trill", ".": "staccato",
                 "staccato": "staccato", "H": "fermata", "fermata": "fermata",
+                "accent": "accent", ">": "accent", "emphasis": "accent",
+                "^": "marcato", "marcato": "marcato",
+                "L": "tenuto", "tenuto": "tenuto",
             }.get(name)
             if kind:
                 pending_marks.append(kind)
