@@ -169,3 +169,28 @@ def test_engine_excludes_sounding_intro_without_assuming_internal_copy(tmp_path:
     assert stats["phrases"]["opening_reprise_rate"] == 0
     assert stats["excluded_engine_tail_bars"] == 2
     assert [bar[0].pitch for bar in material.parts[0][1]] == a
+
+
+def test_engine_alignment_follows_published_intro_when_candidates_tie(tmp_path: Path):
+    """Bars all identical : tous les décalages égalent 16/16 ; sans vérité on retient le premier, avec elle l'intro publiée."""
+    import json
+    mid = mido.MidiFile(ticks_per_beat=480)
+    track = mido.MidiTrack()
+    mid.tracks.append(track)
+    track.append(mido.MetaMessage("time_signature", numerator=4, denominator=4))
+    track.append(mido.MetaMessage("key_signature", key="C"))
+    for _ in range(36):
+        track.append(mido.Message("note_on", channel=0, note=60, velocity=90, time=0))
+        track.append(mido.Message("note_off", channel=0, note=60, velocity=0, time=1920))
+    plain, published = tmp_path / "plain.mid", tmp_path / "published.mid"
+    mid.save(plain)
+    mid.save(published)
+    plain.with_suffix(".json").write_text(json.dumps([{"session_key": "C", "session_scale": "Ionian"}]))
+    sections = ["Intro", "Intro"] + ["Tour"] * 34
+    truth = {"reports": [{"session_key": "C", "session_scale": "Ionian"}],
+             "measures": [{"measure": {"index": i + 1, "position": {"section": section}}} for i, section in enumerate(sections)]}
+    published.with_suffix(".json").write_text(json.dumps(truth))
+    unaligned = engine_material(plain, "reel")
+    assert (unaligned.intro_bars, unaligned.alignment_candidates) == (0, 5)
+    material = engine_material(published, "reel")
+    assert (material.intro_bars, material.alignment_candidates, material.alignment_score) == (2, 1, 16)
