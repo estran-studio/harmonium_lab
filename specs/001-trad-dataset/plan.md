@@ -759,3 +759,19 @@ Vérification DS-T10b : `PYTHONPATH=src make test` avec le venv partagé :
 **257 réussis, 31 ignorés**, sans réseau. La génération offline a écrit les
 références et `target/ornaments/report.md`; 2 059/2 059 empreintes du manifeste
 concordent avec les fichiers ABC.
+
+## DS-T9c — alignement AABB sur l'intro publiée (R1, phase 013)
+
+`trad-structure --generated` cherchait le début du corps AABB par l'identité des reprises (décalages 0..4) et
+gardait le premier candidat à égalité. Une intro « tail » rejoue la fin de l'air et les secondes fins font
+tomber le meilleur score à 14/16 : sur 20 exports de chacun des trois styles de R1 et de la gigue québécoise
+(contrôle), **16 à 17 exports sur 20 étaient alignés sur la mauvaise mesure** (intro lue 0 ou 1 au lieu de 1 ou 2),
+donc les taux positionnels du généré (copies m.5←1, repos m.4/m.8, paires) décrivaient d'autres mesures.
+
+Correction : `engine_material` lit la longueur de l'intro dans la vérité du moteur (`measures[].measure.position.section`,
+première mesure `Tour`) et l'adopte quand l'identité des reprises la confirme (≥ 14/16) ; sans position publiée
+(ancien format) le comportement est inchangé. Les `engine_ambiguous_alignments` tombent à 0 ; contrôle gigue québécoise :
+copie A:m.5 = m.1 généré 90 % (15 % avant), repos tonique A:m.8 20 % (réel 16,4 %). Test :
+`test_engine_alignment_follows_published_intro_when_candidates_tie`. `PYTHONPATH=src make test VENV=<venv partagé>` :
+**258 réussis, 31 ignorés**. Les comparaisons moteur déjà publiées (DS-T9, phases 011/012) reposent sur l'ancien alignement
+et sont à reprendre avant d'être citées.

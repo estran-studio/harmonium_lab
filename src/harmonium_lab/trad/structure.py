@@ -165,13 +165,28 @@ def abc_material(text: str) -> Material:
     return Material(parts, rhythms, plan.key_tonic_pc, plan.mode, plan.meter, plan.eighths_per_bar, accents, excluded)
 
 
+def truth_intro_bars(truth: Any) -> int | None:
+    """Mesures d'intro publiées par la vérité du moteur : rang (0-based) de la première mesure `Tour`.
+
+    `None` si la vérité n'a pas de positions (ancien format, export sans `--record-truth`).
+    """
+    measures = truth.get("measures") if isinstance(truth, dict) else None
+    for rank, entry in enumerate(measures or []):
+        position = (entry.get("measure") or {}).get("position") or {}
+        if position.get("section") == "Tour":
+            return rank
+    return None
+
+
 def engine_material(path: Path, tune_type: str) -> Material:
     tune = load_engine_midi(path, tune_type=tune_type)
     key_source = "estimated"
     key, mode = "", ""
     truth_path = path.with_suffix(".json")
+    published_intro = None
     if truth_path.exists():
         truth = json.loads(truth_path.read_text())
+        published_intro = truth_intro_bars(truth)
         rows = truth.get("reports", []) if isinstance(truth, dict) else truth
         first = next((row for row in rows if row.get("session_key") and row.get("session_scale")), None)
         if first:
@@ -215,6 +230,11 @@ def engine_material(path: Path, tune_type: str) -> Material:
         raise ValueError(f"{path.name}: alignement AABB incertain (meilleur score {best}/16)")
     candidates = [offset for offset, score in scores.items() if score == best]
     offset = candidates[0]
+    # Une intro « tail » rejoue la fin de l'air : plusieurs décalages égalent le score. La vérité du moteur
+    # donne la longueur réelle de l'intro ; l'identité des reprises la confirme (au moins 14/16) mais ne la choisit plus.
+    if published_intro is not None and scores.get(published_intro, 0) >= 14:
+        offset, candidates = published_intro, [published_intro]
+        best = scores[offset]
     body = bars[offset:offset + 32]
     parts = [("A", body[:8]), ("B", body[16:24])]
     return Material(parts, body[:8] + body[16:24], tune.key_tonic_pc, tune.mode, tune.meter, tune.eighths_per_bar, tail_bars=len(bars) - offset - 32, key_source=key_source, intro_bars=offset, alignment_score=best, alignment_candidates=len(candidates))
