@@ -1,25 +1,28 @@
-"""Téléchargement idempotent et poli (cache local, délai, User-Agent identifié)."""
+"""Téléchargement idempotent et poli (cache local, délai, User-Agent identifié).
+
+Les transferts passent par `curl`, qui respecte `ALL_PROXY` / `https_proxy` / `http_proxy`, y compris
+un proxy SOCKS (`socks5h://…`, alias `proxyon`) que `urllib` ne sait pas utiliser. Le fichier est
+écrit directement sur disque (`.part` puis renommage) : pas de grosse banque en mémoire.
+"""
 
 from __future__ import annotations
 
 import re
-import ssl
+import shutil
+import subprocess
 import sys
 import time
-import urllib.error
 import urllib.parse
-import urllib.request
 from pathlib import Path
 
 USER_AGENT = "harmonium-lab/0.1 (corpus trad quebecois; usage interne; github.com/estran-studio)"
-TIMEOUT_S = 60
+CONNECT_TIMEOUT_S = 30
+# Abandon si le débit reste sous 1 Ko/s pendant 60 s (pas de durée totale : banques de 400 Mo).
+STALL_BYTES_PER_S, STALL_S = 1000, 60
 RETRIES = 3
-
-# Python ≥ 3.13 active VERIFY_X509_STRICT : certains serveurs (ex. thesession.org,
-# raw.githubusercontent.com selon la chaîne locale) échouent alors que la chaîne
-# reste valide. On garde la vérification de chaîne et de nom d'hôte.
-_SSL = ssl.create_default_context()
-_SSL.verify_flags &= ~ssl.VERIFY_X509_STRICT
+# Erreur HTTP client (curl --fail ; code de sortie 22, ou 56 derrière un proxy) : inutile de réessayer,
+# sauf 429. Les 5xx et coupures sont réessayés.
+_CLIENT_ERROR = re.compile(r"returned error: 4(?!29)\d\d\b")
 
 
 class Fetcher:
@@ -39,33 +42,35 @@ class Fetcher:
         if self.offline:
             raise RuntimeError(f"hors ligne : {dest} absent du cache (source {url})")
         dest.parent.mkdir(parents=True, exist_ok=True)
-        data = self._download(url)
         tmp = dest.with_name(dest.name + ".part")
-        tmp.write_bytes(data)
+        self._download(url, tmp)
         tmp.replace(dest)
         return dest
 
-    def _download(self, url: str) -> bytes:
-        last_err: Exception | None = None
+    def _download(self, url: str, tmp: Path) -> None:
+        curl = shutil.which("curl")
+        if curl is None:
+            raise RuntimeError("curl introuvable : nécessaire aux téléchargements")
+        last_err = ""
         for attempt in range(1, RETRIES + 1):
             wait = self.delay_s - (time.monotonic() - self._last)
             if wait > 0:
                 time.sleep(wait)
             self._last = time.monotonic()
             self.network_requests += 1
-            req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-            try:
-                with urllib.request.urlopen(req, timeout=TIMEOUT_S, context=_SSL) as resp:
-                    data = resp.read()
-                if not data:
-                    raise OSError("réponse vide")
-                return data
-            except (urllib.error.URLError, OSError) as exc:
-                last_err = exc
-                if isinstance(exc, urllib.error.HTTPError) and 400 <= exc.code < 500 and exc.code != 429:
-                    break
-                print(f"  ! {url} (essai {attempt}/{RETRIES}) : {exc}", file=sys.stderr)
-                time.sleep(2.0 * attempt)
+            cmd = [curl, "--silent", "--show-error", "--fail", "--location",
+                   "--user-agent", USER_AGENT, "--connect-timeout", str(CONNECT_TIMEOUT_S),
+                   "--speed-limit", str(STALL_BYTES_PER_S), "--speed-time", str(STALL_S),
+                   "--retry", "2", "--continue-at", "-", "--output", str(tmp), url]
+            proc = subprocess.run(cmd, capture_output=True, text=True)
+            if proc.returncode == 0 and tmp.exists() and tmp.stat().st_size > 0:
+                return
+            last_err = proc.stderr.strip() or ("réponse vide" if proc.returncode == 0 else f"code {proc.returncode}")
+            if _CLIENT_ERROR.search(last_err):
+                break
+            print(f"  ! {url} (essai {attempt}/{RETRIES}) : {last_err}", file=sys.stderr)
+            time.sleep(2.0 * attempt)
+        tmp.unlink(missing_ok=True)
         raise RuntimeError(f"échec du téléchargement de {url} : {last_err}")
 
 
