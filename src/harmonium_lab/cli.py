@@ -6,6 +6,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
+from typing import Any
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -92,6 +93,29 @@ def main(argv: list[str] | None = None) -> int:
     p_ornaments.add_argument("--type", default=None, help="Optional tune type filter")
     p_ornaments.add_argument("--output", default="target/ornaments", help="Report and derived events directory")
     p_ornaments.add_argument("--references", default="references/ornaments", help="Versioned aggregate statistics")
+    # audioref : mesures dérivées d'enregistrements de référence (manifeste JSONL)
+    p_ameas = subparsers.add_parser("audioref-measures", help="Measure reference recordings (audio → measures.json)")
+    p_ameas.add_argument("--manifest", required=True, help="Manifest JSONL (one row per track: id, file, ...)")
+    p_ameas.add_argument("--corpus-root", default="corpus", help="Root of audio files (row 'file' is relative)")
+    p_ameas.add_argument("--filter", nargs="*", default=None, help="Selection filters champ=valeur (repeatable)")
+    p_ameas.add_argument("--grids", default=None, help="Verified grids JSON ({track_id: grid dict})")
+    p_ameas.add_argument("--context", nargs="*", default=None, help="Context filters champ=valeur (aggregate stats)")
+    p_ameas.add_argument("--grid", nargs="*", default=None, help="Grid overrides in JSON (beat_s, tatums_per_beat, ...)")
+    p_ameas.add_argument("--output", "-o", required=True, help="Output measures.json path")
+    p_aloop = subparsers.add_parser("audioref-loops", help="Transcribe bar-range loops from stems (MIDI+WAV, out of repo)")
+    p_aloop.add_argument("--track", required=True, help="Track audio file (mix)")
+    p_aloop.add_argument("--stems", default=None, help="Stems dir (bass.wav, drums.wav, other.wav, vocals.wav)")
+    p_aloop.add_argument("--track-id", required=True, help="Track id (sidecar + filenames)")
+    p_aloop.add_argument("--grid", required=True, help="Grid JSON (beat_s, tatums_per_beat, beats_per_bar, origin_s)")
+    p_aloop.add_argument("--tonic", required=True, help="Tonic pitch class (C, G#, ...), for degrees")
+    p_aloop.add_argument("--loop", action="append", required=True, help="Loop 'name:start:end[:part]' (repeatable)")
+    p_aloop.add_argument("--bass-prog", type=int, default=38, help="GM program for bass (default: 38 synth bass 1)")
+    p_aloop.add_argument("--lead-prog", type=int, default=81, help="GM program for lead (default: 81 square lead)")
+    p_aloop.add_argument("--pad-prog", type=int, default=88, help="GM program for pads (default: 88 warm pad)")
+    p_aloop.add_argument("--parts", nargs="*", default=None, help="Parts to transcribe (bass, drums, lead, chords)")
+    p_aloop.add_argument("--soundfont", default=None, help="SoundFont .sf2 path (default: engine bank)")
+    p_aloop.add_argument("--no-render", action="store_true", help="Skip MIDI→WAV rendering")
+    p_aloop.add_argument("--out", required=True, help="Output dir (MUST be out of repo: stems/MIDI under rights)")
     # trad-compare: generated engine MIDIs vs type profile (D6)
     p_cmp = subparsers.add_parser("trad-compare", help="Compare generated MIDIs to a trad type profile")
     p_cmp.add_argument("--generated", nargs="+", required=True, help="Engine .mid dir or files")
@@ -219,6 +243,10 @@ def main(argv: list[str] | None = None) -> int:
             )
             print(f"Ornements : {report}")
             return 0
+        elif args.command == "audioref-measures":
+            return cmd_audioref_measures(args)
+        elif args.command == "audioref-loops":
+            return cmd_audioref_loops(args)
         elif args.command == "trad-compare":
             return cmd_trad_compare(args)
         elif args.command == "blindtest":
@@ -298,6 +326,145 @@ def cmd_trad_render(args: argparse.Namespace) -> int:
     if args.no_feet:
         argv.append("--no-feet")
     return render_main(argv)
+
+
+def cmd_audioref_measures(args: argparse.Namespace) -> int:
+    """Mesures dérivées d'enregistrements de référence → measures.json."""
+    import json
+
+    from .audioref.grid import estimate_grid
+    from .audioref.manifest import load_manifest, parse_filters, select, track_path
+    from .audioref.measures import load_track_flac, measure_corpus
+
+    root = Path(args.corpus_root)
+    rows = load_manifest(Path(args.manifest))
+    sel = select(rows, parse_filters(args.filter))
+    ctx = select(rows, parse_filters(args.context)) if args.context else []
+    if not sel:
+        print("Aucune piste sélectionnée", file=sys.stderr)
+        return 1
+    grid_args = json.loads(args.grid[0]) if args.grid else {}
+    fixed_grids = json.loads(Path(args.grids).read_text(encoding="utf-8")) if args.grids else {}
+    tracks, grids, meta = {}, {}, {}
+    to_measure = sel + [r for r in ctx if r["id"] not in {s["id"] for s in sel}]
+    for row in to_measure:
+        y = load_track_flac(track_path(row, root))
+        tracks[row["id"]] = y
+        meta[row["id"]] = {k: row.get(k) for k in
+                           ("title", "zone", "type", "part", "author", "license")
+                           if k in row}
+        if row["id"] in fixed_grids:
+            grids[row["id"]] = fixed_grids[row["id"]]
+        elif grid_args.get("estimate", True):
+            try:
+                grids[row["id"]] = estimate_grid(
+                    y, **{k: v for k, v in grid_args.items() if k != "estimate"}).to_dict()
+            except ValueError as e:
+                print(f"Grille {row['id']} : {e} (sans grille)", file=sys.stderr)
+    out = measure_corpus(tracks, grids=grids,
+                         context_ids=[r["id"] for r in ctx], meta=meta)
+    dest = Path(args.output)
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(f"Mesures : {len(tracks)} pistes → {dest}")
+    return 0
+
+
+def cmd_audioref_loops(args: argparse.Namespace) -> int:
+    """Transcrit des plages de mesures depuis des stems → MIDI + WAV (hors dépôt)."""
+    import json
+
+    from .audioref.grid import Grid
+    from .audioref.measures import NAMES
+    from .audioref.render import render_loop_wav
+    from .audioref.transcribe import (chords_per_bar, clip_notes, drum_hits,
+                                      notes_to_degrees, pitch_notes, write_loop_midi, write_loop_sidecar)
+
+    out = Path(args.out)
+    try:
+        out.relative_to(Path.cwd())
+        print(f"Refus : {out} est dans le dépôt (audio/MIDI transcrits sous droits).", file=sys.stderr)
+        return 1
+    except ValueError:
+        pass
+    import librosa
+
+    gd = json.loads(args.grid)
+    tatum_s = gd["beat_s"] / gd["tatums_per_beat"]
+    mix, _sr = librosa.load(args.track, sr=22050, mono=True)
+    stems = {}
+    if args.stems:
+        for s in ("bass", "drums", "other", "vocals"):
+            p = Path(args.stems) / f"{s}.wav"
+            if p.is_file():
+                stems[s], _ = librosa.load(str(p), sr=22050, mono=True)
+    g = Grid(beat_s=gd["beat_s"], tatum_s=tatum_s,
+             tatums_per_beat=gd["tatums_per_beat"],
+             beats_per_bar=gd["beats_per_bar"], origin_s=gd["origin_s"],
+             duration_s=len(mix) / 22050, scores=gd.get("scores", {}))
+    tonic_pc = NAMES.index(args.tonic)
+    want = args.parts or ["bass", "drums", "lead", "chords"]
+    transcribed: dict[str, Any] = {}
+    if "bass" in want and "bass" in stems:
+        transcribed["bass"] = pitch_notes(stems["bass"], 22050, g, "bass")
+    if "drums" in want and "drums" in stems:
+        transcribed["drums"] = drum_hits(stems["drums"], 22050, g)
+    if "lead" in want:
+        src = stems.get("vocals", stems.get("other", mix))
+        transcribed["lead"] = pitch_notes(src, 22050, g, "lead")
+    if "chords" in want:
+        src = (stems.get("other", mix) + stems.get("bass", 0.0)) \
+            if "bass" in stems else stems.get("other", mix)
+        transcribed["chords"] = chords_per_bar(src, g)
+    for spec in args.loop:
+        fields = spec.split(":")
+        name, s, e = fields[0], fields[1], fields[2]
+        only = {fields[3]} if len(fields) > 3 else set(transcribed)
+        bars = (int(s), int(e))
+        parts: dict[str, tuple[list, int]] = {}
+        side: dict[str, Any] = {"loop": name}
+        lo, hi = bars[0] * g.tatums_per_bar * 2, bars[1] * g.tatums_per_bar * 2
+        if "bass" in only and "bass" in transcribed:
+            notes, info = transcribed["bass"]
+            parts["bass"] = (notes, args.bass_prog)
+            side["bass"] = {"notes": notes_to_degrees(clip_notes(notes, lo, hi), tonic_pc),
+                            **{k: v for k, v in info.items() if k != "role"}}
+        if "drums" in only and "drums" in transcribed:
+            hits, info = transcribed["drums"]
+            parts["drums"] = (hits, 0)
+            side["drums"] = {"hits": [h for h in hits if lo <= h["pos_16th"] < hi], **info}
+        if "lead" in only and "lead" in transcribed:
+            notes, info = transcribed["lead"]
+            parts["lead"] = (notes, args.lead_prog)
+            side["lead"] = {"notes": notes_to_degrees(clip_notes(notes, lo, hi), tonic_pc),
+                            "voiced_ratio": info["voiced_ratio"]}
+        if "chords" in only and "chords" in transcribed:
+            from .audioref.transcribe import CHORD_QUALITIES
+
+            chords, info = transcribed["chords"]
+            cell = g.tatums_per_bar * 2
+            pad = []
+            for c in chords:
+                if bars[0] <= c["bar"] < bars[1]:
+                    root = NAMES.index(c["root"]) + 48
+                    for iv in CHORD_QUALITIES[c["quality"]]:
+                        pad.append({"midi": root + iv, "start_16th": c["bar"] * cell,
+                                    "len_16th": cell})
+            parts["pad"] = (pad, args.pad_prog)
+            side["chords"] = {"bars": [c for c in chords if bars[0] <= c["bar"] < bars[1]], **info}
+        midi_path = out / f"{args.track_id}_{name}.mid"
+        write_loop_midi(parts, g, midi_path, bars)
+        side_path = out / f"{args.track_id}_{name}.json"
+        write_loop_sidecar(side_path, args.track_id, bars, g, side)
+        print(f"Boucle {name} : {midi_path} + {side_path}")
+        if not args.no_render:
+            wav_path = out / f"{args.track_id}_{name}.wav"
+            before, after = render_loop_wav(
+                midi_path, wav_path,
+                Path(args.soundfont) if args.soundfont else None)
+            print(f"  rendu {wav_path} (pic {before:.3f} → {after:.3f})")
+    return 0
+
 
 
 def cmd_analyze(args: argparse.Namespace) -> int:

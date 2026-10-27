@@ -1,0 +1,3 @@
+{
+  "02_flashyn": {"beat_s": 0.42857, "tatum_s": 0.14286, "tatums_per_beat": 3, "beats_per_bar": 4, "origin_s": 0.5526, "duration_s": 87.0, "bar_s": 1.71429, "meter": "12/8", "bpm": 139.999, "quarter_bpm": 209.999, "n_bars": 50, "scores": {"beat_fit_resid_ms": 62.4, "R_beat/3": 0.8888, "ac_4_beats": 0.7377}}
+}
