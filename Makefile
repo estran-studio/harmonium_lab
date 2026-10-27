@@ -8,6 +8,7 @@ REPORTS_DIR := target/quality_reports
 TRAD_DIR := corpus/trad
 
 .PHONY: setup corpus profiles trad-corpus trad-render trad-profiles trad-ornaments check-cells profile-draft test lab-export suite gate clean help trad-sf2 feet-preview fiddle-samples fiddle-sf2 fiddle-compare engine-tunes engine-reels
+.PHONY: bank-sf2 bank-compare
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
@@ -125,6 +126,18 @@ trad-sf2: setup ## Échantillons → prepared → ../harmonium/assets/harmonium_
 
 feet-preview: setup ## Pieds seuls (8 mes.) + reel complet avec nouveaux pieds
 	$(LAB) feet-preview $(if $(SOUNDFONT),--soundfont $(SOUNDFONT),) $(if $(FEET_SF2),--feet-soundfont $(FEET_SF2),)
+
+# Banques procédurales : le nom vient de BANK, jamais du code Python.
+BANK_DIR ?= samples/$(BANK)
+bank-sf2: setup ## Construit une banque : BANK=<nom> [BANK_SF2=sortie.sf2]
+	@test -n "$(BANK)" || (echo "Usage: make bank-sf2 BANK=<nom> [BANK_SF2=sortie.sf2]"; exit 2)
+	$(PYTHON) -m harmonium_lab.bank.prepare --root "$(BANK_DIR)"
+	$(PYTHON) -m harmonium_lab.bank.build --root "$(BANK_DIR)" $(if $(BANK_SF2),--output "$(BANK_SF2)",)
+
+bank-compare: setup ## Écoute/mesures : BANK_SF2=banque.sf2 COMPARE_ARGS='--midis ... --tracks ... [--sustain 81:32:6]'
+	@test -n "$(BANK_SF2)" || (echo "BANK_SF2 requis"; exit 2)
+	$(PYTHON) -m harmonium_lab.bank.compare --bank "$(BANK_SF2)" $(COMPARE_ARGS)
+
 # ── Moteur : exports par style pour trad-compare / blindtest ──
 # ENGINE_DIR vaut ../harmonium par défaut ; STYLE est l'id du profil moteur.
 ENGINE_DIR ?= ../harmonium

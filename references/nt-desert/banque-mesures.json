@@ -1,0 +1,303 @@
+{
+  "bank": "nt_desert.sf2",
+  "bank_id": "nt_desert",
+  "loops": [
+    {
+      "loop": "02_flashyn_full_loop_A",
+      "midi": "02_flashyn_full_loop_A.mid",
+      "original": {
+        "spectral_centroid_mean": 3308.84,
+        "spectral_rolloff_mean": 6907.68,
+        "spectral_flatness_mean": 0.054021,
+        "rms_mean": 0.317459,
+        "rms_std": 0.046008,
+        "dynamic_range_db": 6.97,
+        "rms_mean_peak_0125": 0.038537,
+        "rms_cv": 0.1449
+      },
+      "source_window_s": [
+        2.267,
+        9.124
+      ],
+      "reference_wav": "02_flashyn_full_loop_A_GeneralUser.wav",
+      "reference": {
+        "spectral_centroid_mean": 1466.09,
+        "spectral_rolloff_mean": 3291.82,
+        "spectral_flatness_mean": 0.005308,
+        "rms_mean": 0.022177,
+        "rms_std": 0.007781,
+        "dynamic_range_db": 13.65,
+        "rms_mean_peak_0125": 0.02438,
+        "rms_cv": 0.3509
+      },
+      "bank_wav": "02_flashyn_full_loop_A_nt_desert.wav",
+      "bank": {
+        "spectral_centroid_mean": 1535.8,
+        "spectral_rolloff_mean": 3146.65,
+        "spectral_flatness_mean": 0.01203,
+        "rms_mean": 0.030761,
+        "rms_std": 0.004338,
+        "dynamic_range_db": 10.37,
+        "rms_mean_peak_0125": 0.030761,
+        "rms_cv": 0.141
+      },
+      "midi_sha256": "5b145aebc22fbaec31cfebaa1dc6a0f1524794df4dabc584d57b08beaee12d06"
+    },
+    {
+      "loop": "02_flashyn_bass_riff_D",
+      "midi": "02_flashyn_bass_riff_D.mid",
+      "original": {
+        "spectral_centroid_mean": 3149.91,
+        "spectral_rolloff_mean": 6773.5,
+        "spectral_flatness_mean": 0.047194,
+        "rms_mean": 0.341765,
+        "rms_std": 0.036396,
+        "dynamic_range_db": 5.2,
+        "rms_mean_peak_0125": 0.040895,
+        "rms_cv": 0.1065
+      },
+      "source_window_s": [
+        15.981,
+        22.838
+      ],
+      "reference_wav": "02_flashyn_bass_riff_D_GeneralUser.wav",
+      "reference": {
+        "spectral_centroid_mean": 512.23,
+        "spectral_rolloff_mean": 1085.32,
+        "spectral_flatness_mean": 8.2e-05,
+        "rms_mean": 0.03144,
+        "rms_std": 0.007958,
+        "dynamic_range_db": 31.45,
+        "rms_mean_peak_0125": 0.035342,
+        "rms_cv": 0.2531
+      },
+      "bank_wav": "02_flashyn_bass_riff_D_nt_desert.wav",
+      "bank": {
+        "spectral_centroid_mean": 521.18,
+        "spectral_rolloff_mean": 1095.76,
+        "spectral_flatness_mean": 4.7e-05,
+        "rms_mean": 0.051948,
+        "rms_std": 0.014539,
+        "dynamic_range_db": 61.06,
+        "rms_mean_peak_0125": 0.051946,
+        "rms_cv": 0.2799
+      },
+      "midi_sha256": "a81f806aea81559305c28a7cc89ad5a4d57665828dff43906ff0f48eacc303e6"
+    },
+    {
+      "loop": "02_flashyn_drums_groove",
+      "midi": "02_flashyn_drums_groove.mid",
+      "original": {
+        "spectral_centroid_mean": 3308.84,
+        "spectral_rolloff_mean": 6907.68,
+        "spectral_flatness_mean": 0.054021,
+        "rms_mean": 0.317459,
+        "rms_std": 0.046008,
+        "dynamic_range_db": 6.97,
+        "rms_mean_peak_0125": 0.038537,
+        "rms_cv": 0.1449
+      },
+      "source_window_s": [
+        2.267,
+        9.124
+      ],
+      "reference_wav": "02_flashyn_drums_groove_GeneralUser.wav",
+      "reference": {
+        "spectral_centroid_mean": 2887.12,
+        "spectral_rolloff_mean": 5962.48,
+        "spectral_flatness_mean": 0.05277,
+        "rms_mean": 0.024181,
+        "rms_std": 0.021478,
+        "dynamic_range_db": 57.14,
+        "rms_mean_peak_0125": 0.023913,
+        "rms_cv": 0.8882
+      },
+      "bank_wav": "02_flashyn_drums_groove_nt_desert.wav",
+      "bank": {
+        "spectral_centroid_mean": 2638.24,
+        "spectral_rolloff_mean": 4570.42,
+        "spectral_flatness_mean": 0.060719,
+        "rms_mean": 0.032308,
+        "rms_std": 0.027193,
+        "dynamic_range_db": 63.74,
+        "rms_mean_peak_0125": 0.030246,
+        "rms_cv": 0.8417
+      },
+      "midi_sha256": "2f39f0b649d671330ec6866a417028eaaf06450fc553eb1c333d75f4bf039c91"
+    },
+    {
+      "loop": "19_a_way_pedal_A",
+      "midi": "19_a_way_pedal_A.mid",
+      "original": {
+        "spectral_centroid_mean": 1197.08,
+        "spectral_rolloff_mean": 2281.24,
+        "spectral_flatness_mean": 0.107698,
+        "rms_mean": 0.09058,
+        "rms_std": 0.089528,
+        "dynamic_range_db": 80.0,
+        "rms_mean_peak_0125": 0.011318,
+        "rms_cv": 0.9884
+      },
+      "source_window_s": [
+        0.0,
+        8.0
+      ],
+      "reference_wav": "19_a_way_pedal_A_GeneralUser.wav",
+      "reference": {
+        "spectral_centroid_mean": 482.72,
+        "spectral_rolloff_mean": 733.72,
+        "spectral_flatness_mean": 9e-06,
+        "rms_mean": 0.024232,
+        "rms_std": 0.010597,
+        "dynamic_range_db": 13.8,
+        "rms_mean_peak_0125": 0.027401,
+        "rms_cv": 0.4373
+      },
+      "bank_wav": "19_a_way_pedal_A_nt_desert.wav",
+      "bank": {
+        "spectral_centroid_mean": 1051.8,
+        "spectral_rolloff_mean": 2109.16,
+        "spectral_flatness_mean": 6.4e-05,
+        "rms_mean": 0.038388,
+        "rms_std": 0.005889,
+        "dynamic_range_db": 13.89,
+        "rms_mean_peak_0125": 0.038395,
+        "rms_cv": 0.1534
+      },
+      "midi_sha256": "7115fd5803d61ec1acb9c15ce790a35930af449c6ae05fad4936c83ac26a5c81"
+    }
+  ],
+  "sustain": [
+    {
+      "program": 38,
+      "note": 32,
+      "seconds": 6.0,
+      "buckets_db": [
+        -23.36,
+        -23.36,
+        -23.36,
+        -23.36,
+        -23.36,
+        -23.36,
+        -23.35,
+        -23.35,
+        -23.36,
+        -23.35,
+        -23.36
+      ],
+      "max_drop_db": 0.0,
+      "max_adjacent_drop_db": 0.01,
+      "excursion_db": 0.01,
+      "holds": true,
+      "max_drop_target_db": 3.0,
+      "wav": "tenue_38_32.wav"
+    },
+    {
+      "program": 81,
+      "note": 32,
+      "seconds": 6.0,
+      "buckets_db": [
+        -24.24,
+        -24.23,
+        -24.24,
+        -24.24,
+        -24.23,
+        -24.24,
+        -24.23,
+        -24.23,
+        -24.24,
+        -24.22,
+        -24.24
+      ],
+      "max_drop_db": 0.0,
+      "max_adjacent_drop_db": 0.02,
+      "excursion_db": 0.02,
+      "holds": true,
+      "max_drop_target_db": 3.0,
+      "wav": "tenue_81_32.wav"
+    },
+    {
+      "program": 81,
+      "note": 64,
+      "seconds": 6.0,
+      "buckets_db": [
+        -23.0,
+        -23.01,
+        -23.05,
+        -22.99,
+        -23.03,
+        -23.03,
+        -23.0,
+        -23.05,
+        -23.0,
+        -23.0,
+        -23.06
+      ],
+      "max_drop_db": 0.06,
+      "max_adjacent_drop_db": 0.06,
+      "excursion_db": 0.07,
+      "holds": true,
+      "max_drop_target_db": 3.0,
+      "wav": "tenue_81_64.wav"
+    }
+  ],
+  "bank_sha256": "3ee78dc2ec83120d6fe2b217a7e99ecc5843e351dbe8b6f7464e266d69a5d397",
+  "bank_bytes": 3351554,
+  "reference_bank_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+  "environment": {
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "soundfile": "0.14.0",
+    "libsndfile": "1.2.2",
+    "librosa": "1.0.0",
+    "fluidsynth": "2.5.3",
+    "platform": "darwin arm64"
+  },
+  "method": {
+    "render_rate_hz": 44100,
+    "analysis_rate_hz": 22050,
+    "render_peak": 0.125,
+    "analysis_window": "source_start_s..source_end_s; tails excluded",
+    "rms_peak_0125": "mean frame RMS after peak matching each analysis window to 0.125",
+    "sustain_bucket_s": 0.5,
+    "sustain_skip_s": 0.25,
+    "sustain_stop": "NoteOff; excludes release",
+    "original": "mix complet, y compris les comparaisons de parties isolées"
+  },
+  "g0_isolated_pedal": [
+    {
+      "program": 38,
+      "note": 32,
+      "note_end_s": 4.953,
+      "buckets_db": [
+        -23.35,
+        -23.36,
+        -23.36,
+        -23.36,
+        -23.36,
+        -23.36,
+        -23.36,
+        -23.36,
+        -23.37
+      ],
+      "excursion_db": 0.02
+    },
+    {
+      "program": 81,
+      "note": 32,
+      "note_end_s": 4.953,
+      "buckets_db": [
+        -24.23,
+        -24.22,
+        -24.24,
+        -24.23,
+        -24.23,
+        -24.24,
+        -24.23,
+        -24.24,
+        -24.25
+      ],
+      "excursion_db": 0.03
+    }
+  ]
+}

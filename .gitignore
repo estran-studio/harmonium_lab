@@ -34,3 +34,6 @@ samples/fiddles/raw/
 samples/feet/raw/
 samples/feet/prepared/
 samples/feet/own/
+
+# Banques procédurales G6 : seuls recettes, manifestes et métadonnées sont versionnés
+samples/*/prepared/
