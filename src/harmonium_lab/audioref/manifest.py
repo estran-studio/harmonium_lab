@@ -22,8 +22,9 @@ def parse_filters(pairs: list[str] | None) -> dict[str, str]:
 
 
 def select(rows: list[dict], filters: dict[str, str]) -> list[dict]:
-    """Lignes dont chaque champ filtré vaut la valeur donnée (comparaison texte)."""
-    return [r for r in rows if all(str(r.get(k)) == v for k, v in filters.items())]
+    """Lignes dont chaque champ filtré vaut la valeur donnée (comparaison
+    texte) ; `a|b` accepte l'une ou l'autre valeur."""
+    return [r for r in rows if all(str(r.get(k)) in v.split("|") for k, v in filters.items())]
 
 
 def track_path(row: dict, root: Path) -> Path:

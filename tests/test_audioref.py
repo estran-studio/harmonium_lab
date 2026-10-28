@@ -122,3 +122,59 @@ def test_degrees_relative_to_tonic():
 
     assert to_degrees(32, 8) == {"semitones": 0, "octave": 1}  # G#1 sur tonique G#
     assert to_degrees(33, 8) == {"semitones": 1, "octave": 1}  # A1 = b2 phrygien
+
+
+def test_select_accepts_alternatives():
+    from harmonium_lab.audioref.manifest import parse_filters, select
+
+    rows = [{"id": "a", "type": "zone"}, {"id": "b", "type": "zone"}, {"id": "c", "type": "boss"}]
+    got = select(rows, parse_filters(["id=a|c", "type=zone"]))
+    assert [r["id"] for r in got] == ["a"]
+
+
+def test_audioref_loops_multi_part_spec(tmp_path, monkeypatch):
+    """Une boucle « nom:début:fin:partie1,partie2 » doit écrire toutes les
+    parties demandées (régression : la liste non découpée produisait un
+    MIDI silencieux)."""
+    import argparse
+    import wave
+    import json
+    import numpy as np
+
+    sr = 22050
+    bar = 2.0
+    t = np.arange(int(6 * bar * sr)) / sr
+    bass = (0.4 * np.sin(2 * np.pi * 110.0 * t)).astype(np.float32)
+    drums = np.zeros_like(bass)
+    for k in range(int(6 * bar / 0.5)):
+        drums[int(k * 0.5 * sr)] = 1.0
+    mix = bass + drums
+
+    def _wav(path, sig):
+        with wave.open(str(path), "wb") as w:
+            w.setnchannels(1)
+            w.setsampwidth(2)
+            w.setframerate(sr)
+            w.writeframes((sig * 20000).astype("<i2").tobytes())
+
+    stems = tmp_path / "stems"
+    stems.mkdir()
+    _wav(stems / "bass.wav", bass)
+    _wav(stems / "drums.wav", drums)
+    _wav(tmp_path / "mix.wav", mix)
+
+    from harmonium_lab.cli import cmd_audioref_loops
+
+    args = argparse.Namespace(
+        track=str(tmp_path / "mix.wav"), stems=str(stems), track_id="t",
+        grid=json.dumps({"beat_s": 0.5, "tatums_per_beat": 2, "beats_per_bar": 4,
+                         "origin_s": 0.0}),
+        tonic="A", loop=["boucle:0:1:bass,drums"], bass_prog=32, lead_prog=81,
+        pad_prog=88, parts=None, soundfont=None, no_render=True,
+        out=str(tmp_path / "out"))
+    assert cmd_audioref_loops(args) == 0
+    import mido
+    mid = mido.MidiFile(str(tmp_path / "out" / "t_boucle.mid"))
+    played = sum(1 for track in mid.tracks for msg in track
+                 if msg.type == "note_on" and msg.velocity > 0)
+    assert played > 1, "la boucle multi-parties est vide"
