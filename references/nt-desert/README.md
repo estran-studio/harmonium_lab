@@ -305,9 +305,23 @@ jeu en dur) : `src/harmonium_lab/styledist/`, appelé par
 `make style-distance PROFILE=<id> REF=<dossier> TRACKS=<id,id>
 STYLE_CORPUS=<dir> [BANKS=label=sf2 …] [CONTEXT=champ=valeur]`. Le même outil
 servira à Isaac. Chiffres complets et reproductibles :
-`distance-nt_desert.json` (moteur `4b0fe7b`, graines 1–10, 48 mesures,
-banques `nt_desert.sf2` et `GeneralUser-GS.sf2`, batterie sur la banque du
-profil via `--feet-soundfont`).
+`distance-nt_desert.json`, re-mesuré au moteur `aadc812` (après G7e et G7h,
+état de clôture du profil), graines 1–10, 48 mesures, banques `nt_desert.sf2`
+et `GeneralUser-GS.sf2`, batterie sur la banque du profil via
+`--feet-soundfont`. Les tableaux §8.2 et la lecture §8.3 datent du moteur
+`4b0fe7b` ; la re-mesure les déplace peu :
+
+| Score global (0–100) | `4b0fe7b` | `aadc812` |
+|---|---:|---:|
+| Audio `nt_desert` vs *Fläshyn* | 63,3 | 60,9 |
+| Audio `nt_desert` vs *A Way* | 50,5 | 54,2 |
+| Audio GeneralUser vs *Fläshyn* | 60,7 | 59,6 |
+| Audio GeneralUser vs *A Way* | 53,4 | 56,3 |
+| Symbolique vs *Fläshyn* | 70,7 | 72,6 |
+| Symbolique vs *A Way* | 24,2 | 24,2 |
+
+Le gain symbolique vient de la boucle de basse (`loop_bass` 40,0 → 64,0) :
+la relance et le riff liés de G7e/G7h se répètent à l'identique.
 
 ### 8.1 Méthode et normalisation
 

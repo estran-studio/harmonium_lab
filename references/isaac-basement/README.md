@@ -378,3 +378,37 @@ harmonium-lab audioref-measures \
 # boucles : harmonium-lab audioref-loops (grilles de grids.json,
 # minutages sources dans chaque .json de transcriptions)
 ```
+
+---
+
+## 8. Distance de l'essai `isaac_basement` (M1)
+
+Profil d'essai de fin de phase 014 (`profiles/isaac_basement`, moteur
+`aadc812` + profil non commité au moment de la mesure), graines 1–10,
+48 mesures, banque GeneralUser GS. Chiffres complets :
+`distance-isaac_basement.json` (`make style-distance PROFILE=isaac_basement
+REF=isaac-basement TRACKS=02_diptera_sonata,21_periculum
+STYLE_CORPUS=corpus/isaac CONTEXT=type=zone`).
+
+| Score (0–100) | *Diptera Sonata* | *Periculum* |
+|---|---:|---:|
+| **Audio global** | **40,9** | **38,7** |
+| tempo | 100,0 | 100,0 |
+| tonalité | 30,3 | 5,7 |
+| brillance | 0,0 | 11,9 |
+| percussif | 13,2 | 7,5 |
+| attaques | 26,3 | 0,0 |
+| dynamique | 88,6 | 91,2 |
+| bandes | 27,5 | 54,3 |
+| **Symbolique global** | **65,9** | **69,0** |
+| basse | 76,6 | 65,9 |
+| batterie | 56,8 | 85,6 |
+| accords | 77,8 | 64,8 |
+| boucles | 52,5 | 59,6 |
+
+Lecture : l'écriture (basse, stomp, pédale et boucles) est proche des
+transcriptions ; le son ne l'est pas. Le rendu GeneralUser est trop sombre
+(brillance 0) et trop peu percussif face au mix saturé et compressé de
+Ridiculon ; la tonalité contre *Periculum* souffre de son D# rampant, absent
+de l'essai. Pistes : basse saturée (Odin), batterie plus présente au mix,
+voisine chromatique D# sur la pédale.
