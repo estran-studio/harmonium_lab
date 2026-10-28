@@ -1,3 +1,4 @@
 {
-  "02_flashyn": {"beat_s": 0.42857, "tatum_s": 0.14286, "tatums_per_beat": 3, "beats_per_bar": 4, "origin_s": 0.5526, "duration_s": 87.0, "bar_s": 1.71429, "meter": "12/8", "bpm": 139.999, "quarter_bpm": 209.999, "n_bars": 50, "scores": {"beat_fit_resid_ms": 62.4, "R_beat/3": 0.8888, "ac_4_beats": 0.7377}}
+  "02_flashyn": {"beat_s": 0.42857, "tatum_s": 0.14286, "tatums_per_beat": 3, "beats_per_bar": 4, "origin_s": 0.5526, "duration_s": 87.0, "bar_s": 1.71429, "meter": "12/8", "bpm": 139.999, "quarter_bpm": 209.999, "n_bars": 50, "scores": {"beat_fit_resid_ms": 62.4, "R_beat/3": 0.8888, "ac_4_beats": 0.7377}},
+  "19_a_way": {"beat_s": 0.5, "tatum_s": 0.25, "tatums_per_beat": 2, "beats_per_bar": 4, "origin_s": 0.0, "duration_s": 145.0, "bar_s": 2.0, "meter": "4/4", "bpm": 120.0, "quarter_bpm": 120.0, "n_bars": 72, "scores": {"note": "pas de pulsation périodique (G0 §2) : fenêtre d'analyse de 2,0 s = 1 mesure 4/4 à 120, blocs de 8 s = 4 mesures"}}
 }
