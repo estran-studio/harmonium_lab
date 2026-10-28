@@ -419,7 +419,7 @@ def cmd_audioref_loops(args: argparse.Namespace) -> int:
     for spec in args.loop:
         fields = spec.split(":")
         name, s, e = fields[0], fields[1], fields[2]
-        only = {fields[3]} if len(fields) > 3 else set(transcribed)
+        only = set(fields[3].split(",")) if len(fields) > 3 else set(transcribed)
         bars = (int(s), int(e))
         parts: dict[str, tuple[list, int]] = {}
         side: dict[str, Any] = {"loop": name}
