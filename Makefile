@@ -8,7 +8,7 @@ REPORTS_DIR := target/quality_reports
 TRAD_DIR := corpus/trad
 
 .PHONY: setup corpus profiles trad-corpus trad-render trad-profiles trad-ornaments check-cells profile-draft test lab-export suite gate clean help trad-sf2 feet-preview fiddle-samples fiddle-sf2 fiddle-compare engine-tunes engine-reels
-.PHONY: bank-sf2 bank-compare
+.PHONY: style-distance
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
@@ -164,6 +164,33 @@ engine-tunes: setup ## Exporte N airs moteur (STYLE=id, seeds 1..N) → target/e
 
 engine-reels: ## Compatibilité d'usage : exporte uniquement reel_quebecois
 	$(MAKE) engine-tunes STYLE=reel_quebecois N=$(N) ENGINE_BARS=32
+
+# ── Distance d'un profil à son corpus de référence (phase 014, M1) ──
+# Rien de spécifique à un jeu : profil, références et pistes viennent des arguments.
+#   make style-distance PROFILE=nt_desert REF=nt-desert TRACKS=02_flashyn,19_a_way \
+#        STYLE_CORPUS=/chemin/corpus/nuclear_throne CONTEXT="type=zone" \
+#        BANKS="nt_desert=$(ENGINE_DIR)/assets/nt_desert.sf2 generaluser=$(ENGINE_DIR)/assets/GeneralUser-GS.sf2"
+# STYLE_CORPUS contient manifest.jsonl, les fichiers audio (champ `file`) et
+# transcriptions/ (transcriptions et audio hors dépôt, principe VII).
+# Sortie versionnée : references/$(REF)/distance-$(PROFILE).json ; rendus et cache hors dépôt.
+DIST_SEEDS ?= 10
+DIST_BARS ?= 48
+BANKS ?= generaluser=$(ENGINE_DIR)/assets/GeneralUser-GS.sf2
+STYLE_DIST_DIR := target/style_distance
+
+style-distance: setup ## PROFILE=id REF=dossier TRACKS=id,id STYLE_CORPUS=dir [BANKS=label=sf2 ...] [CONTEXT=champ=val] [DIST_SEEDS=10] [DIST_BARS=48]
+	@test -n "$(PROFILE)" -a -n "$(REF)" -a -n "$(TRACKS)" -a -n "$(STYLE_CORPUS)" || \
+		(echo "Usage: make style-distance PROFILE=<id> REF=<dossier references/> TRACKS=<id,id> STYLE_CORPUS=<dir> [BANKS=label=sf2 ...] [CONTEXT=champ=val]"; exit 2)
+	@test -f "$(ENGINE_DIR)/Cargo.toml" || (echo "Moteur introuvable: $(ENGINE_DIR)"; exit 2)
+	$(PYTHON) -m harmonium_lab.styledist --profile "$(PROFILE)" --tracks "$(TRACKS)" \
+		--manifest "$(STYLE_CORPUS)/manifest.jsonl" --corpus-root "$(STYLE_CORPUS)" \
+		$(if $(CONTEXT),--context $(CONTEXT),) \
+		$(if $(wildcard $(STYLE_CORPUS)/transcriptions),--transcriptions "$(STYLE_CORPUS)/transcriptions",) \
+		$(if $(wildcard $(REFS_DIR)/$(REF)/grids.json),--grids "$(REFS_DIR)/$(REF)/grids.json",) \
+		$(if $(STEPS_PER_BAR),--steps-per-bar $(STEPS_PER_BAR),) \
+		--engine-dir "$(ENGINE_DIR)" $(foreach b,$(BANKS),--bank "$(b)") \
+		--seeds $(DIST_SEEDS) --bars $(DIST_BARS) --work-dir "$(STYLE_DIST_DIR)" \
+		-o "$(REFS_DIR)/$(REF)/distance-$(PROFILE).json" --markdown
 
 # ════════════════════════════════════════════════════════════════════
 

@@ -3,7 +3,8 @@
 Analyse de la zone désert de *Nuclear Throne* (tâche G0 de la phase 014) :
 mesures audio (`measures.json`), structure, instrumentation, boucles
 transcrites (hors dépôt) et propositions de données pour G2 (harmonie en
-boucle / pédale), G3 (basse motivique) et G7 (profil `nt_desert`).
+boucle / pédale), G3 (basse motivique) et G7 (profil `nt_desert`) ; distance
+du profil `nt_desert` au corpus (M1) en §8.
 
 **Provenance et droits (principe VII).** Pistes 02 *Fläshyn* (Desert A,
 87 s) et 19 *A Way* (Desert B, 145 s) de *Nuclear Throne OST*, composées
@@ -14,7 +15,8 @@ MIDI restent hors dépôt, dans le checkout principal gitignoré :
 - stems (demucs `htdemucs`) : `corpus/nuclear_throne/stems/htdemucs/<id>/` ;
 - boucles MIDI + WAV + JSON : `corpus/nuclear_throne/transcriptions/`.
 
-Seuls ce compte rendu, `measures.json` et `grids.json` sont versionnés.
+Seuls ce compte rendu et les dérivés (`measures.json`, `grids.json`,
+`banque-mesures.json`, `banque.md`, `distance-nt_desert.json`) sont versionnés.
 
 ---
 
@@ -292,3 +294,129 @@ notes = [
 - **Percussion (`FeetTable`)** : `Heel` = Kick (GM 36) sur les pas
   `[0, 8, 20]` / 24, `Toe` = Snare (GM 38) sur `[2, 10, 14]` / 24 (ou
   sur une grille de 12 croches : Kick `[0, 4, 10]`, Snare `[1, 5, 7]`).
+
+---
+
+## 8. Distance du profil `nt_desert` au corpus (M1)
+
+Critère 3 de la phase : le labo publie, pour chaque profil, la distance à son
+corpus de référence, en audio et en symbolique. Outil générique (aucun nom de
+jeu en dur) : `src/harmonium_lab/styledist/`, appelé par
+`make style-distance PROFILE=<id> REF=<dossier> TRACKS=<id,id>
+STYLE_CORPUS=<dir> [BANKS=label=sf2 …] [CONTEXT=champ=valeur]`. Le même outil
+servira à Isaac. Chiffres complets et reproductibles :
+`distance-nt_desert.json` (moteur `4b0fe7b`, graines 1–10, 48 mesures,
+banques `nt_desert.sf2` et `GeneralUser-GS.sf2`, batterie sur la banque du
+profil via `--feet-soundfont`).
+
+### 8.1 Méthode et normalisation
+
+**Audio.** Chaque piste (référence, contexte et rendu) est mesurée au pic
+normalisé : tempo (pulsation — MIDI côté rendu, grille G0 côté référence,
+repliée à l'octave, tolérance 1/12 d'octave), chroma moyen (cosinus),
+`key_strength`, entropie de chroma, centroïde et rolloff spectraux, platitude
+(log10), part percussive (HPSS), taux d'attaques, niveau moyen et étalement
+RMS (dB), énergie par bande (20–80, 80–250, 250–1000, 1–4 k, > 4 kHz, en dB).
+Chaque mesure devient un écart z : `|g − r| / σ`, σ calculé sur les 20 pistes
+`type=zone` du corpus (médiane des distances inter-pistes pour le chroma).
+Score : `100 · max(0, 1 − z/3)` ; le score d'un groupe est la moyenne de ses
+mesures, le score global la moyenne des groupes (tempo, tonalité, brillance,
+percussif, attaques, dynamique, bandes).
+
+**Symbolique.** Le MIDI moteur (grille de 24 pas/mesure, celle des
+transcriptions) est comparé aux boucles transcrites §5–6 : histogramme de
+classes de hauteur de la basse (pondéré par les durées), grilles d'attaques
+kick/snare/charleston par position, fondamentale d'accord par mesure
+(pédale, taux de changement), et longueur des boucles (part des paires de
+mesures `(b, b+L)` qui se ressemblent, à la longueur L de chaque boucle de
+référence). Toutes les distances sont dans [0, 1] (Bray-Curtis ou écarts de
+parts) ; score = 100 · (1 − d).
+
+### 8.2 Résultats (moyenne sur 10 graines)
+
+**Audio — banque `nt_desert`** (score 0–100)
+
+| Groupe | vs *Fläshyn* | vs *A Way* |
+|---|---:|---:|
+| **Score global** | **63,3** | **50,5** |
+| tempo | 100,0 | 11,0 |
+| tonalité | 81,0 | 13,1 |
+| brillance | 18,2 | 82,4 |
+| percussif | 71,5 | 84,3 |
+| attaques | 52,3 | 68,9 |
+| dynamique | 58,7 | 23,8 |
+| bandes | 61,3 | 70,0 |
+
+**Audio — banque `GeneralUser`** (score 0–100)
+
+| Groupe | vs *Fläshyn* | vs *A Way* |
+|---|---:|---:|
+| **Score global** | **60,7** | **53,4** |
+| tempo | 100,0 | 11,0 |
+| tonalité | 60,2 | 24,4 |
+| brillance | 10,5 | 62,7 |
+| percussif | 65,2 | 90,7 |
+| attaques | 65,9 | 82,5 |
+| dynamique | 77,9 | 56,0 |
+| bandes | 45,2 | 46,5 |
+
+**Symbolique** (score 0–100, 100 = identique)
+
+| Groupe / mesure | vs *Fläshyn* | vs *A Way* |
+|---|---:|---:|
+| **Score global** | **70,7** | **24,2** |
+| basse `bass_pc` | 87,7 (d = 0,12) | 0,0 (référence sans basse transcrite) |
+| batterie `drums_any` | 73,6 (d = 0,26) | 0,0 (référence sans batterie) |
+| · kick | 76,5 (d = 0,23) | — |
+| · snare | 86,4 (d = 0,14) | — |
+| · charleston | 0,0 (d = 1,0) | — |
+| accords `chord_roots` | 72,9 (d = 0,27) | 36,3 (d = 0,64) |
+| · part de pédale | 89,6 (d = 0,10) | 96,7 (d = 0,03) |
+| · taux de changement | 76,9 (d = 0,23) | 89,6 (d = 0,10) |
+| boucles basse / batterie / accords | 40,0 / 98,4 / 30,1 | — / — / 22,7 |
+
+### 8.3 Lecture
+
+1. **Le profil est du côté *Fläshyn*** (63,3 audio, 70,7 symbolique), pas du
+   côté *A Way* (50,5 / 24,2) : c'est ce que la forme en arche de G4 veut.
+   Contre *A Way*, la distance est structurelle : tempo 140 contre 120
+   (z = 2,7), batterie et basse présentes là où le bourdon n'en a pas
+   (distance 1,0, voix réellement absentes — `reference_empty_voices`), tonalité
+   G# phrygien contre pédale A (chroma z = 2,5). Le point commun le plus fort
+   est l'absence de percussif.
+2. **La basse et la poursuite de la pédale sont justes** : histogramme de
+   classes de hauteur à 0,12 de *Fläshyn* (registre médian identique, G#1),
+   part de pédale à 0,10, taux de changement d'accords à 0,23. Les grilles
+   kick (d = 0,23) et snare (d = 0,14) suivent §6.2.
+3. **Deux écarts réels, un artefact.**
+   - *Brillance* (18,2 contre *Fläshyn*) : le rendu manque de centroïde
+     (z = 2,3) et de platitude (z = 3,6) — la saturation de la scie G6 est
+     loin de la boucle originale saturée et filtrée passe-haut. Écart réel,
+     déjà pointé par l'écoute G7 (« buzz »).
+   - *Boucles d'accords* (30,1) : l'harmonie générée ne se répète pas au
+     décalage de 8 mesures des boucles du pont ; l'original non plus ne
+     répète pas ses sections dos à dos — mesure exigeante, à lire comme
+     « ostinato » (batterie 98,4, proche de l'original) contre
+     « harmonie évolutive » (30,1).
+   - *Charleston* (0,0) : artefact du référentiel, pas du moteur — la
+     transcription G0 note que « le charleston continu est masqué par le
+     mix » (§5, confiance moyenne) ; les rares coups transcrits ne se
+     superposent pas aux pulsations jouées. À ne pas utiliser pour régler le
+     moteur.
+4. **Banques** : `nt_desert.sf2` bat GeneralUser sur la tonalité (81,0 contre
+   60,2 — nappe 89 fidèle au bourdon), GeneralUser sur l'étalement dynamique
+   (77,9 contre 58,7 — les presets G6 tenus « < 0,1 dB de chute » rendent le
+   rendu plat). Cohérent avec les mesures G6 et l'écoute.
+
+### 8.4 Limites
+
+- Les distances symboliques se calculent contre les transcriptions §5 telles
+  que publiées : la pédale de *A Way* y est vue F/D (la détection sur bourdon
+  sans pulsation est fragile), et le charleston y est sous-transcrit. Voir les
+  confiances par boucle avant de régler le moteur sur un chiffre.
+- La longueur de boucle (part des paires `(b, b+L)`) exige la répétition au
+  décalage L : bonne pour un ostinato, sévère pour une harmonie qui évolue
+  par section.
+- Le charleston et la platitude spectrale sont les deux mesures où le
+  référentiel (masqué au mix) ou la chaîne (rendu sec contre master
+  compressé) tirent le score vers le bas sans faute d'écriture du moteur.
