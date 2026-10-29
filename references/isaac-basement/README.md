@@ -412,3 +412,31 @@ transcriptions ; le son ne l'est pas. Le rendu GeneralUser est trop sombre
 Ridiculon ; la tonalité contre *Periculum* souffre de son D# rampant, absent
 de l'essai. Pistes : basse saturée (Odin), batterie plus présente au mix,
 voisine chromatique D# sur la pédale.
+
+### 8.1 Distance des trois autres essais (moteur `0efe475`, après V1)
+
+Même outil et mêmes réglages (graines 1–10, 48 mesures, GeneralUser GS), chacun contre sa piste
+source : `distance-isaac_cellar.json`, `distance-isaac_burning.json`,
+`distance-isaac_downpour.json`. Rendu SoundFont seul (les presets Odin ne sont pas mesurés).
+
+| Score (0–100) | Cellar vs *Periculum* | Burning vs *Fundamentum* | Downpour vs *River of Despair* |
+|---|---:|---:|---:|
+| **Audio global** | **54,5** | **39,6** | **61,4** |
+| tempo | 100,0 | 100,0 | 100,0 |
+| tonalité | 35,3 | 9,7 | 80,4 |
+| brillance | 19,4 | 0,0 | 5,9 |
+| percussif | 72,8 | 33,2 | 91,4 |
+| attaques | 0,0 | 0,0 | 59,7 |
+| dynamique | 88,7 | 84,2 | 60,3 |
+| bandes | 65,4 | 50,1 | 32,4 |
+| **Symbolique global** | **66,3** | **60,6** | **58,8** |
+| basse | 78,2 | 59,1 | 77,7 |
+| batterie | 83,5 | 76,7 | 44,6 |
+| accords | 67,8 | 61,2 | 86,7 |
+| boucles | 35,9 | 45,3 | 26,2 |
+
+Lecture : comme pour Basement, l'écriture est plus proche que le son. La brillance reste le
+point faible commun (le mix saturé de Ridiculon contre GeneralUser). Burning est le plus loin en
+audio : tonalité (F# phrygien contre le gabarit global D majeur / E dorien, ambigu au §2) et
+attaques. Downpour est le plus proche en audio (tapis lent, peu percussif) mais ses boucles
+divergent : les alternatives par graine (V1) cassent volontairement la répétition mesurée.
