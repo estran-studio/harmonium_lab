@@ -1,0 +1,4120 @@
+{
+  "tracks": {
+    "02_diptera_sonata": {
+      "rhythm": {
+        "detected_tempo": 143.6,
+        "beat_count": 543,
+        "onset_rate": 1.86,
+        "tempo_stability": 0.972,
+        "duration": 249.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 2.2983,
+        "tonal_power_ratio": 0.4078,
+        "chroma_entropy": 3.4606,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.826,
+          "margin": 0.0054,
+          "runner_up": {
+            "tonic": "D",
+            "mode": "major",
+            "score": 0.8206
+          }
+        }
+      },
+      "chroma_mean": [
+        0.3859,
+        0.5459,
+        0.9457,
+        0.5223,
+        0.4024,
+        0.3448,
+        0.3331,
+        0.3524,
+        0.2927,
+        0.3545,
+        0.2365,
+        0.2215
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2638.47,
+        "spectral_centroid_std": 733.94,
+        "spectral_bandwidth_mean": 2484.9,
+        "spectral_flatness_mean": 0.020179,
+        "spectral_flatness_std": 0.024618,
+        "spectral_rolloff_mean": 5461.71
+      },
+      "dynamics": {
+        "rms_mean": 0.094673,
+        "rms_std": 0.031036,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -6.93
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.7993,
+        "percussive_ratio": 0.2007,
+        "dissonance_proxy": 0.020179,
+        "dissonance_std": 0.024618
+      }
+    },
+    "04_sodden_hollow": {
+      "rhythm": {
+        "detected_tempo": 123.0,
+        "beat_count": 483,
+        "onset_rate": 1.5,
+        "tempo_stability": 0.9733,
+        "duration": 254.0
+      },
+      "tonal": {
+        "estimated_key": "C#",
+        "key_strength": 1.5302,
+        "tonal_power_ratio": 0.345,
+        "chroma_entropy": 3.5344,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "harmonic_minor",
+          "score": 0.8739,
+          "margin": 0.0139,
+          "runner_up": {
+            "tonic": "A#",
+            "mode": "harmonic_minor",
+            "score": 0.86
+          }
+        }
+      },
+      "chroma_mean": [
+        0.4482,
+        0.6926,
+        0.5077,
+        0.6738,
+        0.485,
+        0.3798,
+        0.3851,
+        0.4117,
+        0.3589,
+        0.4494,
+        0.3931,
+        0.2464
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2024.13,
+        "spectral_centroid_std": 675.86,
+        "spectral_bandwidth_mean": 2329.72,
+        "spectral_flatness_mean": 0.016237,
+        "spectral_flatness_std": 0.026384,
+        "spectral_rolloff_mean": 4442.38
+      },
+      "dynamics": {
+        "rms_mean": 0.066656,
+        "rms_std": 0.03732,
+        "dynamic_range_db": 71.86,
+        "rms_db_mean": -11.26
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.7527,
+        "percussive_ratio": 0.2473,
+        "dissonance_proxy": 0.016237,
+        "dissonance_std": 0.026384
+      }
+    },
+    "06_abyss": {
+      "rhythm": {
+        "detected_tempo": 95.7,
+        "beat_count": 368,
+        "onset_rate": 2.07,
+        "tempo_stability": 0.9452,
+        "duration": 233.0
+      },
+      "tonal": {
+        "estimated_key": "C#",
+        "key_strength": 1.7956,
+        "tonal_power_ratio": 0.3958,
+        "chroma_entropy": 3.4594,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "harmonic_minor",
+          "score": 0.8206,
+          "margin": 0.0159,
+          "runner_up": {
+            "tonic": "D",
+            "mode": "major",
+            "score": 0.8047
+          }
+        }
+      },
+      "chroma_mean": [
+        0.6302,
+        0.8819,
+        0.8208,
+        0.6259,
+        0.5223,
+        0.4539,
+        0.4392,
+        0.4277,
+        0.3549,
+        0.2556,
+        0.2105,
+        0.2708
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1239.75,
+        "spectral_centroid_std": 632.52,
+        "spectral_bandwidth_mean": 2120.75,
+        "spectral_flatness_mean": 0.003524,
+        "spectral_flatness_std": 0.044646,
+        "spectral_rolloff_mean": 2794.93
+      },
+      "dynamics": {
+        "rms_mean": 0.044279,
+        "rms_std": 0.022611,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -11.1
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8437,
+        "percussive_ratio": 0.1563,
+        "dissonance_proxy": 0.003524,
+        "dissonance_std": 0.044646
+      }
+    },
+    "09_viscera": {
+      "rhythm": {
+        "detected_tempo": 89.1,
+        "beat_count": 265,
+        "onset_rate": 2.75,
+        "tempo_stability": 0.9385,
+        "duration": 183.0
+      },
+      "tonal": {
+        "estimated_key": "F",
+        "key_strength": 1.8393,
+        "tonal_power_ratio": 0.3496,
+        "chroma_entropy": 3.5041,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "major",
+          "score": 0.8657,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "D#",
+            "mode": "dorian",
+            "score": 0.8657
+          }
+        }
+      },
+      "chroma_mean": [
+        0.5456,
+        0.562,
+        0.5958,
+        0.5536,
+        0.5468,
+        0.9041,
+        0.4549,
+        0.3574,
+        0.3213,
+        0.2815,
+        0.5037,
+        0.2718
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1492.57,
+        "spectral_centroid_std": 862.68,
+        "spectral_bandwidth_mean": 2205.92,
+        "spectral_flatness_mean": 0.006505,
+        "spectral_flatness_std": 0.049726,
+        "spectral_rolloff_mean": 3424.76
+      },
+      "dynamics": {
+        "rms_mean": 0.078001,
+        "rms_std": 0.032133,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -9.64
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.9418,
+        "percussive_ratio": 0.0582,
+        "dissonance_proxy": 0.006505,
+        "dissonance_std": 0.049726
+      },
+      "grid": {
+        "beat_s": 0.66661,
+        "tatum_s": 0.33331,
+        "tatums_per_beat": 2,
+        "beats_per_bar": 4,
+        "origin_s": 0.2822,
+        "duration_s": 183.0,
+        "scores": {
+          "downbeat": {
+            "chroma_novelty": [
+              1.371,
+              0.422,
+              -0.486,
+              -1.307
+            ],
+            "low_onsets": [
+              -0.713,
+              -0.228,
+              -0.753,
+              1.695
+            ],
+            "total": [
+              0.658,
+              0.193,
+              -1.239,
+              0.388
+            ]
+          },
+          "candidates": [
+            {
+              "bpm": 45,
+              "scores": {
+                "R_beat/2": 0.1468,
+                "R_beat/3": 0.0654,
+                "R_beat/4": 0.3341
+              }
+            },
+            {
+              "bpm": 90,
+              "scores": {
+                "R_beat/2": 0.3341,
+                "R_beat/3": 0.1762,
+                "R_beat/4": 0.3207
+              }
+            },
+            {
+              "bpm": 180,
+              "scores": {
+                "R_beat/2": 0.3207,
+                "R_beat/3": 0.2299,
+                "R_beat/4": 0.1996
+              }
+            }
+          ],
+          "onsets_n": 620,
+          "fit_inliers": 312,
+          "fit_residual_ms": 11.345017083380586,
+          "phase_16th_s": 0.10784272561831998,
+          "onset_fit_bpm": 90.00728611594158,
+          "start": {
+            "R": 0.2471548622798772,
+            "phase": 0.12402866580419185
+          },
+          "end": {
+            "R": 0.48786376573958995,
+            "phase": 0.1035202953763045
+          },
+          "rhythm_source": "htdemucs/drums.wav",
+          "meter_confidence": "moyenne ; convention 4/4 lent à 90 BPM, subdivision équivalente à 180 BPM ; origine non arbitrée à l'oreille"
+        },
+        "bar_s": 2.66644,
+        "meter": "4/4",
+        "bpm": 90.008,
+        "quarter_bpm": 90.008,
+        "n_bars": 68
+      }
+    },
+    "13_duress": {
+      "rhythm": {
+        "detected_tempo": 112.3,
+        "beat_count": 479,
+        "onset_rate": 2.54,
+        "tempo_stability": 0.9724,
+        "duration": 266.0
+      },
+      "tonal": {
+        "estimated_key": "D#",
+        "key_strength": 1.4463,
+        "tonal_power_ratio": 0.3325,
+        "chroma_entropy": 3.5188,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "major",
+          "score": 0.8459,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "D#",
+            "mode": "dorian",
+            "score": 0.8459
+          }
+        }
+      },
+      "chroma_mean": [
+        0.5409,
+        0.6456,
+        0.5948,
+        0.7715,
+        0.661,
+        0.6958,
+        0.6017,
+        0.5589,
+        0.4258,
+        0.295,
+        0.3001,
+        0.3104
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2170.23,
+        "spectral_centroid_std": 745.41,
+        "spectral_bandwidth_mean": 2640.55,
+        "spectral_flatness_mean": 0.016649,
+        "spectral_flatness_std": 0.0244,
+        "spectral_rolloff_mean": 5074.61
+      },
+      "dynamics": {
+        "rms_mean": 0.079086,
+        "rms_std": 0.029224,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -8.02
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8254,
+        "percussive_ratio": 0.1746,
+        "dissonance_proxy": 0.016649,
+        "dissonance_std": 0.0244
+      }
+    },
+    "17_everlasting_hymn": {
+      "rhythm": {
+        "detected_tempo": 49.7,
+        "beat_count": 139,
+        "onset_rate": 0.79,
+        "tempo_stability": 0.9823,
+        "duration": 172.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.801,
+        "tonal_power_ratio": 0.3788,
+        "chroma_entropy": 3.5056,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.8807,
+          "margin": 0.0085,
+          "runner_up": {
+            "tonic": "C#",
+            "mode": "phrygian",
+            "score": 0.8722
+          }
+        }
+      },
+      "chroma_mean": [
+        0.3234,
+        0.4212,
+        0.7327,
+        0.3588,
+        0.5136,
+        0.3792,
+        0.3452,
+        0.3578,
+        0.3778,
+        0.6029,
+        0.2475,
+        0.2217
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1275.88,
+        "spectral_centroid_std": 366.11,
+        "spectral_bandwidth_mean": 1828.33,
+        "spectral_flatness_mean": 0.007035,
+        "spectral_flatness_std": 0.064948,
+        "spectral_rolloff_mean": 2617.9
+      },
+      "dynamics": {
+        "rms_mean": 0.077289,
+        "rms_std": 0.033676,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -9.29
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.9132,
+        "percussive_ratio": 0.0868,
+        "dissonance_proxy": 0.007035,
+        "dissonance_std": 0.064948
+      }
+    },
+    "21_periculum": {
+      "rhythm": {
+        "detected_tempo": 143.6,
+        "beat_count": 507,
+        "onset_rate": 1.31,
+        "tempo_stability": 0.973,
+        "duration": 229.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.7535,
+        "tonal_power_ratio": 0.3623,
+        "chroma_entropy": 3.5121,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.858,
+          "margin": 0.0028,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "dorian",
+            "score": 0.8553
+          }
+        }
+      },
+      "chroma_mean": [
+        0.4086,
+        0.5099,
+        0.8224,
+        0.614,
+        0.5275,
+        0.6025,
+        0.4192,
+        0.3595,
+        0.3299,
+        0.4665,
+        0.3158,
+        0.252
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2174.72,
+        "spectral_centroid_std": 521.29,
+        "spectral_bandwidth_mean": 2458.02,
+        "spectral_flatness_mean": 0.018207,
+        "spectral_flatness_std": 0.043319,
+        "spectral_rolloff_mean": 4857.03
+      },
+      "dynamics": {
+        "rms_mean": 0.097544,
+        "rms_std": 0.019715,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -6.08
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.7906,
+        "percussive_ratio": 0.2094,
+        "dissonance_proxy": 0.018207,
+        "dissonance_std": 0.043319
+      }
+    },
+    "22_capiticus_calvaria": {
+      "rhythm": {
+        "detected_tempo": 117.5,
+        "beat_count": 512,
+        "onset_rate": 1.52,
+        "tempo_stability": 0.9741,
+        "duration": 260.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.3221,
+        "tonal_power_ratio": 0.3175,
+        "chroma_entropy": 3.5473,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.8641,
+          "margin": 0.02,
+          "runner_up": {
+            "tonic": "D",
+            "mode": "major",
+            "score": 0.8441
+          }
+        }
+      },
+      "chroma_mean": [
+        0.3761,
+        0.5494,
+        0.6266,
+        0.6168,
+        0.5624,
+        0.5505,
+        0.4627,
+        0.4973,
+        0.3687,
+        0.4514,
+        0.3218,
+        0.3038
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2603.65,
+        "spectral_centroid_std": 1096.46,
+        "spectral_bandwidth_mean": 2749.25,
+        "spectral_flatness_mean": 0.033733,
+        "spectral_flatness_std": 0.051095,
+        "spectral_rolloff_mean": 5844.17
+      },
+      "dynamics": {
+        "rms_mean": 0.058993,
+        "rms_std": 0.026972,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -10.14
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.883,
+        "percussive_ratio": 0.117,
+        "dissonance_proxy": 0.033733,
+        "dissonance_std": 0.051095
+      }
+    },
+    "23_when_blood_dries": {
+      "rhythm": {
+        "detected_tempo": 117.5,
+        "beat_count": 473,
+        "onset_rate": 1.74,
+        "tempo_stability": 0.9737,
+        "duration": 247.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.9052,
+        "tonal_power_ratio": 0.4028,
+        "chroma_entropy": 3.4693,
+        "mode": {
+          "tonic": "C",
+          "tonic_pc": 0,
+          "mode": "dorian",
+          "score": 0.8356,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "D",
+            "mode": "phrygian",
+            "score": 0.8356
+          }
+        }
+      },
+      "chroma_mean": [
+        0.4214,
+        0.4664,
+        0.9419,
+        0.8402,
+        0.6074,
+        0.5801,
+        0.4549,
+        0.4091,
+        0.334,
+        0.3405,
+        0.2825,
+        0.2541
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1449.97,
+        "spectral_centroid_std": 357.93,
+        "spectral_bandwidth_mean": 2021.14,
+        "spectral_flatness_mean": 0.004205,
+        "spectral_flatness_std": 0.004357,
+        "spectral_rolloff_mean": 3111.06
+      },
+      "dynamics": {
+        "rms_mean": 0.068838,
+        "rms_std": 0.019571,
+        "dynamic_range_db": 73.51,
+        "rms_db_mean": -5.89
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.874,
+        "percussive_ratio": 0.126,
+        "dissonance_proxy": 0.004205,
+        "dissonance_std": 0.004357
+      }
+    },
+    "24_sketches_of_pain": {
+      "rhythm": {
+        "detected_tempo": 112.3,
+        "beat_count": 482,
+        "onset_rate": 1.7,
+        "tempo_stability": 0.9785,
+        "duration": 288.0
+      },
+      "tonal": {
+        "estimated_key": "C",
+        "key_strength": 1.5004,
+        "tonal_power_ratio": 0.3274,
+        "chroma_entropy": 3.5326,
+        "mode": {
+          "tonic": "F",
+          "tonic_pc": 5,
+          "mode": "harmonic_minor",
+          "score": 0.8613,
+          "margin": 0.0015,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "phrygian",
+            "score": 0.8598
+          }
+        }
+      },
+      "chroma_mean": [
+        0.6492,
+        0.5454,
+        0.4977,
+        0.4982,
+        0.5054,
+        0.4407,
+        0.3427,
+        0.4899,
+        0.3882,
+        0.276,
+        0.2568,
+        0.3022
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2198.56,
+        "spectral_centroid_std": 406.18,
+        "spectral_bandwidth_mean": 2287.95,
+        "spectral_flatness_mean": 0.019556,
+        "spectral_flatness_std": 0.056287,
+        "spectral_rolloff_mean": 4701.81
+      },
+      "dynamics": {
+        "rms_mean": 0.121398,
+        "rms_std": 0.027478,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -7.47
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.843,
+        "percussive_ratio": 0.157,
+        "dissonance_proxy": 0.019556,
+        "dissonance_std": 0.056287
+      }
+    },
+    "26_devoid": {
+      "rhythm": {
+        "detected_tempo": 92.3,
+        "beat_count": 255,
+        "onset_rate": 1.01,
+        "tempo_stability": 0.9762,
+        "duration": 180.0
+      },
+      "tonal": {
+        "estimated_key": "F",
+        "key_strength": 1.2609,
+        "tonal_power_ratio": 0.3074,
+        "chroma_entropy": 3.5574,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "harmonic_minor",
+          "score": 0.8604,
+          "margin": 0.0044,
+          "runner_up": {
+            "tonic": "F",
+            "mode": "harmonic_minor",
+            "score": 0.856
+          }
+        }
+      },
+      "chroma_mean": [
+        0.6255,
+        0.7332,
+        0.6582,
+        0.5976,
+        0.7151,
+        0.7521,
+        0.5929,
+        0.5447,
+        0.6364,
+        0.5149,
+        0.3792,
+        0.408
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2035.42,
+        "spectral_centroid_std": 562.65,
+        "spectral_bandwidth_mean": 2635.11,
+        "spectral_flatness_mean": 0.013186,
+        "spectral_flatness_std": 0.047192,
+        "spectral_rolloff_mean": 5037.67
+      },
+      "dynamics": {
+        "rms_mean": 0.059879,
+        "rms_std": 0.024228,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -9.63
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8147,
+        "percussive_ratio": 0.1853,
+        "dissonance_proxy": 0.013186,
+        "dissonance_std": 0.047192
+      }
+    },
+    "35_cicatrix": {
+      "rhythm": {
+        "detected_tempo": 89.1,
+        "beat_count": 271,
+        "onset_rate": 2.56,
+        "tempo_stability": 0.9787,
+        "duration": 192.0
+      },
+      "tonal": {
+        "estimated_key": "G",
+        "key_strength": 1.6434,
+        "tonal_power_ratio": 0.3684,
+        "chroma_entropy": 3.5139,
+        "mode": {
+          "tonic": "F",
+          "tonic_pc": 5,
+          "mode": "harmonic_minor",
+          "score": 0.8428,
+          "margin": 0.0026,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "phrygian",
+            "score": 0.8402
+          }
+        }
+      },
+      "chroma_mean": [
+        0.5609,
+        0.4509,
+        0.3811,
+        0.3626,
+        0.376,
+        0.5256,
+        0.6786,
+        0.7333,
+        0.4159,
+        0.2927,
+        0.2856,
+        0.2916
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1783.93,
+        "spectral_centroid_std": 698.96,
+        "spectral_bandwidth_mean": 2247.35,
+        "spectral_flatness_mean": 0.007238,
+        "spectral_flatness_std": 0.01424,
+        "spectral_rolloff_mean": 4026.26
+      },
+      "dynamics": {
+        "rms_mean": 0.081084,
+        "rms_std": 0.035844,
+        "dynamic_range_db": 60.63,
+        "rms_db_mean": -10.16
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8632,
+        "percussive_ratio": 0.1368,
+        "dissonance_proxy": 0.007238,
+        "dissonance_std": 0.01424
+      },
+      "grid": {
+        "beat_s": 0.66665,
+        "tatum_s": 0.33332,
+        "tatums_per_beat": 2,
+        "beats_per_bar": 4,
+        "origin_s": 0.826,
+        "duration_s": 192.0,
+        "scores": {
+          "downbeat": {
+            "chroma_novelty": [
+              0.466,
+              1.418,
+              -0.957,
+              -0.926
+            ],
+            "low_onsets": [
+              -1.159,
+              -0.582,
+              0.237,
+              1.504
+            ],
+            "total": [
+              -0.694,
+              0.836,
+              -0.72,
+              0.578
+            ]
+          },
+          "candidates": [
+            {
+              "bpm": 45,
+              "scores": {
+                "R_beat/2": 0.0741,
+                "R_beat/3": 0.0874,
+                "R_beat/4": 0.3684
+              }
+            },
+            {
+              "bpm": 90,
+              "scores": {
+                "R_beat/2": 0.3684,
+                "R_beat/3": 0.1346,
+                "R_beat/4": 0.8582
+              }
+            },
+            {
+              "bpm": 180,
+              "scores": {
+                "R_beat/2": 0.8582,
+                "R_beat/3": 0.2931,
+                "R_beat/4": 0.5826
+              }
+            }
+          ],
+          "onsets_n": 754,
+          "fit_inliers": 689,
+          "fit_residual_ms": 11.096345543778776,
+          "phase_16th_s": 0.001772548675190777,
+          "onset_fit_bpm": 90.00270435974333,
+          "start": {
+            "R": 0.8856720704835452,
+            "phase": 0.16635227924801815
+          },
+          "end": {
+            "R": 0.8215380551581888,
+            "phase": 0.16603516609439253
+          },
+          "rhythm_source": "mix FLAC",
+          "meter_confidence": "moyenne ; convention 4/4 lent à 90 BPM, subdivision équivalente à 180 BPM ; origine non arbitrée à l'oreille"
+        },
+        "bar_s": 2.6666,
+        "meter": "4/4",
+        "bpm": 90.002,
+        "quarter_bpm": 90.002,
+        "n_bars": 71
+      }
+    },
+    "36_fundamentum": {
+      "rhythm": {
+        "detected_tempo": 136.0,
+        "beat_count": 577,
+        "onset_rate": 1.22,
+        "tempo_stability": 0.9725,
+        "duration": 253.0
+      },
+      "tonal": {
+        "estimated_key": "F#",
+        "key_strength": 1.779,
+        "tonal_power_ratio": 0.3539,
+        "chroma_entropy": 3.5185,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "major",
+          "score": 0.8704,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "E",
+            "mode": "dorian",
+            "score": 0.8704
+          }
+        }
+      },
+      "chroma_mean": [
+        0.3554,
+        0.629,
+        0.549,
+        0.4258,
+        0.5317,
+        0.566,
+        0.8615,
+        0.4931,
+        0.402,
+        0.3759,
+        0.2869,
+        0.3351
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2614.22,
+        "spectral_centroid_std": 654.72,
+        "spectral_bandwidth_mean": 2603.39,
+        "spectral_flatness_mean": 0.030387,
+        "spectral_flatness_std": 0.026616,
+        "spectral_rolloff_mean": 5618.46
+      },
+      "dynamics": {
+        "rms_mean": 0.075553,
+        "rms_std": 0.017546,
+        "dynamic_range_db": 60.36,
+        "rms_db_mean": -5.82
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8006,
+        "percussive_ratio": 0.1994,
+        "dissonance_proxy": 0.030387,
+        "dissonance_std": 0.026616
+      }
+    },
+    "37_kave_diluvii": {
+      "rhythm": {
+        "detected_tempo": 117.5,
+        "beat_count": 451,
+        "onset_rate": 2.6,
+        "tempo_stability": 0.9758,
+        "duration": 241.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.3296,
+        "tonal_power_ratio": 0.2985,
+        "chroma_entropy": 3.5658,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.873,
+          "margin": 0.0144,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "dorian",
+            "score": 0.8587
+          }
+        }
+      },
+      "chroma_mean": [
+        0.4249,
+        0.5322,
+        0.5945,
+        0.4684,
+        0.4319,
+        0.4752,
+        0.4699,
+        0.4672,
+        0.336,
+        0.4103,
+        0.4402,
+        0.315
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2052.97,
+        "spectral_centroid_std": 608.68,
+        "spectral_bandwidth_mean": 2417.39,
+        "spectral_flatness_mean": 0.013484,
+        "spectral_flatness_std": 0.020311,
+        "spectral_rolloff_mean": 4610.55
+      },
+      "dynamics": {
+        "rms_mean": 0.078273,
+        "rms_std": 0.037962,
+        "dynamic_range_db": 52.98,
+        "rms_db_mean": -9.16
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8993,
+        "percussive_ratio": 0.1007,
+        "dissonance_proxy": 0.013484,
+        "dissonance_std": 0.020311
+      }
+    },
+    "38_nativitate": {
+      "rhythm": {
+        "detected_tempo": 80.7,
+        "beat_count": 270,
+        "onset_rate": 1.89,
+        "tempo_stability": 0.9692,
+        "duration": 219.0
+      },
+      "tonal": {
+        "estimated_key": "D#",
+        "key_strength": 1.4962,
+        "tonal_power_ratio": 0.3528,
+        "chroma_entropy": 3.5171,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "harmonic_minor",
+          "score": 0.8489,
+          "margin": 0.0094,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "aeolian",
+            "score": 0.8395
+          }
+        }
+      },
+      "chroma_mean": [
+        0.6093,
+        0.6786,
+        0.7378,
+        0.7743,
+        0.6056,
+        0.5068,
+        0.4807,
+        0.4538,
+        0.4203,
+        0.3263,
+        0.3373,
+        0.2792
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2296.41,
+        "spectral_centroid_std": 476.73,
+        "spectral_bandwidth_mean": 2395.0,
+        "spectral_flatness_mean": 0.016316,
+        "spectral_flatness_std": 0.014708,
+        "spectral_rolloff_mean": 4892.68
+      },
+      "dynamics": {
+        "rms_mean": 0.0735,
+        "rms_std": 0.029031,
+        "dynamic_range_db": 54.02,
+        "rms_db_mean": -7.66
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.7758,
+        "percussive_ratio": 0.2242,
+        "dissonance_proxy": 0.016316,
+        "dissonance_std": 0.014708
+      }
+    },
+    "40_puslo_profundum": {
+      "rhythm": {
+        "detected_tempo": 95.7,
+        "beat_count": 400,
+        "onset_rate": 2.36,
+        "tempo_stability": 0.9665,
+        "duration": 271.0
+      },
+      "tonal": {
+        "estimated_key": "C#",
+        "key_strength": 1.4268,
+        "tonal_power_ratio": 0.3423,
+        "chroma_entropy": 3.5228,
+        "mode": {
+          "tonic": "C",
+          "tonic_pc": 0,
+          "mode": "harmonic_minor",
+          "score": 0.8394,
+          "margin": 0.0068,
+          "runner_up": {
+            "tonic": "C#",
+            "mode": "major",
+            "score": 0.8325
+          }
+        }
+      },
+      "chroma_mean": [
+        0.6459,
+        0.7182,
+        0.7034,
+        0.5963,
+        0.4858,
+        0.5249,
+        0.5385,
+        0.5333,
+        0.3725,
+        0.3072,
+        0.2778,
+        0.3367
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1099.33,
+        "spectral_centroid_std": 477.1,
+        "spectral_bandwidth_mean": 1710.63,
+        "spectral_flatness_mean": 0.002968,
+        "spectral_flatness_std": 0.02523,
+        "spectral_rolloff_mean": 2154.91
+      },
+      "dynamics": {
+        "rms_mean": 0.066548,
+        "rms_std": 0.028748,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -9.41
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8297,
+        "percussive_ratio": 0.1703,
+        "dissonance_proxy": 0.002968,
+        "dissonance_std": 0.02523
+      }
+    },
+    "42_terminus": {
+      "rhythm": {
+        "detected_tempo": 107.7,
+        "beat_count": 406,
+        "onset_rate": 1.64,
+        "tempo_stability": 0.9765,
+        "duration": 231.0
+      },
+      "tonal": {
+        "estimated_key": "D#",
+        "key_strength": 1.3192,
+        "tonal_power_ratio": 0.3242,
+        "chroma_entropy": 3.528,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "harmonic_minor",
+          "score": 0.8506,
+          "margin": 0.014,
+          "runner_up": {
+            "tonic": "D",
+            "mode": "harmonic_minor",
+            "score": 0.8367
+          }
+        }
+      },
+      "chroma_mean": [
+        0.5664,
+        0.7252,
+        0.6946,
+        0.7601,
+        0.7561,
+        0.6633,
+        0.5987,
+        0.6361,
+        0.48,
+        0.4117,
+        0.3205,
+        0.3015
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2255.05,
+        "spectral_centroid_std": 549.68,
+        "spectral_bandwidth_mean": 2402.18,
+        "spectral_flatness_mean": 0.020488,
+        "spectral_flatness_std": 0.04365,
+        "spectral_rolloff_mean": 4967.63
+      },
+      "dynamics": {
+        "rms_mean": 0.11273,
+        "rms_std": 0.022315,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -4.56
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.7973,
+        "percussive_ratio": 0.2027,
+        "dissonance_proxy": 0.020488,
+        "dissonance_std": 0.04365
+      }
+    },
+    "47_river_of_despair": {
+      "rhythm": {
+        "detected_tempo": 143.6,
+        "beat_count": 575,
+        "onset_rate": 1.12,
+        "tempo_stability": 0.9733,
+        "duration": 247.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.4085,
+        "tonal_power_ratio": 0.3277,
+        "chroma_entropy": 3.5237,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.8518,
+          "margin": 0.0061,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "dorian",
+            "score": 0.8457
+          }
+        }
+      },
+      "chroma_mean": [
+        0.3028,
+        0.3424,
+        0.4745,
+        0.433,
+        0.4165,
+        0.4171,
+        0.4044,
+        0.3707,
+        0.2177,
+        0.2511,
+        0.2545,
+        0.1577
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2039.89,
+        "spectral_centroid_std": 571.37,
+        "spectral_bandwidth_mean": 2196.0,
+        "spectral_flatness_mean": 0.009824,
+        "spectral_flatness_std": 0.034698,
+        "spectral_rolloff_mean": 4447.17
+      },
+      "dynamics": {
+        "rms_mean": 0.134487,
+        "rms_std": 0.027165,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -4.7
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8935,
+        "percussive_ratio": 0.1065,
+        "dissonance_proxy": 0.009824,
+        "dissonance_std": 0.034698
+      }
+    },
+    "49_fissure": {
+      "rhythm": {
+        "detected_tempo": 136.0,
+        "beat_count": 511,
+        "onset_rate": 2.99,
+        "tempo_stability": 0.9789,
+        "duration": 232.0
+      },
+      "tonal": {
+        "estimated_key": "E",
+        "key_strength": 1.4715,
+        "tonal_power_ratio": 0.3448,
+        "chroma_entropy": 3.5231,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "major",
+          "score": 0.8579,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "E",
+            "mode": "dorian",
+            "score": 0.8579
+          }
+        }
+      },
+      "chroma_mean": [
+        0.2848,
+        0.3977,
+        0.4235,
+        0.4679,
+        0.5833,
+        0.462,
+        0.5035,
+        0.5534,
+        0.2997,
+        0.2826,
+        0.2323,
+        0.2665
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2402.72,
+        "spectral_centroid_std": 716.17,
+        "spectral_bandwidth_mean": 2394.25,
+        "spectral_flatness_mean": 0.018566,
+        "spectral_flatness_std": 0.042091,
+        "spectral_rolloff_mean": 5068.98
+      },
+      "dynamics": {
+        "rms_mean": 0.127134,
+        "rms_std": 0.030004,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -4.95
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8921,
+        "percussive_ratio": 0.1079,
+        "dissonance_proxy": 0.018566,
+        "dissonance_std": 0.042091
+      }
+    },
+    "51_walls_of_denial": {
+      "rhythm": {
+        "detected_tempo": 117.5,
+        "beat_count": 428,
+        "onset_rate": 2.39,
+        "tempo_stability": 0.9771,
+        "duration": 260.0
+      },
+      "tonal": {
+        "estimated_key": "G",
+        "key_strength": 1.2937,
+        "tonal_power_ratio": 0.3132,
+        "chroma_entropy": 3.5411,
+        "mode": {
+          "tonic": "C",
+          "tonic_pc": 0,
+          "mode": "phrygian",
+          "score": 0.8786,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "C#",
+            "mode": "lydian",
+            "score": 0.8786
+          }
+        }
+      },
+      "chroma_mean": [
+        0.5187,
+        0.5357,
+        0.4869,
+        0.5665,
+        0.4942,
+        0.573,
+        0.4691,
+        0.5982,
+        0.4365,
+        0.2845,
+        0.3302,
+        0.2553
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2445.12,
+        "spectral_centroid_std": 586.62,
+        "spectral_bandwidth_mean": 2350.38,
+        "spectral_flatness_mean": 0.024618,
+        "spectral_flatness_std": 0.040924,
+        "spectral_rolloff_mean": 5074.17
+      },
+      "dynamics": {
+        "rms_mean": 0.108426,
+        "rms_std": 0.02566,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -5.19
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8148,
+        "percussive_ratio": 0.1852,
+        "dissonance_proxy": 0.024618,
+        "dissonance_std": 0.040924
+      }
+    },
+    "53_carrion": {
+      "rhythm": {
+        "detected_tempo": 215.3,
+        "beat_count": 684,
+        "onset_rate": 1.31,
+        "tempo_stability": 0.9623,
+        "duration": 236.0
+      },
+      "tonal": {
+        "estimated_key": "C",
+        "key_strength": 2.7686,
+        "tonal_power_ratio": 0.4356,
+        "chroma_entropy": 3.3727,
+        "mode": {
+          "tonic": "C",
+          "tonic_pc": 0,
+          "mode": "phrygian",
+          "score": 0.8672,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "C#",
+            "mode": "lydian",
+            "score": 0.8672
+          }
+        }
+      },
+      "chroma_mean": [
+        0.7697,
+        0.3662,
+        0.2267,
+        0.3118,
+        0.2425,
+        0.3068,
+        0.1576,
+        0.3172,
+        0.2103,
+        0.1048,
+        0.186,
+        0.1365
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 998.33,
+        "spectral_centroid_std": 552.84,
+        "spectral_bandwidth_mean": 1448.87,
+        "spectral_flatness_mean": 0.006597,
+        "spectral_flatness_std": 0.074906,
+        "spectral_rolloff_mean": 2179.71
+      },
+      "dynamics": {
+        "rms_mean": 0.110187,
+        "rms_std": 0.043103,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -7.57
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.9303,
+        "percussive_ratio": 0.0697,
+        "dissonance_proxy": 0.006597,
+        "dissonance_std": 0.074906
+      }
+    },
+    "55_caesarian": {
+      "rhythm": {
+        "detected_tempo": 89.1,
+        "beat_count": 269,
+        "onset_rate": 1.82,
+        "tempo_stability": 0.9708,
+        "duration": 183.0
+      },
+      "tonal": {
+        "estimated_key": "E",
+        "key_strength": 1.4537,
+        "tonal_power_ratio": 0.3479,
+        "chroma_entropy": 3.5103,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.8587,
+          "margin": 0.0195,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "aeolian",
+            "score": 0.8392
+          }
+        }
+      },
+      "chroma_mean": [
+        0.3538,
+        0.4699,
+        0.5781,
+        0.5501,
+        0.6038,
+        0.552,
+        0.3287,
+        0.2594,
+        0.3873,
+        0.3098,
+        0.4113,
+        0.1804
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1731.32,
+        "spectral_centroid_std": 659.78,
+        "spectral_bandwidth_mean": 2278.8,
+        "spectral_flatness_mean": 0.007333,
+        "spectral_flatness_std": 0.038491,
+        "spectral_rolloff_mean": 4105.0
+      },
+      "dynamics": {
+        "rms_mean": 0.097834,
+        "rms_std": 0.041054,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -8.23
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.9368,
+        "percussive_ratio": 0.0632,
+        "dissonance_proxy": 0.007333,
+        "dissonance_std": 0.038491
+      },
+      "grid": {
+        "beat_s": 0.66667,
+        "tatum_s": 0.33333,
+        "tatums_per_beat": 2,
+        "beats_per_bar": 4,
+        "origin_s": 2.25293,
+        "duration_s": 183.0,
+        "scores": {
+          "downbeat": {
+            "chroma_novelty": [
+              -1.428,
+              0.545,
+              -0.357,
+              1.24
+            ],
+            "low_onsets": [
+              -0.718,
+              -0.847,
+              -0.095,
+              1.661
+            ],
+            "total": [
+              -2.146,
+              -0.303,
+              -0.452,
+              2.9
+            ]
+          },
+          "candidates": [
+            {
+              "bpm": 45,
+              "scores": {
+                "R_beat/2": 0.2193,
+                "R_beat/3": 0.046,
+                "R_beat/4": 0.3501
+              }
+            },
+            {
+              "bpm": 90,
+              "scores": {
+                "R_beat/2": 0.3501,
+                "R_beat/3": 0.224,
+                "R_beat/4": 0.4114
+              }
+            },
+            {
+              "bpm": 180,
+              "scores": {
+                "R_beat/2": 0.4114,
+                "R_beat/3": 0.3224,
+                "R_beat/4": 0.1981
+              }
+            }
+          ],
+          "onsets_n": 723,
+          "fit_inliers": 420,
+          "fit_residual_ms": 12.893526766623857,
+          "phase_16th_s": 0.08167262416170099,
+          "onset_fit_bpm": 89.9997902107432,
+          "start": {
+            "R": 0.3943117654123552,
+            "phase": 0.0848356677994947
+          },
+          "end": {
+            "R": 0.4807452408068494,
+            "phase": 0.07579991304187021
+          },
+          "rhythm_source": "mix FLAC",
+          "meter_confidence": "moyenne ; convention 4/4 lent à 90 BPM, subdivision équivalente à 180 BPM ; origine non arbitrée à l'oreille"
+        },
+        "bar_s": 2.66668,
+        "meter": "4/4",
+        "bpm": 90.0,
+        "quarter_bpm": 90.0,
+        "n_bars": 67
+      }
+    },
+    "58_night_soil": {
+      "rhythm": {
+        "detected_tempo": 123.0,
+        "beat_count": 566,
+        "onset_rate": 2.57,
+        "tempo_stability": 0.9681,
+        "duration": 286.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.4305,
+        "tonal_power_ratio": 0.3229,
+        "chroma_entropy": 3.5398,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.8907,
+          "margin": 0.004,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "mixolydian",
+            "score": 0.8867
+          }
+        }
+      },
+      "chroma_mean": [
+        0.4753,
+        0.4963,
+        0.6721,
+        0.5037,
+        0.5686,
+        0.58,
+        0.4115,
+        0.4589,
+        0.3152,
+        0.5416,
+        0.3698,
+        0.2454
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1944.23,
+        "spectral_centroid_std": 654.86,
+        "spectral_bandwidth_mean": 2193.96,
+        "spectral_flatness_mean": 0.013713,
+        "spectral_flatness_std": 0.037612,
+        "spectral_rolloff_mean": 4187.49
+      },
+      "dynamics": {
+        "rms_mean": 0.090618,
+        "rms_std": 0.034539,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -7.32
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8413,
+        "percussive_ratio": 0.1587,
+        "dissonance_proxy": 0.013713,
+        "dissonance_std": 0.037612
+      }
+    },
+    "59_absentia": {
+      "rhythm": {
+        "detected_tempo": 107.7,
+        "beat_count": 444,
+        "onset_rate": 2.55,
+        "tempo_stability": 0.9722,
+        "duration": 258.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 2.2504,
+        "tonal_power_ratio": 0.3888,
+        "chroma_entropy": 3.4667,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.8599,
+          "margin": 0.0141,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "mixolydian",
+            "score": 0.8458
+          }
+        }
+      },
+      "chroma_mean": [
+        0.2568,
+        0.3212,
+        0.8689,
+        0.4079,
+        0.4149,
+        0.4667,
+        0.403,
+        0.2963,
+        0.2471,
+        0.4661,
+        0.2857,
+        0.199
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2660.04,
+        "spectral_centroid_std": 421.5,
+        "spectral_bandwidth_mean": 2261.94,
+        "spectral_flatness_mean": 0.020931,
+        "spectral_flatness_std": 0.066371,
+        "spectral_rolloff_mean": 5218.93
+      },
+      "dynamics": {
+        "rms_mean": 0.105314,
+        "rms_std": 0.02168,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -4.9
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.853,
+        "percussive_ratio": 0.147,
+        "dissonance_proxy": 0.020931,
+        "dissonance_std": 0.066371
+      }
+    },
+    "60_morning_star": {
+      "rhythm": {
+        "detected_tempo": 112.3,
+        "beat_count": 531,
+        "onset_rate": 0.75,
+        "tempo_stability": 0.9725,
+        "duration": 302.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.7327,
+        "tonal_power_ratio": 0.3594,
+        "chroma_entropy": 3.5009,
+        "mode": {
+          "tonic": "C",
+          "tonic_pc": 0,
+          "mode": "dorian",
+          "score": 0.8533,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "D",
+            "mode": "phrygian",
+            "score": 0.8533
+          }
+        }
+      },
+      "chroma_mean": [
+        0.4344,
+        0.4589,
+        0.7097,
+        0.4525,
+        0.4177,
+        0.5979,
+        0.3682,
+        0.3733,
+        0.347,
+        0.3652,
+        0.2113,
+        0.1786
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2093.8,
+        "spectral_centroid_std": 601.7,
+        "spectral_bandwidth_mean": 2263.29,
+        "spectral_flatness_mean": 0.013996,
+        "spectral_flatness_std": 0.053315,
+        "spectral_rolloff_mean": 4500.54
+      },
+      "dynamics": {
+        "rms_mean": 0.135987,
+        "rms_std": 0.027881,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -4.67
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8776,
+        "percussive_ratio": 0.1224,
+        "dissonance_proxy": 0.013996,
+        "dissonance_std": 0.053315
+      }
+    }
+  },
+  "meta": {
+    "02_diptera_sonata": {
+      "title": "Diptera Sonata",
+      "zone": "basement",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "04_sodden_hollow": {
+      "title": "Sodden Hollow",
+      "zone": "caves",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "06_abyss": {
+      "title": "Abyss",
+      "zone": "depths",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "09_viscera": {
+      "title": "Viscera",
+      "zone": "womb",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "13_duress": {
+      "title": "Duress",
+      "zone": "sheol",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "17_everlasting_hymn": {
+      "title": "Everlasting Hymn",
+      "zone": "cathedral",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "21_periculum": {
+      "title": "Periculum",
+      "zone": "cellar",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "22_capiticus_calvaria": {
+      "title": "Capiticus Calvaria",
+      "zone": "catacombs",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "23_when_blood_dries": {
+      "title": "When Blood Dries",
+      "zone": "necropolis",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "24_sketches_of_pain": {
+      "title": "Sketches of Pain",
+      "zone": "chest",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "26_devoid": {
+      "title": "Devoid",
+      "zone": "dark_room",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "35_cicatrix": {
+      "title": "Cicatrix",
+      "zone": "scarred_womb",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "36_fundamentum": {
+      "title": "Fundamentum",
+      "zone": "burning_basement",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "37_kave_diluvii": {
+      "title": "Kave Diluvii",
+      "zone": "flooded_caves",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "38_nativitate": {
+      "title": "Nativitate",
+      "zone": "blue_womb",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "40_puslo_profundum": {
+      "title": "Puslo Profundum",
+      "zone": "dank_depths",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "42_terminus": {
+      "title": "Terminus",
+      "zone": "void",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "47_river_of_despair": {
+      "title": "River Of Despair",
+      "zone": "downpour",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "49_fissure": {
+      "title": "Fissure",
+      "zone": "mines",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "51_walls_of_denial": {
+      "title": "Walls Of Denial",
+      "zone": "mausoleum",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "53_carrion": {
+      "title": "Carrion",
+      "zone": "corpse",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "55_caesarian": {
+      "title": "Caesarian",
+      "zone": "utero",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "58_night_soil": {
+      "title": "Night Soil",
+      "zone": "dross",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "59_absentia": {
+      "title": "Absentia",
+      "zone": "ashpit",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "60_morning_star": {
+      "title": "Morning Star",
+      "zone": "gehenna",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    }
+  },
+  "context": {
+    "track_ids": [
+      "02_diptera_sonata",
+      "04_sodden_hollow",
+      "06_abyss",
+      "09_viscera",
+      "13_duress",
+      "17_everlasting_hymn",
+      "21_periculum",
+      "22_capiticus_calvaria",
+      "23_when_blood_dries",
+      "24_sketches_of_pain",
+      "26_devoid",
+      "35_cicatrix",
+      "36_fundamentum",
+      "37_kave_diluvii",
+      "38_nativitate",
+      "40_puslo_profundum",
+      "42_terminus",
+      "47_river_of_despair",
+      "49_fissure",
+      "51_walls_of_denial",
+      "53_carrion",
+      "55_caesarian",
+      "58_night_soil",
+      "59_absentia",
+      "60_morning_star"
+    ],
+    "stats": {
+      "rhythm.detected_tempo": {
+        "n": 25,
+        "mean": 114.712,
+        "std": 29.9257,
+        "min": 49.7,
+        "max": 215.3
+      },
+      "rhythm.onset_rate": {
+        "n": 25,
+        "mean": 1.8624,
+        "std": 0.6363,
+        "min": 0.75,
+        "max": 2.99
+      },
+      "rhythm.tempo_stability": {
+        "n": 25,
+        "mean": 0.9709,
+        "std": 0.0096,
+        "min": 0.9385,
+        "max": 0.9823
+      },
+      "tonal.key_strength": {
+        "n": 25,
+        "mean": 1.6503,
+        "std": 0.3543,
+        "min": 1.2609,
+        "max": 2.7686
+      },
+      "tonal.tonal_power_ratio": {
+        "n": 25,
+        "mean": 0.3523,
+        "std": 0.0335,
+        "min": 0.2985,
+        "max": 0.4356
+      },
+      "tonal.chroma_entropy": {
+        "n": 25,
+        "mean": 3.5098,
+        "std": 0.0391,
+        "min": 3.3727,
+        "max": 3.5658
+      },
+      "spectral.spectral_centroid_mean": {
+        "n": 25,
+        "mean": 1988.8284,
+        "std": 481.992,
+        "min": 998.33,
+        "max": 2660.04
+      },
+      "spectral.spectral_rolloff_mean": {
+        "n": 25,
+        "mean": 4336.8204,
+        "std": 1030.7677,
+        "min": 2154.91,
+        "max": 5844.17
+      },
+      "spectral.spectral_flatness_mean": {
+        "n": 25,
+        "mean": 0.0146,
+        "std": 0.0079,
+        "min": 0.003,
+        "max": 0.0337
+      },
+      "dynamics.rms_mean": {
+        "n": 25,
+        "mean": 0.0898,
+        "std": 0.0243,
+        "min": 0.0443,
+        "max": 0.136
+      },
+      "dynamics.dynamic_range_db": {
+        "n": 25,
+        "mean": 75.7344,
+        "std": 8.531,
+        "min": 52.98,
+        "max": 80.0
+      },
+      "dissonance.harmonic_ratio": {
+        "n": 25,
+        "mean": 0.8515,
+        "std": 0.051,
+        "min": 0.7527,
+        "max": 0.9418
+      },
+      "dissonance.percussive_ratio": {
+        "n": 25,
+        "mean": 0.1485,
+        "std": 0.051,
+        "min": 0.0582,
+        "max": 0.2473
+      }
+    },
+    "modes": {
+      "dorian@C": 2,
+      "harmonic_minor@C": 1,
+      "harmonic_minor@C#": 5,
+      "harmonic_minor@D": 9,
+      "harmonic_minor@F": 2,
+      "major@C#": 2,
+      "major@D": 2,
+      "phrygian@C": 2
+    }
+  },
+  "analysis": {
+    "primary": "09_viscera",
+    "method": "Grid: regression of near-sixteenth onsets around 90 BPM; exact hypotheses 45/90/180; binary-vs-ternary concentration; downbeat chroma novelty and low-onsets. Structure: bar chroma cosine, stem RMS and repeated 32-bar blocks. No audition performed.",
+    "stem_metrics": {
+      "bass": {
+        "rms": 0.07073423266410828,
+        "centroid_hz": 214.85547636163838,
+        "flatness": 0.00029417951009236276,
+        "chroma": [
+          0.5901637077331543,
+          0.5977211594581604,
+          0.5384872555732727,
+          0.47667351365089417,
+          0.41369885206222534,
+          0.907421886920929,
+          0.48712509870529175,
+          0.20122362673282623,
+          0.1787906438112259,
+          0.1613428145647049,
+          0.38799723982810974,
+          0.2090364545583725
+        ],
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "major",
+          "score": 0.872,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "D#",
+            "mode": "dorian",
+            "score": 0.872
+          }
+        }
+      },
+      "drums": {
+        "rms": 0.025651799514889717,
+        "centroid_hz": 3409.6229951770233,
+        "flatness": 0.06250744313001633,
+        "chroma": [
+          0.5903173685073853,
+          0.6939873695373535,
+          0.7160863280296326,
+          0.7881501317024231,
+          0.760796308517456,
+          0.7635869383811951,
+          0.6452438235282898,
+          0.5738178491592407,
+          0.5098525285720825,
+          0.38910597562789917,
+          0.38276663422584534,
+          0.33429569005966187
+        ],
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "harmonic_minor",
+          "score": 0.8434,
+          "margin": 0.0005,
+          "runner_up": {
+            "tonic": "C#",
+            "mode": "major",
+            "score": 0.8428
+          }
+        }
+      },
+      "other": {
+        "rms": 0.02330710180103779,
+        "centroid_hz": 1912.5756178824522,
+        "flatness": 0.010633421130478382,
+        "chroma": [
+          0.434945285320282,
+          0.5191439390182495,
+          0.5980591177940369,
+          0.5020521283149719,
+          0.5106218457221985,
+          0.488964706659317,
+          0.4782440662384033,
+          0.49715563654899597,
+          0.49870386719703674,
+          0.47491008043289185,
+          0.6860958933830261,
+          0.4364302456378937
+        ],
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.8679,
+          "margin": 0.0088,
+          "runner_up": {
+            "tonic": "B",
+            "mode": "harmonic_minor",
+            "score": 0.8592
+          }
+        }
+      },
+      "vocals": {
+        "rms": 0.006261378061026335,
+        "centroid_hz": 2917.1476491553244,
+        "flatness": 0.034416165202856064,
+        "chroma": [
+          0.6089023351669312,
+          0.6678943037986755,
+          0.6662405133247375,
+          0.6558455228805542,
+          0.6771025061607361,
+          0.7950939536094666,
+          0.6533598899841309,
+          0.5761722326278687,
+          0.5334956645965576,
+          0.5142303705215454,
+          0.6602606177330017,
+          0.47231340408325195
+        ],
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "major",
+          "score": 0.8622,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "D#",
+            "mode": "dorian",
+            "score": 0.8622
+          }
+        }
+      }
+    },
+    "structure": {
+      "09_viscera": {
+        "grid": {
+          "beat_s": 0.66661,
+          "tatum_s": 0.33331,
+          "tatums_per_beat": 2,
+          "beats_per_bar": 4,
+          "origin_s": 0.2822,
+          "duration_s": 183.0,
+          "scores": {
+            "downbeat": {
+              "chroma_novelty": [
+                1.371,
+                0.422,
+                -0.486,
+                -1.307
+              ],
+              "low_onsets": [
+                -0.713,
+                -0.228,
+                -0.753,
+                1.695
+              ],
+              "total": [
+                0.658,
+                0.193,
+                -1.239,
+                0.388
+              ]
+            }
+          },
+          "bar_s": 2.66644,
+          "meter": "4/4",
+          "bpm": 90.008,
+          "quarter_bpm": 90.006,
+          "n_bars": 68
+        },
+        "structure": {
+          "n_bars": 68,
+          "loop_scores": {
+            "1": {
+              "score": 0.0126,
+              "pairs": 67
+            },
+            "2": {
+              "score": 0.0036,
+              "pairs": 66
+            },
+            "3": {
+              "score": 0.0015,
+              "pairs": 65
+            },
+            "4": {
+              "score": 0.001,
+              "pairs": 64
+            },
+            "5": {
+              "score": 0.0011,
+              "pairs": 63
+            },
+            "6": {
+              "score": 0.0023,
+              "pairs": 62
+            },
+            "7": {
+              "score": 0.0037,
+              "pairs": 61
+            },
+            "8": {
+              "score": 0.0049,
+              "pairs": 60
+            },
+            "9": {
+              "score": 0.0054,
+              "pairs": 59
+            },
+            "10": {
+              "score": 0.0056,
+              "pairs": 58
+            },
+            "11": {
+              "score": 0.0037,
+              "pairs": 57
+            },
+            "12": {
+              "score": 0.0013,
+              "pairs": 56
+            },
+            "13": {
+              "score": 0.0005,
+              "pairs": 55
+            },
+            "14": {
+              "score": 0.0,
+              "pairs": 54
+            },
+            "15": {
+              "score": 0.004,
+              "pairs": 53
+            },
+            "16": {
+              "score": 0.0053,
+              "pairs": 52
+            },
+            "17": {
+              "score": 0.0032,
+              "pairs": 51
+            },
+            "18": {
+              "score": -0.0014,
+              "pairs": 50
+            },
+            "19": {
+              "score": -0.0035,
+              "pairs": 49
+            },
+            "20": {
+              "score": -0.0038,
+              "pairs": 48
+            },
+            "21": {
+              "score": -0.0021,
+              "pairs": 47
+            },
+            "22": {
+              "score": 0.0027,
+              "pairs": 46
+            },
+            "23": {
+              "score": 0.0005,
+              "pairs": 45
+            },
+            "24": {
+              "score": 0.0006,
+              "pairs": 44
+            },
+            "25": {
+              "score": -0.001,
+              "pairs": 43
+            },
+            "26": {
+              "score": -0.003,
+              "pairs": 42
+            },
+            "27": {
+              "score": -0.0048,
+              "pairs": 41
+            },
+            "28": {
+              "score": -0.002,
+              "pairs": 40
+            },
+            "29": {
+              "score": -0.0045,
+              "pairs": 39
+            },
+            "30": {
+              "score": -0.0038,
+              "pairs": 38
+            },
+            "31": {
+              "score": 0.003,
+              "pairs": 37
+            },
+            "32": {
+              "score": 0.0146,
+              "pairs": 36
+            },
+            "33": {
+              "score": 0.004,
+              "pairs": 35
+            },
+            "34": {
+              "score": -0.0029,
+              "pairs": 34
+            },
+            "35": {
+              "score": -0.0058,
+              "pairs": 33
+            },
+            "36": {
+              "score": -0.007,
+              "pairs": 32
+            },
+            "37": {
+              "score": -0.0081,
+              "pairs": 31
+            },
+            "38": {
+              "score": -0.0055,
+              "pairs": 30
+            },
+            "39": {
+              "score": -0.0035,
+              "pairs": 29
+            },
+            "40": {
+              "score": -0.0021,
+              "pairs": 28
+            }
+          },
+          "best_loop_bars": 32,
+          "sections": [
+            {
+              "section": 0,
+              "start_bar": 0,
+              "end_bar": 68,
+              "start_s": 0.28,
+              "end_s": 181.6
+            }
+          ],
+          "bar_starts_s": [
+            0.282,
+            2.949,
+            5.615,
+            8.282,
+            10.948,
+            13.614,
+            16.281,
+            18.947,
+            21.614,
+            24.28,
+            26.947,
+            29.613,
+            32.279,
+            34.946,
+            37.612,
+            40.279,
+            42.945,
+            45.612,
+            48.278,
+            50.945,
+            53.611,
+            56.277,
+            58.944,
+            61.61,
+            64.277,
+            66.943,
+            69.61,
+            72.276,
+            74.943,
+            77.609,
+            80.275,
+            82.942,
+            85.608,
+            88.275,
+            90.941,
+            93.608,
+            96.274,
+            98.94,
+            101.607,
+            104.273,
+            106.94,
+            109.606,
+            112.273,
+            114.939,
+            117.606,
+            120.272,
+            122.938,
+            125.605,
+            128.271,
+            130.938,
+            133.604,
+            136.271,
+            138.937,
+            141.604,
+            144.27,
+            146.936,
+            149.603,
+            152.269,
+            154.936,
+            157.602,
+            160.269,
+            162.935,
+            165.601,
+            168.268,
+            170.934,
+            173.601,
+            176.267,
+            178.934
+          ]
+        },
+        "block_matches": [
+          [
+            8,
+            40,
+            0.9898177610662318
+          ],
+          [
+            24,
+            56,
+            0.9896499400395595
+          ],
+          [
+            16,
+            48,
+            0.9881540287173365
+          ],
+          [
+            32,
+            56,
+            0.9837474939054186
+          ],
+          [
+            40,
+            56,
+            0.9826106264646548
+          ],
+          [
+            48,
+            56,
+            0.9824872706735479
+          ],
+          [
+            40,
+            48,
+            0.981289260248667
+          ],
+          [
+            32,
+            48,
+            0.9807958451311751
+          ],
+          [
+            0,
+            16,
+            0.9784745268543755
+          ],
+          [
+            32,
+            40,
+            0.9775053252905838
+          ],
+          [
+            0,
+            32,
+            0.9767601291798189
+          ],
+          [
+            0,
+            24,
+            0.9757452378777731
+          ],
+          [
+            8,
+            24,
+            0.9755936255219135
+          ],
+          [
+            0,
+            48,
+            0.975295489581074
+          ],
+          [
+            8,
+            56,
+            0.9745032947617058
+          ],
+          [
+            16,
+            24,
+            0.9744173366743636
+          ],
+          [
+            24,
+            32,
+            0.9732795924327594
+          ],
+          [
+            0,
+            56,
+            0.9730298708282398
+          ],
+          [
+            0,
+            8,
+            0.9729928943929766
+          ],
+          [
+            8,
+            48,
+            0.972042329022432
+          ],
+          [
+            16,
+            56,
+            0.9719140878594239
+          ],
+          [
+            24,
+            40,
+            0.9718558347511315
+          ],
+          [
+            16,
+            32,
+            0.97166166633046
+          ],
+          [
+            24,
+            48,
+            0.97095808428479
+          ],
+          [
+            8,
+            16,
+            0.9699032562781563
+          ],
+          [
+            0,
+            40,
+            0.9697867834350871
+          ],
+          [
+            8,
+            32,
+            0.9684793533004346
+          ],
+          [
+            16,
+            40,
+            0.9629474261330427
+          ]
+        ],
+        "edge_rms": {
+          "bass": {
+            "pickup": 4.986181011190638e-05,
+            "tail": 0.00031955185113474727
+          },
+          "drums": {
+            "pickup": 9.05606648302637e-05,
+            "tail": 0.00012845989840570837
+          },
+          "other": {
+            "pickup": 8.03875518613495e-05,
+            "tail": 0.0010602563852444291
+          },
+          "vocals": {
+            "pickup": 3.119080065516755e-05,
+            "tail": 2.5554343665135093e-05
+          }
+        }
+      },
+      "55_caesarian": {
+        "grid": {
+          "beat_s": 0.66667,
+          "tatum_s": 0.33333,
+          "tatums_per_beat": 2,
+          "beats_per_bar": 4,
+          "origin_s": 2.25293,
+          "duration_s": 183.0,
+          "scores": {
+            "downbeat": {
+              "chroma_novelty": [
+                -1.428,
+                0.545,
+                -0.357,
+                1.24
+              ],
+              "low_onsets": [
+                -0.718,
+                -0.847,
+                -0.095,
+                1.661
+              ],
+              "total": [
+                -2.146,
+                -0.303,
+                -0.452,
+                2.9
+              ]
+            }
+          },
+          "bar_s": 2.66668,
+          "meter": "4/4",
+          "bpm": 90.0,
+          "quarter_bpm": 90.001,
+          "n_bars": 67
+        },
+        "structure": {
+          "n_bars": 67,
+          "loop_scores": {
+            "1": {
+              "score": 0.0888,
+              "pairs": 66
+            },
+            "2": {
+              "score": 0.0229,
+              "pairs": 65
+            },
+            "3": {
+              "score": -0.0046,
+              "pairs": 64
+            },
+            "4": {
+              "score": -0.0082,
+              "pairs": 63
+            },
+            "5": {
+              "score": -0.0145,
+              "pairs": 62
+            },
+            "6": {
+              "score": -0.0141,
+              "pairs": 61
+            },
+            "7": {
+              "score": -0.0191,
+              "pairs": 60
+            },
+            "8": {
+              "score": -0.0098,
+              "pairs": 59
+            },
+            "9": {
+              "score": -0.0045,
+              "pairs": 58
+            },
+            "10": {
+              "score": 0.0256,
+              "pairs": 57
+            },
+            "11": {
+              "score": 0.0299,
+              "pairs": 56
+            },
+            "12": {
+              "score": 0.0063,
+              "pairs": 55
+            },
+            "13": {
+              "score": -0.0209,
+              "pairs": 54
+            },
+            "14": {
+              "score": -0.0203,
+              "pairs": 53
+            },
+            "15": {
+              "score": -0.0225,
+              "pairs": 52
+            },
+            "16": {
+              "score": -0.0164,
+              "pairs": 51
+            },
+            "17": {
+              "score": -0.0176,
+              "pairs": 50
+            },
+            "18": {
+              "score": -0.0017,
+              "pairs": 49
+            },
+            "19": {
+              "score": -0.0008,
+              "pairs": 48
+            },
+            "20": {
+              "score": 0.0158,
+              "pairs": 47
+            },
+            "21": {
+              "score": 0.0306,
+              "pairs": 46
+            },
+            "22": {
+              "score": 0.0277,
+              "pairs": 45
+            },
+            "23": {
+              "score": 0.0003,
+              "pairs": 44
+            },
+            "24": {
+              "score": 0.0002,
+              "pairs": 43
+            },
+            "25": {
+              "score": -0.0049,
+              "pairs": 42
+            },
+            "26": {
+              "score": 0.0021,
+              "pairs": 41
+            },
+            "27": {
+              "score": 0.0011,
+              "pairs": 40
+            },
+            "28": {
+              "score": 0.0092,
+              "pairs": 39
+            },
+            "29": {
+              "score": 0.0136,
+              "pairs": 38
+            },
+            "30": {
+              "score": 0.0284,
+              "pairs": 37
+            },
+            "31": {
+              "score": 0.0719,
+              "pairs": 36
+            },
+            "32": {
+              "score": 0.124,
+              "pairs": 35
+            },
+            "33": {
+              "score": 0.0667,
+              "pairs": 34
+            },
+            "34": {
+              "score": 0.0036,
+              "pairs": 33
+            },
+            "35": {
+              "score": -0.0257,
+              "pairs": 32
+            },
+            "36": {
+              "score": -0.0306,
+              "pairs": 31
+            },
+            "37": {
+              "score": -0.0363,
+              "pairs": 30
+            },
+            "38": {
+              "score": -0.0404,
+              "pairs": 29
+            },
+            "39": {
+              "score": -0.0425,
+              "pairs": 28
+            },
+            "40": {
+              "score": -0.0358,
+              "pairs": 27
+            }
+          },
+          "best_loop_bars": 32,
+          "sections": [
+            {
+              "section": 0,
+              "start_bar": 0,
+              "end_bar": 11,
+              "start_s": 2.25,
+              "end_s": 31.59
+            },
+            {
+              "section": 1,
+              "start_bar": 11,
+              "end_bar": 19,
+              "start_s": 31.59,
+              "end_s": 52.92
+            },
+            {
+              "section": 2,
+              "start_bar": 19,
+              "end_bar": 43,
+              "start_s": 52.92,
+              "end_s": 116.92
+            },
+            {
+              "section": 3,
+              "start_bar": 43,
+              "end_bar": 51,
+              "start_s": 116.92,
+              "end_s": 138.25
+            },
+            {
+              "section": 4,
+              "start_bar": 51,
+              "end_bar": 64,
+              "start_s": 138.25,
+              "end_s": 172.92
+            },
+            {
+              "section": 5,
+              "start_bar": 64,
+              "end_bar": 67,
+              "start_s": 172.92,
+              "end_s": 180.92
+            }
+          ],
+          "bar_starts_s": [
+            2.253,
+            4.92,
+            7.586,
+            10.253,
+            12.92,
+            15.586,
+            18.253,
+            20.92,
+            23.586,
+            26.253,
+            28.92,
+            31.586,
+            34.253,
+            36.92,
+            39.586,
+            42.253,
+            44.92,
+            47.586,
+            50.253,
+            52.92,
+            55.587,
+            58.253,
+            60.92,
+            63.587,
+            66.253,
+            68.92,
+            71.587,
+            74.253,
+            76.92,
+            79.587,
+            82.253,
+            84.92,
+            87.587,
+            90.253,
+            92.92,
+            95.587,
+            98.253,
+            100.92,
+            103.587,
+            106.253,
+            108.92,
+            111.587,
+            114.253,
+            116.92,
+            119.587,
+            122.254,
+            124.92,
+            127.587,
+            130.254,
+            132.92,
+            135.587,
+            138.254,
+            140.92,
+            143.587,
+            146.254,
+            148.92,
+            151.587,
+            154.254,
+            156.92,
+            159.587,
+            162.254,
+            164.92,
+            167.587,
+            170.254,
+            172.92,
+            175.587,
+            178.254
+          ]
+        },
+        "block_matches": [
+          [
+            16,
+            48,
+            0.9939304062369299
+          ],
+          [
+            24,
+            56,
+            0.9917299269366077
+          ],
+          [
+            8,
+            40,
+            0.9843044688813565
+          ],
+          [
+            0,
+            32,
+            0.980604045778554
+          ],
+          [
+            0,
+            24,
+            0.9283298586617322
+          ],
+          [
+            24,
+            32,
+            0.9175118199128596
+          ],
+          [
+            32,
+            56,
+            0.916962616822736
+          ],
+          [
+            0,
+            56,
+            0.9145253808484098
+          ],
+          [
+            32,
+            40,
+            0.8798636675149665
+          ],
+          [
+            0,
+            40,
+            0.875168777850972
+          ],
+          [
+            0,
+            8,
+            0.8722288393198645
+          ],
+          [
+            8,
+            24,
+            0.860550416552305
+          ],
+          [
+            8,
+            32,
+            0.8568065435127866
+          ],
+          [
+            0,
+            48,
+            0.8523637723636095
+          ],
+          [
+            0,
+            16,
+            0.8476918632770697
+          ],
+          [
+            8,
+            56,
+            0.846907560429913
+          ],
+          [
+            24,
+            48,
+            0.8421978291719974
+          ],
+          [
+            24,
+            40,
+            0.8413825525438057
+          ],
+          [
+            32,
+            48,
+            0.8399327063919664
+          ],
+          [
+            16,
+            24,
+            0.8370956617632288
+          ],
+          [
+            48,
+            56,
+            0.8363080338777654
+          ],
+          [
+            40,
+            56,
+            0.8338712038802878
+          ],
+          [
+            16,
+            56,
+            0.8249558385290157
+          ],
+          [
+            16,
+            32,
+            0.8229565625635205
+          ],
+          [
+            8,
+            48,
+            0.7703238400405567
+          ],
+          [
+            8,
+            16,
+            0.7665723899142103
+          ],
+          [
+            40,
+            48,
+            0.7569126187503716
+          ],
+          [
+            16,
+            40,
+            0.7429864560308437
+          ]
+        ],
+        "edge_rms": {}
+      },
+      "35_cicatrix": {
+        "grid": {
+          "beat_s": 0.66665,
+          "tatum_s": 0.33332,
+          "tatums_per_beat": 2,
+          "beats_per_bar": 4,
+          "origin_s": 0.826,
+          "duration_s": 192.0,
+          "scores": {
+            "downbeat": {
+              "chroma_novelty": [
+                0.466,
+                1.418,
+                -0.957,
+                -0.926
+              ],
+              "low_onsets": [
+                -1.159,
+                -0.582,
+                0.237,
+                1.504
+              ],
+              "total": [
+                -0.694,
+                0.836,
+                -0.72,
+                0.578
+              ]
+            }
+          },
+          "bar_s": 2.6666,
+          "meter": "4/4",
+          "bpm": 90.002,
+          "quarter_bpm": 90.004,
+          "n_bars": 71
+        },
+        "structure": {
+          "n_bars": 71,
+          "loop_scores": {
+            "1": {
+              "score": 0.067,
+              "pairs": 70
+            },
+            "2": {
+              "score": 0.0257,
+              "pairs": 69
+            },
+            "3": {
+              "score": 0.008,
+              "pairs": 68
+            },
+            "4": {
+              "score": 0.0096,
+              "pairs": 67
+            },
+            "5": {
+              "score": 0.0072,
+              "pairs": 66
+            },
+            "6": {
+              "score": 0.0111,
+              "pairs": 65
+            },
+            "7": {
+              "score": 0.0193,
+              "pairs": 64
+            },
+            "8": {
+              "score": 0.0264,
+              "pairs": 63
+            },
+            "9": {
+              "score": 0.0117,
+              "pairs": 62
+            },
+            "10": {
+              "score": 0.0061,
+              "pairs": 61
+            },
+            "11": {
+              "score": 0.007,
+              "pairs": 60
+            },
+            "12": {
+              "score": 0.0164,
+              "pairs": 59
+            },
+            "13": {
+              "score": 0.0085,
+              "pairs": 58
+            },
+            "14": {
+              "score": 0.0027,
+              "pairs": 57
+            },
+            "15": {
+              "score": 0.0012,
+              "pairs": 56
+            },
+            "16": {
+              "score": 0.0071,
+              "pairs": 55
+            },
+            "17": {
+              "score": -0.0017,
+              "pairs": 54
+            },
+            "18": {
+              "score": -0.0014,
+              "pairs": 53
+            },
+            "19": {
+              "score": 0.008,
+              "pairs": 52
+            },
+            "20": {
+              "score": 0.0137,
+              "pairs": 51
+            },
+            "21": {
+              "score": 0.0009,
+              "pairs": 50
+            },
+            "22": {
+              "score": -0.0023,
+              "pairs": 49
+            },
+            "23": {
+              "score": 0.0072,
+              "pairs": 48
+            },
+            "24": {
+              "score": 0.0195,
+              "pairs": 47
+            },
+            "25": {
+              "score": 0.0074,
+              "pairs": 46
+            },
+            "26": {
+              "score": -0.0024,
+              "pairs": 45
+            },
+            "27": {
+              "score": -0.0102,
+              "pairs": 44
+            },
+            "28": {
+              "score": -0.0142,
+              "pairs": 43
+            },
+            "29": {
+              "score": -0.0156,
+              "pairs": 42
+            },
+            "30": {
+              "score": 0.0004,
+              "pairs": 41
+            },
+            "31": {
+              "score": 0.0366,
+              "pairs": 40
+            },
+            "32": {
+              "score": 0.0595,
+              "pairs": 39
+            },
+            "33": {
+              "score": 0.0304,
+              "pairs": 38
+            },
+            "34": {
+              "score": 0.0037,
+              "pairs": 37
+            },
+            "35": {
+              "score": -0.0086,
+              "pairs": 36
+            },
+            "36": {
+              "score": -0.0077,
+              "pairs": 35
+            },
+            "37": {
+              "score": -0.0125,
+              "pairs": 34
+            },
+            "38": {
+              "score": -0.0075,
+              "pairs": 33
+            },
+            "39": {
+              "score": 0.0052,
+              "pairs": 32
+            },
+            "40": {
+              "score": 0.0074,
+              "pairs": 31
+            }
+          },
+          "best_loop_bars": 1,
+          "sections": [
+            {
+              "section": 0,
+              "start_bar": 0,
+              "end_bar": 4,
+              "start_s": 0.83,
+              "end_s": 11.49
+            },
+            {
+              "section": 1,
+              "start_bar": 4,
+              "end_bar": 68,
+              "start_s": 11.49,
+              "end_s": 182.15
+            },
+            {
+              "section": 2,
+              "start_bar": 68,
+              "end_bar": 71,
+              "start_s": 182.15,
+              "end_s": 190.15
+            }
+          ],
+          "bar_starts_s": [
+            0.826,
+            3.493,
+            6.159,
+            8.826,
+            11.492,
+            14.159,
+            16.826,
+            19.492,
+            22.159,
+            24.825,
+            27.492,
+            30.159,
+            32.825,
+            35.492,
+            38.158,
+            40.825,
+            43.492,
+            46.158,
+            48.825,
+            51.491,
+            54.158,
+            56.825,
+            59.491,
+            62.158,
+            64.824,
+            67.491,
+            70.158,
+            72.824,
+            75.491,
+            78.157,
+            80.824,
+            83.491,
+            86.157,
+            88.824,
+            91.49,
+            94.157,
+            96.824,
+            99.49,
+            102.157,
+            104.823,
+            107.49,
+            110.157,
+            112.823,
+            115.49,
+            118.156,
+            120.823,
+            123.49,
+            126.156,
+            128.823,
+            131.489,
+            134.156,
+            136.823,
+            139.489,
+            142.156,
+            144.822,
+            147.489,
+            150.156,
+            152.822,
+            155.489,
+            158.155,
+            160.822,
+            163.489,
+            166.155,
+            168.822,
+            171.488,
+            174.155,
+            176.822,
+            179.488,
+            182.155,
+            184.821,
+            187.488
+          ]
+        },
+        "block_matches": [
+          [
+            0,
+            32,
+            0.9899494576671741
+          ],
+          [
+            24,
+            56,
+            0.9874993101740934
+          ],
+          [
+            16,
+            48,
+            0.9865541667845803
+          ],
+          [
+            8,
+            40,
+            0.9852425022981002
+          ],
+          [
+            32,
+            56,
+            0.9556237457407815
+          ],
+          [
+            40,
+            48,
+            0.9520418726235743
+          ],
+          [
+            48,
+            56,
+            0.9512769253539135
+          ],
+          [
+            40,
+            56,
+            0.9509857683906827
+          ],
+          [
+            24,
+            32,
+            0.949854849118928
+          ],
+          [
+            32,
+            40,
+            0.9458571095311311
+          ],
+          [
+            0,
+            56,
+            0.945177346820728
+          ],
+          [
+            0,
+            40,
+            0.9415380992162453
+          ],
+          [
+            0,
+            24,
+            0.9392033492326841
+          ],
+          [
+            24,
+            40,
+            0.9329331081317382
+          ],
+          [
+            16,
+            40,
+            0.9299471367191918
+          ],
+          [
+            24,
+            48,
+            0.9268792084787071
+          ],
+          [
+            32,
+            48,
+            0.9255216064521559
+          ],
+          [
+            8,
+            32,
+            0.9218675831984766
+          ],
+          [
+            0,
+            8,
+            0.9185215192709342
+          ],
+          [
+            8,
+            48,
+            0.9160474349102412
+          ],
+          [
+            16,
+            56,
+            0.9141498698393988
+          ],
+          [
+            0,
+            48,
+            0.9124386004855357
+          ],
+          [
+            8,
+            56,
+            0.9093198518007416
+          ],
+          [
+            8,
+            16,
+            0.9086965642163458
+          ],
+          [
+            8,
+            24,
+            0.9063083448495264
+          ],
+          [
+            16,
+            24,
+            0.8967886929303774
+          ],
+          [
+            16,
+            32,
+            0.8961914530257958
+          ],
+          [
+            0,
+            16,
+            0.8831362375960725
+          ]
+        ],
+        "edge_rms": {}
+      }
+    },
+    "primary_bar_stem_rms": {
+      "bass": [
+        0.03634505718946457,
+        0.050986193120479584,
+        0.05426216870546341,
+        0.06980365514755249,
+        0.0575808547437191,
+        0.06755049526691437,
+        0.07103994488716125,
+        0.07544419169425964,
+        0.07297588139772415,
+        0.07981324940919876,
+        0.07550901919603348,
+        0.0817028358578682,
+        0.08441899716854095,
+        0.060828082263469696,
+        0.07395285367965698,
+        0.0771421417593956,
+        0.07723220437765121,
+        0.08357277512550354,
+        0.0622476302087307,
+        0.06756515800952911,
+        0.05525343120098114,
+        0.0673380047082901,
+        0.07572469115257263,
+        0.0716247633099556,
+        0.07510336488485336,
+        0.07840529084205627,
+        0.08929312229156494,
+        0.08092495799064636,
+        0.08508487045764923,
+        0.059057630598545074,
+        0.07266952097415924,
+        0.07594286650419235,
+        0.07270077615976334,
+        0.06856589764356613,
+        0.06234459578990936,
+        0.06625759601593018,
+        0.058859650045633316,
+        0.06703736633062363,
+        0.07418718189001083,
+        0.0699458047747612,
+        0.07419861108064651,
+        0.0753057524561882,
+        0.07738496363162994,
+        0.07372477650642395,
+        0.08335907757282257,
+        0.05246244743466377,
+        0.07383919507265091,
+        0.07159872353076935,
+        0.07973916828632355,
+        0.08379556983709335,
+        0.06525444984436035,
+        0.06492646783590317,
+        0.057036761194467545,
+        0.06798432022333145,
+        0.07963225245475769,
+        0.06856244802474976,
+        0.0787598043680191,
+        0.07505089044570923,
+        0.09084688127040863,
+        0.07357783615589142,
+        0.08718834072351456,
+        0.05627018213272095,
+        0.07698432356119156,
+        0.07135523110628128,
+        0.07105517387390137,
+        0.06663759052753448,
+        0.04151386767625809,
+        0.0035172144416719675
+      ],
+      "drums": [
+        0.004182663280516863,
+        0.008711669594049454,
+        0.010942090302705765,
+        0.010874586179852486,
+        0.010063043795526028,
+        0.010317575186491013,
+        0.004730168264359236,
+        0.0013013484422117472,
+        0.0025678058154881,
+        0.0006224667304195464,
+        0.00031304280855692923,
+        0.0007256856188178062,
+        0.0019362751627340913,
+        0.003263925900682807,
+        0.0025135313626378775,
+        0.0063490797765553,
+        0.014126380905508995,
+        0.013836586847901344,
+        0.01133607979863882,
+        0.010971367359161377,
+        0.0038100979290902615,
+        0.004743557423353195,
+        0.0003693928010761738,
+        0.00025079489569179714,
+        0.003676637774333358,
+        0.008333717472851276,
+        0.00671351095661521,
+        0.002196444198489189,
+        0.005311113782227039,
+        0.005599857773631811,
+        0.008010578341782093,
+        0.006299865432083607,
+        0.048008885234594345,
+        0.039323840290308,
+        0.03196460381150246,
+        0.03464342653751373,
+        0.03653183579444885,
+        0.029243839904665947,
+        0.05705256387591362,
+        0.033076945692300797,
+        0.027365434914827347,
+        0.03588293865323067,
+        0.04225488007068634,
+        0.034694474190473557,
+        0.032991740852594376,
+        0.05509801581501961,
+        0.03408952057361603,
+        0.03152724727988243,
+        0.041049037128686905,
+        0.03696662187576294,
+        0.03392309695482254,
+        0.031705282628536224,
+        0.03678365424275398,
+        0.050148990005254745,
+        0.02527126483619213,
+        0.028860904276371002,
+        0.030418064445257187,
+        0.04234279692173004,
+        0.03195013850927353,
+        0.029089516028761864,
+        0.04830421507358551,
+        0.029941190034151077,
+        0.020086368545889854,
+        0.018864599987864494,
+        0.015228782780468464,
+        0.016507664695382118,
+        0.0033435882069170475,
+        9.232546290149912e-05
+      ],
+      "other": [
+        0.00017892195319291204,
+        0.0003051531966775656,
+        0.006265295669436455,
+        0.0066003985702991486,
+        0.022050542756915092,
+        0.024854686111211777,
+        0.022781185805797577,
+        0.022161182016134262,
+        0.027347411960363388,
+        0.012943110428750515,
+        0.02182922326028347,
+        0.013472790829837322,
+        0.026281123980879784,
+        0.013737700879573822,
+        0.005830013193190098,
+        0.01214880496263504,
+        0.026220640167593956,
+        0.025126256048679352,
+        0.010621995665133,
+        0.012643454596400261,
+        0.014142747037112713,
+        0.036821361631155014,
+        0.04667435958981514,
+        0.040529895573854446,
+        0.02544291689991951,
+        0.013255749829113483,
+        0.02907663583755493,
+        0.012979134917259216,
+        0.008588840253651142,
+        0.021329592913389206,
+        0.027967017143964767,
+        0.008848771452903748,
+        0.03828457370400429,
+        0.035424571484327316,
+        0.03543050214648247,
+        0.012133723124861717,
+        0.019110461696982384,
+        0.018995976075530052,
+        0.019390501081943512,
+        0.020797329023480415,
+        0.026213040575385094,
+        0.01633504219353199,
+        0.0169138852506876,
+        0.012227393686771393,
+        0.024849558249115944,
+        0.01543403696268797,
+        0.01030693855136633,
+        0.014108825474977493,
+        0.02531897835433483,
+        0.021721504628658295,
+        0.010171743109822273,
+        0.015599973499774933,
+        0.014416697435081005,
+        0.027623480185866356,
+        0.03983280807733536,
+        0.03552406653761864,
+        0.026291092857718468,
+        0.014344359748065472,
+        0.02974621020257473,
+        0.014137743040919304,
+        0.010131034068763256,
+        0.018944138661026955,
+        0.03101278468966484,
+        0.013365731574594975,
+        0.04473353922367096,
+        0.03932740166783333,
+        0.038948629051446915,
+        0.01091359369456768
+      ],
+      "vocals": [
+        2.922219027823303e-05,
+        3.0302764571388252e-05,
+        4.6166966058081016e-05,
+        5.7861689128912985e-05,
+        8.753572910791263e-05,
+        7.472328434232622e-05,
+        0.002312096068635583,
+        0.004099929239600897,
+        0.00011501749395392835,
+        6.72964597470127e-05,
+        7.683861622354016e-05,
+        4.20825817855075e-05,
+        5.504251384991221e-05,
+        4.670201087719761e-05,
+        4.519004505709745e-05,
+        6.0474609199445695e-05,
+        7.734147948212922e-05,
+        0.008203529752790928,
+        0.025671590119600296,
+        0.0233457051217556,
+        0.00032064251718111336,
+        0.00014761595230083913,
+        0.0001236901298398152,
+        0.00011625566548900679,
+        8.960646664490923e-05,
+        8.583929593442008e-05,
+        6.841967842774466e-05,
+        4.258934859535657e-05,
+        4.1218001570086926e-05,
+        7.049631676636636e-05,
+        7.629647734574974e-05,
+        6.106166983954608e-05,
+        0.00010072532313643023,
+        0.0001306082704104483,
+        0.00013758806744590402,
+        7.988169090822339e-05,
+        7.588284643134102e-05,
+        0.00010635341459419578,
+        0.00012018966663163155,
+        0.00010521298827370629,
+        6.797673995606601e-05,
+        6.0286973166512325e-05,
+        0.00010076145554194227,
+        6.775070505682379e-05,
+        7.734868995612487e-05,
+        0.00011178843851666898,
+        4.808690937352367e-05,
+        6.525073695229366e-05,
+        0.0003562922647688538,
+        0.013195985928177834,
+        0.025370292365550995,
+        0.02327115833759308,
+        0.0010071987053379416,
+        0.00014151984942145646,
+        0.0001442118373233825,
+        0.005911192391067743,
+        0.0011174147948622704,
+        7.883306534495205e-05,
+        7.104522228473797e-05,
+        6.868925993330777e-05,
+        7.375853601843119e-05,
+        7.446945528499782e-05,
+        7.954926695674658e-05,
+        7.549272413598374e-05,
+        7.79571128077805e-05,
+        7.036737952148542e-05,
+        4.4463351514423266e-05,
+        2.4710518118808977e-05
+      ]
+    },
+    "transcriptions": {
+      "full": {
+        "source_start_s": 0.282,
+        "source_end_s": 181.6,
+        "bars": [
+          0,
+          68
+        ],
+        "counts": {
+          "bass": 340,
+          "drums": 355,
+          "lead": 287,
+          "chords": 68
+        }
+      },
+      "bass_opening": {
+        "source_start_s": 0.282,
+        "source_end_s": 21.614,
+        "bars": [
+          0,
+          8
+        ],
+        "counts": {
+          "bass": 31,
+          "drums": 29,
+          "lead": 31,
+          "chords": 8
+        }
+      },
+      "development": {
+        "source_start_s": 21.614,
+        "source_end_s": 42.945,
+        "bars": [
+          8,
+          16
+        ],
+        "counts": {
+          "bass": 32,
+          "drums": 37,
+          "lead": 28,
+          "chords": 8
+        }
+      },
+      "voices": {
+        "source_start_s": 42.945,
+        "source_end_s": 64.277,
+        "bars": [
+          16,
+          24
+        ],
+        "counts": {
+          "bass": 38,
+          "drums": 39,
+          "lead": 31,
+          "chords": 8
+        }
+      },
+      "kit_entry": {
+        "source_start_s": 85.608,
+        "source_end_s": 106.94,
+        "bars": [
+          32,
+          40
+        ],
+        "counts": {
+          "bass": 49,
+          "drums": 48,
+          "lead": 52,
+          "chords": 8
+        }
+      },
+      "return": {
+        "source_start_s": 128.271,
+        "source_end_s": 149.603,
+        "bars": [
+          48,
+          56
+        ],
+        "counts": {
+          "bass": 47,
+          "drums": 50,
+          "lead": 33,
+          "chords": 8
+        }
+      },
+      "coda": {
+        "source_start_s": 160.269,
+        "source_end_s": 181.6,
+        "bars": [
+          60,
+          68
+        ],
+        "counts": {
+          "bass": 55,
+          "drums": 39,
+          "lead": 27,
+          "chords": 8
+        }
+      },
+      "pickup": {
+        "source_start_s": 0,
+        "source_end_s": 0.2822,
+        "bars": [
+          0,
+          1
+        ],
+        "counts": {
+          "bass": 1,
+          "drums": 2,
+          "lead": 1
+        }
+      },
+      "tail": {
+        "source_start_s": 181.60012,
+        "source_end_s": 183.0,
+        "bars": [
+          0,
+          1
+        ],
+        "counts": {
+          "bass": 2,
+          "drums": 3,
+          "lead": 1
+        }
+      }
+    },
+    "low_frequency_crosscheck": {
+      "09_viscera": {
+        "frequency_peaks_25_100_hz": [
+          [
+            30.28106689453125,
+            375172.25
+          ],
+          [
+            29.608154296875,
+            372266.96875
+          ],
+          [
+            28.93524169921875,
+            364950.0
+          ],
+          [
+            30.9539794921875,
+            280552.5625
+          ],
+          [
+            28.2623291015625,
+            245645.5
+          ],
+          [
+            88.15155029296875,
+            186386.0
+          ],
+          [
+            88.824462890625,
+            164939.921875
+          ],
+          [
+            31.62689208984375,
+            147458.671875
+          ],
+          [
+            27.58941650390625,
+            113749.7578125
+          ],
+          [
+            87.4786376953125,
+            106104.921875
+          ],
+          [
+            32.2998046875,
+            94068.09375
+          ],
+          [
+            26.91650390625,
+            80456.296875
+          ]
+        ]
+      },
+      "55_caesarian": {
+        "frequency_peaks_25_100_hz": [
+          [
+            41.7205810546875,
+            260905.328125
+          ],
+          [
+            36.3372802734375,
+            203473.40625
+          ],
+          [
+            41.04766845703125,
+            189618.21875
+          ],
+          [
+            35.66436767578125,
+            168938.0
+          ],
+          [
+            37.01019287109375,
+            168645.96875
+          ],
+          [
+            42.39349365234375,
+            156496.671875
+          ],
+          [
+            79.4036865234375,
+            134295.21875
+          ],
+          [
+            38.35601806640625,
+            134243.375
+          ],
+          [
+            78.73077392578125,
+            128654.9609375
+          ],
+          [
+            31.62689208984375,
+            125126.015625
+          ],
+          [
+            37.68310546875,
+            119034.921875
+          ],
+          [
+            39.0289306640625,
+            110240.640625
+          ]
+        ]
+      },
+      "35_cicatrix": {
+        "frequency_peaks_25_100_hz": [
+          [
+            96.8994140625,
+            252153.375
+          ],
+          [
+            96.22650146484375,
+            218767.171875
+          ],
+          [
+            47.77679443359375,
+            146179.65625
+          ],
+          [
+            46.43096923828125,
+            143462.296875
+          ],
+          [
+            45.758056640625,
+            139497.75
+          ],
+          [
+            47.1038818359375,
+            138275.3125
+          ],
+          [
+            48.44970703125,
+            136431.3125
+          ],
+          [
+            97.57232666015625,
+            133433.625
+          ],
+          [
+            45.08514404296875,
+            124220.375
+          ],
+          [
+            98.91815185546875,
+            107109.0546875
+          ],
+          [
+            99.591064453125,
+            106712.1953125
+          ],
+          [
+            44.4122314453125,
+            106247.21875
+          ]
+        ]
+      }
+    },
+    "transcription_confidence": {
+      "bass_voiced_ratio": 0.9694,
+      "lead_voiced_ratio": 0.4801,
+      "drums_mean_margin": 0.429,
+      "drums_low_margin_rate": 0.085,
+      "chords_mean_score": 0.859,
+      "chords_pedal_pc": "A#",
+      "chords_pedal_share": 0.926,
+      "bass_Bb0_cells": 834,
+      "bass_B0_cells": 192,
+      "bass_total_voiced_cells": 1082,
+      "audition": false
+    }
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "09_viscera": {
+    "beat_s": 0.66661,
+    "tatum_s": 0.33331,
+    "tatums_per_beat": 2,
+    "beats_per_bar": 4,
+    "origin_s": 0.2822,
+    "duration_s": 183.0,
+    "scores": {
+      "downbeat": {
+        "chroma_novelty": [
+          1.371,
+          0.422,
+          -0.486,
+          -1.307
+        ],
+        "low_onsets": [
+          -0.713,
+          -0.228,
+          -0.753,
+          1.695
+        ],
+        "total": [
+          0.658,
+          0.193,
+          -1.239,
+          0.388
+        ]
+      },
+      "candidates": [
+        {
+          "bpm": 45,
+          "scores": {
+            "R_beat/2": 0.1468,
+            "R_beat/3": 0.0654,
+            "R_beat/4": 0.3341
+          }
+        },
+        {
+          "bpm": 90,
+          "scores": {
+            "R_beat/2": 0.3341,
+            "R_beat/3": 0.1762,
+            "R_beat/4": 0.3207
+          }
+        },
+        {
+          "bpm": 180,
+          "scores": {
+            "R_beat/2": 0.3207,
+            "R_beat/3": 0.2299,
+            "R_beat/4": 0.1996
+          }
+        }
+      ],
+      "onsets_n": 620,
+      "fit_inliers": 312,
+      "fit_residual_ms": 11.345017083380586,
+      "phase_16th_s": 0.10784272561831998,
+      "onset_fit_bpm": 90.00728611594158,
+      "start": {
+        "R": 0.2471548622798772,
+        "phase": 0.12402866580419185
+      },
+      "end": {
+        "R": 0.48786376573958995,
+        "phase": 0.1035202953763045
+      },
+      "rhythm_source": "htdemucs/drums.wav",
+      "meter_confidence": "moyenne ; convention 4/4 lent à 90 BPM, subdivision équivalente à 180 BPM ; origine non arbitrée à l'oreille"
+    },
+    "bar_s": 2.66644,
+    "meter": "4/4",
+    "bpm": 90.008,
+    "quarter_bpm": 90.008,
+    "n_bars": 68
+  },
+  "55_caesarian": {
+    "beat_s": 0.66667,
+    "tatum_s": 0.33333,
+    "tatums_per_beat": 2,
+    "beats_per_bar": 4,
+    "origin_s": 2.25293,
+    "duration_s": 183.0,
+    "scores": {
+      "downbeat": {
+        "chroma_novelty": [
+          -1.428,
+          0.545,
+          -0.357,
+          1.24
+        ],
+        "low_onsets": [
+          -0.718,
+          -0.847,
+          -0.095,
+          1.661
+        ],
+        "total": [
+          -2.146,
+          -0.303,
+          -0.452,
+          2.9
+        ]
+      },
+      "candidates": [
+        {
+          "bpm": 45,
+          "scores": {
+            "R_beat/2": 0.2193,
+            "R_beat/3": 0.046,
+            "R_beat/4": 0.3501
+          }
+        },
+        {
+          "bpm": 90,
+          "scores": {
+            "R_beat/2": 0.3501,
+            "R_beat/3": 0.224,
+            "R_beat/4": 0.4114
+          }
+        },
+        {
+          "bpm": 180,
+          "scores": {
+            "R_beat/2": 0.4114,
+            "R_beat/3": 0.3224,
+            "R_beat/4": 0.1981
+          }
+        }
+      ],
+      "onsets_n": 723,
+      "fit_inliers": 420,
+      "fit_residual_ms": 12.893526766623857,
+      "phase_16th_s": 0.08167262416170099,
+      "onset_fit_bpm": 89.9997902107432,
+      "start": {
+        "R": 0.3943117654123552,
+        "phase": 0.0848356677994947
+      },
+      "end": {
+        "R": 0.4807452408068494,
+        "phase": 0.07579991304187021
+      },
+      "rhythm_source": "mix FLAC",
+      "meter_confidence": "moyenne ; convention 4/4 lent à 90 BPM, subdivision équivalente à 180 BPM ; origine non arbitrée à l'oreille"
+    },
+    "bar_s": 2.66668,
+    "meter": "4/4",
+    "bpm": 90.0,
+    "quarter_bpm": 90.0,
+    "n_bars": 67
+  },
+  "35_cicatrix": {
+    "beat_s": 0.66665,
+    "tatum_s": 0.33332,
+    "tatums_per_beat": 2,
+    "beats_per_bar": 4,
+    "origin_s": 0.826,
+    "duration_s": 192.0,
+    "scores": {
+      "downbeat": {
+        "chroma_novelty": [
+          0.466,
+          1.418,
+          -0.957,
+          -0.926
+        ],
+        "low_onsets": [
+          -1.159,
+          -0.582,
+          0.237,
+          1.504
+        ],
+        "total": [
+          -0.694,
+          0.836,
+          -0.72,
+          0.578
+        ]
+      },
+      "candidates": [
+        {
+          "bpm": 45,
+          "scores": {
+            "R_beat/2": 0.0741,
+            "R_beat/3": 0.0874,
+            "R_beat/4": 0.3684
+          }
+        },
+        {
+          "bpm": 90,
+          "scores": {
+            "R_beat/2": 0.3684,
+            "R_beat/3": 0.1346,
+            "R_beat/4": 0.8582
+          }
+        },
+        {
+          "bpm": 180,
+          "scores": {
+            "R_beat/2": 0.8582,
+            "R_beat/3": 0.2931,
+            "R_beat/4": 0.5826
+          }
+        }
+      ],
+      "onsets_n": 754,
+      "fit_inliers": 689,
+      "fit_residual_ms": 11.096345543778776,
+      "phase_16th_s": 0.001772548675190777,
+      "onset_fit_bpm": 90.00270435974333,
+      "start": {
+        "R": 0.8856720704835452,
+        "phase": 0.16635227924801815
+      },
+      "end": {
+        "R": 0.8215380551581888,
+        "phase": 0.16603516609439253
+      },
+      "rhythm_source": "mix FLAC",
+      "meter_confidence": "moyenne ; convention 4/4 lent à 90 BPM, subdivision équivalente à 180 BPM ; origine non arbitrée à l'oreille"
+    },
+    "bar_s": 2.6666,
+    "meter": "4/4",
+    "bpm": 90.002,
+    "quarter_bpm": 90.002,
+    "n_bars": 71
+  }
+}
