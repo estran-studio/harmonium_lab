@@ -1,0 +1,46 @@
+{
+  "04_groundwork_of_the_past": {
+    "beat_s": 0.7499944266142059,
+    "tatum_s": 0.37499721330710295,
+    "tatums_per_beat": 2,
+    "beats_per_bar": 4,
+    "origin_s": -1.9850977064568236,
+    "duration_s": 137.0,
+    "bar_s": 2.9999777064568236,
+    "meter": "4/4",
+    "bpm": 80.00059449890253,
+    "quarter_bpm": 80.00059449890253,
+    "n_bars": 46,
+    "scores": {
+      "verification_source": "mix complet, attaques librosa hop=128 ; stems htdemucs 4.1.0",
+      "coherence_division": 4,
+      "coherence_R": 0.7622792185878062,
+      "residual_median_abs_ms": 10.28724392819806,
+      "residual_p90_abs_ms": 36.07197954549023,
+      "positive_downbeat_s": 1.01488,
+      "downbeat_confidence": "moyenne ; convention de phase, pas une validation auditive",
+      "partial_first_bar": true,
+      "note": "Origine théorique avant la coupe du fichier : première mesure partielle, silence hors source. Tempo vérifié numériquement, résidu mesuré sur la subdivision indiquée."
+    }
+  },
+  "31_what_s_that_smell": {
+    "beat_s": 0.631567999677144,
+    "tatum_s": 0.315783999838572,
+    "tatums_per_beat": 2,
+    "beats_per_bar": 4,
+    "origin_s": 0.7736,
+    "duration_s": 97.0,
+    "bar_s": 2.526271998708576,
+    "meter": "4/4",
+    "bpm": 95.00164674377397,
+    "quarter_bpm": 95.00164674377397,
+    "n_bars": 38,
+    "scores": {
+      "coherence_division": 4,
+      "coherence_R": 0.8047028298373391,
+      "residual_median_abs_ms": 12.13604324777158,
+      "residual_p90_abs_ms": 23.013669921666228,
+      "note": "Contexte, mix seulement ; 4/4 à 95 BPM, lecture 190 BPM équivalente, phase et mètre de confiance moyenne."
+    }
+  }
+}

@@ -51,7 +51,9 @@ def _pyin_notes(y: np.ndarray, sr: int, fmin: float, fmax: float,
             cells.append(int(round(69 + 12 * np.log2(fr / 440.0))))
         else:
             cells.append(None)
-    cells = _smooth_octaves(cells)
+    low = int(round(69 + 12 * np.log2(fmin / 440.0)))
+    high = int(round(69 + 12 * np.log2(fmax / 440.0)))
+    cells = _smooth_octaves(cells, low, high)
     notes: list[dict[str, Any]] = []
     i = 0
     while i < len(cells):
@@ -70,18 +72,21 @@ def _pyin_notes(y: np.ndarray, sr: int, fmin: float, fmax: float,
     return notes, info
 
 
-def _smooth_octaves(midis: list[int | None]) -> list[int | None]:
-    """Replie les sauts d'octave (> 7 demi-tons) vers la hauteur précédente :
-    pyin hésite entre fondamental et harmoniques sur les basses saturées."""
+def _smooth_octaves(midis: list[int | None], low: int, high: int) -> list[int | None]:
+    """Rapproche les octaves sans quitter le registre analysé par pYIN.
+
+    Sans bornes, les sauts ambigus d'un riff chromatique peuvent accumuler
+    des octaves à chaque cycle, jusqu'à produire des hauteurs MIDI invalides.
+    """
     out: list[int | None] = []
     prev: int | None = None
     for m in midis:
         if m is None or prev is None:
             out.append(m)
         else:
-            while m - prev > 7:
+            while m - prev > 7 and m - 12 >= low:
                 m -= 12
-            while prev - m > 7:
+            while prev - m > 7 and m + 12 <= high:
                 m += 12
             out.append(m)
         if m is not None:
