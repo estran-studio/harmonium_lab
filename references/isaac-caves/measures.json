@@ -1,0 +1,5268 @@
+{
+  "tracks": {
+    "02_diptera_sonata": {
+      "rhythm": {
+        "detected_tempo": 143.6,
+        "beat_count": 543,
+        "onset_rate": 1.86,
+        "tempo_stability": 0.972,
+        "duration": 249.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 2.2983,
+        "tonal_power_ratio": 0.4078,
+        "chroma_entropy": 3.4606,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.826,
+          "margin": 0.0054,
+          "runner_up": {
+            "tonic": "D",
+            "mode": "major",
+            "score": 0.8206
+          }
+        }
+      },
+      "chroma_mean": [
+        0.3859,
+        0.5459,
+        0.9457,
+        0.5223,
+        0.4024,
+        0.3448,
+        0.3331,
+        0.3524,
+        0.2927,
+        0.3545,
+        0.2365,
+        0.2215
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2638.47,
+        "spectral_centroid_std": 733.94,
+        "spectral_bandwidth_mean": 2484.9,
+        "spectral_flatness_mean": 0.020179,
+        "spectral_flatness_std": 0.024618,
+        "spectral_rolloff_mean": 5461.71
+      },
+      "dynamics": {
+        "rms_mean": 0.094673,
+        "rms_std": 0.031036,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -6.93
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.7993,
+        "percussive_ratio": 0.2007,
+        "dissonance_proxy": 0.020179,
+        "dissonance_std": 0.024618
+      }
+    },
+    "04_sodden_hollow": {
+      "rhythm": {
+        "detected_tempo": 123.0,
+        "beat_count": 483,
+        "onset_rate": 1.5,
+        "tempo_stability": 0.9733,
+        "duration": 254.0
+      },
+      "tonal": {
+        "estimated_key": "C#",
+        "key_strength": 1.5302,
+        "tonal_power_ratio": 0.345,
+        "chroma_entropy": 3.5344,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "harmonic_minor",
+          "score": 0.8739,
+          "margin": 0.0139,
+          "runner_up": {
+            "tonic": "A#",
+            "mode": "harmonic_minor",
+            "score": 0.86
+          }
+        }
+      },
+      "chroma_mean": [
+        0.4482,
+        0.6926,
+        0.5077,
+        0.6738,
+        0.485,
+        0.3798,
+        0.3851,
+        0.4117,
+        0.3589,
+        0.4494,
+        0.3931,
+        0.2464
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2024.13,
+        "spectral_centroid_std": 675.86,
+        "spectral_bandwidth_mean": 2329.72,
+        "spectral_flatness_mean": 0.016237,
+        "spectral_flatness_std": 0.026384,
+        "spectral_rolloff_mean": 4442.38
+      },
+      "dynamics": {
+        "rms_mean": 0.066656,
+        "rms_std": 0.03732,
+        "dynamic_range_db": 71.86,
+        "rms_db_mean": -11.26
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.7527,
+        "percussive_ratio": 0.2473,
+        "dissonance_proxy": 0.016237,
+        "dissonance_std": 0.026384
+      },
+      "grid": {
+        "beat_s": 0.5,
+        "tatum_s": 0.25,
+        "tatums_per_beat": 2,
+        "beats_per_bar": 4,
+        "origin_s": 0.82832,
+        "duration_s": 254.0,
+        "scores": {
+          "beat_fit_resid_ms": 8.921,
+          "R_beat/2": 0.0464,
+          "R_beat/3": 0.2689,
+          "R_beat/4": 0.82,
+          "begin_end": [
+            {
+              "bpm": 120.00369965235227,
+              "phase_absolute_s": 0.33996226545351776,
+              "resid_ms": 9.302571164556337
+            },
+            {
+              "bpm": 119.98523825430163,
+              "phase_absolute_s": 0.3350896004470014,
+              "resid_ms": 7.929495226091106
+            }
+          ],
+          "tempo_candidates": [
+            {
+              "bpm": 240.00007777189435,
+              "coherences": {
+                "1": 0.0464256261213244,
+                "2": 0.8200410591773296,
+                "3": 0.040770692937685586,
+                "4": 0.5004131940092872
+              }
+            },
+            {
+              "bpm": 120.00003888594718,
+              "coherences": {
+                "1": 0.20633034099903877,
+                "2": 0.0464256261213244,
+                "3": 0.26886022663636716,
+                "4": 0.8200410591773296
+              }
+            },
+            {
+              "bpm": 60.00001944297359,
+              "coherences": {
+                "1": 0.11131411315299278,
+                "2": 0.20633034099903877,
+                "3": 0.06783241314710649,
+                "4": 0.0464256261213244
+              }
+            }
+          ],
+          "origin_candidates": [
+            {
+              "origin": 0.07831966605076343,
+              "detail": {
+                "chroma_novelty": [
+                  1.19,
+                  -1.082,
+                  0.785,
+                  -0.893
+                ],
+                "low_onsets": [
+                  0.74,
+                  0.153,
+                  0.785,
+                  -1.677
+                ],
+                "total": [
+                  1.93,
+                  -0.929,
+                  1.57,
+                  -2.57
+                ]
+              }
+            },
+            {
+              "origin": 1.2033196660507635,
+              "detail": {
+                "chroma_novelty": [
+                  -0.431,
+                  -1.353,
+                  0.451,
+                  1.334
+                ],
+                "low_onsets": [
+                  -0.449,
+                  1.606,
+                  -0.054,
+                  -1.103
+                ],
+                "total": [
+                  -0.881,
+                  0.253,
+                  0.397,
+                  0.231
+                ]
+              }
+            },
+            {
+              "origin": 0.8283196660507635,
+              "detail": {
+                "chroma_novelty": [
+                  -1.27,
+                  -0.475,
+                  0.308,
+                  1.437
+                ],
+                "low_onsets": [
+                  -0.792,
+                  1.714,
+                  -0.531,
+                  -0.391
+                ],
+                "total": [
+                  -2.062,
+                  1.239,
+                  -0.223,
+                  1.047
+                ]
+              }
+            },
+            {
+              "origin": 1.9533196660507635,
+              "detail": {
+                "chroma_novelty": [
+                  -1.339,
+                  0.627,
+                  -0.528,
+                  1.24
+                ],
+                "low_onsets": [
+                  -0.963,
+                  0.574,
+                  -0.96,
+                  1.35
+                ],
+                "total": [
+                  -2.302,
+                  1.2,
+                  -1.487,
+                  2.589
+                ]
+              }
+            }
+          ],
+          "phase_sixteenth": 0.07831966605076343,
+          "origin_method": "sixteenth phase constrained to regressed quarter-beat phase; harmonic novelty and bass onset comparison; first-beat confidence medium"
+        },
+        "bar_s": 2.0,
+        "meter": "4/4",
+        "bpm": 120.0,
+        "quarter_bpm": 120.0,
+        "n_bars": 126
+      }
+    },
+    "06_abyss": {
+      "rhythm": {
+        "detected_tempo": 95.7,
+        "beat_count": 368,
+        "onset_rate": 2.07,
+        "tempo_stability": 0.9452,
+        "duration": 233.0
+      },
+      "tonal": {
+        "estimated_key": "C#",
+        "key_strength": 1.7956,
+        "tonal_power_ratio": 0.3958,
+        "chroma_entropy": 3.4594,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "harmonic_minor",
+          "score": 0.8206,
+          "margin": 0.0159,
+          "runner_up": {
+            "tonic": "D",
+            "mode": "major",
+            "score": 0.8047
+          }
+        }
+      },
+      "chroma_mean": [
+        0.6302,
+        0.8819,
+        0.8208,
+        0.6259,
+        0.5223,
+        0.4539,
+        0.4392,
+        0.4277,
+        0.3549,
+        0.2556,
+        0.2105,
+        0.2708
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1239.75,
+        "spectral_centroid_std": 632.52,
+        "spectral_bandwidth_mean": 2120.75,
+        "spectral_flatness_mean": 0.003524,
+        "spectral_flatness_std": 0.044646,
+        "spectral_rolloff_mean": 2794.93
+      },
+      "dynamics": {
+        "rms_mean": 0.044279,
+        "rms_std": 0.022611,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -11.1
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8437,
+        "percussive_ratio": 0.1563,
+        "dissonance_proxy": 0.003524,
+        "dissonance_std": 0.044646
+      }
+    },
+    "09_viscera": {
+      "rhythm": {
+        "detected_tempo": 89.1,
+        "beat_count": 265,
+        "onset_rate": 2.75,
+        "tempo_stability": 0.9385,
+        "duration": 183.0
+      },
+      "tonal": {
+        "estimated_key": "F",
+        "key_strength": 1.8393,
+        "tonal_power_ratio": 0.3496,
+        "chroma_entropy": 3.5041,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "major",
+          "score": 0.8657,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "D#",
+            "mode": "dorian",
+            "score": 0.8657
+          }
+        }
+      },
+      "chroma_mean": [
+        0.5456,
+        0.562,
+        0.5958,
+        0.5536,
+        0.5468,
+        0.9041,
+        0.4549,
+        0.3574,
+        0.3213,
+        0.2815,
+        0.5037,
+        0.2718
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1492.57,
+        "spectral_centroid_std": 862.68,
+        "spectral_bandwidth_mean": 2205.92,
+        "spectral_flatness_mean": 0.006505,
+        "spectral_flatness_std": 0.049726,
+        "spectral_rolloff_mean": 3424.76
+      },
+      "dynamics": {
+        "rms_mean": 0.078001,
+        "rms_std": 0.032133,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -9.64
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.9418,
+        "percussive_ratio": 0.0582,
+        "dissonance_proxy": 0.006505,
+        "dissonance_std": 0.049726
+      }
+    },
+    "13_duress": {
+      "rhythm": {
+        "detected_tempo": 112.3,
+        "beat_count": 479,
+        "onset_rate": 2.54,
+        "tempo_stability": 0.9724,
+        "duration": 266.0
+      },
+      "tonal": {
+        "estimated_key": "D#",
+        "key_strength": 1.4463,
+        "tonal_power_ratio": 0.3325,
+        "chroma_entropy": 3.5188,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "major",
+          "score": 0.8459,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "D#",
+            "mode": "dorian",
+            "score": 0.8459
+          }
+        }
+      },
+      "chroma_mean": [
+        0.5409,
+        0.6456,
+        0.5948,
+        0.7715,
+        0.661,
+        0.6958,
+        0.6017,
+        0.5589,
+        0.4258,
+        0.295,
+        0.3001,
+        0.3104
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2170.23,
+        "spectral_centroid_std": 745.41,
+        "spectral_bandwidth_mean": 2640.55,
+        "spectral_flatness_mean": 0.016649,
+        "spectral_flatness_std": 0.0244,
+        "spectral_rolloff_mean": 5074.61
+      },
+      "dynamics": {
+        "rms_mean": 0.079086,
+        "rms_std": 0.029224,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -8.02
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8254,
+        "percussive_ratio": 0.1746,
+        "dissonance_proxy": 0.016649,
+        "dissonance_std": 0.0244
+      }
+    },
+    "17_everlasting_hymn": {
+      "rhythm": {
+        "detected_tempo": 49.7,
+        "beat_count": 139,
+        "onset_rate": 0.79,
+        "tempo_stability": 0.9823,
+        "duration": 172.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.801,
+        "tonal_power_ratio": 0.3788,
+        "chroma_entropy": 3.5056,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.8807,
+          "margin": 0.0085,
+          "runner_up": {
+            "tonic": "C#",
+            "mode": "phrygian",
+            "score": 0.8722
+          }
+        }
+      },
+      "chroma_mean": [
+        0.3234,
+        0.4212,
+        0.7327,
+        0.3588,
+        0.5136,
+        0.3792,
+        0.3452,
+        0.3578,
+        0.3778,
+        0.6029,
+        0.2475,
+        0.2217
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1275.88,
+        "spectral_centroid_std": 366.11,
+        "spectral_bandwidth_mean": 1828.33,
+        "spectral_flatness_mean": 0.007035,
+        "spectral_flatness_std": 0.064948,
+        "spectral_rolloff_mean": 2617.9
+      },
+      "dynamics": {
+        "rms_mean": 0.077289,
+        "rms_std": 0.033676,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -9.29
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.9132,
+        "percussive_ratio": 0.0868,
+        "dissonance_proxy": 0.007035,
+        "dissonance_std": 0.064948
+      }
+    },
+    "21_periculum": {
+      "rhythm": {
+        "detected_tempo": 143.6,
+        "beat_count": 507,
+        "onset_rate": 1.31,
+        "tempo_stability": 0.973,
+        "duration": 229.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.7535,
+        "tonal_power_ratio": 0.3623,
+        "chroma_entropy": 3.5121,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.858,
+          "margin": 0.0028,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "dorian",
+            "score": 0.8553
+          }
+        }
+      },
+      "chroma_mean": [
+        0.4086,
+        0.5099,
+        0.8224,
+        0.614,
+        0.5275,
+        0.6025,
+        0.4192,
+        0.3595,
+        0.3299,
+        0.4665,
+        0.3158,
+        0.252
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2174.72,
+        "spectral_centroid_std": 521.29,
+        "spectral_bandwidth_mean": 2458.02,
+        "spectral_flatness_mean": 0.018207,
+        "spectral_flatness_std": 0.043319,
+        "spectral_rolloff_mean": 4857.03
+      },
+      "dynamics": {
+        "rms_mean": 0.097544,
+        "rms_std": 0.019715,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -6.08
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.7906,
+        "percussive_ratio": 0.2094,
+        "dissonance_proxy": 0.018207,
+        "dissonance_std": 0.043319
+      }
+    },
+    "22_capiticus_calvaria": {
+      "rhythm": {
+        "detected_tempo": 117.5,
+        "beat_count": 512,
+        "onset_rate": 1.52,
+        "tempo_stability": 0.9741,
+        "duration": 260.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.3221,
+        "tonal_power_ratio": 0.3175,
+        "chroma_entropy": 3.5473,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.8641,
+          "margin": 0.02,
+          "runner_up": {
+            "tonic": "D",
+            "mode": "major",
+            "score": 0.8441
+          }
+        }
+      },
+      "chroma_mean": [
+        0.3761,
+        0.5494,
+        0.6266,
+        0.6168,
+        0.5624,
+        0.5505,
+        0.4627,
+        0.4973,
+        0.3687,
+        0.4514,
+        0.3218,
+        0.3038
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2603.65,
+        "spectral_centroid_std": 1096.46,
+        "spectral_bandwidth_mean": 2749.25,
+        "spectral_flatness_mean": 0.033733,
+        "spectral_flatness_std": 0.051095,
+        "spectral_rolloff_mean": 5844.17
+      },
+      "dynamics": {
+        "rms_mean": 0.058993,
+        "rms_std": 0.026972,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -10.14
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.883,
+        "percussive_ratio": 0.117,
+        "dissonance_proxy": 0.033733,
+        "dissonance_std": 0.051095
+      },
+      "grid": {
+        "beat_s": 0.5,
+        "tatum_s": 0.25,
+        "tatums_per_beat": 2,
+        "beats_per_bar": 4,
+        "origin_s": 0.66402,
+        "duration_s": 260.0,
+        "scores": {
+          "beat_fit_resid_ms": 9.495,
+          "R_beat/2": 0.5647,
+          "R_beat/3": 0.0655,
+          "R_beat/4": 0.755,
+          "begin_end": [
+            {
+              "bpm": 120.00162003410813,
+              "phase_absolute_s": 0.1803028057408116,
+              "resid_ms": 9.712734486816823
+            },
+            {
+              "bpm": 119.98902010805155,
+              "phase_absolute_s": 0.17438228657488708,
+              "resid_ms": 13.763828598649804
+            }
+          ],
+          "tempo_candidates": [
+            {
+              "bpm": 239.99779788827996,
+              "coherences": {
+                "1": 0.5646797865832021,
+                "2": 0.7549982689716433,
+                "3": 0.47803244625533337,
+                "4": 0.468892070962097
+              }
+            },
+            {
+              "bpm": 119.99889894413998,
+              "coherences": {
+                "1": 0.09607807972117473,
+                "2": 0.5646797865832021,
+                "3": 0.06546737058835414,
+                "4": 0.7549982689716433
+              }
+            },
+            {
+              "bpm": 59.99944947206999,
+              "coherences": {
+                "1": 0.19469229507371127,
+                "2": 0.09607807972117473,
+                "3": 0.027116225457598866,
+                "4": 0.5646797865832021
+              }
+            }
+          ],
+          "origin_candidates": [
+            {
+              "origin": 0.5479901911307009,
+              "detail": {
+                "chroma_novelty": [
+                  -0.727,
+                  1.724,
+                  -0.463,
+                  -0.535
+                ],
+                "low_onsets": [
+                  -1.256,
+                  1.395,
+                  -0.553,
+                  0.414
+                ],
+                "total": [
+                  -1.983,
+                  3.119,
+                  -1.016,
+                  -0.12
+                ]
+              }
+            },
+            {
+              "origin": 0.6729901911307009,
+              "detail": {
+                "chroma_novelty": [
+                  -0.437,
+                  1.169,
+                  -1.409,
+                  0.677
+                ],
+                "low_onsets": [
+                  -1.355,
+                  1.089,
+                  0.819,
+                  -0.554
+                ],
+                "total": [
+                  -1.792,
+                  2.258,
+                  -0.59,
+                  0.123
+                ]
+              }
+            },
+            {
+              "origin": 0.7979901911307009,
+              "detail": {
+                "chroma_novelty": [
+                  0.019,
+                  0.827,
+                  -1.639,
+                  0.793
+                ],
+                "low_onsets": [
+                  -0.558,
+                  -0.374,
+                  1.714,
+                  -0.782
+                ],
+                "total": [
+                  -0.539,
+                  0.452,
+                  0.075,
+                  0.012
+                ]
+              }
+            },
+            {
+              "origin": 0.4229901911307009,
+              "detail": {
+                "chroma_novelty": [
+                  0.822,
+                  0.657,
+                  -1.688,
+                  0.209
+                ],
+                "low_onsets": [
+                  1.677,
+                  -0.962,
+                  -0.308,
+                  -0.407
+                ],
+                "total": [
+                  2.499,
+                  -0.305,
+                  -1.996,
+                  -0.198
+                ]
+              }
+            }
+          ],
+          "phase_sixteenth": 0.047990191130700924,
+          "origin_method": "sixteenth phase constrained to regressed quarter-beat phase; harmonic novelty and bass onset comparison; first-beat confidence medium"
+        },
+        "bar_s": 2.0,
+        "meter": "4/4",
+        "bpm": 120.0,
+        "quarter_bpm": 120.0,
+        "n_bars": 129
+      }
+    },
+    "23_when_blood_dries": {
+      "rhythm": {
+        "detected_tempo": 117.5,
+        "beat_count": 473,
+        "onset_rate": 1.74,
+        "tempo_stability": 0.9737,
+        "duration": 247.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.9052,
+        "tonal_power_ratio": 0.4028,
+        "chroma_entropy": 3.4693,
+        "mode": {
+          "tonic": "C",
+          "tonic_pc": 0,
+          "mode": "dorian",
+          "score": 0.8356,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "D",
+            "mode": "phrygian",
+            "score": 0.8356
+          }
+        }
+      },
+      "chroma_mean": [
+        0.4214,
+        0.4664,
+        0.9419,
+        0.8402,
+        0.6074,
+        0.5801,
+        0.4549,
+        0.4091,
+        0.334,
+        0.3405,
+        0.2825,
+        0.2541
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1449.97,
+        "spectral_centroid_std": 357.93,
+        "spectral_bandwidth_mean": 2021.14,
+        "spectral_flatness_mean": 0.004205,
+        "spectral_flatness_std": 0.004357,
+        "spectral_rolloff_mean": 3111.06
+      },
+      "dynamics": {
+        "rms_mean": 0.068838,
+        "rms_std": 0.019571,
+        "dynamic_range_db": 73.51,
+        "rms_db_mean": -5.89
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.874,
+        "percussive_ratio": 0.126,
+        "dissonance_proxy": 0.004205,
+        "dissonance_std": 0.004357
+      }
+    },
+    "24_sketches_of_pain": {
+      "rhythm": {
+        "detected_tempo": 112.3,
+        "beat_count": 482,
+        "onset_rate": 1.7,
+        "tempo_stability": 0.9785,
+        "duration": 288.0
+      },
+      "tonal": {
+        "estimated_key": "C",
+        "key_strength": 1.5004,
+        "tonal_power_ratio": 0.3274,
+        "chroma_entropy": 3.5326,
+        "mode": {
+          "tonic": "F",
+          "tonic_pc": 5,
+          "mode": "harmonic_minor",
+          "score": 0.8613,
+          "margin": 0.0015,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "phrygian",
+            "score": 0.8598
+          }
+        }
+      },
+      "chroma_mean": [
+        0.6492,
+        0.5454,
+        0.4977,
+        0.4982,
+        0.5054,
+        0.4407,
+        0.3427,
+        0.4899,
+        0.3882,
+        0.276,
+        0.2568,
+        0.3022
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2198.56,
+        "spectral_centroid_std": 406.18,
+        "spectral_bandwidth_mean": 2287.95,
+        "spectral_flatness_mean": 0.019556,
+        "spectral_flatness_std": 0.056287,
+        "spectral_rolloff_mean": 4701.81
+      },
+      "dynamics": {
+        "rms_mean": 0.121398,
+        "rms_std": 0.027478,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -7.47
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.843,
+        "percussive_ratio": 0.157,
+        "dissonance_proxy": 0.019556,
+        "dissonance_std": 0.056287
+      }
+    },
+    "26_devoid": {
+      "rhythm": {
+        "detected_tempo": 92.3,
+        "beat_count": 255,
+        "onset_rate": 1.01,
+        "tempo_stability": 0.9762,
+        "duration": 180.0
+      },
+      "tonal": {
+        "estimated_key": "F",
+        "key_strength": 1.2609,
+        "tonal_power_ratio": 0.3074,
+        "chroma_entropy": 3.5574,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "harmonic_minor",
+          "score": 0.8604,
+          "margin": 0.0044,
+          "runner_up": {
+            "tonic": "F",
+            "mode": "harmonic_minor",
+            "score": 0.856
+          }
+        }
+      },
+      "chroma_mean": [
+        0.6255,
+        0.7332,
+        0.6582,
+        0.5976,
+        0.7151,
+        0.7521,
+        0.5929,
+        0.5447,
+        0.6364,
+        0.5149,
+        0.3792,
+        0.408
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2035.42,
+        "spectral_centroid_std": 562.65,
+        "spectral_bandwidth_mean": 2635.11,
+        "spectral_flatness_mean": 0.013186,
+        "spectral_flatness_std": 0.047192,
+        "spectral_rolloff_mean": 5037.67
+      },
+      "dynamics": {
+        "rms_mean": 0.059879,
+        "rms_std": 0.024228,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -9.63
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8147,
+        "percussive_ratio": 0.1853,
+        "dissonance_proxy": 0.013186,
+        "dissonance_std": 0.047192
+      }
+    },
+    "35_cicatrix": {
+      "rhythm": {
+        "detected_tempo": 89.1,
+        "beat_count": 271,
+        "onset_rate": 2.56,
+        "tempo_stability": 0.9787,
+        "duration": 192.0
+      },
+      "tonal": {
+        "estimated_key": "G",
+        "key_strength": 1.6434,
+        "tonal_power_ratio": 0.3684,
+        "chroma_entropy": 3.5139,
+        "mode": {
+          "tonic": "F",
+          "tonic_pc": 5,
+          "mode": "harmonic_minor",
+          "score": 0.8428,
+          "margin": 0.0026,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "phrygian",
+            "score": 0.8402
+          }
+        }
+      },
+      "chroma_mean": [
+        0.5609,
+        0.4509,
+        0.3811,
+        0.3626,
+        0.376,
+        0.5256,
+        0.6786,
+        0.7333,
+        0.4159,
+        0.2927,
+        0.2856,
+        0.2916
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1783.93,
+        "spectral_centroid_std": 698.96,
+        "spectral_bandwidth_mean": 2247.35,
+        "spectral_flatness_mean": 0.007238,
+        "spectral_flatness_std": 0.01424,
+        "spectral_rolloff_mean": 4026.26
+      },
+      "dynamics": {
+        "rms_mean": 0.081084,
+        "rms_std": 0.035844,
+        "dynamic_range_db": 60.63,
+        "rms_db_mean": -10.16
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8632,
+        "percussive_ratio": 0.1368,
+        "dissonance_proxy": 0.007238,
+        "dissonance_std": 0.01424
+      }
+    },
+    "36_fundamentum": {
+      "rhythm": {
+        "detected_tempo": 136.0,
+        "beat_count": 577,
+        "onset_rate": 1.22,
+        "tempo_stability": 0.9725,
+        "duration": 253.0
+      },
+      "tonal": {
+        "estimated_key": "F#",
+        "key_strength": 1.779,
+        "tonal_power_ratio": 0.3539,
+        "chroma_entropy": 3.5185,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "major",
+          "score": 0.8704,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "E",
+            "mode": "dorian",
+            "score": 0.8704
+          }
+        }
+      },
+      "chroma_mean": [
+        0.3554,
+        0.629,
+        0.549,
+        0.4258,
+        0.5317,
+        0.566,
+        0.8615,
+        0.4931,
+        0.402,
+        0.3759,
+        0.2869,
+        0.3351
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2614.22,
+        "spectral_centroid_std": 654.72,
+        "spectral_bandwidth_mean": 2603.39,
+        "spectral_flatness_mean": 0.030387,
+        "spectral_flatness_std": 0.026616,
+        "spectral_rolloff_mean": 5618.46
+      },
+      "dynamics": {
+        "rms_mean": 0.075553,
+        "rms_std": 0.017546,
+        "dynamic_range_db": 60.36,
+        "rms_db_mean": -5.82
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8006,
+        "percussive_ratio": 0.1994,
+        "dissonance_proxy": 0.030387,
+        "dissonance_std": 0.026616
+      }
+    },
+    "37_kave_diluvii": {
+      "rhythm": {
+        "detected_tempo": 117.5,
+        "beat_count": 451,
+        "onset_rate": 2.6,
+        "tempo_stability": 0.9758,
+        "duration": 241.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.3296,
+        "tonal_power_ratio": 0.2985,
+        "chroma_entropy": 3.5658,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.873,
+          "margin": 0.0144,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "dorian",
+            "score": 0.8587
+          }
+        }
+      },
+      "chroma_mean": [
+        0.4249,
+        0.5322,
+        0.5945,
+        0.4684,
+        0.4319,
+        0.4752,
+        0.4699,
+        0.4672,
+        0.336,
+        0.4103,
+        0.4402,
+        0.315
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2052.97,
+        "spectral_centroid_std": 608.68,
+        "spectral_bandwidth_mean": 2417.39,
+        "spectral_flatness_mean": 0.013484,
+        "spectral_flatness_std": 0.020311,
+        "spectral_rolloff_mean": 4610.55
+      },
+      "dynamics": {
+        "rms_mean": 0.078273,
+        "rms_std": 0.037962,
+        "dynamic_range_db": 52.98,
+        "rms_db_mean": -9.16
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8993,
+        "percussive_ratio": 0.1007,
+        "dissonance_proxy": 0.013484,
+        "dissonance_std": 0.020311
+      },
+      "grid": {
+        "beat_s": 0.5,
+        "tatum_s": 0.25,
+        "tatums_per_beat": 2,
+        "beats_per_bar": 4,
+        "origin_s": 0.52454,
+        "duration_s": 241.0,
+        "scores": {
+          "beat_fit_resid_ms": 6.611,
+          "R_beat/2": 0.4498,
+          "R_beat/3": 0.0837,
+          "R_beat/4": 0.815,
+          "begin_end": [
+            {
+              "bpm": 120.0091319189154,
+              "phase_absolute_s": 0.03660017969452728,
+              "resid_ms": 11.452935980464499
+            },
+            {
+              "bpm": 119.92594414490134,
+              "phase_absolute_s": 0.01919349587032826,
+              "resid_ms": 39.721382346346516
+            }
+          ],
+          "tempo_candidates": [
+            {
+              "bpm": 240.00143450017518,
+              "coherences": {
+                "1": 0.44979885751532933,
+                "2": 0.8150152747802436,
+                "3": 0.3604518598574193,
+                "4": 0.5139587837813436
+              }
+            },
+            {
+              "bpm": 120.00071725008759,
+              "coherences": {
+                "1": 0.1732711348110058,
+                "2": 0.44979885751532933,
+                "3": 0.08372790111486483,
+                "4": 0.8150152747802436
+              }
+            },
+            {
+              "bpm": 60.000358625043795,
+              "coherences": {
+                "1": 0.06605443745463296,
+                "2": 0.1732711348110058,
+                "3": 0.02275721601956958,
+                "4": 0.44979885751532933
+              }
+            }
+          ],
+          "origin_candidates": [
+            {
+              "origin": 0.5245387260257267,
+              "detail": {
+                "chroma_novelty": [
+                  0.595,
+                  0.781,
+                  -1.71,
+                  0.334
+                ],
+                "low_onsets": [
+                  -0.077,
+                  1.104,
+                  -1.574,
+                  0.547
+                ],
+                "total": [
+                  0.518,
+                  1.885,
+                  -3.284,
+                  0.881
+                ]
+              }
+            },
+            {
+              "origin": 0.1495387260257267,
+              "detail": {
+                "chroma_novelty": [
+                  0.463,
+                  -0.131,
+                  -1.528,
+                  1.197
+                ],
+                "low_onsets": [
+                  0.376,
+                  -0.26,
+                  1.317,
+                  -1.434
+                ],
+                "total": [
+                  0.839,
+                  -0.391,
+                  -0.211,
+                  -0.237
+                ]
+              }
+            },
+            {
+              "origin": 0.2745387260257267,
+              "detail": {
+                "chroma_novelty": [
+                  0.416,
+                  -1.016,
+                  -0.843,
+                  1.443
+                ],
+                "low_onsets": [
+                  0.363,
+                  -0.624,
+                  1.443,
+                  -1.182
+                ],
+                "total": [
+                  0.779,
+                  -1.641,
+                  0.6,
+                  0.262
+                ]
+              }
+            },
+            {
+              "origin": 0.3995387260257267,
+              "detail": {
+                "chroma_novelty": [
+                  0.686,
+                  -1.578,
+                  -0.121,
+                  1.013
+                ],
+                "low_onsets": [
+                  0.799,
+                  -1.678,
+                  0.721,
+                  0.157
+                ],
+                "total": [
+                  1.485,
+                  -3.256,
+                  0.6,
+                  1.17
+                ]
+              }
+            }
+          ],
+          "phase_sixteenth": 0.024538726025726723,
+          "origin_method": "sixteenth phase constrained to regressed quarter-beat phase; harmonic novelty and bass onset comparison; first-beat confidence medium"
+        },
+        "bar_s": 2.0,
+        "meter": "4/4",
+        "bpm": 120.0,
+        "quarter_bpm": 120.0,
+        "n_bars": 120
+      }
+    },
+    "38_nativitate": {
+      "rhythm": {
+        "detected_tempo": 80.7,
+        "beat_count": 270,
+        "onset_rate": 1.89,
+        "tempo_stability": 0.9692,
+        "duration": 219.0
+      },
+      "tonal": {
+        "estimated_key": "D#",
+        "key_strength": 1.4962,
+        "tonal_power_ratio": 0.3528,
+        "chroma_entropy": 3.5171,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "harmonic_minor",
+          "score": 0.8489,
+          "margin": 0.0094,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "aeolian",
+            "score": 0.8395
+          }
+        }
+      },
+      "chroma_mean": [
+        0.6093,
+        0.6786,
+        0.7378,
+        0.7743,
+        0.6056,
+        0.5068,
+        0.4807,
+        0.4538,
+        0.4203,
+        0.3263,
+        0.3373,
+        0.2792
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2296.41,
+        "spectral_centroid_std": 476.73,
+        "spectral_bandwidth_mean": 2395.0,
+        "spectral_flatness_mean": 0.016316,
+        "spectral_flatness_std": 0.014708,
+        "spectral_rolloff_mean": 4892.68
+      },
+      "dynamics": {
+        "rms_mean": 0.0735,
+        "rms_std": 0.029031,
+        "dynamic_range_db": 54.02,
+        "rms_db_mean": -7.66
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.7758,
+        "percussive_ratio": 0.2242,
+        "dissonance_proxy": 0.016316,
+        "dissonance_std": 0.014708
+      }
+    },
+    "40_puslo_profundum": {
+      "rhythm": {
+        "detected_tempo": 95.7,
+        "beat_count": 400,
+        "onset_rate": 2.36,
+        "tempo_stability": 0.9665,
+        "duration": 271.0
+      },
+      "tonal": {
+        "estimated_key": "C#",
+        "key_strength": 1.4268,
+        "tonal_power_ratio": 0.3423,
+        "chroma_entropy": 3.5228,
+        "mode": {
+          "tonic": "C",
+          "tonic_pc": 0,
+          "mode": "harmonic_minor",
+          "score": 0.8394,
+          "margin": 0.0068,
+          "runner_up": {
+            "tonic": "C#",
+            "mode": "major",
+            "score": 0.8325
+          }
+        }
+      },
+      "chroma_mean": [
+        0.6459,
+        0.7182,
+        0.7034,
+        0.5963,
+        0.4858,
+        0.5249,
+        0.5385,
+        0.5333,
+        0.3725,
+        0.3072,
+        0.2778,
+        0.3367
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1099.33,
+        "spectral_centroid_std": 477.1,
+        "spectral_bandwidth_mean": 1710.63,
+        "spectral_flatness_mean": 0.002968,
+        "spectral_flatness_std": 0.02523,
+        "spectral_rolloff_mean": 2154.91
+      },
+      "dynamics": {
+        "rms_mean": 0.066548,
+        "rms_std": 0.028748,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -9.41
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8297,
+        "percussive_ratio": 0.1703,
+        "dissonance_proxy": 0.002968,
+        "dissonance_std": 0.02523
+      }
+    },
+    "42_terminus": {
+      "rhythm": {
+        "detected_tempo": 107.7,
+        "beat_count": 406,
+        "onset_rate": 1.64,
+        "tempo_stability": 0.9765,
+        "duration": 231.0
+      },
+      "tonal": {
+        "estimated_key": "D#",
+        "key_strength": 1.3192,
+        "tonal_power_ratio": 0.3242,
+        "chroma_entropy": 3.528,
+        "mode": {
+          "tonic": "C#",
+          "tonic_pc": 1,
+          "mode": "harmonic_minor",
+          "score": 0.8506,
+          "margin": 0.014,
+          "runner_up": {
+            "tonic": "D",
+            "mode": "harmonic_minor",
+            "score": 0.8367
+          }
+        }
+      },
+      "chroma_mean": [
+        0.5664,
+        0.7252,
+        0.6946,
+        0.7601,
+        0.7561,
+        0.6633,
+        0.5987,
+        0.6361,
+        0.48,
+        0.4117,
+        0.3205,
+        0.3015
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2255.05,
+        "spectral_centroid_std": 549.68,
+        "spectral_bandwidth_mean": 2402.18,
+        "spectral_flatness_mean": 0.020488,
+        "spectral_flatness_std": 0.04365,
+        "spectral_rolloff_mean": 4967.63
+      },
+      "dynamics": {
+        "rms_mean": 0.11273,
+        "rms_std": 0.022315,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -4.56
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.7973,
+        "percussive_ratio": 0.2027,
+        "dissonance_proxy": 0.020488,
+        "dissonance_std": 0.04365
+      }
+    },
+    "47_river_of_despair": {
+      "rhythm": {
+        "detected_tempo": 143.6,
+        "beat_count": 575,
+        "onset_rate": 1.12,
+        "tempo_stability": 0.9733,
+        "duration": 247.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.4085,
+        "tonal_power_ratio": 0.3277,
+        "chroma_entropy": 3.5237,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.8518,
+          "margin": 0.0061,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "dorian",
+            "score": 0.8457
+          }
+        }
+      },
+      "chroma_mean": [
+        0.3028,
+        0.3424,
+        0.4745,
+        0.433,
+        0.4165,
+        0.4171,
+        0.4044,
+        0.3707,
+        0.2177,
+        0.2511,
+        0.2545,
+        0.1577
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2039.89,
+        "spectral_centroid_std": 571.37,
+        "spectral_bandwidth_mean": 2196.0,
+        "spectral_flatness_mean": 0.009824,
+        "spectral_flatness_std": 0.034698,
+        "spectral_rolloff_mean": 4447.17
+      },
+      "dynamics": {
+        "rms_mean": 0.134487,
+        "rms_std": 0.027165,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -4.7
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8935,
+        "percussive_ratio": 0.1065,
+        "dissonance_proxy": 0.009824,
+        "dissonance_std": 0.034698
+      }
+    },
+    "49_fissure": {
+      "rhythm": {
+        "detected_tempo": 136.0,
+        "beat_count": 511,
+        "onset_rate": 2.99,
+        "tempo_stability": 0.9789,
+        "duration": 232.0
+      },
+      "tonal": {
+        "estimated_key": "E",
+        "key_strength": 1.4715,
+        "tonal_power_ratio": 0.3448,
+        "chroma_entropy": 3.5231,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "major",
+          "score": 0.8579,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "E",
+            "mode": "dorian",
+            "score": 0.8579
+          }
+        }
+      },
+      "chroma_mean": [
+        0.2848,
+        0.3977,
+        0.4235,
+        0.4679,
+        0.5833,
+        0.462,
+        0.5035,
+        0.5534,
+        0.2997,
+        0.2826,
+        0.2323,
+        0.2665
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2402.72,
+        "spectral_centroid_std": 716.17,
+        "spectral_bandwidth_mean": 2394.25,
+        "spectral_flatness_mean": 0.018566,
+        "spectral_flatness_std": 0.042091,
+        "spectral_rolloff_mean": 5068.98
+      },
+      "dynamics": {
+        "rms_mean": 0.127134,
+        "rms_std": 0.030004,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -4.95
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8921,
+        "percussive_ratio": 0.1079,
+        "dissonance_proxy": 0.018566,
+        "dissonance_std": 0.042091
+      }
+    },
+    "51_walls_of_denial": {
+      "rhythm": {
+        "detected_tempo": 117.5,
+        "beat_count": 428,
+        "onset_rate": 2.39,
+        "tempo_stability": 0.9771,
+        "duration": 260.0
+      },
+      "tonal": {
+        "estimated_key": "G",
+        "key_strength": 1.2937,
+        "tonal_power_ratio": 0.3132,
+        "chroma_entropy": 3.5411,
+        "mode": {
+          "tonic": "C",
+          "tonic_pc": 0,
+          "mode": "phrygian",
+          "score": 0.8786,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "C#",
+            "mode": "lydian",
+            "score": 0.8786
+          }
+        }
+      },
+      "chroma_mean": [
+        0.5187,
+        0.5357,
+        0.4869,
+        0.5665,
+        0.4942,
+        0.573,
+        0.4691,
+        0.5982,
+        0.4365,
+        0.2845,
+        0.3302,
+        0.2553
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2445.12,
+        "spectral_centroid_std": 586.62,
+        "spectral_bandwidth_mean": 2350.38,
+        "spectral_flatness_mean": 0.024618,
+        "spectral_flatness_std": 0.040924,
+        "spectral_rolloff_mean": 5074.17
+      },
+      "dynamics": {
+        "rms_mean": 0.108426,
+        "rms_std": 0.02566,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -5.19
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8148,
+        "percussive_ratio": 0.1852,
+        "dissonance_proxy": 0.024618,
+        "dissonance_std": 0.040924
+      }
+    },
+    "53_carrion": {
+      "rhythm": {
+        "detected_tempo": 215.3,
+        "beat_count": 684,
+        "onset_rate": 1.31,
+        "tempo_stability": 0.9623,
+        "duration": 236.0
+      },
+      "tonal": {
+        "estimated_key": "C",
+        "key_strength": 2.7686,
+        "tonal_power_ratio": 0.4356,
+        "chroma_entropy": 3.3727,
+        "mode": {
+          "tonic": "C",
+          "tonic_pc": 0,
+          "mode": "phrygian",
+          "score": 0.8672,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "C#",
+            "mode": "lydian",
+            "score": 0.8672
+          }
+        }
+      },
+      "chroma_mean": [
+        0.7697,
+        0.3662,
+        0.2267,
+        0.3118,
+        0.2425,
+        0.3068,
+        0.1576,
+        0.3172,
+        0.2103,
+        0.1048,
+        0.186,
+        0.1365
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 998.33,
+        "spectral_centroid_std": 552.84,
+        "spectral_bandwidth_mean": 1448.87,
+        "spectral_flatness_mean": 0.006597,
+        "spectral_flatness_std": 0.074906,
+        "spectral_rolloff_mean": 2179.71
+      },
+      "dynamics": {
+        "rms_mean": 0.110187,
+        "rms_std": 0.043103,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -7.57
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.9303,
+        "percussive_ratio": 0.0697,
+        "dissonance_proxy": 0.006597,
+        "dissonance_std": 0.074906
+      }
+    },
+    "55_caesarian": {
+      "rhythm": {
+        "detected_tempo": 89.1,
+        "beat_count": 269,
+        "onset_rate": 1.82,
+        "tempo_stability": 0.9708,
+        "duration": 183.0
+      },
+      "tonal": {
+        "estimated_key": "E",
+        "key_strength": 1.4537,
+        "tonal_power_ratio": 0.3479,
+        "chroma_entropy": 3.5103,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.8587,
+          "margin": 0.0195,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "aeolian",
+            "score": 0.8392
+          }
+        }
+      },
+      "chroma_mean": [
+        0.3538,
+        0.4699,
+        0.5781,
+        0.5501,
+        0.6038,
+        0.552,
+        0.3287,
+        0.2594,
+        0.3873,
+        0.3098,
+        0.4113,
+        0.1804
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1731.32,
+        "spectral_centroid_std": 659.78,
+        "spectral_bandwidth_mean": 2278.8,
+        "spectral_flatness_mean": 0.007333,
+        "spectral_flatness_std": 0.038491,
+        "spectral_rolloff_mean": 4105.0
+      },
+      "dynamics": {
+        "rms_mean": 0.097834,
+        "rms_std": 0.041054,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -8.23
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.9368,
+        "percussive_ratio": 0.0632,
+        "dissonance_proxy": 0.007333,
+        "dissonance_std": 0.038491
+      }
+    },
+    "58_night_soil": {
+      "rhythm": {
+        "detected_tempo": 123.0,
+        "beat_count": 566,
+        "onset_rate": 2.57,
+        "tempo_stability": 0.9681,
+        "duration": 286.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.4305,
+        "tonal_power_ratio": 0.3229,
+        "chroma_entropy": 3.5398,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.8907,
+          "margin": 0.004,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "mixolydian",
+            "score": 0.8867
+          }
+        }
+      },
+      "chroma_mean": [
+        0.4753,
+        0.4963,
+        0.6721,
+        0.5037,
+        0.5686,
+        0.58,
+        0.4115,
+        0.4589,
+        0.3152,
+        0.5416,
+        0.3698,
+        0.2454
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 1944.23,
+        "spectral_centroid_std": 654.86,
+        "spectral_bandwidth_mean": 2193.96,
+        "spectral_flatness_mean": 0.013713,
+        "spectral_flatness_std": 0.037612,
+        "spectral_rolloff_mean": 4187.49
+      },
+      "dynamics": {
+        "rms_mean": 0.090618,
+        "rms_std": 0.034539,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -7.32
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8413,
+        "percussive_ratio": 0.1587,
+        "dissonance_proxy": 0.013713,
+        "dissonance_std": 0.037612
+      }
+    },
+    "59_absentia": {
+      "rhythm": {
+        "detected_tempo": 107.7,
+        "beat_count": 444,
+        "onset_rate": 2.55,
+        "tempo_stability": 0.9722,
+        "duration": 258.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 2.2504,
+        "tonal_power_ratio": 0.3888,
+        "chroma_entropy": 3.4667,
+        "mode": {
+          "tonic": "D",
+          "tonic_pc": 2,
+          "mode": "harmonic_minor",
+          "score": 0.8599,
+          "margin": 0.0141,
+          "runner_up": {
+            "tonic": "C",
+            "mode": "mixolydian",
+            "score": 0.8458
+          }
+        }
+      },
+      "chroma_mean": [
+        0.2568,
+        0.3212,
+        0.8689,
+        0.4079,
+        0.4149,
+        0.4667,
+        0.403,
+        0.2963,
+        0.2471,
+        0.4661,
+        0.2857,
+        0.199
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2660.04,
+        "spectral_centroid_std": 421.5,
+        "spectral_bandwidth_mean": 2261.94,
+        "spectral_flatness_mean": 0.020931,
+        "spectral_flatness_std": 0.066371,
+        "spectral_rolloff_mean": 5218.93
+      },
+      "dynamics": {
+        "rms_mean": 0.105314,
+        "rms_std": 0.02168,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -4.9
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.853,
+        "percussive_ratio": 0.147,
+        "dissonance_proxy": 0.020931,
+        "dissonance_std": 0.066371
+      }
+    },
+    "60_morning_star": {
+      "rhythm": {
+        "detected_tempo": 112.3,
+        "beat_count": 531,
+        "onset_rate": 0.75,
+        "tempo_stability": 0.9725,
+        "duration": 302.0
+      },
+      "tonal": {
+        "estimated_key": "D",
+        "key_strength": 1.7327,
+        "tonal_power_ratio": 0.3594,
+        "chroma_entropy": 3.5009,
+        "mode": {
+          "tonic": "C",
+          "tonic_pc": 0,
+          "mode": "dorian",
+          "score": 0.8533,
+          "margin": 0.0,
+          "runner_up": {
+            "tonic": "D",
+            "mode": "phrygian",
+            "score": 0.8533
+          }
+        }
+      },
+      "chroma_mean": [
+        0.4344,
+        0.4589,
+        0.7097,
+        0.4525,
+        0.4177,
+        0.5979,
+        0.3682,
+        0.3733,
+        0.347,
+        0.3652,
+        0.2113,
+        0.1786
+      ],
+      "spectral": {
+        "spectral_centroid_mean": 2093.8,
+        "spectral_centroid_std": 601.7,
+        "spectral_bandwidth_mean": 2263.29,
+        "spectral_flatness_mean": 0.013996,
+        "spectral_flatness_std": 0.053315,
+        "spectral_rolloff_mean": 4500.54
+      },
+      "dynamics": {
+        "rms_mean": 0.135987,
+        "rms_std": 0.027881,
+        "dynamic_range_db": 80.0,
+        "rms_db_mean": -4.67
+      },
+      "dissonance": {
+        "harmonic_ratio": 0.8776,
+        "percussive_ratio": 0.1224,
+        "dissonance_proxy": 0.013996,
+        "dissonance_std": 0.053315
+      }
+    }
+  },
+  "meta": {
+    "02_diptera_sonata": {
+      "title": "Diptera Sonata",
+      "zone": "basement",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "04_sodden_hollow": {
+      "title": "Sodden Hollow",
+      "zone": "caves",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "06_abyss": {
+      "title": "Abyss",
+      "zone": "depths",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "09_viscera": {
+      "title": "Viscera",
+      "zone": "womb",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "13_duress": {
+      "title": "Duress",
+      "zone": "sheol",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "17_everlasting_hymn": {
+      "title": "Everlasting Hymn",
+      "zone": "cathedral",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "21_periculum": {
+      "title": "Periculum",
+      "zone": "cellar",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "22_capiticus_calvaria": {
+      "title": "Capiticus Calvaria",
+      "zone": "catacombs",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "23_when_blood_dries": {
+      "title": "When Blood Dries",
+      "zone": "necropolis",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "24_sketches_of_pain": {
+      "title": "Sketches of Pain",
+      "zone": "chest",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "26_devoid": {
+      "title": "Devoid",
+      "zone": "dark_room",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "35_cicatrix": {
+      "title": "Cicatrix",
+      "zone": "scarred_womb",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "36_fundamentum": {
+      "title": "Fundamentum",
+      "zone": "burning_basement",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "37_kave_diluvii": {
+      "title": "Kave Diluvii",
+      "zone": "flooded_caves",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "38_nativitate": {
+      "title": "Nativitate",
+      "zone": "blue_womb",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "40_puslo_profundum": {
+      "title": "Puslo Profundum",
+      "zone": "dank_depths",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "42_terminus": {
+      "title": "Terminus",
+      "zone": "void",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "47_river_of_despair": {
+      "title": "River Of Despair",
+      "zone": "downpour",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "49_fissure": {
+      "title": "Fissure",
+      "zone": "mines",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "51_walls_of_denial": {
+      "title": "Walls Of Denial",
+      "zone": "mausoleum",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "53_carrion": {
+      "title": "Carrion",
+      "zone": "corpse",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "55_caesarian": {
+      "title": "Caesarian",
+      "zone": "utero",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "58_night_soil": {
+      "title": "Night Soil",
+      "zone": "dross",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "59_absentia": {
+      "title": "Absentia",
+      "zone": "ashpit",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    },
+    "60_morning_star": {
+      "title": "Morning Star",
+      "zone": "gehenna",
+      "type": "zone",
+      "author": "Ridiculon (Matthias Bossi, Jon Evans)",
+      "license": "Droits réservés (Ridiculon / Nicalis / Edmund McMillen) : analyse et inspiration seulement, audio et transcriptions jamais commités"
+    }
+  },
+  "context": {
+    "track_ids": [
+      "02_diptera_sonata",
+      "04_sodden_hollow",
+      "06_abyss",
+      "09_viscera",
+      "13_duress",
+      "17_everlasting_hymn",
+      "21_periculum",
+      "22_capiticus_calvaria",
+      "23_when_blood_dries",
+      "24_sketches_of_pain",
+      "26_devoid",
+      "35_cicatrix",
+      "36_fundamentum",
+      "37_kave_diluvii",
+      "38_nativitate",
+      "40_puslo_profundum",
+      "42_terminus",
+      "47_river_of_despair",
+      "49_fissure",
+      "51_walls_of_denial",
+      "53_carrion",
+      "55_caesarian",
+      "58_night_soil",
+      "59_absentia",
+      "60_morning_star"
+    ],
+    "stats": {
+      "rhythm.detected_tempo": {
+        "n": 25,
+        "mean": 114.712,
+        "std": 29.9257,
+        "min": 49.7,
+        "max": 215.3
+      },
+      "rhythm.onset_rate": {
+        "n": 25,
+        "mean": 1.8624,
+        "std": 0.6363,
+        "min": 0.75,
+        "max": 2.99
+      },
+      "rhythm.tempo_stability": {
+        "n": 25,
+        "mean": 0.9709,
+        "std": 0.0096,
+        "min": 0.9385,
+        "max": 0.9823
+      },
+      "tonal.key_strength": {
+        "n": 25,
+        "mean": 1.6503,
+        "std": 0.3543,
+        "min": 1.2609,
+        "max": 2.7686
+      },
+      "tonal.tonal_power_ratio": {
+        "n": 25,
+        "mean": 0.3523,
+        "std": 0.0335,
+        "min": 0.2985,
+        "max": 0.4356
+      },
+      "tonal.chroma_entropy": {
+        "n": 25,
+        "mean": 3.5098,
+        "std": 0.0391,
+        "min": 3.3727,
+        "max": 3.5658
+      },
+      "spectral.spectral_centroid_mean": {
+        "n": 25,
+        "mean": 1988.8284,
+        "std": 481.992,
+        "min": 998.33,
+        "max": 2660.04
+      },
+      "spectral.spectral_rolloff_mean": {
+        "n": 25,
+        "mean": 4336.8204,
+        "std": 1030.7677,
+        "min": 2154.91,
+        "max": 5844.17
+      },
+      "spectral.spectral_flatness_mean": {
+        "n": 25,
+        "mean": 0.0146,
+        "std": 0.0079,
+        "min": 0.003,
+        "max": 0.0337
+      },
+      "dynamics.rms_mean": {
+        "n": 25,
+        "mean": 0.0898,
+        "std": 0.0243,
+        "min": 0.0443,
+        "max": 0.136
+      },
+      "dynamics.dynamic_range_db": {
+        "n": 25,
+        "mean": 75.7344,
+        "std": 8.531,
+        "min": 52.98,
+        "max": 80.0
+      },
+      "dissonance.harmonic_ratio": {
+        "n": 25,
+        "mean": 0.8515,
+        "std": 0.051,
+        "min": 0.7527,
+        "max": 0.9418
+      },
+      "dissonance.percussive_ratio": {
+        "n": 25,
+        "mean": 0.1485,
+        "std": 0.051,
+        "min": 0.0582,
+        "max": 0.2473
+      }
+    },
+    "modes": {
+      "dorian@C": 2,
+      "harmonic_minor@C": 1,
+      "harmonic_minor@C#": 5,
+      "harmonic_minor@D": 9,
+      "harmonic_minor@F": 2,
+      "major@C#": 2,
+      "major@D": 2,
+      "phrygian@C": 2
+    }
+  },
+  "caves_analysis": {
+    "method": "whole-track mix measures; htdemucs principal stems; grid regression and 60/120/240 candidates; no human audition",
+    "principal_id": "04_sodden_hollow",
+    "stem_features": {
+      "bass": {
+        "rms": 0.03289572149515152,
+        "centroid_hz": 874.1922835715142,
+        "flatness": 0.04256439208984375,
+        "chroma": [
+          0.6703755259513855,
+          0.6643126606941223,
+          0.6584119200706482,
+          0.6816215515136719,
+          0.6911965608596802,
+          0.6906644701957703,
+          0.6496897339820862,
+          0.6829331517219543,
+          0.6623024940490723,
+          0.7017934918403625,
+          0.7487083673477173,
+          0.7210636138916016
+        ],
+        "rms_8s": [
+          0.02276018261909485,
+          0.004425209015607834,
+          0.010862286202609539,
+          0.0016929552657529712,
+          0.06181049346923828,
+          0.06250949203968048,
+          0.06208132952451706,
+          0.06209423765540123,
+          0.000476358225569129,
+          0.0004545538395177573,
+          0.002636343939229846,
+          0.014973364770412445,
+          0.02205280214548111,
+          0.008070670999586582,
+          0.02211223542690277,
+          0.009230618365108967,
+          0.007487064693123102,
+          0.021467331796884537,
+          0.060354020446538925,
+          0.06135401874780655,
+          0.061552178114652634,
+          0.062028881162405014,
+          0.004523164127022028,
+          0.013922427780926228,
+          0.008283653296530247,
+          0.006476408336311579,
+          0.01035689190030098,
+          0.010008820332586765,
+          0.028282245621085167,
+          0.0034494097344577312,
+          6.683786068606423e-06,
+          1.7135944574420137e-07
+        ],
+        "low_energy_share": 0.9637035131454468
+      },
+      "drums": {
+        "rms": 0.04721350595355034,
+        "centroid_hz": 3926.0841617468823,
+        "flatness": 0.10091497749090195,
+        "chroma": [
+          0.7302314639091492,
+          0.7595171928405762,
+          0.8000728487968445,
+          0.8324215412139893,
+          0.7811675071716309,
+          0.7658839225769043,
+          0.7460277080535889,
+          0.7150331735610962,
+          0.7914817333221436,
+          0.7381051778793335,
+          0.70283442735672,
+          0.7206733226776123
+        ],
+        "rms_8s": [
+          0.048638783395290375,
+          0.0485176220536232,
+          0.05014505982398987,
+          0.05084032565355301,
+          0.05176682770252228,
+          0.047945037484169006,
+          0.05096863955259323,
+          0.052334535866975784,
+          0.051223669201135635,
+          0.050217561423778534,
+          0.0495077446103096,
+          0.05013407766819,
+          0.04981297627091408,
+          0.05183783173561096,
+          0.047283947467803955,
+          0.047050412744283676,
+          0.0494682677090168,
+          0.04885793477296829,
+          0.048243019729852676,
+          0.04735027998685837,
+          0.04997091367840767,
+          0.04950554296374321,
+          0.04886093735694885,
+          0.04903877526521683,
+          0.048267994076013565,
+          0.04947401583194733,
+          0.04887770116329193,
+          0.05015087500214577,
+          0.04552910104393959,
+          0.0030874558724462986,
+          0.0020420376677066088,
+          0.00044636649545282125
+        ],
+        "low_energy_share": 0.9431667327880859
+      },
+      "other": {
+        "rms": 0.04500564932823181,
+        "centroid_hz": 1546.1468364012962,
+        "flatness": 0.004820539150387049,
+        "chroma": [
+          0.5707150101661682,
+          0.6891775727272034,
+          0.5726863145828247,
+          0.6824610233306885,
+          0.5666401982307434,
+          0.4460890591144562,
+          0.4911330044269562,
+          0.5563337206840515,
+          0.586820662021637,
+          0.6393020749092102,
+          0.6194894909858704,
+          0.5086595416069031
+        ],
+        "rms_8s": [
+          0.030366459861397743,
+          0.04689691588282585,
+          0.040869999676942825,
+          0.043078821152448654,
+          0.017221512272953987,
+          0.017717143520712852,
+          0.020502177998423576,
+          0.021608199924230576,
+          0.05055984482169151,
+          0.04344413802027702,
+          0.052958209067583084,
+          0.037700407207012177,
+          0.05015698820352554,
+          0.03504249453544617,
+          0.0458054319024086,
+          0.07166038453578949,
+          0.05720394477248192,
+          0.05678733438253403,
+          0.035326551645994186,
+          0.03642472252249718,
+          0.03577208146452904,
+          0.036326080560684204,
+          0.061849016696214676,
+          0.061083681881427765,
+          0.06735946238040924,
+          0.055189646780490875,
+          0.06844840943813324,
+          0.06175243854522705,
+          0.03430643305182457,
+          0.004967723041772842,
+          0.0025810012593865395,
+          0.0007044024532660842
+        ],
+        "low_energy_share": 0.3918752074241638
+      },
+      "vocals": {
+        "rms": 0.005715822335332632,
+        "centroid_hz": 2204.5887350686703,
+        "flatness": 0.06375973671674728,
+        "chroma": [
+          0.6004223227500916,
+          0.5422772169113159,
+          0.5886077284812927,
+          0.6794142127037048,
+          0.5881039500236511,
+          0.4961971640586853,
+          0.5115377902984619,
+          0.5161916017532349,
+          0.4587559103965759,
+          0.4784975051879883,
+          0.5240444540977478,
+          0.5698137879371643
+        ],
+        "rms_8s": [
+          0.0006923453765921295,
+          0.009357614442706108,
+          0.0013647126033902168,
+          0.0019126511178910732,
+          0.002135616261512041,
+          0.010396999306976795,
+          0.005669927224516869,
+          0.0010638614185154438,
+          0.004664237145334482,
+          0.0011513049248605967,
+          0.0009411440696567297,
+          0.0077776615507900715,
+          0.002277918392792344,
+          0.006712899077683687,
+          0.010841703973710537,
+          0.00525931129232049,
+          0.000290860392851755,
+          0.000392778281820938,
+          0.00016469410911668092,
+          0.0032275307457894087,
+          0.004822914954274893,
+          0.00020488498557824641,
+          0.000744105433113873,
+          0.00048474938375875354,
+          0.0005502567510120571,
+          0.013296373188495636,
+          0.00450690696015954,
+          0.008623591624200344,
+          0.013491852208971977,
+          0.005412636324763298,
+          7.978373105288483e-06,
+          7.332792506531405e-08
+        ],
+        "low_energy_share": 0.0021727404091507196
+      }
+    },
+    "principal_structure": {
+      "grid": {
+        "beat_s": 0.5,
+        "tatum_s": 0.25,
+        "tatums_per_beat": 2,
+        "beats_per_bar": 4,
+        "origin_s": 0.82832,
+        "duration_s": 254.0,
+        "scores": {
+          "beat_fit_resid_ms": 8.921,
+          "R_beat/2": 0.0464,
+          "R_beat/3": 0.2689,
+          "R_beat/4": 0.82,
+          "begin_end": [
+            {
+              "bpm": 120.00369965235227,
+              "phase_absolute_s": 0.33996226545351776,
+              "resid_ms": 9.302571164556337
+            },
+            {
+              "bpm": 119.98523825430163,
+              "phase_absolute_s": 0.3350896004470014,
+              "resid_ms": 7.929495226091106
+            }
+          ],
+          "tempo_candidates": [
+            {
+              "bpm": 240.00007777189435,
+              "coherences": {
+                "1": 0.0464256261213244,
+                "2": 0.8200410591773296,
+                "3": 0.040770692937685586,
+                "4": 0.5004131940092872
+              }
+            },
+            {
+              "bpm": 120.00003888594718,
+              "coherences": {
+                "1": 0.20633034099903877,
+                "2": 0.0464256261213244,
+                "3": 0.26886022663636716,
+                "4": 0.8200410591773296
+              }
+            },
+            {
+              "bpm": 60.00001944297359,
+              "coherences": {
+                "1": 0.11131411315299278,
+                "2": 0.20633034099903877,
+                "3": 0.06783241314710649,
+                "4": 0.0464256261213244
+              }
+            }
+          ],
+          "origin_candidates": [
+            {
+              "origin": 0.07831966605076343,
+              "detail": {
+                "chroma_novelty": [
+                  1.19,
+                  -1.082,
+                  0.785,
+                  -0.893
+                ],
+                "low_onsets": [
+                  0.74,
+                  0.153,
+                  0.785,
+                  -1.677
+                ],
+                "total": [
+                  1.93,
+                  -0.929,
+                  1.57,
+                  -2.57
+                ]
+              }
+            },
+            {
+              "origin": 1.2033196660507635,
+              "detail": {
+                "chroma_novelty": [
+                  -0.431,
+                  -1.353,
+                  0.451,
+                  1.334
+                ],
+                "low_onsets": [
+                  -0.449,
+                  1.606,
+                  -0.054,
+                  -1.103
+                ],
+                "total": [
+                  -0.881,
+                  0.253,
+                  0.397,
+                  0.231
+                ]
+              }
+            },
+            {
+              "origin": 0.8283196660507635,
+              "detail": {
+                "chroma_novelty": [
+                  -1.27,
+                  -0.475,
+                  0.308,
+                  1.437
+                ],
+                "low_onsets": [
+                  -0.792,
+                  1.714,
+                  -0.531,
+                  -0.391
+                ],
+                "total": [
+                  -2.062,
+                  1.239,
+                  -0.223,
+                  1.047
+                ]
+              }
+            },
+            {
+              "origin": 1.9533196660507635,
+              "detail": {
+                "chroma_novelty": [
+                  -1.339,
+                  0.627,
+                  -0.528,
+                  1.24
+                ],
+                "low_onsets": [
+                  -0.963,
+                  0.574,
+                  -0.96,
+                  1.35
+                ],
+                "total": [
+                  -2.302,
+                  1.2,
+                  -1.487,
+                  2.589
+                ]
+              }
+            }
+          ],
+          "phase_sixteenth": 0.07831966605076343,
+          "origin_method": "sixteenth phase constrained to regressed quarter-beat phase; harmonic novelty and bass onset comparison; first-beat confidence medium"
+        },
+        "bar_s": 2.0,
+        "meter": "4/4",
+        "bpm": 120.0,
+        "quarter_bpm": 120.0,
+        "n_bars": 126
+      },
+      "structure": {
+        "n_bars": 126,
+        "loop_scores": {
+          "1": {
+            "score": 0.0288,
+            "pairs": 125
+          },
+          "2": {
+            "score": 0.0192,
+            "pairs": 124
+          },
+          "3": {
+            "score": -0.009,
+            "pairs": 123
+          },
+          "4": {
+            "score": 0.0196,
+            "pairs": 122
+          },
+          "5": {
+            "score": -0.0028,
+            "pairs": 121
+          },
+          "6": {
+            "score": 0.0177,
+            "pairs": 120
+          },
+          "7": {
+            "score": 0.0034,
+            "pairs": 119
+          },
+          "8": {
+            "score": 0.0268,
+            "pairs": 118
+          },
+          "9": {
+            "score": 0.0006,
+            "pairs": 117
+          },
+          "10": {
+            "score": 0.0135,
+            "pairs": 116
+          },
+          "11": {
+            "score": 0.0008,
+            "pairs": 115
+          },
+          "12": {
+            "score": 0.0141,
+            "pairs": 114
+          },
+          "13": {
+            "score": -0.0088,
+            "pairs": 113
+          },
+          "14": {
+            "score": -0.0016,
+            "pairs": 112
+          },
+          "15": {
+            "score": -0.0095,
+            "pairs": 111
+          },
+          "16": {
+            "score": 0.0089,
+            "pairs": 110
+          },
+          "17": {
+            "score": -0.0029,
+            "pairs": 109
+          },
+          "18": {
+            "score": 0.0069,
+            "pairs": 108
+          },
+          "19": {
+            "score": -0.0037,
+            "pairs": 107
+          },
+          "20": {
+            "score": 0.0,
+            "pairs": 106
+          },
+          "21": {
+            "score": -0.013,
+            "pairs": 105
+          },
+          "22": {
+            "score": 0.0055,
+            "pairs": 104
+          },
+          "23": {
+            "score": -0.0065,
+            "pairs": 103
+          },
+          "24": {
+            "score": 0.0121,
+            "pairs": 102
+          },
+          "25": {
+            "score": -0.0011,
+            "pairs": 101
+          },
+          "26": {
+            "score": 0.0094,
+            "pairs": 100
+          },
+          "27": {
+            "score": -0.0111,
+            "pairs": 99
+          },
+          "28": {
+            "score": -0.005,
+            "pairs": 98
+          },
+          "29": {
+            "score": -0.0089,
+            "pairs": 97
+          },
+          "30": {
+            "score": 0.0101,
+            "pairs": 96
+          },
+          "31": {
+            "score": 0.0037,
+            "pairs": 95
+          },
+          "32": {
+            "score": 0.0106,
+            "pairs": 94
+          },
+          "33": {
+            "score": -0.011,
+            "pairs": 93
+          },
+          "34": {
+            "score": 0.0005,
+            "pairs": 92
+          },
+          "35": {
+            "score": -0.0073,
+            "pairs": 91
+          },
+          "36": {
+            "score": 0.0074,
+            "pairs": 90
+          },
+          "37": {
+            "score": 0.0002,
+            "pairs": 89
+          },
+          "38": {
+            "score": 0.0093,
+            "pairs": 88
+          },
+          "39": {
+            "score": -0.0008,
+            "pairs": 87
+          },
+          "40": {
+            "score": 0.0064,
+            "pairs": 86
+          },
+          "41": {
+            "score": -0.0096,
+            "pairs": 85
+          },
+          "42": {
+            "score": -0.0002,
+            "pairs": 84
+          },
+          "43": {
+            "score": -0.0101,
+            "pairs": 83
+          },
+          "44": {
+            "score": 0.0047,
+            "pairs": 82
+          },
+          "45": {
+            "score": -0.0092,
+            "pairs": 81
+          },
+          "46": {
+            "score": 0.0073,
+            "pairs": 80
+          },
+          "47": {
+            "score": 0.003,
+            "pairs": 79
+          },
+          "48": {
+            "score": 0.028,
+            "pairs": 78
+          },
+          "49": {
+            "score": 0.0011,
+            "pairs": 77
+          },
+          "50": {
+            "score": 0.0067,
+            "pairs": 76
+          },
+          "51": {
+            "score": -0.0168,
+            "pairs": 75
+          },
+          "52": {
+            "score": -0.0064,
+            "pairs": 74
+          },
+          "53": {
+            "score": -0.027,
+            "pairs": 73
+          },
+          "54": {
+            "score": -0.0069,
+            "pairs": 72
+          },
+          "55": {
+            "score": 0.004,
+            "pairs": 71
+          },
+          "56": {
+            "score": 0.0586,
+            "pairs": 70
+          },
+          "57": {
+            "score": 0.0057,
+            "pairs": 69
+          },
+          "58": {
+            "score": -0.001,
+            "pairs": 68
+          },
+          "59": {
+            "score": -0.0214,
+            "pairs": 67
+          },
+          "60": {
+            "score": 0.0016,
+            "pairs": 66
+          },
+          "61": {
+            "score": -0.0145,
+            "pairs": 65
+          },
+          "62": {
+            "score": 0.0044,
+            "pairs": 64
+          },
+          "63": {
+            "score": -0.0062,
+            "pairs": 63
+          },
+          "64": {
+            "score": 0.0125,
+            "pairs": 62
+          }
+        },
+        "best_loop_bars": 56,
+        "sections": [
+          {
+            "section": 0,
+            "start_bar": 0,
+            "end_bar": 60,
+            "start_s": 0.83,
+            "end_s": 120.83
+          },
+          {
+            "section": 1,
+            "start_bar": 60,
+            "end_bar": 104,
+            "start_s": 120.83,
+            "end_s": 208.83
+          },
+          {
+            "section": 2,
+            "start_bar": 104,
+            "end_bar": 112,
+            "start_s": 208.83,
+            "end_s": 224.83
+          },
+          {
+            "section": 3,
+            "start_bar": 112,
+            "end_bar": 126,
+            "start_s": 224.83,
+            "end_s": 252.83
+          }
+        ],
+        "bar_starts_s": [
+          0.828,
+          2.828,
+          4.828,
+          6.828,
+          8.828,
+          10.828,
+          12.828,
+          14.828,
+          16.828,
+          18.828,
+          20.828,
+          22.828,
+          24.828,
+          26.828,
+          28.828,
+          30.828,
+          32.828,
+          34.828,
+          36.828,
+          38.828,
+          40.828,
+          42.828,
+          44.828,
+          46.828,
+          48.828,
+          50.828,
+          52.828,
+          54.828,
+          56.828,
+          58.828,
+          60.828,
+          62.828,
+          64.828,
+          66.828,
+          68.828,
+          70.828,
+          72.828,
+          74.828,
+          76.828,
+          78.828,
+          80.828,
+          82.828,
+          84.828,
+          86.828,
+          88.828,
+          90.828,
+          92.828,
+          94.828,
+          96.828,
+          98.828,
+          100.828,
+          102.828,
+          104.828,
+          106.828,
+          108.828,
+          110.828,
+          112.828,
+          114.828,
+          116.828,
+          118.828,
+          120.828,
+          122.828,
+          124.828,
+          126.828,
+          128.828,
+          130.828,
+          132.828,
+          134.828,
+          136.828,
+          138.828,
+          140.828,
+          142.828,
+          144.828,
+          146.828,
+          148.828,
+          150.828,
+          152.828,
+          154.828,
+          156.828,
+          158.828,
+          160.828,
+          162.828,
+          164.828,
+          166.828,
+          168.828,
+          170.828,
+          172.828,
+          174.828,
+          176.828,
+          178.828,
+          180.828,
+          182.828,
+          184.828,
+          186.828,
+          188.828,
+          190.828,
+          192.828,
+          194.828,
+          196.828,
+          198.828,
+          200.828,
+          202.828,
+          204.828,
+          206.828,
+          208.828,
+          210.828,
+          212.828,
+          214.828,
+          216.828,
+          218.828,
+          220.828,
+          222.828,
+          224.828,
+          226.828,
+          228.828,
+          230.828,
+          232.828,
+          234.828,
+          236.828,
+          238.828,
+          240.828,
+          242.828,
+          244.828,
+          246.828,
+          248.828,
+          250.828
+        ]
+      },
+      "chroma_per_bar": [
+        [
+          0.4073141813278198,
+          0.24014665186405182,
+          0.5633970499038696,
+          0.4029413163661957,
+          0.47545117139816284,
+          0.2834666967391968,
+          0.5368943810462952,
+          0.5317050218582153,
+          0.48661983013153076,
+          0.2896207571029663,
+          0.5462303757667542,
+          0.41618549823760986,
+          0.555241584777832,
+          0.3032669126987457,
+          0.5645520091056824,
+          0.5007164478302002,
+          0.3480702042579651,
+          0.6069116592407227,
+          0.6461635231971741,
+          0.4005254805088043,
+          0.3665549159049988,
+          0.6195955872535706,
+          0.6440183520317078,
+          0.44224560260772705,
+          0.34817326068878174,
+          0.6174460053443909,
+          0.6348605155944824,
+          0.42145004868507385,
+          0.3855099678039551,
+          0.6189161539077759,
+          0.6547864675521851,
+          0.480038583278656,
+          0.4592137336730957,
+          0.7312474846839905,
+          0.5590448379516602,
+          0.3808378577232361,
+          0.46123456954956055,
+          0.3380793631076813,
+          0.6219032406806946,
+          0.38913118839263916,
+          0.47199276089668274,
+          0.31119757890701294,
+          0.45530965924263,
+          0.31655851006507874,
+          0.60472571849823,
+          0.45356452465057373,
+          0.4638563096523285,
+          0.32571783661842346,
+          0.43929633498191833,
+          0.3540913462638855,
+          0.46283259987831116,
+          0.35618388652801514,
+          0.5128549933433533,
+          0.40021106600761414,
+          0.6634296774864197,
+          0.40171703696250916,
+          0.401716947555542,
+          0.2716841399669647,
+          0.5227594375610352,
+          0.29194188117980957,
+          0.3973560333251953,
+          0.16449257731437683,
+          0.3902311623096466,
+          0.22509507834911346,
+          0.4453982412815094,
+          0.2525477707386017,
+          0.482803612947464,
+          0.3068208694458008,
+          0.4765382409095764,
+          0.24272096157073975,
+          0.44823241233825684,
+          0.29392293095588684,
+          0.362236887216568,
+          0.4944324791431427,
+          0.6172633767127991,
+          0.3147597908973694,
+          0.36066779494285583,
+          0.4866217374801636,
+          0.6089774370193481,
+          0.3417064845561981,
+          0.3532360792160034,
+          0.5341693758964539,
+          0.5840110182762146,
+          0.33721286058425903,
+          0.38294821977615356,
+          0.5028455257415771,
+          0.6414979696273804,
+          0.3688136041164398,
+          0.4242117702960968,
+          0.5604252815246582,
+          0.48712578415870667,
+          0.30983859300613403,
+          0.38868388533592224,
+          0.27862241864204407,
+          0.4972483515739441,
+          0.27704980969429016,
+          0.43994128704071045,
+          0.25578072667121887,
+          0.38023269176483154,
+          0.25320345163345337,
+          0.46491456031799316,
+          0.24720658361911774,
+          0.44738468527793884,
+          0.30339452624320984,
+          0.37501564621925354,
+          0.18631045520305634,
+          0.4621298909187317,
+          0.3012949824333191,
+          0.40617987513542175,
+          0.2179896980524063,
+          0.4695560038089752,
+          0.2121507227420807,
+          0.39090168476104736,
+          0.23223617672920227,
+          0.5227382779121399,
+          0.281907320022583,
+          0.6531410813331604,
+          0.6823800206184387,
+          0.7004629373550415,
+          0.7744607329368591,
+          0.8760555386543274,
+          0.7082697153091431,
+          0.6452277898788452,
+          0.7467493414878845,
+          0.824623167514801,
+          0.5880018472671509
+        ],
+        [
+          0.6001070737838745,
+          0.4916652739048004,
+          0.7811158299446106,
+          0.5877875685691833,
+          0.9542819261550903,
+          0.9046761989593506,
+          0.9648988246917725,
+          0.877166211605072,
+          0.7007875442504883,
+          0.6520922780036926,
+          0.7522740960121155,
+          0.47909826040267944,
+          0.9070000052452087,
+          0.9765390753746033,
+          0.9195169806480408,
+          0.747139573097229,
+          0.482513964176178,
+          0.7481710314750671,
+          0.958770215511322,
+          0.4232237935066223,
+          0.46586525440216064,
+          0.7309873104095459,
+          0.9639630913734436,
+          0.41929715871810913,
+          0.4554748237133026,
+          0.714941680431366,
+          0.9658986330032349,
+          0.41836631298065186,
+          0.4469648003578186,
+          0.720315158367157,
+          0.93349289894104,
+          0.5465295314788818,
+          0.9653890132904053,
+          0.5426746010780334,
+          0.7244971394538879,
+          0.5744609236717224,
+          0.9486665725708008,
+          0.94669109582901,
+          0.892464816570282,
+          0.7989153265953064,
+          0.719238817691803,
+          0.9160177707672119,
+          0.972528874874115,
+          0.9575626254081726,
+          0.9177510738372803,
+          0.8417825102806091,
+          0.6701503396034241,
+          0.6300148963928223,
+          0.9397257566452026,
+          0.8823084235191345,
+          0.7256481647491455,
+          0.7363448739051819,
+          0.980408251285553,
+          0.8901868462562561,
+          0.8774756789207458,
+          0.45982563495635986,
+          0.5691354870796204,
+          0.49107471108436584,
+          0.7350762486457825,
+          0.4003244936466217,
+          0.7507128119468689,
+          0.4517224431037903,
+          0.6740622520446777,
+          0.35077282786369324,
+          0.6419041156768799,
+          0.49869248270988464,
+          0.67080157995224,
+          0.39852598309516907,
+          0.7694203853607178,
+          0.6943215727806091,
+          0.6862900853157043,
+          0.4275400936603546,
+          0.4718930125236511,
+          0.6641120314598083,
+          0.9390851259231567,
+          0.3218246102333069,
+          0.4742967486381531,
+          0.6458675861358643,
+          0.9435495138168335,
+          0.32462063431739807,
+          0.4669223129749298,
+          0.7016890048980713,
+          0.936461865901947,
+          0.33683234453201294,
+          0.45006781816482544,
+          0.6592849493026733,
+          0.9253842830657959,
+          0.47647324204444885,
+          0.8743701577186584,
+          0.48054584860801697,
+          0.6242393851280212,
+          0.4516774117946625,
+          0.77302086353302,
+          0.6418755054473877,
+          0.7002925276756287,
+          0.5923015475273132,
+          0.6857895255088806,
+          0.7908539175987244,
+          0.7803437113761902,
+          0.6539744138717651,
+          0.7182387113571167,
+          0.42120495438575745,
+          0.6554423570632935,
+          0.535632312297821,
+          0.7617292404174805,
+          0.41218721866607666,
+          0.7185976505279541,
+          0.5436974167823792,
+          0.762594997882843,
+          0.4211682677268982,
+          0.644404947757721,
+          0.2606108784675598,
+          0.5537732243537903,
+          0.4818916618824005,
+          0.750697135925293,
+          0.4034598767757416,
+          0.6788655519485474,
+          0.965801477432251,
+          0.8629352450370789,
+          0.9340646266937256,
+          0.8684724569320679,
+          0.9390393495559692,
+          0.846642255783081,
+          0.9209727644920349,
+          0.9120901226997375,
+          0.9475137591362
+        ],
+        [
+          0.5311450362205505,
+          0.28715744614601135,
+          0.6874064803123474,
+          0.42107129096984863,
+          0.6055893898010254,
+          0.39646100997924805,
+          0.6608728170394897,
+          0.505306601524353,
+          0.6063536405563354,
+          0.34914493560791016,
+          0.6738547682762146,
+          0.4486004710197449,
+          0.5332614779472351,
+          0.3303903639316559,
+          0.6440050601959229,
+          0.5963088274002075,
+          0.6313236951828003,
+          0.6471349596977234,
+          0.6410733461380005,
+          0.5021926164627075,
+          0.6313952803611755,
+          0.6429352164268494,
+          0.6437432765960693,
+          0.4695519804954529,
+          0.6057322025299072,
+          0.6497507691383362,
+          0.6480315923690796,
+          0.48980629444122314,
+          0.5942383408546448,
+          0.6509458422660828,
+          0.635957658290863,
+          0.37013790011405945,
+          0.4940316677093506,
+          0.3632979393005371,
+          0.633299708366394,
+          0.4133240878582001,
+          0.5725806355476379,
+          0.4077693521976471,
+          0.6787363290786743,
+          0.40868252515792847,
+          0.6531270146369934,
+          0.38971182703971863,
+          0.5704929828643799,
+          0.34907427430152893,
+          0.7202751040458679,
+          0.47916510701179504,
+          0.5772150754928589,
+          0.47127005457878113,
+          0.6286720633506775,
+          0.46097055077552795,
+          0.6107272505760193,
+          0.3940977156162262,
+          0.5449230670928955,
+          0.3682485818862915,
+          0.7582179307937622,
+          0.4485926032066345,
+          0.5343872904777527,
+          0.36689087748527527,
+          0.6843637228012085,
+          0.3466784358024597,
+          0.5162413716316223,
+          0.22209779918193817,
+          0.5059952139854431,
+          0.2322181612253189,
+          0.5765247941017151,
+          0.3242173194885254,
+          0.6248894333839417,
+          0.3431893289089203,
+          0.48134011030197144,
+          0.29256975650787354,
+          0.5248234868049622,
+          0.3618747889995575,
+          0.6002691984176636,
+          0.5365428924560547,
+          0.6149401664733887,
+          0.3828381896018982,
+          0.6334187984466553,
+          0.5224791169166565,
+          0.6120221018791199,
+          0.37089937925338745,
+          0.6086837649345398,
+          0.5643167495727539,
+          0.6104459166526794,
+          0.38393712043762207,
+          0.5993705987930298,
+          0.5366103649139404,
+          0.6121822595596313,
+          0.2799021005630493,
+          0.5007385611534119,
+          0.310129851102829,
+          0.5562665462493896,
+          0.35836121439933777,
+          0.47486573457717896,
+          0.33551687002182007,
+          0.5655949711799622,
+          0.3308824896812439,
+          0.6101028919219971,
+          0.32867029309272766,
+          0.47717463970184326,
+          0.283704936504364,
+          0.5642780065536499,
+          0.29667189717292786,
+          0.5876671671867371,
+          0.46200817823410034,
+          0.5543896555900574,
+          0.24521468579769135,
+          0.6259527206420898,
+          0.380558580160141,
+          0.4513239860534668,
+          0.22067414224147797,
+          0.5495067238807678,
+          0.24296793341636658,
+          0.5002981424331665,
+          0.2973180413246155,
+          0.6578740477561951,
+          0.28581684827804565,
+          0.6156913638114929,
+          0.5786766409873962,
+          0.6876579523086548,
+          0.6592226028442383,
+          0.7702458500862122,
+          0.60081946849823,
+          0.621929943561554,
+          0.6210048794746399,
+          0.7487614750862122,
+          0.49326762557029724
+        ],
+        [
+          0.9428640007972717,
+          0.9869813919067383,
+          0.9276733994483948,
+          0.9497182369232178,
+          0.6199613809585571,
+          0.41312628984451294,
+          0.5859491229057312,
+          0.5172279477119446,
+          0.910161018371582,
+          0.9230173230171204,
+          0.9346668124198914,
+          0.9808782339096069,
+          0.7562561631202698,
+          0.3832109272480011,
+          0.671890139579773,
+          0.5891538858413696,
+          0.7599182724952698,
+          0.6777058243751526,
+          0.5727099180221558,
+          0.5175195932388306,
+          0.7331113815307617,
+          0.6727707982063293,
+          0.5617867708206177,
+          0.5321249961853027,
+          0.7761491537094116,
+          0.7226194739341736,
+          0.5853732824325562,
+          0.5956854820251465,
+          0.757602334022522,
+          0.7274664044380188,
+          0.6195061206817627,
+          0.5820549726486206,
+          0.7016000151634216,
+          0.4576571583747864,
+          0.9511528015136719,
+          0.8790595531463623,
+          0.7547204494476318,
+          0.4728522300720215,
+          0.7142468094825745,
+          0.6553530693054199,
+          0.9051002264022827,
+          0.42779552936553955,
+          0.5934533476829529,
+          0.37937507033348083,
+          0.76156085729599,
+          0.8254827260971069,
+          0.9638593196868896,
+          0.9399328231811523,
+          0.7674232125282288,
+          0.5211572051048279,
+          0.9185580611228943,
+          0.8441919684410095,
+          0.5551871061325073,
+          0.7631767392158508,
+          0.8399247527122498,
+          0.9599452614784241,
+          0.9809262752532959,
+          0.9976979494094849,
+          0.9704697132110596,
+          0.9154272079467773,
+          0.5098889470100403,
+          0.23075221478939056,
+          0.4293648302555084,
+          0.28910186886787415,
+          0.8270462155342102,
+          0.8453319668769836,
+          0.9779321551322937,
+          0.9624893665313721,
+          0.6251406073570251,
+          0.47092100977897644,
+          0.5492903590202332,
+          0.5680387020111084,
+          0.759061872959137,
+          0.6356739401817322,
+          0.5906367897987366,
+          0.36795341968536377,
+          0.7421206831932068,
+          0.6293506026268005,
+          0.5806769132614136,
+          0.3972376585006714,
+          0.7788125872612,
+          0.6963657140731812,
+          0.595855176448822,
+          0.43391987681388855,
+          0.7662324905395508,
+          0.6819876432418823,
+          0.6509076952934265,
+          0.36873847246170044,
+          0.6271190643310547,
+          0.3929733335971832,
+          0.9992581605911255,
+          0.750004231929779,
+          0.5854511260986328,
+          0.5568891763687134,
+          0.5865450501441956,
+          0.5866221785545349,
+          0.8650743961334229,
+          0.35933083295822144,
+          0.48579663038253784,
+          0.324067622423172,
+          0.5839869379997253,
+          0.458254337310791,
+          0.9183358550071716,
+          0.8895313143730164,
+          0.6175188422203064,
+          0.256967157125473,
+          0.9511497616767883,
+          0.7043212056159973,
+          0.4523741602897644,
+          0.40985479950904846,
+          0.5621635913848877,
+          0.45297321677207947,
+          0.984262228012085,
+          0.9959977865219116,
+          0.9643454551696777,
+          0.9935109615325928,
+          0.9690446853637695,
+          0.5254732370376587,
+          0.6860069632530212,
+          0.5047211050987244,
+          0.6650381088256836,
+          0.49606770277023315,
+          0.6383986473083496,
+          0.4867640733718872,
+          0.6082605123519897,
+          0.405561238527298
+        ],
+        [
+          0.3874044120311737,
+          0.2218392789363861,
+          0.5475788116455078,
+          0.3581772744655609,
+          0.6079297065734863,
+          0.5632964968681335,
+          0.6528988480567932,
+          0.7349643111228943,
+          0.48387837409973145,
+          0.31191131472587585,
+          0.545329213142395,
+          0.37022456526756287,
+          0.6401901245117188,
+          0.6932291984558105,
+          0.7189309000968933,
+          0.7006930112838745,
+          0.30304986238479614,
+          0.7527002096176147,
+          0.5311760306358337,
+          0.3324507176876068,
+          0.2740691304206848,
+          0.7779261469841003,
+          0.5583710074424744,
+          0.33737659454345703,
+          0.2991955876350403,
+          0.8036242723464966,
+          0.5923745632171631,
+          0.38661766052246094,
+          0.3127617835998535,
+          0.7694149613380432,
+          0.5830025672912598,
+          0.629755973815918,
+          0.46434587240219116,
+          0.3990991711616516,
+          0.4640863537788391,
+          0.38413068652153015,
+          0.6460683345794678,
+          0.6230370402336121,
+          0.8139076232910156,
+          0.6778932809829712,
+          0.4836406409740448,
+          0.30707108974456787,
+          0.65705806016922,
+          0.5502588152885437,
+          0.6595730185508728,
+          0.7470842599868774,
+          0.5229999423027039,
+          0.3826349079608917,
+          0.6608944535255432,
+          0.7897598743438721,
+          0.4402867555618286,
+          0.3479851186275482,
+          0.6113573312759399,
+          0.7379371523857117,
+          0.6131637692451477,
+          0.38187938928604126,
+          0.39457428455352783,
+          0.3749310374259949,
+          0.6104803085327148,
+          0.3323102593421936,
+          0.49025073647499084,
+          0.30203643441200256,
+          0.4694603681564331,
+          0.2738218605518341,
+          0.4750976860523224,
+          0.33312106132507324,
+          0.5415544509887695,
+          0.3258286714553833,
+          0.533092200756073,
+          0.4695374667644501,
+          0.5695865154266357,
+          0.32884424924850464,
+          0.2965300679206848,
+          0.628383219242096,
+          0.5124984383583069,
+          0.23517517745494843,
+          0.2791171371936798,
+          0.6702169179916382,
+          0.5300536751747131,
+          0.24759256839752197,
+          0.30638009309768677,
+          0.7082940340042114,
+          0.5561524033546448,
+          0.2590063214302063,
+          0.3121877908706665,
+          0.6273497343063354,
+          0.5737583637237549,
+          0.4177989959716797,
+          0.4311814308166504,
+          0.36491477489471436,
+          0.45108893513679504,
+          0.3427513837814331,
+          0.5106630921363831,
+          0.4305238127708435,
+          0.6370959281921387,
+          0.43906310200691223,
+          0.4808375835418701,
+          0.24095624685287476,
+          0.49129605293273926,
+          0.3790580928325653,
+          0.5132702589035034,
+          0.33724650740623474,
+          0.5367766618728638,
+          0.41649964451789856,
+          0.542715311050415,
+          0.34387266635894775,
+          0.4870619773864746,
+          0.3528120815753937,
+          0.46629831194877625,
+          0.3520538806915283,
+          0.4934820532798767,
+          0.2532751262187958,
+          0.3785354197025299,
+          0.2962696850299835,
+          0.6726638674736023,
+          0.3848324120044708,
+          0.6164444088935852,
+          0.4938637912273407,
+          0.5367007851600647,
+          0.4821182191371918,
+          0.5402858853340149,
+          0.475323885679245,
+          0.5089175701141357,
+          0.48078852891921997,
+          0.5013130307197571,
+          0.43179085850715637
+        ],
+        [
+          0.31438133120536804,
+          0.16993369162082672,
+          0.3926681578159332,
+          0.27582988142967224,
+          0.3618619740009308,
+          0.258867084980011,
+          0.42589685320854187,
+          0.31060755252838135,
+          0.4001575708389282,
+          0.25487878918647766,
+          0.39828845858573914,
+          0.2585298418998718,
+          0.37829843163490295,
+          0.26106131076812744,
+          0.43098437786102295,
+          0.49689891934394836,
+          0.20682892203330994,
+          0.6485573649406433,
+          0.45063334703445435,
+          0.2798841893672943,
+          0.21347209811210632,
+          0.6848675608634949,
+          0.49210023880004883,
+          0.2745719850063324,
+          0.2024509310722351,
+          0.6711909770965576,
+          0.48213666677474976,
+          0.4179703891277313,
+          0.23975172638893127,
+          0.6554944515228271,
+          0.4917072057723999,
+          0.5062400102615356,
+          0.5431109070777893,
+          0.7698701620101929,
+          0.4588639438152313,
+          0.27837422490119934,
+          0.386277437210083,
+          0.2655610144138336,
+          0.49830830097198486,
+          0.3156644105911255,
+          0.446522980928421,
+          0.5612184405326843,
+          0.35369494557380676,
+          0.24245457351207733,
+          0.454892098903656,
+          0.3138561248779297,
+          0.44991764426231384,
+          0.2288409322500229,
+          0.32957717776298523,
+          0.29683923721313477,
+          0.4260666072368622,
+          0.31051257252693176,
+          0.3849966824054718,
+          0.3117655813694,
+          0.511208713054657,
+          0.29487282037734985,
+          0.32186493277549744,
+          0.23202143609523773,
+          0.4088917672634125,
+          0.251958966255188,
+          0.3121527135372162,
+          0.14477525651454926,
+          0.32819369435310364,
+          0.16330832242965698,
+          0.38934090733528137,
+          0.2460407018661499,
+          0.38780730962753296,
+          0.262037992477417,
+          0.33489683270454407,
+          0.2655112147331238,
+          0.35923415422439575,
+          0.2566777765750885,
+          0.2117510437965393,
+          0.5529083013534546,
+          0.4552004635334015,
+          0.23587150871753693,
+          0.2144278585910797,
+          0.5887342691421509,
+          0.4808409512042999,
+          0.2244374006986618,
+          0.2092127650976181,
+          0.6249004602432251,
+          0.49318867921829224,
+          0.29046228528022766,
+          0.23723889887332916,
+          0.6020791530609131,
+          0.4819633662700653,
+          0.26368117332458496,
+          0.5013338923454285,
+          0.8473975658416748,
+          0.4123232662677765,
+          0.288494735956192,
+          0.3135373294353485,
+          0.2664450407028198,
+          0.4078885316848755,
+          0.2783597409725189,
+          0.42658233642578125,
+          0.4399550259113312,
+          0.2922492027282715,
+          0.23866602778434753,
+          0.37508997321128845,
+          0.21062365174293518,
+          0.4288521111011505,
+          0.26287853717803955,
+          0.2950819730758667,
+          0.16112035512924194,
+          0.4354773163795471,
+          0.28945866227149963,
+          0.3058251738548279,
+          0.19180187582969666,
+          0.38627752661705017,
+          0.17388440668582916,
+          0.31148967146873474,
+          0.17281629145145416,
+          0.4103468656539917,
+          0.17301858961582184,
+          0.42669275403022766,
+          0.6470864415168762,
+          0.5845311880111694,
+          0.6623773574829102,
+          0.6425608992576599,
+          0.6696231365203857,
+          0.5685193538665771,
+          0.6859259605407715,
+          0.6089590191841125,
+          0.5720099806785583
+        ],
+        [
+          0.31903308629989624,
+          0.15241122245788574,
+          0.311433345079422,
+          0.37261226773262024,
+          0.35896289348602295,
+          0.23763179779052734,
+          0.36985042691230774,
+          0.5999186038970947,
+          0.3037591874599457,
+          0.19801348447799683,
+          0.3363744020462036,
+          0.2862169146537781,
+          0.43569818139076233,
+          0.2718331515789032,
+          0.4091150164604187,
+          0.48529505729675293,
+          0.21614466607570648,
+          0.5390561819076538,
+          0.2804911434650421,
+          0.42464619874954224,
+          0.1965756118297577,
+          0.5397308468818665,
+          0.32442858815193176,
+          0.504892110824585,
+          0.19796229898929596,
+          0.5398918986320496,
+          0.30481386184692383,
+          0.36885586380958557,
+          0.2302914261817932,
+          0.5383625030517578,
+          0.3156731128692627,
+          0.4919096529483795,
+          0.3085428476333618,
+          0.2685619294643402,
+          0.3517507016658783,
+          0.2852877378463745,
+          0.39441508054733276,
+          0.29709604382514954,
+          0.4313485026359558,
+          0.3982699513435364,
+          0.2796366810798645,
+          0.24855999648571014,
+          0.3856881558895111,
+          0.25040340423583984,
+          0.3781614899635315,
+          0.3178338408470154,
+          0.3173922300338745,
+          0.1887086033821106,
+          0.29702043533325195,
+          0.3900448977947235,
+          0.3712954521179199,
+          0.2514808475971222,
+          0.3688323199748993,
+          0.3270905613899231,
+          0.40029460191726685,
+          0.2643839418888092,
+          0.3519348204135895,
+          0.28693264722824097,
+          0.38997194170951843,
+          0.38585320115089417,
+          0.30204451084136963,
+          0.15051156282424927,
+          0.30635467171669006,
+          0.46983563899993896,
+          0.3449864387512207,
+          0.25724563002586365,
+          0.38862866163253784,
+          0.5020910501480103,
+          0.4053918719291687,
+          0.5437668561935425,
+          0.36640891432762146,
+          0.48016348481178284,
+          0.22224847972393036,
+          0.6820594668388367,
+          0.5274681448936462,
+          0.4364239573478699,
+          0.2000460922718048,
+          0.6909336447715759,
+          0.5253971219062805,
+          0.48101842403411865,
+          0.20344170928001404,
+          0.6607219576835632,
+          0.5767072439193726,
+          0.42726990580558777,
+          0.23045334219932556,
+          0.7104586958885193,
+          0.514301061630249,
+          0.46611320972442627,
+          0.31969866156578064,
+          0.5339508056640625,
+          0.4092490077018738,
+          0.5662016868591309,
+          0.34911444783210754,
+          0.5454883575439453,
+          0.3621187210083008,
+          0.6140455007553101,
+          0.2912680506706238,
+          0.26441746950149536,
+          0.3350984454154968,
+          0.528134286403656,
+          0.33648329973220825,
+          0.4447489082813263,
+          0.371827632188797,
+          0.2957504093647003,
+          0.27447348833084106,
+          0.21949563920497894,
+          0.43602225184440613,
+          0.2955709993839264,
+          0.29953616857528687,
+          0.19256006181240082,
+          0.33644646406173706,
+          0.18471798300743103,
+          0.31656861305236816,
+          0.15515047311782837,
+          0.30862879753112793,
+          0.26733967661857605,
+          0.5077885389328003,
+          0.5822805762290955,
+          0.7624406218528748,
+          0.6303044557571411,
+          0.6020041108131409,
+          0.6116188168525696,
+          0.7061503529548645,
+          0.6338881850242615,
+          0.585369884967804,
+          0.44173893332481384
+        ],
+        [
+          0.333478718996048,
+          0.18034100532531738,
+          0.3243163228034973,
+          0.3253403902053833,
+          0.5101940035820007,
+          0.35182616114616394,
+          0.3809296488761902,
+          0.3926594853401184,
+          0.5078273415565491,
+          0.32384735345840454,
+          0.4220576286315918,
+          0.33258265256881714,
+          0.5226443409919739,
+          0.37150880694389343,
+          0.41280874609947205,
+          0.47077712416648865,
+          0.2241215854883194,
+          0.4913650155067444,
+          0.3214302361011505,
+          0.27066683769226074,
+          0.22742794454097748,
+          0.49794578552246094,
+          0.3531399667263031,
+          0.3009468615055084,
+          0.22166591882705688,
+          0.49369126558303833,
+          0.3756420314311981,
+          0.24117618799209595,
+          0.2377234846353531,
+          0.4714388847351074,
+          0.34444689750671387,
+          0.4368319511413574,
+          0.32295721769332886,
+          0.2858831584453583,
+          0.49372780323028564,
+          0.38301166892051697,
+          0.4594758152961731,
+          0.4116688668727875,
+          0.38244566321372986,
+          0.34520503878593445,
+          0.3787094056606293,
+          0.21242064237594604,
+          0.45593854784965515,
+          0.3369068205356598,
+          0.3773432970046997,
+          0.3646043539047241,
+          0.4391307830810547,
+          0.323613703250885,
+          0.39747491478919983,
+          0.5900121927261353,
+          0.4674166440963745,
+          0.3521757125854492,
+          0.4500838816165924,
+          0.4412692189216614,
+          0.38011935353279114,
+          0.22309032082557678,
+          0.4455506503582001,
+          0.5163789987564087,
+          0.5395094752311707,
+          0.5657060146331787,
+          0.45526766777038574,
+          0.24396637082099915,
+          0.33813977241516113,
+          0.3228713572025299,
+          0.555755078792572,
+          0.46925947070121765,
+          0.6456591486930847,
+          0.5534093379974365,
+          0.4511665403842926,
+          0.5056637525558472,
+          0.3720943033695221,
+          0.5232019424438477,
+          0.23261992633342743,
+          0.6332035064697266,
+          0.4219617247581482,
+          0.29448553919792175,
+          0.22878696024417877,
+          0.6254579424858093,
+          0.4635121524333954,
+          0.3510367274284363,
+          0.22449737787246704,
+          0.6140163540840149,
+          0.43144723773002625,
+          0.350622296333313,
+          0.23689770698547363,
+          0.5516571998596191,
+          0.46313148736953735,
+          0.39389365911483765,
+          0.3614571690559387,
+          0.39280498027801514,
+          0.6021496653556824,
+          0.5880077481269836,
+          0.3723258078098297,
+          0.5548299551010132,
+          0.35329875349998474,
+          0.46941083669662476,
+          0.504776120185852,
+          0.26244404911994934,
+          0.4144012928009033,
+          0.4281938672065735,
+          0.3588164746761322,
+          0.36812084913253784,
+          0.554746687412262,
+          0.5741012692451477,
+          0.35944226384162903,
+          0.33431676030158997,
+          0.6197121739387512,
+          0.5460950136184692,
+          0.38422301411628723,
+          0.28710123896598816,
+          0.33960285782814026,
+          0.2249479442834854,
+          0.35773617029190063,
+          0.21237805485725403,
+          0.3196731507778168,
+          0.2196832001209259,
+          0.4970199167728424,
+          0.5383625626564026,
+          0.6770517826080322,
+          0.5775496959686279,
+          0.6720408797264099,
+          0.5562283396720886,
+          0.6349932551383972,
+          0.5660869479179382,
+          0.5879554152488708,
+          0.39518019556999207
+        ],
+        [
+          0.22989705204963684,
+          0.16270974278450012,
+          0.2629833519458771,
+          0.23635263741016388,
+          0.25755083560943604,
+          0.29112187027931213,
+          0.3093436658382416,
+          0.3121110498905182,
+          0.31967952847480774,
+          0.17267942428588867,
+          0.2547290623188019,
+          0.23587431013584137,
+          0.28873369097709656,
+          0.24336548149585724,
+          0.2939392328262329,
+          0.4500472843647003,
+          0.15662217140197754,
+          0.4104573428630829,
+          0.27814722061157227,
+          0.41144055128097534,
+          0.13835610449314117,
+          0.40525156259536743,
+          0.3337470293045044,
+          0.43848147988319397,
+          0.1715758889913559,
+          0.4005261957645416,
+          0.31857049465179443,
+          0.4014469087123871,
+          0.15756180882453918,
+          0.3900999426841736,
+          0.3214729130268097,
+          0.5531006455421448,
+          0.6918176412582397,
+          0.555015504360199,
+          0.36548811197280884,
+          0.19061119854450226,
+          0.3384954333305359,
+          0.4581266939640045,
+          0.32612499594688416,
+          0.2868194580078125,
+          0.31814756989479065,
+          0.883171796798706,
+          0.3021772503852844,
+          0.20897702872753143,
+          0.3266468346118927,
+          0.28753986954689026,
+          0.32198554277420044,
+          0.21820388734340668,
+          0.2722854018211365,
+          0.25420117378234863,
+          0.25170519948005676,
+          0.25649359822273254,
+          0.3698481321334839,
+          0.24027039110660553,
+          0.3816121518611908,
+          0.25064313411712646,
+          0.25511372089385986,
+          0.2305309772491455,
+          0.30161252617836,
+          0.265128493309021,
+          0.2701667845249176,
+          0.21857884526252747,
+          0.26547494530677795,
+          0.4210563004016876,
+          0.31956592202186584,
+          0.2300468236207962,
+          0.26592960953712463,
+          0.25054848194122314,
+          0.2856537103652954,
+          0.559298574924469,
+          0.3423701226711273,
+          0.5683486461639404,
+          0.1632743924856186,
+          0.5115365386009216,
+          0.2937316596508026,
+          0.5213959217071533,
+          0.142059788107872,
+          0.49551495909690857,
+          0.3323279917240143,
+          0.5708445906639099,
+          0.18426921963691711,
+          0.5429189205169678,
+          0.3294406235218048,
+          0.5293846130371094,
+          0.16167740523815155,
+          0.5133547186851501,
+          0.32728177309036255,
+          0.4933066666126251,
+          0.869860827922821,
+          0.521550714969635,
+          0.34241020679473877,
+          0.2320946753025055,
+          0.312894731760025,
+          0.6529222130775452,
+          0.35121309757232666,
+          0.6516832709312439,
+          0.40619003772735596,
+          0.9403034448623657,
+          0.33143991231918335,
+          0.45503881573677063,
+          0.32464247941970825,
+          0.4909498989582062,
+          0.31374064087867737,
+          0.27083098888397217,
+          0.2775631546974182,
+          0.225198894739151,
+          0.278836727142334,
+          0.27947404980659485,
+          0.33498719334602356,
+          0.23805074393749237,
+          0.3474254012107849,
+          0.24579115211963654,
+          0.22141896188259125,
+          0.16003575921058655,
+          0.24072356522083282,
+          0.12760169804096222,
+          0.4100569784641266,
+          0.5592556595802307,
+          0.5864323377609253,
+          0.6846618056297302,
+          0.6138817071914673,
+          0.5822587013244629,
+          0.5691013336181641,
+          0.6631055474281311,
+          0.5380871295928955,
+          0.5300663709640503
+        ],
+        [
+          0.17941583693027496,
+          0.11544930934906006,
+          0.19465726613998413,
+          0.21770396828651428,
+          0.615761935710907,
+          0.7997799515724182,
+          0.6196337938308716,
+          0.6829217672348022,
+          0.3097967207431793,
+          0.14952188730239868,
+          0.16827985644340515,
+          0.2514936923980713,
+          0.6039036512374878,
+          0.7169846892356873,
+          0.5253539681434631,
+          0.5323982238769531,
+          0.15765947103500366,
+          0.28193163871765137,
+          0.1983039826154709,
+          0.3901594281196594,
+          0.1535857617855072,
+          0.2969124913215637,
+          0.20336604118347168,
+          0.3840569853782654,
+          0.1966875195503235,
+          0.2744190990924835,
+          0.18434837460517883,
+          0.3829919993877411,
+          0.12731251120567322,
+          0.2865738868713379,
+          0.2200884073972702,
+          0.6145196557044983,
+          0.20583225786685944,
+          0.38674065470695496,
+          0.26039037108421326,
+          0.17573031783103943,
+          0.6016702651977539,
+          0.6110694408416748,
+          0.4061635434627533,
+          0.3884488344192505,
+          0.20583947002887726,
+          0.21854333579540253,
+          0.5381515622138977,
+          0.5930047035217285,
+          0.47102972865104675,
+          0.6237452030181885,
+          0.27628418803215027,
+          0.19278275966644287,
+          0.578940749168396,
+          0.5812705159187317,
+          0.18311770260334015,
+          0.22771970927715302,
+          0.603978157043457,
+          0.6148534417152405,
+          0.2785683572292328,
+          0.21394744515419006,
+          0.22881509363651276,
+          0.2234765887260437,
+          0.24533072113990784,
+          0.24094128608703613,
+          0.8827981352806091,
+          1.0,
+          0.9645677804946899,
+          0.632358729839325,
+          0.31303974986076355,
+          0.1952124685049057,
+          0.21942906081676483,
+          0.27402257919311523,
+          0.9610130190849304,
+          0.7099617719650269,
+          0.9354749917984009,
+          0.3663021922111511,
+          0.15840718150138855,
+          0.27982690930366516,
+          0.2145153284072876,
+          0.6166650652885437,
+          0.15940362215042114,
+          0.26914647221565247,
+          0.2167123556137085,
+          0.6264059543609619,
+          0.20159085094928741,
+          0.2791264057159424,
+          0.1955319344997406,
+          0.6429147124290466,
+          0.13913196325302124,
+          0.2783704996109009,
+          0.22044940292835236,
+          0.6605544686317444,
+          0.2611425220966339,
+          0.34366244077682495,
+          0.27616792917251587,
+          0.2223040610551834,
+          0.9312224984169006,
+          0.6649510860443115,
+          0.8979045152664185,
+          0.3855685293674469,
+          0.24001474678516388,
+          0.2831186354160309,
+          0.9103753566741943,
+          0.754208505153656,
+          0.914450466632843,
+          0.6329593658447266,
+          0.29060283303260803,
+          0.24132047593593597,
+          0.902060866355896,
+          1.0,
+          0.27888238430023193,
+          0.24865880608558655,
+          0.9347144961357117,
+          0.9866806864738464,
+          0.9167798757553101,
+          0.9893624186515808,
+          0.21642445027828217,
+          0.13466911017894745,
+          0.17787794768810272,
+          0.15678586065769196,
+          0.5980966091156006,
+          0.690579354763031,
+          0.7870702743530273,
+          0.7314403653144836,
+          0.8659418821334839,
+          0.7920864820480347,
+          0.7903864979743958,
+          0.7790483832359314,
+          0.8767973184585571,
+          0.7036428451538086
+        ],
+        [
+          0.5456466674804688,
+          0.456233412027359,
+          0.34656429290771484,
+          0.6609490513801575,
+          0.2009013593196869,
+          0.19334562122821808,
+          0.19399625062942505,
+          0.2631117105484009,
+          0.6475633382797241,
+          0.6882315874099731,
+          0.4076034724712372,
+          0.6180249452590942,
+          0.23560941219329834,
+          0.17487061023712158,
+          0.218185156583786,
+          0.328045517206192,
+          0.18432477116584778,
+          0.21409966051578522,
+          0.1536756157875061,
+          0.29022151231765747,
+          0.18294744193553925,
+          0.27648481726646423,
+          0.1741432100534439,
+          0.32308462262153625,
+          0.2161572426557541,
+          0.2611049711704254,
+          0.18068116903305054,
+          0.31702539324760437,
+          0.20317605137825012,
+          0.2514541447162628,
+          0.18699288368225098,
+          0.41545048356056213,
+          0.20865164697170258,
+          0.25078949332237244,
+          0.6785638928413391,
+          0.8763634562492371,
+          0.23686814308166504,
+          0.21193410456180573,
+          0.2280876636505127,
+          0.3334786593914032,
+          0.588729739189148,
+          0.3352440893650055,
+          0.2104913741350174,
+          0.18533660471439362,
+          0.256511390209198,
+          0.27864471077919006,
+          0.6743967533111572,
+          0.6900727152824402,
+          0.2067025899887085,
+          0.3241834342479706,
+          0.6200580596923828,
+          0.837288498878479,
+          0.2310461699962616,
+          0.2508257031440735,
+          0.21042869985103607,
+          0.2401435673236847,
+          0.6452202200889587,
+          0.7087703347206116,
+          0.6515560746192932,
+          0.814077615737915,
+          0.21216179430484772,
+          0.15252453088760376,
+          0.20172998309135437,
+          0.20248503983020782,
+          0.8548373579978943,
+          0.9337233901023865,
+          0.6072853803634644,
+          0.6714546084403992,
+          0.24441464245319366,
+          0.4163164496421814,
+          0.22488732635974884,
+          0.4226917028427124,
+          0.1937410831451416,
+          0.34583643078804016,
+          0.23451882600784302,
+          0.2806566059589386,
+          0.19077351689338684,
+          0.37051111459732056,
+          0.30814477801322937,
+          0.29266834259033203,
+          0.22337545454502106,
+          0.3929540514945984,
+          0.26313459873199463,
+          0.29372361302375793,
+          0.20563794672489166,
+          0.3251558840274811,
+          0.30686625838279724,
+          0.3139793872833252,
+          0.19672070443630219,
+          0.2222844511270523,
+          0.5824142098426819,
+          0.8767803907394409,
+          0.22081120312213898,
+          0.3495355248451233,
+          0.2274574488401413,
+          0.36544981598854065,
+          0.7117311954498291,
+          0.24536924064159393,
+          0.21900266408920288,
+          0.25833332538604736,
+          0.24790725111961365,
+          0.24817249178886414,
+          0.8615766763687134,
+          0.8673329949378967,
+          0.24110983312129974,
+          0.21061795949935913,
+          0.7225677371025085,
+          0.9915244579315186,
+          0.23082704842090607,
+          0.18948790431022644,
+          0.2143157422542572,
+          0.19901195168495178,
+          0.5181438326835632,
+          0.511357307434082,
+          0.364104300737381,
+          0.6245529651641846,
+          0.5158812999725342,
+          0.5833616256713867,
+          0.568840503692627,
+          0.6780292391777039,
+          0.5812637805938721,
+          0.6052226424217224,
+          0.5288417935371399,
+          0.6890679597854614,
+          0.5784918665885925,
+          0.565267026424408
+        ],
+        [
+          0.11261284351348877,
+          0.09931547939777374,
+          0.12543965876102448,
+          0.22006453573703766,
+          0.23029445111751556,
+          0.20796531438827515,
+          0.2003760188817978,
+          0.34592312574386597,
+          0.17566128075122833,
+          0.15573261678218842,
+          0.17600522935390472,
+          0.20354203879833221,
+          0.26211753487586975,
+          0.22996801137924194,
+          0.17581936717033386,
+          0.3423178493976593,
+          0.12662237882614136,
+          0.23332738876342773,
+          0.16638155281543732,
+          0.3167543113231659,
+          0.12292122095823288,
+          0.24878165125846863,
+          0.21374507248401642,
+          0.3432798683643341,
+          0.12258277833461761,
+          0.2477157860994339,
+          0.21113531291484833,
+          0.32454386353492737,
+          0.14238499104976654,
+          0.25715938210487366,
+          0.1984749436378479,
+          0.41208040714263916,
+          0.2639508545398712,
+          0.2317700982093811,
+          0.18245841562747955,
+          0.22301582992076874,
+          0.26357340812683105,
+          0.23470954596996307,
+          0.19993220269680023,
+          0.20827066898345947,
+          0.19748088717460632,
+          0.24294611811637878,
+          0.22495214641094208,
+          0.21066194772720337,
+          0.20859304070472717,
+          0.2931419610977173,
+          0.23330506682395935,
+          0.17546288669109344,
+          0.18364205956459045,
+          0.25134825706481934,
+          0.15120971202850342,
+          0.18403898179531097,
+          0.2564380466938019,
+          0.2849632799625397,
+          0.19882959127426147,
+          0.2130785584449768,
+          0.1492350697517395,
+          0.19038541615009308,
+          0.1793685108423233,
+          0.24223516881465912,
+          0.1786600649356842,
+          0.10763731598854065,
+          0.15629616379737854,
+          0.14283671975135803,
+          0.19058991968631744,
+          0.19518233835697174,
+          0.20948052406311035,
+          0.2297336459159851,
+          0.2253006398677826,
+          0.191961869597435,
+          0.14430680871009827,
+          0.1660328060388565,
+          0.134428933262825,
+          0.2167317122220993,
+          0.1777271032333374,
+          0.27043208479881287,
+          0.12069983780384064,
+          0.23118183016777039,
+          0.21641290187835693,
+          0.27951809763908386,
+          0.12694226205348969,
+          0.23522008955478668,
+          0.21262392401695251,
+          0.2703331708908081,
+          0.13930213451385498,
+          0.23340001702308655,
+          0.20858070254325867,
+          0.3511996269226074,
+          0.24706599116325378,
+          0.1811906397342682,
+          0.19580323994159698,
+          0.22693394124507904,
+          0.2027992308139801,
+          0.21306490898132324,
+          0.16628454625606537,
+          0.18085479736328125,
+          0.22241967916488647,
+          0.18030942976474762,
+          0.17228637635707855,
+          0.17497029900550842,
+          0.15656916797161102,
+          0.14607320725917816,
+          0.26169353723526,
+          0.23497962951660156,
+          0.15887270867824554,
+          0.12461157888174057,
+          0.20446781814098358,
+          0.2129085808992386,
+          0.19319991767406464,
+          0.14282327890396118,
+          0.1369916796684265,
+          0.10699054598808289,
+          0.12435697764158249,
+          0.10858415812253952,
+          0.13665993511676788,
+          0.17780783772468567,
+          0.620313823223114,
+          0.6903669834136963,
+          0.7473735213279724,
+          0.7993720173835754,
+          0.8094661831855774,
+          0.7106243371963501,
+          0.703718364238739,
+          0.7730562090873718,
+          0.7092164158821106,
+          0.6191614866256714
+        ]
+      ],
+      "stem_rms_per_bar": {
+        "bass": [
+          0.033364180475473404,
+          0.02305622398853302,
+          0.0166156068444252,
+          0.014919670298695564,
+          0.0011039429809898138,
+          0.0005650263046845794,
+          0.00017784052761271596,
+          0.00011439651279943064,
+          0.006036916747689247,
+          0.015793610364198685,
+          0.012060865759849548,
+          0.0070633916184306145,
+          0.0014524467987939715,
+          0.00016049308760557324,
+          0.00017928285524249077,
+          0.01926170475780964,
+          0.09139921516180038,
+          0.048328205943107605,
+          0.05798173323273659,
+          0.03589095175266266,
+          0.09273616969585419,
+          0.048265837132930756,
+          0.058420054614543915,
+          0.035600777715444565,
+          0.09230080991983414,
+          0.04836355149745941,
+          0.05732886865735054,
+          0.03666919097304344,
+          0.09164680540561676,
+          0.04896680265665054,
+          0.057649366557598114,
+          0.028660712763667107,
+          0.00020609078637789935,
+          0.00015152512060012668,
+          0.00011162476585013792,
+          0.00010040969937108457,
+          0.0002857603249140084,
+          0.0002090128109557554,
+          0.0007175336359068751,
+          0.003170982003211975,
+          0.0013963389210402966,
+          0.003796287113800645,
+          0.0011743108043447137,
+          0.002341434359550476,
+          0.008556236512959003,
+          0.010202741250395775,
+          0.02025596983730793,
+          0.021114276722073555,
+          0.028599826619029045,
+          0.023719411343336105,
+          0.017559373751282692,
+          0.012549148872494698,
+          0.014658176340162754,
+          0.0011549706105142832,
+          0.00022604275727644563,
+          0.010406489484012127,
+          0.03349706158041954,
+          0.01822267845273018,
+          0.016453225165605545,
+          0.014151675626635551,
+          0.013633807189762592,
+          0.008844297379255295,
+          0.0006377357640303671,
+          0.0003303714038338512,
+          0.006606172304600477,
+          0.009003790095448494,
+          0.007660331204533577,
+          0.010924465022981167,
+          0.027767041698098183,
+          0.027714181691408157,
+          0.014953291043639183,
+          0.020519621670246124,
+          0.09162287414073944,
+          0.04543415457010269,
+          0.053283579647541046,
+          0.03546638414263725,
+          0.09289415180683136,
+          0.04363233596086502,
+          0.05715319514274597,
+          0.035434357821941376,
+          0.09295737743377686,
+          0.04466136917471886,
+          0.056796953082084656,
+          0.0383225753903389,
+          0.09264987707138062,
+          0.04699303209781647,
+          0.056631140410900116,
+          0.02897229790687561,
+          0.003618912072852254,
+          0.004999296274036169,
+          0.0038791284896433353,
+          0.0022608665749430656,
+          0.004772593732923269,
+          0.010386595502495766,
+          0.01764427125453949,
+          0.0209956131875515,
+          0.011491459794342518,
+          0.0008889541495591402,
+          0.003660480724647641,
+          0.0058282893151044846,
+          0.00563535513356328,
+          0.005599383730441332,
+          0.007812779396772385,
+          0.009180678054690361,
+          0.01728130877017975,
+          0.008549102582037449,
+          0.0006475027184933424,
+          0.000546251074410975,
+          0.0018141268519684672,
+          0.0012140378821641207,
+          0.003703370224684477,
+          0.03481736034154892,
+          0.03728293627500534,
+          0.02310318686068058,
+          0.01786867342889309,
+          0.013113708235323429,
+          0.0013922476209700108,
+          1.2559477909235284e-05,
+          1.2320174391788896e-05,
+          9.999356734624598e-06,
+          8.444160812359769e-06,
+          6.509188551717671e-06,
+          4.170994088781299e-06,
+          6.871176765343989e-07,
+          8.511172921998877e-08,
+          0.0
+        ],
+        "drums": [
+          0.06556369364261627,
+          0.021555572748184204,
+          0.06533870846033096,
+          0.023555340245366096,
+          0.0657653734087944,
+          0.026133205741643906,
+          0.06255917251110077,
+          0.02261236310005188,
+          0.06463679671287537,
+          0.02845919132232666,
+          0.06552542001008987,
+          0.027945641428232193,
+          0.06540843844413757,
+          0.025244340300559998,
+          0.06596572697162628,
+          0.0447075292468071,
+          0.06660968065261841,
+          0.023663230240345,
+          0.0647747740149498,
+          0.023309476673603058,
+          0.0644649937748909,
+          0.0266119334846735,
+          0.06227314472198486,
+          0.02389369159936905,
+          0.06528668105602264,
+          0.027432309463620186,
+          0.06547562777996063,
+          0.03779781982302666,
+          0.06608620285987854,
+          0.025178182870149612,
+          0.06435997039079666,
+          0.04572797566652298,
+          0.06607343256473541,
+          0.025657040998339653,
+          0.06533344835042953,
+          0.023379255086183548,
+          0.06565486639738083,
+          0.02772378735244274,
+          0.06551776826381683,
+          0.023701230064034462,
+          0.06448926776647568,
+          0.02886238880455494,
+          0.06514713168144226,
+          0.028714289888739586,
+          0.06825945526361465,
+          0.023921819403767586,
+          0.06428997963666916,
+          0.021927010267972946,
+          0.06531074643135071,
+          0.02692049741744995,
+          0.06522519141435623,
+          0.029055316001176834,
+          0.0676908791065216,
+          0.030591195449233055,
+          0.06655169278383255,
+          0.024071116000413895,
+          0.06418093293905258,
+          0.01682802475988865,
+          0.06425964832305908,
+          0.022261301055550575,
+          0.06410803645849228,
+          0.025816140696406364,
+          0.06047093868255615,
+          0.021308328956365585,
+          0.06465115398168564,
+          0.0265659149736166,
+          0.06454378366470337,
+          0.026070665568113327,
+          0.06520678848028183,
+          0.02358156256377697,
+          0.06428088247776031,
+          0.02427261881530285,
+          0.06355171650648117,
+          0.021495945751667023,
+          0.06602806597948074,
+          0.0209781713783741,
+          0.06323688477277756,
+          0.02601204439997673,
+          0.06256479769945145,
+          0.022494465112686157,
+          0.06493844091892242,
+          0.026417985558509827,
+          0.06503932178020477,
+          0.03113608993589878,
+          0.06507638841867447,
+          0.023467954248189926,
+          0.06485311686992645,
+          0.02446722239255905,
+          0.06445462256669998,
+          0.025536051020026207,
+          0.06534193456172943,
+          0.02292834036052227,
+          0.06477072834968567,
+          0.02581983618438244,
+          0.06439774483442307,
+          0.021834110841155052,
+          0.06326967477798462,
+          0.028591690585017204,
+          0.06327401101589203,
+          0.028225939720869064,
+          0.06709430366754532,
+          0.02250825986266136,
+          0.06397503614425659,
+          0.0208597294986248,
+          0.06430687755346298,
+          0.026840858161449432,
+          0.06451669335365295,
+          0.025900479406118393,
+          0.06554938107728958,
+          0.0284274872392416,
+          0.06519715487957001,
+          0.025637859478592873,
+          0.06515857577323914,
+          0.013552053831517696,
+          0.06072443351149559,
+          0.003243915503844619,
+          0.003186833346262574,
+          0.003618478775024414,
+          0.002798079513013363,
+          0.002678269287571311,
+          0.0024662758223712444,
+          0.0019713598303496838,
+          0.001609882921911776,
+          0.0007644901052117348,
+          0.0005630897940136492,
+          0.0002125996834365651
+        ],
+        "other": [
+          0.05290611833333969,
+          0.02721298113465309,
+          0.01050165481865406,
+          0.013147273100912571,
+          0.06676881015300751,
+          0.05288572981953621,
+          0.033920370042324066,
+          0.02980612963438034,
+          0.06923980265855789,
+          0.03150123730301857,
+          0.012867992743849754,
+          0.02506846934556961,
+          0.05929429829120636,
+          0.049034763127565384,
+          0.02938552387058735,
+          0.012925497256219387,
+          0.02912236377596855,
+          0.010014538653194904,
+          0.011994566768407822,
+          0.010239599272608757,
+          0.017812304198741913,
+          0.018664028495550156,
+          0.01958680897951126,
+          0.01801232062280178,
+          0.03239458054304123,
+          0.013622045516967773,
+          0.015072384849190712,
+          0.011745370924472809,
+          0.02390294335782528,
+          0.015909850597381592,
+          0.022397523745894432,
+          0.034960076212882996,
+          0.06264343112707138,
+          0.047570791095495224,
+          0.05314531922340393,
+          0.025605520233511925,
+          0.06690250337123871,
+          0.04029810428619385,
+          0.03043983317911625,
+          0.026674719527363777,
+          0.06286004930734634,
+          0.045479852706193924,
+          0.06047797575592995,
+          0.03753669187426567,
+          0.020019596442580223,
+          0.021504461765289307,
+          0.061735980212688446,
+          0.03478416055440903,
+          0.05650123581290245,
+          0.04117457941174507,
+          0.05935082212090492,
+          0.03704310208559036,
+          0.05534358322620392,
+          0.038993559777736664,
+          0.009080332703888416,
+          0.018704546615481377,
+          0.06156865134835243,
+          0.04695504903793335,
+          0.035671573132276535,
+          0.03999955579638481,
+          0.08045360445976257,
+          0.07803425937891006,
+          0.06750430911779404,
+          0.06515750288963318,
+          0.07804643362760544,
+          0.05285688489675522,
+          0.040651388466358185,
+          0.0451040044426918,
+          0.06640125811100006,
+          0.057838499546051025,
+          0.050456322729587555,
+          0.04911397770047188,
+          0.032166529446840286,
+          0.03751920163631439,
+          0.03010392002761364,
+          0.04361632838845253,
+          0.031121429055929184,
+          0.03940580412745476,
+          0.03174901381134987,
+          0.04391901195049286,
+          0.03287172690033913,
+          0.034952983260154724,
+          0.027833132073283195,
+          0.037314049899578094,
+          0.027158640325069427,
+          0.04059619829058647,
+          0.03429678827524185,
+          0.047345247119665146,
+          0.07224661111831665,
+          0.061694055795669556,
+          0.0617489330470562,
+          0.04790918529033661,
+          0.08327200263738632,
+          0.05954401567578316,
+          0.049759071320295334,
+          0.043785177171230316,
+          0.06961642950773239,
+          0.062064263969659805,
+          0.07728259265422821,
+          0.059140417724847794,
+          0.051276590675115585,
+          0.05221923813223839,
+          0.06711330264806747,
+          0.049803342670202255,
+          0.07082901895046234,
+          0.07204996049404144,
+          0.07115732878446579,
+          0.05662289261817932,
+          0.07920298725366592,
+          0.06765862554311752,
+          0.05271540582180023,
+          0.03856514394283295,
+          0.055524200201034546,
+          0.02822011336684227,
+          0.0066046142019331455,
+          0.008380535989999771,
+          0.0031494672875851393,
+          0.0040194871835410595,
+          0.004265735391527414,
+          0.0037823866587132215,
+          0.003009170526638627,
+          0.0024994181003421545,
+          0.002026226371526718,
+          0.0014308918034657836,
+          0.0007818019948899746,
+          0.0002795264299493283
+        ],
+        "vocals": [
+          4.811167309526354e-05,
+          2.664810926944483e-05,
+          0.000982443685643375,
+          0.006661056540906429,
+          0.014397900551557541,
+          0.009813341312110424,
+          0.0017951016779989004,
+          0.0015049930661916733,
+          0.0017808994743973017,
+          0.0014071566984057426,
+          0.00021772057516500354,
+          0.00023529486497864127,
+          0.0038108122535049915,
+          0.00014518367242999375,
+          7.895210001152009e-05,
+          0.0011028420412912965,
+          0.0034505862277001143,
+          0.0016863589407876134,
+          0.00148127437569201,
+          0.009842957369983196,
+          0.01831754855811596,
+          0.0001193663410958834,
+          0.00016758621495682746,
+          0.008427164517343044,
+          0.006072609219700098,
+          0.004489275626838207,
+          0.0005204763729125261,
+          0.0013802624307572842,
+          0.0017050255555659533,
+          0.0001430949050700292,
+          8.114454249152914e-05,
+          0.00010963165550492704,
+          0.0035344890784472227,
+          0.008155055344104767,
+          0.002823409391567111,
+          0.0002550655626691878,
+          0.0005059309769421816,
+          0.0005388092249631882,
+          0.00048367457929998636,
+          0.0027126551140099764,
+          0.0007392643019556999,
+          0.0002734300505835563,
+          0.00021686588297598064,
+          0.0001957850909093395,
+          0.0004941346705891192,
+          0.002306421985849738,
+          0.015168591402471066,
+          0.0026820467319339514,
+          0.004350116476416588,
+          0.0004703667073044926,
+          0.00074690644396469,
+          0.00042714510345831513,
+          0.0009057050920091569,
+          0.008368278853595257,
+          0.00404737051576376,
+          0.021039852872490883,
+          0.009229917079210281,
+          0.0048659672029316425,
+          0.0034023907501250505,
+          0.003341852454468608,
+          0.009047023952007294,
+          0.0041522979736328125,
+          0.0006213034503161907,
+          0.0002182962780352682,
+          0.0005578843411058187,
+          0.0001436230231774971,
+          4.5979282731423154e-05,
+          6.817936082370579e-05,
+          0.0007692032377235591,
+          0.00011200497101526707,
+          7.077537884470075e-05,
+          9.945376223186031e-05,
+          0.0002601741871330887,
+          9.681204392109066e-05,
+          0.0001471807190682739,
+          0.0001591128675499931,
+          0.0017866577254608274,
+          0.003829679684713483,
+          0.004872517194598913,
+          0.001005993108265102,
+          0.009432002902030945,
+          0.001753851305693388,
+          0.00017252466932404786,
+          9.995063010137528e-05,
+          0.00012151744158472866,
+          0.00013468001270666718,
+          0.00029753518174402416,
+          0.000265798851614818,
+          0.0008894459460861981,
+          0.0011662512551993132,
+          0.00018516657291911542,
+          7.497701153624803e-05,
+          0.00042282685171812773,
+          0.00017476070206612349,
+          0.0004964033723808825,
+          0.000815122970379889,
+          0.0008185349288396537,
+          0.0004392405680846423,
+          0.0003687407588586211,
+          0.0001972126483451575,
+          0.004126369021832943,
+          0.011265236884355545,
+          0.023414814844727516,
+          0.004433707799762487,
+          0.004242120776325464,
+          0.003243309212848544,
+          0.004769862163811922,
+          0.005386962555348873,
+          0.0016582106472924352,
+          0.014933036640286446,
+          0.0038578726816922426,
+          0.011829406023025513,
+          0.010517378337681293,
+          0.012663306668400764,
+          0.016284631565213203,
+          0.013613632880151272,
+          0.006071442738175392,
+          0.0003482888569124043,
+          0.00011924366845050827,
+          8.366813744942192e-06,
+          1.1017073120456189e-05,
+          9.802698514249641e-06,
+          3.9516212382295635e-06,
+          3.794773135723517e-07,
+          0.0,
+          0.0
+        ]
+      },
+      "constrained_modes": {
+        "bass": {
+          "1": {
+            "tonic": "C#",
+            "tonic_pc": 1,
+            "mode": "harmonic_minor",
+            "score": 0.8594,
+            "margin": 0.0117,
+            "runner_up": {
+              "tonic": "C#",
+              "mode": "aeolian",
+              "score": 0.8476
+            }
+          },
+          "3": {
+            "tonic": "D#",
+            "tonic_pc": 3,
+            "mode": "lydian",
+            "score": 0.8449,
+            "margin": 0.0007,
+            "runner_up": {
+              "tonic": "D#",
+              "mode": "mixolydian",
+              "score": 0.8442
+            }
+          }
+        },
+        "other": {
+          "1": {
+            "tonic": "C#",
+            "tonic_pc": 1,
+            "mode": "harmonic_minor",
+            "score": 0.8704,
+            "margin": 0.009,
+            "runner_up": {
+              "tonic": "C#",
+              "mode": "aeolian",
+              "score": 0.8614
+            }
+          },
+          "3": {
+            "tonic": "D#",
+            "tonic_pc": 3,
+            "mode": "phrygian",
+            "score": 0.8515,
+            "margin": 0.0004,
+            "runner_up": {
+              "tonic": "D#",
+              "mode": "mixolydian",
+              "score": 0.8512
+            }
+          }
+        }
+      },
+      "edge_audio": {
+        "pickup": {
+          "start_s": 0,
+          "end_s": 0.82832,
+          "rms": 0.013879746198654175,
+          "peak": 0.24265138804912567
+        },
+        "tail": {
+          "start_s": 252.82832,
+          "end_s": 254.0,
+          "rms": 7.671267667319626e-05,
+          "peak": 0.00034313590731471777
+        }
+      },
+      "repetition_56_cosine": 0.9529456556236127
+    },
+    "transcription_summary": {
+      "bass": {
+        "voiced_ratio": 0.6126,
+        "n_notes": 292,
+        "fmin": 25.0,
+        "fmax": 300.0
+      },
+      "drums": {
+        "n_hits": 909,
+        "mean_margin": 0.395,
+        "low_margin_rate": 0.085
+      },
+      "lead": {
+        "voiced_ratio": 0.514
+      },
+      "chords": {
+        "pedal_pc": "A",
+        "pedal_share": 0.278,
+        "mean_score": 0.873
+      }
+    },
+    "edge_coverage_s": [
+      [
+        0,
+        0.82832
+      ],
+      [
+        0.82832,
+        252.82832
+      ],
+      [
+        252.82832,
+        254
+      ]
+    ],
+    "limitations": [
+      "Pitch octaves below the pyin analysis range may result from octave smoothing; not verified real notes.",
+      "Forced major/minor triads are not validated harmony, especially during pitch slides and fade-out.",
+      "Residual edge drum detections are amplified by independent MIDI/WAV peak normalization.",
+      "Context grids use mix; local context bass tonics not claimed."
+    ]
+  }
+}
