@@ -1,0 +1,50 @@
+{
+  "05_mt_rubble": {
+    "beat_s": 0.500049741535792,
+    "tatum_s": 0.250024870767896,
+    "tatums_per_beat": 2,
+    "beats_per_bar": 4,
+    "origin_s": -1.8744589661431679,
+    "duration_s": 95.0,
+    "bar_s": 2.000198966143168,
+    "meter": "4/4",
+    "bpm": 119.98806321891759,
+    "quarter_bpm": 119.98806321891759,
+    "n_bars": 48,
+    "scores": {
+      "verification_source": "mix complet, attaques librosa hop=128 ; stems htdemucs 4.1.0",
+      "coherence_division": 4,
+      "coherence_R": 0.9555053406185099,
+      "residual_median_abs_ms": 4.098858308860059,
+      "residual_p90_abs_ms": 9.475108962457375,
+      "positive_downbeat_s": 0.12574,
+      "downbeat_confidence": "moyenne ; convention de phase, pas une validation auditive",
+      "partial_first_bar": true,
+      "note": "Origine théorique avant la coupe du fichier : première mesure partielle, silence hors source. Tempo vérifié numériquement, résidu mesuré sur la subdivision indiquée."
+    }
+  },
+  "21_secret_entrance": {
+    "beat_s": 0.5711279801446242,
+    "tatum_s": 0.2855639900723121,
+    "tatums_per_beat": 2,
+    "beats_per_bar": 4,
+    "origin_s": -1.1602919205784967,
+    "duration_s": 111.0,
+    "bar_s": 2.2845119205784967,
+    "meter": "4/4",
+    "bpm": 105.05526271853547,
+    "quarter_bpm": 105.05526271853547,
+    "n_bars": 49,
+    "scores": {
+      "verification_source": "mix complet, attaques librosa hop=128 ; stems htdemucs 4.1.0",
+      "coherence_division": 2,
+      "coherence_R": 0.9387349181580458,
+      "residual_median_abs_ms": 7.721678617987421,
+      "residual_p90_abs_ms": 20.740349887684896,
+      "positive_downbeat_s": 1.12422,
+      "downbeat_confidence": "moyenne ; convention de phase, pas une validation auditive",
+      "partial_first_bar": true,
+      "note": "Origine théorique avant la coupe du fichier : première mesure partielle, silence hors source. Tempo vérifié numériquement, résidu mesuré sur la subdivision indiquée."
+    }
+  }
+}

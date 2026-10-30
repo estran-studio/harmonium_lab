@@ -85,6 +85,18 @@ def test_pitch_notes_pedal():
     assert sixteenth_s(g) == pytest.approx(0.125)
 
 
+def test_octave_smoothing_stays_in_analyzed_register():
+    from harmonium_lab.audioref.transcribe import _smooth_octaves
+
+    # Les remontées chromatiques suivies d'un saut vers le grave faisaient
+    # accumuler une octave par cycle, au-delà de la limite MIDI 127.
+    pitches = list(range(32, 44)) * 30
+    smoothed = _smooth_octaves(pitches, 19, 62)
+    assert all(19 <= pitch <= 62 for pitch in smoothed)
+    assert [pitch % 12 for pitch in smoothed] == [pitch % 12 for pitch in pitches]
+    assert _smooth_octaves([36, 48, None, 35, 47], 24, 60) == [36, 36, None, 35, 35]
+
+
 def test_drum_hits_classify_synth():
     from harmonium_lab.audioref.transcribe import drum_hits
 

@@ -1,0 +1,26 @@
+{
+  "08_crystallized_fear": {
+    "beat_s": 0.42858324249903573,
+    "tatum_s": 0.1428610808330119,
+    "tatums_per_beat": 3,
+    "beats_per_bar": 4,
+    "origin_s": -0.8750829699961429,
+    "duration_s": 141.0,
+    "bar_s": 1.714332969996143,
+    "meter": "12/8",
+    "bpm": 139.9961408900279,
+    "quarter_bpm": 209.99421133504185,
+    "n_bars": 82,
+    "scores": {
+      "verification_source": "mix complet, attaques librosa hop=128 ; stems htdemucs 4.1.0",
+      "coherence_division": 3,
+      "coherence_R": 0.7398954032362097,
+      "residual_median_abs_ms": 9.279265927135267,
+      "residual_p90_abs_ms": 29.463354244918943,
+      "positive_downbeat_s": 0.83925,
+      "downbeat_confidence": "moyenne ; convention de phase, pas une validation auditive",
+      "partial_first_bar": true,
+      "note": "Origine théorique avant la coupe du fichier : première mesure partielle, silence hors source. Tempo vérifié numériquement, résidu mesuré sur la subdivision indiquée."
+    }
+  }
+}
