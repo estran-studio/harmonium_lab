@@ -359,3 +359,12 @@ des sources NC/SA au moment de construire un profil distribué.
 4. Nom : `wjazzd_swing` (swing général) ou `wjazzd_swing_blues` (blues seulement) ?
 5. Ancien corpus `jazz-*` : le garder en analyse seule pour E5 (voicings McKenzie) ou retirer
    ses `meta.json` et la section du script ?
+
+## 7. Décisions du propriétaire (2026-10-31)
+
+1. Mentions acceptées : ODbL §4.3 (WJazzD), CC BY 4.0 (GMD), MIT (JTD), portées par le profil.
+2. Grilles du domaine public : vérifiées aux **États-Unis et au Canada**.
+3. Sources NC/SA (iRb, PiJAMA, JHT, JAAH) **admises au labo seulement**, jamais dans un profil
+   distribué ; champ licence obligatoire dans chaque `manifest.jsonl`.
+4. Nom du profil : **`wjazzd_swing`**.
+5. Ancien corpus `jazz-*` (McKenzie) : gardé en analyse seule pour E5.
