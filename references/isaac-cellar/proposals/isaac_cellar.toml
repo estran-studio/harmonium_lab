@@ -1,0 +1,133 @@
+# Propositions P2 pour `isaac_cellar` (phase 018) — ajouts au profil écrit, schéma moteur actuel.
+#
+# Source : transcriptions 21_periculum (hors dépôt, principe VII), corpus 2026-10-28+69, extraites le 2026-11-01.
+# Aucun audio, stem ni MIDI : seuls des dérivés agrégés (accords, motifs, patterns).
+# Seuls `harmony.parts.*`, `accompaniment.bass.motifs` et `percussion.patterns` sont des données moteur ;
+# `[[provenance]]`, `[[gaps]]` et `[stats]` sont des métadonnées (le moteur les refuserait : `p2-enrich` les écarte).
+# `weight` = effectif du groupe de fenêtres proches (fréquence), pas un réglage d'écoute.
+# Confiance : accords = score moyen de la triade par mesure (0–1) ; basse = part de trames voisées ;
+# batterie = marge moyenne de classification des coups (peut être < 0).
+
+[[percussion.patterns]]
+density = 1
+weight = 3
+hits = [
+  { step = 0, track = "PercussionHigh", delta_velocity = 0 },
+  { step = 2, track = "PercussionHigh", delta_velocity = -16 },
+  { step = 4, track = "PercussionHigh", delta_velocity = 0 },
+  { step = 6, track = "PercussionHigh", delta_velocity = -16 },
+  { step = 8, track = "PercussionHigh", delta_velocity = 0 },
+  { step = 12, track = "PercussionHigh", delta_velocity = 0 },
+  { step = 14, track = "PercussionHigh", delta_velocity = -16 },
+]
+
+[[provenance]]
+layer = "chords"
+track = "21_periculum"
+bars = [48, 56]
+start = "1:22.8"
+end = "1:36.5"
+status = "non-assigné"
+similarity = 0.62
+
+[[provenance]]
+layer = "chords"
+part = "A"
+track = "21_periculum"
+bars = [0, 8]
+start = "0:00.5"
+end = "0:14.2"
+status = "présent"
+support = 1
+windows = 1
+confidence = 0.793
+similarity = 1.0
+
+[[provenance]]
+layer = "bass"
+track = "21_periculum"
+bars = [2, 4]
+start = "0:03.9"
+end = "0:07.3"
+status = "non-assigné"
+similarity = 0.5
+
+[[provenance]]
+layer = "bass"
+track = "21_periculum"
+bars = [6, 8]
+start = "0:10.8"
+end = "0:14.2"
+status = "non-assigné"
+similarity = 0.5
+
+[[provenance]]
+layer = "bass"
+track = "21_periculum"
+bars = [50, 52]
+start = "1:26.2"
+end = "1:29.6"
+status = "non-assigné"
+similarity = 0.5
+
+[[provenance]]
+layer = "bass"
+track = "21_periculum"
+bars = [52, 54]
+start = "1:29.6"
+end = "1:33.1"
+status = "non-assigné"
+similarity = 0.5
+
+[[provenance]]
+layer = "bass"
+track = "21_periculum"
+bars = [54, 56]
+start = "1:33.1"
+end = "1:36.5"
+status = "non-assigné"
+similarity = 0.5
+
+[[provenance]]
+layer = "drums"
+part = "density1"
+track = "21_periculum"
+bars_used = [0, 2, 6]
+times = ["0:00.5", "0:03.9", "0:10.8"]
+status = "nouveau"
+ref = "percussion.patterns[0]"
+support = 3
+windows = 8
+density = 1
+confidence = 0.355
+
+[[provenance]]
+layer = "drums"
+part = "density1"
+track = "21_periculum"
+bars_used = [1, 3, 4, 5, 7]
+times = ["0:02.2", "0:05.6", "0:07.3", "0:09.1", "0:12.5"]
+status = "présent"
+support = 5
+windows = 8
+density = 1
+confidence = 0.243
+
+[[gaps]]
+layer = "drums"
+reason = "patterns de batterie par densité seulement : aucun moyen de lier un pattern à une partie ou à un tour (le tirage est par partie et densité, mais la banque est commune)"
+
+[stats.chords.A]
+windows = 1
+groups = 1
+discarded = 0
+
+[stats.bass.A]
+windows = 3
+groups = 3
+discarded = 3
+
+[stats.drums]
+bars = 8
+groups = 2
+discarded = 0

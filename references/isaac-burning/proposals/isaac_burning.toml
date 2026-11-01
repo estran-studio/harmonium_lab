@@ -1,0 +1,237 @@
+# Propositions P2 pour `isaac_burning` (phase 018) — ajouts au profil écrit, schéma moteur actuel.
+#
+# Source : transcriptions 36_fundamentum (hors dépôt, principe VII), corpus 2026-10-28+69, extraites le 2026-11-01.
+# Aucun audio, stem ni MIDI : seuls des dérivés agrégés (accords, motifs, patterns).
+# Seuls `harmony.parts.*`, `accompaniment.bass.motifs` et `percussion.patterns` sont des données moteur ;
+# `[[provenance]]`, `[[gaps]]` et `[stats]` sont des métadonnées (le moteur les refuserait : `p2-enrich` les écarte).
+# `weight` = effectif du groupe de fenêtres proches (fréquence), pas un réglage d'écoute.
+# Confiance : accords = score moyen de la triade par mesure (0–1) ; basse = part de trames voisées ;
+# batterie = marge moyenne de classification des coups (peut être < 0).
+
+[harmony.parts.C]
+kind = "chord_loop"
+loops = [
+  { weight = 1, chords = [
+    { semitones = 8, quality = "", steps = 16 },
+    { semitones = 5, quality = "", steps = 16 },
+    { semitones = 0, quality = "m", bass = 3, steps = 16 },
+    { semitones = 0, quality = "m", steps = 16 },
+    { semitones = 8, quality = "", steps = 16 },
+    { semitones = 3, quality = "", steps = 16 },
+    { semitones = 8, quality = "", bass = 3, steps = 16 },
+    { semitones = 0, quality = "m", steps = 16 },
+  ] },
+]
+
+[[accompaniment.bass.motifs]]
+part = "R"
+bars = 2
+weight = 2
+reference = "tonic"
+notes = [
+  { step = 0, duration = 23, semitones = 0, octave = 1, velocity = 95 },
+  { step = 23, duration = 3, semitones = 11, velocity = 91, legato = true },
+  { step = 26, duration = 6, semitones = 1, octave = 1, velocity = 91, legato = true },
+]
+
+[[accompaniment.bass.motifs]]
+part = "C"
+bars = 1
+weight = 3
+reference = "chord_root"
+notes = [
+  { step = 0, duration = 16, semitones = 0, octave = 1, velocity = 84 },
+]
+
+[[accompaniment.bass.motifs]]
+part = "C"
+bars = 1
+weight = 2
+reference = "chord_root"
+notes = [
+  { step = 0, duration = 2, semitones = 1, octave = 1, velocity = 84 },
+  { step = 2, duration = 6, semitones = 0, octave = 1, velocity = 80, legato = true },
+  { step = 8, duration = 3, semitones = 1, octave = 1, velocity = 80, legato = true },
+  { step = 11, duration = 5, semitones = 0, octave = 1, velocity = 80, legato = true },
+]
+
+[[percussion.patterns]]
+density = 0
+weight = 2
+hits = [
+  { step = 0, track = "PercussionHigh", delta_velocity = 0 },
+  { step = 4, track = "PercussionHigh", note = 42, delta_velocity = -40 },
+  { step = 8, track = "PercussionHigh", delta_velocity = 0 },
+  { step = 12, track = "PercussionHigh", note = 42, delta_velocity = -40 },
+]
+
+[[percussion.patterns]]
+density = 1
+weight = 2
+hits = [
+  { step = 0, track = "PercussionLow", delta_velocity = 0 },
+  { step = 2, track = "PercussionLow", delta_velocity = -16 },
+  { step = 4, track = "PercussionHigh", note = 42, delta_velocity = -40 },
+  { step = 6, track = "PercussionLow", delta_velocity = -16 },
+  { step = 8, track = "PercussionHigh", delta_velocity = 0 },
+  { step = 12, track = "PercussionHigh", note = 42, delta_velocity = -40 },
+  { step = 15, track = "PercussionHigh", note = 42, delta_velocity = -40 },
+]
+
+[[provenance]]
+layer = "chords"
+part = "C"
+track = "36_fundamentum"
+bars = [32, 40]
+start = "0:56.3"
+end = "1:10.0"
+status = "nouveau"
+ref = "harmony.parts.C.loops[0]"
+support = 1
+windows = 1
+confidence = 0.848
+similarity = 0.94
+
+[[provenance]]
+layer = "chords"
+part = "R"
+track = "36_fundamentum"
+bars = [56, 64]
+start = "1:37.4"
+end = "1:51.2"
+status = "écart"
+support = 1
+windows = 1
+confidence = 0.827
+similarity = 0.75
+
+[[provenance]]
+layer = "bass"
+track = "36_fundamentum"
+bars = [37, 38]
+start = "1:04.9"
+end = "1:06.6"
+status = "non-assigné"
+similarity = 0.0
+
+[[provenance]]
+layer = "bass"
+track = "36_fundamentum"
+bars = [57, 58]
+start = "1:39.2"
+end = "1:40.9"
+status = "non-assigné"
+similarity = 0.0
+
+[[provenance]]
+layer = "bass"
+track = "36_fundamentum"
+bars = [61, 62]
+start = "1:46.0"
+end = "1:47.7"
+status = "non-assigné"
+similarity = 0.0
+
+[[provenance]]
+layer = "bass"
+part = "R"
+track = "36_fundamentum"
+bars = [2, 4]
+start = "0:04.9"
+end = "0:08.3"
+status = "nouveau"
+ref = "accompaniment.bass.motifs[0]"
+support = 2
+windows = 4
+confidence = 0.939
+similarity = 1.0
+
+[[provenance]]
+layer = "bass"
+part = "C"
+track = "36_fundamentum"
+bars = [32, 33]
+start = "0:56.3"
+end = "0:58.0"
+status = "nouveau"
+ref = "accompaniment.bass.motifs[1]"
+support = 3
+windows = 9
+confidence = 0.939
+similarity = 1.0
+
+[[provenance]]
+layer = "bass"
+part = "C"
+track = "36_fundamentum"
+bars = [35, 36]
+start = "1:01.4"
+end = "1:03.2"
+status = "nouveau"
+ref = "accompaniment.bass.motifs[2]"
+support = 2
+windows = 9
+confidence = 0.939
+similarity = 1.0
+
+[[provenance]]
+layer = "drums"
+part = "density0"
+track = "36_fundamentum"
+bars_used = [0, 2]
+times = ["0:01.4", "0:04.9"]
+status = "nouveau"
+ref = "percussion.patterns[0]"
+support = 2
+windows = 4
+density = 0
+confidence = 0.58
+
+[[provenance]]
+layer = "drums"
+part = "density1"
+track = "36_fundamentum"
+bars_used = [1, 3]
+times = ["0:03.2", "0:06.6"]
+status = "nouveau"
+ref = "percussion.patterns[1]"
+support = 2
+windows = 4
+density = 1
+confidence = 0.443
+
+[[gaps]]
+layer = "chords"
+part = "R"
+reason = "partie `pedal` : le schéma n'accepte pas d'alternatives pondérées (seules les parties `chord_loop` portent `loops`)"
+track = "36_fundamentum"
+bars = [56, 64]
+
+[[gaps]]
+layer = "drums"
+reason = "patterns de batterie par densité seulement : aucun moyen de lier un pattern à une partie ou à un tour (le tirage est par partie et densité, mais la banque est commune)"
+
+[stats.chords.C]
+windows = 1
+groups = 1
+discarded = 0
+
+[stats.chords.R]
+windows = 1
+groups = 1
+discarded = 0
+
+[stats.bass.R]
+windows = 4
+groups = 3
+discarded = 2
+
+[stats.bass.C]
+windows = 9
+groups = 6
+discarded = 4
+
+[stats.drums]
+bars = 4
+groups = 2
+discarded = 0
