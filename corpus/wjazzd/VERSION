@@ -1,0 +1,8 @@
+version: WJazzD 2.1 (base 2.2, publiée le 2018-02-08)
+sha256: af6a0d9debf042c3581565bd75baad591d32e166cd2ec7298519883de614bf12
+retrieved: 2026-11-01
+url: https://jazzomat.hfm-weimar.de/download/downloads/wjazzd.db
+licence: ODbL-1.0 (base) + DbCL-1.0 (contenus)
+attribution: Contains information from the Weimar Jazz Database (Jazzomat Research Project, HfM Weimar), which is made available here under the Open Database License (ODbL); individual contents under the Database Contents License (DbCL 1.0).
+solos: 456 (swing : 361)
+manifest_sha256: 6802930d21c00044c27364882990b9917a4abc695990f5b021547a0e87add560
