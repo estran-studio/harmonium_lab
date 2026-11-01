@@ -101,7 +101,7 @@ def run(args: argparse.Namespace) -> dict[str, Any]:
             summary["tonal"] = {"reference": ref_feats[t]["tonal"],
                                 "generated_tonic_counts": _count(g["tonal"]["estimated_key"] for g in gen)}
             refs_out[t] = summary
-        audio_out[bank.label] = {"soundfont": bank.soundfont.name, "feet_soundfont": bank.feet_soundfont.name,
+        audio_out[bank.label] = {"soundfont": bank.soundfont.name, "percussion_soundfont": bank.percussion_soundfont.name,
                                  "generated": _spread(gen), "references": refs_out}
 
     symbolic_out: dict[str, Any] = {}

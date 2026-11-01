@@ -1,6 +1,6 @@
 """Vocabulaire de cellules : une mesure en notation du moteur (D5).
 
-Notation (identique à ``harmonium_core::trad::cells``) :
+Notation (identique à ``harmonium_core::compose::cells``) :
 - ``1..7`` : degrés de l'octave principale (``1`` = tonique) ;
 - ``8..`` : octave supérieure (``8`` = tonique + 1 octave) ;
 - ``k,`` : octave inférieure (``5,`` = quinte grave) ;
@@ -29,7 +29,7 @@ from .model import Note, mode_intervals
 def pitch_to_degree(midi: int, tonic_pc: int, mode: str) -> int:
     """Degré moteur d'une hauteur MIDI (``1`` = tonique, ``8`` = octave, ``-3`` = ``5,``).
 
-    Convention identique à ``harmonium_core::trad::mode`` :
+    Convention identique à ``harmonium_core::compose::mode`` :
     pas diatoniques ``0..`` -> degrés ``1..``, pas ``< 0`` -> degrés ``-1..``.
     La tonique est ancrée en octave 4 (ex. D4 = 62) : les degrés ``1..7``
     couvrent l'octave de la tonique, ``8..`` l'aigu, ``k,`` le grave.

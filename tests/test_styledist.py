@@ -117,9 +117,9 @@ def test_symbolic_distance_zero_against_itself_and_positive_on_shift(tmp_path):
     assert d["bass_pc"] == 1.0 and d["drums_any"] == 1.0 and d["chord_roots"] == 1.0
 
 
-def test_parse_bank_defaults_feet_to_main_bank():
+def test_parse_bank_defaults_percussion_to_main_bank():
     b = parse_bank("x=/tmp/a.sf2")
-    assert b.label == "x" and b.feet_soundfont == b.soundfont
-    assert parse_bank("x=/tmp/a.sf2,/tmp/f.sf2").feet_soundfont.name == "f.sf2"
+    assert b.label == "x" and b.percussion_soundfont == b.soundfont
+    assert parse_bank("x=/tmp/a.sf2,/tmp/f.sf2").percussion_soundfont.name == "f.sf2"
     with pytest.raises(ValueError):
         parse_bank("sans-egal")

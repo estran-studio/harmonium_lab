@@ -191,7 +191,7 @@ def write_profile_draft(profile: dict[str, Any], output: Path | str) -> Path:
         ])
     lines.extend([
         "[harmony]",
-        'model = "trad_functional"',
+        'model = "melody_functional"',
         f"rhythm_dominant_chords_per_bar = {harmony['rythme_harmonique_dominant'] or 0}",
         f"rhythm_per_bar = {_toml_string(json.dumps(harmony['rythme_harmonique_par_mesure']))}",
         f"rhythm_per_half_bar = {_toml_string(json.dumps(harmony['rythme_harmonique_par_demi_mesure'], ensure_ascii=False))}",

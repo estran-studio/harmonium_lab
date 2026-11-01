@@ -145,14 +145,14 @@ ENGINE_TUNES_DIR := target/engine_tunes
 N ?= 20
 STYLE ?= reel_quebecois
 ENGINE_BARS ?= 36
-FEET ?= 1
+PERCUSSION ?= 1
 
 engine-tunes: setup ## Exporte N airs moteur (STYLE=id, seeds 1..N) → target/engine_tunes/<id>/
 	@test -f "$(ENGINE_DIR)/Cargo.toml" || (echo "Moteur introuvable: $(ENGINE_DIR)"; exit 2)
 	@mkdir -p "$(ENGINE_TUNES_DIR)/$(STYLE)"
 	@for s in $$(seq 1 $(N)); do \
 		cargo run -q -p harmonium-cli --release --manifest-path $(ENGINE_DIR)/Cargo.toml -- \
-			--soundfont $(ENGINE_DIR)/assets/GeneralUser-GS.sf2 --export --bars $(ENGINE_BARS) --profile $(ENGINE_DIR)/profiles/$(STYLE) --seed $$s --feet $(FEET) \
+			--soundfont $(ENGINE_DIR)/assets/GeneralUser-GS.sf2 --export --bars $(ENGINE_BARS) --profile $(ENGINE_DIR)/profiles/$(STYLE) --seed $$s --percussion $(PERCUSSION) \
 			--record-wav $(ENGINE_TUNES_DIR)/$(STYLE)/$(STYLE)_seed$${s}.wav \
 			--record-midi $(ENGINE_TUNES_DIR)/$(STYLE)/$(STYLE)_seed$${s}.mid \
 			--record-truth $(ENGINE_TUNES_DIR)/$(STYLE)/$(STYLE)_seed$${s}.json \

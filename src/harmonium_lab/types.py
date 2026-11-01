@@ -17,16 +17,16 @@ class TrackId(IntEnum):
     MELODY = 0
     CHORDS = 1
     BASS = 2
-    HEEL = 3
-    TOE = 4
+    PERCUSSION_LOW = 3
+    PERCUSSION_HIGH = 4
 
 
 TRACK_NAMES: dict[int, str] = {
     TrackId.MELODY: "Melody",
     TrackId.CHORDS: "Chords",
     TrackId.BASS: "Bass",
-    TrackId.HEEL: "Heel",
-    TrackId.TOE: "Toe",
+    TrackId.PERCUSSION_LOW: "PercussionLow",
+    TrackId.PERCUSSION_HIGH: "PercussionHigh",
 }
 
 @dataclass(frozen=True, slots=True)
@@ -36,7 +36,7 @@ class NoteData:
     Mirrors harmonium_core::report::NoteSnapshot.
     """
 
-    track: int  # TrackId: 0=Melody, 1=Chords, 2=Bass, 3=Heel, 4=Toe
+    track: int  # TrackId: 0=Melody, 1=Chords, 2=Bass, 3=PercussionLow, 4=PercussionHigh
     pitch: int  # MIDI note 0-127
     start_step: int  # Position within measure (0-based)
     duration_steps: int  # 0 = trigger-only (percussion)

@@ -4,7 +4,7 @@ Commande, par graine et par banque :
 
     cargo run -q -p harmonium-cli --release --manifest-path <moteur>/Cargo.toml -- \\
         --export --bars M --profile <dossier> --seed S \\
-        --soundfont <sf2> --feet-soundfont <sf2 des pieds> \\
+        --soundfont <sf2> --percussion-soundfont <sf2 de percussion> \\
         --record-wav <wav> --record-midi <mid>
 
 Le MIDI ne dépend pas de la banque : il est écrit une fois par graine.
@@ -22,18 +22,18 @@ class Bank:
     """Banque de rendu : `label` nomme la variante dans la sortie."""
     label: str
     soundfont: Path
-    feet_soundfont: Path
+    percussion_soundfont: Path
 
 
 def parse_bank(spec: str) -> Bank:
-    """`label=chemin.sf2` ou `label=chemin.sf2,pieds.sf2` (pieds = banque principale par défaut :
-    sans cela le moteur joue la batterie sur les pieds de podorythmie, pas sur le kit du profil)."""
+    """`label=chemin.sf2` ou `label=chemin.sf2,percussion.sf2` (percussion = banque principale par
+    défaut : sans cela le moteur joue la batterie sur la banque de podorythmie, pas sur le kit du profil)."""
     label, sep, rest = spec.partition("=")
     if not sep or not label or not rest:
-        raise ValueError(f"banque invalide « {spec} » : attendu label=chemin.sf2[,pieds.sf2]")
-    main, _, feet = rest.partition(",")
+        raise ValueError(f"banque invalide « {spec} » : attendu label=chemin.sf2[,percussion.sf2]")
+    main, _, percussion = rest.partition(",")
     return Bank(label, Path(main).expanduser().resolve(),
-                Path(feet or main).expanduser().resolve())
+                Path(percussion or main).expanduser().resolve())
 
 
 def resolve_profile(engine_dir: Path, profile: str) -> Path:
@@ -50,7 +50,7 @@ def engine_command(engine_dir: Path, profile_dir: Path, bank: Bank, seed: int, b
             "--manifest-path", str(engine_dir / "Cargo.toml"), "--",
             "--export", "--bars", str(bars), "--profile", str(profile_dir),
             "--seed", str(seed), "--soundfont", str(bank.soundfont),
-            "--feet-soundfont", str(bank.feet_soundfont),
+            "--percussion-soundfont", str(bank.percussion_soundfont),
             "--record-wav", str(wav), "--record-midi", str(midi)]
 
 
@@ -61,7 +61,7 @@ def render_seeds(engine_dir: Path, profile_dir: Path, banks: list[Bank], seeds: 
     out: dict[str, dict[int, tuple[Path, Path]]] = {}
     out_dir.mkdir(parents=True, exist_ok=True)
     for bank in banks:
-        for path in (bank.soundfont, bank.feet_soundfont):
+        for path in (bank.soundfont, bank.percussion_soundfont):
             if not path.is_file():
                 raise FileNotFoundError(f"banque introuvable : {path}")
         out[bank.label] = {}

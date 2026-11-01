@@ -3,7 +3,7 @@
 `mine_cells` lit les airs ABC d'un type, situe chaque mesure dans sa partie
 de 8 via `harmonium_lab.trad.form` (rôles positionnels), classe le reste par
 intervalles (`run` / `arp` / `turn`, règle documentée) et ne garde que les
-cellules valides selon les règles de `harmonium_core::trad::cells`
+cellules valides selon les règles de `harmonium_core::compose::cells`
 (`validate_cell`, réplique Python ; vérification croisée par le parseur Rust
 du moteur : `make check-cells`, soit `harmonium-cli --check-cells`).
 Les airs `croche` sont ignorés pour les rôles positionnels mais gardés
@@ -303,7 +303,7 @@ def render_bank(
         f"# Cellules minées du corpus trad ({tune_type}) — voir D7.",
         "#",
         f"# corpus: {corpus_version} ({n_airs} airs), miné le {date}.",
-        "# Notation et invariants : cf. harmonium_core::trad::cells.",
+        "# Notation et invariants : cf. harmonium_core::compose::cells.",
         "# Poids (fréquences) : fichier compagnon .weights.json.",
         "cells = [",
     ]
