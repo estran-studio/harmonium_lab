@@ -1,0 +1,11 @@
+version: v0.2 (jazz-trio-database-v02.zip)
+source: Jazz Trio Database
+url: https://github.com/HuwCheston/Jazz-Trio-Database/releases/download/v02-zenodo/jazz-trio-database-v02.zip
+sha256: 42c3df0700e0cd6e73231b9ed111283600750305e2e9cf451f80664d1ec90025
+md5: 43f543fb286c6222ae1f52bcf7561f37
+licence: MIT
+attribution: Cheston, Schlichting, Cross, Harrison, Jazz Trio Database: Automated Annotation of Jazz Piano Trio Recordings Processed Using Audio Source Separation, TISMIR 2024, DOI 10.5334/tismir.186 ; annotations © les auteurs, licence MIT (https://github.com/HuwCheston/Jazz-Trio-Database)
+date_source: 2024-05-21
+subset: 1294 pistes (metadata.json, beats.csv, *_onsets.csv) ; piano_midi.mid jamais lu
+retrieved: 2026-11-01
+manifest_sha256: 358430749e5f6094f913e9f9f2d3c4888d82d7531cf8fc84454dec75253e563a

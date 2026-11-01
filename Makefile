@@ -9,6 +9,7 @@ TRAD_DIR := corpus/trad
 
 .PHONY: setup corpus profiles trad-corpus trad-render trad-profiles trad-ornaments check-cells profile-draft test lab-export suite gate clean help trad-sf2 feet-preview fiddle-samples fiddle-sf2 fiddle-compare engine-tunes engine-reels
 .PHONY: style-distance seed-variety p2-extract p2-enrich
+.PHONY: backing-fetch backing-measures backing-values backing-validate
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
@@ -220,6 +221,43 @@ p2-enrich: setup ## Copie enrichie : PROFILE=id PROPOSAL=toml OUT=dossier [RAW_W
 	@test -n "$(PROFILE)" -a -n "$(PROPOSAL)" -a -n "$(OUT)" || (echo "Usage: make p2-enrich PROFILE=<id> PROPOSAL=<toml> OUT=<dossier>"; exit 2)
 	$(LAB) p2-enrich --profile "$(PROFILE)" --proposal "$(PROPOSAL)" --out "$(OUT)" \
 		--engine-dir "$(ENGINE_DIR)" $(if $(RAW_WEIGHTS),--raw-weights,)
+
+# ── Accompagnement mesuré : profil `wjazzd_swing` (phase 018, E7) ──
+# Sources en cache gitignoré (corpus/{wjazzd,gmd,jtd}/raw/), SHA256 vérifié avant toute lecture ;
+# manifestes, VERSION et mesures agrégées (references/wjazzd-swing/) versionnés.
+# make backing-fetch      télécharge et vérifie WJazzD (ODbL), GMD (CC BY 4.0), JTD (MIT)
+# make backing-measures   manifestes + mesures de basse, de batterie et de timing
+# make backing-values     percussion.toml et poids de basse du profil, depuis les mesures
+#                         (OUT=<fichier> écrit le percussion.toml ; HEADER=<fichier> son en-tête)
+# make backing-validate   basse générée par le moteur contre WJazzD : PROFILES="id=dossier ..." [BACKING_SEEDS=8] [BACKING_SEED_START=1]
+#                         [BACKING_BARS=56] [BACKING_GROUPS="all blues"] [BACKING_OUT=references/wjazzd-swing/validation-bass.json]
+BACKING_SEEDS ?= 8
+BACKING_SEED_START ?= 1
+BACKING_BARS ?= 56
+BACKING_GROUPS ?= all
+BACKING_OUT ?= references/wjazzd-swing/validation-bass.json
+
+backing-fetch: setup ## Télécharge et vérifie les sources d'accompagnement (WJazzD, GMD, JTD)
+	$(PYTHON) -m harmonium_lab.backing.wjazzd --fetch
+	$(PYTHON) -m harmonium_lab.backing.drums --fetch
+	$(PYTHON) -m harmonium_lab.backing.timing --fetch
+
+backing-measures: setup ## Manifestes et mesures agrégées (basse, batterie, timing) dans references/wjazzd-swing/
+	$(PYTHON) -m harmonium_lab.backing.wjazzd --manifest
+	$(PYTHON) -m harmonium_lab.backing.bass_measures
+	$(PYTHON) -m harmonium_lab.backing.drums --manifest --measures
+	$(PYTHON) -m harmonium_lab.backing.timing --manifest --measures
+
+backing-values: setup ## Poids de basse et percussion.toml du profil : [OUT=fichier] [HEADER=fichier]
+	$(PYTHON) -m harmonium_lab.backing.engine_values --table \
+		$(if $(OUT),--percussion "$(OUT)",) $(if $(HEADER),--header "$(HEADER)",)
+
+backing-validate: setup ## Basse générée vs WJazzD : PROFILES="id=dossier ..." [ENGINE_BIN=harmonium-cli] [BACKING_SEEDS=8]
+	@test -n "$(PROFILES)" || (echo 'Usage: make backing-validate PROFILES="wjazzd_swing=../harmonium/profiles/wjazzd_swing ..."'; exit 2)
+	$(PYTHON) -m harmonium_lab.backing.validate --engine-dir "$(ENGINE_DIR)" \
+		$(if $(ENGINE_BIN),--engine-bin "$(ENGINE_BIN)",) $(foreach p,$(PROFILES),--profile "$(p)") \
+		--seeds $(BACKING_SEEDS) --seed-start $(BACKING_SEED_START) --bars $(BACKING_BARS) $(foreach g,$(BACKING_GROUPS),--group $(g)) \
+		-o "$(BACKING_OUT)" --markdown
 
 # ════════════════════════════════════════════════════════════════════
 

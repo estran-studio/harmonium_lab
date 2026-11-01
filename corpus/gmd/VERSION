@@ -1,0 +1,10 @@
+version: v1.0.0 (groove-v1.0.0-midionly.zip)
+source: Groove MIDI Dataset
+url: https://storage.googleapis.com/magentadata/datasets/groove/groove-v1.0.0-midionly.zip
+sha256: 651cbc524ffb891be1a3e46d89dc82a1cecb09a57c748c7b45b844c4841dcc1e
+licence: CC-BY-4.0
+attribution: Gillick, Roberts, Engel, Eck, Bamman, Learning to Groove with Inverse Sequence Transformations, ICML 2019 ; Groove MIDI Dataset v1.0.0, Google LLC, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)
+date_source: 2019-05-01
+subset: styles jazz*, neworleans*, blues/shuffle ; 4/4 ; 156 fichiers MIDI (le reste d'info.csv n'est pas retenu)
+retrieved: 2026-11-01
+manifest_sha256: c8e555eaef6daa640fae0bd83fe44005e48947e8dc619031548cd01aa552c1c9
