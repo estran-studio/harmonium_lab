@@ -1,0 +1,10 @@
+# Batterie du profil `wjazzd_swing` (E7) : GENÉRÉ par `python -m harmonium_lab.backing.engine_values
+# --percussion` depuis `references/wjazzd-swing/measures-drums.json` (Groove MIDI Dataset v1.0.0,
+# CC BY 4.0, Gillick et al., ICML 2019 : jazz et jazz/swing, 4/4, mesures `beat` et `fill`).
+# Chaque pattern est construit sur les probabilités PAR PAS d'un groupe de mesures de même figure
+# de ride ramenées à la grille 16 pas swinguée ; aucun n'est une mesure d'un enregistrement.
+# Voix : ride (51) et charleston pédale (44), caisse claire (38), tom (43) sur PercussionHigh,
+# grosse caisse (36) sur PercussionLow ; kit jazz de GeneralUser GS (banque 128, programme 32).
+# Poids = effectif de mesures du groupe. Densité 0 : ride ; 1 : + pédale 2 et 4 ; 2 : + caisse
+# claire (ghost notes) et grosse caisse. Relance de la mesure de fin de phrase : mesures `fill`
+# (seule cadence de densité 2).
