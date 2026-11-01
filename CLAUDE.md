@@ -8,6 +8,8 @@
 
 > `make fiddle-samples` (SK3) : télécharge les banques commercialement utilisables de `samples/fiddles/manifest.jsonl`, vérifie SHA256 et `phdr`, cache privé dans `samples/fiddles/raw/` (gitignoré). Réinventaire explicite : `.venv/bin/python -m harmonium_lab.trad.fiddle_samples --inventory --offline`.
 
+> `make seed-variety` (phase 018, P1/P2) : variété par graine des couches accords / basse / batterie (`harmonium-lab seed-variety`, `src/harmonium_lab/seedvariety.py`), lue sur `--record-truth` du moteur ; `LABEL=V1|P2`, `VARIETY_PROFILES="id|dossier …"`, `ENGINE_DIR`, `ENGINE_BIN`. `make p2-extract CORPUS_ROOT=<corpus hors dépôt>` : propositions d'alternatives (accords, motifs de basse, patterns) tirées de `corpus/{isaac,nuclear_throne}/transcriptions/` vers `references/<profil>/proposals/<profil>.toml` (provenance, confiance, manques moteur) ; `make p2-enrich PROFILE=… PROPOSAL=… OUT=/tmp/…` : copie temporaire enrichie pour la preuve (`make style-distance … DIST_OUT=…`). Compte rendu et recommandations : `references/p2-variete.md`.
+
 ## harmonium_lab — Music Quality Evaluation Pipeline
 
 ### Quick Start

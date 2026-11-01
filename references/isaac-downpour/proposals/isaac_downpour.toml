@@ -1,0 +1,210 @@
+# Propositions P2 pour `isaac_downpour` (phase 018) — ajouts au profil écrit, schéma moteur actuel.
+#
+# Source : transcriptions 47_river_of_despair (hors dépôt, principe VII), corpus 2026-10-28+69, extraites le 2026-11-01.
+# Aucun audio, stem ni MIDI : seuls des dérivés agrégés (accords, motifs, patterns).
+# Seuls `harmony.parts.*`, `accompaniment.bass.motifs` et `percussion.patterns` sont des données moteur ;
+# `[[provenance]]`, `[[gaps]]` et `[stats]` sont des métadonnées (le moteur les refuserait : `p2-enrich` les écarte).
+# `weight` = effectif du groupe de fenêtres proches (fréquence), pas un réglage d'écoute.
+# Confiance : accords = score moyen de la triade par mesure (0–1) ; basse = part de trames voisées ;
+# batterie = marge moyenne de classification des coups (peut être < 0).
+
+[harmony.parts.C]
+kind = "chord_loop"
+loops = [
+  { weight = 1, chords = [
+    { semitones = 0, quality = "", steps = 32 },
+    { semitones = 5, quality = "m", steps = 32 },
+    { semitones = 8, quality = "", steps = 32 },
+    { semitones = 10, quality = "", steps = 32 },
+    { semitones = 8, quality = "m", bass = 11, steps = 16 },
+    { semitones = 7, quality = "", bass = 11, steps = 16 },
+    { semitones = 0, quality = "", steps = 16 },
+    { semitones = 5, quality = "m", bass = 0, steps = 16 },
+    { semitones = 1, quality = "", steps = 32 },
+    { semitones = 3, quality = "", steps = 32 },
+  ] },
+]
+
+[[accompaniment.bass.motifs]]
+part = "A"
+bars = 2
+weight = 3
+reference = "chord_root"
+notes = [
+  { step = 0, duration = 32, semitones = 4, velocity = 84 },
+]
+
+[[accompaniment.bass.motifs]]
+part = "A"
+bars = 2
+weight = 2
+reference = "chord_root"
+notes = [
+  { step = 0, duration = 5, semitones = 0, velocity = 84 },
+  { step = 5, duration = 8, semitones = 0, octave = 1, velocity = 80, legato = true },
+  { step = 14, duration = 15, semitones = 0, octave = 1, velocity = 80 },
+  { step = 29, duration = 2, semitones = 1, octave = 1, velocity = 80, legato = true },
+]
+
+[[percussion.patterns]]
+density = 2
+weight = 5
+hits = [
+  { step = 0, track = "PercussionHigh", note = 42, delta_velocity = -40 },
+  { step = 2, track = "PercussionHigh", delta_velocity = -16 },
+  { step = 4, track = "PercussionLow", delta_velocity = 0 },
+  { step = 8, track = "PercussionHigh", delta_velocity = 0 },
+  { step = 10, track = "PercussionLow", delta_velocity = -16 },
+  { step = 14, track = "PercussionHigh", delta_velocity = -16 },
+]
+
+[[percussion.patterns]]
+density = 1
+weight = 6
+hits = [
+  { step = 0, track = "PercussionLow", delta_velocity = 0 },
+  { step = 4, track = "PercussionHigh", note = 42, delta_velocity = -40 },
+  { step = 8, track = "PercussionHigh", delta_velocity = 0 },
+  { step = 12, track = "PercussionHigh", note = 42, delta_velocity = -40 },
+]
+
+[[provenance]]
+layer = "chords"
+track = "47_river_of_despair"
+bars = [16, 32]
+start = "0:27.0"
+end = "0:53.7"
+status = "non-assigné"
+similarity = 0.22
+
+[[provenance]]
+layer = "chords"
+track = "47_river_of_despair"
+bars = [32, 48]
+start = "0:53.7"
+end = "1:20.4"
+status = "non-assigné"
+similarity = 0.12
+
+[[provenance]]
+layer = "chords"
+part = "C"
+track = "47_river_of_despair"
+bars = [48, 64]
+start = "1:20.4"
+end = "1:47.0"
+status = "nouveau"
+ref = "harmony.parts.C.loops[0]"
+support = 1
+windows = 1
+confidence = 0.848
+similarity = 0.78
+
+[[provenance]]
+layer = "bass"
+track = "47_river_of_despair"
+bars = [30, 32]
+start = "0:50.4"
+end = "0:53.7"
+status = "non-assigné"
+similarity = 0.5
+
+[[provenance]]
+layer = "bass"
+track = "47_river_of_despair"
+bars = [46, 48]
+start = "1:17.0"
+end = "1:20.4"
+status = "non-assigné"
+similarity = 0.5
+
+[[provenance]]
+layer = "bass"
+part = "A"
+track = "47_river_of_despair"
+bars = [16, 18]
+start = "0:27.0"
+end = "0:30.4"
+status = "présent"
+support = 9
+windows = 20
+confidence = 0.959
+similarity = 1.0
+
+[[provenance]]
+layer = "bass"
+part = "A"
+track = "47_river_of_despair"
+bars = [24, 26]
+start = "0:40.4"
+end = "0:43.7"
+status = "nouveau"
+ref = "accompaniment.bass.motifs[0]"
+support = 3
+windows = 20
+confidence = 0.959
+similarity = 1.0
+
+[[provenance]]
+layer = "bass"
+part = "A"
+track = "47_river_of_despair"
+bars = [26, 28]
+start = "0:43.7"
+end = "0:47.0"
+status = "nouveau"
+ref = "accompaniment.bass.motifs[1]"
+support = 2
+windows = 20
+confidence = 0.959
+similarity = 1.0
+
+[[provenance]]
+layer = "drums"
+part = "density2"
+track = "47_river_of_despair"
+bars_used = [19, 21, 23, 27, 29]
+times = ["0:32.0", "0:35.4", "0:38.7", "0:45.4", "0:48.7"]
+status = "nouveau"
+ref = "percussion.patterns[0]"
+support = 5
+windows = 16
+density = 2
+confidence = 0.291
+
+[[provenance]]
+layer = "drums"
+part = "density1"
+track = "47_river_of_despair"
+bars_used = [20, 22, 24, 26, 28, 30]
+times = ["0:33.7", "0:37.0", "0:40.4", "0:43.7", "0:47.0", "0:50.4"]
+status = "nouveau"
+ref = "percussion.patterns[1]"
+support = 6
+windows = 16
+density = 1
+confidence = 0.315
+
+[[gaps]]
+layer = "drums"
+reason = "patterns de batterie par densité seulement : aucun moyen de lier un pattern à une partie ou à un tour (le tirage est par partie et densité, mais la banque est commune)"
+
+[stats.chords.C]
+windows = 1
+groups = 1
+discarded = 0
+
+[stats.bass.A]
+windows = 20
+groups = 9
+discarded = 6
+
+[stats.bass.B]
+windows = 2
+groups = 2
+discarded = 2
+
+[stats.drums]
+bars = 16
+groups = 7
+discarded = 5

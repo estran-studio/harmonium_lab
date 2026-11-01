@@ -1,0 +1,1517 @@
+{
+  "schema": 1,
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "bars": 64,
+  "profiles": [
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "bars_compared": 64,
+      "part_occurrences": 7,
+      "layers": {
+        "chords": {
+          "bars": {
+            "units": 64,
+            "active_units": 64,
+            "share": 0.0,
+            "share_active": 0.0,
+            "diversity": 0.0,
+            "distinct_mean": 1.0
+          },
+          "parts": {
+            "units": 7,
+            "active_units": 7,
+            "share": 0.0,
+            "share_active": 0.0,
+            "diversity": 0.0,
+            "distinct_mean": 1.0
+          },
+          "by_part": {
+            "A1": {
+              "bars": {
+                "units": 24,
+                "active_units": 24,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              },
+              "occurrences": {
+                "units": 3,
+                "active_units": 3,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              }
+            },
+            "A2": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              },
+              "occurrences": {
+                "units": 2,
+                "active_units": 2,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              }
+            },
+            "Pont": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              }
+            },
+            "B": {
+              "bars": {
+                "units": 8,
+                "active_units": 8,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              }
+            }
+          }
+        },
+        "bass": {
+          "bars": {
+            "units": 64,
+            "active_units": 44,
+            "share": 0.25,
+            "share_active": 0.3636,
+            "diversity": 0.0167,
+            "distinct_mean": 1.25
+          },
+          "parts": {
+            "units": 7,
+            "active_units": 7,
+            "share": 0.2857,
+            "share_active": 0.2857,
+            "diversity": 0.1714,
+            "distinct_mean": 3.571
+          },
+          "by_part": {
+            "A1": {
+              "bars": {
+                "units": 24,
+                "active_units": 24,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              },
+              "occurrences": {
+                "units": 3,
+                "active_units": 3,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              }
+            },
+            "A2": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              },
+              "occurrences": {
+                "units": 2,
+                "active_units": 2,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.6,
+                "distinct_mean": 10.0
+              }
+            },
+            "Pont": {
+              "bars": {
+                "units": 16,
+                "active_units": 0,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              }
+            },
+            "B": {
+              "bars": {
+                "units": 8,
+                "active_units": 4,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              }
+            }
+          }
+        },
+        "drums": {
+          "bars": {
+            "units": 64,
+            "active_units": 40,
+            "share": 0.5469,
+            "share_active": 0.875,
+            "diversity": 0.0365,
+            "distinct_mean": 1.547
+          },
+          "parts": {
+            "units": 7,
+            "active_units": 7,
+            "share": 0.7143,
+            "share_active": 0.7143,
+            "diversity": 0.0476,
+            "distinct_mean": 1.714
+          },
+          "by_part": {
+            "A1": {
+              "bars": {
+                "units": 24,
+                "active_units": 16,
+                "share": 0.5833,
+                "share_active": 0.875,
+                "diversity": 0.0389,
+                "distinct_mean": 1.583
+              },
+              "occurrences": {
+                "units": 3,
+                "active_units": 3,
+                "share": 0.6667,
+                "share_active": 0.6667,
+                "diversity": 0.0444,
+                "distinct_mean": 1.667
+              }
+            },
+            "A2": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.875,
+                "share_active": 0.875,
+                "diversity": 0.0583,
+                "distinct_mean": 1.875
+              },
+              "occurrences": {
+                "units": 2,
+                "active_units": 2,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              }
+            },
+            "Pont": {
+              "bars": {
+                "units": 16,
+                "active_units": 0,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              }
+            },
+            "B": {
+              "bars": {
+                "units": 8,
+                "active_units": 8,
+                "share": 0.875,
+                "share_active": 0.875,
+                "diversity": 0.0583,
+                "distinct_mean": 1.875
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              }
+            }
+          }
+        }
+      },
+      "combined": {
+        "any": {
+          "bars": {
+            "units": 64,
+            "share": 0.5781
+          },
+          "parts": {
+            "units": 7,
+            "share": 0.7143
+          }
+        },
+        "all": {
+          "bars": {
+            "units": 64,
+            "share": 0.0
+          },
+          "parts": {
+            "units": 7,
+            "share": 0.0
+          }
+        }
+      },
+      "distinct_runs": {
+        "chords": 1,
+        "bass": 10,
+        "drums": 8
+      },
+      "profile": "nt_desert_p2",
+      "bars": 64,
+      "label": "nt_desert_p2",
+      "measure": "P2"
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "bars_compared": 64,
+      "part_occurrences": 12,
+      "layers": {
+        "chords": {
+          "bars": {
+            "units": 64,
+            "active_units": 64,
+            "share": 0.4375,
+            "share_active": 0.4375,
+            "diversity": 0.0375,
+            "distinct_mean": 1.562
+          },
+          "parts": {
+            "units": 12,
+            "active_units": 12,
+            "share": 0.75,
+            "share_active": 0.75,
+            "diversity": 0.0722,
+            "distinct_mean": 2.083
+          },
+          "by_part": {
+            "A1": {
+              "bars": {
+                "units": 24,
+                "active_units": 24,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              },
+              "occurrences": {
+                "units": 3,
+                "active_units": 3,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              }
+            },
+            "A2": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1,
+                "distinct_mean": 2.5
+              },
+              "occurrences": {
+                "units": 4,
+                "active_units": 4,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              }
+            },
+            "D": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.5,
+                "share_active": 0.5,
+                "diversity": 0.0333,
+                "distinct_mean": 1.5
+              },
+              "occurrences": {
+                "units": 4,
+                "active_units": 4,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              }
+            },
+            "Pont": {
+              "bars": {
+                "units": 8,
+                "active_units": 8,
+                "share": 0.5,
+                "share_active": 0.5,
+                "diversity": 0.0333,
+                "distinct_mean": 1.5
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              }
+            }
+          }
+        },
+        "bass": {
+          "bars": {
+            "units": 64,
+            "active_units": 64,
+            "share": 0.5938,
+            "share_active": 0.5938,
+            "diversity": 0.0552,
+            "distinct_mean": 1.828
+          },
+          "parts": {
+            "units": 12,
+            "active_units": 12,
+            "share": 1.0,
+            "share_active": 1.0,
+            "diversity": 0.35,
+            "distinct_mean": 6.25
+          },
+          "by_part": {
+            "A1": {
+              "bars": {
+                "units": 24,
+                "active_units": 24,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1,
+                "distinct_mean": 2.5
+              },
+              "occurrences": {
+                "units": 3,
+                "active_units": 3,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 1.0,
+                "distinct_mean": 16.0
+              }
+            },
+            "A2": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.25,
+                "share_active": 0.25,
+                "diversity": 0.0167,
+                "distinct_mean": 1.25
+              },
+              "occurrences": {
+                "units": 4,
+                "active_units": 4,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              }
+            },
+            "D": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.25,
+                "share_active": 0.25,
+                "diversity": 0.0167,
+                "distinct_mean": 1.25
+              },
+              "occurrences": {
+                "units": 4,
+                "active_units": 4,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              }
+            },
+            "Pont": {
+              "bars": {
+                "units": 8,
+                "active_units": 8,
+                "share": 0.75,
+                "share_active": 0.75,
+                "diversity": 0.075,
+                "distinct_mean": 2.125
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.6667,
+                "distinct_mean": 11.0
+              }
+            }
+          }
+        },
+        "drums": {
+          "bars": {
+            "units": 64,
+            "active_units": 56,
+            "share": 0.7031,
+            "share_active": 0.8036,
+            "diversity": 0.1875,
+            "distinct_mean": 3.812
+          },
+          "parts": {
+            "units": 12,
+            "active_units": 12,
+            "share": 0.9167,
+            "share_active": 0.9167,
+            "diversity": 0.2444,
+            "distinct_mean": 4.667
+          },
+          "by_part": {
+            "A1": {
+              "bars": {
+                "units": 24,
+                "active_units": 24,
+                "share": 0.875,
+                "share_active": 0.875,
+                "diversity": 0.2333,
+                "distinct_mean": 4.5
+              },
+              "occurrences": {
+                "units": 3,
+                "active_units": 3,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.2667,
+                "distinct_mean": 5.0
+              }
+            },
+            "A2": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.75,
+                "share_active": 0.75,
+                "diversity": 0.2,
+                "distinct_mean": 4.0
+              },
+              "occurrences": {
+                "units": 4,
+                "active_units": 4,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.2667,
+                "distinct_mean": 5.0
+              }
+            },
+            "D": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.75,
+                "share_active": 0.75,
+                "diversity": 0.2,
+                "distinct_mean": 4.0
+              },
+              "occurrences": {
+                "units": 4,
+                "active_units": 4,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.2667,
+                "distinct_mean": 5.0
+              }
+            },
+            "Pont": {
+              "bars": {
+                "units": 8,
+                "active_units": 0,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              }
+            }
+          }
+        }
+      },
+      "combined": {
+        "any": {
+          "bars": {
+            "units": 64,
+            "share": 0.9688
+          },
+          "parts": {
+            "units": 12,
+            "share": 1.0
+          }
+        },
+        "all": {
+          "bars": {
+            "units": 64,
+            "share": 0.0625
+          },
+          "parts": {
+            "units": 12,
+            "share": 0.6667
+          }
+        }
+      },
+      "distinct_runs": {
+        "chords": 9,
+        "bass": 16,
+        "drums": 14
+      },
+      "profile": "isaac_basement_p2",
+      "bars": 64,
+      "label": "isaac_basement_p2",
+      "measure": "P2"
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "bars_compared": 64,
+      "part_occurrences": 8,
+      "layers": {
+        "chords": {
+          "bars": {
+            "units": 64,
+            "active_units": 64,
+            "share": 0.1875,
+            "share_active": 0.1875,
+            "diversity": 0.0125,
+            "distinct_mean": 1.188
+          },
+          "parts": {
+            "units": 8,
+            "active_units": 8,
+            "share": 0.625,
+            "share_active": 0.625,
+            "diversity": 0.0417,
+            "distinct_mean": 1.625
+          },
+          "by_part": {
+            "A": {
+              "bars": {
+                "units": 24,
+                "active_units": 24,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              },
+              "occurrences": {
+                "units": 3,
+                "active_units": 3,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              }
+            },
+            "A2": {
+              "bars": {
+                "units": 32,
+                "active_units": 32,
+                "share": 0.25,
+                "share_active": 0.25,
+                "diversity": 0.0167,
+                "distinct_mean": 1.25
+              },
+              "occurrences": {
+                "units": 4,
+                "active_units": 4,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              }
+            },
+            "Pont": {
+              "bars": {
+                "units": 8,
+                "active_units": 8,
+                "share": 0.5,
+                "share_active": 0.5,
+                "diversity": 0.0333,
+                "distinct_mean": 1.5
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              }
+            }
+          }
+        },
+        "bass": {
+          "bars": {
+            "units": 64,
+            "active_units": 64,
+            "share": 1.0,
+            "share_active": 1.0,
+            "diversity": 0.075,
+            "distinct_mean": 2.125
+          },
+          "parts": {
+            "units": 8,
+            "active_units": 8,
+            "share": 1.0,
+            "share_active": 1.0,
+            "diversity": 0.5,
+            "distinct_mean": 8.5
+          },
+          "by_part": {
+            "A": {
+              "bars": {
+                "units": 24,
+                "active_units": 24,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              },
+              "occurrences": {
+                "units": 3,
+                "active_units": 3,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.5333,
+                "distinct_mean": 9.0
+              }
+            },
+            "A2": {
+              "bars": {
+                "units": 32,
+                "active_units": 32,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              },
+              "occurrences": {
+                "units": 4,
+                "active_units": 4,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.4,
+                "distinct_mean": 7.0
+              }
+            },
+            "Pont": {
+              "bars": {
+                "units": 8,
+                "active_units": 8,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.8,
+                "distinct_mean": 13.0
+              }
+            }
+          }
+        },
+        "drums": {
+          "bars": {
+            "units": 64,
+            "active_units": 64,
+            "share": 0.875,
+            "share_active": 0.875,
+            "diversity": 0.1167,
+            "distinct_mean": 2.75
+          },
+          "parts": {
+            "units": 8,
+            "active_units": 8,
+            "share": 1.0,
+            "share_active": 1.0,
+            "diversity": 0.1333,
+            "distinct_mean": 3.0
+          },
+          "by_part": {
+            "A": {
+              "bars": {
+                "units": 24,
+                "active_units": 24,
+                "share": 0.875,
+                "share_active": 0.875,
+                "diversity": 0.1167,
+                "distinct_mean": 2.75
+              },
+              "occurrences": {
+                "units": 3,
+                "active_units": 3,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              }
+            },
+            "A2": {
+              "bars": {
+                "units": 32,
+                "active_units": 32,
+                "share": 0.875,
+                "share_active": 0.875,
+                "diversity": 0.1167,
+                "distinct_mean": 2.75
+              },
+              "occurrences": {
+                "units": 4,
+                "active_units": 4,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              }
+            },
+            "Pont": {
+              "bars": {
+                "units": 8,
+                "active_units": 8,
+                "share": 0.875,
+                "share_active": 0.875,
+                "diversity": 0.1167,
+                "distinct_mean": 2.75
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              }
+            }
+          }
+        }
+      },
+      "combined": {
+        "any": {
+          "bars": {
+            "units": 64,
+            "share": 1.0
+          },
+          "parts": {
+            "units": 8,
+            "share": 1.0
+          }
+        },
+        "all": {
+          "bars": {
+            "units": 64,
+            "share": 0.1719
+          },
+          "parts": {
+            "units": 8,
+            "share": 0.625
+          }
+        }
+      },
+      "distinct_runs": {
+        "chords": 4,
+        "bass": 16,
+        "drums": 10
+      },
+      "profile": "isaac_cellar_p2",
+      "bars": 64,
+      "label": "isaac_cellar_p2",
+      "measure": "P2"
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "bars_compared": 64,
+      "part_occurrences": 8,
+      "layers": {
+        "chords": {
+          "bars": {
+            "units": 64,
+            "active_units": 64,
+            "share": 0.2344,
+            "share_active": 0.2344,
+            "diversity": 0.0219,
+            "distinct_mean": 1.328
+          },
+          "parts": {
+            "units": 8,
+            "active_units": 8,
+            "share": 0.375,
+            "share_active": 0.375,
+            "diversity": 0.0417,
+            "distinct_mean": 1.625
+          },
+          "by_part": {
+            "R": {
+              "bars": {
+                "units": 40,
+                "active_units": 40,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              },
+              "occurrences": {
+                "units": 5,
+                "active_units": 5,
+                "share": 0.0,
+                "share_active": 0.0,
+                "diversity": 0.0,
+                "distinct_mean": 1.0
+              }
+            },
+            "C": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.625,
+                "share_active": 0.625,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              },
+              "occurrences": {
+                "units": 2,
+                "active_units": 2,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              }
+            },
+            "C2": {
+              "bars": {
+                "units": 8,
+                "active_units": 8,
+                "share": 0.625,
+                "share_active": 0.625,
+                "diversity": 0.0417,
+                "distinct_mean": 1.625
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              }
+            }
+          }
+        },
+        "bass": {
+          "bars": {
+            "units": 64,
+            "active_units": 64,
+            "share": 1.0,
+            "share_active": 1.0,
+            "diversity": 0.1792,
+            "distinct_mean": 3.688
+          },
+          "parts": {
+            "units": 8,
+            "active_units": 8,
+            "share": 1.0,
+            "share_active": 1.0,
+            "diversity": 0.9083,
+            "distinct_mean": 14.625
+          },
+          "by_part": {
+            "R": {
+              "bars": {
+                "units": 40,
+                "active_units": 40,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              },
+              "occurrences": {
+                "units": 5,
+                "active_units": 5,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.8667,
+                "distinct_mean": 14.0
+              }
+            },
+            "C": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.3083,
+                "distinct_mean": 5.625
+              },
+              "occurrences": {
+                "units": 2,
+                "active_units": 2,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 1.0,
+                "distinct_mean": 16.0
+              }
+            },
+            "C2": {
+              "bars": {
+                "units": 8,
+                "active_units": 8,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.15,
+                "distinct_mean": 3.25
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.9333,
+                "distinct_mean": 15.0
+              }
+            }
+          }
+        },
+        "drums": {
+          "bars": {
+            "units": 64,
+            "active_units": 64,
+            "share": 0.875,
+            "share_active": 0.875,
+            "diversity": 0.1167,
+            "distinct_mean": 2.75
+          },
+          "parts": {
+            "units": 8,
+            "active_units": 8,
+            "share": 1.0,
+            "share_active": 1.0,
+            "diversity": 0.1333,
+            "distinct_mean": 3.0
+          },
+          "by_part": {
+            "R": {
+              "bars": {
+                "units": 40,
+                "active_units": 40,
+                "share": 0.875,
+                "share_active": 0.875,
+                "diversity": 0.1167,
+                "distinct_mean": 2.75
+              },
+              "occurrences": {
+                "units": 5,
+                "active_units": 5,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              }
+            },
+            "C": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.875,
+                "share_active": 0.875,
+                "diversity": 0.1167,
+                "distinct_mean": 2.75
+              },
+              "occurrences": {
+                "units": 2,
+                "active_units": 2,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              }
+            },
+            "C2": {
+              "bars": {
+                "units": 8,
+                "active_units": 8,
+                "share": 0.875,
+                "share_active": 0.875,
+                "diversity": 0.1167,
+                "distinct_mean": 2.75
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              }
+            }
+          }
+        }
+      },
+      "combined": {
+        "any": {
+          "bars": {
+            "units": 64,
+            "share": 1.0
+          },
+          "parts": {
+            "units": 8,
+            "share": 1.0
+          }
+        },
+        "all": {
+          "bars": {
+            "units": 64,
+            "share": 0.2188
+          },
+          "parts": {
+            "units": 8,
+            "share": 0.375
+          }
+        }
+      },
+      "distinct_runs": {
+        "chords": 5,
+        "bass": 16,
+        "drums": 10
+      },
+      "profile": "isaac_burning_p2",
+      "bars": 64,
+      "label": "isaac_burning_p2",
+      "measure": "P2"
+    },
+    {
+      "seeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "bars_compared": 48,
+      "part_occurrences": 3,
+      "layers": {
+        "chords": {
+          "bars": {
+            "units": 48,
+            "active_units": 48,
+            "share": 0.5208,
+            "share_active": 0.5208,
+            "diversity": 0.0403,
+            "distinct_mean": 1.604
+          },
+          "parts": {
+            "units": 3,
+            "active_units": 3,
+            "share": 1.0,
+            "share_active": 1.0,
+            "diversity": 0.0889,
+            "distinct_mean": 2.333
+          },
+          "by_part": {
+            "A": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.625,
+                "share_active": 0.625,
+                "diversity": 0.0417,
+                "distinct_mean": 1.625
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              }
+            },
+            "B": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.375,
+                "share_active": 0.375,
+                "diversity": 0.025,
+                "distinct_mean": 1.375
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              }
+            },
+            "C": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.5625,
+                "share_active": 0.5625,
+                "diversity": 0.0542,
+                "distinct_mean": 1.812
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              }
+            }
+          }
+        },
+        "bass": {
+          "bars": {
+            "units": 48,
+            "active_units": 48,
+            "share": 0.7917,
+            "share_active": 0.7917,
+            "diversity": 0.1417,
+            "distinct_mean": 3.125
+          },
+          "parts": {
+            "units": 3,
+            "active_units": 3,
+            "share": 1.0,
+            "share_active": 1.0,
+            "diversity": 0.9333,
+            "distinct_mean": 15.0
+          },
+          "by_part": {
+            "A": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.2833,
+                "distinct_mean": 5.25
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 1.0,
+                "distinct_mean": 16.0
+              }
+            },
+            "B": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.6875,
+                "share_active": 0.6875,
+                "diversity": 0.0667,
+                "distinct_mean": 2.0
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.9333,
+                "distinct_mean": 15.0
+              }
+            },
+            "C": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.6875,
+                "share_active": 0.6875,
+                "diversity": 0.075,
+                "distinct_mean": 2.125
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.8667,
+                "distinct_mean": 14.0
+              }
+            }
+          }
+        },
+        "drums": {
+          "bars": {
+            "units": 48,
+            "active_units": 48,
+            "share": 0.875,
+            "share_active": 0.875,
+            "diversity": 0.1167,
+            "distinct_mean": 2.75
+          },
+          "parts": {
+            "units": 3,
+            "active_units": 3,
+            "share": 1.0,
+            "share_active": 1.0,
+            "diversity": 0.1333,
+            "distinct_mean": 3.0
+          },
+          "by_part": {
+            "A": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.875,
+                "share_active": 0.875,
+                "diversity": 0.1167,
+                "distinct_mean": 2.75
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              }
+            },
+            "B": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.875,
+                "share_active": 0.875,
+                "diversity": 0.1167,
+                "distinct_mean": 2.75
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              }
+            },
+            "C": {
+              "bars": {
+                "units": 16,
+                "active_units": 16,
+                "share": 0.875,
+                "share_active": 0.875,
+                "diversity": 0.1167,
+                "distinct_mean": 2.75
+              },
+              "occurrences": {
+                "units": 1,
+                "active_units": 1,
+                "share": 1.0,
+                "share_active": 1.0,
+                "diversity": 0.1333,
+                "distinct_mean": 3.0
+              }
+            }
+          }
+        }
+      },
+      "combined": {
+        "any": {
+          "bars": {
+            "units": 48,
+            "share": 0.9792
+          },
+          "parts": {
+            "units": 3,
+            "share": 1.0
+          }
+        },
+        "all": {
+          "bars": {
+            "units": 48,
+            "share": 0.4375
+          },
+          "parts": {
+            "units": 3,
+            "share": 1.0
+          }
+        }
+      },
+      "distinct_runs": {
+        "chords": 9,
+        "bass": 16,
+        "drums": 10
+      },
+      "profile": "isaac_downpour_p2",
+      "bars": 64,
+      "label": "isaac_downpour_p2",
+      "measure": "P2"
+    }
+  ]
+}
