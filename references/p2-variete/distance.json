@@ -1,0 +1,690 @@
+{
+ "isaac_basement": {
+  "engine_rev": null,
+  "seeds": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "bars": 48,
+  "v1": {
+   "audio": {
+    "generaluser": {
+     "02_diptera_sonata": {
+      "score": 42.2,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 29.4,
+       "brillance": 0.0,
+       "percussif": 19.3,
+       "attaques": 24.9,
+       "dynamique": 93.4,
+       "bandes": 28.2
+      }
+     },
+     "21_periculum": {
+      "score": 38.6,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 3.9,
+       "brillance": 12.5,
+       "percussif": 13.6,
+       "attaques": 0.0,
+       "dynamique": 84.6,
+       "bandes": 55.7
+      }
+     }
+    }
+   },
+   "symbolic": {
+    "02_diptera_sonata": {
+     "score": 64.6,
+     "groups": {
+      "basse": 74.6,
+      "batterie": 56.8,
+      "accords": 77.8,
+      "boucles": 49.3
+     },
+     "scores": {
+      "bass_pc": 74.6,
+      "drums_any": 87.9,
+      "drums_kick": 67.6,
+      "drums_snare": 71.8,
+      "drums_hat": 0.0,
+      "chord_roots": 37.9,
+      "chord_pedal_share": 97.8,
+      "chord_change_rate": 97.6,
+      "loop_bass": 25.9,
+      "loop_drums": 86.9,
+      "loop_chords": 35.2
+     }
+    },
+    "21_periculum": {
+     "score": 67.3,
+     "groups": {
+      "basse": 63.9,
+      "batterie": 83.9,
+      "accords": 64.4,
+      "boucles": 57.1
+     },
+     "scores": {
+      "bass_pc": 63.9,
+      "drums_any": 85.5,
+      "drums_kick": 72.1,
+      "drums_snare": 78.1,
+      "drums_hat": 100.0,
+      "chord_roots": 30.0,
+      "chord_pedal_share": 75.0,
+      "chord_change_rate": 88.1,
+      "loop_bass": 41.5,
+      "loop_drums": 86.9,
+      "loop_chords": 42.8
+     }
+    }
+   }
+  },
+  "p2": {
+   "audio": {
+    "generaluser": {
+     "02_diptera_sonata": {
+      "score": 41.7,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 22.2,
+       "brillance": 0.2,
+       "percussif": 17.5,
+       "attaques": 29.6,
+       "dynamique": 92.8,
+       "bandes": 29.8
+      }
+     },
+     "21_periculum": {
+      "score": 38.5,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 0.8,
+       "brillance": 12.6,
+       "percussif": 11.8,
+       "attaques": 3.3,
+       "dynamique": 83.1,
+       "bandes": 58.1
+      }
+     }
+    }
+   },
+   "symbolic": {
+    "02_diptera_sonata": {
+     "score": 67.2,
+     "groups": {
+      "basse": 74.6,
+      "batterie": 70.3,
+      "accords": 77.8,
+      "boucles": 46.3
+     },
+     "scores": {
+      "bass_pc": 74.6,
+      "drums_any": 89.0,
+      "drums_kick": 71.1,
+      "drums_snare": 77.1,
+      "drums_hat": 43.9,
+      "chord_roots": 37.9,
+      "chord_pedal_share": 97.8,
+      "chord_change_rate": 97.6,
+      "loop_bass": 27.0,
+      "loop_drums": 76.4,
+      "loop_chords": 35.5
+     }
+    },
+    "21_periculum": {
+     "score": 61.9,
+     "groups": {
+      "basse": 63.5,
+      "batterie": 66.0,
+      "accords": 64.5,
+      "boucles": 53.5
+     },
+     "scores": {
+      "bass_pc": 63.5,
+      "drums_any": 87.7,
+      "drums_kick": 73.5,
+      "drums_snare": 72.8,
+      "drums_hat": 30.0,
+      "chord_roots": 30.4,
+      "chord_pedal_share": 75.0,
+      "chord_change_rate": 88.1,
+      "loop_bass": 41.5,
+      "loop_drums": 76.4,
+      "loop_chords": 42.5
+     }
+    }
+   }
+  }
+ },
+ "isaac_cellar": {
+  "engine_rev": null,
+  "seeds": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "bars": 48,
+  "v1": {
+   "audio": {
+    "generaluser": {
+     "21_periculum": {
+      "score": 54.5,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 35.3,
+       "brillance": 19.4,
+       "percussif": 72.8,
+       "attaques": 0.0,
+       "dynamique": 88.7,
+       "bandes": 65.4
+      }
+     }
+    }
+   },
+   "symbolic": {
+    "21_periculum": {
+     "score": 66.3,
+     "groups": {
+      "basse": 78.2,
+      "batterie": 83.5,
+      "accords": 67.8,
+      "boucles": 35.9
+     },
+     "scores": {
+      "bass_pc": 78.2,
+      "drums_any": 84.5,
+      "drums_kick": 70.6,
+      "drums_snare": 78.7,
+      "drums_hat": 100.0,
+      "chord_roots": 45.8,
+      "chord_pedal_share": 59.6,
+      "chord_change_rate": 97.9,
+      "loop_bass": 33.0,
+      "loop_drums": 74.6,
+      "loop_chords": 0.0
+     }
+    }
+   }
+  },
+  "p2": {
+   "audio": {
+    "generaluser": {
+     "21_periculum": {
+      "score": 57.0,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 37.1,
+       "brillance": 31.4,
+       "percussif": 71.9,
+       "attaques": 0.0,
+       "dynamique": 88.9,
+       "bandes": 69.8
+      }
+     }
+    }
+   },
+   "symbolic": {
+    "21_periculum": {
+     "score": 65.2,
+     "groups": {
+      "basse": 78.2,
+      "batterie": 84.1,
+      "accords": 67.8,
+      "boucles": 30.6
+     },
+     "scores": {
+      "bass_pc": 78.2,
+      "drums_any": 90.6,
+      "drums_kick": 60.3,
+      "drums_snare": 85.4,
+      "drums_hat": 100.0,
+      "chord_roots": 45.8,
+      "chord_pedal_share": 59.6,
+      "chord_change_rate": 97.9,
+      "loop_bass": 33.0,
+      "loop_drums": 58.8,
+      "loop_chords": 0.0
+     }
+    }
+   }
+  }
+ },
+ "isaac_burning": {
+  "engine_rev": null,
+  "seeds": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "bars": 48,
+  "v1": {
+   "audio": {
+    "generaluser": {
+     "36_fundamentum": {
+      "score": 39.6,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 9.7,
+       "brillance": 0.0,
+       "percussif": 33.2,
+       "attaques": 0.0,
+       "dynamique": 84.2,
+       "bandes": 50.1
+      }
+     }
+    }
+   },
+   "symbolic": {
+    "36_fundamentum": {
+     "score": 60.6,
+     "groups": {
+      "basse": 59.1,
+      "batterie": 76.7,
+      "accords": 61.2,
+      "boucles": 45.3
+     },
+     "scores": {
+      "bass_pc": 59.1,
+      "drums_any": 82.6,
+      "drums_kick": 54.0,
+      "drums_snare": 79.6,
+      "drums_hat": 90.5,
+      "chord_roots": 43.1,
+      "chord_pedal_share": 80.6,
+      "chord_change_rate": 59.9,
+      "loop_bass": 30.9,
+      "loop_drums": 63.5,
+      "loop_chords": 41.5
+     }
+    }
+   }
+  },
+  "p2": {
+   "audio": {
+    "generaluser": {
+     "36_fundamentum": {
+      "score": 38.5,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 8.2,
+       "brillance": 0.0,
+       "percussif": 30.3,
+       "attaques": 0.0,
+       "dynamique": 82.3,
+       "bandes": 49.1
+      }
+     }
+    }
+   },
+   "symbolic": {
+    "36_fundamentum": {
+     "score": 61.7,
+     "groups": {
+      "basse": 64.5,
+      "batterie": 79.9,
+      "accords": 61.4,
+      "boucles": 41.1
+     },
+     "scores": {
+      "bass_pc": 64.5,
+      "drums_any": 86.3,
+      "drums_kick": 63.0,
+      "drums_snare": 79.6,
+      "drums_hat": 90.6,
+      "chord_roots": 43.3,
+      "chord_pedal_share": 80.8,
+      "chord_change_rate": 60.1,
+      "loop_bass": 24.1,
+      "loop_drums": 58.1,
+      "loop_chords": 41.0
+     }
+    }
+   }
+  }
+ },
+ "isaac_downpour": {
+  "engine_rev": null,
+  "seeds": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "bars": 48,
+  "v1": {
+   "audio": {
+    "generaluser": {
+     "47_river_of_despair": {
+      "score": 61.4,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 80.4,
+       "brillance": 5.9,
+       "percussif": 91.4,
+       "attaques": 59.7,
+       "dynamique": 60.3,
+       "bandes": 32.4
+      }
+     }
+    }
+   },
+   "symbolic": {
+    "47_river_of_despair": {
+     "score": 58.8,
+     "groups": {
+      "basse": 77.7,
+      "batterie": 44.6,
+      "accords": 86.7,
+      "boucles": 26.2
+     },
+     "scores": {
+      "bass_pc": 77.7,
+      "drums_any": 68.4,
+      "drums_kick": 45.4,
+      "drums_snare": 64.4,
+      "drums_hat": 0.0,
+      "chord_roots": 89.6,
+      "chord_pedal_share": 92.7,
+      "chord_change_rate": 77.7,
+      "loop_bass": 3.7,
+      "loop_drums": 70.6,
+      "loop_chords": 4.4
+     }
+    }
+   }
+  },
+  "p2": {
+   "audio": {
+    "generaluser": {
+     "47_river_of_despair": {
+      "score": 59.3,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 83.9,
+       "brillance": 6.6,
+       "percussif": 87.4,
+       "attaques": 44.3,
+       "dynamique": 61.1,
+       "bandes": 32.2
+      }
+     }
+    }
+   },
+   "symbolic": {
+    "47_river_of_despair": {
+     "score": 61.8,
+     "groups": {
+      "basse": 79.2,
+      "batterie": 58.1,
+      "accords": 86.5,
+      "boucles": 23.4
+     },
+     "scores": {
+      "bass_pc": 79.2,
+      "drums_any": 71.6,
+      "drums_kick": 46.6,
+      "drums_snare": 64.4,
+      "drums_hat": 50.0,
+      "chord_roots": 87.5,
+      "chord_pedal_share": 90.2,
+      "chord_change_rate": 81.7,
+      "loop_bass": 5.9,
+      "loop_drums": 57.5,
+      "loop_chords": 6.9
+     }
+    }
+   }
+  }
+ },
+ "nt_desert": {
+  "engine_rev": null,
+  "seeds": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10
+  ],
+  "bars": 48,
+  "v1": {
+   "audio": {
+    "nt_desert": {
+     "02_flashyn": {
+      "score": 60.9,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 63.6,
+       "brillance": 11.5,
+       "percussif": 56.2,
+       "attaques": 66.7,
+       "dynamique": 66.3,
+       "bandes": 62.0
+      }
+     },
+     "19_a_way": {
+      "score": 54.2,
+      "groups": {
+       "tempo": 11.0,
+       "tonalite": 26.2,
+       "brillance": 59.0,
+       "percussif": 99.6,
+       "attaques": 83.2,
+       "dynamique": 31.4,
+       "bandes": 69.0
+      }
+     }
+    },
+    "generaluser": {
+     "02_flashyn": {
+      "score": 59.6,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 46.7,
+       "brillance": 14.5,
+       "percussif": 62.3,
+       "attaques": 71.8,
+       "dynamique": 73.8,
+       "bandes": 48.3
+      }
+     },
+     "19_a_way": {
+      "score": 56.3,
+      "groups": {
+       "tempo": 11.0,
+       "tonalite": 38.4,
+       "brillance": 68.2,
+       "percussif": 93.6,
+       "attaques": 88.4,
+       "dynamique": 38.9,
+       "bandes": 55.8
+      }
+     }
+    }
+   },
+   "symbolic": {
+    "02_flashyn": {
+     "score": 72.6,
+     "groups": {
+      "basse": 86.3,
+      "batterie": 60.9,
+      "accords": 79.8,
+      "boucles": 63.3
+     },
+     "scores": {
+      "bass_pc": 86.3,
+      "drums_any": 83.2,
+      "drums_kick": 73.9,
+      "drums_snare": 86.5,
+      "drums_hat": 0.0,
+      "chord_roots": 72.9,
+      "chord_pedal_share": 89.6,
+      "chord_change_rate": 76.9,
+      "loop_bass": 64.0,
+      "loop_drums": 95.9,
+      "loop_chords": 30.1
+     }
+    },
+    "19_a_way": {
+     "score": 24.2,
+     "groups": {
+      "basse": 0.0,
+      "batterie": 0.0,
+      "accords": 74.2,
+      "boucles": 22.7
+     },
+     "scores": {
+      "bass_pc": 0.0,
+      "drums_any": 0.0,
+      "drums_kick": 0.0,
+      "drums_snare": 0.0,
+      "drums_hat": 0.0,
+      "chord_roots": 36.3,
+      "chord_pedal_share": 96.7,
+      "chord_change_rate": 89.6,
+      "loop_bass": null,
+      "loop_drums": null,
+      "loop_chords": 22.7
+     }
+    }
+   }
+  },
+  "p2": {
+   "audio": {
+    "nt_desert": {
+     "02_flashyn": {
+      "score": 60.6,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 64.1,
+       "brillance": 11.3,
+       "percussif": 56.6,
+       "attaques": 63.6,
+       "dynamique": 66.3,
+       "bandes": 62.4
+      }
+     },
+     "19_a_way": {
+      "score": 53.8,
+      "groups": {
+       "tempo": 11.0,
+       "tonalite": 26.0,
+       "brillance": 59.5,
+       "percussif": 99.3,
+       "attaques": 80.2,
+       "dynamique": 31.4,
+       "bandes": 69.5
+      }
+     }
+    },
+    "generaluser": {
+     "02_flashyn": {
+      "score": 59.3,
+      "groups": {
+       "tempo": 100.0,
+       "tonalite": 46.4,
+       "brillance": 14.7,
+       "percussif": 62.2,
+       "attaques": 69.3,
+       "dynamique": 73.8,
+       "bandes": 48.4
+      }
+     },
+     "19_a_way": {
+      "score": 56.1,
+      "groups": {
+       "tempo": 11.0,
+       "tonalite": 38.9,
+       "brillance": 68.5,
+       "percussif": 93.7,
+       "attaques": 85.9,
+       "dynamique": 38.9,
+       "bandes": 55.7
+      }
+     }
+    }
+   },
+   "symbolic": {
+    "02_flashyn": {
+     "score": 70.9,
+     "groups": {
+      "basse": 86.5,
+      "batterie": 62.4,
+      "accords": 79.8,
+      "boucles": 54.8
+     },
+     "scores": {
+      "bass_pc": 86.5,
+      "drums_any": 89.1,
+      "drums_kick": 73.9,
+      "drums_snare": 86.6,
+      "drums_hat": 0.0,
+      "chord_roots": 72.9,
+      "chord_pedal_share": 89.6,
+      "chord_change_rate": 76.9,
+      "loop_bass": 61.0,
+      "loop_drums": 73.3,
+      "loop_chords": 30.1
+     }
+    },
+    "19_a_way": {
+     "score": 24.2,
+     "groups": {
+      "basse": 0.0,
+      "batterie": 0.0,
+      "accords": 74.2,
+      "boucles": 22.7
+     },
+     "scores": {
+      "bass_pc": 0.0,
+      "drums_any": 0.0,
+      "drums_kick": 0.0,
+      "drums_snare": 0.0,
+      "drums_hat": 0.0,
+      "chord_roots": 36.3,
+      "chord_pedal_share": 96.7,
+      "chord_change_rate": 89.6,
+      "loop_bass": null,
+      "loop_drums": null,
+      "loop_chords": 22.7
+     }
+    }
+   }
+  }
+ }
+}
