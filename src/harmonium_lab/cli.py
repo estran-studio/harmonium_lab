@@ -199,6 +199,24 @@ def main(argv: list[str] | None = None) -> int:
     p_fv.add_argument("--feet-gain", type=float, default=None, help="Feet velocity gain (default: render.FEET_VEL_SCALE)")
     p_fv.add_argument("--feet-humanize", type=int, default=None, help="Feet velocity humanize ± (default: render.FEET_HUMANIZE)")
     p_fv.add_argument("--feet-seed", type=int, default=None, help="Feet humanize seed (default: render.FEET_SEED)")
+    # seed-variety : variété par graine des couches accords / basse / batterie (phase 018, P1/P2)
+    from . import seedvariety
+
+    subparsers.add_parser(
+        "seed-variety", parents=[seedvariety.build_parser(add_help=False)],
+        help="Part des mesures/parties dont accords, basse, batterie changent entre graines",
+    )
+    from .p2 import enrich as p2_enrich
+    from .p2 import extract as p2_extract
+
+    subparsers.add_parser(
+        "p2-extract", parents=[p2_extract.build_parser(add_help=False)],
+        help="Alternatives d'accords, basse et batterie extraites des transcriptions (TOML de proposition)",
+    )
+    subparsers.add_parser(
+        "p2-enrich", parents=[p2_enrich.build_parser(add_help=False)],
+        help="Copie d'un profil moteur enrichie d'un TOML de proposition (hors dépôt)",
+    )
     args = parser.parse_args(argv)
 
     if args.command is None:
@@ -273,6 +291,12 @@ def main(argv: list[str] | None = None) -> int:
             return cmd_feet_sf2(args)
         elif args.command == "feet-preview":
             return cmd_feet_preview(args)
+        elif args.command == "seed-variety":
+            return seedvariety.run(args)
+        elif args.command == "p2-extract":
+            return p2_extract.run(args)
+        elif args.command == "p2-enrich":
+            return p2_enrich.run(args)
     except Exception as e:
         print(f"Error: {e}", file=sys.stderr)
         return 1

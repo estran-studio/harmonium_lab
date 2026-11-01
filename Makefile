@@ -8,7 +8,7 @@ REPORTS_DIR := target/quality_reports
 TRAD_DIR := corpus/trad
 
 .PHONY: setup corpus profiles trad-corpus trad-render trad-profiles trad-ornaments check-cells profile-draft test lab-export suite gate clean help trad-sf2 feet-preview fiddle-samples fiddle-sf2 fiddle-compare engine-tunes engine-reels
-.PHONY: style-distance
+.PHONY: style-distance seed-variety p2-extract p2-enrich
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
@@ -178,7 +178,7 @@ DIST_BARS ?= 48
 BANKS ?= generaluser=$(ENGINE_DIR)/assets/GeneralUser-GS.sf2
 STYLE_DIST_DIR := target/style_distance
 
-style-distance: setup ## PROFILE=id REF=dossier TRACKS=id,id STYLE_CORPUS=dir [BANKS=label=sf2 ...] [CONTEXT=champ=val] [DIST_SEEDS=10] [DIST_BARS=48]
+style-distance: setup ## PROFILE=id|dossier REF=dossier TRACKS=id,id STYLE_CORPUS=dir [BANKS=label=sf2 ...] [CONTEXT=champ=val] [DIST_SEEDS=10] [DIST_BARS=48] [DIST_OUT=fichier.json]
 	@test -n "$(PROFILE)" -a -n "$(REF)" -a -n "$(TRACKS)" -a -n "$(STYLE_CORPUS)" || \
 		(echo "Usage: make style-distance PROFILE=<id> REF=<dossier references/> TRACKS=<id,id> STYLE_CORPUS=<dir> [BANKS=label=sf2 ...] [CONTEXT=champ=val]"; exit 2)
 	@test -f "$(ENGINE_DIR)/Cargo.toml" || (echo "Moteur introuvable: $(ENGINE_DIR)"; exit 2)
@@ -190,7 +190,36 @@ style-distance: setup ## PROFILE=id REF=dossier TRACKS=id,id STYLE_CORPUS=dir [B
 		$(if $(STEPS_PER_BAR),--steps-per-bar $(STEPS_PER_BAR),) \
 		--engine-dir "$(ENGINE_DIR)" $(foreach b,$(BANKS),--bank "$(b)") \
 		--seeds $(DIST_SEEDS) --bars $(DIST_BARS) --work-dir "$(STYLE_DIST_DIR)" \
-		-o "$(REFS_DIR)/$(REF)/distance-$(PROFILE).json" --markdown
+		-o "$(if $(DIST_OUT),$(DIST_OUT),$(REFS_DIR)/$(REF)/distance-$(PROFILE).json)" --markdown
+
+# ── Variété par graine et alternatives extraites P2 (phase 018) ──
+# make seed-variety ENGINE_DIR=~/Project/bascanada/harmonium [LABEL=V1] [VARIETY_PROFILES="nt_desert isaac_cellar /tmp/…/isaac_basement_p2"]
+#   Graines 1..VARIETY_SEEDS × VARIETY_BARS mesures ; JSON + tableau. ENGINE_BIN : binaire harmonium-cli déjà compilé.
+# make p2-extract ENGINE_DIR=… CORPUS_ROOT=~/Project/bascanada/harmonium_lab/corpus [P2_PROFILES="isaac_cellar"]
+#   Écrit references/<profil>/proposals/<profil>.toml (transcriptions hors dépôt, principe VII).
+# make p2-enrich ENGINE_DIR=… PROFILE=isaac_cellar PROPOSAL=references/isaac-cellar/proposals/isaac_cellar.toml OUT=/tmp/…/isaac_cellar_p2
+#   Copie temporaire du profil enrichie des propositions (poids rééquilibrés ; RAW_WEIGHTS=1 pour les effectifs bruts).
+VARIETY_PROFILES ?= nt_desert isaac_basement isaac_cellar isaac_burning isaac_downpour
+VARIETY_SEEDS ?= 16
+VARIETY_BARS ?= 64
+VARIETY_DIR ?= target/seed_variety
+
+seed-variety: setup ## Variété par graine : [VARIETY_PROFILES="id|dossier ..."] [LABEL=V1] [VARIETY_SEEDS=16] [VARIETY_BARS=64] [ENGINE_BIN=harmonium-cli]
+	$(LAB) seed-variety $(foreach p,$(VARIETY_PROFILES),--profile "$(p)") \
+		--seeds $(VARIETY_SEEDS) --bars $(VARIETY_BARS) --engine-dir "$(ENGINE_DIR)" \
+		$(if $(ENGINE_BIN),--engine-bin "$(ENGINE_BIN)",) $(if $(LABEL),--label "$(LABEL)",) \
+		--work-dir "$(VARIETY_DIR)" -o "$(VARIETY_DIR)/seed-variety$(if $(LABEL),-$(LABEL),).json" --markdown
+
+P2_PROFILES ?= isaac_basement isaac_cellar isaac_burning isaac_downpour nt_desert
+
+p2-extract: setup ## Propositions P2 : CORPUS_ROOT=<dossier avec isaac/ et nuclear_throne/> [P2_PROFILES="id ..."]
+	$(LAB) p2-extract $(foreach p,$(P2_PROFILES),--profile $(p)) --engine-dir "$(ENGINE_DIR)" \
+		--corpus-root "$(CORPUS_ROOT)" --refs "$(REFS_DIR)"
+
+p2-enrich: setup ## Copie enrichie : PROFILE=id PROPOSAL=toml OUT=dossier [RAW_WEIGHTS=1]
+	@test -n "$(PROFILE)" -a -n "$(PROPOSAL)" -a -n "$(OUT)" || (echo "Usage: make p2-enrich PROFILE=<id> PROPOSAL=<toml> OUT=<dossier>"; exit 2)
+	$(LAB) p2-enrich --profile "$(PROFILE)" --proposal "$(PROPOSAL)" --out "$(OUT)" \
+		--engine-dir "$(ENGINE_DIR)" $(if $(RAW_WEIGHTS),--raw-weights,)
 
 # ════════════════════════════════════════════════════════════════════
 
