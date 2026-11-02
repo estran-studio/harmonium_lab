@@ -1,0 +1,5740 @@
+{
+  "bootstrap": {
+    "level": 95,
+    "method": "centiles 2,5 / 97,5 de la statistique rééchantillonnée ; ratio = somme des numérateurs / somme des dénominateurs ; n solos avec événement < 2 : pas d'IC",
+    "resamples": 2000,
+    "seed": "wjazzd-subsets-v1",
+    "unit": "solo"
+  },
+  "chord_parsing": {
+    "beats_analysed": 1353,
+    "beats_nc": 25,
+    "beats_no_symbol": 0,
+    "beats_unparsed": 0,
+    "beats_with_symbol": 1353,
+    "distinct_symbols": 91,
+    "share_unparsed": 0.0,
+    "unparsed_symbols": {}
+  },
+  "command": "python -m harmonium_lab.backing.wjazzd_subsets --subset BALLAD",
+  "groups": {
+    "all": {
+      "approach": {
+        "all": {
+          "counts": {
+            "chord_tone": 113,
+            "chromatic_above": 29,
+            "chromatic_below": 24,
+            "diatonic": 49,
+            "fifth": 43,
+            "other": 87,
+            "same": 21
+          },
+          "distance": {
+            "counts": {
+              "0": 21,
+              "1": 53,
+              "10": 6,
+              "11": 9,
+              "12": 15,
+              "2": 34,
+              "3": 21,
+              "4": 25,
+              "5": 73,
+              "6": 32,
+              "7": 43,
+              "8": 12,
+              "9": 12,
+              ">12": 10
+            },
+            "n": 366,
+            "shares": {
+              "0": 0.0574,
+              "1": 0.1448,
+              "10": 0.0164,
+              "11": 0.0246,
+              "12": 0.041,
+              "2": 0.0929,
+              "3": 0.0574,
+              "4": 0.0683,
+              "5": 0.1995,
+              "6": 0.0874,
+              "7": 0.1175,
+              "8": 0.0328,
+              "9": 0.0328,
+              ">12": 0.0273
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 55,
+                "below": 47
+              },
+              "n": 102,
+              "shares": {
+                "above": 0.5392,
+                "below": 0.4608
+              }
+            },
+            "chromatic_in_scale": 5,
+            "diatonic_nearest": 32,
+            "n": 102,
+            "rising_falling": {
+              "counts": {
+                "falling": 31,
+                "level": 37,
+                "rising": 34
+              },
+              "n": 102,
+              "shares": {
+                "falling": 0.3039,
+                "level": 0.3627,
+                "rising": 0.3333
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 25,
+                "same_side_as_arrival": 77
+              },
+              "n": 102,
+              "shares": {
+                "other_side": 0.2451,
+                "same_side_as_arrival": 0.7549
+              }
+            }
+          },
+          "n": 366,
+          "semitone_share": 0.1448,
+          "shares": {
+            "chord_tone": 0.3087,
+            "chromatic_above": 0.0792,
+            "chromatic_below": 0.0656,
+            "diatonic": 0.1339,
+            "fifth": 0.1175,
+            "other": 0.2377,
+            "same": 0.0574
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 53,
+              "diatonic": 49,
+              "none": 264
+            },
+            "n": 366,
+            "shares": {
+              "chromatic": 0.1448,
+              "diatonic": 0.1339,
+              "none": 0.7213
+            }
+          },
+          "whole_tone_share": 0.0929
+        },
+        "bar_change": {
+          "counts": {
+            "chord_tone": 68,
+            "chromatic_above": 22,
+            "chromatic_below": 23,
+            "diatonic": 35,
+            "fifth": 25,
+            "other": 61,
+            "same": 9
+          },
+          "distance": {
+            "counts": {
+              "0": 9,
+              "1": 45,
+              "10": 4,
+              "11": 8,
+              "12": 3,
+              "2": 24,
+              "3": 16,
+              "4": 14,
+              "5": 46,
+              "6": 27,
+              "7": 25,
+              "8": 10,
+              "9": 4,
+              ">12": 8
+            },
+            "n": 243,
+            "shares": {
+              "0": 0.037,
+              "1": 0.1852,
+              "10": 0.0165,
+              "11": 0.0329,
+              "12": 0.0123,
+              "2": 0.0988,
+              "3": 0.0658,
+              "4": 0.0576,
+              "5": 0.1893,
+              "6": 0.1111,
+              "7": 0.1029,
+              "8": 0.0412,
+              "9": 0.0165,
+              ">12": 0.0329
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 39,
+                "below": 41
+              },
+              "n": 80,
+              "shares": {
+                "above": 0.4875,
+                "below": 0.5125
+              }
+            },
+            "chromatic_in_scale": 5,
+            "diatonic_nearest": 23,
+            "n": 80,
+            "rising_falling": {
+              "counts": {
+                "falling": 28,
+                "level": 26,
+                "rising": 26
+              },
+              "n": 80,
+              "shares": {
+                "falling": 0.35,
+                "level": 0.325,
+                "rising": 0.325
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 18,
+                "same_side_as_arrival": 62
+              },
+              "n": 80,
+              "shares": {
+                "other_side": 0.225,
+                "same_side_as_arrival": 0.775
+              }
+            }
+          },
+          "n": 243,
+          "semitone_share": 0.1852,
+          "shares": {
+            "chord_tone": 0.2798,
+            "chromatic_above": 0.0905,
+            "chromatic_below": 0.0947,
+            "diatonic": 0.144,
+            "fifth": 0.1029,
+            "other": 0.251,
+            "same": 0.037
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 45,
+              "diatonic": 35,
+              "none": 163
+            },
+            "n": 243,
+            "shares": {
+              "chromatic": 0.1852,
+              "diatonic": 0.144,
+              "none": 0.6708
+            }
+          },
+          "whole_tone_share": 0.0988
+        },
+        "bar_same": {
+          "counts": {
+            "chord_tone": 7,
+            "chromatic_above": 0,
+            "chromatic_below": 1,
+            "diatonic": 2,
+            "fifth": 1,
+            "other": 6,
+            "same": 2
+          },
+          "distance": {
+            "counts": {
+              "0": 2,
+              "1": 1,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 1,
+              "3": 1,
+              "4": 1,
+              "5": 9,
+              "6": 0,
+              "7": 1,
+              "8": 1,
+              "9": 2,
+              ">12": 0
+            },
+            "n": 19,
+            "shares": {
+              "0": 0.1053,
+              "1": 0.0526,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0526,
+              "3": 0.0526,
+              "4": 0.0526,
+              "5": 0.4737,
+              "6": 0.0,
+              "7": 0.0526,
+              "8": 0.0526,
+              "9": 0.1053,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 2,
+                "below": 1
+              },
+              "n": 3,
+              "shares": {
+                "above": 0.6667,
+                "below": 0.3333
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 1,
+            "n": 3,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 3,
+                "rising": 0
+              },
+              "n": 3,
+              "shares": {
+                "falling": 0.0,
+                "level": 1.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 1,
+                "same_side_as_arrival": 2
+              },
+              "n": 3,
+              "shares": {
+                "other_side": 0.3333,
+                "same_side_as_arrival": 0.6667
+              }
+            }
+          },
+          "n": 19,
+          "semitone_share": 0.0526,
+          "shares": {
+            "chord_tone": 0.3684,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0526,
+            "diatonic": 0.1053,
+            "fifth": 0.0526,
+            "other": 0.3158,
+            "same": 0.1053
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 1,
+              "diatonic": 2,
+              "none": 16
+            },
+            "n": 19,
+            "shares": {
+              "chromatic": 0.0526,
+              "diatonic": 0.1053,
+              "none": 0.8421
+            }
+          },
+          "whole_tone_share": 0.0526
+        },
+        "mid_change": {
+          "counts": {
+            "chord_tone": 38,
+            "chromatic_above": 7,
+            "chromatic_below": 0,
+            "diatonic": 12,
+            "fifth": 17,
+            "other": 20,
+            "same": 10
+          },
+          "distance": {
+            "counts": {
+              "0": 10,
+              "1": 7,
+              "10": 2,
+              "11": 1,
+              "12": 12,
+              "2": 9,
+              "3": 4,
+              "4": 10,
+              "5": 18,
+              "6": 5,
+              "7": 17,
+              "8": 1,
+              "9": 6,
+              ">12": 2
+            },
+            "n": 104,
+            "shares": {
+              "0": 0.0962,
+              "1": 0.0673,
+              "10": 0.0192,
+              "11": 0.0096,
+              "12": 0.1154,
+              "2": 0.0865,
+              "3": 0.0385,
+              "4": 0.0962,
+              "5": 0.1731,
+              "6": 0.0481,
+              "7": 0.1635,
+              "8": 0.0096,
+              "9": 0.0577,
+              ">12": 0.0192
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 14,
+                "below": 5
+              },
+              "n": 19,
+              "shares": {
+                "above": 0.7368,
+                "below": 0.2632
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 8,
+            "n": 19,
+            "rising_falling": {
+              "counts": {
+                "falling": 3,
+                "level": 8,
+                "rising": 8
+              },
+              "n": 19,
+              "shares": {
+                "falling": 0.1579,
+                "level": 0.4211,
+                "rising": 0.4211
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 6,
+                "same_side_as_arrival": 13
+              },
+              "n": 19,
+              "shares": {
+                "other_side": 0.3158,
+                "same_side_as_arrival": 0.6842
+              }
+            }
+          },
+          "n": 104,
+          "semitone_share": 0.0673,
+          "shares": {
+            "chord_tone": 0.3654,
+            "chromatic_above": 0.0673,
+            "chromatic_below": 0.0,
+            "diatonic": 0.1154,
+            "fifth": 0.1635,
+            "other": 0.1923,
+            "same": 0.0962
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 7,
+              "diatonic": 12,
+              "none": 85
+            },
+            "n": 104,
+            "shares": {
+              "chromatic": 0.0673,
+              "diatonic": 0.1154,
+              "none": 0.8173
+            }
+          },
+          "whole_tone_share": 0.0865
+        }
+      },
+      "arrival": {
+        "bar_start_no_change": {
+          "counts": {
+            "bass": 11,
+            "fifth": 4,
+            "other": 6,
+            "root": 0,
+            "seventh": 3,
+            "third": 5
+          },
+          "n": 29,
+          "shares": {
+            "bass": 0.3793,
+            "fifth": 0.1379,
+            "other": 0.2069,
+            "root": 0.0,
+            "seventh": 0.1034,
+            "third": 0.1724
+          }
+        },
+        "change": {
+          "counts": {
+            "bass": 224,
+            "fifth": 32,
+            "other": 72,
+            "root": 0,
+            "seventh": 37,
+            "third": 44
+          },
+          "n": 409,
+          "shares": {
+            "bass": 0.5477,
+            "fifth": 0.0782,
+            "other": 0.176,
+            "root": 0.0,
+            "seventh": 0.0905,
+            "third": 0.1076
+          }
+        },
+        "change_bar_start": {
+          "counts": {
+            "bass": 157,
+            "fifth": 24,
+            "other": 26,
+            "root": 0,
+            "seventh": 27,
+            "third": 31
+          },
+          "n": 265,
+          "shares": {
+            "bass": 0.5925,
+            "fifth": 0.0906,
+            "other": 0.0981,
+            "root": 0.0,
+            "seventh": 0.1019,
+            "third": 0.117
+          }
+        },
+        "change_mid_bar": {
+          "counts": {
+            "bass": 67,
+            "fifth": 8,
+            "other": 46,
+            "root": 0,
+            "seventh": 10,
+            "third": 13
+          },
+          "n": 144,
+          "shares": {
+            "bass": 0.4653,
+            "fifth": 0.0556,
+            "other": 0.3194,
+            "root": 0.0,
+            "seventh": 0.0694,
+            "third": 0.0903
+          }
+        }
+      },
+      "bars": 294,
+      "bass_rhythm": {
+        "bar_pattern": {
+          "counts": {
+            "dotted_half_quarter": 12,
+            "half_quarters": 63,
+            "halves": 31,
+            "quarter_dotted_half": 5,
+            "quarter_half_quarter": 7,
+            "quarters": 128,
+            "quarters_half": 23,
+            "whole": 25
+          },
+          "n": 294,
+          "shares": {
+            "dotted_half_quarter": 0.0408,
+            "half_quarters": 0.2143,
+            "halves": 0.1054,
+            "quarter_dotted_half": 0.017,
+            "quarter_half_quarter": 0.0238,
+            "quarters": 0.4354,
+            "quarters_half": 0.0782,
+            "whole": 0.085
+          }
+        },
+        "bar_tie": {
+          "n": 284,
+          "share": 0.0704,
+          "tied": 20
+        },
+        "bars": 294,
+        "distinct_pitches_per_bar": {
+          "counts": {
+            "1": 25,
+            "2": 65,
+            "3": 118,
+            "4": 86
+          },
+          "n": 294,
+          "shares": {
+            "1": 0.085,
+            "2": 0.2211,
+            "3": 0.4014,
+            "4": 0.2925
+          }
+        },
+        "hold_beats": {
+          "beats": 1176,
+          "counts": {
+            "1": 697,
+            "2": 145,
+            "3": 23,
+            "4+": 27
+          },
+          "mean": 1.318,
+          "n": 892,
+          "share_beats_in_holds": 0.4073,
+          "shares": {
+            "1": 0.7814,
+            "2": 0.1626,
+            "3": 0.0258,
+            "4+": 0.0303
+          }
+        },
+        "repeat_by_transition": {
+          "counts": {
+            "1-2": 131,
+            "2-3": 49,
+            "3-4": 84
+          },
+          "n_bars": 294,
+          "shares": {
+            "1-2": 0.4456,
+            "2-3": 0.1667,
+            "3-4": 0.2857
+          }
+        }
+      },
+      "choruses": {
+        "complete_kept": 11,
+        "total_4_4": 12
+      },
+      "counts": {
+        "bars": 340,
+        "bars_incomplete": 4,
+        "bars_no_bass": 36,
+        "bars_no_chord": 6,
+        "bars_valid": 294,
+        "beats": 1353,
+        "beats_valid": 1176,
+        "solos": 10,
+        "solos_with_bars": 9
+      },
+      "discarded": {
+        "counts": {
+          "bars_all": 342,
+          "incomplete": 4,
+          "no_bass": 36,
+          "no_chord": 6,
+          "non_4_4": 2,
+          "valid": 294
+        },
+        "order_of_exclusion": "signature ≠ 4/4, puis mesure incomplète (≠ 4 temps), puis basse manquante, puis accord absent / NC / non analysé : un seul motif par mesure",
+        "shares": {
+          "incomplete": 0.0117,
+          "no_bass": 0.1053,
+          "no_chord": 0.0175,
+          "non_4_4": 0.0058,
+          "valid": 0.8596
+        },
+        "solos_without_valid_bar": 1
+      },
+      "duration": {
+        "check": "`minutes_onset_span` = étendue des onsets (s) du 1ᵉʳ au dernier temps de mesure ≥ 1 d'un chorus, toutes signatures ; à comparer à `minutes_all_beats_at_avgtempo` (temps / avgtempo)",
+        "method": "minutes = mesures × 4 temps / avgtempo du solo (BPM, la noire est le temps), sommées sur les solos",
+        "minutes_4_4_bars": 23.42,
+        "minutes_all_beats_at_avgtempo": 23.47,
+        "minutes_onset_span": 23.3,
+        "minutes_valid_bars": 20.06
+      },
+      "harmonic_rhythm": {
+        "change_beat": {
+          "counts": {
+            "1": 265,
+            "2": 11,
+            "3": 109,
+            "4": 24
+          },
+          "n": 409,
+          "share_beat1": 0.6479,
+          "share_beat3": 0.2665,
+          "share_other": 0.0856,
+          "shares": {
+            "1": 0.6479,
+            "2": 0.0269,
+            "3": 0.2665,
+            "4": 0.0587
+          }
+        },
+        "chord_duration_beats": {
+          "counts": {
+            "1": 61,
+            "2": 180,
+            "3": 6,
+            "4": 140,
+            "5": 1,
+            "6": 4,
+            "7": 0,
+            "8": 8,
+            ">8": 0
+          },
+          "mean": 2.73,
+          "n": 400,
+          "shares": {
+            "1": 0.1525,
+            "2": 0.45,
+            "3": 0.015,
+            "4": 0.35,
+            "5": 0.0025,
+            "6": 0.01,
+            "7": 0.0,
+            "8": 0.02,
+            ">8": 0.0
+          }
+        },
+        "chords_per_bar": {
+          "counts": {
+            "1": 179,
+            "2": 95,
+            "3": 11,
+            "4": 9
+          },
+          "n": 294,
+          "shares": {
+            "1": 0.6088,
+            "2": 0.3231,
+            "3": 0.0374,
+            "4": 0.0306
+          }
+        }
+      },
+      "indicators": {
+        "approach_chromatic_all": {
+          "ci95": [
+            0.0833,
+            0.2059
+          ],
+          "ci_reason": null,
+          "estimate": 0.1448,
+          "n_events": 366,
+          "n_solos": 9
+        },
+        "approach_chromatic_bar_change": {
+          "ci95": [
+            0.1029,
+            0.2536
+          ],
+          "ci_reason": null,
+          "estimate": 0.1852,
+          "n_events": 243,
+          "n_solos": 8
+        },
+        "approach_diatonic_all": {
+          "ci95": [
+            0.0886,
+            0.1846
+          ],
+          "ci_reason": null,
+          "estimate": 0.1339,
+          "n_events": 366,
+          "n_solos": 9
+        },
+        "approach_diatonic_bar_change": {
+          "ci95": [
+            0.0894,
+            0.2094
+          ],
+          "ci_reason": null,
+          "estimate": 0.144,
+          "n_events": 243,
+          "n_solos": 8
+        },
+        "approach_none_all": {
+          "ci95": [
+            0.662,
+            0.7735
+          ],
+          "ci_reason": null,
+          "estimate": 0.7213,
+          "n_events": 366,
+          "n_solos": 9
+        },
+        "approach_none_bar_change": {
+          "ci95": [
+            0.5936,
+            0.7243
+          ],
+          "ci_reason": null,
+          "estimate": 0.6708,
+          "n_events": 243,
+          "n_solos": 8
+        },
+        "arrival_bass_at_change": {
+          "ci95": [
+            0.4214,
+            0.7
+          ],
+          "ci_reason": null,
+          "estimate": 0.5477,
+          "n_events": 409,
+          "n_solos": 9
+        },
+        "bars_halves": {
+          "ci95": [
+            0.0583,
+            0.1712
+          ],
+          "ci_reason": null,
+          "estimate": 0.1054,
+          "n_events": 294,
+          "n_solos": 9
+        },
+        "bars_one_chord": {
+          "ci95": [
+            0.332,
+            0.8296
+          ],
+          "ci_reason": null,
+          "estimate": 0.6088,
+          "n_events": 294,
+          "n_solos": 9
+        },
+        "bars_quarters": {
+          "ci95": [
+            0.3112,
+            0.5505
+          ],
+          "ci_reason": null,
+          "estimate": 0.4354,
+          "n_events": 294,
+          "n_solos": 9
+        },
+        "interval_median": {
+          "ci95": [
+            2.0,
+            3.0
+          ],
+          "ci_reason": null,
+          "estimate": 2.0,
+          "n_events": 1166,
+          "n_solos": 9
+        },
+        "interval_p90": {
+          "ci95": [
+            8.0,
+            10.0
+          ],
+          "ci_reason": null,
+          "estimate": 8.0,
+          "n_events": 1166,
+          "n_solos": 9
+        },
+        "passage_chord_tone": {
+          "ci95": [
+            0.5793,
+            0.8244
+          ],
+          "ci_reason": null,
+          "estimate": 0.6703,
+          "n_events": 364,
+          "n_solos": 8
+        },
+        "passage_chromatic": {
+          "ci95": [
+            0.0796,
+            0.1784
+          ],
+          "ci_reason": null,
+          "estimate": 0.1291,
+          "n_events": 364,
+          "n_solos": 8
+        },
+        "passage_scale_step": {
+          "ci95": [
+            0.0989,
+            0.257
+          ],
+          "ci_reason": null,
+          "estimate": 0.2005,
+          "n_events": 364,
+          "n_solos": 8
+        },
+        "repeat_share": {
+          "ci95": [
+            0.1768,
+            0.3453
+          ],
+          "ci_reason": null,
+          "estimate": 0.2436,
+          "n_events": 1166,
+          "n_solos": 9
+        }
+      },
+      "intervals": {
+        "counts": {
+          "0": 284,
+          "1": 225,
+          "10": 28,
+          "11": 19,
+          "12": 34,
+          "2": 104,
+          "3": 87,
+          "4": 62,
+          "5": 121,
+          "6": 58,
+          "7": 84,
+          "8": 28,
+          "9": 16,
+          ">12": 16
+        },
+        "keep_direction": {
+          "counts": {
+            "keep": 257,
+            "reverse": 429
+          },
+          "n": 686,
+          "share": 0.3746,
+          "shares": {
+            "keep": 0.3746,
+            "reverse": 0.6254
+          }
+        },
+        "n": 1166,
+        "percentiles": {
+          "p50": 2.0,
+          "p75": 5.0,
+          "p90": 8.0,
+          "p95": 11.0,
+          "p99": 13.0
+        },
+        "repeat_share": 0.2436,
+        "shares": {
+          "0": 0.2436,
+          "1": 0.193,
+          "10": 0.024,
+          "11": 0.0163,
+          "12": 0.0292,
+          "2": 0.0892,
+          "3": 0.0746,
+          "4": 0.0532,
+          "5": 0.1038,
+          "6": 0.0497,
+          "7": 0.072,
+          "8": 0.024,
+          "9": 0.0137,
+          ">12": 0.0137
+        },
+        "toward_target": {
+          "counts": {
+            "not_toward": 219,
+            "toward": 133
+          },
+          "n": 352,
+          "share": 0.3778,
+          "shares": {
+            "not_toward": 0.6222,
+            "toward": 0.3778
+          }
+        },
+        "up_down": {
+          "counts": {
+            "down": 450,
+            "up": 432
+          },
+          "n": 882,
+          "shares": {
+            "down": 0.5102,
+            "up": 0.4898
+          }
+        }
+      },
+      "open_form": {
+        "bars_valid": 0,
+        "note": "`composition_info.form = 'open'` : improvisation sur vamp (peu de symboles d'accord, propagés sur tout le solo) ; ses mesures sont valides et comptées",
+        "share_of_valid_bars": 0.0,
+        "solos": 0
+      },
+      "passage": {
+        "by_beat": {
+          "2": {
+            "counts": {
+              "chord_tone": 120,
+              "chromatic": 24,
+              "scale_step": 41
+            },
+            "n": 185,
+            "shares": {
+              "chord_tone": 0.6486,
+              "chromatic": 0.1297,
+              "scale_step": 0.2216
+            }
+          },
+          "3": {
+            "counts": {
+              "chord_tone": 124,
+              "chromatic": 23,
+              "scale_step": 32
+            },
+            "n": 179,
+            "shares": {
+              "chord_tone": 0.6927,
+              "chromatic": 0.1285,
+              "scale_step": 0.1788
+            }
+          },
+          "4": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          }
+        },
+        "counts": {
+          "chord_tone": 244,
+          "chromatic": 47,
+          "scale_step": 73
+        },
+        "n": 364,
+        "shares": {
+          "chord_tone": 0.6703,
+          "chromatic": 0.1291,
+          "scale_step": 0.2005
+        }
+      },
+      "passage_engine": {
+        "by_beat": {
+          "2": {
+            "counts": {
+              "chord_tone": 174,
+              "chromatic": 35,
+              "scale_step": 55
+            },
+            "n": 264,
+            "shares": {
+              "chord_tone": 0.6591,
+              "chromatic": 0.1326,
+              "scale_step": 0.2083
+            }
+          },
+          "3": {
+            "counts": {
+              "chord_tone": 127,
+              "chromatic": 25,
+              "scale_step": 33
+            },
+            "n": 185,
+            "shares": {
+              "chord_tone": 0.6865,
+              "chromatic": 0.1351,
+              "scale_step": 0.1784
+            }
+          },
+          "4": {
+            "counts": {
+              "chord_tone": 98,
+              "chromatic": 47,
+              "scale_step": 34
+            },
+            "n": 179,
+            "shares": {
+              "chord_tone": 0.5475,
+              "chromatic": 0.2626,
+              "scale_step": 0.1899
+            }
+          }
+        },
+        "counts": {
+          "chord_tone": 399,
+          "chromatic": 107,
+          "scale_step": 122
+        },
+        "n": 628,
+        "shares": {
+          "chord_tone": 0.6354,
+          "chromatic": 0.1704,
+          "scale_step": 0.1943
+        }
+      },
+      "register": {
+        "arrival_window": {
+          "best_window_12": {
+            "high": 45,
+            "low": 34,
+            "n_inside": 187,
+            "share_inside": 0.7957
+          },
+          "high": 46.0,
+          "low": 34.0,
+          "n": 235
+        },
+        "n": 1176,
+        "pitch": {
+          "p1": 31.0,
+          "p25": 37.0,
+          "p5": 33.0,
+          "p50": 40.0,
+          "p75": 44.0,
+          "p95": 47.0,
+          "p99": 51.0
+        },
+        "pitch_range": [
+          28,
+          53
+        ],
+        "relative_to_tonic": {
+          "n": 1176,
+          "p1": 24.0,
+          "p25": 34.0,
+          "p5": 30.0,
+          "p50": 38.0,
+          "p75": 41.0,
+          "p95": 46.0,
+          "p99": 50.0
+        },
+        "walk_window": {
+          "high": 49.0,
+          "low": 32.0
+        }
+      },
+      "reliability": {
+        "bars_valid": 294,
+        "median_ci_width_shares": 0.1407,
+        "solos_with_valid_bars": 9,
+        "verdict": "trop peu"
+      },
+      "runs": 10,
+      "structure": {
+        "chorus_length": {
+          "counts": {
+            "12": 0,
+            "16": 1,
+            "32": 2,
+            "other": 8
+          },
+          "histogram": {
+            "1": 1,
+            "16": 1,
+            "17": 1,
+            "29": 1,
+            "32": 2,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "73": 1
+          },
+          "n": 11,
+          "shares": {
+            "12": 0.0,
+            "16": 0.0909,
+            "32": 0.1818,
+            "other": 0.7273
+          }
+        },
+        "composition_forms": {
+          "A16B16": 3,
+          "A20B25": 1,
+          "A8A8B8A8": 4,
+          "A8A8B8B8": 1,
+          "A9B9A9": 1
+        },
+        "form_sequences_32": {
+          "counts": {
+            "A1 B1": 2
+          },
+          "n": 2
+        },
+        "solos": 10,
+        "templates": {
+          "(aucun)": 10
+        },
+        "tempo": {
+          "max": 67.7,
+          "min": 48.8,
+          "n": 10,
+          "p10": 51.05,
+          "p25": 53.0,
+          "p50": 57.85,
+          "p75": 64.0,
+          "p90": 66.08
+        }
+      }
+    },
+    "tempo_120_180": {
+      "approach": {
+        "all": {
+          "counts": {
+            "chord_tone": 0,
+            "chromatic_above": 0,
+            "chromatic_below": 0,
+            "diatonic": 0,
+            "fifth": 0,
+            "other": 0,
+            "same": 0
+          },
+          "distance": {
+            "counts": {
+              "0": 0,
+              "1": 0,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0,
+              ">12": 0
+            },
+            "n": 0,
+            "shares": {
+              "0": 0.0,
+              "1": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 0,
+                "below": 0
+              },
+              "n": 0,
+              "shares": {
+                "above": 0.0,
+                "below": 0.0
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 0,
+            "n": 0,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 0,
+                "rising": 0
+              },
+              "n": 0,
+              "shares": {
+                "falling": 0.0,
+                "level": 0.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 0,
+                "same_side_as_arrival": 0
+              },
+              "n": 0,
+              "shares": {
+                "other_side": 0.0,
+                "same_side_as_arrival": 0.0
+              }
+            }
+          },
+          "n": 0,
+          "semitone_share": 0.0,
+          "shares": {
+            "chord_tone": 0.0,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0,
+            "diatonic": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "same": 0.0
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 0,
+              "diatonic": 0,
+              "none": 0
+            },
+            "n": 0,
+            "shares": {
+              "chromatic": 0.0,
+              "diatonic": 0.0,
+              "none": 0.0
+            }
+          },
+          "whole_tone_share": 0.0
+        },
+        "bar_change": {
+          "counts": {
+            "chord_tone": 0,
+            "chromatic_above": 0,
+            "chromatic_below": 0,
+            "diatonic": 0,
+            "fifth": 0,
+            "other": 0,
+            "same": 0
+          },
+          "distance": {
+            "counts": {
+              "0": 0,
+              "1": 0,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0,
+              ">12": 0
+            },
+            "n": 0,
+            "shares": {
+              "0": 0.0,
+              "1": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 0,
+                "below": 0
+              },
+              "n": 0,
+              "shares": {
+                "above": 0.0,
+                "below": 0.0
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 0,
+            "n": 0,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 0,
+                "rising": 0
+              },
+              "n": 0,
+              "shares": {
+                "falling": 0.0,
+                "level": 0.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 0,
+                "same_side_as_arrival": 0
+              },
+              "n": 0,
+              "shares": {
+                "other_side": 0.0,
+                "same_side_as_arrival": 0.0
+              }
+            }
+          },
+          "n": 0,
+          "semitone_share": 0.0,
+          "shares": {
+            "chord_tone": 0.0,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0,
+            "diatonic": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "same": 0.0
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 0,
+              "diatonic": 0,
+              "none": 0
+            },
+            "n": 0,
+            "shares": {
+              "chromatic": 0.0,
+              "diatonic": 0.0,
+              "none": 0.0
+            }
+          },
+          "whole_tone_share": 0.0
+        },
+        "bar_same": {
+          "counts": {
+            "chord_tone": 0,
+            "chromatic_above": 0,
+            "chromatic_below": 0,
+            "diatonic": 0,
+            "fifth": 0,
+            "other": 0,
+            "same": 0
+          },
+          "distance": {
+            "counts": {
+              "0": 0,
+              "1": 0,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0,
+              ">12": 0
+            },
+            "n": 0,
+            "shares": {
+              "0": 0.0,
+              "1": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 0,
+                "below": 0
+              },
+              "n": 0,
+              "shares": {
+                "above": 0.0,
+                "below": 0.0
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 0,
+            "n": 0,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 0,
+                "rising": 0
+              },
+              "n": 0,
+              "shares": {
+                "falling": 0.0,
+                "level": 0.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 0,
+                "same_side_as_arrival": 0
+              },
+              "n": 0,
+              "shares": {
+                "other_side": 0.0,
+                "same_side_as_arrival": 0.0
+              }
+            }
+          },
+          "n": 0,
+          "semitone_share": 0.0,
+          "shares": {
+            "chord_tone": 0.0,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0,
+            "diatonic": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "same": 0.0
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 0,
+              "diatonic": 0,
+              "none": 0
+            },
+            "n": 0,
+            "shares": {
+              "chromatic": 0.0,
+              "diatonic": 0.0,
+              "none": 0.0
+            }
+          },
+          "whole_tone_share": 0.0
+        },
+        "mid_change": {
+          "counts": {
+            "chord_tone": 0,
+            "chromatic_above": 0,
+            "chromatic_below": 0,
+            "diatonic": 0,
+            "fifth": 0,
+            "other": 0,
+            "same": 0
+          },
+          "distance": {
+            "counts": {
+              "0": 0,
+              "1": 0,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0,
+              ">12": 0
+            },
+            "n": 0,
+            "shares": {
+              "0": 0.0,
+              "1": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 0,
+                "below": 0
+              },
+              "n": 0,
+              "shares": {
+                "above": 0.0,
+                "below": 0.0
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 0,
+            "n": 0,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 0,
+                "rising": 0
+              },
+              "n": 0,
+              "shares": {
+                "falling": 0.0,
+                "level": 0.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 0,
+                "same_side_as_arrival": 0
+              },
+              "n": 0,
+              "shares": {
+                "other_side": 0.0,
+                "same_side_as_arrival": 0.0
+              }
+            }
+          },
+          "n": 0,
+          "semitone_share": 0.0,
+          "shares": {
+            "chord_tone": 0.0,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0,
+            "diatonic": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "same": 0.0
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 0,
+              "diatonic": 0,
+              "none": 0
+            },
+            "n": 0,
+            "shares": {
+              "chromatic": 0.0,
+              "diatonic": 0.0,
+              "none": 0.0
+            }
+          },
+          "whole_tone_share": 0.0
+        }
+      },
+      "arrival": {
+        "bar_start_no_change": {
+          "counts": {
+            "bass": 0,
+            "fifth": 0,
+            "other": 0,
+            "root": 0,
+            "seventh": 0,
+            "third": 0
+          },
+          "n": 0,
+          "shares": {
+            "bass": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "root": 0.0,
+            "seventh": 0.0,
+            "third": 0.0
+          }
+        },
+        "change": {
+          "counts": {
+            "bass": 0,
+            "fifth": 0,
+            "other": 0,
+            "root": 0,
+            "seventh": 0,
+            "third": 0
+          },
+          "n": 0,
+          "shares": {
+            "bass": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "root": 0.0,
+            "seventh": 0.0,
+            "third": 0.0
+          }
+        },
+        "change_bar_start": {
+          "counts": {
+            "bass": 0,
+            "fifth": 0,
+            "other": 0,
+            "root": 0,
+            "seventh": 0,
+            "third": 0
+          },
+          "n": 0,
+          "shares": {
+            "bass": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "root": 0.0,
+            "seventh": 0.0,
+            "third": 0.0
+          }
+        },
+        "change_mid_bar": {
+          "counts": {
+            "bass": 0,
+            "fifth": 0,
+            "other": 0,
+            "root": 0,
+            "seventh": 0,
+            "third": 0
+          },
+          "n": 0,
+          "shares": {
+            "bass": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "root": 0.0,
+            "seventh": 0.0,
+            "third": 0.0
+          }
+        }
+      },
+      "bars": 0,
+      "bass_rhythm": {
+        "bar_pattern": {
+          "counts": {
+            "dotted_half_quarter": 0,
+            "half_quarters": 0,
+            "halves": 0,
+            "quarter_dotted_half": 0,
+            "quarter_half_quarter": 0,
+            "quarters": 0,
+            "quarters_half": 0,
+            "whole": 0
+          },
+          "n": 0,
+          "shares": {
+            "dotted_half_quarter": 0.0,
+            "half_quarters": 0.0,
+            "halves": 0.0,
+            "quarter_dotted_half": 0.0,
+            "quarter_half_quarter": 0.0,
+            "quarters": 0.0,
+            "quarters_half": 0.0,
+            "whole": 0.0
+          }
+        },
+        "bar_tie": {
+          "n": 0,
+          "share": 0.0,
+          "tied": 0
+        },
+        "bars": 0,
+        "distinct_pitches_per_bar": {
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "n": 0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0
+          }
+        },
+        "hold_beats": {
+          "beats": 0,
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4+": 0
+          },
+          "mean": null,
+          "n": 0,
+          "share_beats_in_holds": 0.0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4+": 0.0
+          }
+        },
+        "repeat_by_transition": {
+          "counts": {
+            "1-2": 0,
+            "2-3": 0,
+            "3-4": 0
+          },
+          "n_bars": 0,
+          "shares": {
+            "1-2": 0.0,
+            "2-3": 0.0,
+            "3-4": 0.0
+          }
+        }
+      },
+      "choruses": {
+        "complete_kept": 0,
+        "total_4_4": 0
+      },
+      "counts": {
+        "bars": 0,
+        "bars_incomplete": 0,
+        "bars_no_bass": 0,
+        "bars_no_chord": 0,
+        "bars_valid": 0,
+        "beats": 0,
+        "beats_valid": 0,
+        "solos": 0,
+        "solos_with_bars": 0
+      },
+      "discarded": {
+        "counts": {
+          "bars_all": 0,
+          "incomplete": 0,
+          "no_bass": 0,
+          "no_chord": 0,
+          "non_4_4": 0,
+          "valid": 0
+        },
+        "order_of_exclusion": "signature ≠ 4/4, puis mesure incomplète (≠ 4 temps), puis basse manquante, puis accord absent / NC / non analysé : un seul motif par mesure",
+        "shares": {
+          "incomplete": 0.0,
+          "no_bass": 0.0,
+          "no_chord": 0.0,
+          "non_4_4": 0.0,
+          "valid": 0.0
+        },
+        "solos_without_valid_bar": 0
+      },
+      "duration": {
+        "check": "`minutes_onset_span` = étendue des onsets (s) du 1ᵉʳ au dernier temps de mesure ≥ 1 d'un chorus, toutes signatures ; à comparer à `minutes_all_beats_at_avgtempo` (temps / avgtempo)",
+        "method": "minutes = mesures × 4 temps / avgtempo du solo (BPM, la noire est le temps), sommées sur les solos",
+        "minutes_4_4_bars": 0,
+        "minutes_all_beats_at_avgtempo": 0,
+        "minutes_onset_span": 0.0,
+        "minutes_valid_bars": 0
+      },
+      "harmonic_rhythm": {
+        "change_beat": {
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "n": 0,
+          "share_beat1": 0.0,
+          "share_beat3": 0.0,
+          "share_other": 0.0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0
+          }
+        },
+        "chord_duration_beats": {
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            ">8": 0
+          },
+          "mean": null,
+          "n": 0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.0,
+            ">8": 0.0
+          }
+        },
+        "chords_per_bar": {
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "n": 0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0
+          }
+        }
+      },
+      "indicators": {
+        "approach_chromatic_all": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_chromatic_bar_change": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_diatonic_all": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_diatonic_bar_change": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_none_all": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_none_bar_change": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "arrival_bass_at_change": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "bars_halves": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "bars_one_chord": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "bars_quarters": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "interval_median": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "interval_p90": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "passage_chord_tone": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "passage_chromatic": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "passage_scale_step": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "repeat_share": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        }
+      },
+      "intervals": {
+        "counts": {
+          "0": 0,
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "12": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          ">12": 0
+        },
+        "keep_direction": {
+          "counts": {
+            "keep": 0,
+            "reverse": 0
+          },
+          "n": 0,
+          "share": 0.0,
+          "shares": {
+            "keep": 0.0,
+            "reverse": 0.0
+          }
+        },
+        "n": 0,
+        "percentiles": {
+          "p50": null,
+          "p75": null,
+          "p90": null,
+          "p95": null,
+          "p99": null
+        },
+        "repeat_share": 0.0,
+        "shares": {
+          "0": 0.0,
+          "1": 0.0,
+          "10": 0.0,
+          "11": 0.0,
+          "12": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0,
+          ">12": 0.0
+        },
+        "toward_target": {
+          "counts": {
+            "not_toward": 0,
+            "toward": 0
+          },
+          "n": 0,
+          "share": 0.0,
+          "shares": {
+            "not_toward": 0.0,
+            "toward": 0.0
+          }
+        },
+        "up_down": {
+          "counts": {
+            "down": 0,
+            "up": 0
+          },
+          "n": 0,
+          "shares": {
+            "down": 0.0,
+            "up": 0.0
+          }
+        }
+      },
+      "open_form": {
+        "bars_valid": 0,
+        "note": "`composition_info.form = 'open'` : improvisation sur vamp (peu de symboles d'accord, propagés sur tout le solo) ; ses mesures sont valides et comptées",
+        "share_of_valid_bars": 0.0,
+        "solos": 0
+      },
+      "passage": {
+        "by_beat": {
+          "2": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          },
+          "3": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          },
+          "4": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          }
+        },
+        "counts": {
+          "chord_tone": 0,
+          "chromatic": 0,
+          "scale_step": 0
+        },
+        "n": 0,
+        "shares": {
+          "chord_tone": 0.0,
+          "chromatic": 0.0,
+          "scale_step": 0.0
+        }
+      },
+      "passage_engine": {
+        "by_beat": {
+          "2": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          },
+          "3": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          },
+          "4": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          }
+        },
+        "counts": {
+          "chord_tone": 0,
+          "chromatic": 0,
+          "scale_step": 0
+        },
+        "n": 0,
+        "shares": {
+          "chord_tone": 0.0,
+          "chromatic": 0.0,
+          "scale_step": 0.0
+        }
+      },
+      "register": {
+        "arrival_window": {
+          "best_window_12": null,
+          "high": null,
+          "low": null,
+          "n": 0
+        },
+        "n": 0,
+        "pitch": {
+          "p1": null,
+          "p25": null,
+          "p5": null,
+          "p50": null,
+          "p75": null,
+          "p95": null,
+          "p99": null
+        },
+        "pitch_range": null,
+        "relative_to_tonic": {
+          "n": 0,
+          "p1": null,
+          "p25": null,
+          "p5": null,
+          "p50": null,
+          "p75": null,
+          "p95": null,
+          "p99": null
+        },
+        "walk_window": {
+          "high": null,
+          "low": null
+        }
+      },
+      "reliability": {
+        "bars_valid": 0,
+        "median_ci_width_shares": null,
+        "solos_with_valid_bars": 0,
+        "verdict": "trop peu"
+      },
+      "runs": 0,
+      "structure": {
+        "chorus_length": {
+          "counts": {
+            "12": 0,
+            "16": 0,
+            "32": 0,
+            "other": 0
+          },
+          "histogram": {},
+          "n": 0,
+          "shares": {
+            "12": 0.0,
+            "16": 0.0,
+            "32": 0.0,
+            "other": 0.0
+          }
+        },
+        "composition_forms": {},
+        "form_sequences_32": {
+          "counts": {},
+          "n": 0
+        },
+        "solos": 0,
+        "templates": {},
+        "tempo": {
+          "max": null,
+          "min": null,
+          "n": 0,
+          "p10": null,
+          "p25": null,
+          "p50": null,
+          "p75": null,
+          "p90": null
+        }
+      }
+    },
+    "tempo_180_240": {
+      "approach": {
+        "all": {
+          "counts": {
+            "chord_tone": 0,
+            "chromatic_above": 0,
+            "chromatic_below": 0,
+            "diatonic": 0,
+            "fifth": 0,
+            "other": 0,
+            "same": 0
+          },
+          "distance": {
+            "counts": {
+              "0": 0,
+              "1": 0,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0,
+              ">12": 0
+            },
+            "n": 0,
+            "shares": {
+              "0": 0.0,
+              "1": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 0,
+                "below": 0
+              },
+              "n": 0,
+              "shares": {
+                "above": 0.0,
+                "below": 0.0
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 0,
+            "n": 0,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 0,
+                "rising": 0
+              },
+              "n": 0,
+              "shares": {
+                "falling": 0.0,
+                "level": 0.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 0,
+                "same_side_as_arrival": 0
+              },
+              "n": 0,
+              "shares": {
+                "other_side": 0.0,
+                "same_side_as_arrival": 0.0
+              }
+            }
+          },
+          "n": 0,
+          "semitone_share": 0.0,
+          "shares": {
+            "chord_tone": 0.0,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0,
+            "diatonic": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "same": 0.0
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 0,
+              "diatonic": 0,
+              "none": 0
+            },
+            "n": 0,
+            "shares": {
+              "chromatic": 0.0,
+              "diatonic": 0.0,
+              "none": 0.0
+            }
+          },
+          "whole_tone_share": 0.0
+        },
+        "bar_change": {
+          "counts": {
+            "chord_tone": 0,
+            "chromatic_above": 0,
+            "chromatic_below": 0,
+            "diatonic": 0,
+            "fifth": 0,
+            "other": 0,
+            "same": 0
+          },
+          "distance": {
+            "counts": {
+              "0": 0,
+              "1": 0,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0,
+              ">12": 0
+            },
+            "n": 0,
+            "shares": {
+              "0": 0.0,
+              "1": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 0,
+                "below": 0
+              },
+              "n": 0,
+              "shares": {
+                "above": 0.0,
+                "below": 0.0
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 0,
+            "n": 0,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 0,
+                "rising": 0
+              },
+              "n": 0,
+              "shares": {
+                "falling": 0.0,
+                "level": 0.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 0,
+                "same_side_as_arrival": 0
+              },
+              "n": 0,
+              "shares": {
+                "other_side": 0.0,
+                "same_side_as_arrival": 0.0
+              }
+            }
+          },
+          "n": 0,
+          "semitone_share": 0.0,
+          "shares": {
+            "chord_tone": 0.0,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0,
+            "diatonic": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "same": 0.0
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 0,
+              "diatonic": 0,
+              "none": 0
+            },
+            "n": 0,
+            "shares": {
+              "chromatic": 0.0,
+              "diatonic": 0.0,
+              "none": 0.0
+            }
+          },
+          "whole_tone_share": 0.0
+        },
+        "bar_same": {
+          "counts": {
+            "chord_tone": 0,
+            "chromatic_above": 0,
+            "chromatic_below": 0,
+            "diatonic": 0,
+            "fifth": 0,
+            "other": 0,
+            "same": 0
+          },
+          "distance": {
+            "counts": {
+              "0": 0,
+              "1": 0,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0,
+              ">12": 0
+            },
+            "n": 0,
+            "shares": {
+              "0": 0.0,
+              "1": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 0,
+                "below": 0
+              },
+              "n": 0,
+              "shares": {
+                "above": 0.0,
+                "below": 0.0
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 0,
+            "n": 0,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 0,
+                "rising": 0
+              },
+              "n": 0,
+              "shares": {
+                "falling": 0.0,
+                "level": 0.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 0,
+                "same_side_as_arrival": 0
+              },
+              "n": 0,
+              "shares": {
+                "other_side": 0.0,
+                "same_side_as_arrival": 0.0
+              }
+            }
+          },
+          "n": 0,
+          "semitone_share": 0.0,
+          "shares": {
+            "chord_tone": 0.0,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0,
+            "diatonic": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "same": 0.0
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 0,
+              "diatonic": 0,
+              "none": 0
+            },
+            "n": 0,
+            "shares": {
+              "chromatic": 0.0,
+              "diatonic": 0.0,
+              "none": 0.0
+            }
+          },
+          "whole_tone_share": 0.0
+        },
+        "mid_change": {
+          "counts": {
+            "chord_tone": 0,
+            "chromatic_above": 0,
+            "chromatic_below": 0,
+            "diatonic": 0,
+            "fifth": 0,
+            "other": 0,
+            "same": 0
+          },
+          "distance": {
+            "counts": {
+              "0": 0,
+              "1": 0,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0,
+              ">12": 0
+            },
+            "n": 0,
+            "shares": {
+              "0": 0.0,
+              "1": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 0,
+                "below": 0
+              },
+              "n": 0,
+              "shares": {
+                "above": 0.0,
+                "below": 0.0
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 0,
+            "n": 0,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 0,
+                "rising": 0
+              },
+              "n": 0,
+              "shares": {
+                "falling": 0.0,
+                "level": 0.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 0,
+                "same_side_as_arrival": 0
+              },
+              "n": 0,
+              "shares": {
+                "other_side": 0.0,
+                "same_side_as_arrival": 0.0
+              }
+            }
+          },
+          "n": 0,
+          "semitone_share": 0.0,
+          "shares": {
+            "chord_tone": 0.0,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0,
+            "diatonic": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "same": 0.0
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 0,
+              "diatonic": 0,
+              "none": 0
+            },
+            "n": 0,
+            "shares": {
+              "chromatic": 0.0,
+              "diatonic": 0.0,
+              "none": 0.0
+            }
+          },
+          "whole_tone_share": 0.0
+        }
+      },
+      "arrival": {
+        "bar_start_no_change": {
+          "counts": {
+            "bass": 0,
+            "fifth": 0,
+            "other": 0,
+            "root": 0,
+            "seventh": 0,
+            "third": 0
+          },
+          "n": 0,
+          "shares": {
+            "bass": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "root": 0.0,
+            "seventh": 0.0,
+            "third": 0.0
+          }
+        },
+        "change": {
+          "counts": {
+            "bass": 0,
+            "fifth": 0,
+            "other": 0,
+            "root": 0,
+            "seventh": 0,
+            "third": 0
+          },
+          "n": 0,
+          "shares": {
+            "bass": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "root": 0.0,
+            "seventh": 0.0,
+            "third": 0.0
+          }
+        },
+        "change_bar_start": {
+          "counts": {
+            "bass": 0,
+            "fifth": 0,
+            "other": 0,
+            "root": 0,
+            "seventh": 0,
+            "third": 0
+          },
+          "n": 0,
+          "shares": {
+            "bass": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "root": 0.0,
+            "seventh": 0.0,
+            "third": 0.0
+          }
+        },
+        "change_mid_bar": {
+          "counts": {
+            "bass": 0,
+            "fifth": 0,
+            "other": 0,
+            "root": 0,
+            "seventh": 0,
+            "third": 0
+          },
+          "n": 0,
+          "shares": {
+            "bass": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "root": 0.0,
+            "seventh": 0.0,
+            "third": 0.0
+          }
+        }
+      },
+      "bars": 0,
+      "bass_rhythm": {
+        "bar_pattern": {
+          "counts": {
+            "dotted_half_quarter": 0,
+            "half_quarters": 0,
+            "halves": 0,
+            "quarter_dotted_half": 0,
+            "quarter_half_quarter": 0,
+            "quarters": 0,
+            "quarters_half": 0,
+            "whole": 0
+          },
+          "n": 0,
+          "shares": {
+            "dotted_half_quarter": 0.0,
+            "half_quarters": 0.0,
+            "halves": 0.0,
+            "quarter_dotted_half": 0.0,
+            "quarter_half_quarter": 0.0,
+            "quarters": 0.0,
+            "quarters_half": 0.0,
+            "whole": 0.0
+          }
+        },
+        "bar_tie": {
+          "n": 0,
+          "share": 0.0,
+          "tied": 0
+        },
+        "bars": 0,
+        "distinct_pitches_per_bar": {
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "n": 0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0
+          }
+        },
+        "hold_beats": {
+          "beats": 0,
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4+": 0
+          },
+          "mean": null,
+          "n": 0,
+          "share_beats_in_holds": 0.0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4+": 0.0
+          }
+        },
+        "repeat_by_transition": {
+          "counts": {
+            "1-2": 0,
+            "2-3": 0,
+            "3-4": 0
+          },
+          "n_bars": 0,
+          "shares": {
+            "1-2": 0.0,
+            "2-3": 0.0,
+            "3-4": 0.0
+          }
+        }
+      },
+      "choruses": {
+        "complete_kept": 0,
+        "total_4_4": 0
+      },
+      "counts": {
+        "bars": 0,
+        "bars_incomplete": 0,
+        "bars_no_bass": 0,
+        "bars_no_chord": 0,
+        "bars_valid": 0,
+        "beats": 0,
+        "beats_valid": 0,
+        "solos": 0,
+        "solos_with_bars": 0
+      },
+      "discarded": {
+        "counts": {
+          "bars_all": 0,
+          "incomplete": 0,
+          "no_bass": 0,
+          "no_chord": 0,
+          "non_4_4": 0,
+          "valid": 0
+        },
+        "order_of_exclusion": "signature ≠ 4/4, puis mesure incomplète (≠ 4 temps), puis basse manquante, puis accord absent / NC / non analysé : un seul motif par mesure",
+        "shares": {
+          "incomplete": 0.0,
+          "no_bass": 0.0,
+          "no_chord": 0.0,
+          "non_4_4": 0.0,
+          "valid": 0.0
+        },
+        "solos_without_valid_bar": 0
+      },
+      "duration": {
+        "check": "`minutes_onset_span` = étendue des onsets (s) du 1ᵉʳ au dernier temps de mesure ≥ 1 d'un chorus, toutes signatures ; à comparer à `minutes_all_beats_at_avgtempo` (temps / avgtempo)",
+        "method": "minutes = mesures × 4 temps / avgtempo du solo (BPM, la noire est le temps), sommées sur les solos",
+        "minutes_4_4_bars": 0,
+        "minutes_all_beats_at_avgtempo": 0,
+        "minutes_onset_span": 0.0,
+        "minutes_valid_bars": 0
+      },
+      "harmonic_rhythm": {
+        "change_beat": {
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "n": 0,
+          "share_beat1": 0.0,
+          "share_beat3": 0.0,
+          "share_other": 0.0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0
+          }
+        },
+        "chord_duration_beats": {
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            ">8": 0
+          },
+          "mean": null,
+          "n": 0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.0,
+            ">8": 0.0
+          }
+        },
+        "chords_per_bar": {
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "n": 0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0
+          }
+        }
+      },
+      "indicators": {
+        "approach_chromatic_all": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_chromatic_bar_change": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_diatonic_all": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_diatonic_bar_change": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_none_all": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_none_bar_change": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "arrival_bass_at_change": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "bars_halves": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "bars_one_chord": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "bars_quarters": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "interval_median": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "interval_p90": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "passage_chord_tone": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "passage_chromatic": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "passage_scale_step": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "repeat_share": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        }
+      },
+      "intervals": {
+        "counts": {
+          "0": 0,
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "12": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          ">12": 0
+        },
+        "keep_direction": {
+          "counts": {
+            "keep": 0,
+            "reverse": 0
+          },
+          "n": 0,
+          "share": 0.0,
+          "shares": {
+            "keep": 0.0,
+            "reverse": 0.0
+          }
+        },
+        "n": 0,
+        "percentiles": {
+          "p50": null,
+          "p75": null,
+          "p90": null,
+          "p95": null,
+          "p99": null
+        },
+        "repeat_share": 0.0,
+        "shares": {
+          "0": 0.0,
+          "1": 0.0,
+          "10": 0.0,
+          "11": 0.0,
+          "12": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0,
+          ">12": 0.0
+        },
+        "toward_target": {
+          "counts": {
+            "not_toward": 0,
+            "toward": 0
+          },
+          "n": 0,
+          "share": 0.0,
+          "shares": {
+            "not_toward": 0.0,
+            "toward": 0.0
+          }
+        },
+        "up_down": {
+          "counts": {
+            "down": 0,
+            "up": 0
+          },
+          "n": 0,
+          "shares": {
+            "down": 0.0,
+            "up": 0.0
+          }
+        }
+      },
+      "open_form": {
+        "bars_valid": 0,
+        "note": "`composition_info.form = 'open'` : improvisation sur vamp (peu de symboles d'accord, propagés sur tout le solo) ; ses mesures sont valides et comptées",
+        "share_of_valid_bars": 0.0,
+        "solos": 0
+      },
+      "passage": {
+        "by_beat": {
+          "2": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          },
+          "3": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          },
+          "4": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          }
+        },
+        "counts": {
+          "chord_tone": 0,
+          "chromatic": 0,
+          "scale_step": 0
+        },
+        "n": 0,
+        "shares": {
+          "chord_tone": 0.0,
+          "chromatic": 0.0,
+          "scale_step": 0.0
+        }
+      },
+      "passage_engine": {
+        "by_beat": {
+          "2": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          },
+          "3": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          },
+          "4": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          }
+        },
+        "counts": {
+          "chord_tone": 0,
+          "chromatic": 0,
+          "scale_step": 0
+        },
+        "n": 0,
+        "shares": {
+          "chord_tone": 0.0,
+          "chromatic": 0.0,
+          "scale_step": 0.0
+        }
+      },
+      "register": {
+        "arrival_window": {
+          "best_window_12": null,
+          "high": null,
+          "low": null,
+          "n": 0
+        },
+        "n": 0,
+        "pitch": {
+          "p1": null,
+          "p25": null,
+          "p5": null,
+          "p50": null,
+          "p75": null,
+          "p95": null,
+          "p99": null
+        },
+        "pitch_range": null,
+        "relative_to_tonic": {
+          "n": 0,
+          "p1": null,
+          "p25": null,
+          "p5": null,
+          "p50": null,
+          "p75": null,
+          "p95": null,
+          "p99": null
+        },
+        "walk_window": {
+          "high": null,
+          "low": null
+        }
+      },
+      "reliability": {
+        "bars_valid": 0,
+        "median_ci_width_shares": null,
+        "solos_with_valid_bars": 0,
+        "verdict": "trop peu"
+      },
+      "runs": 0,
+      "structure": {
+        "chorus_length": {
+          "counts": {
+            "12": 0,
+            "16": 0,
+            "32": 0,
+            "other": 0
+          },
+          "histogram": {},
+          "n": 0,
+          "shares": {
+            "12": 0.0,
+            "16": 0.0,
+            "32": 0.0,
+            "other": 0.0
+          }
+        },
+        "composition_forms": {},
+        "form_sequences_32": {
+          "counts": {},
+          "n": 0
+        },
+        "solos": 0,
+        "templates": {},
+        "tempo": {
+          "max": null,
+          "min": null,
+          "n": 0,
+          "p10": null,
+          "p25": null,
+          "p50": null,
+          "p75": null,
+          "p90": null
+        }
+      }
+    },
+    "tempo_ge240": {
+      "approach": {
+        "all": {
+          "counts": {
+            "chord_tone": 0,
+            "chromatic_above": 0,
+            "chromatic_below": 0,
+            "diatonic": 0,
+            "fifth": 0,
+            "other": 0,
+            "same": 0
+          },
+          "distance": {
+            "counts": {
+              "0": 0,
+              "1": 0,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0,
+              ">12": 0
+            },
+            "n": 0,
+            "shares": {
+              "0": 0.0,
+              "1": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 0,
+                "below": 0
+              },
+              "n": 0,
+              "shares": {
+                "above": 0.0,
+                "below": 0.0
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 0,
+            "n": 0,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 0,
+                "rising": 0
+              },
+              "n": 0,
+              "shares": {
+                "falling": 0.0,
+                "level": 0.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 0,
+                "same_side_as_arrival": 0
+              },
+              "n": 0,
+              "shares": {
+                "other_side": 0.0,
+                "same_side_as_arrival": 0.0
+              }
+            }
+          },
+          "n": 0,
+          "semitone_share": 0.0,
+          "shares": {
+            "chord_tone": 0.0,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0,
+            "diatonic": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "same": 0.0
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 0,
+              "diatonic": 0,
+              "none": 0
+            },
+            "n": 0,
+            "shares": {
+              "chromatic": 0.0,
+              "diatonic": 0.0,
+              "none": 0.0
+            }
+          },
+          "whole_tone_share": 0.0
+        },
+        "bar_change": {
+          "counts": {
+            "chord_tone": 0,
+            "chromatic_above": 0,
+            "chromatic_below": 0,
+            "diatonic": 0,
+            "fifth": 0,
+            "other": 0,
+            "same": 0
+          },
+          "distance": {
+            "counts": {
+              "0": 0,
+              "1": 0,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0,
+              ">12": 0
+            },
+            "n": 0,
+            "shares": {
+              "0": 0.0,
+              "1": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 0,
+                "below": 0
+              },
+              "n": 0,
+              "shares": {
+                "above": 0.0,
+                "below": 0.0
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 0,
+            "n": 0,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 0,
+                "rising": 0
+              },
+              "n": 0,
+              "shares": {
+                "falling": 0.0,
+                "level": 0.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 0,
+                "same_side_as_arrival": 0
+              },
+              "n": 0,
+              "shares": {
+                "other_side": 0.0,
+                "same_side_as_arrival": 0.0
+              }
+            }
+          },
+          "n": 0,
+          "semitone_share": 0.0,
+          "shares": {
+            "chord_tone": 0.0,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0,
+            "diatonic": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "same": 0.0
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 0,
+              "diatonic": 0,
+              "none": 0
+            },
+            "n": 0,
+            "shares": {
+              "chromatic": 0.0,
+              "diatonic": 0.0,
+              "none": 0.0
+            }
+          },
+          "whole_tone_share": 0.0
+        },
+        "bar_same": {
+          "counts": {
+            "chord_tone": 0,
+            "chromatic_above": 0,
+            "chromatic_below": 0,
+            "diatonic": 0,
+            "fifth": 0,
+            "other": 0,
+            "same": 0
+          },
+          "distance": {
+            "counts": {
+              "0": 0,
+              "1": 0,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0,
+              ">12": 0
+            },
+            "n": 0,
+            "shares": {
+              "0": 0.0,
+              "1": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 0,
+                "below": 0
+              },
+              "n": 0,
+              "shares": {
+                "above": 0.0,
+                "below": 0.0
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 0,
+            "n": 0,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 0,
+                "rising": 0
+              },
+              "n": 0,
+              "shares": {
+                "falling": 0.0,
+                "level": 0.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 0,
+                "same_side_as_arrival": 0
+              },
+              "n": 0,
+              "shares": {
+                "other_side": 0.0,
+                "same_side_as_arrival": 0.0
+              }
+            }
+          },
+          "n": 0,
+          "semitone_share": 0.0,
+          "shares": {
+            "chord_tone": 0.0,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0,
+            "diatonic": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "same": 0.0
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 0,
+              "diatonic": 0,
+              "none": 0
+            },
+            "n": 0,
+            "shares": {
+              "chromatic": 0.0,
+              "diatonic": 0.0,
+              "none": 0.0
+            }
+          },
+          "whole_tone_share": 0.0
+        },
+        "mid_change": {
+          "counts": {
+            "chord_tone": 0,
+            "chromatic_above": 0,
+            "chromatic_below": 0,
+            "diatonic": 0,
+            "fifth": 0,
+            "other": 0,
+            "same": 0
+          },
+          "distance": {
+            "counts": {
+              "0": 0,
+              "1": 0,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 0,
+              "3": 0,
+              "4": 0,
+              "5": 0,
+              "6": 0,
+              "7": 0,
+              "8": 0,
+              "9": 0,
+              ">12": 0
+            },
+            "n": 0,
+            "shares": {
+              "0": 0.0,
+              "1": 0.0,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0,
+              "3": 0.0,
+              "4": 0.0,
+              "5": 0.0,
+              "6": 0.0,
+              "7": 0.0,
+              "8": 0.0,
+              "9": 0.0,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 0,
+                "below": 0
+              },
+              "n": 0,
+              "shares": {
+                "above": 0.0,
+                "below": 0.0
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 0,
+            "n": 0,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 0,
+                "rising": 0
+              },
+              "n": 0,
+              "shares": {
+                "falling": 0.0,
+                "level": 0.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 0,
+                "same_side_as_arrival": 0
+              },
+              "n": 0,
+              "shares": {
+                "other_side": 0.0,
+                "same_side_as_arrival": 0.0
+              }
+            }
+          },
+          "n": 0,
+          "semitone_share": 0.0,
+          "shares": {
+            "chord_tone": 0.0,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0,
+            "diatonic": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "same": 0.0
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 0,
+              "diatonic": 0,
+              "none": 0
+            },
+            "n": 0,
+            "shares": {
+              "chromatic": 0.0,
+              "diatonic": 0.0,
+              "none": 0.0
+            }
+          },
+          "whole_tone_share": 0.0
+        }
+      },
+      "arrival": {
+        "bar_start_no_change": {
+          "counts": {
+            "bass": 0,
+            "fifth": 0,
+            "other": 0,
+            "root": 0,
+            "seventh": 0,
+            "third": 0
+          },
+          "n": 0,
+          "shares": {
+            "bass": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "root": 0.0,
+            "seventh": 0.0,
+            "third": 0.0
+          }
+        },
+        "change": {
+          "counts": {
+            "bass": 0,
+            "fifth": 0,
+            "other": 0,
+            "root": 0,
+            "seventh": 0,
+            "third": 0
+          },
+          "n": 0,
+          "shares": {
+            "bass": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "root": 0.0,
+            "seventh": 0.0,
+            "third": 0.0
+          }
+        },
+        "change_bar_start": {
+          "counts": {
+            "bass": 0,
+            "fifth": 0,
+            "other": 0,
+            "root": 0,
+            "seventh": 0,
+            "third": 0
+          },
+          "n": 0,
+          "shares": {
+            "bass": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "root": 0.0,
+            "seventh": 0.0,
+            "third": 0.0
+          }
+        },
+        "change_mid_bar": {
+          "counts": {
+            "bass": 0,
+            "fifth": 0,
+            "other": 0,
+            "root": 0,
+            "seventh": 0,
+            "third": 0
+          },
+          "n": 0,
+          "shares": {
+            "bass": 0.0,
+            "fifth": 0.0,
+            "other": 0.0,
+            "root": 0.0,
+            "seventh": 0.0,
+            "third": 0.0
+          }
+        }
+      },
+      "bars": 0,
+      "bass_rhythm": {
+        "bar_pattern": {
+          "counts": {
+            "dotted_half_quarter": 0,
+            "half_quarters": 0,
+            "halves": 0,
+            "quarter_dotted_half": 0,
+            "quarter_half_quarter": 0,
+            "quarters": 0,
+            "quarters_half": 0,
+            "whole": 0
+          },
+          "n": 0,
+          "shares": {
+            "dotted_half_quarter": 0.0,
+            "half_quarters": 0.0,
+            "halves": 0.0,
+            "quarter_dotted_half": 0.0,
+            "quarter_half_quarter": 0.0,
+            "quarters": 0.0,
+            "quarters_half": 0.0,
+            "whole": 0.0
+          }
+        },
+        "bar_tie": {
+          "n": 0,
+          "share": 0.0,
+          "tied": 0
+        },
+        "bars": 0,
+        "distinct_pitches_per_bar": {
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "n": 0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0
+          }
+        },
+        "hold_beats": {
+          "beats": 0,
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4+": 0
+          },
+          "mean": null,
+          "n": 0,
+          "share_beats_in_holds": 0.0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4+": 0.0
+          }
+        },
+        "repeat_by_transition": {
+          "counts": {
+            "1-2": 0,
+            "2-3": 0,
+            "3-4": 0
+          },
+          "n_bars": 0,
+          "shares": {
+            "1-2": 0.0,
+            "2-3": 0.0,
+            "3-4": 0.0
+          }
+        }
+      },
+      "choruses": {
+        "complete_kept": 0,
+        "total_4_4": 0
+      },
+      "counts": {
+        "bars": 0,
+        "bars_incomplete": 0,
+        "bars_no_bass": 0,
+        "bars_no_chord": 0,
+        "bars_valid": 0,
+        "beats": 0,
+        "beats_valid": 0,
+        "solos": 0,
+        "solos_with_bars": 0
+      },
+      "discarded": {
+        "counts": {
+          "bars_all": 0,
+          "incomplete": 0,
+          "no_bass": 0,
+          "no_chord": 0,
+          "non_4_4": 0,
+          "valid": 0
+        },
+        "order_of_exclusion": "signature ≠ 4/4, puis mesure incomplète (≠ 4 temps), puis basse manquante, puis accord absent / NC / non analysé : un seul motif par mesure",
+        "shares": {
+          "incomplete": 0.0,
+          "no_bass": 0.0,
+          "no_chord": 0.0,
+          "non_4_4": 0.0,
+          "valid": 0.0
+        },
+        "solos_without_valid_bar": 0
+      },
+      "duration": {
+        "check": "`minutes_onset_span` = étendue des onsets (s) du 1ᵉʳ au dernier temps de mesure ≥ 1 d'un chorus, toutes signatures ; à comparer à `minutes_all_beats_at_avgtempo` (temps / avgtempo)",
+        "method": "minutes = mesures × 4 temps / avgtempo du solo (BPM, la noire est le temps), sommées sur les solos",
+        "minutes_4_4_bars": 0,
+        "minutes_all_beats_at_avgtempo": 0,
+        "minutes_onset_span": 0.0,
+        "minutes_valid_bars": 0
+      },
+      "harmonic_rhythm": {
+        "change_beat": {
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "n": 0,
+          "share_beat1": 0.0,
+          "share_beat3": 0.0,
+          "share_other": 0.0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0
+          }
+        },
+        "chord_duration_beats": {
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 0,
+            "8": 0,
+            ">8": 0
+          },
+          "mean": null,
+          "n": 0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8": 0.0,
+            ">8": 0.0
+          }
+        },
+        "chords_per_bar": {
+          "counts": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          },
+          "n": 0,
+          "shares": {
+            "1": 0.0,
+            "2": 0.0,
+            "3": 0.0,
+            "4": 0.0
+          }
+        }
+      },
+      "indicators": {
+        "approach_chromatic_all": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_chromatic_bar_change": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_diatonic_all": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_diatonic_bar_change": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_none_all": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "approach_none_bar_change": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "arrival_bass_at_change": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "bars_halves": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "bars_one_chord": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "bars_quarters": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "interval_median": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "interval_p90": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "passage_chord_tone": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "passage_chromatic": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "passage_scale_step": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        },
+        "repeat_share": {
+          "ci95": null,
+          "ci_reason": "aucun solo avec événement",
+          "estimate": null,
+          "n_events": 0,
+          "n_solos": 0
+        }
+      },
+      "intervals": {
+        "counts": {
+          "0": 0,
+          "1": 0,
+          "10": 0,
+          "11": 0,
+          "12": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0,
+          "5": 0,
+          "6": 0,
+          "7": 0,
+          "8": 0,
+          "9": 0,
+          ">12": 0
+        },
+        "keep_direction": {
+          "counts": {
+            "keep": 0,
+            "reverse": 0
+          },
+          "n": 0,
+          "share": 0.0,
+          "shares": {
+            "keep": 0.0,
+            "reverse": 0.0
+          }
+        },
+        "n": 0,
+        "percentiles": {
+          "p50": null,
+          "p75": null,
+          "p90": null,
+          "p95": null,
+          "p99": null
+        },
+        "repeat_share": 0.0,
+        "shares": {
+          "0": 0.0,
+          "1": 0.0,
+          "10": 0.0,
+          "11": 0.0,
+          "12": 0.0,
+          "2": 0.0,
+          "3": 0.0,
+          "4": 0.0,
+          "5": 0.0,
+          "6": 0.0,
+          "7": 0.0,
+          "8": 0.0,
+          "9": 0.0,
+          ">12": 0.0
+        },
+        "toward_target": {
+          "counts": {
+            "not_toward": 0,
+            "toward": 0
+          },
+          "n": 0,
+          "share": 0.0,
+          "shares": {
+            "not_toward": 0.0,
+            "toward": 0.0
+          }
+        },
+        "up_down": {
+          "counts": {
+            "down": 0,
+            "up": 0
+          },
+          "n": 0,
+          "shares": {
+            "down": 0.0,
+            "up": 0.0
+          }
+        }
+      },
+      "open_form": {
+        "bars_valid": 0,
+        "note": "`composition_info.form = 'open'` : improvisation sur vamp (peu de symboles d'accord, propagés sur tout le solo) ; ses mesures sont valides et comptées",
+        "share_of_valid_bars": 0.0,
+        "solos": 0
+      },
+      "passage": {
+        "by_beat": {
+          "2": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          },
+          "3": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          },
+          "4": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          }
+        },
+        "counts": {
+          "chord_tone": 0,
+          "chromatic": 0,
+          "scale_step": 0
+        },
+        "n": 0,
+        "shares": {
+          "chord_tone": 0.0,
+          "chromatic": 0.0,
+          "scale_step": 0.0
+        }
+      },
+      "passage_engine": {
+        "by_beat": {
+          "2": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          },
+          "3": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          },
+          "4": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          }
+        },
+        "counts": {
+          "chord_tone": 0,
+          "chromatic": 0,
+          "scale_step": 0
+        },
+        "n": 0,
+        "shares": {
+          "chord_tone": 0.0,
+          "chromatic": 0.0,
+          "scale_step": 0.0
+        }
+      },
+      "register": {
+        "arrival_window": {
+          "best_window_12": null,
+          "high": null,
+          "low": null,
+          "n": 0
+        },
+        "n": 0,
+        "pitch": {
+          "p1": null,
+          "p25": null,
+          "p5": null,
+          "p50": null,
+          "p75": null,
+          "p95": null,
+          "p99": null
+        },
+        "pitch_range": null,
+        "relative_to_tonic": {
+          "n": 0,
+          "p1": null,
+          "p25": null,
+          "p5": null,
+          "p50": null,
+          "p75": null,
+          "p95": null,
+          "p99": null
+        },
+        "walk_window": {
+          "high": null,
+          "low": null
+        }
+      },
+      "reliability": {
+        "bars_valid": 0,
+        "median_ci_width_shares": null,
+        "solos_with_valid_bars": 0,
+        "verdict": "trop peu"
+      },
+      "runs": 0,
+      "structure": {
+        "chorus_length": {
+          "counts": {
+            "12": 0,
+            "16": 0,
+            "32": 0,
+            "other": 0
+          },
+          "histogram": {},
+          "n": 0,
+          "shares": {
+            "12": 0.0,
+            "16": 0.0,
+            "32": 0.0,
+            "other": 0.0
+          }
+        },
+        "composition_forms": {},
+        "form_sequences_32": {
+          "counts": {},
+          "n": 0
+        },
+        "solos": 0,
+        "templates": {},
+        "tempo": {
+          "max": null,
+          "min": null,
+          "n": 0,
+          "p10": null,
+          "p25": null,
+          "p50": null,
+          "p75": null,
+          "p90": null
+        }
+      }
+    },
+    "tempo_lt120": {
+      "approach": {
+        "all": {
+          "counts": {
+            "chord_tone": 113,
+            "chromatic_above": 29,
+            "chromatic_below": 24,
+            "diatonic": 49,
+            "fifth": 43,
+            "other": 87,
+            "same": 21
+          },
+          "distance": {
+            "counts": {
+              "0": 21,
+              "1": 53,
+              "10": 6,
+              "11": 9,
+              "12": 15,
+              "2": 34,
+              "3": 21,
+              "4": 25,
+              "5": 73,
+              "6": 32,
+              "7": 43,
+              "8": 12,
+              "9": 12,
+              ">12": 10
+            },
+            "n": 366,
+            "shares": {
+              "0": 0.0574,
+              "1": 0.1448,
+              "10": 0.0164,
+              "11": 0.0246,
+              "12": 0.041,
+              "2": 0.0929,
+              "3": 0.0574,
+              "4": 0.0683,
+              "5": 0.1995,
+              "6": 0.0874,
+              "7": 0.1175,
+              "8": 0.0328,
+              "9": 0.0328,
+              ">12": 0.0273
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 55,
+                "below": 47
+              },
+              "n": 102,
+              "shares": {
+                "above": 0.5392,
+                "below": 0.4608
+              }
+            },
+            "chromatic_in_scale": 5,
+            "diatonic_nearest": 32,
+            "n": 102,
+            "rising_falling": {
+              "counts": {
+                "falling": 31,
+                "level": 37,
+                "rising": 34
+              },
+              "n": 102,
+              "shares": {
+                "falling": 0.3039,
+                "level": 0.3627,
+                "rising": 0.3333
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 25,
+                "same_side_as_arrival": 77
+              },
+              "n": 102,
+              "shares": {
+                "other_side": 0.2451,
+                "same_side_as_arrival": 0.7549
+              }
+            }
+          },
+          "n": 366,
+          "semitone_share": 0.1448,
+          "shares": {
+            "chord_tone": 0.3087,
+            "chromatic_above": 0.0792,
+            "chromatic_below": 0.0656,
+            "diatonic": 0.1339,
+            "fifth": 0.1175,
+            "other": 0.2377,
+            "same": 0.0574
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 53,
+              "diatonic": 49,
+              "none": 264
+            },
+            "n": 366,
+            "shares": {
+              "chromatic": 0.1448,
+              "diatonic": 0.1339,
+              "none": 0.7213
+            }
+          },
+          "whole_tone_share": 0.0929
+        },
+        "bar_change": {
+          "counts": {
+            "chord_tone": 68,
+            "chromatic_above": 22,
+            "chromatic_below": 23,
+            "diatonic": 35,
+            "fifth": 25,
+            "other": 61,
+            "same": 9
+          },
+          "distance": {
+            "counts": {
+              "0": 9,
+              "1": 45,
+              "10": 4,
+              "11": 8,
+              "12": 3,
+              "2": 24,
+              "3": 16,
+              "4": 14,
+              "5": 46,
+              "6": 27,
+              "7": 25,
+              "8": 10,
+              "9": 4,
+              ">12": 8
+            },
+            "n": 243,
+            "shares": {
+              "0": 0.037,
+              "1": 0.1852,
+              "10": 0.0165,
+              "11": 0.0329,
+              "12": 0.0123,
+              "2": 0.0988,
+              "3": 0.0658,
+              "4": 0.0576,
+              "5": 0.1893,
+              "6": 0.1111,
+              "7": 0.1029,
+              "8": 0.0412,
+              "9": 0.0165,
+              ">12": 0.0329
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 39,
+                "below": 41
+              },
+              "n": 80,
+              "shares": {
+                "above": 0.4875,
+                "below": 0.5125
+              }
+            },
+            "chromatic_in_scale": 5,
+            "diatonic_nearest": 23,
+            "n": 80,
+            "rising_falling": {
+              "counts": {
+                "falling": 28,
+                "level": 26,
+                "rising": 26
+              },
+              "n": 80,
+              "shares": {
+                "falling": 0.35,
+                "level": 0.325,
+                "rising": 0.325
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 18,
+                "same_side_as_arrival": 62
+              },
+              "n": 80,
+              "shares": {
+                "other_side": 0.225,
+                "same_side_as_arrival": 0.775
+              }
+            }
+          },
+          "n": 243,
+          "semitone_share": 0.1852,
+          "shares": {
+            "chord_tone": 0.2798,
+            "chromatic_above": 0.0905,
+            "chromatic_below": 0.0947,
+            "diatonic": 0.144,
+            "fifth": 0.1029,
+            "other": 0.251,
+            "same": 0.037
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 45,
+              "diatonic": 35,
+              "none": 163
+            },
+            "n": 243,
+            "shares": {
+              "chromatic": 0.1852,
+              "diatonic": 0.144,
+              "none": 0.6708
+            }
+          },
+          "whole_tone_share": 0.0988
+        },
+        "bar_same": {
+          "counts": {
+            "chord_tone": 7,
+            "chromatic_above": 0,
+            "chromatic_below": 1,
+            "diatonic": 2,
+            "fifth": 1,
+            "other": 6,
+            "same": 2
+          },
+          "distance": {
+            "counts": {
+              "0": 2,
+              "1": 1,
+              "10": 0,
+              "11": 0,
+              "12": 0,
+              "2": 1,
+              "3": 1,
+              "4": 1,
+              "5": 9,
+              "6": 0,
+              "7": 1,
+              "8": 1,
+              "9": 2,
+              ">12": 0
+            },
+            "n": 19,
+            "shares": {
+              "0": 0.1053,
+              "1": 0.0526,
+              "10": 0.0,
+              "11": 0.0,
+              "12": 0.0,
+              "2": 0.0526,
+              "3": 0.0526,
+              "4": 0.0526,
+              "5": 0.4737,
+              "6": 0.0,
+              "7": 0.0526,
+              "8": 0.0526,
+              "9": 0.1053,
+              ">12": 0.0
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 2,
+                "below": 1
+              },
+              "n": 3,
+              "shares": {
+                "above": 0.6667,
+                "below": 0.3333
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 1,
+            "n": 3,
+            "rising_falling": {
+              "counts": {
+                "falling": 0,
+                "level": 3,
+                "rising": 0
+              },
+              "n": 3,
+              "shares": {
+                "falling": 0.0,
+                "level": 1.0,
+                "rising": 0.0
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 1,
+                "same_side_as_arrival": 2
+              },
+              "n": 3,
+              "shares": {
+                "other_side": 0.3333,
+                "same_side_as_arrival": 0.6667
+              }
+            }
+          },
+          "n": 19,
+          "semitone_share": 0.0526,
+          "shares": {
+            "chord_tone": 0.3684,
+            "chromatic_above": 0.0,
+            "chromatic_below": 0.0526,
+            "diatonic": 0.1053,
+            "fifth": 0.0526,
+            "other": 0.3158,
+            "same": 0.1053
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 1,
+              "diatonic": 2,
+              "none": 16
+            },
+            "n": 19,
+            "shares": {
+              "chromatic": 0.0526,
+              "diatonic": 0.1053,
+              "none": 0.8421
+            }
+          },
+          "whole_tone_share": 0.0526
+        },
+        "mid_change": {
+          "counts": {
+            "chord_tone": 38,
+            "chromatic_above": 7,
+            "chromatic_below": 0,
+            "diatonic": 12,
+            "fifth": 17,
+            "other": 20,
+            "same": 10
+          },
+          "distance": {
+            "counts": {
+              "0": 10,
+              "1": 7,
+              "10": 2,
+              "11": 1,
+              "12": 12,
+              "2": 9,
+              "3": 4,
+              "4": 10,
+              "5": 18,
+              "6": 5,
+              "7": 17,
+              "8": 1,
+              "9": 6,
+              ">12": 2
+            },
+            "n": 104,
+            "shares": {
+              "0": 0.0962,
+              "1": 0.0673,
+              "10": 0.0192,
+              "11": 0.0096,
+              "12": 0.1154,
+              "2": 0.0865,
+              "3": 0.0385,
+              "4": 0.0962,
+              "5": 0.1731,
+              "6": 0.0481,
+              "7": 0.1635,
+              "8": 0.0096,
+              "9": 0.0577,
+              ">12": 0.0192
+            }
+          },
+          "moving": {
+            "above_below": {
+              "counts": {
+                "above": 14,
+                "below": 5
+              },
+              "n": 19,
+              "shares": {
+                "above": 0.7368,
+                "below": 0.2632
+              }
+            },
+            "chromatic_in_scale": 0,
+            "diatonic_nearest": 8,
+            "n": 19,
+            "rising_falling": {
+              "counts": {
+                "falling": 3,
+                "level": 8,
+                "rising": 8
+              },
+              "n": 19,
+              "shares": {
+                "falling": 0.1579,
+                "level": 0.4211,
+                "rising": 0.4211
+              }
+            },
+            "side": {
+              "counts": {
+                "other_side": 6,
+                "same_side_as_arrival": 13
+              },
+              "n": 19,
+              "shares": {
+                "other_side": 0.3158,
+                "same_side_as_arrival": 0.6842
+              }
+            }
+          },
+          "n": 104,
+          "semitone_share": 0.0673,
+          "shares": {
+            "chord_tone": 0.3654,
+            "chromatic_above": 0.0673,
+            "chromatic_below": 0.0,
+            "diatonic": 0.1154,
+            "fifth": 0.1635,
+            "other": 0.1923,
+            "same": 0.0962
+          },
+          "weights": {
+            "counts": {
+              "chromatic": 7,
+              "diatonic": 12,
+              "none": 85
+            },
+            "n": 104,
+            "shares": {
+              "chromatic": 0.0673,
+              "diatonic": 0.1154,
+              "none": 0.8173
+            }
+          },
+          "whole_tone_share": 0.0865
+        }
+      },
+      "arrival": {
+        "bar_start_no_change": {
+          "counts": {
+            "bass": 11,
+            "fifth": 4,
+            "other": 6,
+            "root": 0,
+            "seventh": 3,
+            "third": 5
+          },
+          "n": 29,
+          "shares": {
+            "bass": 0.3793,
+            "fifth": 0.1379,
+            "other": 0.2069,
+            "root": 0.0,
+            "seventh": 0.1034,
+            "third": 0.1724
+          }
+        },
+        "change": {
+          "counts": {
+            "bass": 224,
+            "fifth": 32,
+            "other": 72,
+            "root": 0,
+            "seventh": 37,
+            "third": 44
+          },
+          "n": 409,
+          "shares": {
+            "bass": 0.5477,
+            "fifth": 0.0782,
+            "other": 0.176,
+            "root": 0.0,
+            "seventh": 0.0905,
+            "third": 0.1076
+          }
+        },
+        "change_bar_start": {
+          "counts": {
+            "bass": 157,
+            "fifth": 24,
+            "other": 26,
+            "root": 0,
+            "seventh": 27,
+            "third": 31
+          },
+          "n": 265,
+          "shares": {
+            "bass": 0.5925,
+            "fifth": 0.0906,
+            "other": 0.0981,
+            "root": 0.0,
+            "seventh": 0.1019,
+            "third": 0.117
+          }
+        },
+        "change_mid_bar": {
+          "counts": {
+            "bass": 67,
+            "fifth": 8,
+            "other": 46,
+            "root": 0,
+            "seventh": 10,
+            "third": 13
+          },
+          "n": 144,
+          "shares": {
+            "bass": 0.4653,
+            "fifth": 0.0556,
+            "other": 0.3194,
+            "root": 0.0,
+            "seventh": 0.0694,
+            "third": 0.0903
+          }
+        }
+      },
+      "bars": 294,
+      "bass_rhythm": {
+        "bar_pattern": {
+          "counts": {
+            "dotted_half_quarter": 12,
+            "half_quarters": 63,
+            "halves": 31,
+            "quarter_dotted_half": 5,
+            "quarter_half_quarter": 7,
+            "quarters": 128,
+            "quarters_half": 23,
+            "whole": 25
+          },
+          "n": 294,
+          "shares": {
+            "dotted_half_quarter": 0.0408,
+            "half_quarters": 0.2143,
+            "halves": 0.1054,
+            "quarter_dotted_half": 0.017,
+            "quarter_half_quarter": 0.0238,
+            "quarters": 0.4354,
+            "quarters_half": 0.0782,
+            "whole": 0.085
+          }
+        },
+        "bar_tie": {
+          "n": 284,
+          "share": 0.0704,
+          "tied": 20
+        },
+        "bars": 294,
+        "distinct_pitches_per_bar": {
+          "counts": {
+            "1": 25,
+            "2": 65,
+            "3": 118,
+            "4": 86
+          },
+          "n": 294,
+          "shares": {
+            "1": 0.085,
+            "2": 0.2211,
+            "3": 0.4014,
+            "4": 0.2925
+          }
+        },
+        "hold_beats": {
+          "beats": 1176,
+          "counts": {
+            "1": 697,
+            "2": 145,
+            "3": 23,
+            "4+": 27
+          },
+          "mean": 1.318,
+          "n": 892,
+          "share_beats_in_holds": 0.4073,
+          "shares": {
+            "1": 0.7814,
+            "2": 0.1626,
+            "3": 0.0258,
+            "4+": 0.0303
+          }
+        },
+        "repeat_by_transition": {
+          "counts": {
+            "1-2": 131,
+            "2-3": 49,
+            "3-4": 84
+          },
+          "n_bars": 294,
+          "shares": {
+            "1-2": 0.4456,
+            "2-3": 0.1667,
+            "3-4": 0.2857
+          }
+        }
+      },
+      "choruses": {
+        "complete_kept": 11,
+        "total_4_4": 12
+      },
+      "counts": {
+        "bars": 340,
+        "bars_incomplete": 4,
+        "bars_no_bass": 36,
+        "bars_no_chord": 6,
+        "bars_valid": 294,
+        "beats": 1353,
+        "beats_valid": 1176,
+        "solos": 10,
+        "solos_with_bars": 9
+      },
+      "discarded": {
+        "counts": {
+          "bars_all": 342,
+          "incomplete": 4,
+          "no_bass": 36,
+          "no_chord": 6,
+          "non_4_4": 2,
+          "valid": 294
+        },
+        "order_of_exclusion": "signature ≠ 4/4, puis mesure incomplète (≠ 4 temps), puis basse manquante, puis accord absent / NC / non analysé : un seul motif par mesure",
+        "shares": {
+          "incomplete": 0.0117,
+          "no_bass": 0.1053,
+          "no_chord": 0.0175,
+          "non_4_4": 0.0058,
+          "valid": 0.8596
+        },
+        "solos_without_valid_bar": 1
+      },
+      "duration": {
+        "check": "`minutes_onset_span` = étendue des onsets (s) du 1ᵉʳ au dernier temps de mesure ≥ 1 d'un chorus, toutes signatures ; à comparer à `minutes_all_beats_at_avgtempo` (temps / avgtempo)",
+        "method": "minutes = mesures × 4 temps / avgtempo du solo (BPM, la noire est le temps), sommées sur les solos",
+        "minutes_4_4_bars": 23.42,
+        "minutes_all_beats_at_avgtempo": 23.47,
+        "minutes_onset_span": 23.3,
+        "minutes_valid_bars": 20.06
+      },
+      "harmonic_rhythm": {
+        "change_beat": {
+          "counts": {
+            "1": 265,
+            "2": 11,
+            "3": 109,
+            "4": 24
+          },
+          "n": 409,
+          "share_beat1": 0.6479,
+          "share_beat3": 0.2665,
+          "share_other": 0.0856,
+          "shares": {
+            "1": 0.6479,
+            "2": 0.0269,
+            "3": 0.2665,
+            "4": 0.0587
+          }
+        },
+        "chord_duration_beats": {
+          "counts": {
+            "1": 61,
+            "2": 180,
+            "3": 6,
+            "4": 140,
+            "5": 1,
+            "6": 4,
+            "7": 0,
+            "8": 8,
+            ">8": 0
+          },
+          "mean": 2.73,
+          "n": 400,
+          "shares": {
+            "1": 0.1525,
+            "2": 0.45,
+            "3": 0.015,
+            "4": 0.35,
+            "5": 0.0025,
+            "6": 0.01,
+            "7": 0.0,
+            "8": 0.02,
+            ">8": 0.0
+          }
+        },
+        "chords_per_bar": {
+          "counts": {
+            "1": 179,
+            "2": 95,
+            "3": 11,
+            "4": 9
+          },
+          "n": 294,
+          "shares": {
+            "1": 0.6088,
+            "2": 0.3231,
+            "3": 0.0374,
+            "4": 0.0306
+          }
+        }
+      },
+      "indicators": {
+        "approach_chromatic_all": {
+          "ci95": [
+            0.082,
+            0.2046
+          ],
+          "ci_reason": null,
+          "estimate": 0.1448,
+          "n_events": 366,
+          "n_solos": 9
+        },
+        "approach_chromatic_bar_change": {
+          "ci95": [
+            0.0984,
+            0.254
+          ],
+          "ci_reason": null,
+          "estimate": 0.1852,
+          "n_events": 243,
+          "n_solos": 8
+        },
+        "approach_diatonic_all": {
+          "ci95": [
+            0.0882,
+            0.18
+          ],
+          "ci_reason": null,
+          "estimate": 0.1339,
+          "n_events": 366,
+          "n_solos": 9
+        },
+        "approach_diatonic_bar_change": {
+          "ci95": [
+            0.0885,
+            0.2077
+          ],
+          "ci_reason": null,
+          "estimate": 0.144,
+          "n_events": 243,
+          "n_solos": 8
+        },
+        "approach_none_all": {
+          "ci95": [
+            0.6616,
+            0.7715
+          ],
+          "ci_reason": null,
+          "estimate": 0.7213,
+          "n_events": 366,
+          "n_solos": 9
+        },
+        "approach_none_bar_change": {
+          "ci95": [
+            0.5985,
+            0.7237
+          ],
+          "ci_reason": null,
+          "estimate": 0.6708,
+          "n_events": 243,
+          "n_solos": 8
+        },
+        "arrival_bass_at_change": {
+          "ci95": [
+            0.4146,
+            0.7073
+          ],
+          "ci_reason": null,
+          "estimate": 0.5477,
+          "n_events": 409,
+          "n_solos": 9
+        },
+        "bars_halves": {
+          "ci95": [
+            0.0571,
+            0.1761
+          ],
+          "ci_reason": null,
+          "estimate": 0.1054,
+          "n_events": 294,
+          "n_solos": 9
+        },
+        "bars_one_chord": {
+          "ci95": [
+            0.3397,
+            0.8446
+          ],
+          "ci_reason": null,
+          "estimate": 0.6088,
+          "n_events": 294,
+          "n_solos": 9
+        },
+        "bars_quarters": {
+          "ci95": [
+            0.3125,
+            0.5455
+          ],
+          "ci_reason": null,
+          "estimate": 0.4354,
+          "n_events": 294,
+          "n_solos": 9
+        },
+        "interval_median": {
+          "ci95": [
+            2.0,
+            3.0
+          ],
+          "ci_reason": null,
+          "estimate": 2.0,
+          "n_events": 1166,
+          "n_solos": 9
+        },
+        "interval_p90": {
+          "ci95": [
+            8.0,
+            10.0
+          ],
+          "ci_reason": null,
+          "estimate": 8.0,
+          "n_events": 1166,
+          "n_solos": 9
+        },
+        "passage_chord_tone": {
+          "ci95": [
+            0.5827,
+            0.8161
+          ],
+          "ci_reason": null,
+          "estimate": 0.6703,
+          "n_events": 364,
+          "n_solos": 8
+        },
+        "passage_chromatic": {
+          "ci95": [
+            0.08,
+            0.1741
+          ],
+          "ci_reason": null,
+          "estimate": 0.1291,
+          "n_events": 364,
+          "n_solos": 8
+        },
+        "passage_scale_step": {
+          "ci95": [
+            0.1016,
+            0.2577
+          ],
+          "ci_reason": null,
+          "estimate": 0.2005,
+          "n_events": 364,
+          "n_solos": 8
+        },
+        "repeat_share": {
+          "ci95": [
+            0.1755,
+            0.3439
+          ],
+          "ci_reason": null,
+          "estimate": 0.2436,
+          "n_events": 1166,
+          "n_solos": 9
+        }
+      },
+      "intervals": {
+        "counts": {
+          "0": 284,
+          "1": 225,
+          "10": 28,
+          "11": 19,
+          "12": 34,
+          "2": 104,
+          "3": 87,
+          "4": 62,
+          "5": 121,
+          "6": 58,
+          "7": 84,
+          "8": 28,
+          "9": 16,
+          ">12": 16
+        },
+        "keep_direction": {
+          "counts": {
+            "keep": 257,
+            "reverse": 429
+          },
+          "n": 686,
+          "share": 0.3746,
+          "shares": {
+            "keep": 0.3746,
+            "reverse": 0.6254
+          }
+        },
+        "n": 1166,
+        "percentiles": {
+          "p50": 2.0,
+          "p75": 5.0,
+          "p90": 8.0,
+          "p95": 11.0,
+          "p99": 13.0
+        },
+        "repeat_share": 0.2436,
+        "shares": {
+          "0": 0.2436,
+          "1": 0.193,
+          "10": 0.024,
+          "11": 0.0163,
+          "12": 0.0292,
+          "2": 0.0892,
+          "3": 0.0746,
+          "4": 0.0532,
+          "5": 0.1038,
+          "6": 0.0497,
+          "7": 0.072,
+          "8": 0.024,
+          "9": 0.0137,
+          ">12": 0.0137
+        },
+        "toward_target": {
+          "counts": {
+            "not_toward": 219,
+            "toward": 133
+          },
+          "n": 352,
+          "share": 0.3778,
+          "shares": {
+            "not_toward": 0.6222,
+            "toward": 0.3778
+          }
+        },
+        "up_down": {
+          "counts": {
+            "down": 450,
+            "up": 432
+          },
+          "n": 882,
+          "shares": {
+            "down": 0.5102,
+            "up": 0.4898
+          }
+        }
+      },
+      "open_form": {
+        "bars_valid": 0,
+        "note": "`composition_info.form = 'open'` : improvisation sur vamp (peu de symboles d'accord, propagés sur tout le solo) ; ses mesures sont valides et comptées",
+        "share_of_valid_bars": 0.0,
+        "solos": 0
+      },
+      "passage": {
+        "by_beat": {
+          "2": {
+            "counts": {
+              "chord_tone": 120,
+              "chromatic": 24,
+              "scale_step": 41
+            },
+            "n": 185,
+            "shares": {
+              "chord_tone": 0.6486,
+              "chromatic": 0.1297,
+              "scale_step": 0.2216
+            }
+          },
+          "3": {
+            "counts": {
+              "chord_tone": 124,
+              "chromatic": 23,
+              "scale_step": 32
+            },
+            "n": 179,
+            "shares": {
+              "chord_tone": 0.6927,
+              "chromatic": 0.1285,
+              "scale_step": 0.1788
+            }
+          },
+          "4": {
+            "counts": {
+              "chord_tone": 0,
+              "chromatic": 0,
+              "scale_step": 0
+            },
+            "n": 0,
+            "shares": {
+              "chord_tone": 0.0,
+              "chromatic": 0.0,
+              "scale_step": 0.0
+            }
+          }
+        },
+        "counts": {
+          "chord_tone": 244,
+          "chromatic": 47,
+          "scale_step": 73
+        },
+        "n": 364,
+        "shares": {
+          "chord_tone": 0.6703,
+          "chromatic": 0.1291,
+          "scale_step": 0.2005
+        }
+      },
+      "passage_engine": {
+        "by_beat": {
+          "2": {
+            "counts": {
+              "chord_tone": 174,
+              "chromatic": 35,
+              "scale_step": 55
+            },
+            "n": 264,
+            "shares": {
+              "chord_tone": 0.6591,
+              "chromatic": 0.1326,
+              "scale_step": 0.2083
+            }
+          },
+          "3": {
+            "counts": {
+              "chord_tone": 127,
+              "chromatic": 25,
+              "scale_step": 33
+            },
+            "n": 185,
+            "shares": {
+              "chord_tone": 0.6865,
+              "chromatic": 0.1351,
+              "scale_step": 0.1784
+            }
+          },
+          "4": {
+            "counts": {
+              "chord_tone": 98,
+              "chromatic": 47,
+              "scale_step": 34
+            },
+            "n": 179,
+            "shares": {
+              "chord_tone": 0.5475,
+              "chromatic": 0.2626,
+              "scale_step": 0.1899
+            }
+          }
+        },
+        "counts": {
+          "chord_tone": 399,
+          "chromatic": 107,
+          "scale_step": 122
+        },
+        "n": 628,
+        "shares": {
+          "chord_tone": 0.6354,
+          "chromatic": 0.1704,
+          "scale_step": 0.1943
+        }
+      },
+      "register": {
+        "arrival_window": {
+          "best_window_12": {
+            "high": 45,
+            "low": 34,
+            "n_inside": 187,
+            "share_inside": 0.7957
+          },
+          "high": 46.0,
+          "low": 34.0,
+          "n": 235
+        },
+        "n": 1176,
+        "pitch": {
+          "p1": 31.0,
+          "p25": 37.0,
+          "p5": 33.0,
+          "p50": 40.0,
+          "p75": 44.0,
+          "p95": 47.0,
+          "p99": 51.0
+        },
+        "pitch_range": [
+          28,
+          53
+        ],
+        "relative_to_tonic": {
+          "n": 1176,
+          "p1": 24.0,
+          "p25": 34.0,
+          "p5": 30.0,
+          "p50": 38.0,
+          "p75": 41.0,
+          "p95": 46.0,
+          "p99": 50.0
+        },
+        "walk_window": {
+          "high": 49.0,
+          "low": 32.0
+        }
+      },
+      "reliability": {
+        "bars_valid": 294,
+        "median_ci_width_shares": 0.1404,
+        "solos_with_valid_bars": 9,
+        "verdict": "trop peu"
+      },
+      "runs": 10,
+      "structure": {
+        "chorus_length": {
+          "counts": {
+            "12": 0,
+            "16": 1,
+            "32": 2,
+            "other": 8
+          },
+          "histogram": {
+            "1": 1,
+            "16": 1,
+            "17": 1,
+            "29": 1,
+            "32": 2,
+            "33": 1,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "73": 1
+          },
+          "n": 11,
+          "shares": {
+            "12": 0.0,
+            "16": 0.0909,
+            "32": 0.1818,
+            "other": 0.7273
+          }
+        },
+        "composition_forms": {
+          "A16B16": 3,
+          "A20B25": 1,
+          "A8A8B8A8": 4,
+          "A8A8B8B8": 1,
+          "A9B9A9": 1
+        },
+        "form_sequences_32": {
+          "counts": {
+            "A1 B1": 2
+          },
+          "n": 2
+        },
+        "solos": 10,
+        "templates": {
+          "(aucun)": 10
+        },
+        "tempo": {
+          "max": 67.7,
+          "min": 48.8,
+          "n": 10,
+          "p10": 51.05,
+          "p25": 53.0,
+          "p50": 57.85,
+          "p75": 64.0,
+          "p90": 66.08
+        }
+      }
+    }
+  },
+  "limits": [
+    "Les croches ne sont PAS observables : `bass_pitch` n'a qu'une valeur par temps (une noire) ; aucune durée, aucune attaque, aucun silence de basse n'est dans la base. Le rythme de la basse se limite aux répétitions de hauteur d'un temps au suivant, aux suites de temps à hauteur identique et à l'attache sur la barre de mesure.",
+    "Une hauteur répétée peut être une noire rejouée ou une note tenue (blanche, ronde) : la donnée ne les distingue pas. `halves` = deux blanches OU deux paires de noires répétées.",
+    "Peu de solos par sous-ensemble (10 à 32) et par classe de tempo : les intervalles de confiance (bootstrap par solo, méthode des percentiles) sont larges et, avec moins de quelques solos, trop optimistes ; ils ne disent rien du biais de sélection de la base (choix des solos, solistes, morceaux).",
+    "La basse annotée est peu cohérente avec la grille d'accords (voir E7, `bass_measures` : la basse de l'accord n'est jouée qu'à 41 % des changements d'accord en swing) : les parts d'arrivée sont celles de l'annotation, pas celles d'une marche idéale.",
+    "Mesures hors 4/4, sans basse complète ou sans accord utilisable écartées (voir `discarded`) ; les intervalles et les approches ne franchissent jamais une mesure écartée. Les suites de temps à hauteur identique sont tronquées aux bords des suites de mesures valides.",
+    "Aucune phrase de solo, aucune suite de notes n'est conservée : uniquement des comptes, parts et centiles."
+  ],
+  "provenance": {
+    "attribution": "Contains information from the Weimar Jazz Database (Jazzomat Research Project, HfM Weimar), which is made available here under the Open Database License (ODbL); individual contents under the Database Contents License (DbCL 1.0).",
+    "composite_rhythmfeel_excluded": {
+      "n_solos": 6,
+      "values": {
+        "A:LATIN/B:SWING": 1,
+        "FUNK/SWING": 1,
+        "LATIN/FUNK": 3,
+        "LATIN/SWING": 1
+      }
+    },
+    "licence": "ODbL-1.0 (base) + DbCL-1.0 (contenus)",
+    "n_bars": 342,
+    "n_bars_valid": 294,
+    "n_beats_valid": 1176,
+    "n_solos": 10,
+    "rhythmfeel": "BALLAD",
+    "rhythmfeel_values_in_db": {
+      "A:LATIN/B:SWING": 1,
+      "BALLAD": 10,
+      "FUNK": 20,
+      "FUNK/SWING": 1,
+      "LATIN": 27,
+      "LATIN/FUNK": 3,
+      "LATIN/SWING": 1,
+      "SWING": 361,
+      "TWOBEAT": 32
+    },
+    "sha256": "af6a0d9debf042c3581565bd75baad591d32e166cd2ec7298519883de614bf12",
+    "source": "Weimar Jazz Database (WJazzD)",
+    "subset": "solo_info.rhythmfeel = 'BALLAD' (valeur exacte) ; mesures 4/4 de chorus (bar >= 1) à quatre temps, basse complète et accord connu (NC et symboles non analysés écartés)",
+    "version": "WJazzD 2.1 (base 2.2, publiée le 2018-02-08)"
+  },
+  "recording_years": {
+    "by_decade": {
+      "1940s": 2,
+      "1960s": 1,
+      "1970s": 2,
+      "1980s": 2,
+      "1990s": 3
+    },
+    "known": 10,
+    "max": 1994,
+    "min": 1945,
+    "source": "`track_info.recordingdate` (année extraite du texte)",
+    "unknown": 0
+  },
+  "reliability": {
+    "by_group": {
+      "all": "trop peu",
+      "tempo_120_180": "trop peu",
+      "tempo_180_240": "trop peu",
+      "tempo_ge240": "trop peu",
+      "tempo_lt120": "trop peu"
+    },
+    "solos_in_tempo_classes": 10,
+    "solos_without_tempo": 0,
+    "thresholds": {
+      "assez": {
+        "min_bars": 1500,
+        "min_solos": 20
+      },
+      "juste": {
+        "min_bars": 500,
+        "min_solos": 8
+      },
+      "unit": "solos avec au moins une mesure valide ET mesures valides ; `trop peu` sous `juste`"
+    },
+    "verdict": "trop peu"
+  },
+  "signatures": {
+    "non_4_4": {
+      "bars": 2,
+      "bars_by_signature": {
+        "5/4": 2
+      },
+      "melids_touched": [
+        305
+      ],
+      "solos_by_signature": {
+        "5/4": 1
+      },
+      "solos_touched": 1,
+      "solos_without_any_4_4_bar": 0
+    },
+    "rule": "signature effective d'un temps = dernière signature écrite (celle du solo avant la première) ; seules les mesures en 4/4 sont lues (voir `wjazzd`)",
+    "solo_label_overridden_by_beats": [
+      246
+    ],
+    "solo_signature": {
+      "4/4": 9,
+      "6/8": 1
+    }
+  },
+  "tempo_classes": [
+    {
+      "id": "tempo_lt120",
+      "max_bpm": 120.0,
+      "min_bpm": 0.0
+    },
+    {
+      "id": "tempo_120_180",
+      "max_bpm": 180.0,
+      "min_bpm": 120.0
+    },
+    {
+      "id": "tempo_180_240",
+      "max_bpm": 240.0,
+      "min_bpm": 180.0
+    },
+    {
+      "id": "tempo_ge240",
+      "max_bpm": null,
+      "min_bpm": 240.0
+    }
+  ]
+}
