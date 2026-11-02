@@ -306,3 +306,27 @@ clean: ## Remove generated reports and profiles
 
 clean-all: clean ## Remove venv and all generated files
 	rm -rf $(VENV) .pytest_cache __pycache__ src/harmonium_lab/__pycache__
+
+# ════════════════════════════════════════════════════════════════════
+# Phase 019, V0 : variance par chorus et par couche (references/v0-variance/)
+# ════════════════════════════════════════════════════════════════════
+# make v0-variance ENGINE_DIR=~/Project/bascanada/harmonium ENGINE_BIN=~/Project/bascanada/harmonium/target/release/harmonium-cli
+#   16 graines × 16 chorus (`--tours`), un JSON par profil dans V0_OUT. Vérités terrain et MIDI en cache hors dépôt (V0_DIR).
+#   V0_PROFILES : ids de profils du moteur ou dossiers ; V0_GRID_DIR : copie de wjazzd_swing sous une grille de 8 mesures.
+.PHONY: v0-grid v0-variance
+V0_DIR ?= /tmp/harmonium-019/v0
+V0_GRID_DIR ?= $(V0_DIR)/wjazzd_swing_grille8
+V0_SEEDS ?= 16
+V0_CHORUS ?= 16
+V0_OUT ?= references/v0-variance
+V0_PROFILES ?= wjazzd_swing $(V0_GRID_DIR) nt_desert isaac_basement isaac_cellar isaac_burning isaac_downpour reel_quebecois
+
+v0-grid: setup ## Copie de wjazzd_swing sous une grille utilisateur de 8 mesures : [V0_GRID_DIR=dossier]
+	$(PYTHON) scripts/v0_user_grid_profile.py "$(ENGINE_DIR)/profiles/wjazzd_swing" "$(V0_GRID_DIR)"
+
+v0-variance: setup v0-grid ## Variance par chorus : [V0_PROFILES="id|dossier ..."] [V0_SEEDS=16] [V0_CHORUS=16] [ENGINE_BIN=harmonium-cli]
+	@set -e; for p in $(V0_PROFILES); do \
+		$(LAB) seed-variety --profile "$$p" --seeds $(V0_SEEDS) --chorus $(V0_CHORUS) --engine-dir "$(ENGINE_DIR)" \
+			$(if $(ENGINE_BIN),--engine-bin "$(ENGINE_BIN)",) --label V0 --work-dir "$(V0_DIR)/truth" \
+			-o "$(V0_OUT)/$$(basename $$p).json" --markdown; \
+	done

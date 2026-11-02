@@ -1,0 +1,865 @@
+{
+ "schema": 2,
+ "kind": "chorus",
+ "seeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+ "chorus": 16,
+ "engine_rev": "fa9c630",
+ "profiles": [
+  {
+   "seeds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
+   "choruses": 16,
+   "bars_per_chorus": 44,
+   "steady_from": 3,
+   "intra": {
+    "all": {
+     "choruses": 16,
+     "active_share": 1.0,
+     "adjacent": {
+      "exact": 0.9933,
+      "graded": 0.3497,
+      "pairs": 240
+     },
+     "adjacent_steady": {
+      "exact": 0.9957,
+      "graded": 0.3525,
+      "pairs": 208
+     },
+     "any_pair": {
+      "exact": 0.9857,
+      "p10": 0.9545,
+      "p50": 1.0,
+      "p90": 1.0,
+      "pairs": 1920
+     },
+     "identical_pairs": 0.0,
+     "distinct_choruses_mean": 16.0,
+     "adjacent_by_part": {
+      "Blues": 0.9858,
+      "A": 0.9976,
+      "B": 0.9917
+     },
+     "matrix": [
+      [null, 0.9773, 0.9872, 0.9872, 0.9702, 0.9872, 0.9773, 0.9517, 1.0, 0.9872, 0.9872, 0.9773, 0.9645, 0.9872, 0.9773, 1.0],
+      [0.9773, null, 0.9773, 1.0, 0.9673, 0.9872, 1.0, 0.9773, 0.9801, 0.9744, 0.9872, 0.9773, 0.9545, 0.9702, 1.0, 0.9869],
+      [0.9872, 0.9773, null, 1.0, 0.9901, 0.9872, 0.9616, 1.0, 0.9872, 1.0, 0.9901, 0.9673, 1.0, 0.9773, 0.9872, 1.0],
+      [0.9872, 1.0, 1.0, null, 1.0, 0.9773, 0.9872, 1.0, 1.0, 0.9801, 0.9744, 0.9801, 0.9901, 1.0, 0.9773, 0.9797],
+      [0.9702, 0.9673, 0.9901, 1.0, null, 1.0, 1.0, 0.9901, 0.9872, 0.9744, 1.0, 0.9645, 1.0, 0.9645, 0.9645, 1.0],
+      [0.9872, 0.9872, 0.9872, 0.9773, 1.0, null, 1.0, 1.0, 0.9872, 1.0, 0.9901, 1.0, 0.9901, 0.9446, 1.0, 0.9666],
+      [0.9773, 1.0, 0.9616, 0.9872, 1.0, 1.0, null, 1.0, 0.9801, 0.9801, 0.9901, 0.9773, 1.0, 0.9801, 1.0, 0.9767],
+      [0.9517, 0.9773, 1.0, 1.0, 0.9901, 1.0, 1.0, null, 0.9801, 0.9872, 0.9773, 1.0, 0.9773, 0.9872, 0.9389, 0.9608],
+      [1.0, 0.9801, 0.9872, 1.0, 0.9872, 0.9872, 0.9801, 0.9801, null, 1.0, 0.9901, 0.9773, 1.0, 0.9773, 0.9901, 0.9869],
+      [0.9872, 0.9744, 1.0, 0.9801, 0.9744, 1.0, 0.9801, 0.9872, 1.0, null, 0.9872, 0.9801, 0.9872, 1.0, 1.0, 0.9898],
+      [0.9872, 0.9872, 0.9901, 0.9744, 1.0, 0.9901, 0.9901, 0.9773, 0.9901, 0.9872, null, 1.0, 0.9744, 1.0, 0.9901, 1.0],
+      [0.9773, 0.9773, 0.9673, 0.9801, 0.9645, 1.0, 0.9773, 1.0, 0.9773, 0.9801, 1.0, null, 1.0, 0.9901, 0.9773, 1.0],
+      [0.9645, 0.9545, 1.0, 0.9901, 1.0, 0.9901, 1.0, 0.9773, 1.0, 0.9872, 0.9744, 1.0, null, 1.0, 0.9901, 0.9869],
+      [0.9872, 0.9702, 0.9773, 1.0, 0.9645, 0.9446, 0.9801, 0.9872, 0.9773, 1.0, 1.0, 0.9901, 1.0, null, 0.9901, 0.9637],
+      [0.9773, 1.0, 0.9872, 0.9773, 0.9645, 1.0, 1.0, 0.9389, 0.9901, 1.0, 0.9901, 0.9773, 0.9901, 0.9901, null, 0.9869],
+      [1.0, 0.9869, 1.0, 0.9797, 1.0, 0.9666, 0.9767, 0.9608, 0.9869, 0.9898, 1.0, 1.0, 0.9869, 0.9637, 0.9869, null]
+     ]
+    },
+    "chords": {
+     "choruses": 16,
+     "active_share": 1.0,
+     "adjacent": {
+      "exact": 0.0,
+      "graded": 0.0,
+      "pairs": 240
+     },
+     "adjacent_steady": {
+      "exact": 0.0,
+      "graded": 0.0,
+      "pairs": 208
+     },
+     "any_pair": {
+      "exact": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "pairs": 1920
+     },
+     "identical_pairs": 1.0,
+     "distinct_choruses_mean": 1.0,
+     "adjacent_by_part": {
+      "Blues": 0.0,
+      "A": 0.0,
+      "B": 0.0
+     },
+     "matrix": [
+      [null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null]
+     ]
+    },
+    "comping_rhythm": {
+     "choruses": 16,
+     "active_share": 0.9965,
+     "adjacent": {
+      "exact": 0.8097,
+      "graded": 0.6952,
+      "pairs": 240
+     },
+     "adjacent_steady": {
+      "exact": 0.8189,
+      "graded": 0.7041,
+      "pairs": 208
+     },
+     "any_pair": {
+      "exact": 0.7983,
+      "p10": 0.7209,
+      "p50": 0.7955,
+      "p90": 0.8837,
+      "pairs": 1920
+     },
+     "identical_pairs": 0.0,
+     "distinct_choruses_mean": 16.0,
+     "adjacent_by_part": {
+      "Blues": 0.7854,
+      "A": 0.8301,
+      "B": 0.7854
+     },
+     "matrix": [
+      [null, 0.7704, 0.8153, 0.8438, 0.865, 0.8088, 0.7628, 0.776, 0.8068, 0.7997, 0.8281, 0.8111, 0.7475, 0.8509, 0.7528, 0.8605],
+      [0.7704, null, 0.7295, 0.9032, 0.7666, 0.8281, 0.7287, 0.7996, 0.8189, 0.7571, 0.8153, 0.7855, 0.8722, 0.753, 0.7273, 0.8183],
+      [0.8153, 0.7295, null, 0.8565, 0.8011, 0.794, 0.8395, 0.8054, 0.7926, 0.8466, 0.7827, 0.7543, 0.8182, 0.8182, 0.8324, 0.8794],
+      [0.8438, 0.9032, 0.8565, null, 0.7358, 0.6974, 0.8821, 0.7884, 0.7671, 0.8226, 0.7315, 0.8357, 0.8027, 0.753, 0.733, 0.707],
+      [0.865, 0.7666, 0.8011, 0.7358, null, 0.804, 0.8438, 0.7823, 0.7698, 0.7926, 0.8163, 0.7358, 0.8153, 0.7358, 0.777, 0.8343],
+      [0.8088, 0.8281, 0.794, 0.6974, 0.804, null, 0.9148, 0.8547, 0.7372, 0.7699, 0.7443, 0.7131, 0.7827, 0.8239, 0.8111, 0.7493],
+      [0.7628, 0.7287, 0.8395, 0.8821, 0.8438, 0.9148, null, 0.7934, 0.8438, 0.8216, 0.8366, 0.7727, 0.8721, 0.7301, 0.8182, 0.8547],
+      [0.776, 0.7996, 0.8054, 0.7884, 0.7823, 0.8547, 0.7934, null, 0.8011, 0.7934, 0.8224, 0.831, 0.7237, 0.7585, 0.7598, 0.8227],
+      [0.8068, 0.8189, 0.7926, 0.7671, 0.7698, 0.7372, 0.8438, 0.8011, null, 0.8267, 0.8257, 0.7528, 0.7698, 0.7599, 0.8111, 0.7602],
+      [0.7997, 0.7571, 0.8466, 0.8226, 0.7926, 0.7699, 0.8216, 0.7934, 0.8267, null, 0.8409, 0.809, 0.8315, 0.7996, 0.8097, 0.8065],
+      [0.8281, 0.8153, 0.7827, 0.7315, 0.8163, 0.7443, 0.8366, 0.8224, 0.8257, 0.8409, null, 0.7798, 0.7741, 0.8781, 0.7896, 0.7878],
+      [0.8111, 0.7855, 0.7543, 0.8357, 0.7358, 0.7131, 0.7727, 0.831, 0.7528, 0.809, 0.7798, null, 0.821, 0.7499, 0.8027, 0.8013],
+      [0.7475, 0.8722, 0.8182, 0.8027, 0.8153, 0.7827, 0.8721, 0.7237, 0.7698, 0.8315, 0.7741, 0.821, null, 0.8776, 0.7598, 0.8198],
+      [0.8509, 0.753, 0.8182, 0.753, 0.7358, 0.8239, 0.7301, 0.7585, 0.7599, 0.7996, 0.8781, 0.7499, 0.8776, null, 0.7666, 0.8179],
+      [0.7528, 0.7273, 0.8324, 0.733, 0.777, 0.8111, 0.8182, 0.7598, 0.8111, 0.8097, 0.7896, 0.8027, 0.7598, 0.7666, null, 0.827],
+      [0.8605, 0.8183, 0.8794, 0.707, 0.8343, 0.7493, 0.8547, 0.8227, 0.7602, 0.8065, 0.7878, 0.8013, 0.8198, 0.8179, 0.827, null]
+     ]
+    },
+    "comping_voicing": {
+     "choruses": 16,
+     "active_share": 0.9965,
+     "adjacent": {
+      "exact": 0.7385,
+      "graded": 0.459,
+      "pairs": 240
+     },
+     "adjacent_steady": {
+      "exact": 0.7452,
+      "graded": 0.4593,
+      "pairs": 208
+     },
+     "any_pair": {
+      "exact": 0.7258,
+      "p10": 0.6364,
+      "p50": 0.7273,
+      "p90": 0.8182,
+      "pairs": 1920
+     },
+     "identical_pairs": 0.0,
+     "distinct_choruses_mean": 16.0,
+     "adjacent_by_part": {
+      "Blues": 0.6351,
+      "A": 0.8103,
+      "B": 0.6794
+     },
+     "matrix": [
+      [null, 0.7143, 0.7287, 0.7898, 0.8153, 0.6736, 0.7273, 0.688, 0.6761, 0.7017, 0.7145, 0.7131, 0.7169, 0.7685, 0.6832, 0.7674],
+      [0.7143, null, 0.676, 0.773, 0.7268, 0.7756, 0.6548, 0.7106, 0.773, 0.6946, 0.7699, 0.6974, 0.7713, 0.7499, 0.6368, 0.7151],
+      [0.7287, 0.676, null, 0.7202, 0.6974, 0.6875, 0.7358, 0.75, 0.6946, 0.8111, 0.6847, 0.679, 0.7173, 0.75, 0.7088, 0.7238],
+      [0.7898, 0.773, 0.7202, null, 0.696, 0.6179, 0.7926, 0.6946, 0.685, 0.7896, 0.6861, 0.7436, 0.707, 0.7928, 0.7003, 0.6401],
+      [0.8153, 0.7268, 0.6974, 0.696, null, 0.7358, 0.7727, 0.7525, 0.7499, 0.7571, 0.7501, 0.7457, 0.7457, 0.7145, 0.7273, 0.7645],
+      [0.6736, 0.7756, 0.6875, 0.6179, 0.7358, null, 0.7955, 0.6708, 0.6818, 0.7472, 0.6491, 0.6804, 0.6619, 0.6946, 0.7585, 0.6238],
+      [0.7273, 0.6548, 0.7358, 0.7926, 0.7727, 0.7955, null, 0.7602, 0.7656, 0.7681, 0.7827, 0.679, 0.7703, 0.6847, 0.7571, 0.8009],
+      [0.688, 0.7106, 0.75, 0.6946, 0.7525, 0.6708, 0.7602, null, 0.6705, 0.7193, 0.7415, 0.831, 0.6876, 0.6903, 0.6845, 0.6512],
+      [0.6761, 0.773, 0.6946, 0.685, 0.7499, 0.6818, 0.7656, 0.6705, null, 0.7969, 0.7567, 0.6847, 0.7038, 0.6875, 0.7727, 0.7035],
+      [0.7017, 0.6946, 0.8111, 0.7896, 0.7571, 0.7472, 0.7681, 0.7193, 0.7969, null, 0.767, 0.7399, 0.7472, 0.6415, 0.7159, 0.7247],
+      [0.7145, 0.7699, 0.6847, 0.6861, 0.7501, 0.6491, 0.7827, 0.7415, 0.7567, 0.767, null, 0.75, 0.7315, 0.7399, 0.7797, 0.7689],
+      [0.7131, 0.6974, 0.679, 0.7436, 0.7457, 0.6804, 0.679, 0.831, 0.6847, 0.7399, 0.75, null, 0.7585, 0.7237, 0.7593, 0.7504],
+      [0.7169, 0.7713, 0.7173, 0.707, 0.7457, 0.6619, 0.7703, 0.6876, 0.7038, 0.7472, 0.7315, 0.7585, null, 0.7782, 0.6646, 0.7204],
+      [0.7685, 0.7499, 0.75, 0.7928, 0.7145, 0.6946, 0.6847, 0.6903, 0.6875, 0.6415, 0.7399, 0.7237, 0.7782, null, 0.7038, 0.7408],
+      [0.6832, 0.6368, 0.7088, 0.7003, 0.7273, 0.7585, 0.7571, 0.6845, 0.7727, 0.7159, 0.7797, 0.7593, 0.6646, 0.7038, null, 0.7544],
+      [0.7674, 0.7151, 0.7238, 0.6401, 0.7645, 0.6238, 0.8009, 0.6512, 0.7035, 0.7247, 0.7689, 0.7504, 0.7204, 0.7408, 0.7544, null]
+     ]
+    },
+    "bass": {
+     "choruses": 16,
+     "active_share": 1.0,
+     "adjacent": {
+      "exact": 0.925,
+      "graded": 0.5968,
+      "pairs": 240
+     },
+     "adjacent_steady": {
+      "exact": 0.9266,
+      "graded": 0.6005,
+      "pairs": 208
+     },
+     "any_pair": {
+      "exact": 0.9217,
+      "p10": 0.8636,
+      "p50": 0.9318,
+      "p90": 0.9767,
+      "pairs": 1920
+     },
+     "identical_pairs": 0.0,
+     "distinct_choruses_mean": 16.0,
+     "adjacent_by_part": {
+      "Blues": 0.9274,
+      "A": 0.91,
+      "B": 0.9667
+     },
+     "matrix": [
+      [null, 0.902, 0.9347, 0.9091, 0.9148, 0.8963, 0.9219, 0.9034, 0.9318, 0.9446, 0.9446, 0.9318, 0.9062, 0.9148, 0.9162, 0.8794],
+      [0.902, null, 0.9276, 0.9418, 0.9276, 0.9062, 0.9545, 0.8991, 0.8991, 0.9261, 0.8963, 0.8935, 0.9162, 0.8892, 0.9375, 0.9201],
+      [0.9347, 0.9276, null, 0.9318, 0.9119, 0.919, 0.9389, 0.9446, 0.9347, 0.9517, 0.9446, 0.8864, 0.929, 0.8892, 0.9091, 0.9462],
+      [0.9091, 0.9418, 0.9318, null, 0.9318, 0.9219, 0.8935, 0.9645, 0.9347, 0.9702, 0.8807, 0.9347, 0.9545, 0.8906, 0.8736, 0.9055],
+      [0.9148, 0.9276, 0.9119, 0.9318, null, 0.9545, 0.9673, 0.892, 0.9219, 0.9006, 0.9446, 0.9261, 0.9901, 0.9446, 0.8963, 0.9564],
+      [0.8963, 0.9062, 0.919, 0.9219, 0.9545, null, 0.9148, 0.9062, 0.9517, 0.9062, 0.9545, 0.9389, 0.9119, 0.8537, 0.9219, 0.8895],
+      [0.9219, 0.9545, 0.9389, 0.8935, 0.9673, 0.9148, null, 0.9545, 0.902, 0.9347, 0.919, 0.9119, 0.9062, 0.9091, 0.9261, 0.9041],
+      [0.9034, 0.8991, 0.9446, 0.9645, 0.892, 0.9062, 0.9545, null, 0.9219, 0.9361, 0.9418, 0.8878, 0.9034, 0.9034, 0.8935, 0.9273],
+      [0.9318, 0.8991, 0.9347, 0.9347, 0.9219, 0.9517, 0.902, 0.9219, null, 0.9418, 0.9574, 0.902, 0.9261, 0.9545, 0.9318, 0.9535],
+      [0.9446, 0.9261, 0.9517, 0.9702, 0.9006, 0.9062, 0.9347, 0.9361, 0.9418, null, 0.919, 0.9091, 0.9446, 0.9545, 0.8864, 0.9201],
+      [0.9446, 0.8963, 0.9446, 0.8807, 0.9446, 0.9545, 0.919, 0.9418, 0.9574, 0.919, null, 0.9446, 0.9006, 0.902, 0.9418, 0.9433],
+      [0.9318, 0.8935, 0.8864, 0.9347, 0.9261, 0.9389, 0.9119, 0.8878, 0.902, 0.9091, 0.9446, null, 0.919, 0.8935, 0.9119, 0.9564],
+      [0.9062, 0.9162, 0.929, 0.9545, 0.9901, 0.9119, 0.9062, 0.9034, 0.9261, 0.9446, 0.9006, 0.919, null, 0.919, 0.9247, 0.9201],
+      [0.9148, 0.8892, 0.8892, 0.8906, 0.9446, 0.8537, 0.9091, 0.9034, 0.9545, 0.9545, 0.902, 0.8935, 0.919, null, 0.8991, 0.923],
+      [0.9162, 0.9375, 0.9091, 0.8736, 0.8963, 0.9219, 0.9261, 0.8935, 0.9318, 0.8864, 0.9418, 0.9119, 0.9247, 0.8991, null, 0.8939],
+      [0.8794, 0.9201, 0.9462, 0.9055, 0.9564, 0.8895, 0.9041, 0.9273, 0.9535, 0.9201, 0.9433, 0.9564, 0.9201, 0.923, 0.8939, null]
+     ]
+    },
+    "drums": {
+     "choruses": 16,
+     "active_share": 1.0,
+     "adjacent": {
+      "exact": 0.0,
+      "graded": 0.0,
+      "pairs": 240
+     },
+     "adjacent_steady": {
+      "exact": 0.0,
+      "graded": 0.0,
+      "pairs": 208
+     },
+     "any_pair": {
+      "exact": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "pairs": 1920
+     },
+     "identical_pairs": 1.0,
+     "distinct_choruses_mean": 1.0,
+     "adjacent_by_part": {
+      "Blues": 0.0,
+      "A": 0.0,
+      "B": 0.0
+     },
+     "matrix": [
+      [null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null]
+     ]
+    },
+    "drums_kick": {
+     "choruses": 16,
+     "active_share": 0.0,
+     "adjacent": {
+      "exact": null,
+      "graded": null,
+      "pairs": 0
+     },
+     "adjacent_steady": {
+      "exact": null,
+      "graded": null,
+      "pairs": 0
+     },
+     "any_pair": {
+      "exact": null,
+      "p10": null,
+      "p50": null,
+      "p90": null,
+      "pairs": 0
+     },
+     "identical_pairs": null,
+     "distinct_choruses_mean": 1.0,
+     "adjacent_by_part": {},
+     "matrix": [
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+     ]
+    },
+    "drums_snare": {
+     "choruses": 16,
+     "active_share": 0.0,
+     "adjacent": {
+      "exact": null,
+      "graded": null,
+      "pairs": 0
+     },
+     "adjacent_steady": {
+      "exact": null,
+      "graded": null,
+      "pairs": 0
+     },
+     "any_pair": {
+      "exact": null,
+      "p10": null,
+      "p50": null,
+      "p90": null,
+      "pairs": 0
+     },
+     "identical_pairs": null,
+     "distinct_choruses_mean": 1.0,
+     "adjacent_by_part": {},
+     "matrix": [
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+     ]
+    },
+    "drums_hihat": {
+     "choruses": 16,
+     "active_share": 0.4206,
+     "adjacent": {
+      "exact": 0.0,
+      "graded": 0.0,
+      "pairs": 210
+     },
+     "adjacent_steady": {
+      "exact": 0.0,
+      "graded": 0.0,
+      "pairs": 182
+     },
+     "any_pair": {
+      "exact": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "pairs": 1680
+     },
+     "identical_pairs": 1.0,
+     "distinct_choruses_mean": 1.0,
+     "adjacent_by_part": {
+      "Blues": 0.0,
+      "A": 0.0,
+      "B": 0.0
+     },
+     "matrix": [
+      [null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null]
+     ]
+    },
+    "drums_ride": {
+     "choruses": 16,
+     "active_share": 1.0,
+     "adjacent": {
+      "exact": 0.0,
+      "graded": 0.0,
+      "pairs": 240
+     },
+     "adjacent_steady": {
+      "exact": 0.0,
+      "graded": 0.0,
+      "pairs": 208
+     },
+     "any_pair": {
+      "exact": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "pairs": 1920
+     },
+     "identical_pairs": 1.0,
+     "distinct_choruses_mean": 1.0,
+     "adjacent_by_part": {
+      "Blues": 0.0,
+      "A": 0.0,
+      "B": 0.0
+     },
+     "matrix": [
+      [null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null]
+     ]
+    },
+    "drums_other": {
+     "choruses": 16,
+     "active_share": 0.0,
+     "adjacent": {
+      "exact": null,
+      "graded": null,
+      "pairs": 0
+     },
+     "adjacent_steady": {
+      "exact": null,
+      "graded": null,
+      "pairs": 0
+     },
+     "any_pair": {
+      "exact": null,
+      "p10": null,
+      "p50": null,
+      "p90": null,
+      "pairs": 0
+     },
+     "identical_pairs": null,
+     "distinct_choruses_mean": 1.0,
+     "adjacent_by_part": {},
+     "matrix": [
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+     ]
+    },
+    "melody": {
+     "choruses": 16,
+     "active_share": 0.0,
+     "adjacent": {
+      "exact": null,
+      "graded": null,
+      "pairs": 0
+     },
+     "adjacent_steady": {
+      "exact": null,
+      "graded": null,
+      "pairs": 0
+     },
+     "any_pair": {
+      "exact": null,
+      "p10": null,
+      "p50": null,
+      "p90": null,
+      "pairs": 0
+     },
+     "identical_pairs": null,
+     "distinct_choruses_mean": 1.0,
+     "adjacent_by_part": {},
+     "matrix": [
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+      [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]
+     ]
+    },
+    "orchestration": {
+     "choruses": 16,
+     "active_share": 1.0,
+     "adjacent": {
+      "exact": 0.0,
+      "graded": 0.0,
+      "pairs": 240
+     },
+     "adjacent_steady": {
+      "exact": 0.0,
+      "graded": 0.0,
+      "pairs": 208
+     },
+     "any_pair": {
+      "exact": 0.0,
+      "p10": 0.0,
+      "p50": 0.0,
+      "p90": 0.0,
+      "pairs": 1920
+     },
+     "identical_pairs": 1.0,
+     "distinct_choruses_mean": 1.0,
+     "adjacent_by_part": {
+      "Blues": 0.0,
+      "A": 0.0,
+      "B": 0.0
+     },
+     "matrix": [
+      [null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null, 0.0],
+      [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, null]
+     ]
+    }
+   },
+   "inter": {
+    "all": {
+     "choruses": 16,
+     "distinct_runs": 14,
+     "share": 1.0,
+     "share_active": 1.0,
+     "diversity": 0.2893,
+     "distinct_mean": 5.34,
+     "graded": 0.2193,
+     "by_chorus_share_active": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+     "by_chorus_graded": [0.236, 0.2075, 0.218, 0.223, 0.2377, 0.1877, 0.2133, 0.237, 0.21, 0.1976, 0.2252, 0.202, 0.2319, 0.2145, 0.232, 0.2363]
+    },
+    "chords": {
+     "choruses": 16,
+     "distinct_runs": 1,
+     "share": 0.0,
+     "share_active": 0.0,
+     "diversity": 0.0,
+     "distinct_mean": 1.0,
+     "graded": 0.0,
+     "by_chorus_share_active": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+     "by_chorus_graded": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    "comping_rhythm": {
+     "choruses": 16,
+     "distinct_runs": 2,
+     "share": 0.8038,
+     "share_active": 0.8061,
+     "diversity": 0.0536,
+     "distinct_mean": 1.804,
+     "graded": 0.3602,
+     "by_chorus_share_active": [0.8636, 0.7907, 0.7955, 0.8409, 0.8182, 0.7045, 0.7727, 0.8409, 0.7727, 0.7273, 0.7955, 0.7727, 0.8409, 0.7907, 0.8636, 0.907],
+     "by_chorus_graded": [0.3939, 0.3522, 0.357, 0.3617, 0.3824, 0.3019, 0.3446, 0.3908, 0.3243, 0.3098, 0.3607, 0.3474, 0.3848, 0.3549, 0.3862, 0.411]
+    },
+    "comping_voicing": {
+     "choruses": 16,
+     "distinct_runs": 2,
+     "share": 0.7284,
+     "share_active": 0.7304,
+     "diversity": 0.0486,
+     "distinct_mean": 1.728,
+     "graded": 0.2374,
+     "by_chorus_share_active": [0.75, 0.6744, 0.7273, 0.7727, 0.8182, 0.5682, 0.6818, 0.7727, 0.7273, 0.6364, 0.75, 0.6591, 0.7955, 0.7442, 0.7955, 0.814],
+     "by_chorus_graded": [0.2804, 0.2098, 0.2337, 0.2456, 0.2999, 0.1482, 0.2237, 0.2685, 0.2625, 0.1885, 0.2402, 0.167, 0.2707, 0.2204, 0.272, 0.2666]
+    },
+    "bass": {
+     "choruses": 16,
+     "distinct_runs": 2,
+     "share": 0.9246,
+     "share_active": 0.9246,
+     "diversity": 0.0616,
+     "distinct_mean": 1.925,
+     "graded": 0.3098,
+     "by_chorus_share_active": [0.9773, 0.8409, 0.9091, 0.9773, 0.9318, 0.9091, 0.9545, 0.9318, 0.8636, 0.9318, 1.0, 0.9091, 0.8636, 0.9318, 0.9545, 0.907],
+     "by_chorus_graded": [0.312, 0.2875, 0.3109, 0.318, 0.3143, 0.3009, 0.3073, 0.3334, 0.2727, 0.3011, 0.335, 0.3073, 0.3118, 0.3184, 0.3123, 0.3137]
+    },
+    "drums": {
+     "choruses": 16,
+     "distinct_runs": 11,
+     "share": 1.0,
+     "share_active": 1.0,
+     "diversity": 0.1455,
+     "distinct_mean": 3.182,
+     "graded": 0.1868,
+     "by_chorus_share_active": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+     "by_chorus_graded": [0.1867, 0.1867, 0.1867, 0.1867, 0.1867, 0.1867, 0.1867, 0.1867, 0.1867, 0.1867, 0.1867, 0.1867, 0.1867, 0.1867, 0.1867, 0.1877]
+    },
+    "drums_kick": {
+     "choruses": 16,
+     "distinct_runs": 1,
+     "share": 0.0,
+     "share_active": 0.0,
+     "diversity": 0.0,
+     "distinct_mean": 1.0,
+     "graded": 0.0,
+     "by_chorus_share_active": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+     "by_chorus_graded": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    "drums_snare": {
+     "choruses": 16,
+     "distinct_runs": 1,
+     "share": 0.0,
+     "share_active": 0.0,
+     "diversity": 0.0,
+     "distinct_mean": 1.0,
+     "graded": 0.0,
+     "by_chorus_share_active": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+     "by_chorus_graded": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    "drums_hihat": {
+     "choruses": 16,
+     "distinct_runs": 7,
+     "share": 1.0,
+     "share_active": 1.0,
+     "diversity": 0.0667,
+     "distinct_mean": 2.0,
+     "graded": 0.4864,
+     "by_chorus_share_active": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+     "by_chorus_graded": [0.4864, 0.4864, 0.4864, 0.4864, 0.4864, 0.4864, 0.4864, 0.4864, 0.4864, 0.4864, 0.4864, 0.4864, 0.4864, 0.4864, 0.4864, 0.487]
+    },
+    "drums_ride": {
+     "choruses": 16,
+     "distinct_runs": 6,
+     "share": 1.0,
+     "share_active": 1.0,
+     "diversity": 0.0788,
+     "distinct_mean": 2.182,
+     "graded": 0.0869,
+     "by_chorus_share_active": [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+     "by_chorus_graded": [0.0868, 0.0868, 0.0868, 0.0868, 0.0868, 0.0868, 0.0868, 0.0868, 0.0868, 0.0868, 0.0868, 0.0868, 0.0868, 0.0868, 0.0868, 0.0878]
+    },
+    "drums_other": {
+     "choruses": 16,
+     "distinct_runs": 1,
+     "share": 0.0,
+     "share_active": 0.0,
+     "diversity": 0.0,
+     "distinct_mean": 1.0,
+     "graded": 0.0,
+     "by_chorus_share_active": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+     "by_chorus_graded": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    "melody": {
+     "choruses": 16,
+     "distinct_runs": 1,
+     "share": 0.0,
+     "share_active": 0.0,
+     "diversity": 0.0,
+     "distinct_mean": 1.0,
+     "graded": 0.0,
+     "by_chorus_share_active": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+     "by_chorus_graded": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    },
+    "orchestration": {
+     "choruses": 16,
+     "distinct_runs": 1,
+     "share": 0.0,
+     "share_active": 0.0,
+     "diversity": 0.0,
+     "distinct_mean": 1.0,
+     "graded": 0.0,
+     "by_chorus_share_active": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+     "by_chorus_graded": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    }
+   },
+   "numeric": {
+    "all": {
+     "density": {
+      "trajectory": [19.4148, 19.5852, 20.2557, 19.5625, 19.0057, 20.4318, 19.4659, 19.6307, 19.517, 19.5625, 19.5114, 19.2898, 19.3636, 19.7045, 19.5795, 19.6279],
+      "trajectory_range": 0.0728,
+      "intra": {
+       "adjacent_change": 0.0323,
+       "cv": 0.0275
+      },
+      "inter": {
+       "cv": 0.0355
+      }
+     },
+     "velocity": {
+      "trajectory": [69.8983, 69.8134, 69.5366, 69.9898, 70.3427, 69.3912, 69.9219, 69.9415, 70.0162, 69.8345, 69.988, 70.1219, 70.0537, 69.7519, 69.9613, 69.8102],
+      "trajectory_range": 0.0136,
+      "intra": {
+       "adjacent_change": 0.0057,
+       "cv": 0.0048
+      },
+      "inter": {
+       "cv": 0.0045
+      }
+     }
+    },
+    "comping": {
+     "density": {
+      "trajectory": [8.8239, 8.9943, 9.6648, 8.9716, 8.4148, 9.8409, 8.875, 9.0398, 8.9261, 8.9716, 8.9205, 8.6989, 8.7727, 9.1136, 8.9886, 9.0349],
+      "trajectory_range": 0.1584,
+      "intra": {
+       "adjacent_change": 0.0701,
+       "cv": 0.0596
+      },
+      "inter": {
+       "cv": 0.0403
+      }
+     },
+     "velocity": {
+      "trajectory": [59.7615, 59.7719, 59.89, 60.1329, 60.248, 59.7621, 59.8707, 60.0912, 60.1376, 59.7998, 60.0689, 60.096, 60.0446, 59.7553, 60.0891, 59.7883],
+      "trajectory_range": 0.0082,
+      "intra": {
+       "adjacent_change": 0.0045,
+       "cv": 0.0036
+      },
+      "inter": {
+       "cv": 0.0019
+      }
+     }
+    },
+    "bass": {
+     "density": {
+      "trajectory": [4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0],
+      "trajectory_range": 0.0,
+      "intra": {
+       "adjacent_change": 0.0,
+       "cv": 0.0
+      },
+      "inter": {
+       "cv": 0.0
+      }
+     },
+     "velocity": {
+      "trajectory": [80.3523, 80.3523, 80.3523, 80.3523, 80.3523, 80.3523, 80.3523, 80.3523, 80.3523, 80.3523, 80.3523, 80.3523, 80.3523, 80.3523, 80.3523, 80.3372],
+      "trajectory_range": 0.0002,
+      "intra": {
+       "adjacent_change": 0.0,
+       "cv": 0.0
+      },
+      "inter": {
+       "cv": 0.0
+      }
+     }
+    },
+    "drums": {
+     "density": {
+      "trajectory": [6.5909, 6.5909, 6.5909, 6.5909, 6.5909, 6.5909, 6.5909, 6.5909, 6.5909, 6.5909, 6.5909, 6.5909, 6.5909, 6.5909, 6.5909, 6.593],
+      "trajectory_range": 0.0003,
+      "intra": {
+       "adjacent_change": 0.0001,
+       "cv": 0.0003
+      },
+      "inter": {
+       "cv": 0.0864
+      }
+     },
+     "velocity": {
+      "trajectory": [77.1361, 77.1361, 77.1361, 77.1361, 77.1361, 77.1361, 77.1361, 77.1361, 77.1361, 77.1361, 77.1361, 77.1361, 77.1361, 77.1361, 77.1361, 77.1366],
+      "trajectory_range": 0.0,
+      "intra": {
+       "adjacent_change": 0.0,
+       "cv": 0.0
+      },
+      "inter": {
+       "cv": 0.0025
+      }
+     }
+    },
+    "engine": {
+     "intensity": {
+      "trajectory": [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
+      "trajectory_range": 0.0,
+      "intra": {
+       "adjacent_change": 0.0,
+       "cv": 0.0
+      },
+      "inter": {
+       "cv": 0.0
+      }
+     }
+    }
+   },
+   "orchestration_programs": {
+    "0": [0],
+    "1": [0],
+    "2": [32],
+    "9": [128032]
+   },
+   "profile": "wjazzd_swing",
+   "chorus_requested": 16,
+   "bars": 712,
+   "measure": "V0"
+  }
+ ]
+}
