@@ -187,10 +187,14 @@ class FileRow:
     split: str
 
     @property
-    def group(self) -> str:
-        group = group_of(self.style)
-        assert group is not None
-        return group
+    def group(self) -> str | None:
+        """Groupe E7 du style (`None` hors du sous-ensemble jazz / New Orleans / blues-shuffle)."""
+        return group_of(self.style)
+
+    @property
+    def family(self) -> str:
+        """Famille du style (`latin/brazilian-samba` → `latin`)."""
+        return self.style.split("/", 1)[0]
 
 
 def open_archive(path: Path = ARCHIVE) -> zipfile.ZipFile:
@@ -198,41 +202,47 @@ def open_archive(path: Path = ARCHIVE) -> zipfile.ZipFile:
     return zipfile.ZipFile(open_verified(path, SOURCE_SHA256))
 
 
-def read_info(archive: zipfile.ZipFile) -> list[FileRow]:
-    """Lignes `info.csv` du sous-ensemble : styles jazz*, neworleans*, blues/shuffle, en 4/4."""
+def read_info_rows(archive: zipfile.ZipFile) -> list[dict[str, str]]:
+    """Toutes les lignes brutes d'`info.csv`."""
     with archive.open("groove/info.csv") as raw:
-        rows = list(csv.DictReader(io.TextIOWrapper(raw, encoding="utf-8")))
-    return select_rows(rows)
+        return list(csv.DictReader(io.TextIOWrapper(raw, encoding="utf-8")))
+
+
+def parse_rows(rows: Iterable[dict[str, str]]) -> list[FileRow]:
+    """Lignes d'`info.csv` → `FileRow` (tous styles, toutes métriques), triées par chemin."""
+    return sorted((FileRow(
+        path=row["midi_filename"], drummer=row["drummer"], session=row["session"],
+        ident=row["id"], style=row["style"], bpm=int(row["bpm"]), beat_type=row["beat_type"],
+        time_signature=row["time_signature"], duration=float(row["duration"]), split=row["split"],
+    ) for row in rows), key=lambda r: r.path)
+
+
+def read_info(archive: zipfile.ZipFile) -> list[FileRow]:
+    """Lignes `info.csv` du sous-ensemble E7 : styles jazz*, neworleans*, blues/shuffle, en 4/4."""
+    return select_rows(read_info_rows(archive))
 
 
 def select_rows(rows: Iterable[dict[str, str]]) -> list[FileRow]:
-    """Filtre les lignes d'`info.csv` (4/4 ; styles du sous-ensemble), triées par chemin."""
-    kept = []
-    for row in rows:
-        if group_of(row["style"]) is None or row["time_signature"] != "4-4":
-            continue
-        kept.append(FileRow(
-            path=row["midi_filename"], drummer=row["drummer"], session=row["session"],
-            ident=row["id"], style=row["style"], bpm=int(row["bpm"]), beat_type=row["beat_type"],
-            time_signature=row["time_signature"], duration=float(row["duration"]), split=row["split"],
-        ))
-    return sorted(kept, key=lambda r: r.path)
+    """Filtre les lignes d'`info.csv` du sous-ensemble E7 (4/4 ; styles du sous-ensemble)."""
+    return [r for r in parse_rows(rows) if r.group is not None and r.time_signature == "4-4"]
 
 
 def manifest_rows(rows: Sequence[FileRow]) -> list[dict[str, Any]]:
-    """Une ligne de manifeste par fichier MIDI retenu : faits d'`info.csv`, aucune note."""
+    """Une ligne de manifeste par fichier MIDI : faits d'`info.csv`, aucune note. `group` : groupe
+    du sous-ensemble E7 (`null` hors sous-ensemble) ; `family` : premier élément du style."""
     return [{
         "path": r.path, "id": r.ident, "drummer": r.drummer, "session": r.session,
-        "style": r.style, "group": r.group, "bpm": r.bpm, "beat_type": r.beat_type,
+        "style": r.style, "family": r.family, "group": r.group, "bpm": r.bpm, "beat_type": r.beat_type,
         "time_signature": r.time_signature, "duration": r.duration, "split": r.split,
         "licence": SOURCE_LICENCE,
     } for r in rows]
 
 
 def write_manifest(archive: zipfile.ZipFile) -> list[FileRow]:
-    """Écrit `corpus/gmd/manifest.jsonl` et `VERSION`."""
-    rows = read_info(archive)
-    text = write_jsonl(MANIFEST, manifest_rows(rows))
+    """Écrit `corpus/gmd/manifest.jsonl` (TOUS les fichiers : phase 019, L2) et `VERSION` ; renvoie
+    les lignes du sous-ensemble E7 (jazz*, neworleans*, blues/shuffle en 4/4)."""
+    info = parse_rows(read_info_rows(archive))
+    text = write_jsonl(MANIFEST, manifest_rows(info))
     write_version(VERSION_FILE, {
         "version": SOURCE_VERSION,
         "source": SOURCE_NAME,
@@ -241,10 +251,10 @@ def write_manifest(archive: zipfile.ZipFile) -> list[FileRow]:
         "licence": SOURCE_LICENCE,
         "attribution": ATTRIBUTION,
         "date_source": "2019-05-01",
-        "subset": "styles jazz*, neworleans*, blues/shuffle ; 4/4 ; "
-                  f"{len(rows)} fichiers MIDI (le reste d'info.csv n'est pas retenu)",
+        "subset": f"tous les styles d'info.csv ; {len(info)} fichiers MIDI (4/4, 3/4, 6/8, 5/4, 5/8) ; "
+                  "le champ `group` marque le sous-ensemble E7 (jazz*, neworleans*, blues/shuffle en 4/4)",
     }, text)
-    return rows
+    return select_rows(read_info_rows(archive))
 
 
 # --------------------------------------------------------------------------------------

@@ -1,0 +1,1918 @@
+{
+  "command": "python -m harmonium_lab.backing.gmd_styles --measures",
+  "folders": [
+    "gmd-afrobeat",
+    "gmd-afrocuban",
+    "gmd-afrocuban-bembe",
+    "gmd-blues",
+    "gmd-blues-shuffle",
+    "gmd-country",
+    "gmd-dance",
+    "gmd-dance-disco",
+    "gmd-funk",
+    "gmd-funk-purdieshuffle",
+    "gmd-gospel",
+    "gmd-highlife",
+    "gmd-hiphop",
+    "gmd-jazz",
+    "gmd-jazz-linear",
+    "gmd-jazz-march",
+    "gmd-jazz-swing",
+    "gmd-latin",
+    "gmd-latin-brazilian-baiao",
+    "gmd-latin-brazilian-bossa",
+    "gmd-latin-brazilian-samba",
+    "gmd-latin-brazilian-sambareggae",
+    "gmd-latin-brazilian-songo",
+    "gmd-latin-chacarera",
+    "gmd-latin-samba",
+    "gmd-middleeastern",
+    "gmd-neworleans",
+    "gmd-neworleans-funk",
+    "gmd-neworleans-secondline",
+    "gmd-pop",
+    "gmd-punk",
+    "gmd-reggae",
+    "gmd-rock",
+    "gmd-rock-indie",
+    "gmd-rock-shuffle",
+    "gmd-soul"
+  ],
+  "inventory": [
+    {
+      "beat_type": "beat",
+      "family": "afrobeat",
+      "feels": {
+        "straight": 13
+      },
+      "meters": {
+        "4-4": 13
+      },
+      "minutes": 40.0222,
+      "n_drummers": 2,
+      "n_files": 13,
+      "n_files_with_measures": 13,
+      "n_measures": 982,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "afrobeat"
+    },
+    {
+      "beat_type": "beat",
+      "family": "afrocuban",
+      "feels": {
+        "straight": 1,
+        "ternary": 2
+      },
+      "meters": {
+        "4-4": 3
+      },
+      "minutes": 9.7499,
+      "n_drummers": 2,
+      "n_files": 3,
+      "n_files_with_measures": 3,
+      "n_measures": 276,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "afrocuban"
+    },
+    {
+      "beat_type": "fill",
+      "family": "afrocuban",
+      "feels": {
+        "straight": 1,
+        "ternary": 5
+      },
+      "meters": {
+        "4-4": 6
+      },
+      "minutes": 0.2052,
+      "n_drummers": 1,
+      "n_files": 6,
+      "n_files_with_measures": 6,
+      "n_measures": 6,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "afrocuban"
+    },
+    {
+      "beat_type": "beat",
+      "family": "afrocuban",
+      "feels": {
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 3.4435,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 104,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "afrocuban/bembe"
+    },
+    {
+      "beat_type": "fill",
+      "family": "afrocuban",
+      "feels": {
+        "straight": 1,
+        "ternary": 28
+      },
+      "meters": {
+        "4-4": 29
+      },
+      "minutes": 0.9067,
+      "n_drummers": 1,
+      "n_files": 29,
+      "n_files_with_measures": 29,
+      "n_measures": 29,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "afrocuban/bembe"
+    },
+    {
+      "beat_type": "beat",
+      "family": "afrocuban",
+      "feels": {
+        "straight": 2
+      },
+      "meters": {
+        "4-4": 2
+      },
+      "minutes": 9.869,
+      "n_drummers": 2,
+      "n_files": 2,
+      "n_files_with_measures": 2,
+      "n_measures": 287,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "afrocuban/calypso"
+    },
+    {
+      "beat_type": "beat",
+      "family": "afrocuban",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 3.7798,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 103,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "afrocuban/rhumba"
+    },
+    {
+      "beat_type": "fill",
+      "family": "afrocuban",
+      "feels": {
+        "straight": 18
+      },
+      "meters": {
+        "4-4": 18
+      },
+      "minutes": 0.5873,
+      "n_drummers": 1,
+      "n_files": 18,
+      "n_files_with_measures": 18,
+      "n_measures": 18,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "afrocuban/rhumba"
+    },
+    {
+      "beat_type": "beat",
+      "family": "blues",
+      "feels": {
+        "straight": 1,
+        "swing": 1,
+        "ternary": 2
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 4.8139,
+      "n_drummers": 2,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 90,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "blues/shuffle"
+    },
+    {
+      "beat_type": "beat",
+      "family": "country",
+      "feels": {
+        "straight": 2
+      },
+      "meters": {
+        "4-4": 2
+      },
+      "minutes": 4.9944,
+      "n_drummers": 2,
+      "n_files": 2,
+      "n_files_with_measures": 2,
+      "n_measures": 120,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "country"
+    },
+    {
+      "beat_type": "fill",
+      "family": "country",
+      "feels": {
+        "straight": 27
+      },
+      "meters": {
+        "4-4": 27
+      },
+      "minutes": 1.1057,
+      "n_drummers": 2,
+      "n_files": 27,
+      "n_files_with_measures": 27,
+      "n_measures": 30,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "country"
+    },
+    {
+      "beat_type": "beat",
+      "family": "dance",
+      "feels": {
+        "straight": 2
+      },
+      "meters": {
+        "4-4": 2
+      },
+      "minutes": 2.7477,
+      "n_drummers": 1,
+      "n_files": 2,
+      "n_files_with_measures": 2,
+      "n_measures": 115,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "dance/breakbeat"
+    },
+    {
+      "beat_type": "beat",
+      "family": "dance",
+      "feels": {
+        "straight": 5
+      },
+      "meters": {
+        "4-4": 5
+      },
+      "minutes": 13.712,
+      "n_drummers": 2,
+      "n_files": 5,
+      "n_files_with_measures": 5,
+      "n_measures": 431,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "dance/disco"
+    },
+    {
+      "beat_type": "beat",
+      "family": "funk",
+      "feels": {
+        "straight": 34,
+        "ternary": 2
+      },
+      "meters": {
+        "4-4": 36
+      },
+      "minutes": 80.159,
+      "n_drummers": 4,
+      "n_files": 36,
+      "n_files_with_measures": 36,
+      "n_measures": 1904,
+      "n_rejected": 0,
+      "reliability": "assez",
+      "style": "funk"
+    },
+    {
+      "beat_type": "fill",
+      "family": "funk",
+      "feels": {
+        "straight": 40,
+        "swing": 1
+      },
+      "meters": {
+        "4-4": 41
+      },
+      "minutes": 1.9235,
+      "n_drummers": 2,
+      "n_files": 41,
+      "n_files_with_measures": 40,
+      "n_measures": 52,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "funk"
+    },
+    {
+      "beat_type": "beat",
+      "family": "funk",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 2.2897,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 70,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "funk/fast"
+    },
+    {
+      "beat_type": "fill",
+      "family": "funk",
+      "feels": {
+        "straight": 18
+      },
+      "meters": {
+        "4-4": 18
+      },
+      "minutes": 0.5365,
+      "n_drummers": 1,
+      "n_files": 18,
+      "n_files_with_measures": 18,
+      "n_measures": 18,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "funk/fast"
+    },
+    {
+      "beat_type": "beat",
+      "family": "funk",
+      "feels": {
+        "straight": 4
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 1.8525,
+      "n_drummers": 4,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 64,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "funk/groove1"
+    },
+    {
+      "beat_type": "beat",
+      "family": "funk",
+      "feels": {
+        "straight": 4
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 2.4234,
+      "n_drummers": 4,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 63,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "funk/groove2"
+    },
+    {
+      "beat_type": "beat",
+      "family": "funk",
+      "feels": {
+        "straight": 4
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 3.0426,
+      "n_drummers": 4,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 64,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "funk/groove5"
+    },
+    {
+      "beat_type": "beat",
+      "family": "funk",
+      "feels": {
+        "straight": 2
+      },
+      "meters": {
+        "4-4": 2
+      },
+      "minutes": 5.2832,
+      "n_drummers": 1,
+      "n_files": 2,
+      "n_files_with_measures": 2,
+      "n_measures": 132,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "funk/latin"
+    },
+    {
+      "beat_type": "beat",
+      "family": "funk",
+      "feels": {
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 3.2299,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 104,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "funk/purdieshuffle"
+    },
+    {
+      "beat_type": "fill",
+      "family": "funk",
+      "feels": {
+        "straight": 3,
+        "ternary": 26
+      },
+      "meters": {
+        "4-4": 29
+      },
+      "minutes": 1.0023,
+      "n_drummers": 1,
+      "n_files": 29,
+      "n_files_with_measures": 29,
+      "n_measures": 35,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "funk/purdieshuffle"
+    },
+    {
+      "beat_type": "beat",
+      "family": "funk",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 1.9938,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 44,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "funk/rock"
+    },
+    {
+      "beat_type": "fill",
+      "family": "funk",
+      "feels": {
+        "straight": 19
+      },
+      "meters": {
+        "4-4": 19
+      },
+      "minutes": 0.7624,
+      "n_drummers": 1,
+      "n_files": 19,
+      "n_files_with_measures": 19,
+      "n_measures": 19,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "funk/rock"
+    },
+    {
+      "beat_type": "beat",
+      "family": "gospel",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 2.3255,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 68,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "gospel"
+    },
+    {
+      "beat_type": "fill",
+      "family": "gospel",
+      "feels": {
+        "straight": 18
+      },
+      "meters": {
+        "4-4": 18
+      },
+      "minutes": 0.5506,
+      "n_drummers": 1,
+      "n_files": 18,
+      "n_files_with_measures": 18,
+      "n_measures": 18,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "gospel"
+    },
+    {
+      "beat_type": "beat",
+      "family": "highlife",
+      "feels": {
+        "straight": 2
+      },
+      "meters": {
+        "4-4": 2
+      },
+      "minutes": 4.5602,
+      "n_drummers": 1,
+      "n_files": 2,
+      "n_files_with_measures": 2,
+      "n_measures": 143,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "highlife"
+    },
+    {
+      "beat_type": "beat",
+      "family": "hiphop",
+      "feels": {
+        "straight": 30
+      },
+      "meters": {
+        "4-4": 30
+      },
+      "minutes": 36.8112,
+      "n_drummers": 3,
+      "n_files": 30,
+      "n_files_with_measures": 30,
+      "n_measures": 796,
+      "n_rejected": 0,
+      "reliability": "assez",
+      "style": "hiphop"
+    },
+    {
+      "beat_type": "fill",
+      "family": "hiphop",
+      "feels": {
+        "straight": 50,
+        "swing": 10,
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 61
+      },
+      "minutes": 4.0226,
+      "n_drummers": 1,
+      "n_files": 61,
+      "n_files_with_measures": 59,
+      "n_measures": 83,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "hiphop"
+    },
+    {
+      "beat_type": "beat",
+      "family": "hiphop",
+      "feels": {
+        "straight": 4
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 2.9318,
+      "n_drummers": 4,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 64,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "hiphop/groove6"
+    },
+    {
+      "beat_type": "beat",
+      "family": "jazz",
+      "feels": {
+        "straight": 13,
+        "swing": 3,
+        "ternary": 8
+      },
+      "meters": {
+        "3-4": 2,
+        "4-4": 22
+      },
+      "minutes": 23.0633,
+      "n_drummers": 4,
+      "n_files": 24,
+      "n_files_with_measures": 23,
+      "n_measures": 748,
+      "n_rejected": 0,
+      "reliability": "assez",
+      "style": "jazz"
+    },
+    {
+      "beat_type": "fill",
+      "family": "jazz",
+      "feels": {
+        "straight": 21,
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 22
+      },
+      "minutes": 0.6328,
+      "n_drummers": 1,
+      "n_files": 22,
+      "n_files_with_measures": 22,
+      "n_measures": 22,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "jazz"
+    },
+    {
+      "beat_type": "beat",
+      "family": "jazz",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 1.7508,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 126,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "jazz/fast"
+    },
+    {
+      "beat_type": "beat",
+      "family": "jazz",
+      "feels": {
+        "straight": 1,
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 2
+      },
+      "minutes": 3.8195,
+      "n_drummers": 1,
+      "n_files": 2,
+      "n_files_with_measures": 2,
+      "n_measures": 107,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "jazz/funk"
+    },
+    {
+      "beat_type": "fill",
+      "family": "jazz",
+      "feels": {
+        "straight": 21,
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 22
+      },
+      "minutes": 0.8612,
+      "n_drummers": 1,
+      "n_files": 22,
+      "n_files_with_measures": 22,
+      "n_measures": 28,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "jazz/funk"
+    },
+    {
+      "beat_type": "beat",
+      "family": "jazz",
+      "feels": {
+        "straight": 4
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 2.7031,
+      "n_drummers": 1,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 62,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "jazz/fusion"
+    },
+    {
+      "beat_type": "fill",
+      "family": "jazz",
+      "feels": {
+        "straight": 6,
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 7
+      },
+      "minutes": 0.4731,
+      "n_drummers": 1,
+      "n_files": 7,
+      "n_files_with_measures": 7,
+      "n_measures": 12,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "jazz/fusion"
+    },
+    {
+      "beat_type": "beat",
+      "family": "jazz",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 0.6266,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 23,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "jazz/klezmer"
+    },
+    {
+      "beat_type": "beat",
+      "family": "jazz",
+      "feels": {
+        "swing": 1,
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 2
+      },
+      "minutes": 8.6303,
+      "n_drummers": 1,
+      "n_files": 2,
+      "n_files_with_measures": 2,
+      "n_measures": 334,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "jazz/linear"
+    },
+    {
+      "beat_type": "beat",
+      "family": "jazz",
+      "feels": {
+        "straight": 3
+      },
+      "meters": {
+        "4-4": 3
+      },
+      "minutes": 7.7626,
+      "n_drummers": 1,
+      "n_files": 3,
+      "n_files_with_measures": 3,
+      "n_measures": 236,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "jazz/march"
+    },
+    {
+      "beat_type": "beat",
+      "family": "jazz",
+      "feels": {
+        "swing": 1,
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 2
+      },
+      "minutes": 2.5939,
+      "n_drummers": 1,
+      "n_files": 2,
+      "n_files_with_measures": 2,
+      "n_measures": 115,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "jazz/mediumfast"
+    },
+    {
+      "beat_type": "beat",
+      "family": "jazz",
+      "feels": {
+        "straight": 3,
+        "swing": 6,
+        "ternary": 2
+      },
+      "meters": {
+        "4-4": 11
+      },
+      "minutes": 17.6403,
+      "n_drummers": 2,
+      "n_files": 11,
+      "n_files_with_measures": 11,
+      "n_measures": 698,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "jazz/swing"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 6,
+        "ternary": 2
+      },
+      "meters": {
+        "4-4": 8
+      },
+      "minutes": 22.0045,
+      "n_drummers": 1,
+      "n_files": 8,
+      "n_files_with_measures": 8,
+      "n_measures": 572,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "latin"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "3-4": 1
+      },
+      "minutes": 2.6857,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 111,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "latin/ando"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 3.7042,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 89,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "latin/bomba"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 2
+      },
+      "meters": {
+        "4-4": 2
+      },
+      "minutes": 5.041,
+      "n_drummers": 1,
+      "n_files": 2,
+      "n_files_with_measures": 2,
+      "n_measures": 132,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "latin/bounce"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 3,
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 3.8107,
+      "n_drummers": 2,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 106,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "latin/brazilian"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 3
+      },
+      "meters": {
+        "4-4": 3
+      },
+      "minutes": 7.864,
+      "n_drummers": 2,
+      "n_files": 3,
+      "n_files_with_measures": 3,
+      "n_measures": 200,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "latin/brazilian-baiao"
+    },
+    {
+      "beat_type": "fill",
+      "family": "latin",
+      "feels": {
+        "straight": 29
+      },
+      "meters": {
+        "4-4": 29
+      },
+      "minutes": 1.1233,
+      "n_drummers": 1,
+      "n_files": 29,
+      "n_files_with_measures": 29,
+      "n_measures": 29,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "latin/brazilian-baiao"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 2
+      },
+      "meters": {
+        "4-4": 2
+      },
+      "minutes": 19.8948,
+      "n_drummers": 1,
+      "n_files": 2,
+      "n_files_with_measures": 2,
+      "n_measures": 631,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "latin/brazilian-bossa"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 2.401,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 79,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "latin/brazilian-frevo"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 3
+      },
+      "meters": {
+        "4-4": 3
+      },
+      "minutes": 3.2329,
+      "n_drummers": 1,
+      "n_files": 3,
+      "n_files_with_measures": 3,
+      "n_measures": 85,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "latin/brazilian-ijexa"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 1,
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 2
+      },
+      "minutes": 7.6355,
+      "n_drummers": 1,
+      "n_files": 2,
+      "n_files_with_measures": 2,
+      "n_measures": 182,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "latin/brazilian-maracatu"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 5
+      },
+      "meters": {
+        "4-4": 5
+      },
+      "minutes": 13.9943,
+      "n_drummers": 1,
+      "n_files": 5,
+      "n_files_with_measures": 5,
+      "n_measures": 322,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "latin/brazilian-samba"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 3
+      },
+      "meters": {
+        "4-4": 3
+      },
+      "minutes": 7.5681,
+      "n_drummers": 1,
+      "n_files": 3,
+      "n_files_with_measures": 3,
+      "n_measures": 180,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "latin/brazilian-sambareggae"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 5
+      },
+      "meters": {
+        "4-4": 5
+      },
+      "minutes": 15.3539,
+      "n_drummers": 2,
+      "n_files": 5,
+      "n_files_with_measures": 5,
+      "n_measures": 446,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "latin/brazilian-songo"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 1,
+        "ternary": 2
+      },
+      "meters": {
+        "3-4": 1,
+        "4-4": 2
+      },
+      "minutes": 6.3516,
+      "n_drummers": 1,
+      "n_files": 3,
+      "n_files_with_measures": 3,
+      "n_measures": 241,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "latin/chacarera"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 5.1238,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 166,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "latin/dominican-merengue"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 0.3051,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 12,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "latin/merengue"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 1.4631,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 32,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "latin/reggaeton"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 2
+      },
+      "meters": {
+        "4-4": 2
+      },
+      "minutes": 4.72,
+      "n_drummers": 1,
+      "n_files": 2,
+      "n_files_with_measures": 2,
+      "n_measures": 136,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "latin/samba"
+    },
+    {
+      "beat_type": "fill",
+      "family": "latin",
+      "feels": {
+        "straight": 16,
+        "swing": 1
+      },
+      "meters": {
+        "4-4": 17
+      },
+      "minutes": 0.4892,
+      "n_drummers": 1,
+      "n_files": 17,
+      "n_files_with_measures": 13,
+      "n_measures": 13,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "latin/samba"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "swing": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 2.0997,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 41,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "latin/venezuelan-joropo"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {},
+      "meters": {
+        "5-8": 1
+      },
+      "minutes": 2.7819,
+      "n_drummers": 0,
+      "n_files": 1,
+      "n_files_with_measures": 0,
+      "n_measures": 0,
+      "n_rejected": 1,
+      "reliability": "trop peu",
+      "style": "latin/venezuelan-merengue"
+    },
+    {
+      "beat_type": "beat",
+      "family": "latin",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 1.3463,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 34,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "latin/venezuelan-sangueo"
+    },
+    {
+      "beat_type": "beat",
+      "family": "middleeastern",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 3.7767,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 118,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "middleeastern"
+    },
+    {
+      "beat_type": "beat",
+      "family": "neworleans",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 1.9309,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 59,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "neworleans/chacha"
+    },
+    {
+      "beat_type": "beat",
+      "family": "neworleans",
+      "feels": {
+        "straight": 8
+      },
+      "meters": {
+        "4-4": 8
+      },
+      "minutes": 17.8933,
+      "n_drummers": 4,
+      "n_files": 8,
+      "n_files_with_measures": 8,
+      "n_measures": 396,
+      "n_rejected": 0,
+      "reliability": "assez",
+      "style": "neworleans/funk"
+    },
+    {
+      "beat_type": "fill",
+      "family": "neworleans",
+      "feels": {
+        "straight": 40
+      },
+      "meters": {
+        "4-4": 40
+      },
+      "minutes": 2.4894,
+      "n_drummers": 2,
+      "n_files": 40,
+      "n_files_with_measures": 40,
+      "n_measures": 59,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "neworleans/funk"
+    },
+    {
+      "beat_type": "beat",
+      "family": "neworleans",
+      "feels": {
+        "straight": 3
+      },
+      "meters": {
+        "4-4": 3
+      },
+      "minutes": 8.368,
+      "n_drummers": 2,
+      "n_files": 3,
+      "n_files_with_measures": 3,
+      "n_measures": 212,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "neworleans/secondline"
+    },
+    {
+      "beat_type": "beat",
+      "family": "neworleans",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 2.1797,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 56,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "neworleans/shuffle"
+    },
+    {
+      "beat_type": "beat",
+      "family": "pop",
+      "feels": {
+        "straight": 7,
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 8
+      },
+      "minutes": 5.2229,
+      "n_drummers": 1,
+      "n_files": 8,
+      "n_files_with_measures": 8,
+      "n_measures": 174,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "pop"
+    },
+    {
+      "beat_type": "fill",
+      "family": "pop",
+      "feels": {
+        "straight": 1,
+        "swing": 1
+      },
+      "meters": {
+        "4-4": 2
+      },
+      "minutes": 0.2598,
+      "n_drummers": 1,
+      "n_files": 2,
+      "n_files_with_measures": 2,
+      "n_measures": 9,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "pop"
+    },
+    {
+      "beat_type": "beat",
+      "family": "pop",
+      "feels": {
+        "straight": 4
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 1.8488,
+      "n_drummers": 4,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 64,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "pop/groove7"
+    },
+    {
+      "beat_type": "beat",
+      "family": "pop",
+      "feels": {
+        "straight": 3
+      },
+      "meters": {
+        "4-4": 3
+      },
+      "minutes": 3.5546,
+      "n_drummers": 1,
+      "n_files": 3,
+      "n_files_with_measures": 3,
+      "n_measures": 72,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "pop/soft"
+    },
+    {
+      "beat_type": "fill",
+      "family": "pop",
+      "feels": {
+        "straight": 10
+      },
+      "meters": {
+        "4-4": 10
+      },
+      "minutes": 0.6038,
+      "n_drummers": 1,
+      "n_files": 10,
+      "n_files_with_measures": 9,
+      "n_measures": 12,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "pop/soft"
+    },
+    {
+      "beat_type": "beat",
+      "family": "punk",
+      "feels": {
+        "straight": 6,
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 7
+      },
+      "minutes": 8.0776,
+      "n_drummers": 1,
+      "n_files": 7,
+      "n_files_with_measures": 7,
+      "n_measures": 275,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "punk"
+    },
+    {
+      "beat_type": "fill",
+      "family": "punk",
+      "feels": {
+        "straight": 48,
+        "ternary": 3
+      },
+      "meters": {
+        "4-4": 51
+      },
+      "minutes": 1.4418,
+      "n_drummers": 1,
+      "n_files": 51,
+      "n_files_with_measures": 51,
+      "n_measures": 51,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "punk"
+    },
+    {
+      "beat_type": "beat",
+      "family": "reggae",
+      "feels": {
+        "straight": 2,
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 3
+      },
+      "minutes": 8.4519,
+      "n_drummers": 2,
+      "n_files": 3,
+      "n_files_with_measures": 3,
+      "n_measures": 253,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "reggae"
+    },
+    {
+      "beat_type": "fill",
+      "family": "reggae",
+      "feels": {
+        "straight": 16
+      },
+      "meters": {
+        "4-4": 16
+      },
+      "minutes": 0.7207,
+      "n_drummers": 1,
+      "n_files": 16,
+      "n_files_with_measures": 16,
+      "n_measures": 16,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "reggae"
+    },
+    {
+      "beat_type": "beat",
+      "family": "reggae",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 1.8691,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 29,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "reggae/slow"
+    },
+    {
+      "beat_type": "beat",
+      "family": "rock",
+      "feels": {
+        "straight": 167,
+        "swing": 7,
+        "ternary": 19
+      },
+      "meters": {
+        "3-4": 1,
+        "4-4": 187,
+        "6-8": 5
+      },
+      "minutes": 204.5532,
+      "n_drummers": 9,
+      "n_files": 193,
+      "n_files_with_measures": 186,
+      "n_measures": 5367,
+      "n_rejected": 0,
+      "reliability": "assez",
+      "style": "rock"
+    },
+    {
+      "beat_type": "fill",
+      "family": "rock",
+      "feels": {
+        "straight": 84,
+        "swing": 1,
+        "ternary": 3
+      },
+      "meters": {
+        "4-4": 88
+      },
+      "minutes": 5.3476,
+      "n_drummers": 4,
+      "n_files": 88,
+      "n_files_with_measures": 86,
+      "n_measures": 134,
+      "n_rejected": 0,
+      "reliability": "assez",
+      "style": "rock"
+    },
+    {
+      "beat_type": "beat",
+      "family": "rock",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 4.5259,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 100,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "rock/folk"
+    },
+    {
+      "beat_type": "beat",
+      "family": "rock",
+      "feels": {
+        "straight": 4
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 3.9187,
+      "n_drummers": 4,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 60,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "rock/groove8"
+    },
+    {
+      "beat_type": "beat",
+      "family": "rock",
+      "feels": {
+        "straight": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 3.6108,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 125,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "rock/halftime"
+    },
+    {
+      "beat_type": "fill",
+      "family": "rock",
+      "feels": {
+        "straight": 36
+      },
+      "meters": {
+        "4-4": 36
+      },
+      "minutes": 1.2134,
+      "n_drummers": 1,
+      "n_files": 36,
+      "n_files_with_measures": 32,
+      "n_measures": 41,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "rock/halftime"
+    },
+    {
+      "beat_type": "beat",
+      "family": "rock",
+      "feels": {
+        "straight": 4
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 8.0984,
+      "n_drummers": 2,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 174,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "rock/indie"
+    },
+    {
+      "beat_type": "fill",
+      "family": "rock",
+      "feels": {
+        "straight": 6
+      },
+      "meters": {
+        "4-4": 6
+      },
+      "minutes": 0.3225,
+      "n_drummers": 1,
+      "n_files": 6,
+      "n_files_with_measures": 5,
+      "n_measures": 5,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "rock/indie"
+    },
+    {
+      "beat_type": "beat",
+      "family": "rock",
+      "feels": {
+        "straight": 1,
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 2,
+        "5-4": 1
+      },
+      "minutes": 8.8418,
+      "n_drummers": 1,
+      "n_files": 3,
+      "n_files_with_measures": 2,
+      "n_measures": 226,
+      "n_rejected": 1,
+      "reliability": "trop peu",
+      "style": "rock/prog"
+    },
+    {
+      "beat_type": "beat",
+      "family": "rock",
+      "feels": {
+        "ternary": 1
+      },
+      "meters": {
+        "4-4": 1
+      },
+      "minutes": 5.2198,
+      "n_drummers": 1,
+      "n_files": 1,
+      "n_files_with_measures": 1,
+      "n_measures": 260,
+      "n_rejected": 0,
+      "reliability": "trop peu",
+      "style": "rock/rockabilly"
+    },
+    {
+      "beat_type": "beat",
+      "family": "rock",
+      "feels": {
+        "straight": 1,
+        "swing": 1,
+        "ternary": 2
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 11.1222,
+      "n_drummers": 3,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 296,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "rock/shuffle"
+    },
+    {
+      "beat_type": "beat",
+      "family": "soul",
+      "feels": {
+        "straight": 8
+      },
+      "meters": {
+        "4-4": 8
+      },
+      "minutes": 8.9209,
+      "n_drummers": 2,
+      "n_files": 8,
+      "n_files_with_measures": 8,
+      "n_measures": 221,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "soul"
+    },
+    {
+      "beat_type": "fill",
+      "family": "soul",
+      "feels": {
+        "straight": 23
+      },
+      "meters": {
+        "4-4": 23
+      },
+      "minutes": 1.1267,
+      "n_drummers": 1,
+      "n_files": 23,
+      "n_files_with_measures": 23,
+      "n_measures": 28,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "soul"
+    },
+    {
+      "beat_type": "beat",
+      "family": "soul",
+      "feels": {
+        "straight": 4
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 2.5082,
+      "n_drummers": 4,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 64,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "soul/groove10"
+    },
+    {
+      "beat_type": "beat",
+      "family": "soul",
+      "feels": {
+        "straight": 4
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 2.9768,
+      "n_drummers": 4,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 64,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "soul/groove3"
+    },
+    {
+      "beat_type": "beat",
+      "family": "soul",
+      "feels": {
+        "straight": 4
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 3.1943,
+      "n_drummers": 4,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 64,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "soul/groove4"
+    },
+    {
+      "beat_type": "beat",
+      "family": "soul",
+      "feels": {
+        "straight": 4
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 2.4383,
+      "n_drummers": 4,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 64,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "soul/groove9"
+    },
+    {
+      "beat_type": "beat",
+      "family": "soul",
+      "feels": {
+        "straight": 4
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 4.3837,
+      "n_drummers": 1,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 136,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "soul/motown"
+    },
+    {
+      "beat_type": "fill",
+      "family": "soul",
+      "feels": {
+        "straight": 11,
+        "swing": 1
+      },
+      "meters": {
+        "4-4": 12
+      },
+      "minutes": 0.7153,
+      "n_drummers": 1,
+      "n_files": 12,
+      "n_files_with_measures": 11,
+      "n_measures": 23,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "soul/motown"
+    }
+  ],
+  "provenance": {
+    "attribution": "Gillick, Roberts, Engel, Eck, Bamman, Learning to Groove with Inverse Sequence Transformations, ICML 2019 ; Groove MIDI Dataset v1.0.0, Google LLC, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+    "counts": {
+      "n_files": 1150,
+      "n_files_measured": 1148,
+      "n_files_rejected": 2,
+      "n_hits_unmapped_ignored": 0,
+      "n_measures": 21989
+    },
+    "licence": "CC-BY-4.0",
+    "mention": "Groove MIDI Dataset v1.0.0, CC BY 4.0 (Google LLC) : Gillick, Roberts, Engel, Eck, Bamman, Learning to Groove with Inverse Sequence Transformations, ICML 2019 ; Groove MIDI Dataset v1.0.0, Google LLC, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+    "sha256": "651cbc524ffb891be1a3e46d89dc82a1cecb09a57c748c7b45b844c4841dcc1e",
+    "source": "Groove MIDI Dataset",
+    "url": "https://storage.googleapis.com/magentadata/datasets/groove/groove-v1.0.0-midionly.zip",
+    "version": "v1.0.0 (groove-v1.0.0-midionly.zip)"
+  }
+}

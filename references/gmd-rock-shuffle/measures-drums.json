@@ -1,0 +1,4366 @@
+{
+  "command": "python -m harmonium_lab.backing.gmd_styles --measures",
+  "feel_rules": {
+    "min_evidence": 8,
+    "offbeat_window": [
+      0.45,
+      0.73
+    ],
+    "sixteenth_share": 0.25,
+    "sixteenth_tolerance": 0.07,
+    "swing_cuts": [
+      0.56,
+      0.62
+    ]
+  },
+  "grids": {
+    "straight": "16 pas en 4/4 (4 par pulsation, doubles croches) ; 12 en 3/4 et en 6/8",
+    "swing": "même grille, pas 2 de chaque pulsation retardé au rapport r du fichier (0,56 ≤ r < 0,62)",
+    "ternary": "triolets : 3 pas par pulsation, 12 pas en 4/4, 9 en 3/4 (shuffle, 12/8, swing appuyé r ≥ 0,62)"
+  },
+  "inventory": [
+    {
+      "beat_type": "beat",
+      "family": "rock",
+      "feels": {
+        "straight": 1,
+        "swing": 1,
+        "ternary": 2
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 11.1222,
+      "n_drummers": 3,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 296,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "rock/shuffle"
+    }
+  ],
+  "provenance": {
+    "attribution": "Gillick, Roberts, Engel, Eck, Bamman, Learning to Groove with Inverse Sequence Transformations, ICML 2019 ; Groove MIDI Dataset v1.0.0, Google LLC, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+    "counts": {
+      "n_files": 4,
+      "n_files_measured": 4,
+      "n_files_rejected": 0,
+      "n_hits_unmapped_ignored": 0,
+      "n_measures": 296
+    },
+    "licence": "CC-BY-4.0",
+    "mention": "Groove MIDI Dataset v1.0.0, CC BY 4.0 (Google LLC) : Gillick, Roberts, Engel, Eck, Bamman, Learning to Groove with Inverse Sequence Transformations, ICML 2019 ; Groove MIDI Dataset v1.0.0, Google LLC, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+    "sha256": "651cbc524ffb891be1a3e46d89dc82a1cecb09a57c748c7b45b844c4841dcc1e",
+    "source": "Groove MIDI Dataset",
+    "url": "https://storage.googleapis.com/magentadata/datasets/groove/groove-v1.0.0-midionly.zip",
+    "version": "v1.0.0 (groove-v1.0.0-midionly.zip)"
+  },
+  "reliability_thresholds": {
+    "beat": {
+      "assez": {
+        "drummers": 3,
+        "files": 8,
+        "measures": 200
+      },
+      "juste": {
+        "drummers": 1,
+        "files": 3,
+        "measures": 60
+      }
+    },
+    "fill": {
+      "assez": {
+        "drummers": 3,
+        "files": 30,
+        "measures": 30
+      },
+      "juste": {
+        "drummers": 1,
+        "files": 10,
+        "measures": 10
+      }
+    }
+  },
+  "role_table": {
+    "latin_stand_in": {
+      "ride_bell": {
+        "gm": 53,
+        "latin": "cloche, campana (GM 56 cowbell)"
+      },
+      "sidestick": {
+        "gm": 37,
+        "latin": "clave / bois (GM 75 claves, 76-77 wood blocks)"
+      },
+      "tom_high": {
+        "gm": 50,
+        "latin": "conga / timbale aiguë (GM 63 open hi conga, 65 high timbale)"
+      },
+      "tom_low": {
+        "gm": 43,
+        "latin": "tumbadora grave (GM 64 low conga)"
+      },
+      "tom_mid": {
+        "gm": 47,
+        "latin": "conga médium (GM 62 mute hi conga)"
+      }
+    },
+    "note": "aucune percussion latine dans le GMD ; les stand-ins sont des hypothèses de rendu",
+    "pitches": {
+      "22": {
+        "gm": 42,
+        "roland": "HH Closed (Edge)",
+        "role": "hat_closed"
+      },
+      "26": {
+        "gm": 46,
+        "roland": "HH Open (Edge)",
+        "role": "hat_open"
+      },
+      "36": {
+        "gm": 36,
+        "roland": "Kick",
+        "role": "kick"
+      },
+      "37": {
+        "gm": 37,
+        "roland": "Snare X-Stick",
+        "role": "sidestick"
+      },
+      "38": {
+        "gm": 38,
+        "roland": "Snare (Head)",
+        "role": "snare"
+      },
+      "40": {
+        "gm": 38,
+        "roland": "Snare (Rim)",
+        "role": "snare"
+      },
+      "42": {
+        "gm": 42,
+        "roland": "HH Closed (Bow)",
+        "role": "hat_closed"
+      },
+      "43": {
+        "gm": 43,
+        "roland": "Tom 3 (Head)",
+        "role": "tom_low"
+      },
+      "44": {
+        "gm": 44,
+        "roland": "HH Pedal",
+        "role": "hat_pedal"
+      },
+      "45": {
+        "gm": 47,
+        "roland": "Tom 2",
+        "role": "tom_mid"
+      },
+      "46": {
+        "gm": 46,
+        "roland": "HH Open (Bow)",
+        "role": "hat_open"
+      },
+      "47": {
+        "gm": 47,
+        "roland": "Tom 2 (Rim)",
+        "role": "tom_mid"
+      },
+      "48": {
+        "gm": 50,
+        "roland": "Tom 1",
+        "role": "tom_high"
+      },
+      "49": {
+        "gm": 49,
+        "roland": "Crash 1 (Bow)",
+        "role": "crash"
+      },
+      "50": {
+        "gm": 50,
+        "roland": "Tom 1 (Rim)",
+        "role": "tom_high"
+      },
+      "51": {
+        "gm": 51,
+        "roland": "Ride (Bow)",
+        "role": "ride"
+      },
+      "52": {
+        "gm": 49,
+        "roland": "Crash 2 (Edge)",
+        "role": "crash"
+      },
+      "53": {
+        "gm": 53,
+        "roland": "Ride (Bell)",
+        "role": "ride_bell"
+      },
+      "55": {
+        "gm": 49,
+        "roland": "Crash 1 (Edge)",
+        "role": "crash"
+      },
+      "57": {
+        "gm": 49,
+        "roland": "Crash 2 (Bow)",
+        "role": "crash"
+      },
+      "58": {
+        "gm": 43,
+        "roland": "Tom 3 (Rim)",
+        "role": "tom_low"
+      },
+      "59": {
+        "gm": 51,
+        "roland": "Ride (Edge)",
+        "role": "ride"
+      }
+    },
+    "source": "https://magenta.withgoogle.com/datasets/groove, section « Drum Mapping » (Roland TD-11 → GM), consultée le 2026-11-01"
+  },
+  "scope": "style rock/shuffle",
+  "styles": {
+    "rock/shuffle": {
+      "feel_by_file": {
+        "beat:4-4:straight": 1,
+        "beat:4-4:swing": 1,
+        "beat:4-4:ternary": 2
+      },
+      "groups": {
+        "4-4:straight": {
+          "beat": {
+            "bpm": {
+              "mean": 85.0,
+              "n": 1,
+              "p10": 85.0,
+              "p25": 85.0,
+              "p50": 85.0,
+              "p75": 85.0,
+              "p90": 85.0
+            },
+            "densities": {
+              "hat_open": {
+                "mean": 3.6806,
+                "n": 72,
+                "p10": 1.0,
+                "p25": 2.0,
+                "p50": 3.5,
+                "p75": 5.0,
+                "p90": 6.9,
+                "share_with": 0.9167
+              },
+              "hat_pedal": {
+                "mean": 7.9722,
+                "n": 72,
+                "p10": 8.0,
+                "p25": 8.0,
+                "p50": 8.0,
+                "p75": 8.0,
+                "p90": 8.0,
+                "share_with": 1.0
+              },
+              "kick": {
+                "mean": 5.8611,
+                "n": 72,
+                "p10": 5.0,
+                "p25": 6.0,
+                "p50": 6.0,
+                "p75": 6.0,
+                "p90": 6.9,
+                "share_with": 1.0
+              },
+              "ride": {
+                "mean": 0.0833,
+                "n": 72,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 0.0,
+                "share_with": 0.0833
+              },
+              "snare": {
+                "mean": 15.7778,
+                "n": 72,
+                "p10": 15.0,
+                "p25": 16.0,
+                "p50": 16.0,
+                "p75": 16.0,
+                "p90": 16.0,
+                "share_with": 1.0
+              },
+              "tom_high": {
+                "mean": 0.0556,
+                "n": 72,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 0.0,
+                "share_with": 0.0278
+              },
+              "tom_low": {
+                "mean": 0.0278,
+                "n": 72,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 0.0,
+                "share_with": 0.0139
+              },
+              "tom_mid": {
+                "mean": 0.0278,
+                "n": 72,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 0.0,
+                "share_with": 0.0139
+              }
+            },
+            "gm_notes": {
+              "hat_open": {
+                "46": 265
+              },
+              "hat_pedal": {
+                "44": 574
+              },
+              "kick": {
+                "36": 422
+              },
+              "ride": {
+                "51": 6
+              },
+              "snare": {
+                "38": 1136
+              },
+              "tom_high": {
+                "50": 4
+              },
+              "tom_low": {
+                "43": 2
+              },
+              "tom_mid": {
+                "47": 2
+              }
+            },
+            "grid_fit": {
+              "mean_abs_offset_steps": 0.1772,
+              "n_hits": 2411,
+              "within_quarter_step": 0.7611
+            },
+            "max_file_share": 1.0,
+            "micro_timing": {
+              "hat_open": {
+                "off_beat": {
+                  "ms": {
+                    "mean": 42.5661,
+                    "p10": 0.7353,
+                    "p50": 52.9412,
+                    "p90": 82.3529,
+                    "std": 41.1544
+                  },
+                  "n": 236,
+                  "steps": {
+                    "mean": 0.2412,
+                    "p10": 0.0042,
+                    "p50": 0.3,
+                    "p90": 0.4667,
+                    "std": 0.2332
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -70.4361,
+                    "p10": -86.7647,
+                    "p50": -79.4118,
+                    "p90": -51.4706,
+                    "std": 29.3838
+                  },
+                  "n": 29,
+                  "steps": {
+                    "mean": -0.3991,
+                    "p10": -0.4917,
+                    "p50": -0.45,
+                    "p90": -0.2917,
+                    "std": 0.1665
+                  }
+                }
+              },
+              "hat_pedal": {
+                "off_beat": {
+                  "ms": {
+                    "mean": 14.7569,
+                    "p10": -17.6471,
+                    "p50": 19.1176,
+                    "p90": 41.1765,
+                    "std": 23.608
+                  },
+                  "n": 288,
+                  "steps": {
+                    "mean": 0.0836,
+                    "p10": -0.1,
+                    "p50": 0.1083,
+                    "p90": 0.2333,
+                    "std": 0.1338
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": 14.3768,
+                    "p10": -19.1176,
+                    "p50": 20.5882,
+                    "p90": 42.6471,
+                    "std": 23.6622
+                  },
+                  "n": 286,
+                  "steps": {
+                    "mean": 0.0815,
+                    "p10": -0.1083,
+                    "p50": 0.1167,
+                    "p90": 0.2417,
+                    "std": 0.1341
+                  }
+                }
+              },
+              "kick": {
+                "off_beat": {
+                  "ms": {
+                    "mean": 23.1485,
+                    "p10": -8.8235,
+                    "p50": 25.0,
+                    "p90": 54.4118,
+                    "std": 23.2138
+                  },
+                  "n": 139,
+                  "steps": {
+                    "mean": 0.1312,
+                    "p10": -0.05,
+                    "p50": 0.1417,
+                    "p90": 0.3083,
+                    "std": 0.1315
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": 32.0671,
+                    "p10": 0.0,
+                    "p50": 35.2941,
+                    "p90": 60.2941,
+                    "std": 22.2082
+                  },
+                  "n": 283,
+                  "steps": {
+                    "mean": 0.1817,
+                    "p10": 0.0,
+                    "p50": 0.2,
+                    "p90": 0.3417,
+                    "std": 0.1258
+                  }
+                }
+              },
+              "ride": {
+                "on_beat": {
+                  "ms": {
+                    "mean": 2.2059,
+                    "p10": -13.9706,
+                    "p50": -1.4706,
+                    "p90": 22.0588,
+                    "std": 17.9568
+                  },
+                  "n": 6,
+                  "steps": {
+                    "mean": 0.0125,
+                    "p10": -0.0792,
+                    "p50": -0.0083,
+                    "p90": 0.125,
+                    "std": 0.1018
+                  }
+                }
+              },
+              "snare": {
+                "off_beat": {
+                  "ms": {
+                    "mean": 26.3606,
+                    "p10": -5.8824,
+                    "p50": 29.4118,
+                    "p90": 52.9412,
+                    "std": 22.655
+                  },
+                  "n": 856,
+                  "steps": {
+                    "mean": 0.1494,
+                    "p10": -0.0333,
+                    "p50": 0.1667,
+                    "p90": 0.3,
+                    "std": 0.1284
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": 24.8267,
+                    "p10": -6.0294,
+                    "p50": 29.4118,
+                    "p90": 48.6765,
+                    "std": 21.2422
+                  },
+                  "n": 280,
+                  "steps": {
+                    "mean": 0.1407,
+                    "p10": -0.0342,
+                    "p50": 0.1667,
+                    "p90": 0.2758,
+                    "std": 0.1204
+                  }
+                }
+              }
+            },
+            "minutes": 3.3902,
+            "n_drummers": 1,
+            "n_files": 1,
+            "n_hits": 2411,
+            "n_measures": 72,
+            "per_step": {
+              "hat_open": [
+                [
+                  0,
+                  7,
+                  0.0972,
+                  9.0,
+                  1.125,
+                  -0.4333
+                ],
+                [
+                  1,
+                  23,
+                  0.3194,
+                  9.0,
+                  1.125,
+                  0.325
+                ],
+                [
+                  2,
+                  5,
+                  0.0694,
+                  10.0,
+                  1.25,
+                  -0.4167
+                ],
+                [
+                  3,
+                  24,
+                  0.3333,
+                  8.5,
+                  1.0625,
+                  0.3542
+                ],
+                [
+                  4,
+                  5,
+                  0.0694,
+                  8.0,
+                  1.0,
+                  -0.4333
+                ],
+                [
+                  5,
+                  38,
+                  0.5278,
+                  7.5,
+                  0.9375,
+                  0.2667
+                ],
+                [
+                  6,
+                  5,
+                  0.0694,
+                  8.0,
+                  1.0,
+                  -0.4667
+                ],
+                [
+                  7,
+                  22,
+                  0.3056,
+                  8.0,
+                  1.0,
+                  0.3708
+                ],
+                [
+                  8,
+                  7,
+                  0.0972,
+                  8.0,
+                  1.0,
+                  -0.4667
+                ],
+                [
+                  9,
+                  25,
+                  0.3472,
+                  8.0,
+                  1.0,
+                  0.3083
+                ],
+                [
+                  10,
+                  4,
+                  0.0556,
+                  8.5,
+                  1.0625,
+                  -0.4542
+                ],
+                [
+                  11,
+                  25,
+                  0.3472,
+                  7.0,
+                  0.875,
+                  0.3417
+                ],
+                [
+                  12,
+                  10,
+                  0.1389,
+                  9.0,
+                  1.125,
+                  -0.4625
+                ],
+                [
+                  13,
+                  32,
+                  0.4444,
+                  8.0,
+                  1.0,
+                  0.2833
+                ],
+                [
+                  14,
+                  7,
+                  0.0972,
+                  7.0,
+                  0.875,
+                  -0.4333
+                ],
+                [
+                  15,
+                  26,
+                  0.3611,
+                  9.0,
+                  1.125,
+                  0.3125
+                ]
+              ],
+              "hat_pedal": [
+                [
+                  0,
+                  71,
+                  0.9861,
+                  35.0,
+                  0.8537,
+                  0.1333
+                ],
+                [
+                  2,
+                  72,
+                  1.0,
+                  41.0,
+                  1.0,
+                  0.1292
+                ],
+                [
+                  4,
+                  72,
+                  1.0,
+                  35.0,
+                  0.8537,
+                  0.1083
+                ],
+                [
+                  6,
+                  72,
+                  1.0,
+                  54.0,
+                  1.3171,
+                  0.1125
+                ],
+                [
+                  8,
+                  72,
+                  1.0,
+                  35.0,
+                  0.8537,
+                  0.1042
+                ],
+                [
+                  10,
+                  72,
+                  1.0,
+                  48.0,
+                  1.1707,
+                  0.0917
+                ],
+                [
+                  12,
+                  71,
+                  0.9861,
+                  41.0,
+                  1.0,
+                  0.1083
+                ],
+                [
+                  13,
+                  1,
+                  0.0139,
+                  35.0,
+                  0.8537,
+                  -0.0917
+                ],
+                [
+                  14,
+                  71,
+                  0.9861,
+                  48.0,
+                  1.1707,
+                  0.1083
+                ]
+              ],
+              "kick": [
+                [
+                  0,
+                  72,
+                  1.0,
+                  57.0,
+                  1.2128,
+                  0.1833
+                ],
+                [
+                  1,
+                  5,
+                  0.0694,
+                  39.0,
+                  0.8298,
+                  0.3083
+                ],
+                [
+                  3,
+                  1,
+                  0.0139,
+                  42.0,
+                  0.8936,
+                  0.1083
+                ],
+                [
+                  4,
+                  71,
+                  0.9861,
+                  48.0,
+                  1.0213,
+                  0.225
+                ],
+                [
+                  5,
+                  61,
+                  0.8472,
+                  42.0,
+                  0.8936,
+                  0.125
+                ],
+                [
+                  8,
+                  71,
+                  0.9861,
+                  57.0,
+                  1.2128,
+                  0.1917
+                ],
+                [
+                  9,
+                  3,
+                  0.0417,
+                  41.0,
+                  0.8723,
+                  0.3
+                ],
+                [
+                  11,
+                  4,
+                  0.0556,
+                  62.5,
+                  1.3298,
+                  0.2583
+                ],
+                [
+                  12,
+                  69,
+                  0.9583,
+                  47.0,
+                  1.0,
+                  0.1917
+                ],
+                [
+                  13,
+                  59,
+                  0.8194,
+                  41.0,
+                  0.8723,
+                  0.1333
+                ],
+                [
+                  15,
+                  6,
+                  0.0833,
+                  42.0,
+                  0.8936,
+                  0.0875
+                ]
+              ],
+              "ride": [
+                [
+                  0,
+                  6,
+                  0.0833,
+                  86.5,
+                  1.0,
+                  -0.0083
+                ]
+              ],
+              "snare": [
+                [
+                  0,
+                  65,
+                  0.9028,
+                  37.0,
+                  1.0,
+                  0.1917
+                ],
+                [
+                  1,
+                  71,
+                  0.9861,
+                  28.0,
+                  0.7568,
+                  0.1833
+                ],
+                [
+                  2,
+                  72,
+                  1.0,
+                  53.0,
+                  1.4324,
+                  0.1708
+                ],
+                [
+                  3,
+                  72,
+                  1.0,
+                  27.0,
+                  0.7297,
+                  0.175
+                ],
+                [
+                  4,
+                  72,
+                  1.0,
+                  37.5,
+                  1.0135,
+                  0.1458
+                ],
+                [
+                  5,
+                  72,
+                  1.0,
+                  26.0,
+                  0.7027,
+                  0.15
+                ],
+                [
+                  6,
+                  72,
+                  1.0,
+                  49.0,
+                  1.3243,
+                  0.1417
+                ],
+                [
+                  7,
+                  72,
+                  1.0,
+                  44.0,
+                  1.1892,
+                  0.175
+                ],
+                [
+                  8,
+                  72,
+                  1.0,
+                  36.0,
+                  0.973,
+                  0.175
+                ],
+                [
+                  9,
+                  71,
+                  0.9861,
+                  28.0,
+                  0.7568,
+                  0.1833
+                ],
+                [
+                  10,
+                  71,
+                  0.9861,
+                  54.0,
+                  1.4595,
+                  0.1667
+                ],
+                [
+                  11,
+                  72,
+                  1.0,
+                  27.0,
+                  0.7297,
+                  0.1875
+                ],
+                [
+                  12,
+                  71,
+                  0.9861,
+                  37.0,
+                  1.0,
+                  0.15
+                ],
+                [
+                  13,
+                  70,
+                  0.9722,
+                  27.0,
+                  0.7297,
+                  0.1583
+                ],
+                [
+                  14,
+                  70,
+                  0.9722,
+                  49.0,
+                  1.3243,
+                  0.1625
+                ],
+                [
+                  15,
+                  71,
+                  0.9861,
+                  43.0,
+                  1.1622,
+                  0.1833
+                ]
+              ],
+              "tom_high": [
+                [
+                  9,
+                  1,
+                  0.0139,
+                  72.0,
+                  1.1901,
+                  0.1
+                ],
+                [
+                  12,
+                  1,
+                  0.0139,
+                  50.0,
+                  0.8264,
+                  0.1
+                ],
+                [
+                  13,
+                  2,
+                  0.0278,
+                  60.5,
+                  1.0,
+                  0.0708
+                ]
+              ],
+              "tom_low": [
+                [
+                  10,
+                  1,
+                  0.0139,
+                  46.0,
+                  0.9892,
+                  0.1167
+                ],
+                [
+                  14,
+                  1,
+                  0.0139,
+                  47.0,
+                  1.0108,
+                  0.025
+                ]
+              ],
+              "tom_mid": [
+                [
+                  14,
+                  1,
+                  0.0139,
+                  53.0,
+                  1.0495,
+                  0.1167
+                ],
+                [
+                  15,
+                  1,
+                  0.0139,
+                  48.0,
+                  0.9505,
+                  0.0917
+                ]
+              ]
+            },
+            "per_step_columns": [
+              "step",
+              "n",
+              "prob",
+              "velocity_p50",
+              "rel_velocity_p50",
+              "offset_p50_steps"
+            ],
+            "reliability": "trop peu",
+            "steps_per_bar": 16,
+            "swing_ratio": {
+              "mean": 0.5,
+              "n": 1,
+              "p10": 0.5,
+              "p25": 0.5,
+              "p50": 0.5,
+              "p75": 0.5,
+              "p90": 0.5
+            },
+            "timekeeper": {
+              "figures": {
+                "eighths": {
+                  "n": 0,
+                  "share": 0.0
+                },
+                "none": {
+                  "n": 4,
+                  "share": 0.0556
+                },
+                "other": {
+                  "n": 0,
+                  "share": 0.0
+                },
+                "quarters": {
+                  "n": 0,
+                  "share": 0.0
+                },
+                "quarters_plus": {
+                  "n": 1,
+                  "share": 0.0139
+                },
+                "sixteenths": {
+                  "n": 0,
+                  "share": 0.0
+                },
+                "spang": {
+                  "n": 0,
+                  "share": 0.0
+                },
+                "sparse": {
+                  "n": 67,
+                  "share": 0.9306
+                }
+              },
+              "roles": {
+                "hat_open": {
+                  "n": 65,
+                  "share": 0.9028
+                },
+                "none": {
+                  "n": 4,
+                  "share": 0.0556
+                },
+                "ride": {
+                  "n": 3,
+                  "share": 0.0417
+                }
+              }
+            },
+            "top_patterns": {
+              "kick_snare": []
+            },
+            "velocity_median_by_role": {
+              "hat_open": 8.0,
+              "hat_pedal": 41.0,
+              "kick": 47.0,
+              "ride": 86.5,
+              "snare": 37.0,
+              "tom_high": 60.5,
+              "tom_low": 46.5,
+              "tom_mid": 50.5
+            }
+          },
+          "feel": "straight",
+          "fill_position": {
+            "n_files": 0
+          },
+          "meter": "4-4",
+          "proposed_patterns": {
+            "construction": "chaque coup = (rôle, pas) dont la probabilité par pas dans le groupe atteint le seuil de la densité ; jamais une mesure d'un enregistrement",
+            "patterns": [],
+            "skipped": [
+              {
+                "group": "hat_open:quarters_plus",
+                "n_files": 1,
+                "n_measures": 1,
+                "reason": "< 20 mesures, < 3 fichiers ou un fichier > 60% du groupe"
+              }
+            ],
+            "thresholds": {
+              "0": {
+                "timekeeper": 0.5
+              },
+              "1": {
+                "hat_pedal": 0.5,
+                "kick": 0.5,
+                "sidestick": 0.5,
+                "snare": 0.5,
+                "timekeeper": 0.5
+              },
+              "2": {
+                "hat_pedal": 0.5,
+                "kick": 0.25,
+                "sidestick": 0.25,
+                "snare": 0.25,
+                "timekeeper": 0.5
+              }
+            }
+          }
+        },
+        "4-4:swing": {
+          "beat": {
+            "bpm": {
+              "mean": 112.0,
+              "n": 1,
+              "p10": 112.0,
+              "p25": 112.0,
+              "p50": 112.0,
+              "p75": 112.0,
+              "p90": 112.0
+            },
+            "densities": {
+              "crash": {
+                "mean": 0.7639,
+                "n": 72,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 2.8,
+                "share_with": 0.2083
+              },
+              "hat_closed": {
+                "mean": 2.4861,
+                "n": 72,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 4.0,
+                "p75": 5.0,
+                "p90": 5.0,
+                "share_with": 0.5556
+              },
+              "hat_open": {
+                "mean": 1.2222,
+                "n": 72,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 1.0,
+                "p75": 2.0,
+                "p90": 3.0,
+                "share_with": 0.5417
+              },
+              "hat_pedal": {
+                "mean": 1.25,
+                "n": 72,
+                "p10": 0.1,
+                "p25": 1.0,
+                "p50": 1.0,
+                "p75": 2.0,
+                "p90": 2.0,
+                "share_with": 0.8889
+              },
+              "kick": {
+                "mean": 4.0139,
+                "n": 72,
+                "p10": 4.0,
+                "p25": 4.0,
+                "p50": 4.0,
+                "p75": 4.0,
+                "p90": 4.0,
+                "share_with": 1.0
+              },
+              "ride": {
+                "mean": 1.5278,
+                "n": 72,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.25,
+                "p90": 7.0,
+                "share_with": 0.25
+              },
+              "ride_bell": {
+                "mean": 0.0417,
+                "n": 72,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 0.0,
+                "share_with": 0.0417
+              },
+              "sidestick": {
+                "mean": 0.1389,
+                "n": 72,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 1.0,
+                "share_with": 0.125
+              },
+              "snare": {
+                "mean": 3.0556,
+                "n": 72,
+                "p10": 2.0,
+                "p25": 2.0,
+                "p50": 3.0,
+                "p75": 4.0,
+                "p90": 4.0,
+                "share_with": 1.0
+              },
+              "tom_high": {
+                "mean": 0.2083,
+                "n": 72,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 1.0,
+                "share_with": 0.1944
+              },
+              "tom_low": {
+                "mean": 0.9444,
+                "n": 72,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 5.9,
+                "share_with": 0.2222
+              },
+              "tom_mid": {
+                "mean": 0.1806,
+                "n": 72,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 1.0,
+                "share_with": 0.1528
+              }
+            },
+            "gm_notes": {
+              "crash": {
+                "49": 55
+              },
+              "hat_closed": {
+                "42": 179
+              },
+              "hat_open": {
+                "46": 88
+              },
+              "hat_pedal": {
+                "44": 90
+              },
+              "kick": {
+                "36": 289
+              },
+              "ride": {
+                "51": 110
+              },
+              "ride_bell": {
+                "53": 3
+              },
+              "sidestick": {
+                "37": 10
+              },
+              "snare": {
+                "38": 220
+              },
+              "tom_high": {
+                "50": 15
+              },
+              "tom_low": {
+                "43": 68
+              },
+              "tom_mid": {
+                "47": 13
+              }
+            },
+            "grid_fit": {
+              "mean_abs_offset_steps": 0.1433,
+              "n_hits": 1140,
+              "within_quarter_step": 0.8298
+            },
+            "max_file_share": 1.0,
+            "micro_timing": {
+              "crash": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -11.2622,
+                    "p10": -30.7478,
+                    "p50": -12.8348,
+                    "p90": 13.2812,
+                    "std": 15.8327
+                  },
+                  "n": 33,
+                  "steps": {
+                    "mean": -0.0841,
+                    "p10": -0.2296,
+                    "p50": -0.0958,
+                    "p90": 0.0992,
+                    "std": 0.1182
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -8.6242,
+                    "p10": -27.567,
+                    "p50": -6.6964,
+                    "p90": 7.5893,
+                    "std": 14.5973
+                  },
+                  "n": 22,
+                  "steps": {
+                    "mean": -0.0644,
+                    "p10": -0.2058,
+                    "p50": -0.05,
+                    "p90": 0.0567,
+                    "std": 0.109
+                  }
+                }
+              },
+              "hat_closed": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -5.0527,
+                    "p10": -21.7634,
+                    "p50": -5.3013,
+                    "p90": 13.6719,
+                    "std": 14.0418
+                  },
+                  "n": 147,
+                  "steps": {
+                    "mean": -0.0377,
+                    "p10": -0.1625,
+                    "p50": -0.0396,
+                    "p90": 0.1021,
+                    "std": 0.1048
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": 12.207,
+                    "p10": -11.1607,
+                    "p50": 12.8348,
+                    "p90": 40.4018,
+                    "std": 19.2182
+                  },
+                  "n": 32,
+                  "steps": {
+                    "mean": 0.0911,
+                    "p10": -0.0833,
+                    "p50": 0.0958,
+                    "p90": 0.3017,
+                    "std": 0.1435
+                  }
+                }
+              },
+              "hat_open": {
+                "off_beat": {
+                  "ms": {
+                    "mean": 4.1064,
+                    "p10": -15.7645,
+                    "p50": 1.6741,
+                    "p90": 28.4598,
+                    "std": 18.481
+                  },
+                  "n": 46,
+                  "steps": {
+                    "mean": 0.0307,
+                    "p10": -0.1177,
+                    "p50": 0.0125,
+                    "p90": 0.2125,
+                    "std": 0.138
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -7.5468,
+                    "p10": -24.5536,
+                    "p50": -9.4866,
+                    "p90": 9.933,
+                    "std": 14.8939
+                  },
+                  "n": 42,
+                  "steps": {
+                    "mean": -0.0563,
+                    "p10": -0.1833,
+                    "p50": -0.0708,
+                    "p90": 0.0742,
+                    "std": 0.1112
+                  }
+                }
+              },
+              "hat_pedal": {
+                "off_beat": {
+                  "ms": {
+                    "mean": 40.5889,
+                    "p10": 31.0826,
+                    "p50": 43.8058,
+                    "p90": 48.2701,
+                    "std": 9.8954
+                  },
+                  "n": 17,
+                  "steps": {
+                    "mean": 0.3031,
+                    "p10": 0.2321,
+                    "p50": 0.3271,
+                    "p90": 0.3604,
+                    "std": 0.0739
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -23.9573,
+                    "p10": -43.3036,
+                    "p50": -26.7857,
+                    "p90": -3.5714,
+                    "std": 18.0202
+                  },
+                  "n": 73,
+                  "steps": {
+                    "mean": -0.1789,
+                    "p10": -0.3233,
+                    "p50": -0.2,
+                    "p90": -0.0267,
+                    "std": 0.1346
+                  }
+                }
+              },
+              "kick": {
+                "off_beat": {
+                  "ms": {
+                    "mean": 35.3132,
+                    "p10": 8.231,
+                    "p50": 39.8996,
+                    "p90": 49.3862,
+                    "std": 16.9668
+                  },
+                  "n": 16,
+                  "steps": {
+                    "mean": 0.2637,
+                    "p10": 0.0615,
+                    "p50": 0.2979,
+                    "p90": 0.3687,
+                    "std": 0.1267
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -14.0592,
+                    "p10": -37.9464,
+                    "p50": -14.5089,
+                    "p90": 14.2857,
+                    "std": 19.1423
+                  },
+                  "n": 273,
+                  "steps": {
+                    "mean": -0.105,
+                    "p10": -0.2833,
+                    "p50": -0.1083,
+                    "p90": 0.1067,
+                    "std": 0.1429
+                  }
+                }
+              },
+              "ride": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -2.9129,
+                    "p10": -33.4263,
+                    "p50": -3.0692,
+                    "p90": 24.3304,
+                    "std": 24.5679
+                  },
+                  "n": 75,
+                  "steps": {
+                    "mean": -0.0218,
+                    "p10": -0.2496,
+                    "p50": -0.0229,
+                    "p90": 0.1817,
+                    "std": 0.1834
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -8.1314,
+                    "p10": -37.2768,
+                    "p50": -16.7411,
+                    "p90": 29.6875,
+                    "std": 28.5322
+                  },
+                  "n": 35,
+                  "steps": {
+                    "mean": -0.0607,
+                    "p10": -0.2783,
+                    "p50": -0.125,
+                    "p90": 0.2217,
+                    "std": 0.213
+                  }
+                }
+              },
+              "sidestick": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -4.8629,
+                    "p10": -16.8527,
+                    "p50": -9.7656,
+                    "p90": 9.5982,
+                    "std": 13.08
+                  },
+                  "n": 7,
+                  "steps": {
+                    "mean": -0.0363,
+                    "p10": -0.1258,
+                    "p50": -0.0729,
+                    "p90": 0.0717,
+                    "std": 0.0977
+                  }
+                }
+              },
+              "snare": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -1.2166,
+                    "p10": -28.4598,
+                    "p50": -0.558,
+                    "p90": 22.8795,
+                    "std": 23.7648
+                  },
+                  "n": 111,
+                  "steps": {
+                    "mean": -0.0091,
+                    "p10": -0.2125,
+                    "p50": -0.0042,
+                    "p90": 0.1708,
+                    "std": 0.1774
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -14.1198,
+                    "p10": -37.0536,
+                    "p50": -13.3929,
+                    "p90": 8.9286,
+                    "std": 17.2061
+                  },
+                  "n": 109,
+                  "steps": {
+                    "mean": -0.1054,
+                    "p10": -0.2767,
+                    "p50": -0.1,
+                    "p90": 0.0667,
+                    "std": 0.1285
+                  }
+                }
+              },
+              "tom_high": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -22.9632,
+                    "p10": -38.7277,
+                    "p50": -25.6696,
+                    "p90": -2.1484,
+                    "std": 18.2865
+                  },
+                  "n": 10,
+                  "steps": {
+                    "mean": -0.1715,
+                    "p10": -0.2892,
+                    "p50": -0.1917,
+                    "p90": -0.016,
+                    "std": 0.1365
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -27.4554,
+                    "p10": -37.9464,
+                    "p50": -26.7857,
+                    "p90": -17.4107,
+                    "std": 10.0941
+                  },
+                  "n": 5,
+                  "steps": {
+                    "mean": -0.205,
+                    "p10": -0.2833,
+                    "p50": -0.2,
+                    "p90": -0.13,
+                    "std": 0.0754
+                  }
+                }
+              },
+              "tom_low": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -19.0153,
+                    "p10": -43.6942,
+                    "p50": -19.5312,
+                    "p90": 5.692,
+                    "std": 21.1168
+                  },
+                  "n": 53,
+                  "steps": {
+                    "mean": -0.142,
+                    "p10": -0.3263,
+                    "p50": -0.1458,
+                    "p90": 0.0425,
+                    "std": 0.1577
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -24.8512,
+                    "p10": -45.5357,
+                    "p50": -23.4375,
+                    "p90": -3.125,
+                    "std": 16.653
+                  },
+                  "n": 15,
+                  "steps": {
+                    "mean": -0.1856,
+                    "p10": -0.34,
+                    "p50": -0.175,
+                    "p90": -0.0233,
+                    "std": 0.1243
+                  }
+                }
+              },
+              "tom_mid": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -15.1068,
+                    "p10": -51.7299,
+                    "p50": -6.4174,
+                    "p90": 21.4286,
+                    "std": 37.0476
+                  },
+                  "n": 7,
+                  "steps": {
+                    "mean": -0.1128,
+                    "p10": -0.3863,
+                    "p50": -0.0479,
+                    "p90": 0.16,
+                    "std": 0.2766
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -11.7188,
+                    "p10": -31.25,
+                    "p50": -9.4866,
+                    "p90": 5.5804,
+                    "std": 17.4728
+                  },
+                  "n": 6,
+                  "steps": {
+                    "mean": -0.0875,
+                    "p10": -0.2333,
+                    "p50": -0.0708,
+                    "p90": 0.0417,
+                    "std": 0.1305
+                  }
+                }
+              }
+            },
+            "minutes": 2.5716,
+            "n_drummers": 1,
+            "n_files": 1,
+            "n_hits": 1140,
+            "n_measures": 72,
+            "per_step": {
+              "crash": [
+                [
+                  0,
+                  14,
+                  0.1944,
+                  97.0,
+                  1.2436,
+                  -0.0458
+                ],
+                [
+                  1,
+                  1,
+                  0.0139,
+                  97.0,
+                  1.2436,
+                  -0.1479
+                ],
+                [
+                  2,
+                  7,
+                  0.0972,
+                  62.0,
+                  0.7949,
+                  -0.0625
+                ],
+                [
+                  4,
+                  1,
+                  0.0139,
+                  74.0,
+                  0.9487,
+                  -0.1333
+                ],
+                [
+                  5,
+                  7,
+                  0.0972,
+                  54.0,
+                  0.6923,
+                  -0.1063
+                ],
+                [
+                  6,
+                  7,
+                  0.0972,
+                  84.0,
+                  1.0769,
+                  -0.0792
+                ],
+                [
+                  8,
+                  1,
+                  0.0139,
+                  6.0,
+                  0.0769,
+                  0.0583
+                ],
+                [
+                  9,
+                  6,
+                  0.0833,
+                  70.0,
+                  0.8974,
+                  -0.2104
+                ],
+                [
+                  12,
+                  6,
+                  0.0833,
+                  89.5,
+                  1.1474,
+                  -0.1167
+                ],
+                [
+                  14,
+                  5,
+                  0.0694,
+                  78.0,
+                  1.0,
+                  0.0125
+                ]
+              ],
+              "hat_closed": [
+                [
+                  0,
+                  28,
+                  0.3889,
+                  127.0,
+                  1.0325,
+                  0.1
+                ],
+                [
+                  2,
+                  39,
+                  0.5417,
+                  123.0,
+                  1.0,
+                  -0.0125
+                ],
+                [
+                  5,
+                  40,
+                  0.5556,
+                  78.5,
+                  0.6382,
+                  -0.0896
+                ],
+                [
+                  6,
+                  40,
+                  0.5556,
+                  127.0,
+                  1.0325,
+                  -0.0042
+                ],
+                [
+                  8,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0325,
+                  -0.1333
+                ],
+                [
+                  9,
+                  28,
+                  0.3889,
+                  116.0,
+                  0.9431,
+                  -0.0521
+                ],
+                [
+                  12,
+                  3,
+                  0.0417,
+                  127.0,
+                  1.0325,
+                  0.075
+                ]
+              ],
+              "hat_open": [
+                [
+                  0,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  -0.1417
+                ],
+                [
+                  2,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  -0.2292
+                ],
+                [
+                  8,
+                  7,
+                  0.0972,
+                  127.0,
+                  1.0,
+                  -0.1167
+                ],
+                [
+                  9,
+                  3,
+                  0.0417,
+                  127.0,
+                  1.0,
+                  -0.0146
+                ],
+                [
+                  10,
+                  8,
+                  0.1111,
+                  127.0,
+                  1.0,
+                  -0.0333
+                ],
+                [
+                  12,
+                  34,
+                  0.4722,
+                  127.0,
+                  1.0,
+                  -0.0625
+                ],
+                [
+                  13,
+                  3,
+                  0.0417,
+                  127.0,
+                  1.0,
+                  -0.0063
+                ],
+                [
+                  14,
+                  30,
+                  0.4167,
+                  127.0,
+                  1.0,
+                  0.0417
+                ],
+                [
+                  15,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  -0.3729
+                ]
+              ],
+              "hat_pedal": [
+                [
+                  0,
+                  44,
+                  0.6111,
+                  52.0,
+                  0.9455,
+                  -0.1875
+                ],
+                [
+                  3,
+                  6,
+                  0.0833,
+                  60.0,
+                  1.0909,
+                  0.3354
+                ],
+                [
+                  4,
+                  15,
+                  0.2083,
+                  62.0,
+                  1.1273,
+                  -0.225
+                ],
+                [
+                  7,
+                  1,
+                  0.0139,
+                  55.0,
+                  1.0,
+                  0.3604
+                ],
+                [
+                  8,
+                  6,
+                  0.0833,
+                  56.0,
+                  1.0182,
+                  -0.2458
+                ],
+                [
+                  11,
+                  1,
+                  0.0139,
+                  85.0,
+                  1.5455,
+                  0.3104
+                ],
+                [
+                  12,
+                  8,
+                  0.1111,
+                  71.0,
+                  1.2909,
+                  -0.1833
+                ],
+                [
+                  15,
+                  9,
+                  0.125,
+                  45.0,
+                  0.8182,
+                  0.2854
+                ]
+              ],
+              "kick": [
+                [
+                  0,
+                  69,
+                  0.9583,
+                  108.0,
+                  1.1739,
+                  -0.0667
+                ],
+                [
+                  3,
+                  5,
+                  0.0694,
+                  98.0,
+                  1.0652,
+                  0.3354
+                ],
+                [
+                  4,
+                  67,
+                  0.9306,
+                  75.0,
+                  0.8152,
+                  -0.15
+                ],
+                [
+                  7,
+                  3,
+                  0.0417,
+                  100.0,
+                  1.087,
+                  0.3354
+                ],
+                [
+                  8,
+                  69,
+                  0.9583,
+                  89.0,
+                  0.9674,
+                  -0.1083
+                ],
+                [
+                  10,
+                  1,
+                  0.0139,
+                  87.0,
+                  0.9457,
+                  -0.0208
+                ],
+                [
+                  11,
+                  3,
+                  0.0417,
+                  117.0,
+                  1.2717,
+                  0.2771
+                ],
+                [
+                  12,
+                  68,
+                  0.9444,
+                  105.5,
+                  1.1467,
+                  -0.1375
+                ],
+                [
+                  13,
+                  1,
+                  0.0139,
+                  21.0,
+                  0.2283,
+                  -0.0229
+                ],
+                [
+                  15,
+                  3,
+                  0.0417,
+                  120.0,
+                  1.3043,
+                  0.2937
+                ]
+              ],
+              "ride": [
+                [
+                  0,
+                  17,
+                  0.2361,
+                  84.0,
+                  1.1831,
+                  -0.125
+                ],
+                [
+                  1,
+                  2,
+                  0.0278,
+                  4.0,
+                  0.0563,
+                  0.4854
+                ],
+                [
+                  2,
+                  16,
+                  0.2222,
+                  70.5,
+                  0.993,
+                  0.0125
+                ],
+                [
+                  5,
+                  16,
+                  0.2222,
+                  59.5,
+                  0.838,
+                  -0.0521
+                ],
+                [
+                  6,
+                  14,
+                  0.1944,
+                  75.0,
+                  1.0563,
+                  0.0292
+                ],
+                [
+                  7,
+                  1,
+                  0.0139,
+                  5.0,
+                  0.0704,
+                  0.2521
+                ],
+                [
+                  8,
+                  7,
+                  0.0972,
+                  5.0,
+                  0.0704,
+                  -0.0167
+                ],
+                [
+                  9,
+                  13,
+                  0.1806,
+                  88.0,
+                  1.2394,
+                  -0.1063
+                ],
+                [
+                  10,
+                  1,
+                  0.0139,
+                  4.0,
+                  0.0563,
+                  -0.0708
+                ],
+                [
+                  11,
+                  1,
+                  0.0139,
+                  4.0,
+                  0.0563,
+                  -0.2229
+                ],
+                [
+                  12,
+                  11,
+                  0.1528,
+                  105.0,
+                  1.4789,
+                  -0.1583
+                ],
+                [
+                  13,
+                  3,
+                  0.0417,
+                  53.0,
+                  0.7465,
+                  0.0854
+                ],
+                [
+                  14,
+                  7,
+                  0.0972,
+                  64.0,
+                  0.9014,
+                  -0.1208
+                ],
+                [
+                  15,
+                  1,
+                  0.0139,
+                  4.0,
+                  0.0563,
+                  0.3104
+                ]
+              ],
+              "ride_bell": [
+                [
+                  6,
+                  2,
+                  0.0278,
+                  89.0,
+                  1.2192,
+                  -0.0167
+                ],
+                [
+                  9,
+                  1,
+                  0.0139,
+                  64.0,
+                  0.8767,
+                  0.1604
+                ]
+              ],
+              "sidestick": [
+                [
+                  4,
+                  1,
+                  0.0139,
+                  87.0,
+                  1.0,
+                  -0.0667
+                ],
+                [
+                  9,
+                  2,
+                  0.0278,
+                  75.5,
+                  0.8678,
+                  0.0687
+                ],
+                [
+                  10,
+                  3,
+                  0.0417,
+                  90.0,
+                  1.0345,
+                  -0.1125
+                ],
+                [
+                  12,
+                  2,
+                  0.0278,
+                  77.5,
+                  0.8908,
+                  -0.0292
+                ],
+                [
+                  13,
+                  2,
+                  0.0278,
+                  86.0,
+                  0.9885,
+                  -0.0813
+                ]
+              ],
+              "snare": [
+                [
+                  1,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  -0.1562
+                ],
+                [
+                  2,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  0.0042
+                ],
+                [
+                  3,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  0.3271
+                ],
+                [
+                  4,
+                  67,
+                  0.9306,
+                  127.0,
+                  1.0,
+                  -0.1417
+                ],
+                [
+                  6,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  -0.0375
+                ],
+                [
+                  8,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  -0.05
+                ],
+                [
+                  9,
+                  13,
+                  0.1806,
+                  119.0,
+                  0.937,
+                  0.0271
+                ],
+                [
+                  10,
+                  41,
+                  0.5694,
+                  112.0,
+                  0.8819,
+                  -0.0042
+                ],
+                [
+                  11,
+                  2,
+                  0.0278,
+                  127.0,
+                  1.0,
+                  0.2687
+                ],
+                [
+                  12,
+                  41,
+                  0.5694,
+                  127.0,
+                  1.0,
+                  -0.0583
+                ],
+                [
+                  13,
+                  12,
+                  0.1667,
+                  123.5,
+                  0.9724,
+                  0.0521
+                ],
+                [
+                  14,
+                  38,
+                  0.5278,
+                  127.0,
+                  1.0,
+                  -0.0167
+                ],
+                [
+                  15,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  -0.3146
+                ]
+              ],
+              "tom_high": [
+                [
+                  4,
+                  2,
+                  0.0278,
+                  127.0,
+                  1.0,
+                  -0.2083
+                ],
+                [
+                  5,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  -0.1146
+                ],
+                [
+                  9,
+                  1,
+                  0.0139,
+                  112.0,
+                  0.8819,
+                  0.1021
+                ],
+                [
+                  10,
+                  4,
+                  0.0556,
+                  127.0,
+                  1.0,
+                  -0.2292
+                ],
+                [
+                  12,
+                  3,
+                  0.0417,
+                  127.0,
+                  1.0,
+                  -0.2
+                ],
+                [
+                  13,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  -0.1396
+                ],
+                [
+                  14,
+                  3,
+                  0.0417,
+                  127.0,
+                  1.0,
+                  -0.2542
+                ]
+              ],
+              "tom_low": [
+                [
+                  0,
+                  7,
+                  0.0972,
+                  127.0,
+                  1.0,
+                  -0.2083
+                ],
+                [
+                  2,
+                  8,
+                  0.1111,
+                  123.5,
+                  0.9724,
+                  -0.1542
+                ],
+                [
+                  4,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  -0.15
+                ],
+                [
+                  5,
+                  7,
+                  0.0972,
+                  96.0,
+                  0.7559,
+                  -0.2313
+                ],
+                [
+                  6,
+                  8,
+                  0.1111,
+                  127.0,
+                  1.0,
+                  -0.15
+                ],
+                [
+                  7,
+                  1,
+                  0.0139,
+                  56.0,
+                  0.4409,
+                  -0.3313
+                ],
+                [
+                  9,
+                  9,
+                  0.125,
+                  125.0,
+                  0.9843,
+                  -0.2313
+                ],
+                [
+                  10,
+                  3,
+                  0.0417,
+                  127.0,
+                  1.0,
+                  -0.0792
+                ],
+                [
+                  11,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  0.1188
+                ],
+                [
+                  12,
+                  7,
+                  0.0972,
+                  127.0,
+                  1.0,
+                  -0.175
+                ],
+                [
+                  13,
+                  4,
+                  0.0556,
+                  127.0,
+                  1.0,
+                  0.0104
+                ],
+                [
+                  14,
+                  12,
+                  0.1667,
+                  127.0,
+                  1.0,
+                  -0.0167
+                ]
+              ],
+              "tom_mid": [
+                [
+                  5,
+                  1,
+                  0.0139,
+                  124.0,
+                  0.9764,
+                  -0.0479
+                ],
+                [
+                  8,
+                  2,
+                  0.0278,
+                  127.0,
+                  1.0,
+                  -0.2333
+                ],
+                [
+                  10,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  0.0708
+                ],
+                [
+                  11,
+                  1,
+                  0.0139,
+                  127.0,
+                  1.0,
+                  0.2937
+                ],
+                [
+                  12,
+                  4,
+                  0.0556,
+                  127.0,
+                  1.0,
+                  -0.0292
+                ],
+                [
+                  13,
+                  3,
+                  0.0417,
+                  101.0,
+                  0.7953,
+                  -0.2562
+                ],
+                [
+                  14,
+                  1,
+                  0.0139,
+                  126.0,
+                  0.9921,
+                  -0.2208
+                ]
+              ]
+            },
+            "per_step_columns": [
+              "step",
+              "n",
+              "prob",
+              "velocity_p50",
+              "rel_velocity_p50",
+              "offset_p50_steps"
+            ],
+            "reliability": "trop peu",
+            "steps_per_bar": 16,
+            "swing_ratio": {
+              "mean": 0.6198,
+              "n": 1,
+              "p10": 0.6198,
+              "p25": 0.6198,
+              "p50": 0.6198,
+              "p75": 0.6198,
+              "p90": 0.6198
+            },
+            "timekeeper": {
+              "figures": {
+                "eighths": {
+                  "n": 0,
+                  "share": 0.0
+                },
+                "none": {
+                  "n": 15,
+                  "share": 0.2083
+                },
+                "other": {
+                  "n": 5,
+                  "share": 0.0694
+                },
+                "quarters": {
+                  "n": 0,
+                  "share": 0.0
+                },
+                "quarters_plus": {
+                  "n": 0,
+                  "share": 0.0
+                },
+                "sixteenths": {
+                  "n": 0,
+                  "share": 0.0
+                },
+                "spang": {
+                  "n": 0,
+                  "share": 0.0
+                },
+                "sparse": {
+                  "n": 52,
+                  "share": 0.7222
+                }
+              },
+              "roles": {
+                "hat_closed": {
+                  "n": 39,
+                  "share": 0.5417
+                },
+                "hat_open": {
+                  "n": 1,
+                  "share": 0.0139
+                },
+                "none": {
+                  "n": 15,
+                  "share": 0.2083
+                },
+                "ride": {
+                  "n": 17,
+                  "share": 0.2361
+                }
+              }
+            },
+            "top_patterns": {
+              "kick_snare": []
+            },
+            "velocity_median_by_role": {
+              "crash": 78.0,
+              "hat_closed": 123.0,
+              "hat_open": 127.0,
+              "hat_pedal": 55.0,
+              "kick": 92.0,
+              "ride": 71.0,
+              "ride_bell": 73.0,
+              "sidestick": 87.0,
+              "snare": 127.0,
+              "tom_high": 127.0,
+              "tom_low": 127.0,
+              "tom_mid": 127.0
+            }
+          },
+          "feel": "swing",
+          "fill_position": {
+            "n_files": 0
+          },
+          "meter": "4-4",
+          "proposed_patterns": {
+            "construction": "chaque coup = (rôle, pas) dont la probabilité par pas dans le groupe atteint le seuil de la densité ; jamais une mesure d'un enregistrement",
+            "patterns": [],
+            "skipped": [],
+            "thresholds": {
+              "0": {
+                "timekeeper": 0.5
+              },
+              "1": {
+                "hat_pedal": 0.5,
+                "kick": 0.5,
+                "sidestick": 0.5,
+                "snare": 0.5,
+                "timekeeper": 0.5
+              },
+              "2": {
+                "hat_pedal": 0.5,
+                "kick": 0.25,
+                "sidestick": 0.25,
+                "snare": 0.25,
+                "timekeeper": 0.5
+              }
+            }
+          }
+        },
+        "4-4:ternary": {
+          "beat": {
+            "bpm": {
+              "mean": 118.5,
+              "n": 2,
+              "p10": 113.3,
+              "p25": 115.25,
+              "p50": 118.5,
+              "p75": 121.75,
+              "p90": 123.7
+            },
+            "densities": {
+              "crash": {
+                "mean": 0.1184,
+                "n": 152,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 1.0,
+                "share_with": 0.1184
+              },
+              "hat_closed": {
+                "mean": 1.4145,
+                "n": 152,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 4.0,
+                "p90": 5.0,
+                "share_with": 0.3289
+              },
+              "hat_open": {
+                "mean": 0.6382,
+                "n": 152,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 1.0,
+                "p90": 2.0,
+                "share_with": 0.3289
+              },
+              "hat_pedal": {
+                "mean": 1.8092,
+                "n": 152,
+                "p10": 0.0,
+                "p25": 1.0,
+                "p50": 2.0,
+                "p75": 3.0,
+                "p90": 3.0,
+                "share_with": 0.8816
+              },
+              "kick": {
+                "mean": 3.875,
+                "n": 152,
+                "p10": 3.0,
+                "p25": 4.0,
+                "p50": 4.0,
+                "p75": 4.0,
+                "p90": 4.0,
+                "share_with": 1.0
+              },
+              "ride": {
+                "mean": 3.0,
+                "n": 152,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 4.0,
+                "p75": 6.0,
+                "p90": 6.0,
+                "share_with": 0.5855
+              },
+              "sidestick": {
+                "mean": 0.0658,
+                "n": 152,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 0.0,
+                "share_with": 0.0592
+              },
+              "snare": {
+                "mean": 4.9934,
+                "n": 152,
+                "p10": 2.0,
+                "p25": 3.0,
+                "p50": 4.0,
+                "p75": 6.25,
+                "p90": 8.0,
+                "share_with": 0.9934
+              },
+              "tom_high": {
+                "mean": 0.2039,
+                "n": 152,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 0.0,
+                "share_with": 0.0789
+              },
+              "tom_low": {
+                "mean": 0.3882,
+                "n": 152,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 1.0,
+                "share_with": 0.1184
+              },
+              "tom_mid": {
+                "mean": 0.1053,
+                "n": 152,
+                "p10": 0.0,
+                "p25": 0.0,
+                "p50": 0.0,
+                "p75": 0.0,
+                "p90": 0.0,
+                "share_with": 0.0395
+              }
+            },
+            "gm_notes": {
+              "crash": {
+                "49": 18
+              },
+              "hat_closed": {
+                "42": 215
+              },
+              "hat_open": {
+                "46": 97
+              },
+              "hat_pedal": {
+                "44": 275
+              },
+              "kick": {
+                "36": 589
+              },
+              "ride": {
+                "51": 456
+              },
+              "sidestick": {
+                "37": 10
+              },
+              "snare": {
+                "38": 759
+              },
+              "tom_high": {
+                "50": 31
+              },
+              "tom_low": {
+                "43": 59
+              },
+              "tom_mid": {
+                "47": 16
+              }
+            },
+            "grid_fit": {
+              "mean_abs_offset_steps": 0.1202,
+              "n_hits": 2525,
+              "within_quarter_step": 0.9077
+            },
+            "max_file_share": 0.5789,
+            "micro_timing": {
+              "crash": {
+                "on_beat": {
+                  "ms": {
+                    "mean": -2.0382,
+                    "p10": -25.558,
+                    "p50": -4.4643,
+                    "p90": 26.8973,
+                    "std": 28.0826
+                  },
+                  "n": 18,
+                  "steps": {
+                    "mean": -0.0153,
+                    "p10": -0.1431,
+                    "p50": -0.025,
+                    "p90": 0.1506,
+                    "std": 0.166
+                  }
+                }
+              },
+              "hat_closed": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -16.5003,
+                    "p10": -40.9598,
+                    "p50": -16.7411,
+                    "p90": 4.4643,
+                    "std": 19.9185
+                  },
+                  "n": 184,
+                  "steps": {
+                    "mean": -0.0924,
+                    "p10": -0.2294,
+                    "p50": -0.0937,
+                    "p90": 0.025,
+                    "std": 0.1116
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": 7.4885,
+                    "p10": -10.0446,
+                    "p50": 5.5804,
+                    "p90": 27.9018,
+                    "std": 14.7028
+                  },
+                  "n": 31,
+                  "steps": {
+                    "mean": 0.0419,
+                    "p10": -0.0562,
+                    "p50": 0.0312,
+                    "p90": 0.1562,
+                    "std": 0.0823
+                  }
+                }
+              },
+              "hat_open": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -15.6014,
+                    "p10": -37.8348,
+                    "p50": -13.9509,
+                    "p90": 3.3482,
+                    "std": 15.9381
+                  },
+                  "n": 42,
+                  "steps": {
+                    "mean": -0.0881,
+                    "p10": -0.2119,
+                    "p50": -0.0781,
+                    "p90": 0.0188,
+                    "std": 0.0894
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -9.4359,
+                    "p10": -30.1339,
+                    "p50": -7.8125,
+                    "p90": 10.0446,
+                    "std": 16.716
+                  },
+                  "n": 55,
+                  "steps": {
+                    "mean": -0.0528,
+                    "p10": -0.1688,
+                    "p50": -0.0438,
+                    "p90": 0.0562,
+                    "std": 0.0936
+                  }
+                }
+              },
+              "hat_pedal": {
+                "on_beat": {
+                  "ms": {
+                    "mean": -25.6176,
+                    "p10": -47.0,
+                    "p50": -24.5536,
+                    "p90": -4.0,
+                    "std": 17.8174
+                  },
+                  "n": 271,
+                  "steps": {
+                    "mean": -0.1563,
+                    "p10": -0.2937,
+                    "p50": -0.15,
+                    "p90": -0.025,
+                    "std": 0.1069
+                  }
+                }
+              },
+              "kick": {
+                "off_beat": {
+                  "ms": {
+                    "mean": 0.9208,
+                    "p10": -36.5813,
+                    "p50": 1.058,
+                    "p90": 32.1,
+                    "std": 24.5666
+                  },
+                  "n": 74,
+                  "steps": {
+                    "mean": 0.007,
+                    "p10": -0.2106,
+                    "p50": 0.0062,
+                    "p90": 0.1963,
+                    "std": 0.1493
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -12.8995,
+                    "p10": -35.4286,
+                    "p50": -13.0,
+                    "p90": 8.9286,
+                    "std": 17.2238
+                  },
+                  "n": 515,
+                  "steps": {
+                    "mean": -0.0767,
+                    "p10": -0.21,
+                    "p50": -0.075,
+                    "p90": 0.05,
+                    "std": 0.1019
+                  }
+                }
+              },
+              "ride": {
+                "off_beat": {
+                  "ms": {
+                    "mean": 20.3953,
+                    "p10": -2.2,
+                    "p50": 22.0,
+                    "p90": 43.0,
+                    "std": 18.0643
+                  },
+                  "n": 129,
+                  "steps": {
+                    "mean": 0.1275,
+                    "p10": -0.0137,
+                    "p50": 0.1375,
+                    "p90": 0.2687,
+                    "std": 0.1129
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -11.4047,
+                    "p10": -32.4,
+                    "p50": -11.0,
+                    "p90": 9.0,
+                    "std": 16.2261
+                  },
+                  "n": 327,
+                  "steps": {
+                    "mean": -0.0712,
+                    "p10": -0.2025,
+                    "p50": -0.0687,
+                    "p90": 0.0563,
+                    "std": 0.1014
+                  }
+                }
+              },
+              "sidestick": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -17.8571,
+                    "p10": -41.0714,
+                    "p50": -15.625,
+                    "p90": 3.5714,
+                    "std": 22.9452
+                  },
+                  "n": 7,
+                  "steps": {
+                    "mean": -0.1,
+                    "p10": -0.23,
+                    "p50": -0.0875,
+                    "p90": 0.02,
+                    "std": 0.1285
+                  }
+                }
+              },
+              "snare": {
+                "off_beat": {
+                  "ms": {
+                    "mean": 1.7547,
+                    "p10": -35.7143,
+                    "p50": 1.0,
+                    "p90": 37.8,
+                    "std": 29.1852
+                  },
+                  "n": 433,
+                  "steps": {
+                    "mean": 0.0162,
+                    "p10": -0.2,
+                    "p50": 0.0062,
+                    "p90": 0.2363,
+                    "std": 0.1742
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -13.9856,
+                    "p10": -36.4152,
+                    "p50": -14.0,
+                    "p90": 8.9643,
+                    "std": 17.998
+                  },
+                  "n": 326,
+                  "steps": {
+                    "mean": -0.0842,
+                    "p10": -0.2188,
+                    "p50": -0.0813,
+                    "p90": 0.0531,
+                    "std": 0.1083
+                  }
+                }
+              },
+              "tom_high": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -21.9246,
+                    "p10": -35.8259,
+                    "p50": -27.9018,
+                    "p90": -1.9089,
+                    "std": 13.6215
+                  },
+                  "n": 20,
+                  "steps": {
+                    "mean": -0.1253,
+                    "p10": -0.2006,
+                    "p50": -0.1562,
+                    "p90": -0.0106,
+                    "std": 0.0769
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -17.2679,
+                    "p10": -34.5982,
+                    "p50": -16.7411,
+                    "p90": -2.2321,
+                    "std": 14.6525
+                  },
+                  "n": 11,
+                  "steps": {
+                    "mean": -0.0983,
+                    "p10": -0.1937,
+                    "p50": -0.0938,
+                    "p90": -0.0125,
+                    "std": 0.0859
+                  }
+                }
+              },
+              "tom_low": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -14.0895,
+                    "p10": -37.5679,
+                    "p50": -24.5536,
+                    "p90": 20.0,
+                    "std": 27.9366
+                  },
+                  "n": 35,
+                  "steps": {
+                    "mean": -0.0829,
+                    "p10": -0.2287,
+                    "p50": -0.15,
+                    "p90": 0.125,
+                    "std": 0.1713
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -14.4665,
+                    "p10": -39.0491,
+                    "p50": -18.4286,
+                    "p90": 13.4,
+                    "std": 21.37
+                  },
+                  "n": 24,
+                  "steps": {
+                    "mean": -0.0852,
+                    "p10": -0.2369,
+                    "p50": -0.1094,
+                    "p90": 0.0838,
+                    "std": 0.1301
+                  }
+                }
+              },
+              "tom_mid": {
+                "off_beat": {
+                  "ms": {
+                    "mean": -24.9594,
+                    "p10": -29.0179,
+                    "p50": -25.6696,
+                    "p90": -16.7411,
+                    "std": 9.0018
+                  },
+                  "n": 11,
+                  "steps": {
+                    "mean": -0.1398,
+                    "p10": -0.1625,
+                    "p50": -0.1438,
+                    "p90": -0.0937,
+                    "std": 0.0504
+                  }
+                },
+                "on_beat": {
+                  "ms": {
+                    "mean": -8.4821,
+                    "p10": -14.5089,
+                    "p50": -10.0446,
+                    "p90": -1.1161,
+                    "std": 7.3863
+                  },
+                  "n": 5,
+                  "steps": {
+                    "mean": -0.0475,
+                    "p10": -0.0813,
+                    "p50": -0.0563,
+                    "p90": -0.0062,
+                    "std": 0.0414
+                  }
+                }
+              }
+            },
+            "minutes": 5.1604,
+            "n_drummers": 2,
+            "n_files": 2,
+            "n_hits": 2525,
+            "n_measures": 152,
+            "per_step": {
+              "crash": [
+                [
+                  0,
+                  18,
+                  0.1184,
+                  105.0,
+                  1.0,
+                  -0.025
+                ]
+              ],
+              "hat_closed": [
+                [
+                  0,
+                  25,
+                  0.1645,
+                  114.0,
+                  0.8976,
+                  0.0188
+                ],
+                [
+                  1,
+                  3,
+                  0.0197,
+                  127.0,
+                  1.0,
+                  -0.0125
+                ],
+                [
+                  2,
+                  41,
+                  0.2697,
+                  124.0,
+                  0.9764,
+                  -0.1312
+                ],
+                [
+                  3,
+                  1,
+                  0.0066,
+                  127.0,
+                  1.0,
+                  0.1875
+                ],
+                [
+                  4,
+                  46,
+                  0.3026,
+                  69.5,
+                  0.5472,
+                  -0.0438
+                ],
+                [
+                  5,
+                  46,
+                  0.3026,
+                  127.0,
+                  1.0,
+                  -0.0969
+                ],
+                [
+                  6,
+                  2,
+                  0.0132,
+                  127.0,
+                  1.0,
+                  0.1625
+                ],
+                [
+                  7,
+                  46,
+                  0.3026,
+                  127.0,
+                  1.0,
+                  -0.0906
+                ],
+                [
+                  8,
+                  1,
+                  0.0066,
+                  14.0,
+                  0.1102,
+                  -0.0812
+                ],
+                [
+                  9,
+                  3,
+                  0.0197,
+                  127.0,
+                  1.0,
+                  0.0813
+                ],
+                [
+                  10,
+                  1,
+                  0.0066,
+                  127.0,
+                  1.0,
+                  0.15
+                ]
+              ],
+              "hat_open": [
+                [
+                  0,
+                  5,
+                  0.0329,
+                  127.0,
+                  1.0,
+                  -0.05
+                ],
+                [
+                  1,
+                  1,
+                  0.0066,
+                  127.0,
+                  1.0,
+                  -0.05
+                ],
+                [
+                  2,
+                  6,
+                  0.0395,
+                  127.0,
+                  1.0,
+                  -0.0594
+                ],
+                [
+                  3,
+                  2,
+                  0.0132,
+                  127.0,
+                  1.0,
+                  0.0313
+                ],
+                [
+                  4,
+                  3,
+                  0.0197,
+                  127.0,
+                  1.0,
+                  0.0125
+                ],
+                [
+                  5,
+                  1,
+                  0.0066,
+                  102.0,
+                  0.8031,
+                  -0.0938
+                ],
+                [
+                  6,
+                  2,
+                  0.0132,
+                  127.0,
+                  1.0,
+                  0.025
+                ],
+                [
+                  7,
+                  3,
+                  0.0197,
+                  127.0,
+                  1.0,
+                  -0.0438
+                ],
+                [
+                  8,
+                  2,
+                  0.0132,
+                  127.0,
+                  1.0,
+                  -0.0187
+                ],
+                [
+                  9,
+                  46,
+                  0.3026,
+                  127.0,
+                  1.0,
+                  -0.0469
+                ],
+                [
+                  10,
+                  4,
+                  0.0263,
+                  127.0,
+                  1.0,
+                  -0.0812
+                ],
+                [
+                  11,
+                  22,
+                  0.1447,
+                  127.0,
+                  1.0,
+                  -0.1219
+                ]
+              ],
+              "hat_pedal": [
+                [
+                  0,
+                  59,
+                  0.3882,
+                  32.0,
+                  0.3556,
+                  -0.1813
+                ],
+                [
+                  3,
+                  89,
+                  0.5855,
+                  95.0,
+                  1.0556,
+                  -0.1437
+                ],
+                [
+                  4,
+                  1,
+                  0.0066,
+                  20.0,
+                  0.2222,
+                  0.1563
+                ],
+                [
+                  6,
+                  34,
+                  0.2237,
+                  23.5,
+                  0.2611,
+                  -0.1875
+                ],
+                [
+                  8,
+                  1,
+                  0.0066,
+                  105.0,
+                  1.1667,
+                  0.5
+                ],
+                [
+                  9,
+                  89,
+                  0.5855,
+                  97.0,
+                  1.0778,
+                  -0.1437
+                ],
+                [
+                  10,
+                  2,
+                  0.0132,
+                  23.5,
+                  0.2611,
+                  -0.0344
+                ]
+              ],
+              "kick": [
+                [
+                  0,
+                  149,
+                  0.9803,
+                  46.0,
+                  0.9583,
+                  -0.0625
+                ],
+                [
+                  1,
+                  4,
+                  0.0263,
+                  116.0,
+                  2.4167,
+                  -0.2313
+                ],
+                [
+                  2,
+                  1,
+                  0.0066,
+                  122.0,
+                  2.5417,
+                  -0.2125
+                ],
+                [
+                  3,
+                  120,
+                  0.7895,
+                  60.5,
+                  1.2604,
+                  -0.0688
+                ],
+                [
+                  4,
+                  2,
+                  0.0132,
+                  113.0,
+                  2.3542,
+                  0.0281
+                ],
+                [
+                  5,
+                  31,
+                  0.2039,
+                  46.0,
+                  0.9583,
+                  0.0313
+                ],
+                [
+                  6,
+                  131,
+                  0.8618,
+                  48.0,
+                  1.0,
+                  -0.075
+                ],
+                [
+                  7,
+                  2,
+                  0.0132,
+                  112.5,
+                  2.3438,
+                  0.1094
+                ],
+                [
+                  8,
+                  6,
+                  0.0395,
+                  94.5,
+                  1.9688,
+                  -0.0062
+                ],
+                [
+                  9,
+                  115,
+                  0.7566,
+                  87.0,
+                  1.8125,
+                  -0.1
+                ],
+                [
+                  10,
+                  3,
+                  0.0197,
+                  106.0,
+                  2.2083,
+                  0.0938
+                ],
+                [
+                  11,
+                  25,
+                  0.1645,
+                  27.0,
+                  0.5625,
+                  -0.0062
+                ]
+              ],
+              "ride": [
+                [
+                  0,
+                  85,
+                  0.5592,
+                  83.0,
+                  0.954,
+                  -0.075
+                ],
+                [
+                  2,
+                  6,
+                  0.0395,
+                  72.5,
+                  0.8333,
+                  0.0156
+                ],
+                [
+                  3,
+                  83,
+                  0.5461,
+                  108.0,
+                  1.2414,
+                  -0.0688
+                ],
+                [
+                  5,
+                  60,
+                  0.3947,
+                  64.5,
+                  0.7414,
+                  0.1531
+                ],
+                [
+                  6,
+                  82,
+                  0.5395,
+                  83.0,
+                  0.954,
+                  -0.0531
+                ],
+                [
+                  8,
+                  7,
+                  0.0461,
+                  66.0,
+                  0.7586,
+                  0.0437
+                ],
+                [
+                  9,
+                  77,
+                  0.5066,
+                  114.0,
+                  1.3103,
+                  -0.0625
+                ],
+                [
+                  11,
+                  56,
+                  0.3684,
+                  66.0,
+                  0.7586,
+                  0.1375
+                ]
+              ],
+              "sidestick": [
+                [
+                  0,
+                  1,
+                  0.0066,
+                  76.0,
+                  0.9048,
+                  0.0688
+                ],
+                [
+                  3,
+                  1,
+                  0.0066,
+                  88.0,
+                  1.0476,
+                  0.075
+                ],
+                [
+                  4,
+                  1,
+                  0.0066,
+                  83.0,
+                  0.9881,
+                  -0.0625
+                ],
+                [
+                  8,
+                  4,
+                  0.0263,
+                  85.5,
+                  1.0179,
+                  -0.1188
+                ],
+                [
+                  9,
+                  1,
+                  0.0066,
+                  87.0,
+                  1.0357,
+                  -0.1375
+                ],
+                [
+                  11,
+                  2,
+                  0.0132,
+                  73.0,
+                  0.869,
+                  -0.025
+                ]
+              ],
+              "snare": [
+                [
+                  0,
+                  36,
+                  0.2368,
+                  49.0,
+                  0.7778,
+                  -0.1219
+                ],
+                [
+                  1,
+                  12,
+                  0.0789,
+                  65.5,
+                  1.0397,
+                  -0.0031
+                ],
+                [
+                  2,
+                  92,
+                  0.6053,
+                  32.0,
+                  0.5079,
+                  0.0375
+                ],
+                [
+                  3,
+                  131,
+                  0.8618,
+                  83.0,
+                  1.3175,
+                  -0.0688
+                ],
+                [
+                  4,
+                  14,
+                  0.0921,
+                  95.0,
+                  1.5079,
+                  -0.075
+                ],
+                [
+                  5,
+                  63,
+                  0.4145,
+                  41.0,
+                  0.6508,
+                  0.1
+                ],
+                [
+                  6,
+                  37,
+                  0.2434,
+                  49.0,
+                  0.7778,
+                  -0.1187
+                ],
+                [
+                  7,
+                  21,
+                  0.1382,
+                  93.0,
+                  1.4762,
+                  -0.0812
+                ],
+                [
+                  8,
+                  127,
+                  0.8355,
+                  45.0,
+                  0.7143,
+                  -0.0188
+                ],
+                [
+                  9,
+                  122,
+                  0.8026,
+                  85.5,
+                  1.3571,
+                  -0.0813
+                ],
+                [
+                  10,
+                  12,
+                  0.0789,
+                  121.0,
+                  1.9206,
+                  -0.05
+                ],
+                [
+                  11,
+                  92,
+                  0.6053,
+                  72.5,
+                  1.1508,
+                  -0.0125
+                ]
+              ],
+              "tom_high": [
+                [
+                  0,
+                  2,
+                  0.0132,
+                  127.0,
+                  1.0,
+                  -0.0531
+                ],
+                [
+                  1,
+                  2,
+                  0.0132,
+                  96.5,
+                  0.7598,
+                  -0.0844
+                ],
+                [
+                  2,
+                  2,
+                  0.0132,
+                  127.0,
+                  1.0,
+                  -0.1656
+                ],
+                [
+                  3,
+                  1,
+                  0.0066,
+                  127.0,
+                  1.0,
+                  -0.0438
+                ],
+                [
+                  4,
+                  3,
+                  0.0197,
+                  127.0,
+                  1.0,
+                  -0.0812
+                ],
+                [
+                  5,
+                  4,
+                  0.0263,
+                  127.0,
+                  1.0,
+                  -0.1969
+                ],
+                [
+                  6,
+                  4,
+                  0.0263,
+                  127.0,
+                  1.0,
+                  -0.0469
+                ],
+                [
+                  7,
+                  4,
+                  0.0263,
+                  82.0,
+                  0.6457,
+                  -0.0813
+                ],
+                [
+                  8,
+                  3,
+                  0.0197,
+                  113.0,
+                  0.8898,
+                  -0.1562
+                ],
+                [
+                  9,
+                  4,
+                  0.0263,
+                  127.0,
+                  1.0,
+                  -0.1719
+                ],
+                [
+                  10,
+                  2,
+                  0.0132,
+                  126.0,
+                  0.9921,
+                  -0.1906
+                ]
+              ],
+              "tom_low": [
+                [
+                  0,
+                  2,
+                  0.0132,
+                  127.0,
+                  1.5679,
+                  -0.1437
+                ],
+                [
+                  2,
+                  4,
+                  0.0263,
+                  54.5,
+                  0.6728,
+                  -0.0063
+                ],
+                [
+                  3,
+                  5,
+                  0.0329,
+                  54.0,
+                  0.6667,
+                  -0.0188
+                ],
+                [
+                  4,
+                  6,
+                  0.0395,
+                  62.0,
+                  0.7654,
+                  -0.1312
+                ],
+                [
+                  5,
+                  6,
+                  0.0395,
+                  69.0,
+                  0.8519,
+                  -0.0625
+                ],
+                [
+                  6,
+                  5,
+                  0.0329,
+                  71.0,
+                  0.8765,
+                  -0.1312
+                ],
+                [
+                  7,
+                  4,
+                  0.0263,
+                  69.0,
+                  0.8519,
+                  -0.1812
+                ],
+                [
+                  8,
+                  7,
+                  0.0461,
+                  71.0,
+                  0.8765,
+                  -0.175
+                ],
+                [
+                  9,
+                  12,
+                  0.0789,
+                  121.0,
+                  1.4938,
+                  -0.1062
+                ],
+                [
+                  10,
+                  2,
+                  0.0132,
+                  91.5,
+                  1.1296,
+                  -0.1906
+                ],
+                [
+                  11,
+                  6,
+                  0.0395,
+                  84.5,
+                  1.0432,
+                  -0.1719
+                ]
+              ],
+              "tom_mid": [
+                [
+                  0,
+                  1,
+                  0.0066,
+                  127.0,
+                  1.0,
+                  0.0188
+                ],
+                [
+                  2,
+                  2,
+                  0.0132,
+                  127.0,
+                  1.0,
+                  -0.2156
+                ],
+                [
+                  3,
+                  1,
+                  0.0066,
+                  127.0,
+                  1.0,
+                  -0.0625
+                ],
+                [
+                  4,
+                  2,
+                  0.0132,
+                  118.5,
+                  0.9331,
+                  -0.1094
+                ],
+                [
+                  5,
+                  1,
+                  0.0066,
+                  127.0,
+                  1.0,
+                  -0.1438
+                ],
+                [
+                  6,
+                  2,
+                  0.0132,
+                  127.0,
+                  1.0,
+                  -0.0687
+                ],
+                [
+                  7,
+                  3,
+                  0.0197,
+                  127.0,
+                  1.0,
+                  -0.1125
+                ],
+                [
+                  8,
+                  1,
+                  0.0066,
+                  125.0,
+                  0.9843,
+                  -0.1437
+                ],
+                [
+                  9,
+                  1,
+                  0.0066,
+                  127.0,
+                  1.0,
+                  -0.0563
+                ],
+                [
+                  10,
+                  1,
+                  0.0066,
+                  127.0,
+                  1.0,
+                  -0.1062
+                ],
+                [
+                  11,
+                  1,
+                  0.0066,
+                  127.0,
+                  1.0,
+                  -0.1438
+                ]
+              ]
+            },
+            "per_step_columns": [
+              "step",
+              "n",
+              "prob",
+              "velocity_p50",
+              "rel_velocity_p50",
+              "offset_p50_steps"
+            ],
+            "reliability": "trop peu",
+            "steps_per_bar": 12,
+            "swing_ratio": {
+              "mean": 0.6615,
+              "n": 2,
+              "p10": 0.634,
+              "p25": 0.6443,
+              "p50": 0.6615,
+              "p75": 0.6786,
+              "p90": 0.689
+            },
+            "timekeeper": {
+              "figures": {
+                "eighths": {
+                  "n": 5,
+                  "share": 0.0329
+                },
+                "none": {
+                  "n": 13,
+                  "share": 0.0855
+                },
+                "other": {
+                  "n": 10,
+                  "share": 0.0658
+                },
+                "quarters": {
+                  "n": 21,
+                  "share": 0.1382
+                },
+                "quarters_plus": {
+                  "n": 3,
+                  "share": 0.0197
+                },
+                "sixteenths": {
+                  "n": 0,
+                  "share": 0.0
+                },
+                "spang": {
+                  "n": 45,
+                  "share": 0.2961
+                },
+                "sparse": {
+                  "n": 55,
+                  "share": 0.3618
+                }
+              },
+              "roles": {
+                "hat_closed": {
+                  "n": 46,
+                  "share": 0.3026
+                },
+                "hat_open": {
+                  "n": 5,
+                  "share": 0.0329
+                },
+                "none": {
+                  "n": 13,
+                  "share": 0.0855
+                },
+                "ride": {
+                  "n": 88,
+                  "share": 0.5789
+                }
+              }
+            },
+            "top_patterns": {
+              "hat_pedal": [
+                {
+                  "n": 9,
+                  "n_files": 2,
+                  "share": 0.0592,
+                  "steps": [
+                    0,
+                    3,
+                    6,
+                    9
+                  ]
+                },
+                {
+                  "n": 2,
+                  "n_files": 2,
+                  "share": 0.0132,
+                  "steps": [
+                    9
+                  ]
+                }
+              ],
+              "kick": [
+                {
+                  "n": 106,
+                  "n_files": 2,
+                  "share": 0.6974,
+                  "steps": [
+                    0,
+                    3,
+                    6,
+                    9
+                  ]
+                },
+                {
+                  "n": 2,
+                  "n_files": 2,
+                  "share": 0.0132,
+                  "steps": [
+                    0,
+                    3,
+                    6,
+                    9,
+                    11
+                  ]
+                }
+              ],
+              "kick_snare": [
+                {
+                  "kick": [
+                    0,
+                    3,
+                    6,
+                    9
+                  ],
+                  "n": 7,
+                  "n_files": 2,
+                  "share": 0.0461,
+                  "snare": [
+                    3,
+                    9
+                  ]
+                },
+                {
+                  "kick": [
+                    0,
+                    3,
+                    6,
+                    9
+                  ],
+                  "n": 2,
+                  "n_files": 2,
+                  "share": 0.0132,
+                  "snare": [
+                    3,
+                    9,
+                    11
+                  ]
+                }
+              ],
+              "ride": [
+                {
+                  "n": 4,
+                  "n_files": 2,
+                  "share": 0.0263,
+                  "steps": [
+                    0
+                  ]
+                }
+              ],
+              "snare": [
+                {
+                  "n": 21,
+                  "n_files": 2,
+                  "share": 0.1382,
+                  "steps": [
+                    3,
+                    8,
+                    9
+                  ]
+                },
+                {
+                  "n": 13,
+                  "n_files": 2,
+                  "share": 0.0855,
+                  "steps": [
+                    3,
+                    8,
+                    9,
+                    11
+                  ]
+                },
+                {
+                  "n": 10,
+                  "n_files": 2,
+                  "share": 0.0658,
+                  "steps": [
+                    2,
+                    3,
+                    8,
+                    9,
+                    11
+                  ]
+                },
+                {
+                  "n": 7,
+                  "n_files": 2,
+                  "share": 0.0461,
+                  "steps": [
+                    3,
+                    9
+                  ]
+                },
+                {
+                  "n": 2,
+                  "n_files": 2,
+                  "share": 0.0132,
+                  "steps": [
+                    2,
+                    5
+                  ]
+                },
+                {
+                  "n": 2,
+                  "n_files": 2,
+                  "share": 0.0132,
+                  "steps": [
+                    3,
+                    11
+                  ]
+                },
+                {
+                  "n": 2,
+                  "n_files": 2,
+                  "share": 0.0132,
+                  "steps": [
+                    3,
+                    9,
+                    11
+                  ]
+                }
+              ]
+            },
+            "velocity_median_by_role": {
+              "crash": 105.0,
+              "hat_closed": 127.0,
+              "hat_open": 127.0,
+              "hat_pedal": 90.0,
+              "kick": 48.0,
+              "ride": 87.0,
+              "sidestick": 84.0,
+              "snare": 63.0,
+              "tom_high": 127.0,
+              "tom_low": 81.0,
+              "tom_mid": 127.0
+            }
+          },
+          "feel": "ternary",
+          "fill_position": {
+            "n_files": 0
+          },
+          "meter": "4-4",
+          "proposed_patterns": {
+            "construction": "chaque coup = (rôle, pas) dont la probabilité par pas dans le groupe atteint le seuil de la densité ; jamais une mesure d'un enregistrement",
+            "patterns": [],
+            "skipped": [
+              {
+                "group": "hat_closed:quarters_plus",
+                "n_files": 1,
+                "n_measures": 1,
+                "reason": "< 20 mesures, < 3 fichiers ou un fichier > 60% du groupe"
+              },
+              {
+                "group": "ride:eighths",
+                "n_files": 1,
+                "n_measures": 5,
+                "reason": "< 20 mesures, < 3 fichiers ou un fichier > 60% du groupe"
+              },
+              {
+                "group": "ride:quarters",
+                "n_files": 1,
+                "n_measures": 21,
+                "reason": "< 20 mesures, < 3 fichiers ou un fichier > 60% du groupe"
+              },
+              {
+                "group": "ride:quarters_plus",
+                "n_files": 1,
+                "n_measures": 2,
+                "reason": "< 20 mesures, < 3 fichiers ou un fichier > 60% du groupe"
+              },
+              {
+                "group": "ride:spang",
+                "n_files": 1,
+                "n_measures": 45,
+                "reason": "< 20 mesures, < 3 fichiers ou un fichier > 60% du groupe"
+              }
+            ],
+            "thresholds": {
+              "0": {
+                "timekeeper": 0.5
+              },
+              "1": {
+                "hat_pedal": 0.5,
+                "kick": 0.5,
+                "sidestick": 0.5,
+                "snare": 0.5,
+                "timekeeper": 0.5
+              },
+              "2": {
+                "hat_pedal": 0.5,
+                "kick": 0.25,
+                "sidestick": 0.25,
+                "snare": 0.25,
+                "timekeeper": 0.5
+              }
+            }
+          }
+        }
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 11.1222,
+      "n_files": 4,
+      "n_rejected": 0,
+      "rejected": []
+    }
+  },
+  "styles_with_own_folder": {},
+  "styles_with_own_folder_summary": {}
+}

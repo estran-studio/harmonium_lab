@@ -80,6 +80,9 @@ VERSION_FILE = CORPUS_DIR / "VERSION"
 SWING = "SWING"
 BEATS_PER_BAR = 4
 SIGNATURE = "4/4"
+# Sous-ensembles non swing de la phase 019 (L2) : `rhythmfeel` EXACT ; les valeurs composées
+# (`LATIN/FUNK`, `A:LATIN/B:SWING`…) n'en font partie d'aucun.
+L2_SUBSETS = ("BALLAD", "TWOBEAT", "LATIN", "FUNK")
 
 
 class IntegrityError(RuntimeError):
@@ -232,6 +235,7 @@ def manifest_rows(con: sqlite3.Connection) -> list[dict[str, Any]]:
             "instrument": s.instrument, "key": s.key, "licence": LICENCE, "melid": s.melid,
             "n_beats": n_beats, "n_beats_bass": n_bass, "performer": s.performer,
             "rhythmfeel": s.rhythmfeel, "signature": s.signature, "style": s.style,
+            "l2_subset": s.rhythmfeel if s.rhythmfeel in L2_SUBSETS else None,
             "swing_subset": s.rhythmfeel == SWING, "tempoclass": s.tempoclass,
             "title": s.title, "trackid": s.trackid,
         })
@@ -264,6 +268,7 @@ def write_manifest(db: Path = RAW_DB, manifest: Path = MANIFEST, version: Path =
         if previous.get("sha256") == expected:
             retrieved = previous.get("retrieved", retrieved)
     n_swing = sum(1 for r in rows if r["swing_subset"])
+    n_l2 = ", ".join(f"{name} {sum(1 for r in rows if r['l2_subset'] == name)}" for name in L2_SUBSETS)
     version.write_text(
         f"version: {VERSION_LABEL}\n"
         f"sha256: {expected}\n"
@@ -272,6 +277,7 @@ def write_manifest(db: Path = RAW_DB, manifest: Path = MANIFEST, version: Path =
         f"licence: {LICENCE}\n"
         f"attribution: {ATTRIBUTION}\n"
         f"solos: {len(rows)} (swing : {n_swing})\n"
+        f"l2_subsets: {n_l2}\n"
         f"manifest_sha256: {manifest_sha}\n", encoding="utf-8")
     return rows
 

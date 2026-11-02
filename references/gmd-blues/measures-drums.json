@@ -1,0 +1,265 @@
+{
+  "command": "python -m harmonium_lab.backing.gmd_styles --measures",
+  "feel_rules": {
+    "min_evidence": 8,
+    "offbeat_window": [
+      0.45,
+      0.73
+    ],
+    "sixteenth_share": 0.25,
+    "sixteenth_tolerance": 0.07,
+    "swing_cuts": [
+      0.56,
+      0.62
+    ]
+  },
+  "grids": {
+    "straight": "16 pas en 4/4 (4 par pulsation, doubles croches) ; 12 en 3/4 et en 6/8",
+    "swing": "même grille, pas 2 de chaque pulsation retardé au rapport r du fichier (0,56 ≤ r < 0,62)",
+    "ternary": "triolets : 3 pas par pulsation, 12 pas en 4/4, 9 en 3/4 (shuffle, 12/8, swing appuyé r ≥ 0,62)"
+  },
+  "inventory": [
+    {
+      "beat_type": "beat",
+      "family": "blues",
+      "feels": {
+        "straight": 1,
+        "swing": 1,
+        "ternary": 2
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 4.8139,
+      "n_drummers": 2,
+      "n_files": 4,
+      "n_files_with_measures": 4,
+      "n_measures": 90,
+      "n_rejected": 0,
+      "reliability": "juste",
+      "style": "blues/shuffle"
+    }
+  ],
+  "provenance": {
+    "attribution": "Gillick, Roberts, Engel, Eck, Bamman, Learning to Groove with Inverse Sequence Transformations, ICML 2019 ; Groove MIDI Dataset v1.0.0, Google LLC, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+    "counts": {
+      "n_files": 4,
+      "n_files_measured": 4,
+      "n_files_rejected": 0,
+      "n_hits_unmapped_ignored": 0,
+      "n_measures": 90
+    },
+    "licence": "CC-BY-4.0",
+    "mention": "Groove MIDI Dataset v1.0.0, CC BY 4.0 (Google LLC) : Gillick, Roberts, Engel, Eck, Bamman, Learning to Groove with Inverse Sequence Transformations, ICML 2019 ; Groove MIDI Dataset v1.0.0, Google LLC, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/)",
+    "sha256": "651cbc524ffb891be1a3e46d89dc82a1cecb09a57c748c7b45b844c4841dcc1e",
+    "source": "Groove MIDI Dataset",
+    "url": "https://storage.googleapis.com/magentadata/datasets/groove/groove-v1.0.0-midionly.zip",
+    "version": "v1.0.0 (groove-v1.0.0-midionly.zip)"
+  },
+  "reliability_thresholds": {
+    "beat": {
+      "assez": {
+        "drummers": 3,
+        "files": 8,
+        "measures": 200
+      },
+      "juste": {
+        "drummers": 1,
+        "files": 3,
+        "measures": 60
+      }
+    },
+    "fill": {
+      "assez": {
+        "drummers": 3,
+        "files": 30,
+        "measures": 30
+      },
+      "juste": {
+        "drummers": 1,
+        "files": 10,
+        "measures": 10
+      }
+    }
+  },
+  "role_table": {
+    "latin_stand_in": {
+      "ride_bell": {
+        "gm": 53,
+        "latin": "cloche, campana (GM 56 cowbell)"
+      },
+      "sidestick": {
+        "gm": 37,
+        "latin": "clave / bois (GM 75 claves, 76-77 wood blocks)"
+      },
+      "tom_high": {
+        "gm": 50,
+        "latin": "conga / timbale aiguë (GM 63 open hi conga, 65 high timbale)"
+      },
+      "tom_low": {
+        "gm": 43,
+        "latin": "tumbadora grave (GM 64 low conga)"
+      },
+      "tom_mid": {
+        "gm": 47,
+        "latin": "conga médium (GM 62 mute hi conga)"
+      }
+    },
+    "note": "aucune percussion latine dans le GMD ; les stand-ins sont des hypothèses de rendu",
+    "pitches": {
+      "22": {
+        "gm": 42,
+        "roland": "HH Closed (Edge)",
+        "role": "hat_closed"
+      },
+      "26": {
+        "gm": 46,
+        "roland": "HH Open (Edge)",
+        "role": "hat_open"
+      },
+      "36": {
+        "gm": 36,
+        "roland": "Kick",
+        "role": "kick"
+      },
+      "37": {
+        "gm": 37,
+        "roland": "Snare X-Stick",
+        "role": "sidestick"
+      },
+      "38": {
+        "gm": 38,
+        "roland": "Snare (Head)",
+        "role": "snare"
+      },
+      "40": {
+        "gm": 38,
+        "roland": "Snare (Rim)",
+        "role": "snare"
+      },
+      "42": {
+        "gm": 42,
+        "roland": "HH Closed (Bow)",
+        "role": "hat_closed"
+      },
+      "43": {
+        "gm": 43,
+        "roland": "Tom 3 (Head)",
+        "role": "tom_low"
+      },
+      "44": {
+        "gm": 44,
+        "roland": "HH Pedal",
+        "role": "hat_pedal"
+      },
+      "45": {
+        "gm": 47,
+        "roland": "Tom 2",
+        "role": "tom_mid"
+      },
+      "46": {
+        "gm": 46,
+        "roland": "HH Open (Bow)",
+        "role": "hat_open"
+      },
+      "47": {
+        "gm": 47,
+        "roland": "Tom 2 (Rim)",
+        "role": "tom_mid"
+      },
+      "48": {
+        "gm": 50,
+        "roland": "Tom 1",
+        "role": "tom_high"
+      },
+      "49": {
+        "gm": 49,
+        "roland": "Crash 1 (Bow)",
+        "role": "crash"
+      },
+      "50": {
+        "gm": 50,
+        "roland": "Tom 1 (Rim)",
+        "role": "tom_high"
+      },
+      "51": {
+        "gm": 51,
+        "roland": "Ride (Bow)",
+        "role": "ride"
+      },
+      "52": {
+        "gm": 49,
+        "roland": "Crash 2 (Edge)",
+        "role": "crash"
+      },
+      "53": {
+        "gm": 53,
+        "roland": "Ride (Bell)",
+        "role": "ride_bell"
+      },
+      "55": {
+        "gm": 49,
+        "roland": "Crash 1 (Edge)",
+        "role": "crash"
+      },
+      "57": {
+        "gm": 49,
+        "roland": "Crash 2 (Bow)",
+        "role": "crash"
+      },
+      "58": {
+        "gm": 43,
+        "roland": "Tom 3 (Rim)",
+        "role": "tom_low"
+      },
+      "59": {
+        "gm": 51,
+        "roland": "Ride (Edge)",
+        "role": "ride"
+      }
+    },
+    "source": "https://magenta.withgoogle.com/datasets/groove, section « Drum Mapping » (Roland TD-11 → GM), consultée le 2026-11-01"
+  },
+  "scope": "famille blues",
+  "styles": {},
+  "styles_with_own_folder": {
+    "blues/shuffle": "gmd-blues-shuffle"
+  },
+  "styles_with_own_folder_summary": {
+    "blues/shuffle": {
+      "feel_by_file": {
+        "beat:4-4:straight": 1,
+        "beat:4-4:swing": 1,
+        "beat:4-4:ternary": 2
+      },
+      "groups": {
+        "4-4:straight": {
+          "beat": {
+            "n_files": 1,
+            "n_measures": 2,
+            "reliability": "trop peu"
+          }
+        },
+        "4-4:swing": {
+          "beat": {
+            "n_files": 1,
+            "n_measures": 4,
+            "reliability": "trop peu"
+          }
+        },
+        "4-4:ternary": {
+          "beat": {
+            "n_files": 2,
+            "n_measures": 84,
+            "reliability": "trop peu"
+          }
+        }
+      },
+      "meters": {
+        "4-4": 4
+      },
+      "minutes": 4.8139,
+      "n_files": 4
+    }
+  }
+}

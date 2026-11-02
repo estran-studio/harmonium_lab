@@ -5,4 +5,5 @@ url: https://jazzomat.hfm-weimar.de/download/downloads/wjazzd.db
 licence: ODbL-1.0 (base) + DbCL-1.0 (contenus)
 attribution: Contains information from the Weimar Jazz Database (Jazzomat Research Project, HfM Weimar), which is made available here under the Open Database License (ODbL); individual contents under the Database Contents License (DbCL 1.0).
 solos: 456 (swing : 361)
-manifest_sha256: 6802930d21c00044c27364882990b9917a4abc695990f5b021547a0e87add560
+l2_subsets: BALLAD 10, TWOBEAT 32, LATIN 27, FUNK 20
+manifest_sha256: 30c1f5cb97c132d00e51d8e766df0836df5bfb98c68d103ac4b47bcf4290181c

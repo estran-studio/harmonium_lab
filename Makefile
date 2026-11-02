@@ -259,6 +259,26 @@ backing-validate: setup ## Basse générée vs WJazzD : PROFILES="id=dossier ...
 		--seeds $(BACKING_SEEDS) --seed-start $(BACKING_SEED_START) --bars $(BACKING_BARS) $(foreach g,$(BACKING_GROUPS),--group $(g)) \
 		-o "$(BACKING_OUT)" --markdown
 
+# ── Accompagnement mesuré : bibliothèque de styles (phase 019, L2) ──
+# make backing-gmd        GMD complet (CC BY 4.0) : corpus/gmd/manifest.jsonl (1 150 fichiers) et references/gmd-*/
+# make backing-wjazzd     WJazzD BALLAD / TWOBEAT / LATIN / FUNK : references/wjazzd-{ballad,twobeat,latin,funk}/
+# make backing-jtd-tempo  JTD : swing et micro-timing par tempo : references/jtd-swing-tempo/
+# make backing-l2         les trois, dans l'ordre (fetch puis mesures)
+.PHONY: backing-gmd backing-wjazzd backing-jtd-tempo backing-l2
+
+backing-gmd: setup ## GMD complet : manifeste (tous les fichiers) et references/gmd-*/ (batterie par style)
+	$(PYTHON) -m harmonium_lab.backing.gmd_styles
+
+backing-wjazzd: setup ## WJazzD BALLAD, TWOBEAT, LATIN, FUNK : mesures de basse dans references/wjazzd-<sous-ensemble>/
+	$(PYTHON) -m harmonium_lab.backing.wjazzd --fetch
+	$(PYTHON) -m harmonium_lab.backing.wjazzd_subsets
+
+backing-jtd-tempo: setup ## JTD : swing et micro-timing par classe de tempo, courbe pour A6 (references/jtd-swing-tempo/)
+	$(PYTHON) -m harmonium_lab.backing.timing --fetch
+	$(PYTHON) -m harmonium_lab.backing.swing_tempo
+
+backing-l2: backing-gmd backing-wjazzd backing-jtd-tempo ## Ingestion L2 complète (GMD, WJazzD sous-ensembles, JTD par tempo)
+
 # ════════════════════════════════════════════════════════════════════
 
 # ════════════════════════════════════════════════════════════════════
