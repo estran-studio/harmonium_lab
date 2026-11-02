@@ -30,6 +30,9 @@ Les parts sont des moyennes sur les unités : `share` (toutes les unités) et
 `share_active` (unités où la couche joue dans au moins une graine : une basse
 tue sur un pont n'y compte pas comme « stable »). `any` / `all` : part des
 unités où au moins une / les trois couches varient.
+
+Avec `--chorus N` (phase 019, V0), la commande mesure la variance **par chorus** (graines × chorus,
+couches comping, orchestration, densité, intensité en plus) : voir `chorusvariety.py`.
 """
 
 from __future__ import annotations
@@ -219,17 +222,22 @@ def part_names_of(profile_dir: Path) -> list[str]:
 
 
 def export_truth(engine_dir: Path, engine_bin: Path | None, profile_dir: Path, seed: int, bars: int,
-                 out: Path, force: bool = False) -> Path:
-    """Vérité terrain d'une graine (réutilisée si présente) via `harmonium-cli --export --record-truth`."""
-    if out.is_file() and not force:
+                 out: Path, force: bool = False, tours: int | None = None, midi: Path | None = None) -> Path:
+    """Vérité terrain d'une graine (réutilisée si présente) via `harmonium-cli --export --record-truth`.
+    `tours` : `--tours N` (chorus de la phase 019) ; `midi` : écrit aussi `--record-midi` (programmes par piste)."""
+    if out.is_file() and not force and (midi is None or midi.is_file()):
         return out
     out.parent.mkdir(parents=True, exist_ok=True)
     tail = ["--export", "--bars", str(bars), "--profile", str(profile_dir), "--seed", str(seed),
             "--record-truth", str(out)]
+    if tours is not None:
+        tail += ["--tours", str(tours)]
+    if midi is not None:
+        tail += ["--record-midi", str(midi)]
     cmd = ([str(engine_bin)] + tail if engine_bin else
            ["cargo", "run", "-q", "-p", "harmonium-cli", "--release",
             "--manifest-path", str(engine_dir / "Cargo.toml"), "--"] + tail)
-    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=900)
+    proc = subprocess.run(cmd, capture_output=True, text=True, timeout=900, cwd=engine_dir)   # `assets/` du moteur
     if proc.returncode != 0 or not out.is_file():
         raise RuntimeError(f"export moteur en échec (graine {seed}) :\n{' '.join(cmd)}\n"
                            f"{proc.stdout[-600:]}{proc.stderr[-1200:]}")
@@ -281,7 +289,13 @@ def build_parser(add_help: bool = True) -> argparse.ArgumentParser:
     p.add_argument("--profile", action="append", required=True,
                    help="Id d'un profil de <moteur>/profiles/ ou dossier de profil (répétable)")
     p.add_argument("--seeds", type=int, default=16, help="Graines 1..N (défaut : 16)")
-    p.add_argument("--bars", type=int, default=64, help="Mesures par graine (défaut : 64)")
+    p.add_argument("--bars", type=int, default=64, help="Mesures par graine (défaut : 64 ; ignoré avec --chorus)")
+    p.add_argument("--chorus", type=int, default=None, metavar="N",
+                   help="Variance par chorus (phase 019, V0) : N chorus par graine (`--tours N` du moteur), "
+                        "mesures calculées par une sonde d'un tour ; couches accords, comping, basse, batterie, "
+                        "mélodie, orchestration, densité, intensité")
+    p.add_argument("--steady-from", type=int, default=3,
+                   help="Avec --chorus : rang du chorus à partir duquel les entrées de couches par tour sont passées (défaut : 3)")
     p.add_argument("--engine-dir", default="../harmonium", help="Dépôt du moteur (Cargo.toml)")
     p.add_argument("--engine-bin", default=None, help="Binaire harmonium-cli déjà compilé (évite cargo run)")
     p.add_argument("--work-dir", default="target/seed_variety", help="Vérités terrain (cache, hors dépôt)")
@@ -293,6 +307,9 @@ def build_parser(add_help: bool = True) -> argparse.ArgumentParser:
 
 
 def run(args: argparse.Namespace) -> int:
+    if args.chorus:
+        from . import chorusvariety
+        return chorusvariety.run(args)
     engine_dir = Path(args.engine_dir).expanduser().resolve()
     engine_bin = Path(args.engine_bin).expanduser().resolve() if args.engine_bin else None
     seeds = list(range(1, args.seeds + 1))
