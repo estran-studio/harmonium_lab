@@ -279,6 +279,30 @@ backing-jtd-tempo: setup ## JTD : swing et micro-timing par classe de tempo, cou
 
 backing-l2: backing-gmd backing-wjazzd backing-jtd-tempo ## Ingestion L2 complète (GMD, WJazzD sous-ensembles, JTD par tempo)
 
+# ── Mélodie swing (phase 019, E12) : cellules synthétisées depuis des statistiques de WJazzD ──
+# make melody-measures    statistiques agrégées des solos swing : references/wjazzd-melodie/measures-melody.json
+# make melody-cells       banque de cellules synthétisée (refus de toute suite de N notes d'un solo) : references/wjazzd-melodie/cells.toml
+# make melody-check       [FILE=<cells.toml>] aucune suite de N notes du fichier ne figure dans un solo
+# make melody-compare     mélodie générée contre WJazzD : MELODY_RUNS="--truth a.json --label nom ..." [MELODY_LEVELS="nom=2"]
+MELODY_OUT ?= references/wjazzd-melodie
+MELODY_SEED ?= 12
+.PHONY: melody-measures melody-cells melody-check melody-compare
+
+melody-measures: setup ## Statistiques agrégées de la mélodie des solos swing (WJazzD, ODbL) : references/wjazzd-melodie/
+	$(PYTHON) -m harmonium_lab.backing.melody_measures -o $(MELODY_OUT)/measures-melody.json
+
+melody-cells: setup ## Banque de cellules swing synthétisée, refus de copie : references/wjazzd-melodie/cells.toml
+	$(PYTHON) -m harmonium_lab.backing.melody_cells --generate --seed $(MELODY_SEED) --measures $(MELODY_OUT)/measures-melody.json -o $(MELODY_OUT)/cells.toml
+	$(PYTHON) -m harmonium_lab.backing.melody_cells --levels $(MELODY_OUT)/cells.toml
+
+melody-check: setup ## Aucune suite de N notes d'un solo dans FILE (défaut : la banque générée)
+	$(PYTHON) -m harmonium_lab.backing.melody_cells --check $(if $(FILE),$(FILE),$(MELODY_OUT)/cells.toml)
+
+melody-compare: setup ## Mélodie générée vs WJazzD : MELODY_RUNS="--truth a.json --label nom ..." [MELODY_LEVELS="nom=2"]
+	@test -n "$(MELODY_RUNS)" || (echo 'Usage: make melody-compare MELODY_RUNS="--truth a.json --label nom"'; exit 2)
+	$(PYTHON) -m harmonium_lab.backing.melody_compare $(MELODY_RUNS) $(foreach l,$(MELODY_LEVELS),--level $(l)) \
+		-o $(MELODY_OUT)/compare-melody.json --markdown
+
 # ════════════════════════════════════════════════════════════════════
 
 # ════════════════════════════════════════════════════════════════════
