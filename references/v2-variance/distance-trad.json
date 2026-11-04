@@ -1,0 +1,76 @@
+{
+ "schema": 1,
+ "seeds": 16,
+ "bars": 32,
+ "profiles": {
+  "reel_quebecois": {
+   "reference": "trad-reel",
+   "type": "reel",
+   "corpus": "trad",
+   "mean_abs_z": 0.43,
+   "deviations": 28
+  },
+  "reel_acadien": {
+   "reference": "trad-acadienne-reel",
+   "type": "reel",
+   "corpus": "acadienne",
+   "mean_abs_z": 0.764,
+   "deviations": 28,
+   "mean_abs_z_corpus_trad": 0.672
+  },
+  "reel_britannique_coloniale": {
+   "reference": "trad-britannique_coloniale-reel",
+   "type": "reel",
+   "corpus": "britannique_coloniale",
+   "mean_abs_z": 0.446,
+   "deviations": 28,
+   "mean_abs_z_corpus_trad": 0.845
+  },
+  "gigue_quebecoise": {
+   "reference": "trad-jig",
+   "type": "jig",
+   "corpus": "trad",
+   "mean_abs_z": 0.587,
+   "deviations": 26
+  },
+  "gigue_acadienne": {
+   "reference": "trad-acadienne-jig",
+   "type": "jig",
+   "corpus": "acadienne",
+   "mean_abs_z": 0.782,
+   "deviations": 26,
+   "mean_abs_z_corpus_trad": 0.7
+  },
+  "gigue_britannique_coloniale": {
+   "reference": "trad-britannique_coloniale-jig",
+   "type": "jig",
+   "corpus": "britannique_coloniale",
+   "mean_abs_z": 0.596,
+   "deviations": 26,
+   "mean_abs_z_corpus_trad": 0.65
+  },
+  "marche_britannique_coloniale": {
+   "reference": "trad-britannique_coloniale-march",
+   "type": "march",
+   "corpus": "britannique_coloniale",
+   "mean_abs_z": 0.908,
+   "deviations": 28,
+   "mean_abs_z_corpus_trad": 1.012
+  },
+  "valse_quebecoise": {
+   "reference": "trad-waltz",
+   "type": "waltz",
+   "corpus": "trad",
+   "mean_abs_z": 0.632,
+   "deviations": 26
+  },
+  "valse_britannique_coloniale": {
+   "reference": "trad-britannique_coloniale-waltz",
+   "type": "waltz",
+   "corpus": "britannique_coloniale",
+   "mean_abs_z": 1.002,
+   "deviations": 26,
+   "mean_abs_z_corpus_trad": 0.721
+  }
+ }
+}

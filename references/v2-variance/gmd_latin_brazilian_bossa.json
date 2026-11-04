@@ -1,0 +1,1646 @@
+{
+ "profile": "gmd_latin_brazilian_bossa",
+ "variant": "defaut",
+ "chorus": 4,
+ "seeds": 16,
+ "variance": {
+  "seeds": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16
+  ],
+  "choruses": 4,
+  "bars_per_chorus": 16,
+  "steady_from": 3,
+  "intra": {
+   "all": {
+    "choruses": 4,
+    "active_share": 1.0,
+    "adjacent": {
+     "exact": 1.0,
+     "graded": 0.4679,
+     "pairs": 48
+    },
+    "adjacent_steady": {
+     "exact": 1.0,
+     "graded": 0.5232,
+     "pairs": 16
+    },
+    "any_pair": {
+     "exact": 1.0,
+     "p10": 1.0,
+     "p50": 1.0,
+     "p90": 1.0,
+     "pairs": 96
+    },
+    "identical_pairs": 0.0,
+    "distinct_choruses_mean": 4.0,
+    "adjacent_by_part": {
+     "Grille": 1.0
+    },
+    "matrix": [
+     [
+      null,
+      1.0,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      null,
+      1.0,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      null,
+      1.0
+     ],
+     [
+      1.0,
+      1.0,
+      1.0,
+      null
+     ]
+    ]
+   },
+   "chords": {
+    "choruses": 4,
+    "active_share": 1.0,
+    "adjacent": {
+     "exact": 0.0,
+     "graded": 0.0,
+     "pairs": 48
+    },
+    "adjacent_steady": {
+     "exact": 0.0,
+     "graded": 0.0,
+     "pairs": 16
+    },
+    "any_pair": {
+     "exact": 0.0,
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "pairs": 96
+    },
+    "identical_pairs": 1.0,
+    "distinct_choruses_mean": 1.0,
+    "adjacent_by_part": {
+     "Grille": 0.0
+    },
+    "matrix": [
+     [
+      null,
+      0.0,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      null,
+      0.0,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      null,
+      0.0
+     ],
+     [
+      0.0,
+      0.0,
+      0.0,
+      null
+     ]
+    ]
+   },
+   "comping_rhythm": {
+    "choruses": 4,
+    "active_share": 0.9987,
+    "adjacent": {
+     "exact": 0.8431,
+     "graded": 0.5458,
+     "pairs": 48
+    },
+    "adjacent_steady": {
+     "exact": 1.0,
+     "graded": 0.6728,
+     "pairs": 16
+    },
+    "any_pair": {
+     "exact": 0.8398,
+     "p10": 0.4833,
+     "p50": 1.0,
+     "p90": 1.0,
+     "pairs": 96
+    },
+    "identical_pairs": 0.0,
+    "distinct_choruses_mean": 4.0,
+    "adjacent_by_part": {
+     "Grille": 0.8402
+    },
+    "matrix": [
+     [
+      null,
+      0.8242,
+      0.8594,
+      0.65
+     ],
+     [
+      0.8242,
+      null,
+      0.7052,
+      1.0
+     ],
+     [
+      0.8594,
+      0.7052,
+      null,
+      1.0
+     ],
+     [
+      0.65,
+      1.0,
+      1.0,
+      null
+     ]
+    ]
+   },
+   "comping_voicing": {
+    "choruses": 4,
+    "active_share": 0.9987,
+    "adjacent": {
+     "exact": 0.9607,
+     "graded": 0.7333,
+     "pairs": 48
+    },
+    "adjacent_steady": {
+     "exact": 1.0,
+     "graded": 0.739,
+     "pairs": 16
+    },
+    "any_pair": {
+     "exact": 0.9532,
+     "p10": 0.8667,
+     "p50": 1.0,
+     "p90": 1.0,
+     "pairs": 96
+    },
+    "identical_pairs": 0.0,
+    "distinct_choruses_mean": 4.0,
+    "adjacent_by_part": {
+     "Grille": 0.9601
+    },
+    "matrix": [
+     [
+      null,
+      0.9336,
+      0.9453,
+      0.8917
+     ],
+     [
+      0.9336,
+      null,
+      0.9484,
+      1.0
+     ],
+     [
+      0.9453,
+      0.9484,
+      null,
+      1.0
+     ],
+     [
+      0.8917,
+      1.0,
+      1.0,
+      null
+     ]
+    ]
+   },
+   "bass": {
+    "choruses": 4,
+    "active_share": 1.0,
+    "adjacent": {
+     "exact": 0.7605,
+     "graded": 0.4439,
+     "pairs": 48
+    },
+    "adjacent_steady": {
+     "exact": 0.7542,
+     "graded": 0.4527,
+     "pairs": 16
+    },
+    "any_pair": {
+     "exact": 0.7562,
+     "p10": 0.625,
+     "p50": 0.75,
+     "p90": 0.875,
+     "pairs": 96
+    },
+    "identical_pairs": 0.0,
+    "distinct_choruses_mean": 4.0,
+    "adjacent_by_part": {
+     "Grille": 0.7606
+    },
+    "matrix": [
+     [
+      null,
+      0.7148,
+      0.7266,
+      0.7333
+     ],
+     [
+      0.7148,
+      null,
+      0.8125,
+      0.7958
+     ],
+     [
+      0.7266,
+      0.8125,
+      null,
+      0.7542
+     ],
+     [
+      0.7333,
+      0.7958,
+      0.7542,
+      null
+     ]
+    ]
+   },
+   "drums": {
+    "choruses": 4,
+    "active_share": 1.0,
+    "adjacent": {
+     "exact": 0.9974,
+     "graded": 0.6174,
+     "pairs": 48
+    },
+    "adjacent_steady": {
+     "exact": 1.0,
+     "graded": 0.7512,
+     "pairs": 16
+    },
+    "any_pair": {
+     "exact": 0.9883,
+     "p10": 0.9354,
+     "p50": 1.0,
+     "p90": 1.0,
+     "pairs": 96
+    },
+    "identical_pairs": 0.0,
+    "distinct_choruses_mean": 4.0,
+    "adjacent_by_part": {
+     "Grille": 0.9973
+    },
+    "matrix": [
+     [
+      null,
+      1.0,
+      1.0,
+      0.9375
+     ],
+     [
+      1.0,
+      null,
+      0.9922,
+      1.0
+     ],
+     [
+      1.0,
+      0.9922,
+      null,
+      1.0
+     ],
+     [
+      0.9375,
+      1.0,
+      1.0,
+      null
+     ]
+    ]
+   },
+   "drums_kick": {
+    "choruses": 4,
+    "active_share": 1.0,
+    "adjacent": {
+     "exact": 0.8003,
+     "graded": 0.2344,
+     "pairs": 48
+    },
+    "adjacent_steady": {
+     "exact": 0.7917,
+     "graded": 0.221,
+     "pairs": 16
+    },
+    "any_pair": {
+     "exact": 0.7687,
+     "p10": 0.6458,
+     "p50": 0.8,
+     "p90": 0.875,
+     "pairs": 96
+    },
+    "identical_pairs": 0.0,
+    "distinct_choruses_mean": 4.0,
+    "adjacent_by_part": {
+     "Grille": 0.8005
+    },
+    "matrix": [
+     [
+      null,
+      0.793,
+      0.7656,
+      0.6792
+     ],
+     [
+      0.793,
+      null,
+      0.8164,
+      0.7667
+     ],
+     [
+      0.7656,
+      0.8164,
+      null,
+      0.7917
+     ],
+     [
+      0.6792,
+      0.7667,
+      0.7917,
+      null
+     ]
+    ]
+   },
+   "drums_snare": {
+    "choruses": 4,
+    "active_share": 0.9436,
+    "adjacent": {
+     "exact": 0.9724,
+     "graded": 0.8706,
+     "pairs": 48
+    },
+    "adjacent_steady": {
+     "exact": 0.9669,
+     "graded": 0.8901,
+     "pairs": 16
+    },
+    "any_pair": {
+     "exact": 0.9673,
+     "p10": 0.9231,
+     "p50": 1.0,
+     "p90": 1.0,
+     "pairs": 96
+    },
+    "identical_pairs": 0.0,
+    "distinct_choruses_mean": 4.0,
+    "adjacent_by_part": {
+     "Grille": 0.9732
+    },
+    "matrix": [
+     [
+      null,
+      0.9669,
+      0.9758,
+      0.9195
+     ],
+     [
+      0.9669,
+      null,
+      0.9836,
+      0.9914
+     ],
+     [
+      0.9758,
+      0.9836,
+      null,
+      0.9669
+     ],
+     [
+      0.9195,
+      0.9914,
+      0.9669,
+      null
+     ]
+    ]
+   },
+   "drums_hihat": {
+    "choruses": 4,
+    "active_share": 1.0,
+    "adjacent": {
+     "exact": 0.8603,
+     "graded": 0.6573,
+     "pairs": 48
+    },
+    "adjacent_steady": {
+     "exact": 0.9833,
+     "graded": 0.8153,
+     "pairs": 16
+    },
+    "any_pair": {
+     "exact": 0.7867,
+     "p10": 0.1667,
+     "p50": 1.0,
+     "p90": 1.0,
+     "pairs": 96
+    },
+    "identical_pairs": 0.0,
+    "distinct_choruses_mean": 4.0,
+    "adjacent_by_part": {
+     "Grille": 0.8577
+    },
+    "matrix": [
+     [
+      null,
+      1.0,
+      0.9766,
+      0.1625
+     ],
+     [
+      1.0,
+      null,
+      0.5977,
+      1.0
+     ],
+     [
+      0.9766,
+      0.5977,
+      null,
+      0.9833
+     ],
+     [
+      0.1625,
+      1.0,
+      0.9833,
+      null
+     ]
+    ]
+   },
+   "drums_ride": {
+    "choruses": 4,
+    "active_share": 0.9917,
+    "adjacent": {
+     "exact": 0.8789,
+     "graded": 0.7259,
+     "pairs": 48
+    },
+    "adjacent_steady": {
+     "exact": 1.0,
+     "graded": 1.0,
+     "pairs": 16
+    },
+    "any_pair": {
+     "exact": 0.9273,
+     "p10": 0.6813,
+     "p50": 1.0,
+     "p90": 1.0,
+     "pairs": 80
+    },
+    "identical_pairs": 0.0,
+    "distinct_choruses_mean": 3.0,
+    "adjacent_by_part": {
+     "Grille": 0.8753
+    },
+    "matrix": [
+     [
+      null,
+      1.0,
+      1.0,
+      null
+     ],
+     [
+      1.0,
+      null,
+      0.6367,
+      1.0
+     ],
+     [
+      1.0,
+      0.6367,
+      null,
+      1.0
+     ],
+     [
+      null,
+      1.0,
+      1.0,
+      null
+     ]
+    ]
+   },
+   "drums_other": {
+    "choruses": 4,
+    "active_share": 0.2188,
+    "adjacent": {
+     "exact": 0.8273,
+     "graded": 0.8273,
+     "pairs": 48
+    },
+    "adjacent_steady": {
+     "exact": 0.849,
+     "graded": 0.849,
+     "pairs": 16
+    },
+    "any_pair": {
+     "exact": 0.8747,
+     "p10": 0.5286,
+     "p50": 1.0,
+     "p90": 1.0,
+     "pairs": 95
+    },
+    "identical_pairs": 0.0211,
+    "distinct_choruses_mean": 3.812,
+    "adjacent_by_part": {
+     "Grille": 0.8303
+    },
+    "matrix": [
+     [
+      null,
+      0.9323,
+      0.9406,
+      0.9111
+     ],
+     [
+      0.9323,
+      null,
+      0.7006,
+      0.9167
+     ],
+     [
+      0.9406,
+      0.7006,
+      null,
+      0.849
+     ],
+     [
+      0.9111,
+      0.9167,
+      0.849,
+      null
+     ]
+    ]
+   },
+   "melody": {
+    "choruses": 4,
+    "active_share": 0.0,
+    "adjacent": {
+     "exact": null,
+     "graded": null,
+     "pairs": 0
+    },
+    "adjacent_steady": {
+     "exact": null,
+     "graded": null,
+     "pairs": 0
+    },
+    "any_pair": {
+     "exact": null,
+     "p10": null,
+     "p50": null,
+     "p90": null,
+     "pairs": 0
+    },
+    "identical_pairs": null,
+    "distinct_choruses_mean": 1.0,
+    "adjacent_by_part": {},
+    "matrix": [
+     [
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      null,
+      null,
+      null,
+      null
+     ],
+     [
+      null,
+      null,
+      null,
+      null
+     ]
+    ]
+   },
+   "orchestration": {
+    "choruses": 4,
+    "active_share": 1.0,
+    "adjacent": {
+     "exact": 0.0208,
+     "graded": 0.0052,
+     "pairs": 48
+    },
+    "adjacent_steady": {
+     "exact": 0.0625,
+     "graded": 0.0156,
+     "pairs": 16
+    },
+    "any_pair": {
+     "exact": 0.0312,
+     "p10": 0.0,
+     "p50": 0.0,
+     "p90": 0.0,
+     "pairs": 96
+    },
+    "identical_pairs": 0.9688,
+    "distinct_choruses_mean": 1.062,
+    "adjacent_by_part": {
+     "Grille": 0.0199
+    },
+    "matrix": [
+     [
+      null,
+      0.0,
+      0.0,
+      0.0625
+     ],
+     [
+      0.0,
+      null,
+      0.0,
+      0.0625
+     ],
+     [
+      0.0,
+      0.0,
+      null,
+      0.0625
+     ],
+     [
+      0.0625,
+      0.0625,
+      0.0625,
+      null
+     ]
+    ]
+   }
+  },
+  "inter": {
+   "all": {
+    "choruses": 4,
+    "distinct_runs": 16,
+    "share": 1.0,
+    "share_active": 1.0,
+    "diversity": 1.0,
+    "distinct_mean": 16.0,
+    "graded": 0.6524,
+    "by_chorus_share_active": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "by_chorus_graded": [
+     0.6512,
+     0.6695,
+     0.6848,
+     0.604
+    ]
+   },
+   "chords": {
+    "choruses": 4,
+    "distinct_runs": 5,
+    "share": 1.0,
+    "share_active": 1.0,
+    "diversity": 0.2158,
+    "distinct_mean": 4.237,
+    "graded": 0.7157,
+    "by_chorus_share_active": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "by_chorus_graded": [
+     0.7172,
+     0.7172,
+     0.7172,
+     0.7111
+    ]
+   },
+   "comping_rhythm": {
+    "choruses": 4,
+    "distinct_runs": 16,
+    "share": 0.95,
+    "share_active": 0.95,
+    "diversity": 0.1772,
+    "distinct_mean": 3.657,
+    "graded": 0.38,
+    "by_chorus_share_active": [
+     1.0,
+     1.0,
+     1.0,
+     0.8
+    ],
+    "by_chorus_graded": [
+     0.4338,
+     0.4107,
+     0.4514,
+     0.2243
+    ]
+   },
+   "comping_voicing": {
+    "choruses": 4,
+    "distinct_runs": 16,
+    "share": 1.0,
+    "share_active": 1.0,
+    "diversity": 0.9735,
+    "distinct_mean": 15.603,
+    "graded": 0.9779,
+    "by_chorus_share_active": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "by_chorus_graded": [
+     0.983,
+     0.9763,
+     0.9687,
+     0.9837
+    ]
+   },
+   "bass": {
+    "choruses": 4,
+    "distinct_runs": 16,
+    "share": 1.0,
+    "share_active": 1.0,
+    "diversity": 0.9297,
+    "distinct_mean": 14.945,
+    "graded": 0.9157,
+    "by_chorus_share_active": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "by_chorus_graded": [
+     0.9144,
+     0.9176,
+     0.9176,
+     0.9132
+    ]
+   },
+   "drums": {
+    "choruses": 4,
+    "distinct_runs": 16,
+    "share": 1.0,
+    "share_active": 1.0,
+    "diversity": 0.7817,
+    "distinct_mean": 12.726,
+    "graded": 0.2666,
+    "by_chorus_share_active": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "by_chorus_graded": [
+     0.2075,
+     0.3205,
+     0.3506,
+     0.1877
+    ]
+   },
+   "drums_kick": {
+    "choruses": 4,
+    "distinct_runs": 16,
+    "share": 1.0,
+    "share_active": 1.0,
+    "diversity": 0.3091,
+    "distinct_mean": 5.636,
+    "graded": 0.2195,
+    "by_chorus_share_active": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "by_chorus_graded": [
+     0.193,
+     0.2505,
+     0.2471,
+     0.1876
+    ]
+   },
+   "drums_snare": {
+    "choruses": 4,
+    "distinct_runs": 16,
+    "share": 1.0,
+    "share_active": 1.0,
+    "diversity": 0.5164,
+    "distinct_mean": 8.746,
+    "graded": 0.7719,
+    "by_chorus_share_active": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "by_chorus_graded": [
+     0.7449,
+     0.8014,
+     0.81,
+     0.7314
+    ]
+   },
+   "drums_hihat": {
+    "choruses": 4,
+    "distinct_runs": 16,
+    "share": 0.726,
+    "share_active": 0.726,
+    "diversity": 0.0978,
+    "distinct_mean": 2.467,
+    "graded": 0.1979,
+    "by_chorus_share_active": [
+     0.4375,
+     1.0,
+     1.0,
+     0.4667
+    ],
+    "by_chorus_graded": [
+     0.082,
+     0.2778,
+     0.3644,
+     0.0673
+    ]
+   },
+   "drums_ride": {
+    "choruses": 4,
+    "distinct_runs": 16,
+    "share": 0.5,
+    "share_active": 0.5,
+    "diversity": 0.0802,
+    "distinct_mean": 2.203,
+    "graded": 0.0879,
+    "by_chorus_share_active": [
+     0.0,
+     1.0,
+     1.0,
+     0.0
+    ],
+    "by_chorus_graded": [
+     0.0,
+     0.1563,
+     0.1952,
+     0.0
+    ]
+   },
+   "drums_other": {
+    "choruses": 4,
+    "distinct_runs": 16,
+    "share": 0.476,
+    "share_active": 1.0,
+    "diversity": 0.0317,
+    "distinct_mean": 1.476,
+    "graded": 0.3541,
+    "by_chorus_share_active": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "by_chorus_graded": [
+     0.3,
+     0.4,
+     0.4688,
+     0.2476
+    ]
+   },
+   "melody": {
+    "choruses": 4,
+    "distinct_runs": 1,
+    "share": 0.0,
+    "share_active": 0.0,
+    "diversity": 0.0,
+    "distinct_mean": 1.0,
+    "graded": 0.0,
+    "by_chorus_share_active": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    "by_chorus_graded": [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ]
+   },
+   "orchestration": {
+    "choruses": 4,
+    "distinct_runs": 15,
+    "share": 1.0,
+    "share_active": 1.0,
+    "diversity": 0.9167,
+    "distinct_mean": 14.75,
+    "graded": 0.5182,
+    "by_chorus_share_active": [
+     1.0,
+     1.0,
+     1.0,
+     1.0
+    ],
+    "by_chorus_graded": [
+     0.5187,
+     0.5187,
+     0.5187,
+     0.5167
+    ]
+   }
+  },
+  "numeric": {
+   "all": {
+    "density": {
+     "trajectory": [
+      26.6016,
+      31.3203,
+      31.3867,
+      24.1875
+     ],
+     "trajectory_range": 0.2537,
+     "intra": {
+      "adjacent_change": 0.1611,
+      "cv": 0.1134
+     },
+     "inter": {
+      "cv": 0.0744
+     }
+    },
+    "velocity": {
+     "trajectory": [
+      65.7962,
+      74.5272,
+      74.8897,
+      62.5458
+     ],
+     "trajectory_range": 0.1778,
+     "intra": {
+      "adjacent_change": 0.1073,
+      "cv": 0.0784
+     },
+     "inter": {
+      "cv": 0.0318
+     }
+    }
+   },
+   "comping": {
+    "density": {
+     "trajectory": [
+      6.918,
+      10.7656,
+      10.6875,
+      4.7833
+     ],
+     "trajectory_range": 0.7218,
+     "intra": {
+      "adjacent_change": 0.4606,
+      "cv": 0.3254
+     },
+     "inter": {
+      "cv": 0.2429
+     }
+    },
+    "velocity": {
+     "trajectory": [
+      61.3301,
+      69.8767,
+      69.8364,
+      56.8511
+     ],
+     "trajectory_range": 0.202,
+     "intra": {
+      "adjacent_change": 0.1177,
+      "cv": 0.0883
+     },
+     "inter": {
+      "cv": 0.0325
+     }
+    }
+   },
+   "bass": {
+    "density": {
+     "trajectory": [
+      4.457,
+      4.5938,
+      4.4688,
+      4.1667
+     ],
+     "trajectory_range": 0.0966,
+     "intra": {
+      "adjacent_change": 0.0641,
+      "cv": 0.0504
+     },
+     "inter": {
+      "cv": 0.0725
+     }
+    },
+    "velocity": {
+     "trajectory": [
+      78.5908,
+      84.8866,
+      85.1666,
+      76.3215
+     ],
+     "trajectory_range": 0.1089,
+     "intra": {
+      "adjacent_change": 0.0672,
+      "cv": 0.0484
+     },
+     "inter": {
+      "cv": 0.0223
+     }
+    }
+   },
+   "drums": {
+    "density": {
+     "trajectory": [
+      15.2266,
+      15.9609,
+      16.2305,
+      15.2375
+     ],
+     "trajectory_range": 0.0641,
+     "intra": {
+      "adjacent_change": 0.0446,
+      "cv": 0.0309
+     },
+     "inter": {
+      "cv": 0.0203
+     }
+    },
+    "velocity": {
+     "trajectory": [
+      63.9793,
+      74.5841,
+      75.3103,
+      60.5702
+     ],
+     "trajectory_range": 0.2148,
+     "intra": {
+      "adjacent_change": 0.1323,
+      "cv": 0.095
+     },
+     "inter": {
+      "cv": 0.0363
+     }
+    }
+   },
+   "engine": {
+    "intensity": {
+     "trajectory": [
+      0.5,
+      0.5,
+      0.5,
+      0.5
+     ],
+     "trajectory_range": 0.0,
+     "intra": {
+      "adjacent_change": 0.0,
+      "cv": 0.0
+     },
+     "inter": {
+      "cv": 0.0
+     }
+    }
+   }
+  },
+  "orchestration_programs": {
+   "0": [
+    0
+   ],
+   "1": [
+    4,
+    24,
+    25,
+    26
+   ],
+   "2": [
+    32,
+    33,
+    35
+   ],
+   "9": [
+    128000,
+    128008,
+    128032,
+    128040
+   ]
+  },
+  "profile": "gmd_latin_brazilian_bossa",
+  "chorus_requested": 4,
+  "bars": 72
+ },
+ "habillage": {
+  "distinct": 16,
+  "distinct_hote_tempo_tonalite": 16,
+  "tempo_clusters": 4,
+  "tempo_min_max": [
+   104.0,
+   176.0
+  ],
+  "tonalites": 6,
+  "programmes": {
+   "melody": [
+    0
+   ],
+   "chords": [
+    24,
+    25,
+    26,
+    4
+   ],
+   "bass": [
+    32,
+    33,
+    35
+   ],
+   "kit": [
+    [
+     128,
+     0
+    ],
+    [
+     128,
+     32
+    ],
+    [
+     128,
+     40
+    ],
+    [
+     128,
+     8
+    ]
+   ]
+  },
+  "voicings": [
+   "drop_2",
+   "notes_guides",
+   "sans_fondamentale",
+   "shell",
+   "structure_superieure"
+  ],
+  "arcs": {
+   "orchestre": 2,
+   "intime": 14
+  },
+  "swings": [
+   0.5
+  ],
+  "par_graine": [
+   {
+    "tempo": 125.0,
+    "key": 2,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 24,
+    "bass": 32,
+    "kit": [
+     128,
+     40
+    ],
+    "voicing": "sans_fondamentale",
+    "arc": "orchestre",
+    "session": {
+     "tempo": "medium",
+     "tonalite": "re",
+     "comping": "nylon",
+     "basse": "contrebasse",
+     "kit": "balais",
+     "voicing": "sans_fondamentale",
+     "registre": "grave",
+     "energie": "doux",
+     "arc": "orchestre"
+    }
+   },
+   {
+    "tempo": 110.0,
+    "key": 0,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 4,
+    "bass": 35,
+    "kit": [
+     128,
+     8
+    ],
+    "voicing": "notes_guides",
+    "arc": "intime",
+    "session": {
+     "tempo": "lent",
+     "tonalite": "do",
+     "comping": "piano_electrique",
+     "basse": "fretless",
+     "kit": "room",
+     "voicing": "notes_guides",
+     "registre": "normal",
+     "energie": "plein",
+     "arc": "intime"
+    }
+   },
+   {
+    "tempo": 131.0,
+    "key": 3,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 26,
+    "bass": 33,
+    "kit": [
+     128,
+     32
+    ],
+    "voicing": "drop_2",
+    "arc": "intime",
+    "session": {
+     "tempo": "medium",
+     "tonalite": "mi_bemol",
+     "comping": "jazz",
+     "basse": "basse_aux_doigts",
+     "kit": "jazz",
+     "voicing": "drop_2",
+     "registre": "normal",
+     "energie": "moyen",
+     "arc": "intime"
+    }
+   },
+   {
+    "tempo": 131.0,
+    "key": 5,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 25,
+    "bass": 35,
+    "kit": [
+     128,
+     32
+    ],
+    "voicing": "shell",
+    "arc": "intime",
+    "session": {
+     "tempo": "medium",
+     "tonalite": "fa",
+     "comping": "acier",
+     "basse": "fretless",
+     "kit": "jazz",
+     "voicing": "shell",
+     "registre": "normal",
+     "energie": "doux",
+     "arc": "intime"
+    }
+   },
+   {
+    "tempo": 176.0,
+    "key": 3,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 24,
+    "bass": 33,
+    "kit": [
+     128,
+     8
+    ],
+    "voicing": "sans_fondamentale",
+    "arc": "intime",
+    "session": {
+     "tempo": "vif",
+     "tonalite": "mi_bemol",
+     "comping": "nylon",
+     "basse": "basse_aux_doigts",
+     "kit": "room",
+     "voicing": "sans_fondamentale",
+     "registre": "normal",
+     "energie": "doux",
+     "arc": "intime"
+    }
+   },
+   {
+    "tempo": 160.0,
+    "key": 0,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 4,
+    "bass": 32,
+    "kit": [
+     128,
+     40
+    ],
+    "voicing": "notes_guides",
+    "arc": "orchestre",
+    "session": {
+     "tempo": "vif",
+     "tonalite": "do",
+     "comping": "piano_electrique",
+     "basse": "contrebasse",
+     "kit": "balais",
+     "voicing": "notes_guides",
+     "registre": "normal",
+     "energie": "moyen",
+     "arc": "orchestre"
+    }
+   },
+   {
+    "tempo": 126.0,
+    "key": 7,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 25,
+    "bass": 32,
+    "kit": [
+     128,
+     32
+    ],
+    "voicing": "sans_fondamentale",
+    "arc": "intime",
+    "session": {
+     "tempo": "medium",
+     "tonalite": "sol",
+     "comping": "acier",
+     "basse": "contrebasse",
+     "kit": "jazz",
+     "voicing": "sans_fondamentale",
+     "registre": "grave",
+     "energie": "plein",
+     "arc": "intime"
+    }
+   },
+   {
+    "tempo": 107.0,
+    "key": 3,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 24,
+    "bass": 32,
+    "kit": [
+     128,
+     32
+    ],
+    "voicing": "drop_2",
+    "arc": "intime",
+    "session": {
+     "tempo": "lent",
+     "tonalite": "mi_bemol",
+     "comping": "nylon",
+     "basse": "contrebasse",
+     "kit": "jazz",
+     "voicing": "drop_2",
+     "registre": "normal",
+     "energie": "moyen",
+     "arc": "intime"
+    }
+   },
+   {
+    "tempo": 104.0,
+    "key": 0,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 4,
+    "bass": 32,
+    "kit": [
+     128,
+     8
+    ],
+    "voicing": "drop_2",
+    "arc": "intime",
+    "session": {
+     "tempo": "lent",
+     "tonalite": "do",
+     "comping": "piano_electrique",
+     "basse": "contrebasse",
+     "kit": "room",
+     "voicing": "drop_2",
+     "registre": "normal",
+     "energie": "moyen",
+     "arc": "intime"
+    }
+   },
+   {
+    "tempo": 132.0,
+    "key": 2,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 26,
+    "bass": 33,
+    "kit": [
+     128,
+     40
+    ],
+    "voicing": "notes_guides",
+    "arc": "intime",
+    "session": {
+     "tempo": "medium",
+     "tonalite": "re",
+     "comping": "jazz",
+     "basse": "basse_aux_doigts",
+     "kit": "balais",
+     "voicing": "notes_guides",
+     "registre": "normal",
+     "energie": "moyen",
+     "arc": "intime"
+    }
+   },
+   {
+    "tempo": 108.0,
+    "key": 10,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 4,
+    "bass": 33,
+    "kit": [
+     128,
+     8
+    ],
+    "voicing": "drop_2",
+    "arc": "intime",
+    "session": {
+     "tempo": "lent",
+     "tonalite": "si_bemol",
+     "comping": "piano_electrique",
+     "basse": "basse_aux_doigts",
+     "kit": "room",
+     "voicing": "drop_2",
+     "registre": "grave",
+     "energie": "doux",
+     "arc": "intime"
+    }
+   },
+   {
+    "tempo": 132.0,
+    "key": 7,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 24,
+    "bass": 32,
+    "kit": [
+     128,
+     0
+    ],
+    "voicing": "structure_superieure",
+    "arc": "intime",
+    "session": {
+     "tempo": "medium",
+     "tonalite": "sol",
+     "comping": "nylon",
+     "basse": "contrebasse",
+     "kit": "standard",
+     "voicing": "structure_superieure",
+     "registre": "normal",
+     "energie": "moyen",
+     "arc": "intime"
+    }
+   },
+   {
+    "tempo": 175.0,
+    "key": 3,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 24,
+    "bass": 32,
+    "kit": [
+     128,
+     32
+    ],
+    "voicing": "shell",
+    "arc": "intime",
+    "session": {
+     "tempo": "vif",
+     "tonalite": "mi_bemol",
+     "comping": "nylon",
+     "basse": "contrebasse",
+     "kit": "jazz",
+     "voicing": "shell",
+     "registre": "normal",
+     "energie": "moyen",
+     "arc": "intime"
+    }
+   },
+   {
+    "tempo": 122.0,
+    "key": 7,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 24,
+    "bass": 32,
+    "kit": [
+     128,
+     8
+    ],
+    "voicing": "shell",
+    "arc": "intime",
+    "session": {
+     "tempo": "medium",
+     "tonalite": "sol",
+     "comping": "nylon",
+     "basse": "contrebasse",
+     "kit": "room",
+     "voicing": "shell",
+     "registre": "grave",
+     "energie": "moyen",
+     "arc": "intime"
+    }
+   },
+   {
+    "tempo": 112.0,
+    "key": 0,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 4,
+    "bass": 32,
+    "kit": [
+     128,
+     32
+    ],
+    "voicing": "drop_2",
+    "arc": "intime",
+    "session": {
+     "tempo": "lent",
+     "tonalite": "do",
+     "comping": "piano_electrique",
+     "basse": "contrebasse",
+     "kit": "jazz",
+     "voicing": "drop_2",
+     "registre": "normal",
+     "energie": "plein",
+     "arc": "intime"
+    }
+   },
+   {
+    "tempo": 169.0,
+    "key": 7,
+    "mode": "ionian",
+    "swing": 0.5,
+    "melody": 0,
+    "chords": 4,
+    "bass": 35,
+    "kit": [
+     128,
+     32
+    ],
+    "voicing": "notes_guides",
+    "arc": "intime",
+    "session": {
+     "tempo": "vif",
+     "tonalite": "sol",
+     "comping": "piano_electrique",
+     "basse": "fretless",
+     "kit": "jazz",
+     "voicing": "notes_guides",
+     "registre": "normal",
+     "energie": "doux",
+     "arc": "intime"
+    }
+   }
+  ]
+ },
+ "meter": {
+  "time_signature": "4/4",
+  "steps_per_bar": 16,
+  "min_bpm": 104.0,
+  "max_bpm": 180.0,
+  "model": "loop"
+ },
+ "bass_walking": false,
+ "engine_rev": "22c3afb"
+}
