@@ -61,7 +61,7 @@ plus proche ; une ligne conjointe s'y effondre en notes répétées (le bouche-t
 7 %). `melody_cells.realize` simule ce rapprochement sur les accords des grilles du profil
 (`CHORD_BATTERY`) et refuse toute cellule dont la part de notes répétées rendues dépasse deux fois celle du
 corpus (0,139). Contrôle : part de notes répétées simulée 0,27 pour la banque sans ce filtre, 0,29 mesurée
-sur la vérité terrain du moteur ; avec le filtre : 0,080 mesurée, contre 0,070 au corpus.
+sur la vérité terrain du moteur ; avec le filtre : 0,085 mesurée, contre 0,070 au corpus.
 
 **Niveaux E10.** Chaque cellule est rangée au plus bas niveau de difficulté qu'elle respecte (bornes de
 référence de `e10-e11-melodie-qr.md`) ; la banque garde au moins 15 % de chaque niveau 1 à 3 par rôle
@@ -104,26 +104,29 @@ pour copie (sur 53 175 tirages) ; `make melody-check` et le test
 ## Validation (`compare-melody.md`)
 
 8 graines (1 à 8), 176 mesures chacune (le premier air du profil), `--record-truth` du moteur sur
-`profiles/wjazzd_swing` ; `bouche_trou` = l'ancienne banque, mêmes accompagnement et arrangement avec la
+`profiles/wjazzd_swing` (avec `repeat_variation` 0,25, `tour_variation` 0,35 et les opérations `varied_end`
+et `repeated_notes`) ; `bouche_trou` = l'ancienne banque, mêmes accompagnement et arrangement avec la
 mélodie ajoutée, ses rôles `open` et `run` seuls. Distance de 0 (identique au corpus) à 1 ; mesures de
-`melody_measures.measure`, distances de `bass_compare`.
+`melody_measures.measure`, distances de `bass_compare`. Les chemins de la commande de `compare-melody.md`
+sont des fichiers temporaires du poste de génération.
 
 | Famille | bouche-trou | banque swing | niveau 1 | niveau 2 | niveau 3 |
 |---|---|---|---|---|---|
-| intervalles | 0,359 | **0,169** | 0,268 | 0,242 | 0,244 |
-| rythme | 0,383 | **0,181** | 0,592 | 0,581 | 0,199 |
-| accord (notes sur les temps) | 0,493 | 0,487 | 0,197 | 0,127 | 0,099 |
-| registre | 0,424 | **0,292** | 0,419 | 0,383 | 0,301 |
+| intervalles | 0,359 | **0,179** | 0,269 | 0,228 | 0,228 |
+| rythme | 0,383 | **0,200** | 0,590 | 0,586 | 0,224 |
+| accord (notes sur les temps) | 0,493 | 0,487 | 0,181 | 0,104 | 0,103 |
+| registre | 0,424 | **0,241** | 0,433 | 0,402 | 0,296 |
 | phrasé | 0,599 | 0,599 | 0,599 | 0,599 | 0,599 |
-| **agrégée** | 0,435 | **0,321** | 0,374 | 0,341 | 0,239 |
+| **agrégée** | 0,435 | **0,323** | 0,371 | 0,333 | 0,241 |
 
 - **Part des notes sur les temps forts dans l'accord courant** : corpus 0,530 ; banque swing **1,000**
-  (chaque note est ramenée à l'accord) ; niveaux 1 à 3 (`chord_fit = false`) 0,52 à 0,57.
-- **Notes répétées** : corpus 0,070 ; bouche-trou 0,390 ; banque 0,080.
-- **Attaques par mesure** : corpus 4,77 ; bouche-trou 7,96 ; banque 4,96.
+  (chaque note est ramenée à l'accord) ; niveaux 1 à 3 (`chord_fit = false`) 0,51 à 0,56.
+- **Notes répétées** : corpus 0,070 ; bouche-trou 0,390 ; banque 0,085.
+- **Attaques par mesure** : corpus 4,77 ; bouche-trou 7,96 ; banque 4,89.
 - **Difficulté E10** : aux niveaux 1, 2 et 3 (filtre de référence, `chord_fit = false`), 0 mesure hors bornes
   sur 1 400 par niveau ; pires valeurs saut / attaques / durée / ambitus : 4 / 4 / 2 / 7, 5 / 4 / 2 / 9,
-  7 / 7 / 1 / 12. Niveau 4 = le profil. La mesure de clôture de l'air n'est pas filtrée par le moteur : écartée.
+  7 / 8 / 1 / 12. Niveau 4 = le profil (sans filtre : saut jusqu'à 21 demi-tons, centile 99 des plus grands
+  sauts par mesure 14 comme au corpus). La mesure de clôture de l'air n'est pas filtrée par le moteur : écartée.
   Les niveaux 1 et 2 s'écartent du corpus pour le rythme **par construction** (≤ 4 attaques, durée ≥ 2).
 - **Hors de portée d'une banque** (manques de schéma, listés dans le compte rendu du moteur) : le **phrasé**
   (une cellule n'a pas de silence : phrases de 701 temps contre 5,5, silences 0,4 % contre 20 %) ; le
