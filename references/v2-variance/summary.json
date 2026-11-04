@@ -1,0 +1,3458 @@
+{
+ "thresholds": {
+  "habillages": 12,
+  "habillages_hote": 8,
+  "tempo_grappes": 2,
+  "inter_comping": 0.75,
+  "inter_drums": 0.5,
+  "identiques": 0.05,
+  "accords": 0.02,
+  "comping": 0.75,
+  "voicing": 0.65,
+  "drums": 0.3,
+  "drums_graded": 0.1,
+  "bass_walking": 0.8,
+  "bass_riff": 0.1,
+  "suites": 12,
+  "prog_comping": 3,
+  "prog_basse": 2,
+  "prog_kit": 2,
+  "orch_suites": 4,
+  "dens_range": 0.25,
+  "vel_range": 0.08
+ },
+ "criteria": {
+  "H1": "habillages distincts sur 16 graines ≥ 12 (sous grille, tempo et tonalité imposés : ≥ 8)",
+  "H2": "grappes de tempo (± 8 BPM) ≥ 2 (sans objet sous grille)",
+  "H3": "places où les graines diffèrent : comping rythme ≥ 75 % / batterie ≥ 50 %",
+  "1": "paires de chorus identiques, accompagnement entier : 0 %",
+  "2": "paires de chorus identiques par couche (comping rythme / voicings / batterie) ≤ 5 %",
+  "3": "accords changés d'un chorus au suivant ≤ 2 %",
+  "4": "comping rythme changé d'un chorus au suivant ≥ 75 %",
+  "5": "comping voicings changés ≥ 65 %",
+  "6": "basse changée ≥ 80 % (marche) ou ≥ 10 % (riff, ostinato)",
+  "7": "batterie changée ≥ 30 % ; distance graduée ≥ 10 %",
+  "8": "suites de 4 chorus distinctes sur 16 graines (comping rythme / basse / batterie) ≥ 12",
+  "9": "orchestration : programmes de comping / basse / kit ≥ 3 / 2 / 2 ; suites distinctes ≥ 4",
+  "10": "arc, densité (notes par mesure) : étendue de la trajectoire dès le 2e chorus ≥ 25 %",
+  "11": "arc, vélocité moyenne : étendue dès le 2e chorus ≥ 8 %"
+ },
+ "profiles": {
+  "gigue_acadienne.grille": {
+   "applicable": false,
+   "reason": "harmonie `melody_functional` : pas de grille utilisateur (seule `loop` en reçoit une)",
+   "loop": false
+  },
+  "gigue_acadienne": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (168–191)",
+     "ok": true
+    },
+    "H3": {
+     "value": "50 % / 50 %",
+     "ok": false
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "57 % / 57 % / 77 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "10 %",
+     "ok": false
+    },
+    "5": {
+     "value": "10 %",
+     "ok": false
+    },
+    "6": {
+     "value": "77 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "17 % ; 15 %",
+     "ok": false
+    },
+    "8": {
+     "value": "3 / 16 / 3",
+     "ok": false
+    },
+    "9": {
+     "value": "4 / 3 / 1 ; 15",
+     "ok": false
+    },
+    "10": {
+     "value": "2 %",
+     "ok": false
+    },
+    "11": {
+     "value": "5 %",
+     "ok": false
+    }
+   },
+   "held": 5,
+   "failed": [
+    "H3",
+    "2",
+    "4",
+    "5",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ]
+  },
+  "gigue_britannique_coloniale.grille": {
+   "applicable": false,
+   "reason": "harmonie `melody_functional` : pas de grille utilisateur (seule `loop` en reçoit une)",
+   "loop": false
+  },
+  "gigue_britannique_coloniale": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (144–167)",
+     "ok": true
+    },
+    "H3": {
+     "value": "6 % / ·",
+     "ok": false
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "69 % / 69 % / —",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "5 %",
+     "ok": false
+    },
+    "5": {
+     "value": "5 %",
+     "ok": false
+    },
+    "6": {
+     "value": "69 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "·",
+     "ok": null
+    },
+    "8": {
+     "value": "2 / 16 / ·",
+     "ok": false
+    },
+    "9": {
+     "value": "3 / 2 / 3 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "0 %",
+     "ok": false
+    },
+    "11": {
+     "value": "3 %",
+     "ok": false
+    }
+   },
+   "held": 6,
+   "failed": [
+    "H3",
+    "2",
+    "4",
+    "5",
+    "8",
+    "10",
+    "11"
+   ]
+  },
+  "gigue_quebecoise.grille": {
+   "applicable": false,
+   "reason": "harmonie `melody_functional` : pas de grille utilisateur (seule `loop` en reçoit une)",
+   "loop": false
+  },
+  "gigue_quebecoise": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (160–184)",
+     "ok": true
+    },
+    "H3": {
+     "value": "50 % / 50 %",
+     "ok": false
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "54 % / 54 % / 77 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "11 %",
+     "ok": false
+    },
+    "5": {
+     "value": "11 %",
+     "ok": false
+    },
+    "6": {
+     "value": "70 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "17 % ; 15 %",
+     "ok": false
+    },
+    "8": {
+     "value": "3 / 16 / 3",
+     "ok": false
+    },
+    "9": {
+     "value": "4 / 2 / 1 ; 12",
+     "ok": false
+    },
+    "10": {
+     "value": "2 %",
+     "ok": false
+    },
+    "11": {
+     "value": "6 %",
+     "ok": false
+    }
+   },
+   "held": 5,
+   "failed": [
+    "H3",
+    "2",
+    "4",
+    "5",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ]
+  },
+  "gmd_afrobeat.grille": {
+   "applicable": true,
+   "grid_bars": 8,
+   "criteria": {
+    "H1": {
+     "value": "15 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (86–109)",
+     "ok": null
+    },
+    "H3": {
+     "value": "96 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "86 %",
+     "ok": true
+    },
+    "5": {
+     "value": "98 %",
+     "ok": true
+    },
+    "6": {
+     "value": "5 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "100 % ; 74 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 3 / 3 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "92 %",
+     "ok": true
+    },
+    "11": {
+     "value": "7 %",
+     "ok": false
+    }
+   },
+   "held": 11,
+   "failed": [
+    "6",
+    "11"
+   ]
+  },
+  "gmd_afrobeat": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "15 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (86–109)",
+     "ok": true
+    },
+    "H3": {
+     "value": "93 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "82 %",
+     "ok": true
+    },
+    "5": {
+     "value": "95 %",
+     "ok": true
+    },
+    "6": {
+     "value": "2 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "100 % ; 73 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 3 / 3 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "88 %",
+     "ok": true
+    },
+    "11": {
+     "value": "11 %",
+     "ok": true
+    }
+   },
+   "held": 13,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_afrocuban.grille": {
+   "applicable": true,
+   "grid_bars": 16,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "2 (105–128)",
+     "ok": null
+    },
+    "H3": {
+     "value": "100 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "87 %",
+     "ok": true
+    },
+    "5": {
+     "value": "92 %",
+     "ok": true
+    },
+    "6": {
+     "value": "46 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "100 % ; 55 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 3 / 5 ; 12",
+     "ok": true
+    },
+    "10": {
+     "value": "48 %",
+     "ok": true
+    },
+    "11": {
+     "value": "7 %",
+     "ok": false
+    }
+   },
+   "held": 12,
+   "failed": [
+    "11"
+   ]
+  },
+  "gmd_afrocuban": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "2 (105–128)",
+     "ok": true
+    },
+    "H3": {
+     "value": "100 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "88 %",
+     "ok": true
+    },
+    "5": {
+     "value": "87 %",
+     "ok": true
+    },
+    "6": {
+     "value": "49 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "100 % ; 55 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 3 / 5 ; 12",
+     "ok": true
+    },
+    "10": {
+     "value": "49 %",
+     "ok": true
+    },
+    "11": {
+     "value": "7 %",
+     "ok": false
+    }
+   },
+   "held": 13,
+   "failed": [
+    "11"
+   ]
+  },
+  "gmd_blues_shuffle.grille": {
+   "applicable": true,
+   "grid_bars": 8,
+   "criteria": {
+    "H1": {
+     "value": "13 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "5 (78–133)",
+     "ok": null
+    },
+    "H3": {
+     "value": "89 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "85 %",
+     "ok": true
+    },
+    "5": {
+     "value": "97 %",
+     "ok": true
+    },
+    "6": {
+     "value": "10 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "97 % ; 75 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "6 / 4 / 5 ; 16",
+     "ok": true
+    },
+    "10": {
+     "value": "57 %",
+     "ok": true
+    },
+    "11": {
+     "value": "30 %",
+     "ok": true
+    }
+   },
+   "held": 12,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_blues_shuffle": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "5 (78–133)",
+     "ok": true
+    },
+    "H3": {
+     "value": "93 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "89 %",
+     "ok": true
+    },
+    "5": {
+     "value": "97 %",
+     "ok": true
+    },
+    "6": {
+     "value": "6 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "95 % ; 75 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "6 / 4 / 5 ; 16",
+     "ok": true
+    },
+    "10": {
+     "value": "52 %",
+     "ok": true
+    },
+    "11": {
+     "value": "31 %",
+     "ok": true
+    }
+   },
+   "held": 13,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_dance_disco.grille": {
+   "applicable": true,
+   "grid_bars": 8,
+   "criteria": {
+    "H1": {
+     "value": "15 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "2 (120–136)",
+     "ok": null
+    },
+    "H3": {
+     "value": "97 % / 75 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 15 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "82 %",
+     "ok": true
+    },
+    "5": {
+     "value": "92 %",
+     "ok": true
+    },
+    "6": {
+     "value": "5 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "71 % ; 65 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 4 / 4 ; 14",
+     "ok": true
+    },
+    "10": {
+     "value": "76 %",
+     "ok": true
+    },
+    "11": {
+     "value": "14 %",
+     "ok": true
+    }
+   },
+   "held": 11,
+   "failed": [
+    "2",
+    "6"
+   ]
+  },
+  "gmd_dance_disco": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "2 (120–136)",
+     "ok": true
+    },
+    "H3": {
+     "value": "90 % / 75 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 15 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "79 %",
+     "ok": true
+    },
+    "5": {
+     "value": "91 %",
+     "ok": true
+    },
+    "6": {
+     "value": "2 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "71 % ; 65 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 4 / 4 ; 14",
+     "ok": true
+    },
+    "10": {
+     "value": "68 %",
+     "ok": true
+    },
+    "11": {
+     "value": "14 %",
+     "ok": true
+    }
+   },
+   "held": 12,
+   "failed": [
+    "2",
+    "6"
+   ]
+  },
+  "gmd_funk.grille": {
+   "applicable": true,
+   "grid_bars": 16,
+   "criteria": {
+    "H1": {
+     "value": "15 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "4 (80–126)",
+     "ok": null
+    },
+    "H3": {
+     "value": "95 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 2 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "91 %",
+     "ok": true
+    },
+    "5": {
+     "value": "99 %",
+     "ok": true
+    },
+    "6": {
+     "value": "9 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "77 % ; 52 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 4 / 4 ; 16",
+     "ok": true
+    },
+    "10": {
+     "value": "55 %",
+     "ok": true
+    },
+    "11": {
+     "value": "10 %",
+     "ok": true
+    }
+   },
+   "held": 12,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_funk": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "4 (80–126)",
+     "ok": true
+    },
+    "H3": {
+     "value": "95 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 1 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "93 %",
+     "ok": true
+    },
+    "5": {
+     "value": "98 %",
+     "ok": true
+    },
+    "6": {
+     "value": "6 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "78 % ; 54 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 4 / 4 ; 16",
+     "ok": true
+    },
+    "10": {
+     "value": "52 %",
+     "ok": true
+    },
+    "11": {
+     "value": "11 %",
+     "ok": true
+    }
+   },
+   "held": 13,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_hiphop.grille": {
+   "applicable": true,
+   "grid_bars": 8,
+   "criteria": {
+    "H1": {
+     "value": "13 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (70–99)",
+     "ok": null
+    },
+    "H3": {
+     "value": "100 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "2 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "83 %",
+     "ok": true
+    },
+    "5": {
+     "value": "96 %",
+     "ok": true
+    },
+    "6": {
+     "value": "4 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "88 % ; 65 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 3 / 4 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "59 %",
+     "ok": true
+    },
+    "11": {
+     "value": "22 %",
+     "ok": true
+    }
+   },
+   "held": 12,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_hiphop": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (70–99)",
+     "ok": true
+    },
+    "H3": {
+     "value": "100 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "1 % / 1 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "80 %",
+     "ok": true
+    },
+    "5": {
+     "value": "92 %",
+     "ok": true
+    },
+    "6": {
+     "value": "2 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "85 % ; 63 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 3 / 4 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "56 %",
+     "ok": true
+    },
+    "11": {
+     "value": "21 %",
+     "ok": true
+    }
+   },
+   "held": 13,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_jazz_waltz.grille": {
+   "applicable": true,
+   "grid_bars": 24,
+   "criteria": {
+    "H1": {
+     "value": "13 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "5 (118–194)",
+     "ok": null
+    },
+    "H3": {
+     "value": "100 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 21 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "89 %",
+     "ok": true
+    },
+    "5": {
+     "value": "97 %",
+     "ok": true
+    },
+    "6": {
+     "value": "99 % (marche)",
+     "ok": true
+    },
+    "7": {
+     "value": "88 % ; 76 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 3 / 2 ; 10",
+     "ok": true
+    },
+    "10": {
+     "value": "83 %",
+     "ok": true
+    },
+    "11": {
+     "value": "1 %",
+     "ok": false
+    }
+   },
+   "held": 11,
+   "failed": [
+    "2",
+    "11"
+   ]
+  },
+  "gmd_jazz_waltz": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "15 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "5 (118–194)",
+     "ok": true
+    },
+    "H3": {
+     "value": "97 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 21 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "86 %",
+     "ok": true
+    },
+    "5": {
+     "value": "97 %",
+     "ok": true
+    },
+    "6": {
+     "value": "99 % (marche)",
+     "ok": true
+    },
+    "7": {
+     "value": "87 % ; 75 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 3 / 2 ; 10",
+     "ok": true
+    },
+    "10": {
+     "value": "82 %",
+     "ok": true
+    },
+    "11": {
+     "value": "1 %",
+     "ok": false
+    }
+   },
+   "held": 12,
+   "failed": [
+    "2",
+    "11"
+   ]
+  },
+  "gmd_latin_brazilian_baiao.grille": {
+   "applicable": true,
+   "grid_bars": 16,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "2 (95–110)",
+     "ok": null
+    },
+    "H3": {
+     "value": "84 % / 75 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 5 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "85 %",
+     "ok": true
+    },
+    "5": {
+     "value": "87 %",
+     "ok": true
+    },
+    "6": {
+     "value": "47 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "83 % ; 60 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 2 / 4 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "34 %",
+     "ok": true
+    },
+    "11": {
+     "value": "13 %",
+     "ok": true
+    }
+   },
+   "held": 12,
+   "failed": [
+    "2"
+   ]
+  },
+  "gmd_latin_brazilian_baiao": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "2 (95–110)",
+     "ok": true
+    },
+    "H3": {
+     "value": "84 % / 75 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 5 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "83 %",
+     "ok": true
+    },
+    "5": {
+     "value": "82 %",
+     "ok": true
+    },
+    "6": {
+     "value": "43 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "81 % ; 58 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 2 / 4 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "33 %",
+     "ok": true
+    },
+    "11": {
+     "value": "13 %",
+     "ok": true
+    }
+   },
+   "held": 13,
+   "failed": [
+    "2"
+   ]
+  },
+  "gmd_latin_brazilian_bossa.grille": {
+   "applicable": true,
+   "grid_bars": 16,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "4 (104–176)",
+     "ok": null
+    },
+    "H3": {
+     "value": "95 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "85 %",
+     "ok": true
+    },
+    "5": {
+     "value": "97 %",
+     "ok": true
+    },
+    "6": {
+     "value": "74 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "100 % ; 62 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 3 / 4 ; 15",
+     "ok": true
+    },
+    "10": {
+     "value": "25 %",
+     "ok": true
+    },
+    "11": {
+     "value": "17 %",
+     "ok": true
+    }
+   },
+   "held": 13,
+   "failed": []
+  },
+  "gmd_latin_brazilian_bossa": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "4 (104–176)",
+     "ok": true
+    },
+    "H3": {
+     "value": "95 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "84 %",
+     "ok": true
+    },
+    "5": {
+     "value": "96 %",
+     "ok": true
+    },
+    "6": {
+     "value": "76 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "100 % ; 62 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 3 / 4 ; 15",
+     "ok": true
+    },
+    "10": {
+     "value": "25 %",
+     "ok": false
+    },
+    "11": {
+     "value": "17 %",
+     "ok": true
+    }
+   },
+   "held": 13,
+   "failed": [
+    "10"
+   ]
+  },
+  "gmd_latin_brazilian_samba.grille": {
+   "applicable": true,
+   "grid_bars": 16,
+   "criteria": {
+    "H1": {
+     "value": "12 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (89–116)",
+     "ok": null
+    },
+    "H3": {
+     "value": "96 % / 50 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 17 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "84 %",
+     "ok": true
+    },
+    "5": {
+     "value": "92 %",
+     "ok": true
+    },
+    "6": {
+     "value": "20 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "100 % ; 67 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 3 / 3 ; 12",
+     "ok": true
+    },
+    "10": {
+     "value": "85 %",
+     "ok": true
+    },
+    "11": {
+     "value": "19 %",
+     "ok": true
+    }
+   },
+   "held": 12,
+   "failed": [
+    "2"
+   ]
+  },
+  "gmd_latin_brazilian_samba": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "14 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (89–116)",
+     "ok": true
+    },
+    "H3": {
+     "value": "96 % / 50 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 17 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "87 %",
+     "ok": true
+    },
+    "5": {
+     "value": "92 %",
+     "ok": true
+    },
+    "6": {
+     "value": "20 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "100 % ; 66 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 3 / 3 ; 12",
+     "ok": true
+    },
+    "10": {
+     "value": "86 %",
+     "ok": true
+    },
+    "11": {
+     "value": "18 %",
+     "ok": true
+    }
+   },
+   "held": 13,
+   "failed": [
+    "2"
+   ]
+  },
+  "gmd_neworleans_funk_secondline.grille": {
+   "applicable": true,
+   "grid_bars": 8,
+   "criteria": {
+    "H1": {
+     "value": "14 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (82–118)",
+     "ok": null
+    },
+    "H3": {
+     "value": "89 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 8 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "84 %",
+     "ok": true
+    },
+    "5": {
+     "value": "98 %",
+     "ok": true
+    },
+    "6": {
+     "value": "39 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "75 % ; 35 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 3 / 3 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "59 %",
+     "ok": true
+    },
+    "11": {
+     "value": "15 %",
+     "ok": true
+    }
+   },
+   "held": 12,
+   "failed": [
+    "2"
+   ]
+  },
+  "gmd_neworleans_funk_secondline": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "15 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (82–118)",
+     "ok": true
+    },
+    "H3": {
+     "value": "93 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 2 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "89 %",
+     "ok": true
+    },
+    "5": {
+     "value": "99 %",
+     "ok": true
+    },
+    "6": {
+     "value": "39 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "77 % ; 35 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 3 / 3 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "57 %",
+     "ok": true
+    },
+    "11": {
+     "value": "15 %",
+     "ok": true
+    }
+   },
+   "held": 14,
+   "failed": []
+  },
+  "gmd_pop.grille": {
+   "applicable": true,
+   "grid_bars": 8,
+   "criteria": {
+    "H1": {
+     "value": "15 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "2 (83–142)",
+     "ok": null
+    },
+    "H3": {
+     "value": "93 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 4 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "82 %",
+     "ok": true
+    },
+    "5": {
+     "value": "95 %",
+     "ok": true
+    },
+    "6": {
+     "value": "5 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "90 % ; 77 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 4 / 4 ; 14",
+     "ok": true
+    },
+    "10": {
+     "value": "69 %",
+     "ok": true
+    },
+    "11": {
+     "value": "13 %",
+     "ok": true
+    }
+   },
+   "held": 12,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_pop": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "2 (83–142)",
+     "ok": true
+    },
+    "H3": {
+     "value": "89 % / 97 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 1 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "80 %",
+     "ok": true
+    },
+    "5": {
+     "value": "91 %",
+     "ok": true
+    },
+    "6": {
+     "value": "2 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "88 % ; 76 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 4 / 4 ; 14",
+     "ok": true
+    },
+    "10": {
+     "value": "63 %",
+     "ok": true
+    },
+    "11": {
+     "value": "12 %",
+     "ok": true
+    }
+   },
+   "held": 13,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_reggae.grille": {
+   "applicable": true,
+   "grid_bars": 8,
+   "criteria": {
+    "H1": {
+     "value": "12 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (83–121)",
+     "ok": null
+    },
+    "H3": {
+     "value": "92 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 3 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "85 %",
+     "ok": true
+    },
+    "5": {
+     "value": "95 %",
+     "ok": true
+    },
+    "6": {
+     "value": "5 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "91 % ; 41 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 3 / 3 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "69 %",
+     "ok": true
+    },
+    "11": {
+     "value": "15 %",
+     "ok": true
+    }
+   },
+   "held": 12,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_reggae": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (83–121)",
+     "ok": true
+    },
+    "H3": {
+     "value": "89 % / 97 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "84 %",
+     "ok": true
+    },
+    "5": {
+     "value": "89 %",
+     "ok": true
+    },
+    "6": {
+     "value": "2 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "91 % ; 44 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 3 / 3 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "63 %",
+     "ok": true
+    },
+    "11": {
+     "value": "16 %",
+     "ok": true
+    }
+   },
+   "held": 13,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_rock.grille": {
+   "applicable": true,
+   "grid_bars": 8,
+   "criteria": {
+    "H1": {
+     "value": "8 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "4 (90–129)",
+     "ok": null
+    },
+    "H3": {
+     "value": "97 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "2 % / 1 % / 1 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "82 %",
+     "ok": true
+    },
+    "5": {
+     "value": "93 %",
+     "ok": true
+    },
+    "6": {
+     "value": "5 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "92 % ; 77 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 2 / 3 ; 12",
+     "ok": true
+    },
+    "10": {
+     "value": "69 %",
+     "ok": true
+    },
+    "11": {
+     "value": "21 %",
+     "ok": true
+    }
+   },
+   "held": 12,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_rock": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "4 (90–129)",
+     "ok": true
+    },
+    "H3": {
+     "value": "95 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "77 %",
+     "ok": true
+    },
+    "5": {
+     "value": "89 %",
+     "ok": true
+    },
+    "6": {
+     "value": "2 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "91 % ; 76 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "4 / 2 / 3 ; 12",
+     "ok": true
+    },
+    "10": {
+     "value": "64 %",
+     "ok": true
+    },
+    "11": {
+     "value": "21 %",
+     "ok": true
+    }
+   },
+   "held": 13,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_soul.grille": {
+   "applicable": true,
+   "grid_bars": 8,
+   "criteria": {
+    "H1": {
+     "value": "13 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "2 (80–105)",
+     "ok": null
+    },
+    "H3": {
+     "value": "96 % / 94 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "85 %",
+     "ok": true
+    },
+    "5": {
+     "value": "99 %",
+     "ok": true
+    },
+    "6": {
+     "value": "5 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "75 % ; 65 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "5 / 3 / 3 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "64 %",
+     "ok": true
+    },
+    "11": {
+     "value": "13 %",
+     "ok": true
+    }
+   },
+   "held": 12,
+   "failed": [
+    "6"
+   ]
+  },
+  "gmd_soul": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "15 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "2 (80–105)",
+     "ok": true
+    },
+    "H3": {
+     "value": "93 % / 97 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "84 %",
+     "ok": true
+    },
+    "5": {
+     "value": "98 %",
+     "ok": true
+    },
+    "6": {
+     "value": "2 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "73 % ; 64 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "5 / 3 / 3 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "61 %",
+     "ok": true
+    },
+    "11": {
+     "value": "14 %",
+     "ok": true
+    }
+   },
+   "held": 13,
+   "failed": [
+    "6"
+   ]
+  },
+  "hornpipe_britannique_coloniale.grille": {
+   "applicable": false,
+   "reason": "harmonie `melody_functional` : pas de grille utilisateur (seule `loop` en reçoit une)",
+   "loop": false
+  },
+  "hornpipe_britannique_coloniale": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (80–103)",
+     "ok": true
+    },
+    "H3": {
+     "value": "6 % / ·",
+     "ok": false
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "72 % / 72 % / —",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "5 %",
+     "ok": false
+    },
+    "5": {
+     "value": "5 %",
+     "ok": false
+    },
+    "6": {
+     "value": "48 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "·",
+     "ok": null
+    },
+    "8": {
+     "value": "2 / 16 / ·",
+     "ok": false
+    },
+    "9": {
+     "value": "3 / 2 / 3 ; 14",
+     "ok": true
+    },
+    "10": {
+     "value": "0 %",
+     "ok": false
+    },
+    "11": {
+     "value": "4 %",
+     "ok": false
+    }
+   },
+   "held": 6,
+   "failed": [
+    "H3",
+    "2",
+    "4",
+    "5",
+    "8",
+    "10",
+    "11"
+   ]
+  },
+  "isaac_basement.grille": {
+   "applicable": false,
+   "reason": "Error: profile.toml:98: accompaniment.bass.motifs[0].part: partie inconnue dans form.parts",
+   "loop": true
+  },
+  "isaac_basement": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "12 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "2 (136–156)",
+     "ok": true
+    },
+    "H3": {
+     "value": "18 % / 100 %",
+     "ok": false
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "40 % / 40 % / 0 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "4 %",
+     "ok": false
+    },
+    "5": {
+     "value": "4 %",
+     "ok": false
+    },
+    "6": {
+     "value": "0 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "55 % ; 17 %",
+     "ok": true
+    },
+    "8": {
+     "value": "15 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 3 / 2 ; 10",
+     "ok": true
+    },
+    "10": {
+     "value": "1 %",
+     "ok": false
+    },
+    "11": {
+     "value": "3 %",
+     "ok": false
+    }
+   },
+   "held": 7,
+   "failed": [
+    "H3",
+    "2",
+    "4",
+    "5",
+    "6",
+    "10",
+    "11"
+   ]
+  },
+  "isaac_burning.grille": {
+   "applicable": false,
+   "reason": "Error: profile.toml:99: accompaniment.bass.motifs[0].part: partie inconnue dans form.parts",
+   "loop": true
+  },
+  "isaac_burning": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "14 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (126–153)",
+     "ok": true
+    },
+    "H3": {
+     "value": "· / 93 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "100 % / 100 % / 0 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "0 %",
+     "ok": false
+    },
+    "5": {
+     "value": "0 %",
+     "ok": false
+    },
+    "6": {
+     "value": "0 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "40 % ; 17 %",
+     "ok": true
+    },
+    "8": {
+     "value": "· / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 3 / 3 ; 15",
+     "ok": true
+    },
+    "10": {
+     "value": "1 %",
+     "ok": false
+    },
+    "11": {
+     "value": "2 %",
+     "ok": false
+    }
+   },
+   "held": 8,
+   "failed": [
+    "2",
+    "4",
+    "5",
+    "6",
+    "10",
+    "11"
+   ]
+  },
+  "isaac_cellar.grille": {
+   "applicable": false,
+   "reason": "Error: profile.toml:97: accompaniment.bass.motifs[0].part: partie inconnue dans form.parts",
+   "loop": true
+  },
+  "isaac_cellar": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "14 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (130–152)",
+     "ok": true
+    },
+    "H3": {
+     "value": "· / 93 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "100 % / 100 % / 0 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "0 %",
+     "ok": false
+    },
+    "5": {
+     "value": "0 %",
+     "ok": false
+    },
+    "6": {
+     "value": "0 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "51 % ; 26 %",
+     "ok": true
+    },
+    "8": {
+     "value": "· / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 3 / 4 ; 15",
+     "ok": true
+    },
+    "10": {
+     "value": "1 %",
+     "ok": false
+    },
+    "11": {
+     "value": "0 %",
+     "ok": false
+    }
+   },
+   "held": 8,
+   "failed": [
+    "2",
+    "4",
+    "5",
+    "6",
+    "10",
+    "11"
+   ]
+  },
+  "isaac_downpour.grille": {
+   "applicable": false,
+   "reason": "Error: profile.toml:100: accompaniment.bass.motifs[0].part: partie inconnue dans form.parts",
+   "loop": true
+  },
+  "isaac_downpour": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "11 / 16",
+     "ok": false
+    },
+    "H2": {
+     "value": "3 (126–162)",
+     "ok": true
+    },
+    "H3": {
+     "value": "· / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "100 % / 100 % / 0 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "0 %",
+     "ok": false
+    },
+    "5": {
+     "value": "0 %",
+     "ok": false
+    },
+    "6": {
+     "value": "0 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "69 % ; 39 %",
+     "ok": true
+    },
+    "8": {
+     "value": "· / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "2 / 2 / 2 ; 14",
+     "ok": false
+    },
+    "10": {
+     "value": "1 %",
+     "ok": false
+    },
+    "11": {
+     "value": "2 %",
+     "ok": false
+    }
+   },
+   "held": 6,
+   "failed": [
+    "H1",
+    "2",
+    "4",
+    "5",
+    "6",
+    "9",
+    "10",
+    "11"
+   ]
+  },
+  "marche_britannique_coloniale.grille": {
+   "applicable": false,
+   "reason": "harmonie `none` : pas de grille utilisateur (seule `loop` en reçoit une)",
+   "loop": false
+  },
+  "marche_britannique_coloniale": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "4 (90–125)",
+     "ok": true
+    },
+    "H3": {
+     "value": "· / 50 %",
+     "ok": true
+    },
+    "1": {
+     "value": "83 %",
+     "ok": false
+    },
+    "2": {
+     "value": "— / — / 83 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "·",
+     "ok": null
+    },
+    "5": {
+     "value": "·",
+     "ok": null
+    },
+    "6": {
+     "value": "· (riff)",
+     "ok": null
+    },
+    "7": {
+     "value": "10 % ; 4 %",
+     "ok": false
+    },
+    "8": {
+     "value": "· / · / 3",
+     "ok": false
+    },
+    "9": {
+     "value": "0 / 0 / 3 ; 10",
+     "ok": false
+    },
+    "10": {
+     "value": "8 %",
+     "ok": false
+    },
+    "11": {
+     "value": "7 %",
+     "ok": false
+    }
+   },
+   "held": 4,
+   "failed": [
+    "1",
+    "2",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ]
+  },
+  "nt_desert.grille": {
+   "applicable": false,
+   "reason": "Error: profile.toml:114: accompaniment.bass.motifs[0].part: partie inconnue dans form.parts",
+   "loop": true
+  },
+  "nt_desert": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "8 / 16",
+     "ok": false
+    },
+    "H2": {
+     "value": "3 (204–230)",
+     "ok": true
+    },
+    "H3": {
+     "value": "48 % / 100 %",
+     "ok": false
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "31 % / 31 % / 0 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "21 %",
+     "ok": false
+    },
+    "5": {
+     "value": "21 %",
+     "ok": false
+    },
+    "6": {
+     "value": "0 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "47 % ; 25 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 12 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "2 / 2 / 1 ; 10",
+     "ok": false
+    },
+    "10": {
+     "value": "17 %",
+     "ok": false
+    },
+    "11": {
+     "value": "4 %",
+     "ok": false
+    }
+   },
+   "held": 5,
+   "failed": [
+    "H1",
+    "H3",
+    "2",
+    "4",
+    "5",
+    "6",
+    "9",
+    "10",
+    "11"
+   ]
+  },
+  "reel_acadien.grille": {
+   "applicable": false,
+   "reason": "harmonie `melody_functional` : pas de grille utilisateur (seule `loop` en reçoit une)",
+   "loop": false
+  },
+  "reel_acadien": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "15 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (215–237)",
+     "ok": true
+    },
+    "H3": {
+     "value": "50 % / 50 %",
+     "ok": false
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "51 % / 51 % / 79 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "11 %",
+     "ok": false
+    },
+    "5": {
+     "value": "11 %",
+     "ok": false
+    },
+    "6": {
+     "value": "66 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "15 % ; 14 %",
+     "ok": false
+    },
+    "8": {
+     "value": "3 / 16 / 3",
+     "ok": false
+    },
+    "9": {
+     "value": "4 / 2 / 1 ; 11",
+     "ok": false
+    },
+    "10": {
+     "value": "1 %",
+     "ok": false
+    },
+    "11": {
+     "value": "3 %",
+     "ok": false
+    }
+   },
+   "held": 5,
+   "failed": [
+    "H3",
+    "2",
+    "4",
+    "5",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ]
+  },
+  "reel_britannique_coloniale.grille": {
+   "applicable": false,
+   "reason": "harmonie `melody_functional` : pas de grille utilisateur (seule `loop` en reçoit une)",
+   "loop": false
+  },
+  "reel_britannique_coloniale": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "4 (192–223)",
+     "ok": true
+    },
+    "H3": {
+     "value": "6 % / ·",
+     "ok": false
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "78 % / 78 % / —",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "4 %",
+     "ok": false
+    },
+    "5": {
+     "value": "4 %",
+     "ok": false
+    },
+    "6": {
+     "value": "67 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "·",
+     "ok": null
+    },
+    "8": {
+     "value": "2 / 16 / ·",
+     "ok": false
+    },
+    "9": {
+     "value": "3 / 2 / 3 ; 13",
+     "ok": true
+    },
+    "10": {
+     "value": "1 %",
+     "ok": false
+    },
+    "11": {
+     "value": "3 %",
+     "ok": false
+    }
+   },
+   "held": 6,
+   "failed": [
+    "H3",
+    "2",
+    "4",
+    "5",
+    "8",
+    "10",
+    "11"
+   ]
+  },
+  "reel_quebecois.grille": {
+   "applicable": false,
+   "reason": "harmonie `melody_functional` : pas de grille utilisateur (seule `loop` en reçoit une)",
+   "loop": false
+  },
+  "reel_quebecois": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "15 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "2 (220–239)",
+     "ok": true
+    },
+    "H3": {
+     "value": "50 % / 50 %",
+     "ok": false
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "54 % / 54 % / 77 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "11 %",
+     "ok": false
+    },
+    "5": {
+     "value": "11 %",
+     "ok": false
+    },
+    "6": {
+     "value": "63 % (riff)",
+     "ok": true
+    },
+    "7": {
+     "value": "17 % ; 16 %",
+     "ok": false
+    },
+    "8": {
+     "value": "3 / 16 / 3",
+     "ok": false
+    },
+    "9": {
+     "value": "4 / 2 / 1 ; 12",
+     "ok": false
+    },
+    "10": {
+     "value": "2 %",
+     "ok": false
+    },
+    "11": {
+     "value": "3 %",
+     "ok": false
+    }
+   },
+   "held": 5,
+   "failed": [
+    "H3",
+    "2",
+    "4",
+    "5",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ]
+  },
+  "valse_britannique_coloniale.grille": {
+   "applicable": false,
+   "reason": "harmonie `melody_functional` : pas de grille utilisateur (seule `loop` en reçoit une)",
+   "loop": false
+  },
+  "valse_britannique_coloniale": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (126–149)",
+     "ok": true
+    },
+    "H3": {
+     "value": "6 % / ·",
+     "ok": false
+    },
+    "1": {
+     "value": "54 %",
+     "ok": false
+    },
+    "2": {
+     "value": "66 % / 66 % / —",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "6 %",
+     "ok": false
+    },
+    "5": {
+     "value": "6 %",
+     "ok": false
+    },
+    "6": {
+     "value": "7 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "·",
+     "ok": null
+    },
+    "8": {
+     "value": "2 / 16 / ·",
+     "ok": false
+    },
+    "9": {
+     "value": "3 / 2 / 3 ; 14",
+     "ok": true
+    },
+    "10": {
+     "value": "0 %",
+     "ok": false
+    },
+    "11": {
+     "value": "2 %",
+     "ok": false
+    }
+   },
+   "held": 4,
+   "failed": [
+    "H3",
+    "1",
+    "2",
+    "4",
+    "5",
+    "6",
+    "8",
+    "10",
+    "11"
+   ]
+  },
+  "valse_quebecoise.grille": {
+   "applicable": false,
+   "reason": "harmonie `melody_functional` : pas de grille utilisateur (seule `loop` en reçoit une)",
+   "loop": false
+  },
+  "valse_quebecoise": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "1 (140–150)",
+     "ok": false
+    },
+    "H3": {
+     "value": "50 % / 50 %",
+     "ok": false
+    },
+    "1": {
+     "value": "31 %",
+     "ok": false
+    },
+    "2": {
+     "value": "57 % / 57 % / 65 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "10 %",
+     "ok": false
+    },
+    "5": {
+     "value": "10 %",
+     "ok": false
+    },
+    "6": {
+     "value": "8 % (riff)",
+     "ok": false
+    },
+    "7": {
+     "value": "25 % ; 24 %",
+     "ok": false
+    },
+    "8": {
+     "value": "3 / 16 / 3",
+     "ok": false
+    },
+    "9": {
+     "value": "4 / 2 / 1 ; 14",
+     "ok": false
+    },
+    "10": {
+     "value": "1 %",
+     "ok": false
+    },
+    "11": {
+     "value": "6 %",
+     "ok": false
+    }
+   },
+   "held": 2,
+   "failed": [
+    "H2",
+    "H3",
+    "1",
+    "2",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11"
+   ]
+  },
+  "wjazzd_ballad.grille": {
+   "applicable": true,
+   "grid_bars": 24,
+   "criteria": {
+    "H1": {
+     "value": "11 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (48–77)",
+     "ok": null
+    },
+    "H3": {
+     "value": "97 % / 50 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 29 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "89 %",
+     "ok": true
+    },
+    "5": {
+     "value": "98 %",
+     "ok": true
+    },
+    "6": {
+     "value": "89 % (marche)",
+     "ok": true
+    },
+    "7": {
+     "value": "80 % ; 61 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 3 / 2 ; 8",
+     "ok": true
+    },
+    "10": {
+     "value": "79 %",
+     "ok": true
+    },
+    "11": {
+     "value": "11 %",
+     "ok": true
+    }
+   },
+   "held": 12,
+   "failed": [
+    "2"
+   ]
+  },
+  "wjazzd_ballad": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "3 (48–77)",
+     "ok": true
+    },
+    "H3": {
+     "value": "88 % / 50 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 29 %",
+     "ok": false
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "82 %",
+     "ok": true
+    },
+    "5": {
+     "value": "97 %",
+     "ok": true
+    },
+    "6": {
+     "value": "90 % (marche)",
+     "ok": true
+    },
+    "7": {
+     "value": "79 % ; 61 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 3 / 2 ; 8",
+     "ok": true
+    },
+    "10": {
+     "value": "79 %",
+     "ok": true
+    },
+    "11": {
+     "value": "12 %",
+     "ok": true
+    }
+   },
+   "held": 13,
+   "failed": [
+    "2"
+   ]
+  },
+  "wjazzd_swing.grille": {
+   "applicable": true,
+   "grid_bars": 8,
+   "criteria": {
+    "H1": {
+     "value": "14 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "9 (106–259)",
+     "ok": null
+    },
+    "H3": {
+     "value": "100 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 1 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "83 %",
+     "ok": true
+    },
+    "5": {
+     "value": "93 %",
+     "ok": true
+    },
+    "6": {
+     "value": "99 % (marche)",
+     "ok": true
+    },
+    "7": {
+     "value": "83 % ; 48 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 2 / 2 ; 9",
+     "ok": true
+    },
+    "10": {
+     "value": "57 %",
+     "ok": true
+    },
+    "11": {
+     "value": "5 %",
+     "ok": false
+    }
+   },
+   "held": 12,
+   "failed": [
+    "11"
+   ]
+  },
+  "wjazzd_swing": {
+   "applicable": true,
+   "grid_bars": null,
+   "criteria": {
+    "H1": {
+     "value": "16 / 16",
+     "ok": true
+    },
+    "H2": {
+     "value": "9 (106–259)",
+     "ok": true
+    },
+    "H3": {
+     "value": "97 % / 100 %",
+     "ok": true
+    },
+    "1": {
+     "value": "0 %",
+     "ok": true
+    },
+    "2": {
+     "value": "0 % / 0 % / 0 %",
+     "ok": true
+    },
+    "3": {
+     "value": "0 %",
+     "ok": true
+    },
+    "4": {
+     "value": "83 %",
+     "ok": true
+    },
+    "5": {
+     "value": "94 %",
+     "ok": true
+    },
+    "6": {
+     "value": "100 % (marche)",
+     "ok": true
+    },
+    "7": {
+     "value": "83 % ; 49 %",
+     "ok": true
+    },
+    "8": {
+     "value": "16 / 16 / 16",
+     "ok": true
+    },
+    "9": {
+     "value": "3 / 2 / 2 ; 9",
+     "ok": true
+    },
+    "10": {
+     "value": "61 %",
+     "ok": true
+    },
+    "11": {
+     "value": "3 %",
+     "ok": false
+    }
+   },
+   "held": 13,
+   "failed": [
+    "11"
+   ]
+  }
+ }
+}

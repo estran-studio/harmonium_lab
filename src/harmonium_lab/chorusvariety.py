@@ -214,7 +214,9 @@ def instruments_of(profile_dir: Path) -> dict[int, tuple[int, int]]:
 
 
 def midi_programs(path: Path) -> list[tuple[int, int, int]]:
-    """Changements de programme du MIDI : `(tick, canal, programme)` triés."""
+    """Changements de programme du MIDI : `(tick, canal, programme)` triés **par tick seulement** : deux
+    `program_change` d'un même canal au même tick (le programme du profil, puis celui de la session) gardent l'ordre
+    du fichier, le dernier écrit est celui qui sonne (V2 : un tri complet donnait toujours le plus grand numéro)."""
     import mido
     events = []
     for track in mido.MidiFile(str(path)).tracks:
@@ -223,7 +225,7 @@ def midi_programs(path: Path) -> list[tuple[int, int, int]]:
             tick += msg.time
             if msg.type == "program_change":
                 events.append((tick, msg.channel, msg.program))
-    return sorted(events)
+    return sorted(events, key=lambda e: e[0])
 
 
 def orchestration_sigs(base: dict[int, tuple[int, int]], events: list[tuple[int, int, int]],

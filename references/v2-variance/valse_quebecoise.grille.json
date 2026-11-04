@@ -1,0 +1,10 @@
+{
+ "profile": "valse_quebecoise",
+ "variant": "grille",
+ "chorus": 4,
+ "seeds": 16,
+ "grid": {
+  "applicable": false,
+  "reason": "harmonie `melody_functional` : pas de grille utilisateur (seule `loop` en reçoit une)"
+ }
+}

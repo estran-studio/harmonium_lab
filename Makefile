@@ -374,3 +374,38 @@ v0-variance: setup v0-grid ## Variance par chorus : [V0_PROFILES="id|dossier ...
 			$(if $(ENGINE_BIN),--engine-bin "$(ENGINE_BIN)",) --label V0 --work-dir "$(V0_DIR)/truth" \
 			-o "$(V0_OUT)/$$(basename $$p).json" --markdown; \
 	done
+
+# ════════════════════════════════════════════════════════════════════
+# Phase 019, V2 : variance prouvée par style (references/v2-variance/)
+# ════════════════════════════════════════════════════════════════════
+# make v2-variance ENGINE_DIR=~/workspace/harmonium ENGINE_BIN=<harmonium-cli compilé du même commit>
+#   16 graines × 4 chorus pour chaque profil distribué (ENGINE_DIR/profiles/*), puis la même mesure sous une grille
+#   utilisateur de 8 mesures pour les profils `loop` ; un JSON par mesure dans V2_OUT, tableaux et seuils par
+#   `make v2-report`. ENGINE_DIR porte aussi `assets/` (le binaire est lancé depuis ce dossier).
+# make v2-distance-trad CORPUS_ROOT=<corpus/ du labo> : écart au corpus des profils trad (trad-compare, comme R2-trad).
+# make v2-distance-batterie ENGINE_WORKTREE=<worktree du moteur compilé en --release> : batterie des profils gmd_* et
+#   wjazzd_ballad contre le GMD (scripts des comptes rendus B du moteur, `scripts/v2_distance_batterie.sh`).
+.PHONY: v2-variance v2-report v2-distance-trad v2-distance-batterie
+V2_DIR ?= /tmp/harmonium-019/v2
+V2_OUT ?= references/v2-variance
+V2_JOBS ?= 3
+
+v2-variance: setup ## V2 : variance par style [V2_PROFILES="id ..."] [V2_JOBS=3] [V2_OUT=references/v2-variance] ENGINE_BIN=harmonium-cli
+	@test -n "$(ENGINE_BIN)" || (echo "Usage: make v2-variance ENGINE_DIR=<moteur> ENGINE_BIN=<harmonium-cli>"; exit 2)
+	$(PYTHON) -m harmonium_lab.v2variance collect --engine-dir "$(ENGINE_DIR)" --engine-bin "$(ENGINE_BIN)" \
+		--work-dir "$(V2_DIR)/truth" --out "$(V2_OUT)" --jobs $(V2_JOBS) $(if $(V2_PROFILES),--profiles $(V2_PROFILES),)
+	$(PYTHON) -m harmonium_lab.v2variance report --out "$(V2_OUT)"
+
+v2-report: setup ## V2 : tableaux profil × critère depuis les JSON de V2_OUT (écrit summary.json)
+	$(PYTHON) -m harmonium_lab.v2variance report --out "$(V2_OUT)"
+
+v2-distance-trad: setup ## V2 : distance des profils trad à leur corpus : CORPUS_ROOT=<corpus/ du labo> ENGINE_BIN=harmonium-cli
+	@test -n "$(CORPUS_ROOT)" -a -n "$(ENGINE_BIN)" || (echo "Usage: make v2-distance-trad ENGINE_DIR=<moteur> ENGINE_BIN=<harmonium-cli> CORPUS_ROOT=<corpus/>"; exit 2)
+	$(PYTHON) -m harmonium_lab.v2distance trad --engine-dir "$(ENGINE_DIR)" --engine-bin "$(ENGINE_BIN)" --corpus-root "$(CORPUS_ROOT)" \
+		--work-dir "$(V2_DIR)/trad" --out "$(V2_OUT)/distance-trad.json"
+
+v2-distance-batterie: setup ## V2 : batterie des profils GMD contre le GMD : ENGINE_WORKTREE=<moteur, target/release/harmonium-cli compilé> [V2_DIR]
+	@test -n "$(ENGINE_WORKTREE)" || (echo "Usage: make v2-distance-batterie ENGINE_WORKTREE=<worktree du moteur>"; exit 2)
+	bash scripts/v2_distance_batterie.sh "$(ENGINE_WORKTREE)" "$(CURDIR)" "$(PYTHON)" "$(V2_DIR)/batterie"
+	$(PYTHON) -m harmonium_lab.v2distance drums --dist-dir "$(V2_DIR)/batterie" --b8 "$(V2_DIR)/batterie/b8.json" \
+		--out "$(V2_OUT)/distance-batterie-gmd.json"

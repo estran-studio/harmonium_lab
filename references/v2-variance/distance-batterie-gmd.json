@@ -1,0 +1,88 @@
+{
+ "schema": 1,
+ "metrique": "Bray-Curtis des fréquences d'attaque par pas, moyenne de any/kick/snare/hat ; 0 = identique au GMD",
+ "profiles": {
+  "gmd_rock": {
+   "script": "b8/distance_gmd.py",
+   "profil": 0.184,
+   "sans_arc": 0.236,
+   "non_calibre": 0.5
+  },
+  "gmd_pop": {
+   "script": "b8/distance_gmd.py",
+   "profil": 0.171,
+   "sans_arc": 0.17,
+   "non_calibre": 0.479
+  },
+  "gmd_hiphop": {
+   "script": "b8/distance_gmd.py",
+   "profil": 0.147,
+   "sans_arc": 0.156,
+   "non_calibre": 0.543
+  },
+  "gmd_soul": {
+   "script": "b8/distance_gmd.py",
+   "profil": 0.252,
+   "sans_arc": 0.247,
+   "non_calibre": 0.525
+  },
+  "gmd_reggae": {
+   "script": "b8/distance_gmd.py",
+   "profil": 0.179,
+   "sans_arc": 0.186,
+   "non_calibre": 0.595
+  },
+  "gmd_dance_disco": {
+   "script": "b8/distance_gmd.py",
+   "profil": 0.163,
+   "sans_arc": 0.111,
+   "non_calibre": 0.643
+  },
+  "gmd_afrobeat": {
+   "script": "b8/distance_gmd.py",
+   "profil": 0.152,
+   "sans_arc": 0.114,
+   "non_calibre": 0.548
+  },
+  "gmd_blues_shuffle": {
+   "script": "b6/distance_gmd.py",
+   "profil": 0.09,
+   "sans_arc": 0.097,
+   "non_calibre": 0.666
+  },
+  "wjazzd_ballad": {
+   "script": "b25_distance.py",
+   "profil": 0.51,
+   "temoin": 0.346
+  },
+  "gmd_jazz_waltz": {
+   "script": "b25_distance.py",
+   "profil": 0.38,
+   "temoin": 0.542
+  },
+  "gmd_latin_brazilian_bossa": {
+   "script": "b3/gmd_latin_brazilian_bossa_distance.py",
+   "profil": 0.203,
+   "sans_arc": 0.194,
+   "non_calibre": 0.49
+  },
+  "gmd_latin_brazilian_samba": {
+   "script": "b3/gmd_latin_brazilian_samba_distance.py",
+   "profil": 0.354,
+   "sans_arc": 0.367,
+   "non_calibre": 0.735
+  },
+  "gmd_latin_brazilian_baiao": {
+   "script": "b3/gmd_latin_brazilian_baiao_distance.py",
+   "profil": 0.157,
+   "sans_arc": 0.074,
+   "non_calibre": 0.661
+  },
+  "gmd_afrocuban": {
+   "script": "b3/gmd_afrocuban_distance.py",
+   "profil": 0.301,
+   "sans_arc": 0.3,
+   "non_calibre": 0.559
+  }
+ }
+}
