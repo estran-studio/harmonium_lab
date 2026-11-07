@@ -1,0 +1,7 @@
+source: filobass
+url: https://zenodo.org/api/records/10069709/files/FiloBass_v1.0.0.zip/content
+sha256: 67cca62578c408b65e2338c7edf9f5fc6c5192ea1f14625faa98357f9cd44f43
+license: CC-BY-4.0
+subset: {"swing": 48}
+retrieved: 2026-11-07
+manifest_sha256: 26e8fa08de4f8a8f9e232f5d1a7dfc737739063f2a22d6de8d8f0553d719b710

@@ -1,0 +1,7 @@
+source: lmd
+url: http://hog.ee.columbia.edu/craffel/lmd/lmd_matched.tar.gz
+sha256: 621ff830aed771f469e5bfa13dc12a33c6ed69090adeda63d0b5c47783af0191
+license: CC-BY-4.0 (compilation ; droits des œuvres non garantis)
+subset: {"afrocuban": 19, "ballad": 19, "blues_shuffle": 10, "bossa": 15, "funk": 127, "jazz_waltz": 9, "pop": 549, "reggae": 82, "rock": 982, "samba": 3, "soul": 467, "swing": 20}
+retrieved: 2026-11-07
+manifest_sha256: bff3e7535b13b6c2225b97167e5b035904c613f7544a48d7e9b9f1ecdb104c7c

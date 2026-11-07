@@ -1,0 +1,7 @@
+source: dubroom
+url: http://midi.dubroom.org/zip/dubroom_midi_files.zip
+sha256: 26f6b92503bbb8349f31d6fab7acd112c468d7fd55ee383bef5b399fcc441ce9
+license: CC-BY-NC-SA-4.0
+subset: {"reggae": 106}
+retrieved: 2026-11-07
+manifest_sha256: 7b52ee9f30ec3b34913ca05a85f142743a0e890fc3d77751257dce8fa885ce1f
