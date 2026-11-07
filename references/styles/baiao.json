@@ -38,18 +38,21 @@
         "kick_patterns": [
           {
             "bars": 104,
+            "grid": "4/4 droit (16 pas)",
             "pattern": "x..x....x..x....",
             "pieces": 3,
             "share": 0.5149
           },
           {
             "bars": 50,
+            "grid": "4/4 droit (16 pas)",
             "pattern": "x..x..x.x..x..x.",
             "pieces": 2,
             "share": 0.2475
           },
           {
             "bars": 1,
+            "grid": "4/4 droit (16 pas)",
             "pattern": "................",
             "pieces": 2,
             "share": 0.005
@@ -58,24 +61,28 @@
         "kick_snare_patterns": [
           {
             "bars": 11,
+            "grid": "4/4 droit (16 pas)",
             "pattern": "x..x..x.x..x..x./xxxxxxxxxxxxxxxx",
             "pieces": 2,
             "share": 0.0545
           },
           {
             "bars": 10,
+            "grid": "4/4 droit (16 pas)",
             "pattern": "x..x....x..x..../......x.......x.",
             "pieces": 2,
             "share": 0.0495
           },
           {
             "bars": 2,
+            "grid": "4/4 droit (16 pas)",
             "pattern": "x..x....x..x..../......x.........",
             "pieces": 2,
             "share": 0.0099
           },
           {
             "bars": 2,
+            "grid": "4/4 droit (16 pas)",
             "pattern": "x..x....x..x..../......x.......xx",
             "pieces": 2,
             "share": 0.0099
@@ -140,36 +147,42 @@
         "snare_patterns": [
           {
             "bars": 45,
+            "grid": "4/4 droit (16 pas)",
             "pattern": "xxxxxxxxxxxxxxxx",
             "pieces": 2,
             "share": 0.2228
           },
           {
             "bars": 10,
+            "grid": "4/4 droit (16 pas)",
             "pattern": "......x.......x.",
             "pieces": 2,
             "share": 0.0495
           },
           {
             "bars": 7,
+            "grid": "4/4 droit (16 pas)",
             "pattern": ".xxxxxxxxxxxxxxx",
             "pieces": 2,
             "share": 0.0347
           },
           {
             "bars": 3,
+            "grid": "4/4 droit (16 pas)",
             "pattern": "................",
             "pieces": 2,
             "share": 0.0149
           },
           {
             "bars": 2,
+            "grid": "4/4 droit (16 pas)",
             "pattern": "......x.........",
             "pieces": 2,
             "share": 0.0099
           },
           {
             "bars": 2,
+            "grid": "4/4 droit (16 pas)",
             "pattern": "......x.......xx",
             "pieces": 2,
             "share": 0.0099

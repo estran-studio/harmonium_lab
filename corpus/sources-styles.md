@@ -54,7 +54,7 @@ Un **effectif** ci-dessous est un nombre de *pièces/fichiers*, non un nombre de
 | `gmd_jazz_waltz` | WJazzD 7 solos en 3/4, Lakh jazz 3/4 | Lakh 3/4 | GMD jazz 3/4 : 2 fichiers ; Lakh | Trop peu de valse jazz annotée. |
 | `gmd_latin_brazilian_bossa` | RWC bossa 3, Lakh par tag « bossa » ; WJazzD `LATIN` **proxy** non bossa | GuitarSet bossa 36 ; Lakh | GMD bossa 2 (un batteur) | Basse sans annotation d'accord indépendante ; batterie un seul batteur. |
 | `gmd_latin_brazilian_samba` | RWC samba 3, Lakh tag samba | Lakh tag samba | GMD samba 7 ; BRID audio seulement | Pas de surdo/tamborim annotés en notes. |
-| `gmd_latin_brazilian_baiao` | Lakh tag baião/forró | Lakh tag baião/forró | GMD 3 | Pas de basse/comping baião multijoueur fiable. |
+| `gmd_latin_brazilian_baiao` | **aucune** (aucun morceau Lakh étiqueté baião/forró n'a passé le filtre) | **aucune** | GMD 3 | Basse et comping baião sans source. |
 | `gmd_afrocuban` | Lakh tag salsa/mambo/rumba | Lakh | GMD afro-cubain 7 ; Salsa annotations temps seuls | Pas de tumbao/clave multipistes fiables ; GMD kit TD-11 sans congas. |
 | `gmd_funk` | RWC funk 3, Lakh tag funk ; WJazzD `FUNK` **proxy jazz** | GuitarSet funk 36 ; Lakh | GMD funk 50 | Guitare d'exercice sur 3 grilles ; basses Lakh non interprétées. |
 | `gmd_soul` | RWC soul 2, Lakh RnB/Soul | Lakh RnB/Soul | GMD soul 28 | Pas de basse soul jouée et annotée avec accords. |
