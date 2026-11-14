@@ -1,0 +1,7 @@
+source: rwc
+url: https://zenodo.org/records/15804654/files/RWC-website.zip
+sha256: f20e4ef0854fb70f6cc66ac04e016f36468286a330471fef2f663672075ff6d5
+license: CC-BY-NC-SA-4.0 (Zenodo) ; Pledge AIST recherche non redistribuable
+subset: {"ballad": 1, "blues_shuffle": 1, "bossa": 3, "funk": 3, "pop": 79, "reggae": 3, "rock": 3, "samba": 3, "soul": 2, "swing": 16}
+retrieved: 2026-11-07
+manifest_sha256: b45dab3402ba6f6064b8aa455f212473e4b7a523d3660435ff52477c90fa4fec

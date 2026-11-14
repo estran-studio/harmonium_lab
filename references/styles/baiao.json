@@ -1,0 +1,494 @@
+{
+  "limits": [
+    "basse : aucune source directe assez fiable ; ne pas calibrer un profil sur un proxy",
+    "comping : aucune source directe assez fiable ; ne pas calibrer un profil sur un proxy",
+    "batterie : aucune source directe assez fiable ; voir GMD L2 et le biais du kit Roland"
+  ],
+  "profile": "gmd_latin_brazilian_baiao",
+  "reliability_rule": {
+    "assez": "≥ 8 pièces, ≥ 3 interprètes (ou interprète inconnu), ≥ 300 mesures non vides",
+    "juste": "≥ 3 pièces et ≥ 60 mesures non vides",
+    "peu": "en dessous"
+  },
+  "sources": {
+    "gmd": {
+      "archive_sha256": "651cbc524ffb891be1a3e46d89dc82a1cecb09a57c748c7b45b844c4841dcc1e",
+      "drums": {
+        "bars_empty": 0,
+        "bars_non_empty": 202,
+        "chords": {
+          "annotated_pieces": 0,
+          "inferred_pieces": 0
+        },
+        "grids": {
+          "4/4 droit (16 pas)": 3
+        },
+        "hits_per_bar_by_role": {
+          "crash": 0.05,
+          "hat_closed": 1.43,
+          "hat_open": 0.13,
+          "hat_pedal": 3.58,
+          "kick": 5.44,
+          "ride": 4.51,
+          "ride_bell": 0.48,
+          "sidestick": 1.39,
+          "snare": 10.05,
+          "tom": 0.77
+        },
+        "kick_patterns": [
+          {
+            "bars": 104,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x..x....x..x....",
+            "pieces": 3,
+            "share": 0.5149
+          },
+          {
+            "bars": 50,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x..x..x.x..x..x.",
+            "pieces": 2,
+            "share": 0.2475
+          },
+          {
+            "bars": 1,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................",
+            "pieces": 2,
+            "share": 0.005
+          }
+        ],
+        "kick_snare_patterns": [
+          {
+            "bars": 11,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x..x..x.x..x..x./xxxxxxxxxxxxxxxx",
+            "pieces": 2,
+            "share": 0.0545
+          },
+          {
+            "bars": 10,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x..x....x..x..../......x.......x.",
+            "pieces": 2,
+            "share": 0.0495
+          },
+          {
+            "bars": 2,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x..x....x..x..../......x.........",
+            "pieces": 2,
+            "share": 0.0099
+          },
+          {
+            "bars": 2,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x..x....x..x..../......x.......xx",
+            "pieces": 2,
+            "share": 0.0099
+          }
+        ],
+        "performers": 2,
+        "performers_note": null,
+        "pieces": 3,
+        "reliability": "juste",
+        "repetition_kick_snare": {
+          "lag_1": {
+            "n": 199,
+            "same_share": 0.1307
+          },
+          "lag_2": {
+            "n": 196,
+            "same_share": 0.0918
+          },
+          "lag_4": {
+            "n": 190,
+            "same_share": 0.1211
+          },
+          "lag_8": {
+            "n": 178,
+            "same_share": 0.118
+          }
+        },
+        "role_signed_ms_vs_grid": {
+          "hat_closed": {
+            "median": -14.5,
+            "n": 288
+          },
+          "hat_pedal": {
+            "median": -29.5,
+            "n": 724
+          },
+          "kick": {
+            "median": -11.8,
+            "n": 1098
+          },
+          "ride": {
+            "median": -12.5,
+            "n": 912
+          },
+          "ride_bell": {
+            "median": -12.5,
+            "n": 96
+          },
+          "sidestick": {
+            "median": -15.9,
+            "n": 281
+          },
+          "snare": {
+            "median": -15.8,
+            "n": 2031
+          },
+          "tom": {
+            "median": -22.4,
+            "n": 156
+          }
+        },
+        "snare_patterns": [
+          {
+            "bars": 45,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "xxxxxxxxxxxxxxxx",
+            "pieces": 2,
+            "share": 0.2228
+          },
+          {
+            "bars": 10,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "......x.......x.",
+            "pieces": 2,
+            "share": 0.0495
+          },
+          {
+            "bars": 7,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": ".xxxxxxxxxxxxxxx",
+            "pieces": 2,
+            "share": 0.0347
+          },
+          {
+            "bars": 3,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................",
+            "pieces": 2,
+            "share": 0.0149
+          },
+          {
+            "bars": 2,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "......x.........",
+            "pieces": 2,
+            "share": 0.0099
+          },
+          {
+            "bars": 2,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "......x.......xx",
+            "pieces": 2,
+            "share": 0.0099
+          }
+        ],
+        "step_probability_by_role": {
+          "4/4 droit (16 pas)": {
+            "crash": [
+              0.0446,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.005,
+              0.0
+            ],
+            "hat_closed": [
+              0.1188,
+              0.1188,
+              0.1089,
+              0.0099,
+              0.1287,
+              0.1188,
+              0.0941,
+              0.0,
+              0.1287,
+              0.1386,
+              0.1089,
+              0.0149,
+              0.1238,
+              0.1238,
+              0.0891,
+              0.0
+            ],
+            "hat_open": [
+              0.005,
+              0.005,
+              0.0149,
+              0.0,
+              0.005,
+              0.0,
+              0.0446,
+              0.0,
+              0.0,
+              0.0149,
+              0.0149,
+              0.0,
+              0.0,
+              0.0,
+              0.0297,
+              0.0
+            ],
+            "hat_pedal": [
+              0.0594,
+              0.0644,
+              0.7426,
+              0.0396,
+              0.0149,
+              0.005,
+              0.8416,
+              0.0,
+              0.0842,
+              0.0198,
+              0.7822,
+              0.0446,
+              0.0347,
+              0.0198,
+              0.8317,
+              0.0
+            ],
+            "kick": [
+              1.3416,
+              0.0743,
+              0.0,
+              1.0495,
+              0.0149,
+              0.0198,
+              0.2772,
+              0.0,
+              1.198,
+              0.0891,
+              0.0099,
+              1.005,
+              0.0248,
+              0.0099,
+              0.3119,
+              0.0099
+            ],
+            "ride": [
+              0.4158,
+              0.3317,
+              0.3317,
+              0.0495,
+              0.4208,
+              0.4109,
+              0.3069,
+              0.0594,
+              0.3911,
+              0.3465,
+              0.3465,
+              0.0149,
+              0.3861,
+              0.3762,
+              0.2723,
+              0.0545
+            ],
+            "ride_bell": [
+              0.0396,
+              0.0,
+              0.104,
+              0.0,
+              0.005,
+              0.005,
+              0.104,
+              0.0,
+              0.005,
+              0.0,
+              0.0941,
+              0.0,
+              0.0149,
+              0.0,
+              0.104,
+              0.0
+            ],
+            "sidestick": [
+              0.005,
+              0.0693,
+              0.0396,
+              0.0792,
+              0.0396,
+              0.0495,
+              0.3267,
+              0.0743,
+              0.0,
+              0.0842,
+              0.0644,
+              0.0693,
+              0.0842,
+              0.0248,
+              0.2376,
+              0.1436
+            ],
+            "snare": [
+              0.401,
+              0.7574,
+              0.5198,
+              0.5396,
+              0.8168,
+              0.797,
+              0.5842,
+              0.6386,
+              0.5198,
+              0.7921,
+              0.505,
+              0.5297,
+              0.7723,
+              0.7574,
+              0.4802,
+              0.6436
+            ],
+            "tom": [
+              0.0,
+              0.0248,
+              0.0198,
+              0.0248,
+              0.0446,
+              0.0446,
+              0.0347,
+              0.0297,
+              0.0198,
+              0.1089,
+              0.0545,
+              0.0446,
+              0.104,
+              0.0693,
+              0.1188,
+              0.0297
+            ]
+          }
+        },
+        "swing_offbeat_position": {
+          "mean": 0.4792,
+          "n": 3,
+          "note": "position médiane de la croche retardée dans la noire par pièce : 0,5 droit, 0,667 triolet",
+          "p10": 0.48,
+          "p25": 0.48,
+          "p50": 0.48,
+          "p75": 0.48,
+          "p90": 0.48,
+          "sd": 0.0034
+        },
+        "tempo_bpm": {
+          "mean": 100.0,
+          "n": 3,
+          "p10": 95.0,
+          "p25": 95.0,
+          "p50": 95.0,
+          "p75": 102.5,
+          "p90": 107.0,
+          "sd": 7.0711
+        },
+        "timekeeper": {
+          "hat_closed": 0.2276,
+          "n": 123,
+          "ride": 0.7724
+        },
+        "timekeeper_figure": {
+          "eighths": 0.0081,
+          "n": 123,
+          "other": 0.3171,
+          "sixteenths_or_triplets": 0.6748
+        },
+        "timing_to_grid": {
+          "n": 5623,
+          "quantized_share": 0.1816,
+          "quantized_source": false,
+          "signed_ms": {
+            "mean": -13.1205,
+            "n": 5623,
+            "p10": -43.18,
+            "p25": -29.55,
+            "p50": -15.91,
+            "p75": -1.32,
+            "p90": 21.59,
+            "sd": 26.3545
+          },
+          "signed_ms_off_beat": {
+            "mean": -15.8848,
+            "n": 4045,
+            "p10": -45.45,
+            "p25": -31.82,
+            "p50": -18.42,
+            "p75": -3.95,
+            "p90": 15.91,
+            "sd": 25.6198
+          },
+          "signed_ms_on_beat": {
+            "mean": -6.0345,
+            "n": 1578,
+            "p10": -35.53,
+            "p25": -23.68,
+            "p50": -10.23,
+            "p75": 4.55,
+            "p90": 36.36,
+            "sd": 26.8821
+          },
+          "tolerance_steps": 0.18,
+          "within_tolerance_share": 0.5986
+        },
+        "velocity_by_role": {
+          "crash": {
+            "mean": 87.0,
+            "n": 10
+          },
+          "hat_closed": {
+            "mean": 51.0,
+            "n": 288
+          },
+          "hat_open": {
+            "mean": 85.3,
+            "n": 27
+          },
+          "hat_pedal": {
+            "mean": 66.3,
+            "n": 724
+          },
+          "kick": {
+            "mean": 37.4,
+            "n": 1098
+          },
+          "ride": {
+            "mean": 65.4,
+            "n": 912
+          },
+          "ride_bell": {
+            "mean": 74.3,
+            "n": 96
+          },
+          "sidestick": {
+            "mean": 68.7,
+            "n": 281
+          },
+          "snare": {
+            "mean": 43.3,
+            "n": 2031
+          },
+          "tom": {
+            "mean": 86.2,
+            "n": 156
+          }
+        }
+      },
+      "license": "CC-BY-4.0",
+      "proxy": null,
+      "source": "gmd"
+    }
+  },
+  "style": "baiao",
+  "version": "S1-020-1"
+}

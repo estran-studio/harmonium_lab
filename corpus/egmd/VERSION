@@ -1,0 +1,7 @@
+source: egmd
+url: https://storage.googleapis.com/magentadata/datasets/e-gmd/v1.0.0/e-gmd-v1.0.0.csv
+sha256: 80677e8fb00e973f33cb91ddaaf7f0cffe55359f9a76c1833ce56c84d1d92c64
+license: CC-BY-4.0
+subset: {"note": "Chaque identifiant du CSV est d\u00e9j\u00e0 dans GMD ; 43 kits ne cr\u00e9ent pas 43 ind\u00e9pendances statistiques.", "unique_sequences": 1059}
+retrieved: 2026-11-07
+manifest_sha256: e142bd36389d61df37f7e5f95e90968117fe85b34712a9832dc57942ad135190

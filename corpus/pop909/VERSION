@@ -1,0 +1,7 @@
+source: pop909
+url: https://github.com/music-x-lab/POP909-Dataset/raw/master/POP909.zip
+sha256: 32cedcc22585eff9c090791941a0c4e5e6372daa2a11f7b04bd038f941ac32c6
+license: MIT
+subset: {"pop": 880}
+retrieved: 2026-11-07
+manifest_sha256: 95662e795ea3965178502160ce2eda7afddd690f30e129a9eed28372d397a2e1

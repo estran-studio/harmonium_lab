@@ -1,0 +1,5106 @@
+{
+  "limits": [
+    "basse : aucune source directe assez fiable ; ne pas calibrer un profil sur un proxy",
+    "comping : aucune source directe assez fiable ; ne pas calibrer un profil sur un proxy",
+    "batterie : aucune source directe assez fiable ; voir GMD L2 et le biais du kit Roland"
+  ],
+  "profile": "gmd_reggae",
+  "reliability_rule": {
+    "assez": "≥ 8 pièces, ≥ 3 interprètes (ou interprète inconnu), ≥ 300 mesures non vides",
+    "juste": "≥ 3 pièces et ≥ 60 mesures non vides",
+    "peu": "en dessous"
+  },
+  "sources": {
+    "dubroom": {
+      "archive_sha256": "26f6b92503bbb8349f31d6fab7acd112c468d7fd55ee383bef5b399fcc441ce9",
+      "bass": {
+        "approach_to_next_chord": {
+          "fifth": 0.3231,
+          "n": 9685,
+          "other": 0.2217,
+          "same_root": 0.1132,
+          "semitone_above": 0.0421,
+          "semitone_below": 0.0702,
+          "tone_above": 0.1577,
+          "tone_below": 0.0721
+        },
+        "arrival_on_chord_change": {
+          "chromatic": 0.0111,
+          "fifth": 0.1983,
+          "late": 0.2177,
+          "n": 9765,
+          "other_chord_tone": 0.0663,
+          "root": 0.3727,
+          "scale_step": 0.0237,
+          "seventh": 0.0389,
+          "third": 0.0715
+        },
+        "bars_empty": 1692,
+        "bars_non_empty": 13612,
+        "chords": {
+          "annotated_pieces": 0,
+          "inferred_pieces": 106
+        },
+        "degrees": {
+          "beat": {
+            "chromatic": 0.0128,
+            "fifth": 0.2745,
+            "n": 30695,
+            "other_chord_tone": 0.0712,
+            "root": 0.4397,
+            "scale_step": 0.0461,
+            "seventh": 0.0432,
+            "third": 0.1124
+          },
+          "downbeat": {
+            "chromatic": 0.0143,
+            "fifth": 0.263,
+            "n": 10361,
+            "other_chord_tone": 0.0674,
+            "root": 0.4683,
+            "scale_step": 0.0482,
+            "seventh": 0.0428,
+            "third": 0.0961
+          },
+          "offbeat": {
+            "chromatic": 0.032,
+            "fifth": 0.2552,
+            "n": 25036,
+            "other_chord_tone": 0.0736,
+            "root": 0.3729,
+            "scale_step": 0.0773,
+            "seventh": 0.0707,
+            "third": 0.1183
+          }
+        },
+        "duration_beats": {
+          "mean": 0.5486,
+          "n": 66061,
+          "p10": 0.25,
+          "p25": 0.33,
+          "p50": 0.44,
+          "p75": 0.75,
+          "p90": 0.97,
+          "sd": 0.3176
+        },
+        "grids": {
+          "4/4 droit (16 pas)": 98,
+          "4/4 ternaire (12 pas)": 8
+        },
+        "interval_to_chord_root": {
+          "n": 66092,
+          "shares": {
+            "0": 0.4189,
+            "1": 0.0033,
+            "10": 0.0263,
+            "11": 0.0432,
+            "2": 0.0132,
+            "3": 0.0484,
+            "4": 0.0674,
+            "5": 0.0955,
+            "6": 0.022,
+            "7": 0.2504,
+            "8": 0.0059,
+            "9": 0.0056
+          }
+        },
+        "intervals": {
+          "n": 66015,
+          "repeated_pitch_share": 0.4155,
+          "shares": {
+            "0": 0.4155,
+            "1": 0.0945,
+            "10": 0.0012,
+            "11": 0.0,
+            "12": 0.007,
+            "13+": 0.0005,
+            "2": 0.1116,
+            "3": 0.0679,
+            "4": 0.097,
+            "5": 0.1209,
+            "6": 0.0063,
+            "7": 0.0656,
+            "8": 0.0053,
+            "9": 0.0067
+          }
+        },
+        "legato_ratio": {
+          "legato_share_ge_0_9": 0.1768,
+          "mean": 0.7245,
+          "n": 66061,
+          "p10": 0.5,
+          "p25": 0.55,
+          "p50": 0.74,
+          "p75": 0.85,
+          "p90": 0.97,
+          "sd": 0.2131,
+          "staccato_share_lt_0_5": 0.0956
+        },
+        "notes": 66121,
+        "notes_per_bar": {
+          "distribution": {
+            "1": 0.0132,
+            "10": 0.0004,
+            "11": 0.0006,
+            "2": 0.0352,
+            "22": 0.0001,
+            "3": 0.1091,
+            "4": 0.2471,
+            "5": 0.2849,
+            "6": 0.1906,
+            "7": 0.0729,
+            "8": 0.0457,
+            "9": 0.0003
+          },
+          "mean": 4.8576
+        },
+        "performers": 1,
+        "performers_note": null,
+        "pieces": 106,
+        "register_midi": {
+          "mean": 33.466,
+          "n": 66121,
+          "p1": 23.0,
+          "p25": 29.0,
+          "p5": 25.0,
+          "p50": 33.0,
+          "p75": 36.0,
+          "p95": 45.0,
+          "p99": 55.0,
+          "sd": 6.7501
+        },
+        "reliability": "juste",
+        "repetition_rhythm": {
+          "lag_1": {
+            "n": 13044,
+            "same_share": 0.0958
+          },
+          "lag_2": {
+            "n": 12663,
+            "same_share": 0.6111
+          },
+          "lag_4": {
+            "n": 12110,
+            "same_share": 0.7541
+          },
+          "lag_8": {
+            "n": 11444,
+            "same_share": 0.7373
+          }
+        },
+        "repetition_rhythm_and_contour": {
+          "lag_1": {
+            "n": 13044,
+            "same_share": 0.0304
+          },
+          "lag_2": {
+            "n": 12663,
+            "same_share": 0.4646
+          },
+          "lag_4": {
+            "n": 12110,
+            "same_share": 0.6808
+          },
+          "lag_8": {
+            "n": 11444,
+            "same_share": 0.6956
+          }
+        },
+        "rhythm_patterns": [
+          {
+            "bars": 802,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x.x.x.x.",
+            "pieces": 17,
+            "share": 0.0589
+          },
+          {
+            "bars": 639,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.x.x...x...x...",
+            "pieces": 28,
+            "share": 0.0469
+          },
+          {
+            "bars": 550,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.x.x.x.x.x.x.x.",
+            "pieces": 16,
+            "share": 0.0404
+          },
+          {
+            "bars": 539,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x.......",
+            "pieces": 26,
+            "share": 0.0396
+          },
+          {
+            "bars": 461,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.x.x.x.x...x...",
+            "pieces": 15,
+            "share": 0.0339
+          },
+          {
+            "bars": 441,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.....x.x.x.x...",
+            "pieces": 16,
+            "share": 0.0324
+          },
+          {
+            "bars": 436,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.....x.x...x...",
+            "pieces": 10,
+            "share": 0.032
+          },
+          {
+            "bars": 367,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "..x.x.x.x.x.x.x.",
+            "pieces": 14,
+            "share": 0.027
+          },
+          {
+            "bars": 353,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x...x...",
+            "pieces": 14,
+            "share": 0.0259
+          },
+          {
+            "bars": 349,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x.....x.",
+            "pieces": 17,
+            "share": 0.0256
+          },
+          {
+            "bars": 334,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.......x.x.x.x.",
+            "pieces": 12,
+            "share": 0.0245
+          },
+          {
+            "bars": 320,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "..x.x.x.x...x...",
+            "pieces": 13,
+            "share": 0.0235
+          }
+        ],
+        "rhythm_patterns_note": "un motif = une mesure ; vu dans ≥ 2 pièces ; grilles : voir `grids`",
+        "step_probability": {
+          "4/4 droit (16 pas)": [
+            0.7567,
+            0.0126,
+            0.3485,
+            0.0405,
+            0.6503,
+            0.008,
+            0.4704,
+            0.0082,
+            0.9058,
+            0.0119,
+            0.4531,
+            0.0331,
+            0.7139,
+            0.0073,
+            0.4389,
+            0.0112
+          ],
+          "4/4 ternaire (12 pas)": [
+            0.8387,
+            0.0,
+            0.447,
+            0.4123,
+            0.0519,
+            0.5162,
+            0.9491,
+            0.0,
+            0.421,
+            0.6894,
+            0.0703,
+            0.2835
+          ]
+        },
+        "swing_offbeat_position": {
+          "mean": 0.5189,
+          "n": 106,
+          "note": "position médiane de la croche retardée dans la noire par pièce : 0,5 droit, 0,667 triolet",
+          "p10": 0.5,
+          "p25": 0.5,
+          "p50": 0.5,
+          "p75": 0.5,
+          "p90": 0.57,
+          "sd": 0.0524
+        },
+        "tempo_bpm": {
+          "mean": 137.1462,
+          "n": 106,
+          "p10": 120.67,
+          "p25": 126.25,
+          "p50": 134.0,
+          "p75": 144.43,
+          "p90": 160.5,
+          "sd": 15.8593
+        },
+        "timing_to_grid": {
+          "n": 66121,
+          "quantized_share": 0.8509,
+          "quantized_source": false,
+          "signed_ms": {
+            "mean": 1.474,
+            "n": 66121,
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 7.58,
+            "sd": 7.9729
+          },
+          "signed_ms_off_beat": {
+            "mean": 1.1369,
+            "n": 25048,
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 6.21,
+            "sd": 9.3713
+          },
+          "signed_ms_on_beat": {
+            "mean": 1.6796,
+            "n": 41073,
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 7.83,
+            "sd": 6.976
+          },
+          "tolerance_steps": 0.18,
+          "within_tolerance_share": 0.9524
+        },
+        "velocity": {
+          "available": true,
+          "mean": 97.77,
+          "n": 66121,
+          "relative_to_piece_median_by_step": {
+            "4/4 droit (16 pas)": [
+              1.0062,
+              0.9856,
+              0.991,
+              0.991,
+              1.0021,
+              0.9345,
+              1.0018,
+              0.9849,
+              1.0064,
+              1.0269,
+              0.9908,
+              0.9731,
+              1.0028,
+              0.9731,
+              1.0,
+              0.9567
+            ],
+            "4/4 ternaire (12 pas)": [
+              0.9931,
+              null,
+              0.9978,
+              0.9976,
+              1.0,
+              0.9952,
+              0.9813,
+              null,
+              1.0019,
+              0.9958,
+              1.1377,
+              0.9957
+            ]
+          },
+          "sd": 22.08
+        }
+      },
+      "comp": {
+        "anticipation_share": {
+          "definition": "attaques dans la dernière croche de la mesure (anticipation du temps 1 suivant)",
+          "value": 0.1321
+        },
+        "attacks": 57461,
+        "attacks_per_bar": {
+          "distribution": {
+            "1": 0.0203,
+            "10": 0.0326,
+            "11": 0.0346,
+            "12": 0.0169,
+            "13": 0.0055,
+            "14": 0.0049,
+            "15": 0.008,
+            "16": 0.0266,
+            "17": 0.0048,
+            "18": 0.0124,
+            "19": 0.0007,
+            "2": 0.0941,
+            "20": 0.0019,
+            "21": 0.001,
+            "22": 0.0019,
+            "23": 0.0025,
+            "24": 0.0056,
+            "26": 0.0006,
+            "27": 0.0001,
+            "28": 0.0001,
+            "29": 0.0012,
+            "3": 0.0465,
+            "31": 0.0007,
+            "32": 0.0006,
+            "34": 0.0001,
+            "35": 0.0004,
+            "36": 0.0005,
+            "37": 0.0001,
+            "4": 0.0649,
+            "41": 0.0004,
+            "5": 0.0745,
+            "6": 0.3565,
+            "7": 0.0876,
+            "8": 0.0603,
+            "9": 0.0309
+          },
+          "mean": 6.8463
+        },
+        "bars_empty": 6215,
+        "bars_non_empty": 8393,
+        "chords": {
+          "annotated_pieces": 0,
+          "inferred_pieces": 106
+        },
+        "duration_beats": {
+          "mean": 0.215,
+          "n": 57461,
+          "p10": 0.12,
+          "p25": 0.13,
+          "p50": 0.17,
+          "p75": 0.24,
+          "p90": 0.35,
+          "sd": 0.1935
+        },
+        "duration_over_gap": {
+          "mean": 0.5407,
+          "n": 57355,
+          "p10": 0.14,
+          "p25": 0.25,
+          "p50": 0.38,
+          "p75": 0.69,
+          "p90": 1.15,
+          "sd": 0.46,
+          "staccato_share_lt_0_5": 0.618
+        },
+        "grids": {
+          "4/4 droit (16 pas)": 98,
+          "4/4 ternaire (12 pas)": 8
+        },
+        "notes_per_attack": {
+          "n": 57461,
+          "shares": {
+            "1": 0.0325,
+            "2": 0.0389,
+            "3": 0.8614,
+            "4": 0.0138,
+            "5": 0.0166,
+            "6": 0.0348,
+            "7": 0.0014,
+            "8+": 0.0006
+          }
+        },
+        "offbeat_attack_share": 0.6588,
+        "performers": 1,
+        "performers_note": null,
+        "pieces": 106,
+        "register_midi": {
+          "highest": {
+            "mean": 63.0895,
+            "n": 57461,
+            "p1": 31.0,
+            "p25": 57.0,
+            "p5": 42.0,
+            "p50": 64.0,
+            "p75": 71.0,
+            "p95": 79.0,
+            "p99": 86.0,
+            "sd": 11.1344
+          },
+          "lowest": {
+            "mean": 55.2554,
+            "n": 57461,
+            "p1": 24.0,
+            "p25": 49.0,
+            "p5": 35.0,
+            "p50": 56.0,
+            "p75": 62.0,
+            "p95": 73.0,
+            "p99": 77.0,
+            "sd": 11.2267
+          },
+          "mean": {
+            "mean": 59.2095,
+            "n": 57461,
+            "p1": 27.67,
+            "p25": 52.67,
+            "p5": 38.33,
+            "p50": 60.33,
+            "p75": 66.67,
+            "p95": 75.67,
+            "p99": 80.67,
+            "sd": 11.0727
+          }
+        },
+        "reliability": "juste",
+        "repetition_rhythm": {
+          "lag_1": {
+            "n": 7240,
+            "same_share": 0.4685
+          },
+          "lag_2": {
+            "n": 6700,
+            "same_share": 0.5672
+          },
+          "lag_4": {
+            "n": 5771,
+            "same_share": 0.558
+          },
+          "lag_8": {
+            "n": 4914,
+            "same_share": 0.4931
+          }
+        },
+        "repetition_rhythm_and_pitch_classes": {
+          "lag_1": {
+            "n": 7240,
+            "same_share": 0.0932
+          },
+          "lag_2": {
+            "n": 6700,
+            "same_share": 0.3181
+          },
+          "lag_4": {
+            "n": 5771,
+            "same_share": 0.4221
+          },
+          "lag_8": {
+            "n": 4914,
+            "same_share": 0.3641
+          }
+        },
+        "rhythm_patterns": [
+          {
+            "bars": 2107,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "..x.x.x...x.x.x.",
+            "pieces": 43,
+            "share": 0.251
+          },
+          {
+            "bars": 430,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.......x...",
+            "pieces": 13,
+            "share": 0.0512
+          },
+          {
+            "bars": 324,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "xxxxxxxxxxxxxxxx",
+            "pieces": 29,
+            "share": 0.0386
+          },
+          {
+            "bars": 241,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.x.x.x...x.x.x.",
+            "pieces": 19,
+            "share": 0.0287
+          },
+          {
+            "bars": 209,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.x.....x.x.",
+            "pieces": 3,
+            "share": 0.0249
+          },
+          {
+            "bars": 180,
+            "grid": "4/4 ternaire (12 pas)",
+            "pattern": "..xx.x..xx.x",
+            "pieces": 4,
+            "share": 0.0214
+          },
+          {
+            "bars": 159,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "..x.x.x.x.x.x.x.",
+            "pieces": 19,
+            "share": 0.0189
+          },
+          {
+            "bars": 142,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.x.x.x.x.x.x.x.",
+            "pieces": 17,
+            "share": 0.0169
+          },
+          {
+            "bars": 111,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "..x.x.x...xxx.x.",
+            "pieces": 5,
+            "share": 0.0132
+          },
+          {
+            "bars": 95,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.xx.xx.xx.xx.xx",
+            "pieces": 26,
+            "share": 0.0113
+          },
+          {
+            "bars": 95,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "..x...x...x...x.",
+            "pieces": 4,
+            "share": 0.0113
+          },
+          {
+            "bars": 90,
+            "grid": "4/4 ternaire (12 pas)",
+            "pattern": "xxxxxxxxxxxx",
+            "pieces": 5,
+            "share": 0.0107
+          }
+        ],
+        "rhythm_patterns_note": "un motif = les pas d'attaque d'une mesure ; vu dans ≥ 2 pièces",
+        "span_semitones": {
+          "mean": 7.834,
+          "n": 57461,
+          "p10": 7.0,
+          "p25": 7.0,
+          "p50": 7.0,
+          "p75": 8.0,
+          "p90": 9.0,
+          "sd": 3.3377
+        },
+        "step_probability": {
+          "4/4 droit (16 pas)": [
+            0.3281,
+            0.1793,
+            0.693,
+            0.2024,
+            0.8012,
+            0.2007,
+            0.722,
+            0.2155,
+            0.3395,
+            0.2143,
+            0.6748,
+            0.2414,
+            0.8172,
+            0.2011,
+            0.7001,
+            0.2132
+          ],
+          "4/4 ternaire (12 pas)": [
+            0.4891,
+            0.365,
+            0.9328,
+            0.9839,
+            0.4044,
+            0.8847,
+            0.435,
+            0.419,
+            0.9197,
+            0.9927,
+            0.3708,
+            0.8029
+          ]
+        },
+        "swing_offbeat_position": {
+          "mean": 0.5447,
+          "n": 103,
+          "note": "position médiane de la croche retardée dans la noire par pièce : 0,5 droit, 0,667 triolet",
+          "p10": 0.5,
+          "p25": 0.5,
+          "p50": 0.5,
+          "p75": 0.57,
+          "p90": 0.67,
+          "sd": 0.0685
+        },
+        "tempo_bpm": {
+          "mean": 137.1462,
+          "n": 106,
+          "p10": 120.67,
+          "p25": 126.25,
+          "p50": 134.0,
+          "p75": 144.43,
+          "p90": 160.5,
+          "sd": 15.8593
+        },
+        "timing_to_grid": {
+          "n": 57461,
+          "quantized_share": 0.5782,
+          "quantized_source": false,
+          "signed_ms": {
+            "mean": 0.3475,
+            "n": 57461,
+            "p10": -20.49,
+            "p25": -3.46,
+            "p50": 0.0,
+            "p75": 3.45,
+            "p90": 22.22,
+            "sd": 18.3401
+          },
+          "signed_ms_off_beat": {
+            "mean": 0.2015,
+            "n": 37853,
+            "p10": -25.86,
+            "p25": -3.7,
+            "p50": 0.0,
+            "p75": 4.0,
+            "p90": 24.24,
+            "sd": 19.8341
+          },
+          "signed_ms_on_beat": {
+            "mean": 0.6294,
+            "n": 19608,
+            "p10": -12.2,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 17.31,
+            "sd": 15.038
+          },
+          "tolerance_steps": 0.18,
+          "within_tolerance_share": 0.8037
+        },
+        "velocity": {
+          "available": true,
+          "ghost_note_share_lt_60pct_of_median": 0.1574,
+          "mean": 85.58,
+          "n": 184035,
+          "relative_to_piece_median_by_step": {
+            "4/4 droit (16 pas)": [
+              0.9711,
+              0.8765,
+              1.0023,
+              0.8527,
+              1.1196,
+              0.8946,
+              1.0033,
+              0.9345,
+              0.9696,
+              0.8663,
+              0.9979,
+              0.8704,
+              1.1116,
+              0.8974,
+              1.0018,
+              0.9262
+            ],
+            "4/4 ternaire (12 pas)": [
+              1.0431,
+              0.889,
+              1.066,
+              1.1779,
+              0.9768,
+              1.0979,
+              0.9773,
+              0.9935,
+              1.0944,
+              1.1768,
+              0.898,
+              1.0764
+            ]
+          },
+          "sd": 37.94
+        },
+        "voices": {
+          "guitar": 12,
+          "keys": 94
+        },
+        "voicing_stacks": {
+          "n_multi_note_attacks": 55596,
+          "note": "écarts en demi-tons entre notes adjacentes, du grave à l'aigu",
+          "top": [
+            {
+              "gaps": "4,3",
+              "share": 0.3623
+            },
+            {
+              "gaps": "3,4",
+              "share": 0.1919
+            },
+            {
+              "gaps": "5,4",
+              "share": 0.127
+            },
+            {
+              "gaps": "3,5",
+              "share": 0.0835
+            },
+            {
+              "gaps": "5,3",
+              "share": 0.069
+            },
+            {
+              "gaps": "4,5",
+              "share": 0.0506
+            },
+            {
+              "gaps": "5",
+              "share": 0.0107
+            },
+            {
+              "gaps": "4,3,5,4,3",
+              "share": 0.0102
+            },
+            {
+              "gaps": "7",
+              "share": 0.0097
+            },
+            {
+              "gaps": "4",
+              "share": 0.0092
+            },
+            {
+              "gaps": "3",
+              "share": 0.0077
+            },
+            {
+              "gaps": "5,4,3,5,4",
+              "share": 0.0065
+            },
+            {
+              "gaps": "5,3,4,5,3",
+              "share": 0.0061
+            },
+            {
+              "gaps": "5,3,4,5",
+              "share": 0.0043
+            },
+            {
+              "gaps": "3,4,5,3,4",
+              "share": 0.0037
+            }
+          ]
+        },
+        "voicing_vs_chord": {
+          "interval_to_root_presence": {
+            "0": 0.8672,
+            "1": 0.0014,
+            "10": 0.0646,
+            "11": 0.0559,
+            "2": 0.0224,
+            "3": 0.3535,
+            "4": 0.5745,
+            "5": 0.0274,
+            "6": 0.0063,
+            "7": 0.9386,
+            "8": 0.0145,
+            "9": 0.0147
+          },
+          "n": 57460,
+          "root_present": 0.8672,
+          "scale_tension_present": 0.0509,
+          "seventh_present": 0.1112,
+          "third_and_seventh": 0.0908,
+          "third_present": 0.9082
+        }
+      },
+      "drums": {
+        "bars_empty": 1427,
+        "bars_non_empty": 14152,
+        "chords": {
+          "annotated_pieces": 0,
+          "inferred_pieces": 106
+        },
+        "grids": {
+          "4/4 droit (16 pas)": 98,
+          "4/4 ternaire (12 pas)": 8
+        },
+        "hits_per_bar_by_role": {
+          "crash": 0.09,
+          "hat_closed": 6.73,
+          "hat_open": 0.63,
+          "hat_pedal": 0.01,
+          "kick": 1.45,
+          "ride_bell": 0.0,
+          "sidestick": 0.63,
+          "snare": 1.4,
+          "tom": 0.32
+        },
+        "kick_patterns": [
+          {
+            "bars": 5381,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................",
+            "pieces": 97,
+            "share": 0.3802
+          },
+          {
+            "bars": 2112,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.......x.......",
+            "pieces": 64,
+            "share": 0.1492
+          },
+          {
+            "bars": 1779,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x...x...",
+            "pieces": 22,
+            "share": 0.1257
+          },
+          {
+            "bars": 1232,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "........x.......",
+            "pieces": 81,
+            "share": 0.0871
+          },
+          {
+            "bars": 728,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...............",
+            "pieces": 53,
+            "share": 0.0514
+          },
+          {
+            "bars": 655,
+            "grid": "4/4 ternaire (12 pas)",
+            "pattern": "............",
+            "pieces": 8,
+            "share": 0.0463
+          },
+          {
+            "bars": 288,
+            "grid": "4/4 ternaire (12 pas)",
+            "pattern": "x.....x.....",
+            "pieces": 6,
+            "share": 0.0204
+          },
+          {
+            "bars": 147,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.....x.....x...",
+            "pieces": 9,
+            "share": 0.0104
+          },
+          {
+            "bars": 143,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.....x.x...x...",
+            "pieces": 8,
+            "share": 0.0101
+          },
+          {
+            "bars": 118,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x...x.x.",
+            "pieces": 4,
+            "share": 0.0083
+          },
+          {
+            "bars": 99,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.............x.",
+            "pieces": 9,
+            "share": 0.007
+          },
+          {
+            "bars": 82,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.......x...x...",
+            "pieces": 4,
+            "share": 0.0058
+          }
+        ],
+        "kick_snare_patterns": [
+          {
+            "bars": 2653,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................/........x.......",
+            "pieces": 45,
+            "share": 0.1875
+          },
+          {
+            "bars": 1518,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.......x......./........x.......",
+            "pieces": 22,
+            "share": 0.1073
+          },
+          {
+            "bars": 736,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "........x......./........x.......",
+            "pieces": 12,
+            "share": 0.052
+          },
+          {
+            "bars": 571,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.............../........x.......",
+            "pieces": 11,
+            "share": 0.0403
+          },
+          {
+            "bars": 525,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................/................",
+            "pieces": 75,
+            "share": 0.0371
+          },
+          {
+            "bars": 462,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................/........x.....x.",
+            "pieces": 11,
+            "share": 0.0326
+          },
+          {
+            "bars": 426,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x...x.../........x.......",
+            "pieces": 9,
+            "share": 0.0301
+          },
+          {
+            "bars": 411,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x...x.../................",
+            "pieces": 11,
+            "share": 0.029
+          },
+          {
+            "bars": 349,
+            "grid": "4/4 ternaire (12 pas)",
+            "pattern": "............/......x.....",
+            "pieces": 5,
+            "share": 0.0247
+          },
+          {
+            "bars": 199,
+            "grid": "4/4 ternaire (12 pas)",
+            "pattern": "x.....x...../......x.....",
+            "pieces": 2,
+            "share": 0.0141
+          },
+          {
+            "bars": 143,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x...x.../........x.....x.",
+            "pieces": 3,
+            "share": 0.0101
+          },
+          {
+            "bars": 136,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................/..x.....x.......",
+            "pieces": 7,
+            "share": 0.0096
+          }
+        ],
+        "performers": 1,
+        "performers_note": null,
+        "pieces": 106,
+        "reliability": "juste",
+        "repetition_kick_snare": {
+          "lag_1": {
+            "n": 13684,
+            "same_share": 0.4354
+          },
+          "lag_2": {
+            "n": 13342,
+            "same_share": 0.5943
+          },
+          "lag_4": {
+            "n": 12792,
+            "same_share": 0.6779
+          },
+          "lag_8": {
+            "n": 12156,
+            "same_share": 0.657
+          }
+        },
+        "role_signed_ms_vs_grid": {
+          "crash": {
+            "median": 0.0,
+            "n": 1325
+          },
+          "hat_closed": {
+            "median": 0.0,
+            "n": 95208
+          },
+          "hat_open": {
+            "median": 0.0,
+            "n": 8885
+          },
+          "hat_pedal": {
+            "median": 0.0,
+            "n": 165
+          },
+          "kick": {
+            "median": 0.0,
+            "n": 20450
+          },
+          "ride_bell": {
+            "median": 0.0,
+            "n": 63
+          },
+          "sidestick": {
+            "median": 0.0,
+            "n": 8966
+          },
+          "snare": {
+            "median": 0.0,
+            "n": 19876
+          },
+          "tom": {
+            "median": 0.0,
+            "n": 4529
+          }
+        },
+        "snare_patterns": [
+          {
+            "bars": 6624,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "........x.......",
+            "pieces": 81,
+            "share": 0.4681
+          },
+          {
+            "bars": 1155,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................",
+            "pieces": 97,
+            "share": 0.0816
+          },
+          {
+            "bars": 654,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "........x.....x.",
+            "pieces": 22,
+            "share": 0.0462
+          },
+          {
+            "bars": 586,
+            "grid": "4/4 ternaire (12 pas)",
+            "pattern": "......x.....",
+            "pieces": 8,
+            "share": 0.0414
+          },
+          {
+            "bars": 236,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.......x.......",
+            "pieces": 64,
+            "share": 0.0167
+          },
+          {
+            "bars": 233,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "..x.....x.......",
+            "pieces": 19,
+            "share": 0.0165
+          },
+          {
+            "bars": 190,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "........x..x..x.",
+            "pieces": 16,
+            "share": 0.0134
+          },
+          {
+            "bars": 139,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "..........x.....",
+            "pieces": 4,
+            "share": 0.0098
+          },
+          {
+            "bars": 139,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.....x.....",
+            "pieces": 4,
+            "share": 0.0098
+          },
+          {
+            "bars": 121,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "......x...x.....",
+            "pieces": 4,
+            "share": 0.0086
+          },
+          {
+            "bars": 113,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "........x.x.....",
+            "pieces": 9,
+            "share": 0.008
+          },
+          {
+            "bars": 99,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "............x...",
+            "pieces": 44,
+            "share": 0.007
+          }
+        ],
+        "step_probability_by_role": {
+          "4/4 droit (16 pas)": {
+            "crash": [
+              0.0323,
+              0.0009,
+              0.0043,
+              0.0014,
+              0.0048,
+              0.0011,
+              0.0025,
+              0.0008,
+              0.0162,
+              0.0008,
+              0.0016,
+              0.0011,
+              0.0216,
+              0.0011,
+              0.0018,
+              0.0008
+            ],
+            "hat_closed": [
+              0.8258,
+              0.0992,
+              0.7481,
+              0.1898,
+              0.7876,
+              0.0603,
+              0.6676,
+              0.054,
+              0.8481,
+              0.0421,
+              0.7109,
+              0.1225,
+              0.7392,
+              0.0465,
+              0.5778,
+              0.1353
+            ],
+            "hat_open": [
+              0.0469,
+              0.0199,
+              0.0405,
+              0.0252,
+              0.1009,
+              0.0108,
+              0.0267,
+              0.0058,
+              0.0434,
+              0.0157,
+              0.0253,
+              0.0079,
+              0.139,
+              0.014,
+              0.0837,
+              0.0141
+            ],
+            "hat_pedal": [
+              0.0046,
+              0.0001,
+              0.0,
+              0.0002,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0076,
+              0.0,
+              0.0,
+              0.0001,
+              0.0002,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "kick": [
+              0.4575,
+              0.0023,
+              0.0217,
+              0.0027,
+              0.1721,
+              0.0025,
+              0.0591,
+              0.003,
+              0.461,
+              0.012,
+              0.0395,
+              0.0063,
+              0.2016,
+              0.0051,
+              0.0492,
+              0.0021
+            ],
+            "ride_bell": [
+              0.0004,
+              0.0003,
+              0.0,
+              0.0004,
+              0.0002,
+              0.0002,
+              0.0003,
+              0.0001,
+              0.0004,
+              0.0006,
+              0.0005,
+              0.0002,
+              0.0006,
+              0.0002,
+              0.0004,
+              0.0002
+            ],
+            "sidestick": [
+              0.0307,
+              0.0102,
+              0.0501,
+              0.0256,
+              0.0246,
+              0.0191,
+              0.0512,
+              0.0051,
+              0.149,
+              0.0168,
+              0.0368,
+              0.0336,
+              0.0225,
+              0.0127,
+              0.0552,
+              0.0145
+            ],
+            "snare": [
+              0.0781,
+              0.032,
+              0.0646,
+              0.0348,
+              0.0603,
+              0.0298,
+              0.0798,
+              0.0368,
+              0.6543,
+              0.0185,
+              0.0715,
+              0.0543,
+              0.068,
+              0.0275,
+              0.1252,
+              0.0381
+            ],
+            "tom": [
+              0.0423,
+              0.008,
+              0.0143,
+              0.0131,
+              0.0159,
+              0.0117,
+              0.0187,
+              0.0121,
+              0.0326,
+              0.0121,
+              0.0246,
+              0.0136,
+              0.0196,
+              0.0098,
+              0.0438,
+              0.0121
+            ]
+          },
+          "4/4 ternaire (12 pas)": {
+            "crash": [
+              0.0346,
+              0.0,
+              0.001,
+              0.0077,
+              0.0,
+              0.0038,
+              0.0106,
+              0.0,
+              0.0,
+              0.0269,
+              0.0,
+              0.0154
+            ],
+            "hat_closed": [
+              0.9645,
+              0.0557,
+              1.0163,
+              0.8386,
+              0.2824,
+              0.8098,
+              0.8732,
+              0.0548,
+              0.83,
+              0.8703,
+              0.2181,
+              0.8309
+            ],
+            "hat_open": [
+              0.0634,
+              0.0538,
+              0.0029,
+              0.0086,
+              0.121,
+              0.0029,
+              0.1402,
+              0.1239,
+              0.0442,
+              0.0048,
+              0.0989,
+              0.0634
+            ],
+            "kick": [
+              0.2891,
+              0.0019,
+              0.0038,
+              0.0019,
+              0.0576,
+              0.0038,
+              0.3746,
+              0.0019,
+              0.0106,
+              0.0298,
+              0.0029,
+              0.0038
+            ],
+            "sidestick": [
+              0.0519,
+              0.0221,
+              0.1479,
+              0.0144,
+              0.1316,
+              0.0183,
+              0.8377,
+              0.0154,
+              0.0624,
+              0.0855,
+              0.1105,
+              0.0922
+            ],
+            "snare": [
+              0.0922,
+              0.0154,
+              0.024,
+              0.0058,
+              0.0259,
+              0.0298,
+              0.1921,
+              0.0106,
+              0.0451,
+              0.0403,
+              0.0327,
+              0.0231
+            ],
+            "tom": [
+              0.0922,
+              0.024,
+              0.0298,
+              0.0413,
+              0.0231,
+              0.0375,
+              0.0365,
+              0.0298,
+              0.0327,
+              0.0576,
+              0.0413,
+              0.074
+            ]
+          }
+        },
+        "swing_offbeat_position": {
+          "mean": 0.5177,
+          "n": 106,
+          "note": "position médiane de la croche retardée dans la noire par pièce : 0,5 droit, 0,667 triolet",
+          "p10": 0.5,
+          "p25": 0.5,
+          "p50": 0.5,
+          "p75": 0.5,
+          "p90": 0.53,
+          "sd": 0.0538
+        },
+        "tempo_bpm": {
+          "mean": 137.1462,
+          "n": 106,
+          "p10": 120.67,
+          "p25": 126.25,
+          "p50": 134.0,
+          "p75": 144.43,
+          "p90": 160.5,
+          "sd": 15.8593
+        },
+        "timekeeper": {
+          "hat_closed": 0.9962,
+          "hat_open": 0.0032,
+          "n": 13197,
+          "ride_bell": 0.0006
+        },
+        "timekeeper_figure": {
+          "eighths": 0.6176,
+          "n": 13197,
+          "other": 0.1813,
+          "quarters": 0.0234,
+          "sixteenths_or_triplets": 0.1776
+        },
+        "timing_to_grid": {
+          "n": 159467,
+          "quantized_share": 0.921,
+          "quantized_source": true,
+          "signed_ms": {
+            "mean": 0.0686,
+            "n": 159467,
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.0,
+            "sd": 8.8205
+          },
+          "signed_ms_off_beat": {
+            "mean": 0.0391,
+            "n": 73027,
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.0,
+            "sd": 11.3194
+          },
+          "signed_ms_on_beat": {
+            "mean": 0.0936,
+            "n": 86440,
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.0,
+            "sd": 5.9398
+          },
+          "tolerance_steps": 0.18,
+          "within_tolerance_share": 0.9575
+        },
+        "velocity_by_role": {
+          "crash": {
+            "mean": 104.1,
+            "n": 1325
+          },
+          "hat_closed": {
+            "mean": 83.2,
+            "n": 95208
+          },
+          "hat_open": {
+            "mean": 67.3,
+            "n": 8885
+          },
+          "hat_pedal": {
+            "mean": 108.4,
+            "n": 165
+          },
+          "kick": {
+            "mean": 107.0,
+            "n": 20450
+          },
+          "ride_bell": {
+            "mean": 40.0,
+            "n": 63
+          },
+          "sidestick": {
+            "mean": 103.5,
+            "n": 8966
+          },
+          "snare": {
+            "mean": 91.0,
+            "n": 19876
+          },
+          "tom": {
+            "mean": 82.0,
+            "n": 4529
+          }
+        }
+      },
+      "license": "CC-BY-NC-SA-4.0",
+      "proxy": null,
+      "source": "dubroom",
+      "sync": {
+        "bass_minus_kick_ms": {
+          "mean": 2.6637,
+          "n": 14809,
+          "p10": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "p90": 12.61,
+          "sd": 8.2567
+        },
+        "comp_minus_snare_ms": {
+          "mean": -0.0757,
+          "n": 5787,
+          "p10": -23.49,
+          "p25": -3.7,
+          "p50": 0.0,
+          "p75": 4.17,
+          "p90": 20.96,
+          "sd": 18.3681
+        },
+        "exact_share_lt_1ms": 0.6594,
+        "informative": false,
+        "note": "positif = la basse (ou le comping) tombe après la grosse caisse (la caisse claire) ; sans valeur si presque toutes les paires sont à moins de 1 ms (séquencé)",
+        "pieces": 103,
+        "window_beats": 0.125
+      }
+    },
+    "gmd": {
+      "archive_sha256": "651cbc524ffb891be1a3e46d89dc82a1cecb09a57c748c7b45b844c4841dcc1e",
+      "drums": {
+        "bars_empty": 0,
+        "bars_non_empty": 287,
+        "chords": {
+          "annotated_pieces": 0,
+          "inferred_pieces": 0
+        },
+        "grids": {
+          "4/4 droit (16 pas)": 3,
+          "4/4 ternaire (12 pas)": 1
+        },
+        "hits_per_bar_by_role": {
+          "crash": 0.13,
+          "hat_closed": 5.71,
+          "hat_open": 1.48,
+          "hat_pedal": 0.86,
+          "kick": 2.67,
+          "ride": 0.0,
+          "sidestick": 1.21,
+          "snare": 3.98,
+          "tom": 0.46
+        },
+        "kick_patterns": [
+          {
+            "bars": 102,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x...x...",
+            "pieces": 3,
+            "share": 0.3554
+          },
+          {
+            "bars": 36,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.......x...",
+            "pieces": 2,
+            "share": 0.1254
+          },
+          {
+            "bars": 5,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................",
+            "pieces": 3,
+            "share": 0.0174
+          },
+          {
+            "bars": 1,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...............",
+            "pieces": 2,
+            "share": 0.0035
+          }
+        ],
+        "kick_snare_patterns": [
+          {
+            "bars": 15,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.......x.../....x.......x...",
+            "pieces": 2,
+            "share": 0.0523
+          },
+          {
+            "bars": 3,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x...x.../....x.......x..x",
+            "pieces": 2,
+            "share": 0.0105
+          },
+          {
+            "bars": 2,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.......x.../....x...x.......",
+            "pieces": 2,
+            "share": 0.007
+          }
+        ],
+        "performers": 2,
+        "performers_note": null,
+        "pieces": 4,
+        "reliability": "juste",
+        "repetition_kick_snare": {
+          "lag_1": {
+            "n": 283,
+            "same_share": 0.0707
+          },
+          "lag_2": {
+            "n": 279,
+            "same_share": 0.0681
+          },
+          "lag_4": {
+            "n": 271,
+            "same_share": 0.0517
+          },
+          "lag_8": {
+            "n": 255,
+            "same_share": 0.0314
+          }
+        },
+        "role_signed_ms_vs_grid": {
+          "crash": {
+            "median": -25.8,
+            "n": 37
+          },
+          "hat_closed": {
+            "median": -8.0,
+            "n": 1638
+          },
+          "hat_open": {
+            "median": -12.4,
+            "n": 426
+          },
+          "hat_pedal": {
+            "median": -12.4,
+            "n": 248
+          },
+          "kick": {
+            "median": -11.7,
+            "n": 765
+          },
+          "sidestick": {
+            "median": -15.6,
+            "n": 346
+          },
+          "snare": {
+            "median": -12.9,
+            "n": 1143
+          },
+          "tom": {
+            "median": -19.8,
+            "n": 132
+          }
+        },
+        "snare_patterns": [
+          {
+            "bars": 23,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.......x...",
+            "pieces": 2,
+            "share": 0.0801
+          },
+          {
+            "bars": 4,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.......x..x",
+            "pieces": 2,
+            "share": 0.0139
+          },
+          {
+            "bars": 3,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x...x.......",
+            "pieces": 2,
+            "share": 0.0105
+          },
+          {
+            "bars": 3,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x..x....x..x",
+            "pieces": 2,
+            "share": 0.0105
+          },
+          {
+            "bars": 3,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "........x..x..x.",
+            "pieces": 2,
+            "share": 0.0105
+          },
+          {
+            "bars": 2,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x..x....x...",
+            "pieces": 2,
+            "share": 0.007
+          },
+          {
+            "bars": 1,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................",
+            "pieces": 3,
+            "share": 0.0035
+          },
+          {
+            "bars": 1,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...............",
+            "pieces": 2,
+            "share": 0.0035
+          }
+        ],
+        "step_probability_by_role": {
+          "4/4 droit (16 pas)": {
+            "crash": [
+              0.0182,
+              0.0,
+              0.0727,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0061,
+              0.0,
+              0.0242,
+              0.0061
+            ],
+            "hat_closed": [
+              0.6364,
+              0.2545,
+              0.5697,
+              0.2061,
+              0.703,
+              0.2424,
+              0.6364,
+              0.2909,
+              0.6364,
+              0.303,
+              0.5333,
+              0.1879,
+              0.7333,
+              0.2,
+              0.4182,
+              0.1879
+            ],
+            "hat_open": [
+              0.0727,
+              0.0,
+              0.2545,
+              0.0061,
+              0.1455,
+              0.0061,
+              0.2485,
+              0.0,
+              0.2061,
+              0.0061,
+              0.297,
+              0.0303,
+              0.0424,
+              0.0,
+              0.3333,
+              0.0545
+            ],
+            "hat_pedal": [
+              0.2545,
+              0.0,
+              0.0,
+              0.0,
+              0.0364,
+              0.0,
+              0.0,
+              0.0061,
+              0.0545,
+              0.0,
+              0.0303,
+              0.0,
+              0.1212,
+              0.0,
+              0.0364,
+              0.0242
+            ],
+            "kick": [
+              0.7333,
+              0.0061,
+              0.0485,
+              0.0061,
+              0.9515,
+              0.0,
+              0.0545,
+              0.0,
+              0.6909,
+              0.0061,
+              0.0545,
+              0.0061,
+              0.897,
+              0.0,
+              0.0667,
+              0.0061
+            ],
+            "ride": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0061,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sidestick": [
+              0.0,
+              0.0121,
+              0.1818,
+              0.0121,
+              0.3091,
+              0.0,
+              0.0061,
+              0.0727,
+              0.2848,
+              0.0,
+              0.0303,
+              0.1455,
+              0.1697,
+              0.0,
+              0.2545,
+              0.0485
+            ],
+            "snare": [
+              0.0667,
+              0.1152,
+              0.3212,
+              0.1697,
+              0.3455,
+              0.4242,
+              0.1091,
+              0.1636,
+              0.3818,
+              0.297,
+              0.2061,
+              0.5091,
+              0.1636,
+              0.097,
+              0.2667,
+              0.3394
+            ],
+            "tom": [
+              0.0242,
+              0.0242,
+              0.0061,
+              0.0121,
+              0.0242,
+              0.0121,
+              0.0,
+              0.0061,
+              0.0242,
+              0.0121,
+              0.0364,
+              0.0485,
+              0.0788,
+              0.0545,
+              0.1212,
+              0.0303
+            ]
+          },
+          "4/4 ternaire (12 pas)": {
+            "crash": [
+              0.0,
+              0.0,
+              0.0,
+              0.0164,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.1148
+            ],
+            "hat_closed": [
+              0.6803,
+              0.0082,
+              0.5574,
+              0.5246,
+              0.0,
+              0.7377,
+              0.3852,
+              0.0082,
+              0.6393,
+              0.7131,
+              0.0,
+              0.0574
+            ],
+            "hat_open": [
+              0.0738,
+              0.0082,
+              0.0492,
+              0.3279,
+              0.0082,
+              0.0492,
+              0.4344,
+              0.0,
+              0.1311,
+              0.082,
+              0.0082,
+              0.0164
+            ],
+            "hat_pedal": [
+              0.1148,
+              0.0082,
+              0.0492,
+              0.4754,
+              0.0,
+              0.0902,
+              0.2377,
+              0.0328,
+              0.0492,
+              0.0984,
+              0.0492,
+              0.0656
+            ],
+            "kick": [
+              0.0656,
+              0.0082,
+              0.0246,
+              0.0246,
+              0.0082,
+              0.0082,
+              0.918,
+              0.2377,
+              0.0328,
+              0.0328,
+              0.0082,
+              0.1311
+            ],
+            "sidestick": [
+              0.0492,
+              0.0902,
+              0.0246,
+              0.1475,
+              0.0,
+              0.041,
+              0.0164,
+              0.0164,
+              0.0246,
+              0.0,
+              0.0082,
+              0.3525
+            ],
+            "snare": [
+              0.3279,
+              0.6066,
+              0.418,
+              0.2377,
+              0.3033,
+              0.3361,
+              0.2377,
+              0.1639,
+              0.2295,
+              0.2787,
+              0.1148,
+              0.7377
+            ],
+            "tom": [
+              0.0082,
+              0.0,
+              0.0164,
+              0.0246,
+              0.041,
+              0.0656,
+              0.0328,
+              0.041,
+              0.041,
+              0.0656,
+              0.0082,
+              0.041
+            ]
+          }
+        },
+        "swing_offbeat_position": {
+          "mean": 0.5802,
+          "n": 4,
+          "note": "position médiane de la croche retardée dans la noire par pièce : 0,5 droit, 0,667 triolet",
+          "p10": 0.48,
+          "p25": 0.48,
+          "p50": 0.58,
+          "p75": 0.67,
+          "p90": 0.69,
+          "sd": 0.1028
+        },
+        "tempo_bpm": {
+          "mean": 102.25,
+          "n": 4,
+          "p10": 68.2,
+          "p25": 74.5,
+          "p50": 102.0,
+          "p75": 129.75,
+          "p90": 136.5,
+          "sd": 32.081
+        },
+        "timekeeper": {
+          "hat_closed": 0.8444,
+          "hat_open": 0.1556,
+          "n": 257
+        },
+        "timekeeper_figure": {
+          "eighths": 0.7276,
+          "n": 257,
+          "other": 0.0661,
+          "quarters": 0.0428,
+          "sixteenths_or_triplets": 0.1634
+        },
+        "timing_to_grid": {
+          "n": 4736,
+          "quantized_share": 0.2107,
+          "quantized_source": false,
+          "signed_ms": {
+            "mean": -9.15,
+            "n": 4736,
+            "p10": -42.66,
+            "p25": -27.27,
+            "p50": -11.22,
+            "p75": 6.94,
+            "p90": 23.94,
+            "sd": 28.3397
+          },
+          "signed_ms_off_beat": {
+            "mean": -8.956,
+            "n": 2473,
+            "p10": -44.87,
+            "p25": -29.3,
+            "p50": -12.82,
+            "p75": 7.09,
+            "p90": 33.72,
+            "sd": 30.7405
+          },
+          "signed_ms_on_beat": {
+            "mean": -9.3619,
+            "n": 2263,
+            "p10": -39.68,
+            "p25": -24.8,
+            "p50": -10.64,
+            "p75": 6.21,
+            "p90": 19.5,
+            "sd": 25.4567
+          },
+          "tolerance_steps": 0.18,
+          "within_tolerance_share": 0.6358
+        },
+        "velocity_by_role": {
+          "crash": {
+            "mean": 97.1,
+            "n": 37
+          },
+          "hat_closed": {
+            "mean": 56.2,
+            "n": 1638
+          },
+          "hat_open": {
+            "mean": 64.0,
+            "n": 426
+          },
+          "hat_pedal": {
+            "mean": 44.7,
+            "n": 248
+          },
+          "kick": {
+            "mean": 37.2,
+            "n": 765
+          },
+          "ride": {
+            "mean": 7.0,
+            "n": 1
+          },
+          "sidestick": {
+            "mean": 64.9,
+            "n": 346
+          },
+          "snare": {
+            "mean": 50.6,
+            "n": 1143
+          },
+          "tom": {
+            "mean": 92.9,
+            "n": 132
+          }
+        }
+      },
+      "license": "CC-BY-4.0",
+      "proxy": null,
+      "source": "gmd"
+    },
+    "lmd": {
+      "archive_sha256": "621ff830aed771f469e5bfa13dc12a33c6ed69090adeda63d0b5c47783af0191",
+      "bass": {
+        "approach_to_next_chord": {
+          "fifth": 0.3451,
+          "n": 2463,
+          "other": 0.2355,
+          "same_root": 0.0893,
+          "semitone_above": 0.0158,
+          "semitone_below": 0.0272,
+          "tone_above": 0.1498,
+          "tone_below": 0.1372
+        },
+        "arrival_on_chord_change": {
+          "chromatic": 0.0051,
+          "fifth": 0.0794,
+          "late": 0.1498,
+          "n": 2530,
+          "other_chord_tone": 0.0474,
+          "root": 0.5976,
+          "scale_step": 0.004,
+          "seventh": 0.0225,
+          "third": 0.0941
+        },
+        "bars_empty": 332,
+        "bars_non_empty": 4684,
+        "chords": {
+          "annotated_pieces": 0,
+          "inferred_pieces": 40
+        },
+        "degrees": {
+          "beat": {
+            "chromatic": 0.0314,
+            "fifth": 0.1813,
+            "n": 6206,
+            "other_chord_tone": 0.0549,
+            "root": 0.5139,
+            "scale_step": 0.0351,
+            "seventh": 0.0632,
+            "third": 0.1202
+          },
+          "downbeat": {
+            "chromatic": 0.0062,
+            "fifth": 0.0818,
+            "n": 2750,
+            "other_chord_tone": 0.0556,
+            "root": 0.7164,
+            "scale_step": 0.0291,
+            "seventh": 0.0247,
+            "third": 0.0862
+          },
+          "offbeat": {
+            "chromatic": 0.029,
+            "fifth": 0.1544,
+            "n": 10432,
+            "other_chord_tone": 0.0381,
+            "root": 0.5133,
+            "scale_step": 0.0845,
+            "seventh": 0.0596,
+            "third": 0.1211
+          }
+        },
+        "duration_beats": {
+          "mean": 0.5067,
+          "n": 36868,
+          "p10": 0.09,
+          "p25": 0.17,
+          "p50": 0.31,
+          "p75": 0.5,
+          "p90": 0.94,
+          "sd": 0.8529
+        },
+        "grids": {
+          "4/4 droit (16 pas)": 52,
+          "4/4 ternaire (12 pas)": 4
+        },
+        "interval_to_chord_root": {
+          "n": 19388,
+          "shares": {
+            "0": 0.5423,
+            "1": 0.0092,
+            "10": 0.0579,
+            "11": 0.0085,
+            "2": 0.0266,
+            "3": 0.0826,
+            "4": 0.0389,
+            "5": 0.0668,
+            "6": 0.0137,
+            "7": 0.1439,
+            "8": 0.006,
+            "9": 0.0035
+          }
+        },
+        "intervals": {
+          "n": 36812,
+          "repeated_pitch_share": 0.2896,
+          "shares": {
+            "0": 0.2896,
+            "1": 0.035,
+            "10": 0.0123,
+            "11": 0.0063,
+            "12": 0.1109,
+            "13+": 0.1379,
+            "2": 0.1072,
+            "3": 0.0601,
+            "4": 0.0385,
+            "5": 0.0952,
+            "6": 0.0142,
+            "7": 0.0522,
+            "8": 0.0226,
+            "9": 0.0183
+          }
+        },
+        "legato_ratio": {
+          "legato_share_ge_0_9": 0.4089,
+          "mean": 0.853,
+          "n": 36868,
+          "p10": 0.27,
+          "p25": 0.5,
+          "p50": 0.8,
+          "p75": 1.0,
+          "p90": 2.0,
+          "sd": 0.5133,
+          "staccato_share_lt_0_5": 0.2293
+        },
+        "notes": 36868,
+        "notes_per_bar": {
+          "distribution": {
+            "1": 0.0544,
+            "10": 0.0167,
+            "11": 0.022,
+            "12": 0.0608,
+            "13": 0.0132,
+            "14": 0.0181,
+            "15": 0.0105,
+            "16": 0.0327,
+            "17": 0.0132,
+            "18": 0.0062,
+            "19": 0.0162,
+            "2": 0.038,
+            "20": 0.0192,
+            "21": 0.0073,
+            "22": 0.0023,
+            "23": 0.0023,
+            "24": 0.0053,
+            "25": 0.0017,
+            "26": 0.0021,
+            "27": 0.0004,
+            "3": 0.0649,
+            "32": 0.0006,
+            "4": 0.1334,
+            "5": 0.0568,
+            "6": 0.1221,
+            "7": 0.0839,
+            "8": 0.1396,
+            "9": 0.0557
+          },
+          "mean": 7.8711
+        },
+        "performers": null,
+        "performers_note": "56 pièces sans interprète connu",
+        "pieces": 56,
+        "register_midi": {
+          "mean": 43.2265,
+          "n": 36868,
+          "p1": 26.0,
+          "p25": 34.0,
+          "p5": 29.0,
+          "p50": 39.0,
+          "p75": 50.0,
+          "p95": 71.0,
+          "p99": 81.0,
+          "sd": 13.511
+        },
+        "reliability": "juste",
+        "reliability_note": "Effectif suffisant mais appariement genre↔MIDI, transcription amateur et interprètes non vérifiés : fiabilité au mieux juste.",
+        "repetition_rhythm": {
+          "lag_1": {
+            "n": 4511,
+            "same_share": 0.503
+          },
+          "lag_2": {
+            "n": 4428,
+            "same_share": 0.5668
+          },
+          "lag_4": {
+            "n": 4291,
+            "same_share": 0.5929
+          },
+          "lag_8": {
+            "n": 4056,
+            "same_share": 0.5224
+          }
+        },
+        "repetition_rhythm_and_contour": {
+          "lag_1": {
+            "n": 4511,
+            "same_share": 0.2257
+          },
+          "lag_2": {
+            "n": 4428,
+            "same_share": 0.3146
+          },
+          "lag_4": {
+            "n": 4291,
+            "same_share": 0.3873
+          },
+          "lag_8": {
+            "n": 4056,
+            "same_share": 0.3383
+          }
+        },
+        "rhythm_patterns": [
+          {
+            "bars": 360,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "xxxxxxxxxxxxxxxx",
+            "pieces": 9,
+            "share": 0.0769
+          },
+          {
+            "bars": 288,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x..xx.x.x..xx.x.",
+            "pieces": 4,
+            "share": 0.0615
+          },
+          {
+            "bars": 227,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...............",
+            "pieces": 31,
+            "share": 0.0485
+          },
+          {
+            "bars": 202,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.x.x.x.x.x.x.x.",
+            "pieces": 8,
+            "share": 0.0431
+          },
+          {
+            "bars": 124,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.xxx.xxx.xxx.xx",
+            "pieces": 6,
+            "share": 0.0265
+          },
+          {
+            "bars": 111,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x.......",
+            "pieces": 6,
+            "share": 0.0237
+          },
+          {
+            "bars": 89,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "..x.x.x...x.x.x.",
+            "pieces": 3,
+            "share": 0.019
+          },
+          {
+            "bars": 88,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.xxx.x.x...x.xx",
+            "pieces": 2,
+            "share": 0.0188
+          },
+          {
+            "bars": 84,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.....x.x.....x.",
+            "pieces": 4,
+            "share": 0.0179
+          },
+          {
+            "bars": 75,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.....x.x.......",
+            "pieces": 3,
+            "share": 0.016
+          },
+          {
+            "bars": 72,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x...x...",
+            "pieces": 9,
+            "share": 0.0154
+          },
+          {
+            "bars": 63,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "xxx.x.x.x.x.x.x.",
+            "pieces": 4,
+            "share": 0.0135
+          }
+        ],
+        "rhythm_patterns_note": "un motif = une mesure ; vu dans ≥ 2 pièces ; grilles : voir `grids`",
+        "step_probability": {
+          "4/4 droit (16 pas)": [
+            0.9534,
+            0.1721,
+            0.5769,
+            0.4352,
+            0.7446,
+            0.2093,
+            0.7401,
+            0.3056,
+            0.8053,
+            0.1917,
+            0.5297,
+            0.406,
+            0.7531,
+            0.2195,
+            0.6387,
+            0.2602
+          ],
+          "4/4 ternaire (12 pas)": [
+            0.9305,
+            0.2119,
+            0.4702,
+            0.6755,
+            0.2848,
+            0.7351,
+            0.9172,
+            0.2318,
+            0.7086,
+            0.5927,
+            0.6656,
+            0.4272
+          ]
+        },
+        "swing_offbeat_position": {
+          "mean": 0.5823,
+          "n": 53,
+          "note": "position médiane de la croche retardée dans la noire par pièce : 0,5 droit, 0,667 triolet",
+          "p10": 0.5,
+          "p25": 0.5,
+          "p50": 0.5,
+          "p75": 0.72,
+          "p90": 0.75,
+          "sd": 0.108
+        },
+        "tempo_bpm": {
+          "mean": 108.3398,
+          "n": 56,
+          "p10": 76.5,
+          "p25": 87.75,
+          "p50": 105.0,
+          "p75": 124.25,
+          "p90": 142.5,
+          "sd": 28.806
+        },
+        "timing_to_grid": {
+          "n": 36868,
+          "quantized_share": 0.7681,
+          "quantized_source": false,
+          "signed_ms": {
+            "mean": 1.6181,
+            "n": 36868,
+            "p10": -6.38,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 19.13,
+            "sd": 17.2407
+          },
+          "signed_ms_off_beat": {
+            "mean": 3.2471,
+            "n": 21657,
+            "p10": -6.01,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 2.6,
+            "p90": 25.51,
+            "sd": 19.8004
+          },
+          "signed_ms_on_beat": {
+            "mean": -0.7012,
+            "n": 15211,
+            "p10": -7.81,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 3.59,
+            "sd": 12.3729
+          },
+          "tolerance_steps": 0.18,
+          "within_tolerance_share": 0.8776
+        },
+        "velocity": {
+          "available": true,
+          "mean": 91.73,
+          "n": 36868,
+          "relative_to_piece_median_by_step": {
+            "4/4 droit (16 pas)": [
+              1.0489,
+              0.8324,
+              0.9591,
+              0.9371,
+              1.0267,
+              0.87,
+              0.9765,
+              0.9342,
+              1.0828,
+              0.8688,
+              0.9454,
+              0.937,
+              1.0438,
+              0.8825,
+              0.9997,
+              0.8784
+            ],
+            "4/4 ternaire (12 pas)": [
+              1.0108,
+              0.7564,
+              0.9498,
+              1.0261,
+              0.9297,
+              0.9759,
+              1.004,
+              0.7766,
+              0.9896,
+              1.0245,
+              0.9448,
+              0.9444
+            ]
+          },
+          "sd": 26.4
+        }
+      },
+      "comp": {
+        "anticipation_share": {
+          "definition": "attaques dans la dernière croche de la mesure (anticipation du temps 1 suivant)",
+          "value": 0.1304
+        },
+        "attacks": 38590,
+        "attacks_per_bar": {
+          "distribution": {
+            "1": 0.0525,
+            "10": 0.0533,
+            "11": 0.0319,
+            "12": 0.0164,
+            "13": 0.0147,
+            "14": 0.0565,
+            "15": 0.0229,
+            "16": 0.0716,
+            "17": 0.0218,
+            "18": 0.0139,
+            "19": 0.0141,
+            "2": 0.0905,
+            "20": 0.0134,
+            "21": 0.004,
+            "22": 0.0013,
+            "23": 0.0061,
+            "24": 0.0019,
+            "26": 0.0006,
+            "27": 0.0004,
+            "28": 0.0006,
+            "29": 0.0002,
+            "3": 0.0458,
+            "30": 0.001,
+            "31": 0.0008,
+            "32": 0.0013,
+            "33": 0.0002,
+            "4": 0.2088,
+            "5": 0.0749,
+            "6": 0.0327,
+            "7": 0.0321,
+            "8": 0.0875,
+            "9": 0.0264
+          },
+          "mean": 8.0986
+        },
+        "bars_empty": 267,
+        "bars_non_empty": 4765,
+        "chords": {
+          "annotated_pieces": 0,
+          "inferred_pieces": 40
+        },
+        "duration_beats": {
+          "mean": 0.4011,
+          "n": 38590,
+          "p10": 0.06,
+          "p25": 0.13,
+          "p50": 0.21,
+          "p75": 0.41,
+          "p90": 0.7,
+          "sd": 0.9258
+        },
+        "duration_over_gap": {
+          "mean": 0.7559,
+          "n": 38535,
+          "p10": 0.16,
+          "p25": 0.35,
+          "p50": 0.65,
+          "p75": 0.99,
+          "p90": 1.63,
+          "sd": 0.5298,
+          "staccato_share_lt_0_5": 0.3444
+        },
+        "grids": {
+          "4/4 droit (16 pas)": 52,
+          "4/4 ternaire (12 pas)": 3
+        },
+        "notes_per_attack": {
+          "n": 38590,
+          "shares": {
+            "1": 0.2757,
+            "2": 0.1609,
+            "3": 0.2566,
+            "4": 0.0891,
+            "5": 0.0638,
+            "6": 0.0612,
+            "7": 0.0454,
+            "8+": 0.0472
+          }
+        },
+        "offbeat_attack_share": 0.6772,
+        "performers": null,
+        "performers_note": "55 pièces sans interprète connu",
+        "pieces": 55,
+        "register_midi": {
+          "highest": {
+            "mean": 61.8654,
+            "n": 38590,
+            "p1": 34.0,
+            "p25": 54.0,
+            "p5": 41.0,
+            "p50": 65.0,
+            "p75": 70.0,
+            "p95": 80.0,
+            "p99": 88.0,
+            "sd": 12.6491
+          },
+          "lowest": {
+            "mean": 48.1214,
+            "n": 38590,
+            "p1": 28.0,
+            "p25": 38.0,
+            "p5": 32.0,
+            "p50": 47.0,
+            "p75": 57.0,
+            "p95": 69.0,
+            "p99": 77.0,
+            "sd": 12.0542
+          },
+          "mean": {
+            "mean": 55.2072,
+            "n": 38590,
+            "p1": 34.0,
+            "p25": 47.6,
+            "p5": 38.0,
+            "p50": 55.5,
+            "p75": 62.0,
+            "p95": 71.0,
+            "p99": 80.33,
+            "sd": 10.1489
+          }
+        },
+        "reliability": "juste",
+        "reliability_note": "Effectif suffisant mais appariement genre↔MIDI, transcription amateur et interprètes non vérifiés : fiabilité au mieux juste.",
+        "repetition_rhythm": {
+          "lag_1": {
+            "n": 4623,
+            "same_share": 0.5585
+          },
+          "lag_2": {
+            "n": 4540,
+            "same_share": 0.5729
+          },
+          "lag_4": {
+            "n": 4413,
+            "same_share": 0.5674
+          },
+          "lag_8": {
+            "n": 4137,
+            "same_share": 0.5202
+          }
+        },
+        "repetition_rhythm_and_pitch_classes": {
+          "lag_1": {
+            "n": 4623,
+            "same_share": 0.1079
+          },
+          "lag_2": {
+            "n": 4540,
+            "same_share": 0.1824
+          },
+          "lag_4": {
+            "n": 4413,
+            "same_share": 0.2479
+          },
+          "lag_8": {
+            "n": 4137,
+            "same_share": 0.2485
+          }
+        },
+        "rhythm_patterns": [
+          {
+            "bars": 628,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "xxxxxxxxxxxxxxxx",
+            "pieces": 17,
+            "share": 0.1318
+          },
+          {
+            "bars": 599,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "..x...x...x...x.",
+            "pieces": 10,
+            "share": 0.1257
+          },
+          {
+            "bars": 238,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...............",
+            "pieces": 29,
+            "share": 0.0499
+          },
+          {
+            "bars": 238,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.......x...",
+            "pieces": 3,
+            "share": 0.0499
+          },
+          {
+            "bars": 232,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.x.x.x.x.x.x.x.",
+            "pieces": 12,
+            "share": 0.0487
+          },
+          {
+            "bars": 195,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "xxx.xxxxxxxxxxx.",
+            "pieces": 3,
+            "share": 0.0409
+          },
+          {
+            "bars": 105,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": ".xx..xx..xx..xx.",
+            "pieces": 3,
+            "share": 0.022
+          },
+          {
+            "bars": 84,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.xxxxxxx.xxxxxx",
+            "pieces": 2,
+            "share": 0.0176
+          },
+          {
+            "bars": 76,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.......x.......",
+            "pieces": 9,
+            "share": 0.0159
+          },
+          {
+            "bars": 63,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.xxx.x.x.x.x.x.",
+            "pieces": 2,
+            "share": 0.0132
+          },
+          {
+            "bars": 62,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x..xxxxxxxxx",
+            "pieces": 2,
+            "share": 0.013
+          },
+          {
+            "bars": 47,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x...x...",
+            "pieces": 5,
+            "share": 0.0099
+          }
+        ],
+        "rhythm_patterns_note": "un motif = les pas d'attaque d'une mesure ; vu dans ≥ 2 pièces",
+        "span_semitones": {
+          "mean": 13.7441,
+          "n": 38590,
+          "p10": 0.0,
+          "p25": 0.0,
+          "p50": 8.0,
+          "p75": 24.0,
+          "p90": 39.0,
+          "sd": 14.4511
+        },
+        "step_probability": {
+          "4/4 droit (16 pas)": [
+            0.7618,
+            0.3024,
+            0.6582,
+            0.3336,
+            0.5976,
+            0.3218,
+            0.7866,
+            0.3725,
+            0.5554,
+            0.3378,
+            0.6985,
+            0.3815,
+            0.6796,
+            0.3338,
+            0.7745,
+            0.3086
+          ],
+          "4/4 ternaire (12 pas)": [
+            0.907,
+            0.0837,
+            0.6837,
+            0.7302,
+            0.1302,
+            0.493,
+            0.6512,
+            0.0744,
+            0.6372,
+            0.7488,
+            0.2326,
+            0.493
+          ]
+        },
+        "swing_offbeat_position": {
+          "mean": 0.55,
+          "n": 54,
+          "note": "position médiane de la croche retardée dans la noire par pièce : 0,5 droit, 0,667 triolet",
+          "p10": 0.49,
+          "p25": 0.5,
+          "p50": 0.5,
+          "p75": 0.58,
+          "p90": 0.72,
+          "sd": 0.0875
+        },
+        "tempo_bpm": {
+          "mean": 108.0006,
+          "n": 55,
+          "p10": 77.0,
+          "p25": 87.5,
+          "p50": 115.01,
+          "p75": 123.5,
+          "p90": 132.8,
+          "sd": 25.1347
+        },
+        "timing_to_grid": {
+          "n": 38590,
+          "quantized_share": 0.6754,
+          "quantized_source": false,
+          "signed_ms": {
+            "mean": -1.3416,
+            "n": 38590,
+            "p10": -9.77,
+            "p25": -4.66,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 13.24,
+            "sd": 18.9992
+          },
+          "signed_ms_off_beat": {
+            "mean": -0.964,
+            "n": 26133,
+            "p10": -9.77,
+            "p25": -2.74,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 18.54,
+            "sd": 18.7548
+          },
+          "signed_ms_on_beat": {
+            "mean": -2.1336,
+            "n": 12457,
+            "p10": -14.31,
+            "p25": -6.9,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 5.21,
+            "sd": 19.4782
+          },
+          "tolerance_steps": 0.18,
+          "within_tolerance_share": 0.8804
+        },
+        "velocity": {
+          "available": true,
+          "ghost_note_share_lt_60pct_of_median": 0.047,
+          "mean": 87.89,
+          "n": 133020,
+          "relative_to_piece_median_by_step": {
+            "4/4 droit (16 pas)": [
+              1.0201,
+              0.8505,
+              0.9761,
+              0.9564,
+              1.036,
+              0.8444,
+              0.9889,
+              0.9377,
+              1.037,
+              0.9029,
+              0.9833,
+              0.927,
+              1.0432,
+              0.9191,
+              0.9853,
+              0.9224
+            ],
+            "4/4 ternaire (12 pas)": [
+              1.0344,
+              0.9348,
+              0.986,
+              1.0108,
+              0.9728,
+              0.9937,
+              1.0259,
+              0.8837,
+              1.0085,
+              0.993,
+              0.9554,
+              0.9596
+            ]
+          },
+          "sd": 25.58
+        },
+        "voices": {
+          "guitar": 17,
+          "keys": 38
+        },
+        "voicing_stacks": {
+          "n_multi_note_attacks": 27949,
+          "note": "écarts en demi-tons entre notes adjacentes, du grave à l'aigu",
+          "top": [
+            {
+              "gaps": "5,4",
+              "share": 0.0711
+            },
+            {
+              "gaps": "4,3",
+              "share": 0.0623
+            },
+            {
+              "gaps": "3,5",
+              "share": 0.0475
+            },
+            {
+              "gaps": "7",
+              "share": 0.0365
+            },
+            {
+              "gaps": "4",
+              "share": 0.0322
+            },
+            {
+              "gaps": "6",
+              "share": 0.0292
+            },
+            {
+              "gaps": "5",
+              "share": 0.0278
+            },
+            {
+              "gaps": "3,4",
+              "share": 0.0248
+            },
+            {
+              "gaps": "7,5",
+              "share": 0.0182
+            },
+            {
+              "gaps": "12",
+              "share": 0.0171
+            },
+            {
+              "gaps": "5,3",
+              "share": 0.0161
+            },
+            {
+              "gaps": "4,5",
+              "share": 0.0135
+            },
+            {
+              "gaps": "4,3,5",
+              "share": 0.0122
+            },
+            {
+              "gaps": "3",
+              "share": 0.0116
+            },
+            {
+              "gaps": "12,12",
+              "share": 0.0111
+            }
+          ]
+        },
+        "voicing_vs_chord": {
+          "interval_to_root_presence": {
+            "0": 0.6887,
+            "1": 0.004,
+            "10": 0.1244,
+            "11": 0.0301,
+            "2": 0.0275,
+            "3": 0.2039,
+            "4": 0.2962,
+            "5": 0.0957,
+            "6": 0.0299,
+            "7": 0.5983,
+            "8": 0.0179,
+            "9": 0.0242
+          },
+          "n": 18671,
+          "root_present": 0.6887,
+          "scale_tension_present": 0.0752,
+          "seventh_present": 0.1438,
+          "third_and_seventh": 0.0927,
+          "third_present": 0.4943
+        }
+      },
+      "drums": {
+        "bars_empty": 112,
+        "bars_non_empty": 5113,
+        "chords": {
+          "annotated_pieces": 0,
+          "inferred_pieces": 40
+        },
+        "grids": {
+          "4/4 droit (16 pas)": 56,
+          "4/4 ternaire (12 pas)": 4
+        },
+        "hits_per_bar_by_role": {
+          "crash": 0.26,
+          "hat_closed": 6.66,
+          "hat_open": 0.64,
+          "hat_pedal": 1.14,
+          "kick": 2.23,
+          "ride": 0.52,
+          "ride_bell": 0.0,
+          "sidestick": 0.67,
+          "snare": 2.52,
+          "tom": 0.62
+        },
+        "kick_patterns": [
+          {
+            "bars": 1640,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................",
+            "pieces": 51,
+            "share": 0.3208
+          },
+          {
+            "bars": 887,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.......x.......",
+            "pieces": 19,
+            "share": 0.1735
+          },
+          {
+            "bars": 752,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x...x...",
+            "pieces": 17,
+            "share": 0.1471
+          },
+          {
+            "bars": 138,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.......x...",
+            "pieces": 33,
+            "share": 0.027
+          },
+          {
+            "bars": 135,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x.......",
+            "pieces": 5,
+            "share": 0.0264
+          },
+          {
+            "bars": 102,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x..xx...x..xx...",
+            "pieces": 2,
+            "share": 0.0199
+          },
+          {
+            "bars": 101,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...............",
+            "pieces": 28,
+            "share": 0.0198
+          },
+          {
+            "bars": 90,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.....x.........",
+            "pieces": 3,
+            "share": 0.0176
+          },
+          {
+            "bars": 85,
+            "grid": "4/4 ternaire (12 pas)",
+            "pattern": "x.......x...",
+            "pieces": 2,
+            "share": 0.0166
+          },
+          {
+            "bars": 74,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x.......x...",
+            "pieces": 5,
+            "share": 0.0145
+          },
+          {
+            "bars": 66,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.......x..x....",
+            "pieces": 3,
+            "share": 0.0129
+          },
+          {
+            "bars": 64,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...........",
+            "pieces": 4,
+            "share": 0.0125
+          }
+        ],
+        "kick_snare_patterns": [
+          {
+            "bars": 601,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................/....x.......x...",
+            "pieces": 11,
+            "share": 0.1175
+          },
+          {
+            "bars": 489,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.......x......./....x.......x...",
+            "pieces": 6,
+            "share": 0.0956
+          },
+          {
+            "bars": 383,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................/................",
+            "pieces": 33,
+            "share": 0.0749
+          },
+          {
+            "bars": 253,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x...x.../....x.......x...",
+            "pieces": 6,
+            "share": 0.0495
+          },
+          {
+            "bars": 156,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.......x......./....xxx.....xxx.",
+            "pieces": 3,
+            "share": 0.0305
+          },
+          {
+            "bars": 132,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x......./................",
+            "pieces": 2,
+            "share": 0.0258
+          },
+          {
+            "bars": 129,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.......x.../..x...x...x..x.x",
+            "pieces": 3,
+            "share": 0.0252
+          },
+          {
+            "bars": 105,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.......x......./................",
+            "pieces": 5,
+            "share": 0.0205
+          },
+          {
+            "bars": 96,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................/........x.......",
+            "pieces": 4,
+            "share": 0.0188
+          },
+          {
+            "bars": 76,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................/............x...",
+            "pieces": 8,
+            "share": 0.0149
+          },
+          {
+            "bars": 74,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...x...x...x.../................",
+            "pieces": 8,
+            "share": 0.0145
+          },
+          {
+            "bars": 66,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.......x..x..../....xxx.....xxx.",
+            "pieces": 3,
+            "share": 0.0129
+          }
+        ],
+        "performers": null,
+        "performers_note": "60 pièces sans interprète connu",
+        "pieces": 60,
+        "reliability": "juste",
+        "reliability_note": "Effectif suffisant mais appariement genre↔MIDI, transcription amateur et interprètes non vérifiés : fiabilité au mieux juste.",
+        "repetition_kick_snare": {
+          "lag_1": {
+            "n": 5022,
+            "same_share": 0.6683
+          },
+          "lag_2": {
+            "n": 4950,
+            "same_share": 0.7246
+          },
+          "lag_4": {
+            "n": 4810,
+            "same_share": 0.72
+          },
+          "lag_8": {
+            "n": 4563,
+            "same_share": 0.6684
+          }
+        },
+        "role_signed_ms_vs_grid": {
+          "crash": {
+            "median": 0.0,
+            "n": 1314
+          },
+          "hat_closed": {
+            "median": 0.0,
+            "n": 34072
+          },
+          "hat_open": {
+            "median": 0.0,
+            "n": 3287
+          },
+          "hat_pedal": {
+            "median": 0.0,
+            "n": 5816
+          },
+          "kick": {
+            "median": 0.0,
+            "n": 11411
+          },
+          "ride": {
+            "median": 0.0,
+            "n": 2654
+          },
+          "sidestick": {
+            "median": 26.6,
+            "n": 3430
+          },
+          "snare": {
+            "median": 0.0,
+            "n": 12887
+          },
+          "tom": {
+            "median": 0.0,
+            "n": 3178
+          }
+        },
+        "snare_patterns": [
+          {
+            "bars": 1633,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.......x...",
+            "pieces": 33,
+            "share": 0.3194
+          },
+          {
+            "bars": 807,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................",
+            "pieces": 51,
+            "share": 0.1578
+          },
+          {
+            "bars": 393,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "........x.......",
+            "pieces": 12,
+            "share": 0.0769
+          },
+          {
+            "bars": 222,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....xxx.....xxx.",
+            "pieces": 3,
+            "share": 0.0434
+          },
+          {
+            "bars": 153,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "..x...x...x..x.x",
+            "pieces": 3,
+            "share": 0.0299
+          },
+          {
+            "bars": 129,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x..x.x..x...",
+            "pieces": 3,
+            "share": 0.0252
+          },
+          {
+            "bars": 95,
+            "grid": "4/4 ternaire (12 pas)",
+            "pattern": "............",
+            "pieces": 2,
+            "share": 0.0186
+          },
+          {
+            "bars": 77,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "............x...",
+            "pieces": 9,
+            "share": 0.0151
+          },
+          {
+            "bars": 76,
+            "grid": "4/4 ternaire (12 pas)",
+            "pattern": "...x.x.x.x..",
+            "pieces": 2,
+            "share": 0.0149
+          },
+          {
+            "bars": 75,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.x...x.x.x.",
+            "pieces": 2,
+            "share": 0.0147
+          },
+          {
+            "bars": 66,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x..x....x..x",
+            "pieces": 2,
+            "share": 0.0129
+          },
+          {
+            "bars": 63,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x..x.x..x..x",
+            "pieces": 2,
+            "share": 0.0123
+          }
+        ],
+        "step_probability_by_role": {
+          "4/4 droit (16 pas)": {
+            "crash": [
+              0.1121,
+              0.0006,
+              0.0061,
+              0.0006,
+              0.0034,
+              0.0036,
+              0.0069,
+              0.005,
+              0.0311,
+              0.001,
+              0.0034,
+              0.0021,
+              0.0187,
+              0.0042,
+              0.0388,
+              0.005
+            ],
+            "hat_closed": [
+              0.6674,
+              0.2325,
+              0.5693,
+              0.1984,
+              0.7264,
+              0.1602,
+              0.6069,
+              0.1504,
+              0.7047,
+              0.2257,
+              0.5745,
+              0.2033,
+              0.6663,
+              0.1835,
+              0.5126,
+              0.1663
+            ],
+            "hat_open": [
+              0.0208,
+              0.0019,
+              0.1128,
+              0.0246,
+              0.0317,
+              0.0008,
+              0.0624,
+              0.025,
+              0.0212,
+              0.0027,
+              0.0813,
+              0.025,
+              0.0346,
+              0.0038,
+              0.1911,
+              0.0229
+            ],
+            "hat_pedal": [
+              0.0674,
+              0.0689,
+              0.0775,
+              0.058,
+              0.1121,
+              0.0691,
+              0.0884,
+              0.0588,
+              0.0678,
+              0.0701,
+              0.0897,
+              0.0573,
+              0.1119,
+              0.0687,
+              0.0628,
+              0.0451
+            ],
+            "kick": [
+              0.6354,
+              0.0,
+              0.0374,
+              0.0218,
+              0.2841,
+              0.0004,
+              0.1474,
+              0.022,
+              0.5477,
+              0.0115,
+              0.0928,
+              0.0384,
+              0.2442,
+              0.0031,
+              0.0737,
+              0.0059
+            ],
+            "ride": [
+              0.092,
+              0.013,
+              0.0281,
+              0.0036,
+              0.0523,
+              0.0122,
+              0.033,
+              0.0027,
+              0.064,
+              0.0124,
+              0.0275,
+              0.0044,
+              0.0565,
+              0.0067,
+              0.0294,
+              0.0036
+            ],
+            "ride_bell": [
+              0.001,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0004,
+              0.0,
+              0.0004,
+              0.0,
+              0.0002,
+              0.0,
+              0.0004,
+              0.0002,
+              0.0002,
+              0.0
+            ],
+            "sidestick": [
+              0.0082,
+              0.0,
+              0.0361,
+              0.0057,
+              0.1142,
+              0.0498,
+              0.0911,
+              0.0134,
+              0.0296,
+              0.0124,
+              0.0573,
+              0.0063,
+              0.1115,
+              0.084,
+              0.0594,
+              0.0412
+            ],
+            "snare": [
+              0.0823,
+              0.0185,
+              0.0821,
+              0.0754,
+              0.5708,
+              0.0762,
+              0.1575,
+              0.0991,
+              0.1674,
+              0.0752,
+              0.0886,
+              0.0806,
+              0.5842,
+              0.089,
+              0.1724,
+              0.0874
+            ],
+            "tom": [
+              0.0703,
+              0.0099,
+              0.0527,
+              0.0256,
+              0.0363,
+              0.0055,
+              0.0378,
+              0.029,
+              0.0701,
+              0.0082,
+              0.0569,
+              0.0313,
+              0.0611,
+              0.0355,
+              0.0517,
+              0.0189
+            ]
+          },
+          "4/4 ternaire (12 pas)": {
+            "crash": [
+              0.2735,
+              0.0,
+              0.0342,
+              0.0228,
+              0.0,
+              0.0028,
+              0.0313,
+              0.0,
+              0.0,
+              0.0741,
+              0.0114,
+              0.0
+            ],
+            "hat_closed": [
+              0.8661,
+              0.3504,
+              0.8604,
+              0.6097,
+              0.4872,
+              0.6638,
+              0.8689,
+              0.4245,
+              0.8746,
+              0.9658,
+              0.6895,
+              0.567
+            ],
+            "hat_open": [
+              0.0,
+              0.0,
+              0.0,
+              0.2593,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.1168,
+              0.0
+            ],
+            "hat_pedal": [
+              0.1282,
+              0.0,
+              0.0,
+              0.1282,
+              0.1368,
+              0.0,
+              0.1282,
+              0.0,
+              0.0,
+              0.1254,
+              0.0,
+              0.0
+            ],
+            "kick": [
+              1.0342,
+              0.0,
+              0.0085,
+              0.3362,
+              0.0057,
+              0.0028,
+              0.4815,
+              0.0,
+              0.5413,
+              0.3333,
+              0.3134,
+              0.0655
+            ],
+            "ride": [
+              0.1823,
+              0.1254,
+              0.1254,
+              0.1538,
+              0.1254,
+              0.1254,
+              0.1225,
+              0.1225,
+              0.1225,
+              0.1225,
+              0.1225,
+              0.1225
+            ],
+            "ride_bell": [
+              0.0057,
+              0.0,
+              0.0114,
+              0.0,
+              0.0,
+              0.0,
+              0.0114,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "snare": [
+              0.1197,
+              0.0057,
+              0.0085,
+              0.661,
+              0.1339,
+              0.3447,
+              0.0627,
+              0.5328,
+              0.0741,
+              0.7179,
+              0.0456,
+              0.0
+            ],
+            "tom": [
+              0.1738,
+              0.0285,
+              0.094,
+              0.0,
+              0.037,
+              0.0855,
+              0.1168,
+              0.0,
+              0.2422,
+              0.0,
+              0.1197,
+              0.0057
+            ]
+          }
+        },
+        "swing_offbeat_position": {
+          "mean": 0.542,
+          "n": 49,
+          "note": "position médiane de la croche retardée dans la noire par pièce : 0,5 droit, 0,667 triolet",
+          "p10": 0.5,
+          "p25": 0.5,
+          "p50": 0.5,
+          "p75": 0.51,
+          "p90": 0.75,
+          "sd": 0.0882
+        },
+        "tempo_bpm": {
+          "mean": 108.017,
+          "n": 60,
+          "p10": 77.0,
+          "p25": 89.75,
+          "p50": 110.5,
+          "p75": 125.75,
+          "p90": 132.1,
+          "sd": 24.341
+        },
+        "timekeeper": {
+          "hat_closed": 0.8864,
+          "hat_open": 0.0399,
+          "n": 4233,
+          "ride": 0.073,
+          "ride_bell": 0.0007
+        },
+        "timekeeper_figure": {
+          "eighths": 0.347,
+          "n": 4233,
+          "other": 0.1063,
+          "quarters": 0.1739,
+          "sixteenths_or_triplets": 0.3728
+        },
+        "timing_to_grid": {
+          "n": 78073,
+          "quantized_share": 0.8332,
+          "quantized_source": false,
+          "signed_ms": {
+            "mean": 2.8576,
+            "n": 78073,
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 26.6,
+            "sd": 15.1958
+          },
+          "signed_ms_off_beat": {
+            "mean": 3.7529,
+            "n": 40196,
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 2.44,
+            "p90": 26.88,
+            "sd": 19.0034
+          },
+          "signed_ms_on_beat": {
+            "mean": 1.9074,
+            "n": 37877,
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 7.81,
+            "sd": 9.5379
+          },
+          "tolerance_steps": 0.18,
+          "within_tolerance_share": 0.9649
+        },
+        "velocity_by_role": {
+          "crash": {
+            "mean": 85.5,
+            "n": 1314
+          },
+          "hat_closed": {
+            "mean": 88.4,
+            "n": 34072
+          },
+          "hat_open": {
+            "mean": 91.4,
+            "n": 3287
+          },
+          "hat_pedal": {
+            "mean": 79.4,
+            "n": 5816
+          },
+          "kick": {
+            "mean": 108.0,
+            "n": 11411
+          },
+          "ride": {
+            "mean": 64.0,
+            "n": 2654
+          },
+          "ride_bell": {
+            "mean": 91.6,
+            "n": 24
+          },
+          "sidestick": {
+            "mean": 111.5,
+            "n": 3430
+          },
+          "snare": {
+            "mean": 99.0,
+            "n": 12887
+          },
+          "tom": {
+            "mean": 77.7,
+            "n": 3178
+          }
+        }
+      },
+      "license": "CC-BY-4.0 (compilation ; droits des œuvres non garantis)",
+      "proxy": null,
+      "source": "lmd",
+      "sync": {
+        "bass_minus_kick_ms": {
+          "mean": -2.1014,
+          "n": 6939,
+          "p10": -8.45,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "p90": 2.6,
+          "sd": 9.1448
+        },
+        "comp_minus_snare_ms": {
+          "mean": -2.2142,
+          "n": 3915,
+          "p10": -10.33,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "p90": 5.04,
+          "sd": 10.6947
+        },
+        "exact_share_lt_1ms": 0.6397,
+        "informative": false,
+        "note": "positif = la basse (ou le comping) tombe après la grosse caisse (la caisse claire) ; sans valeur si presque toutes les paires sont à moins de 1 ms (séquencé)",
+        "pieces": 49,
+        "window_beats": 0.125
+      }
+    },
+    "rwc": {
+      "archive_sha256": "f20e4ef0854fb70f6cc66ac04e016f36468286a330471fef2f663672075ff6d5",
+      "bass": {
+        "approach_to_next_chord": {
+          "fifth": 0.3258,
+          "n": 221,
+          "other": 0.086,
+          "same_root": 0.1946,
+          "semitone_above": 0.0045,
+          "semitone_below": 0.0136,
+          "tone_above": 0.1538,
+          "tone_below": 0.2217
+        },
+        "arrival_on_chord_change": {
+          "chromatic": 0.0,
+          "fifth": 0.0243,
+          "late": 0.7864,
+          "n": 206,
+          "other_chord_tone": 0.0,
+          "root": 0.1893,
+          "scale_step": 0.0,
+          "seventh": 0.0,
+          "third": 0.0
+        },
+        "bars_empty": 23,
+        "bars_non_empty": 273,
+        "chords": {
+          "annotated_pieces": 0,
+          "inferred_pieces": 3
+        },
+        "degrees": {
+          "beat": {
+            "chromatic": 0.0,
+            "fifth": 0.1387,
+            "n": 411,
+            "other_chord_tone": 0.0,
+            "root": 0.3187,
+            "scale_step": 0.0292,
+            "seventh": 0.0024,
+            "third": 0.5109
+          },
+          "downbeat": {
+            "chromatic": 0.0,
+            "fifth": 0.1111,
+            "n": 54,
+            "other_chord_tone": 0.0,
+            "root": 0.8889,
+            "scale_step": 0.0,
+            "seventh": 0.0,
+            "third": 0.0
+          },
+          "offbeat": {
+            "chromatic": 0.0,
+            "fifth": 0.3862,
+            "n": 738,
+            "other_chord_tone": 0.0163,
+            "root": 0.5081,
+            "scale_step": 0.0352,
+            "seventh": 0.0041,
+            "third": 0.0501
+          }
+        },
+        "duration_beats": {
+          "mean": 0.5363,
+          "n": 1203,
+          "p10": 0.25,
+          "p25": 0.32,
+          "p50": 0.39,
+          "p75": 0.52,
+          "p90": 0.66,
+          "sd": 0.9081
+        },
+        "grids": {
+          "4/4 droit (16 pas)": 3
+        },
+        "interval_to_chord_root": {
+          "n": 1203,
+          "shares": {
+            "0": 0.4605,
+            "1": 0.0,
+            "10": 0.0125,
+            "11": 0.0008,
+            "2": 0.0042,
+            "3": 0.0682,
+            "4": 0.1372,
+            "5": 0.0274,
+            "6": 0.0,
+            "7": 0.2893,
+            "8": 0.0,
+            "9": 0.0
+          }
+        },
+        "intervals": {
+          "n": 1200,
+          "repeated_pitch_share": 0.1408,
+          "shares": {
+            "0": 0.1408,
+            "1": 0.0442,
+            "10": 0.0025,
+            "11": 0.0,
+            "12": 0.0358,
+            "13+": 0.01,
+            "2": 0.1367,
+            "3": 0.1617,
+            "4": 0.2175,
+            "5": 0.0967,
+            "6": 0.005,
+            "7": 0.12,
+            "8": 0.0125,
+            "9": 0.0167
+          }
+        },
+        "legato_ratio": {
+          "legato_share_ge_0_9": 0.3998,
+          "mean": 0.769,
+          "n": 1203,
+          "p10": 0.2,
+          "p25": 0.58,
+          "p50": 0.8,
+          "p75": 1.0,
+          "p90": 1.05,
+          "sd": 0.3292,
+          "staccato_share_lt_0_5": 0.1629
+        },
+        "notes": 1203,
+        "notes_per_bar": {
+          "distribution": {
+            "1": 0.0586,
+            "3": 0.3626,
+            "4": 0.0769,
+            "5": 0.1465,
+            "6": 0.2747,
+            "7": 0.0733,
+            "8": 0.0073
+          },
+          "mean": 4.4066
+        },
+        "performers": null,
+        "performers_note": "3 pièces sans interprète connu",
+        "pieces": 3,
+        "register_midi": {
+          "mean": 35.872,
+          "n": 1203,
+          "p1": 28.0,
+          "p25": 32.5,
+          "p5": 29.0,
+          "p50": 36.0,
+          "p75": 40.0,
+          "p95": 45.0,
+          "p99": 47.98,
+          "sd": 4.8881
+        },
+        "reliability": "juste",
+        "repetition_rhythm": {
+          "lag_1": {
+            "n": 256,
+            "same_share": 0.3672
+          },
+          "lag_2": {
+            "n": 252,
+            "same_share": 0.4405
+          },
+          "lag_4": {
+            "n": 244,
+            "same_share": 0.627
+          },
+          "lag_8": {
+            "n": 235,
+            "same_share": 0.6766
+          }
+        },
+        "repetition_rhythm_and_contour": {
+          "lag_1": {
+            "n": 256,
+            "same_share": 0.1289
+          },
+          "lag_2": {
+            "n": 252,
+            "same_share": 0.1746
+          },
+          "lag_4": {
+            "n": 244,
+            "same_share": 0.541
+          },
+          "lag_8": {
+            "n": 235,
+            "same_share": 0.5404
+          }
+        },
+        "rhythm_patterns": [
+          {
+            "bars": 14,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x...............",
+            "pieces": 2,
+            "share": 0.0513
+          }
+        ],
+        "rhythm_patterns_note": "un motif = une mesure ; vu dans ≥ 2 pièces ; grilles : voir `grids`",
+        "step_probability": {
+          "4/4 droit (16 pas)": [
+            0.1978,
+            0.0366,
+            0.4139,
+            0.5421,
+            0.8535,
+            0.0366,
+            0.4725,
+            0.359,
+            0.5092,
+            0.0183,
+            0.2894,
+            0.1795,
+            0.1429,
+            0.011,
+            0.337,
+            0.0073
+          ]
+        },
+        "swing_offbeat_position": {
+          "mean": 0.5556,
+          "n": 3,
+          "note": "position médiane de la croche retardée dans la noire par pièce : 0,5 droit, 0,667 triolet",
+          "p10": 0.5,
+          "p25": 0.5,
+          "p50": 0.5,
+          "p75": 0.58,
+          "p90": 0.63,
+          "sd": 0.0786
+        },
+        "tempo_bpm": {
+          "mean": 120.0042,
+          "n": 3,
+          "p10": 90.0,
+          "p25": 105.0,
+          "p50": 130.01,
+          "p75": 140.0,
+          "p90": 146.0,
+          "sd": 29.4396
+        },
+        "timing_to_grid": {
+          "n": 1203,
+          "quantized_share": 0.8362,
+          "quantized_source": false,
+          "signed_ms": {
+            "mean": -6.2342,
+            "n": 1203,
+            "p10": -38.46,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.0,
+            "sd": 14.2604
+          },
+          "signed_ms_off_beat": {
+            "mean": -10.1622,
+            "n": 738,
+            "p10": -38.46,
+            "p25": -38.46,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.0,
+            "sd": 17.0756
+          },
+          "signed_ms_on_beat": {
+            "mean": 0.0,
+            "n": 465,
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.0,
+            "sd": 0.0
+          },
+          "tolerance_steps": 0.18,
+          "within_tolerance_share": 0.8362
+        },
+        "velocity": {
+          "available": true,
+          "mean": 105.67,
+          "n": 1203,
+          "relative_to_piece_median_by_step": {
+            "4/4 droit (16 pas)": [
+              1.0181,
+              0.9558,
+              0.9991,
+              1.0071,
+              1.0008,
+              0.9663,
+              0.9996,
+              1.0014,
+              1.014,
+              null,
+              0.9841,
+              0.9992,
+              1.0034,
+              null,
+              1.0184,
+              null
+            ]
+          },
+          "sd": 6.58
+        }
+      },
+      "comp": {
+        "anticipation_share": {
+          "definition": "attaques dans la dernière croche de la mesure (anticipation du temps 1 suivant)",
+          "value": 0.2396
+        },
+        "attacks": 1515,
+        "attacks_per_bar": {
+          "distribution": {
+            "2": 0.0035,
+            "3": 0.0105,
+            "4": 0.6469,
+            "5": 0.007,
+            "6": 0.0105,
+            "8": 0.3217
+          },
+          "mean": 5.2972
+        },
+        "bars_empty": 8,
+        "bars_non_empty": 286,
+        "chords": {
+          "annotated_pieces": 0,
+          "inferred_pieces": 3
+        },
+        "duration_beats": {
+          "mean": 0.1869,
+          "n": 1515,
+          "p10": 0.08,
+          "p25": 0.08,
+          "p50": 0.17,
+          "p75": 0.2,
+          "p90": 0.24,
+          "sd": 0.5572
+        },
+        "duration_over_gap": {
+          "mean": 0.6617,
+          "n": 1512,
+          "p10": 0.06,
+          "p25": 0.08,
+          "p50": 0.2,
+          "p75": 2.0,
+          "p90": 2.0,
+          "sd": 0.8056,
+          "staccato_share_lt_0_5": 0.7222
+        },
+        "grids": {
+          "4/4 droit (16 pas)": 3
+        },
+        "notes_per_attack": {
+          "n": 1515,
+          "shares": {
+            "1": 0.2607,
+            "2": 0.2719,
+            "3": 0.466,
+            "4": 0.0013,
+            "5": 0.0,
+            "6": 0.0,
+            "7": 0.0,
+            "8+": 0.0
+          }
+        },
+        "offbeat_attack_share": 0.5769,
+        "performers": null,
+        "performers_note": "3 pièces sans interprète connu",
+        "pieces": 3,
+        "register_midi": {
+          "highest": {
+            "mean": 65.5591,
+            "n": 1515,
+            "p1": 57.0,
+            "p25": 63.0,
+            "p5": 59.0,
+            "p50": 67.0,
+            "p75": 69.0,
+            "p95": 71.0,
+            "p99": 71.0,
+            "sd": 3.8611
+          },
+          "lowest": {
+            "mean": 60.6455,
+            "n": 1515,
+            "p1": 46.0,
+            "p25": 59.0,
+            "p5": 55.0,
+            "p50": 61.0,
+            "p75": 62.0,
+            "p95": 69.0,
+            "p99": 69.0,
+            "sd": 4.0244
+          },
+          "mean": {
+            "mean": 63.1443,
+            "n": 1515,
+            "p1": 57.0,
+            "p25": 60.0,
+            "p5": 57.67,
+            "p50": 64.0,
+            "p75": 65.67,
+            "p95": 69.0,
+            "p99": 69.0,
+            "sd": 3.4639
+          }
+        },
+        "reliability": "juste",
+        "repetition_rhythm": {
+          "lag_1": {
+            "n": 278,
+            "same_share": 0.8813
+          },
+          "lag_2": {
+            "n": 272,
+            "same_share": 0.875
+          },
+          "lag_4": {
+            "n": 266,
+            "same_share": 0.9474
+          },
+          "lag_8": {
+            "n": 254,
+            "same_share": 0.937
+          }
+        },
+        "repetition_rhythm_and_pitch_classes": {
+          "lag_1": {
+            "n": 278,
+            "same_share": 0.1439
+          },
+          "lag_2": {
+            "n": 272,
+            "same_share": 0.114
+          },
+          "lag_4": {
+            "n": 266,
+            "same_share": 0.6541
+          },
+          "lag_8": {
+            "n": 254,
+            "same_share": 0.6024
+          }
+        },
+        "rhythm_patterns": [],
+        "rhythm_patterns_note": "un motif = les pas d'attaque d'une mesure ; vu dans ≥ 2 pièces",
+        "span_semitones": {
+          "mean": 4.9135,
+          "n": 1515,
+          "p10": 0.0,
+          "p25": 0.0,
+          "p50": 5.0,
+          "p75": 7.0,
+          "p90": 8.0,
+          "sd": 3.7545
+        },
+        "step_probability": {
+          "4/4 droit (16 pas)": [
+            0.021,
+            0.007,
+            0.1958,
+            0.014,
+            1.1434,
+            0.0,
+            0.9406,
+            0.4126,
+            0.0105,
+            0.0105,
+            0.1993,
+            0.007,
+            1.0664,
+            0.0,
+            0.8566,
+            0.4126
+          ]
+        },
+        "swing_offbeat_position": {
+          "mean": 0.5833,
+          "n": 3,
+          "note": "position médiane de la croche retardée dans la noire par pièce : 0,5 droit, 0,667 triolet",
+          "p10": 0.52,
+          "p25": 0.54,
+          "p50": 0.58,
+          "p75": 0.62,
+          "p90": 0.65,
+          "sd": 0.068
+        },
+        "tempo_bpm": {
+          "mean": 120.0042,
+          "n": 3,
+          "p10": 90.0,
+          "p25": 105.0,
+          "p50": 130.01,
+          "p75": 140.0,
+          "p90": 146.0,
+          "sd": 29.4396
+        },
+        "timing_to_grid": {
+          "n": 1515,
+          "quantized_share": 0.5842,
+          "quantized_source": false,
+          "signed_ms": {
+            "mean": 2.6335,
+            "n": 1515,
+            "p10": -38.46,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 33.33,
+            "p90": 33.33,
+            "sd": 22.6477
+          },
+          "signed_ms_off_beat": {
+            "mean": -2.954,
+            "n": 874,
+            "p10": -38.46,
+            "p25": -38.46,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 33.33,
+            "sd": 25.3286
+          },
+          "signed_ms_on_beat": {
+            "mean": 10.2522,
+            "n": 641,
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 33.33,
+            "p90": 33.33,
+            "sd": 15.3926
+          },
+          "tolerance_steps": 0.18,
+          "within_tolerance_share": 0.5842
+        },
+        "velocity": {
+          "available": true,
+          "ghost_note_share_lt_60pct_of_median": 0.0167,
+          "mean": 84.4,
+          "n": 3345,
+          "relative_to_piece_median_by_step": {
+            "4/4 droit (16 pas)": [
+              1.0534,
+              null,
+              0.9857,
+              1.1648,
+              0.9954,
+              null,
+              1.1119,
+              0.8483,
+              null,
+              null,
+              0.988,
+              null,
+              0.9787,
+              null,
+              1.0753,
+              0.9221
+            ]
+          },
+          "sd": 18.33
+        },
+        "voices": {
+          "guitar": 2,
+          "keys": 1
+        },
+        "voicing_stacks": {
+          "n_multi_note_attacks": 1120,
+          "note": "écarts en demi-tons entre notes adjacentes, du grave à l'aigu",
+          "top": [
+            {
+              "gaps": "4,3",
+              "share": 0.2679
+            },
+            {
+              "gaps": "5",
+              "share": 0.1357
+            },
+            {
+              "gaps": "3,5",
+              "share": 0.1304
+            },
+            {
+              "gaps": "4",
+              "share": 0.1143
+            },
+            {
+              "gaps": "5,3",
+              "share": 0.1143
+            },
+            {
+              "gaps": "3",
+              "share": 0.1
+            },
+            {
+              "gaps": "3,4",
+              "share": 0.0464
+            },
+            {
+              "gaps": "4,5",
+              "share": 0.0321
+            },
+            {
+              "gaps": "5,4",
+              "share": 0.0286
+            },
+            {
+              "gaps": "12",
+              "share": 0.0161
+            },
+            {
+              "gaps": "19,5",
+              "share": 0.0107
+            },
+            {
+              "gaps": "24",
+              "share": 0.0018
+            },
+            {
+              "gaps": "3,4,1",
+              "share": 0.0018
+            }
+          ]
+        },
+        "voicing_vs_chord": {
+          "interval_to_root_presence": {
+            "0": 0.6515,
+            "1": 0.0,
+            "10": 0.0026,
+            "11": 0.0752,
+            "2": 0.0007,
+            "3": 0.2383,
+            "4": 0.4805,
+            "5": 0.0086,
+            "6": 0.0,
+            "7": 0.7294,
+            "8": 0.0,
+            "9": 0.0
+          },
+          "n": 1515,
+          "root_present": 0.6515,
+          "scale_tension_present": 0.0086,
+          "seventh_present": 0.0766,
+          "third_and_seventh": 0.0079,
+          "third_present": 0.7149
+        }
+      },
+      "drums": {
+        "bars_empty": 0,
+        "bars_non_empty": 298,
+        "chords": {
+          "annotated_pieces": 0,
+          "inferred_pieces": 3
+        },
+        "grids": {
+          "4/4 droit (16 pas)": 3
+        },
+        "hits_per_bar_by_role": {
+          "crash": 0.31,
+          "hat_closed": 3.25,
+          "hat_open": 0.11,
+          "hat_pedal": 0.87,
+          "kick": 1.77,
+          "ride": 0.48,
+          "sidestick": 0.4,
+          "snare": 1.1,
+          "tom": 0.11
+        },
+        "kick_patterns": [
+          {
+            "bars": 79,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "........x.......",
+            "pieces": 3,
+            "share": 0.2651
+          },
+          {
+            "bars": 53,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "x.......x.......",
+            "pieces": 2,
+            "share": 0.1779
+          },
+          {
+            "bars": 29,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "........x...x...",
+            "pieces": 2,
+            "share": 0.0973
+          },
+          {
+            "bars": 10,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................",
+            "pieces": 3,
+            "share": 0.0336
+          },
+          {
+            "bars": 9,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.......x...",
+            "pieces": 2,
+            "share": 0.0302
+          }
+        ],
+        "kick_snare_patterns": [
+          {
+            "bars": 3,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................/................",
+            "pieces": 2,
+            "share": 0.0101
+          },
+          {
+            "bars": 2,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "........x......./............x...",
+            "pieces": 2,
+            "share": 0.0067
+          }
+        ],
+        "performers": null,
+        "performers_note": "3 pièces sans interprète connu",
+        "pieces": 3,
+        "reliability": "juste",
+        "repetition_kick_snare": {
+          "lag_1": {
+            "n": 295,
+            "same_share": 0.1932
+          },
+          "lag_2": {
+            "n": 292,
+            "same_share": 0.4555
+          },
+          "lag_4": {
+            "n": 286,
+            "same_share": 0.6993
+          },
+          "lag_8": {
+            "n": 274,
+            "same_share": 0.6095
+          }
+        },
+        "role_signed_ms_vs_grid": {
+          "crash": {
+            "median": 0.0,
+            "n": 92
+          },
+          "hat_closed": {
+            "median": 0.0,
+            "n": 968
+          },
+          "hat_open": {
+            "median": 0.0,
+            "n": 32
+          },
+          "hat_pedal": {
+            "median": 0.0,
+            "n": 260
+          },
+          "kick": {
+            "median": 0.0,
+            "n": 526
+          },
+          "ride": {
+            "median": 0.0,
+            "n": 144
+          },
+          "sidestick": {
+            "median": -38.5,
+            "n": 118
+          },
+          "snare": {
+            "median": 0.0,
+            "n": 327
+          },
+          "tom": {
+            "median": 0.0,
+            "n": 33
+          }
+        },
+        "snare_patterns": [
+          {
+            "bars": 67,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "....x.......x...",
+            "pieces": 2,
+            "share": 0.2248
+          },
+          {
+            "bars": 23,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "........x.......",
+            "pieces": 3,
+            "share": 0.0772
+          },
+          {
+            "bars": 14,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "................",
+            "pieces": 3,
+            "share": 0.047
+          },
+          {
+            "bars": 4,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "............x...",
+            "pieces": 2,
+            "share": 0.0134
+          },
+          {
+            "bars": 4,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "..x.....x.....x.",
+            "pieces": 2,
+            "share": 0.0134
+          },
+          {
+            "bars": 1,
+            "grid": "4/4 droit (16 pas)",
+            "pattern": "........x...x...",
+            "pieces": 2,
+            "share": 0.0034
+          }
+        ],
+        "step_probability_by_role": {
+          "4/4 droit (16 pas)": {
+            "crash": [
+              0.1141,
+              0.0034,
+              0.0101,
+              0.0134,
+              0.0067,
+              0.0,
+              0.0168,
+              0.0,
+              0.0302,
+              0.0067,
+              0.0067,
+              0.0067,
+              0.0369,
+              0.0,
+              0.0537,
+              0.0034
+            ],
+            "hat_closed": [
+              0.2315,
+              0.0,
+              0.4161,
+              0.0034,
+              0.6309,
+              0.0,
+              0.4027,
+              0.0,
+              0.1812,
+              0.0,
+              0.4094,
+              0.0034,
+              0.6074,
+              0.0034,
+              0.3523,
+              0.0067
+            ],
+            "hat_open": [
+              0.0034,
+              0.0,
+              0.0,
+              0.0,
+              0.0067,
+              0.0,
+              0.0034,
+              0.0,
+              0.0436,
+              0.0,
+              0.0,
+              0.0,
+              0.0067,
+              0.0,
+              0.0436,
+              0.0
+            ],
+            "hat_pedal": [
+              0.2685,
+              0.0,
+              0.0,
+              0.0,
+              0.1577,
+              0.0,
+              0.0,
+              0.0,
+              0.2819,
+              0.0,
+              0.0,
+              0.0,
+              0.1644,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "kick": [
+              0.3624,
+              0.0034,
+              0.0034,
+              0.0134,
+              0.0436,
+              0.0,
+              0.1544,
+              0.0,
+              0.7584,
+              0.0067,
+              0.0034,
+              0.0067,
+              0.1376,
+              0.0034,
+              0.0705,
+              0.198
+            ],
+            "ride": [
+              0.1174,
+              0.0,
+              0.0,
+              0.0,
+              0.1275,
+              0.0,
+              0.0,
+              0.0034,
+              0.1174,
+              0.0,
+              0.0,
+              0.0,
+              0.1174,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "sidestick": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.396,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "snare": [
+              0.0067,
+              0.0,
+              0.0638,
+              0.0,
+              0.3188,
+              0.0,
+              0.0638,
+              0.0101,
+              0.2114,
+              0.0101,
+              0.0268,
+              0.0,
+              0.2718,
+              0.0,
+              0.1074,
+              0.0067
+            ],
+            "tom": [
+              0.0034,
+              0.0,
+              0.0101,
+              0.0,
+              0.0067,
+              0.0,
+              0.0134,
+              0.0067,
+              0.0168,
+              0.0067,
+              0.0268,
+              0.0,
+              0.0168,
+              0.0,
+              0.0034,
+              0.0
+            ]
+          }
+        },
+        "swing_offbeat_position": {
+          "mean": 0.5,
+          "n": 2,
+          "note": "position médiane de la croche retardée dans la noire par pièce : 0,5 droit, 0,667 triolet",
+          "p10": 0.5,
+          "p25": 0.5,
+          "p50": 0.5,
+          "p75": 0.5,
+          "p90": 0.5,
+          "sd": 0.0
+        },
+        "tempo_bpm": {
+          "mean": 120.0042,
+          "n": 3,
+          "p10": 90.0,
+          "p25": 105.0,
+          "p50": 130.01,
+          "p75": 140.0,
+          "p90": 146.0,
+          "sd": 29.4396
+        },
+        "timekeeper": {
+          "hat_closed": 0.8652,
+          "n": 282,
+          "ride": 0.1348
+        },
+        "timekeeper_figure": {
+          "eighths": 0.4326,
+          "n": 282,
+          "other": 0.0106,
+          "quarters": 0.5496,
+          "sixteenths_or_triplets": 0.0071
+        },
+        "timing_to_grid": {
+          "n": 2500,
+          "quantized_share": 0.924,
+          "quantized_source": true,
+          "signed_ms": {
+            "mean": -2.7752,
+            "n": 2500,
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.0,
+            "sd": 9.9541
+          },
+          "signed_ms_off_beat": {
+            "mean": -7.8246,
+            "n": 889,
+            "p10": -38.46,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.0,
+            "sd": 15.4298
+          },
+          "signed_ms_on_beat": {
+            "mean": 0.0112,
+            "n": 1611,
+            "p10": 0.0,
+            "p25": 0.0,
+            "p50": 0.0,
+            "p75": 0.0,
+            "p90": 0.0,
+            "sd": 0.7413
+          },
+          "tolerance_steps": 0.18,
+          "within_tolerance_share": 0.9276
+        },
+        "velocity_by_role": {
+          "crash": {
+            "mean": 94.4,
+            "n": 92
+          },
+          "hat_closed": {
+            "mean": 94.6,
+            "n": 968
+          },
+          "hat_open": {
+            "mean": 112.8,
+            "n": 32
+          },
+          "hat_pedal": {
+            "mean": 83.6,
+            "n": 260
+          },
+          "kick": {
+            "mean": 89.6,
+            "n": 526
+          },
+          "ride": {
+            "mean": 102.4,
+            "n": 144
+          },
+          "sidestick": {
+            "mean": 99.6,
+            "n": 118
+          },
+          "snare": {
+            "mean": 103.5,
+            "n": 327
+          },
+          "tom": {
+            "mean": 80.7,
+            "n": 33
+          }
+        }
+      },
+      "license": "CC-BY-NC-SA-4.0 (Zenodo) ; Pledge AIST recherche non redistribuable",
+      "proxy": null,
+      "source": "rwc",
+      "sync": {
+        "bass_minus_kick_ms": {
+          "mean": 0.0,
+          "n": 191,
+          "p10": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 0.0,
+          "p90": 0.0,
+          "sd": 0.0
+        },
+        "comp_minus_snare_ms": {
+          "mean": 10.4813,
+          "n": 353,
+          "p10": 0.0,
+          "p25": 0.0,
+          "p50": 0.0,
+          "p75": 33.33,
+          "p90": 33.33,
+          "sd": 15.4761
+        },
+        "exact_share_lt_1ms": 0.796,
+        "informative": false,
+        "note": "positif = la basse (ou le comping) tombe après la grosse caisse (la caisse claire) ; sans valeur si presque toutes les paires sont à moins de 1 ms (séquencé)",
+        "pieces": 3,
+        "window_beats": 0.125
+      }
+    }
+  },
+  "style": "reggae",
+  "version": "S1-020-1"
+}

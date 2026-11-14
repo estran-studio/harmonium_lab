@@ -1,0 +1,7 @@
+source: guitarset
+url: https://zenodo.org/api/records/3371780/files/annotation.zip/content
+sha256: 8daa02e6417ccca1685feb44b135e95928ad7037e5032ecb326b5791856fda99
+license: CC-BY-4.0
+subset: {"bossa": 36, "funk": 36, "pop": 36, "rock": 36, "swing": 36}
+retrieved: 2026-11-07
+manifest_sha256: 74ea399a96ba603ceca738172d76e3857beccd174e8a07ac64fd10ee3088f873

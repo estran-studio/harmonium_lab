@@ -409,3 +409,6 @@ v2-distance-batterie: setup ## V2 : batterie des profils GMD contre le GMD : ENG
 	bash scripts/v2_distance_batterie.sh "$(ENGINE_WORKTREE)" "$(CURDIR)" "$(PYTHON)" "$(V2_DIR)/batterie"
 	$(PYTHON) -m harmonium_lab.v2distance drums --dist-dir "$(V2_DIR)/batterie" --b8 "$(V2_DIR)/batterie/b8.json" \
 		--out "$(V2_OUT)/distance-batterie-gmd.json"
+
+styles-measures: setup ## S1 phase 020 : statistiques basse / comping / batterie par style (cache vérifié, bruts gitignorés)
+	$(VENV)/bin/python -m harmonium_lab.styles.build --all
